@@ -1,10 +1,10 @@
 <template>
 <!-- storage  -->
 
-        <div class="bg-red-500">
+        <div class="">
 
             <!-- header  -->
-            <div class="flex flex-row justify-between h-full bg-white shadow-lg">
+            <div class="flex flex-row justify-between h-full bg-white shadow-lg px-2 py-2 rounded-lg">
                 <div class="lg:ml-[15px] lg:mt-[15px]">
                     <p class="font-['Montserrat']"><span class="text-md">Storage></span><br>
                         <span class="text-3xl font-bold">Storage</span><br>
