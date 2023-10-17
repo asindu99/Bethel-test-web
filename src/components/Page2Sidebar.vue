@@ -175,9 +175,9 @@
         md:px-[5px] min-[320px]:ml-0">
             <!-- router view must be here -->
             <div>
-                <page3Dashboard/>
+                <!-- <page3Dashboard/> -->
                 <!-- <Storage/> -->
-                <!-- <Page4Wallet/> -->
+                <Page4Wallet/>
             </div>
         </div>
     </div>
