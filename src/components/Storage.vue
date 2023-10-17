@@ -1,12 +1,10 @@
 <template>
 <!-- storage  -->
 
-<div class="w-[100%]">
-
-        <div class="flex flex-col w-full h-screen lg:mb-40">
+        <div class="bg-red-500">
 
             <!-- header  -->
-            <div class="flex flex-row justify-between sm:justify-between w-full h-[130px] bg-white shadow-lg">
+            <div class="flex flex-row justify-between h-full bg-white shadow-lg">
                 <div class="lg:ml-[15px] lg:mt-[15px]">
                     <p class="font-['Montserrat']"><span class="text-md">Storage></span><br>
                         <span class="text-3xl font-bold">Storage</span><br>
@@ -26,7 +24,7 @@
   
 
             <!-- storage table  -->
-            <div  class="flex items-center justify-center w-full bg-white mt-20 pb-8">
+            <div  class="flex items-center justify-center w-full bg-white mt-20">
                 <div class="font-['Montserrat'] lg:mt-10 lg:ml-[21px] text-xl font-bold">
 
                     <span></span>
@@ -71,7 +69,7 @@
             </div>
 
         </div>
-    </div>
+
 </template>
 
 
