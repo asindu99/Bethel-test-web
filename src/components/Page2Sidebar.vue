@@ -1,9 +1,10 @@
 <template>
     <div class="flex">
         <!-- main side bar  -->
-        <div class=" bg-white lg:w-[220px] md:w-[150px] sm:w-[250px] sm:hidden sm:z-[10]
-        min-[320px]:hidden min-[320px]:top-0 min-[320px]:bottom-0 min-[320px]:z-[10] min-[320px]:w-[200px]
-         lg:flex md:flex flex-col shadow-md pt-20">
+        <div class=" bg-white md:fixed bottom-0 md:flex z-[10]
+        lg:w-[220px] md:w-[150px] sm:hidden
+        min-[320px]:hidden lg:fixed md:top-0 
+         flex-col shadow-md pt-20">
 
             <!-- top menu section -->
             <div class="flex py-2 flex-col px-[10px] bg-[linear-gradient(to_right,rgba(240,245,254,1),rgba(240,245,254,1))]"> 
@@ -174,7 +175,7 @@
         <div class=" flex justify-center bg-[#f7f1f1c2] z-0 lg:w-[100%] lg:mx-[0px] mt-[80px] h-full 
         md:px-[5px] sm:w-full min-[320px]:w-full min-[320px]:ml-0">
             <!-- router view must be here -->
-            <div class="w-full mx-2">
+            <div class="w-full h-full mx-2 lg:pl-[240px] md:pl-[150px]"> 
                 <router-view></router-view> 
             </div>
         </div>
@@ -186,6 +187,7 @@
 import Page3Dashboard from '@/components/Page3Dashboard.vue';
 import Page4Wallet from '@/components/Page4Wallet.vue';
 import Storage from '@/components/Storage.vue';
+import Page5AccessKey from '@/components/Page5AccessKey.vue';
 
 // import stores
 import {mapStores} from "pinia";
@@ -197,6 +199,7 @@ export default{
         Page3Dashboard,
         Page4Wallet,
         Storage,
+        Page5AccessKey,
     },
     computed :{
         ...mapStores(useModalStore)
