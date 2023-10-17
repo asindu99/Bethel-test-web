@@ -1,7 +1,7 @@
 <template>
 <!-- storage  -->
-<div>
-        <div class="flex flex-col w-[full] h-screen lg:mb-40">
+<div class="w-[100%]">
+        <div class="flex flex-col w-full h-screen lg:mb-40">
 
             <div class="flex flex-row w-full h-[130px] bg-white shadow-lg">
                 <div class=" lg:ml-[15px] lg:mt-[15px]">
