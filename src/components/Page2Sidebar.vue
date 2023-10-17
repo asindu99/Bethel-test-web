@@ -96,7 +96,7 @@
 
 
             <!-- account section -->
-            <div class="flex flex-col mt-3"> 
+            <div class="flex flex-col mt-3">
                 <!-- menu text -->
                 <div class="lg:flex md:flex px-[10px] py-2 bg-[linear-gradient(to_right,rgba(240,245,254,1),rgba(240,245,254,1))]">
                     <div class="relative">
