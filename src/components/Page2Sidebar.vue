@@ -175,13 +175,14 @@
         md:px-[5px] sm:w-full min-[320px]:w-full min-[320px]:ml-0">
             <!-- router view must be here -->
             <div class="w-full mx-2">
-                <router-view></router-view>
+                <router-view></router-view> 
             </div>
         </div>
     </div>
 </template>
 
 <script>
+// import components 
 import Page3Dashboard from '@/components/Page3Dashboard.vue';
 import Page4Wallet from '@/components/Page4Wallet.vue';
 import Storage from '@/components/Storage.vue';
