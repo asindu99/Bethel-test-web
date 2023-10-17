@@ -1,6 +1,10 @@
 <template>
 <!-- storage  -->
+<<<<<<< HEAD
 <div>
+=======
+<div class="w-[100%]">
+>>>>>>> 2d38c23d582e1c6db7a530769d53d734db99c160
         <div class="flex flex-col w-full h-screen lg:mb-40">
 
             <!-- header  -->

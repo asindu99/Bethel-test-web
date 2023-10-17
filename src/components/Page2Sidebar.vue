@@ -180,12 +180,12 @@
             
         </div>
 
-        <div class="bg-[#eae9e9c2] z-0 lg:lg:w-[100%] lg:flex lg:ml-[100px] mt-[80px] h-full
-        md:pl-[5px] ">
+        <div class=" flex justify-center bg-[#f7f1f1c2] z-0 lg:w-[100%] lg:flex lg:mx-[0px] mt-[80px] h-full 
+        md:px-[5px] min-[320px]:ml-0">
             <!-- router view must be here -->
             <div>
-                <router-view></router-view>
                 <page3Dashboard/>
+                <!-- <Storage/> -->
                 <!-- <Page4Wallet/> -->
             </div>
         </div>
@@ -194,7 +194,8 @@
 
 <script>
 import page3Dashboard from '@/components/page3Dashboard.vue';
-// import Page4Wallet from '@/components/Page4Wallet.vue';
+import Page4Wallet from '@/components/Page4Wallet.vue';
+import Storage from '@/components/Storage.vue';
 
 // import stores
 import {mapStores} from "pinia";
@@ -204,7 +205,8 @@ export default{
     name : 'Page2Sidebar',
     components : {
         page3Dashboard,
-        // Page4Wallet,
+        Page4Wallet,
+        Storage,
     },
     computed :{
         ...mapStores(useModalStore)
