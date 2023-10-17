@@ -173,7 +173,7 @@
 
         <div class=" flex justify-center bg-[#f7f1f1c2] z-0 lg:w-[100%] lg:mx-[0px] mt-[80px] h-full 
         md:px-[5px] sm:w-full min-[320px]:w-full min-[320px]:ml-0">
-            <!-- router view must be here -->asdasdsadad
+            <!-- router view must be here -->
             <div class="w-full mx-2">
                 <router-view></router-view>
             </div>
