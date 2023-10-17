@@ -4,6 +4,7 @@
         <div class=" bg-white lg:w-[220px] md:w-[150px] sm:w-[250px] sm:hidden sm:z-[10]
         min-[320px]:hidden min-[320px]:top-0 min-[320px]:bottom-0 min-[320px]:z-[10] min-[320px]:w-[200px]
          lg:flex md:flex flex-col shadow-md pt-20">
+
             <!-- top menu section -->
             <div class="flex py-2 flex-col px-[10px] bg-[linear-gradient(to_right,rgba(240,245,254,1),rgba(240,245,254,1))]"> 
                 <!-- menu text -->
@@ -12,17 +13,6 @@
                         <div class="absolute h-[15px] w-[3px] bg-[#293793] top-1"></div>
                         <h3 class="text-[#293793] ml-2">Menu</h3>
                     </div>
-
-                    <!-- samll sizw hideen bar -->
-                    <div>
-                        <!-- icon -->
-                        <!-- <div class="sm:hidden md:flex lg:hidden min-[320px]:hidden
-                        justify-center">
-                            <img src="../img/icons/icon-menu.png" alt="" class="w-[30px]">
-                        </div> -->
-                    </div>
-                    <!-- small size end -->
-
                 </div>
                 <!-- end of menu text -->
             </div>
@@ -30,7 +20,7 @@
             <!-- middle section  -->
             <div class="flex flex-col">
                 <!-- menu item -->
-                <RouterLink to="/dash" class="active">
+                <RouterLink to="/" class="active">
                     <div class="lg:flex md:flex sm:flex min-[320px]:flex
                      w-full px-3 hover:bg-[#293793] my-2 py-2 hover:text-[white] transition-all ease-linear">
                         <span class=" material-symbols-outlined top-2 right-[20px] text-[#E9983C] mr-2
@@ -179,14 +169,15 @@
 
             
         </div>
+        <!-- end of the main side bar -->
 
         <div class=" flex justify-center bg-[#f7f1f1c2] z-0 lg:w-[100%] lg:flex lg:mx-[0px] mt-[80px] h-full 
         md:px-[5px] min-[320px]:ml-0">
             <!-- router view must be here -->
             <div>
-                <page3Dashboard/>
+                <!-- <page3Dashboard/> -->
                 <!-- <Storage/> -->
-                <!-- <Page4Wallet/> -->
+                <Page4Wallet/>
             </div>
         </div>
     </div>
