@@ -6,7 +6,7 @@
         <div class="flex flex-col w-full h-screen lg:mb-40">
 
             <!-- header  -->
-            <div class="flex flex-row w-full h-[130px] bg-white shadow-lg">
+            <div class="flex flex-row justify-between sm:justify-between w-full h-[130px] bg-white shadow-lg">
                 <div class="lg:ml-[15px] lg:mt-[15px]">
                     <p class="font-['Montserrat']"><span class="text-md">Storage></span><br>
                         <span class="text-3xl font-bold">Storage</span><br>
@@ -19,14 +19,14 @@
                 </div>
         
                 <!-- create bucktes  -->
-                <div>
-                    <button class="flex items-center justify-center ml-10 lg:ml-[800px] border-2 w-[200px] h-[50px] rounded-lg bg-gradient-to-r from-[#F48320] to-[#f8b878] shadow-lg text-white text-center font-['Montserrat'] mt-[20px] cursor-pointer">Create Storage</button>
+                <div class="mr-[10px]">
+                    <button class="flex items-center justify-center ml-10 border-2 w-[200px] h-[50px] rounded-lg bg-gradient-to-r from-[#F48320] to-[#f8b878] shadow-lg text-white text-center font-['Montserrat'] mt-[30px] cursor-pointer">Create Bucket</button>
                 </div>
             </div>
   
 
             <!-- storage table  -->
-            <div  class="bg-white mt-20 lg:mx-[20px] pb-8">
+            <div  class="flex items-center justify-center w-full bg-white mt-20 pb-8">
                 <div class="font-['Montserrat'] lg:mt-10 lg:ml-[21px] text-xl font-bold">
 
                     <span></span>
@@ -34,8 +34,8 @@
                 </div>
 
 
-                <div class="bg-light lg:px-4">
-                    <table class="lg:w-full border-separate border-spacing-2 border border-none">
+                <div class="bg-light lg:px-4 w-full">
+                    <table class="w-full border-separate border-spacing-2 border border-none">
 
                         <tr class=" bg-[linear-gradient(to_right,rgba(240,245,254,1),rgba(240,245,254,1))] text-[13px]">
                         <th class="font-['Montserrat'] font-bold text-center">STORAGE NAME</th>
