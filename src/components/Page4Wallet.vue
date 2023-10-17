@@ -1,9 +1,9 @@
 <template>
-    <div class="">
+    <div class="lg:px-0 md:px-5 sm:px-4 min-[320px]:px-2">
         <!-- wallet section -->
-        <div class="w-[100%]">
+        <div class="lg:w-[100%] md:w-[100%] sm:w-[100%] min-[320px]:w-[full]">
             <!-- head wallet div  -->
-            <div class="flex items-center justify-between shadow-md p-2 bg-white">
+            <div class="flex items-center justify-between shadow-sm rounded-lg px-3 py-3 bg-white">
                 <!-- left side text -->
                 <div>
                     <!-- storage with arrow -->
