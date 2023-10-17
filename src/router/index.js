@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import MainContent from "@/components/MainContent.vue";
-import page3Dashboard from '@/components/page3Dashboard.vue';
+import Page3Dashboard from '@/components/Page3Dashboard.vue';
 import Page4Wallet from '@/components/Page4Wallet.vue';
 import Storage from '@/components/Storage.vue'
 
@@ -16,7 +16,7 @@ const router = createRouter({
       children :[
         {
           path : '',
-          component : page3Dashboard
+          component : Page3Dashboard
         },
         {
           path : '/wallet',
