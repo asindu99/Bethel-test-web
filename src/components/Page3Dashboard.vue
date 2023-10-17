@@ -49,7 +49,7 @@
                         <div class="flex items-center">             
                           <h3 class="text-[13px]">Total Storage</h3> 
                           <div class="ml-3 w-[30px] h-[25px] bg-blue-100 rounded-lg text-center justify-center items-center">
-                            <h1 class="text-blue-600">2</h1>
+                            <h1 class="text-blue-600 ">2</h1>
                         </div> 
                         </div>
                         
@@ -91,11 +91,16 @@
             <h3 class="ml-2 text-[20px]">Data Usage</h3> 
         </div>
 
+
+
+        
         <!-- data usage content flex -->
         <div class="flex mt-4 justify-evenly w-full flex-wrap gap-2
         ">
             <!-- data usage flex -->
-            <div class="bg-white flex flex-col gap-2 pl-3 pt-4 pb-2 border-2 w-[595px] justify-start items-start rounded-xl shadow-md">
+            <div class="bg-white flex flex-col gap-2 pl-3 pt-4 pb-2 border-2 
+            lg:w-[595px] md:w-[595px] sm:w-[595px] min-[320px]:w-[340px]
+             justify-start items-start rounded-xl shadow-md">
                 <!-- icon and text-->
                 <div class="flex items-center">
                     <!-- image side -->
@@ -115,7 +120,9 @@
                 
 
                 <!-- storage chart -->
-                <div class="mt-2 w-[550px] h-[300px] ">
+                <div class="mt-2 w-[550px]
+                lg:w-[550px] md:w-[550px] sm:w-[550px] min-[320px]:w-[320px] 
+                lg:h-[300px] md:h-[300px] sm:h-[300px] min-[320px]:h-[200px] ">
                     <canvas id="myChart2" class="w-[650px] ml-3"></canvas>
                 </div>
 
@@ -123,7 +130,9 @@
             <!-- end of the data usage flex -->
 
             <!-- data usage flex -->
-            <div class="bg-white flex flex-col gap-2 pl-3 pt-4 pb-2 border-2 w-[595px] justify-start items-start rounded-xl shadow-md">
+            <div class="bg-white flex flex-col gap-2 pl-3 pt-4 pb-2 border-2 
+            lg:w-[595px] md:w-[595px] sm:w-[595px] min-[320px]:w-[340px]
+             justify-start items-start rounded-xl shadow-md">
                 <!-- icon and text-->
                 <div class="flex items-center">
                     <!-- image side -->
@@ -143,8 +152,11 @@
                 
 
                 <!-- storage chart -->
-                <div class="mt-2 w-[550px] h-[300px] ">
-                    <canvas id="myChart" class="w-[650px] ml-3"></canvas>
+                <div class="mt-2 w-[550px]
+                lg:w-[550px] md:w-[550px] sm:w-[550px] min-[320px]:w-[320px] 
+                lg:h-[300px] md:h-[300px] sm:h-[300px] min-[320px]:h-[200px] ">
+                    <canvas id="myChart" class="
+                    lg:w-[650px] md:w-[650px] sm:w-[650px] min-[320px]:w-[200px] ml-3"></canvas>
                 </div>
 
             </div>

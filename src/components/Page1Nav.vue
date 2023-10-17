@@ -54,7 +54,7 @@
         </nav>
         <!-- end of the nav bar -->
 
-
+        <!-- side bar in mobile size window -->
         <div v-if="modalStore.isOpen" class=" bg-white lg:w-[220px] md:w-[150px] sm:w-[250px] sm:fixed z-[0]
         min-[320px]:fixed min-[320px]:top-0 min-[320px]:bottom-0 min-[320px]:z-[10] min-[320px]:w-[200px]
          lg:hidden md:hidden flex-col shadow-md pt-4">
@@ -66,16 +66,6 @@
                         <div class="absolute h-[15px] w-[3px] bg-[#293793] top-1"></div>
                         <h3 class="text-[#293793] ml-2">Menu</h3>
                     </div>
-
-                    <!-- samll sizw hideen bar -->
-                    <div>
-                        <!-- icon -->
-                        <!-- <div class="sm:hidden md:flex lg:hidden min-[320px]:hidden
-                        justify-center">
-                            <img src="../img/icons/icon-menu.png" alt="" class="w-[30px]">
-                        </div> -->
-                    </div>
-                    <!-- small size end -->
 
                 </div>
                 <!-- end of menu text -->
@@ -99,7 +89,7 @@
                 <!-- end of the menu item -->
 
                 <!-- menu item -->
-                <a href="#" class="active">
+                <router-link to="/storage" class="active">
                     <div class="lg:flex md:flex sm:flex min-[320px]:flex
                     w-full px-3 hover:bg-[#293793] my-2 py-2 hover:text-[white] transition-all ease-linear">
                         <span class=" material-symbols-outlined top-2 right-[20px] text-[#E9983C] mr-2
@@ -111,7 +101,7 @@
                     </div>
 
                     
-                </a>
+                </router-link>
                 <!-- end of the menu item -->
 
                 <!-- menu item -->
@@ -234,6 +224,7 @@
 
             
         </div>
+        <!-- end of the side bar in small windows -->
     </div>
 </template>
 
