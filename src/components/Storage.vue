@@ -1,9 +1,7 @@
 <template>
 <!-- storage  -->
 
-<div class="w-[100%]">
-
-        <div class="flex flex-col w-full h-screen lg:mb-40">
+        <div class="">
 
             <!-- header  -->
             <div class="flex flex-row justify-between sm:justify-between w-full h-[130px] bg-white shadow-lg">
@@ -26,7 +24,7 @@
   
 
             <!-- storage table  -->
-            <div  class="flex items-center justify-center w-full bg-white mt-20 pb-8">
+            <div  class="flex items-center justify-center w-full bg-white mt-20">
                 <div class="font-['Montserrat'] lg:mt-10 lg:ml-[21px] text-xl font-bold">
 
                     <span></span>
@@ -71,7 +69,7 @@
             </div>
 
         </div>
-    </div>
+
 </template>
 
 
