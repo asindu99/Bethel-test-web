@@ -27,6 +27,10 @@ const router = createRouter({
         {
           path:'/storage',
           component:Storage,
+        },
+        {
+          path :'/accesskey',
+          component : Page5AccessKey,
         }
 
       ]
