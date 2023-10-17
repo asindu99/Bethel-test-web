@@ -1,15 +1,28 @@
 <template>
-    <div class="">
+    <div class="flex">
         <!-- main side bar  -->
-        <aside class="w-[280px] fixed flex-col bottom-0  left-0 top-0 shadow-md pt-20">
+        <div class=" bg-white lg:w-[220px] md:w-[150px] sm:w-[250px] sm:hidden sm:z-[10]
+        min-[320px]:hidden min-[320px]:top-0 min-[320px]:bottom-0 min-[320px]:z-[10] min-[320px]:w-[200px]
+         lg:flex md:flex flex-col shadow-md pt-20">
             <!-- top menu section -->
             <div class="flex py-2 flex-col px-[10px] bg-[linear-gradient(to_right,rgba(240,245,254,1),rgba(240,245,254,1))]"> 
                 <!-- menu text -->
                 <div class="">
-                    <div class="relative">
+                    <div class="relative lg:flex md:flex min-[320px]:flex sm:flex placeholder:">
                         <div class="absolute h-[15px] w-[3px] bg-[#293793] top-1"></div>
                         <h3 class="text-[#293793] ml-2">Menu</h3>
                     </div>
+
+                    <!-- samll sizw hideen bar -->
+                    <div>
+                        <!-- icon -->
+                        <!-- <div class="sm:hidden md:flex lg:hidden min-[320px]:hidden
+                        justify-center">
+                            <img src="../img/icons/icon-menu.png" alt="" class="w-[30px]">
+                        </div> -->
+                    </div>
+                    <!-- small size end -->
+
                 </div>
                 <!-- end of menu text -->
             </div>
@@ -17,8 +30,9 @@
             <!-- middle section  -->
             <div class="flex flex-col">
                 <!-- menu item -->
-                <a href="#" class="active">
-                    <div class="flex w-full px-3 hover:bg-[#293793] my-2 py-2 hover:text-[white] transition-all ease-linear">
+                <RouterLink to="/dash" class="active">
+                    <div class="lg:flex md:flex sm:flex min-[320px]:flex
+                     w-full px-3 hover:bg-[#293793] my-2 py-2 hover:text-[white] transition-all ease-linear">
                         <span class=" material-symbols-outlined top-2 right-[20px] text-[#E9983C] mr-2
                         ">
                             grid_view
@@ -26,12 +40,14 @@
                         <h3>Dashboard</h3>
                     
                     </div>
-                </a>
+
+                </RouterLink>
                 <!-- end of the menu item -->
 
                 <!-- menu item -->
                 <a href="#" class="active">
-                    <div class="flex w-full px-3 hover:bg-[#293793] my-2 py-2 hover:text-[white] transition-all ease-linear">
+                    <div class="lg:flex md:flex sm:flex min-[320px]:flex
+                    w-full px-3 hover:bg-[#293793] my-2 py-2 hover:text-[white] transition-all ease-linear">
                         <span class=" material-symbols-outlined top-2 right-[20px] text-[#E9983C] mr-2
                         ">
                             hard_drive
@@ -39,12 +55,15 @@
                         <h3>Storage </h3>
                     
                     </div>
+
+                    
                 </a>
                 <!-- end of the menu item -->
 
                 <!-- menu item -->
-                <a href="#" class="active">
-                    <div class="flex w-full px-3 hover:bg-[#293793] my-2 py-2 hover:text-[white] transition-all ease-linear">
+                <router-link to="/wallet">
+                    <div class="lg:flex md:flex sm:flex min-[320px]:flex
+                     w-full px-3 hover:bg-[#293793] my-2 py-2 hover:text-[white] transition-all ease-linear">
                         <span class=" material-symbols-outlined top-2 right-[20px] text-[#E9983C] mr-2
                         ">
                             wallet
@@ -52,12 +71,15 @@
                         <h3>Wallet </h3>
                     
                     </div>
-                </a>
+
+                    <!-- samll size -->
+                    
+                </router-link>
                 <!-- end of the menu item -->
 
                 <!-- menu item -->
-                <a href="#" class="active">
-                    <div class="flex w-full px-3 hover:bg-[#293793] my-2 py-2 hover:text-[white] transition-all ease-linear">
+                <a href="#" class="active flex justify-center items-center">
+                    <div class="min-[320px]:flex lg:flex sm:flex md:flex w-full px-3 hover:bg-[#293793] my-2 py-2 hover:text-[white] transition-all ease-linear">
                         <span class=" material-symbols-outlined top-2 right-[20px] text-[#E9983C] mr-2
                         ">
                             key
@@ -65,6 +87,9 @@
                         <h3>Access Keys </h3>
                     
                     </div>
+
+                    <!-- small size -->
+                    
                 </a>
                 <!-- end of the menu item -->
             </div>
@@ -74,17 +99,24 @@
             <!-- account section -->
             <div class="flex flex-col mt-3"> 
                 <!-- menu text -->
-                <div class="px-[10px] py-2 bg-[linear-gradient(to_right,rgba(240,245,254,1),rgba(240,245,254,1))]">
+                <div class="lg:flex md:flex px-[10px] py-2 bg-[linear-gradient(to_right,rgba(240,245,254,1),rgba(240,245,254,1))]">
                     <div class="relative">
                         <div class="absolute h-[15px] w-[3px] bg-[#293793] top-1"></div>
                         <h3 class="text-[#293793] ml-2">Account</h3>
                     </div>
                 </div>
+
+                <!-- small size -->
+                <!-- <div class="min-[320px]:hidden sm:hidden lg:hidden md:flex items-center justify-center px-[10px] py-2 bg-[linear-gradient(to_right,rgba(240,245,254,1),rgba(240,245,254,1))]">
+                    <div class="relative items-center justify-center">
+                        <img src="../img/icons/icon-account.png" alt="" class="w-[30px]">
+                    </div>
+                </div> -->
                 <!-- end of menu text -->
 
                 <!-- menu item -->
-            <a href="#" class="active mt-3">
-                    <div class="flex w-full px-3 hover:bg-[#293793] my-2 py-2 hover:text-[white] transition-all ease-linear">
+                <a href="#" class="active mt-3">
+                    <div class="min-[320px]:flex sm:flex lg:flex md:flex w-full px-3 hover:bg-[#293793] my-2 py-2 hover:text-[white] transition-all ease-linear">
                         <span class=" material-symbols-outlined top-2 right-[20px] text-[#E9983C] mr-2
                         ">
                             person_pin
@@ -92,12 +124,15 @@
                         <h3>Profile </h3>
                     
                     </div>
+
+                    <!-- small size -->
+                    
                 </a>
                 <!-- end of the menu item -->
 
                 <!-- menu item -->
                 <a href="#" class="active">
-                    <div class="flex w-full px-3 hover:bg-[#293793] my-2 py-2 hover:text-[white] transition-all ease-linear">
+                    <div class="min-[320px]:flex sm:flex lg:flex md:flex w-full px-3 hover:bg-[#293793] my-2 py-2 hover:text-[white] transition-all ease-linear">
                         <span class=" material-symbols-outlined top-2 right-[20px] text-[#E9983C] mr-2
                         ">
                             attach_money
@@ -105,12 +140,14 @@
                         <h3>Billing </h3>
                     
                     </div>
+
+                    
                 </a>
                 <!-- end of the menu item -->
 
                 <!-- menu item -->
                 <a href="#" class="active">
-                    <div class="flex w-full px-3 hover:bg-[#293793] my-2 py-2 hover:text-[white] transition-all ease-linear">
+                    <div class="min-[320px]:flex sm:flex lg:flex md:flex w-full px-3 hover:bg-[#293793] my-2 py-2 hover:text-[white] transition-all ease-linear">
                         <span class=" material-symbols-outlined top-2 right-[20px] text-[#E9983C] mr-2
                         ">
                             support
@@ -118,11 +155,15 @@
                         <h3>Support </h3>
                     
                     </div>
+
+                    
+
+                    
                 </a>
                 <!-- end of the menu item -->
                 <!-- menu item -->
-                <a href="#" class="absolute bottom-2 w-full">
-                    <div class="flex w-full px-3 hover:bg-[#293793] my-2 py-2 hover:text-[white] transition-all ease-linear">
+                <a href="#" class=" w-full">
+                    <div class="min-[320px]:flex sm:flex lg:flex md:flex w-full px-3 hover:bg-[#293793] my-2 py-2 hover:text-[white] transition-all ease-linear">
                         <span class=" material-symbols-outlined top-2 right-[20px] text-[#E9983C] mr-2
                         ">
                             logout
@@ -130,30 +171,50 @@
                         <h3>Log Out </h3>
                     
                     </div>
+
+                    
                 </a>
                 <!-- end of the menu item -->
             </div>
             <!-- end of the account section -->
 
             
-        </aside>
+        </div>
 
-
-        <!-- right side of the other  -->
-        <div class="flex w-screen overflow-hidden">
-            <page3Dashboard/>
-            <RouterView name="mainView"></RouterView>
+        <div class="bg-[#eae9e9c2] z-0 lg:lg:w-[100%] lg:flex lg:ml-[100px] mt-[80px] h-full
+        md:pl-[5px] ">
+            <!-- router view must be here -->
+            <div>
+                <router-view></router-view>
+                <page3Dashboard/>
+                <!-- <Page4Wallet/> -->
+            </div>
         </div>
     </div>
 </template>
 
 <script>
 import page3Dashboard from '@/components/page3Dashboard.vue';
+// import Page4Wallet from '@/components/Page4Wallet.vue';
+
+// import stores
+import {mapStores} from "pinia";
+import useModalStore from "@/stores/modal";
 
 export default{
     name : 'Page2Sidebar',
     components : {
         page3Dashboard,
+        // Page4Wallet,
+    },
+    computed :{
+        ...mapStores(useModalStore)
+    },
+
+    data(){
+        return{
+            
+        }
     }
 }
 </script>

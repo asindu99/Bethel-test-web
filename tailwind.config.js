@@ -6,6 +6,7 @@ module.exports = {
       colors : {
         'primary' : '#293793',
         'bethelOrange' : '#E9983C',
+        'white' : 'white',
         'liniear' : 'bg-[linear-gradient(to_right,rgba(240,245,254,1),rgba(240,245,254,1))]'
       }
     },
