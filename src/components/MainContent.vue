@@ -10,7 +10,7 @@
 <script>
 import Page1Nav from '@/components/Page1Nav.vue';
 import Page2Sidebar from '@/components/Page2Sidebar.vue';
-import page3Dashboard from '@/components/page3Dashboard.vue';
+import Page3Dashboard from '@/components/Page3Dashboard.vue';
 import Page4Wallet from '@/components/Page4Wallet.vue';
 
 
@@ -19,7 +19,7 @@ export default {
     components :{
         Page1Nav,
         Page2Sidebar,
-        page3Dashboard,
+        Page3Dashboard,
         Page4Wallet,
         
     }
