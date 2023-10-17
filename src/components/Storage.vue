@@ -1,22 +1,24 @@
 <template>
 <!-- storage  -->
 <div>
-        <div class="flex flex-col w-[full] h-screen lg:mb-40">
+        <div class="flex flex-col w-full h-screen lg:mb-40">
 
+            <!-- header  -->
             <div class="flex flex-row w-full h-[130px] bg-white shadow-lg">
-                <div class=" lg:ml-[15px] lg:mt-[15px]">
-                    <p class="lg:font-['Montserrat']"><span class="text-md">Storage></span><br>
-                        <span class="lg:text-3xl font-bold">Storage</span><br>
+                <div class="lg:ml-[15px] lg:mt-[15px]">
+                    <p class="font-['Montserrat']"><span class="text-md">Storage></span><br>
+                        <span class="text-3xl font-bold">Storage</span><br>
                         <div class="flex flex-row">
-                            <img src="./img/storage.svg" alt="">
-                            <span class=" lg:ml-[5px]">0 Storage</span>
+                            <img src="../img/images/storage.svg" alt="">
+                                
+                            <span class=" lg:ml-[5px]">1 Storage</span>
                         </div>
                     </p>
                 </div>
         
                 <!-- create bucktes  -->
                 <div>
-                    <button class="lg:ml-[800px] border-2 lg:w-[200px] lg:h-[50px] rounded-lg bg-gradient-to-r from-[#F48320] to-[#f8b878] shadow-lg text-white font-['Montserrat'] lg:mt-[20px] cursor-pointer">Create Storage</button>
+                    <button class="flex items-center justify-center ml-10 lg:ml-[800px] border-2 w-[200px] h-[50px] rounded-lg bg-gradient-to-r from-[#F48320] to-[#f8b878] shadow-lg text-white text-center font-['Montserrat'] mt-[20px] cursor-pointer">Create Storage</button>
                 </div>
             </div>
   
@@ -64,7 +66,7 @@
                     </table>
 
                 </div>
-</div>
+            </div>
 
         </div>
     </div>
