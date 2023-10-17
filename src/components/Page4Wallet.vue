@@ -113,7 +113,8 @@
             <!-- transation  -->
             <div class="flex basis-2 flex-wrap justify-center gap-10 mt-4">
                 <!-- 1st container -->
-                <div class="bg-white flex flex-col items-center justify-center border-[2px] shadow-md py-[20px] px-[60px] w-[550px] rounded-lg">
+                <div class="bg-white flex flex-col items-center justify-center border-[2px] shadow-md py-[20px] px-[60px] 
+                lg:w-[550px] md:w-[550px] rounded-lg">
                     <!-- bethel logo image -->
                     <div class="py-10">
                         <img src="../img/logos/bethellogo.png" alt="" class="w-[150px]">
@@ -129,7 +130,8 @@
                 </div>
 
                 <!-- 2nd container -->
-                <div class="bg-white flex flex-col items-center justify-center border-[2px] shadow-md py-[20px] px-[60px] w-[550px] rounded-lg">
+                <div class="bg-white flex flex-col items-center justify-center border-[2px] shadow-md py-[20px] px-[60px] 
+                lg:w-[550px] md:w-[550px] rounded-lg">
                     <!-- bethel logo image -->
                     <div class="py-10">
                         <img src="../img/logos/bethellogo.png" alt="" class="w-[150px]">
