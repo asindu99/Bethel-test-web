@@ -55,7 +55,7 @@
         <!-- end of the nav bar -->
 
 
-        <div v-if="!modalStore.isOpen" class=" bg-white lg:w-[220px] md:w-[150px] sm:w-[250px] sm:fixed z-[0]
+        <div v-if="modalStore.isOpen" class=" bg-white lg:w-[220px] md:w-[150px] sm:w-[250px] sm:fixed z-[0]
         min-[320px]:fixed min-[320px]:top-0 min-[320px]:bottom-0 min-[320px]:z-[10] min-[320px]:w-[200px]
          lg:hidden md:hidden flex-col shadow-md pt-4">
             <!-- top menu section -->
