@@ -176,8 +176,8 @@
             <!-- router view must be here -->
             <div>
                 <!-- <page3Dashboard/> -->
-                <!-- <Storage/> -->
-                <Page4Wallet/>
+                <Storage/>
+                <!-- <Page4Wallet/> -->
             </div>
         </div>
     </div>
