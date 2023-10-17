@@ -45,7 +45,7 @@
                 <!-- end of the menu item -->
 
                 <!-- menu item -->
-                <a href="#" class="active">
+                <router-link to="/storage">
                     <div class="lg:flex md:flex sm:flex min-[320px]:flex
                     w-full px-3 hover:bg-[#293793] my-2 py-2 hover:text-[white] transition-all ease-linear">
                         <span class=" material-symbols-outlined top-2 right-[20px] text-[#E9983C] mr-2
@@ -55,9 +55,8 @@
                         <h3>Storage </h3>
                     
                     </div>
+                </router-link>
 
-                    
-                </a>
                 <!-- end of the menu item -->
 
                 <!-- menu item -->
