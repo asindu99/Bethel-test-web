@@ -1,7 +1,7 @@
 <template>
 <!-- storage  -->
 
-        <div class="flex flex-col lg:mb-40 bg-red-500 w-[100%]">
+        <div class="">
 
             <!-- header  -->
             <div class="flex flex-row justify-between sm:justify-between w-full h-[130px] bg-white shadow-lg">
