@@ -21,7 +21,7 @@
             <!-- middle section  -->
             <div class="flex flex-col">
                 <!-- menu item -->
-                <RouterLink to="/" class="active">
+                <RouterLink to="/" class="">
                     <div class="lg:flex md:flex sm:flex min-[320px]:flex
                      w-full px-3 hover:bg-[#293793] my-2 py-2 hover:text-[white] transition-all ease-linear">
                         <span class=" material-symbols-outlined top-2 right-[20px] text-[#E9983C] mr-2
@@ -68,7 +68,7 @@
                 <!-- end of the menu item -->
 
                 <!-- menu item -->
-                <RouterLink to="/accesskey" class="active flex justify-center items-center">
+                <RouterLink to="/accesskey" class="flex justify-center items-center">
                     <div class="min-[320px]:flex lg:flex sm:flex md:flex w-full px-3 hover:bg-[#293793] my-2 py-2 hover:text-[white] transition-all ease-linear">
                         <span class=" material-symbols-outlined top-2 right-[20px] text-[#E9983C] mr-2
                         ">
@@ -96,12 +96,6 @@
                     </div>
                 </div>
 
-                <!-- small size -->
-                <!-- <div class="min-[320px]:hidden sm:hidden lg:hidden md:flex items-center justify-center px-[10px] py-2 bg-[linear-gradient(to_right,rgba(240,245,254,1),rgba(240,245,254,1))]">
-                    <div class="relative items-center justify-center">
-                        <img src="../img/icons/icon-account.png" alt="" class="w-[30px]">
-                    </div>
-                </div> -->
                 <!-- end of menu text -->
 
                 <!-- menu item -->
@@ -136,7 +130,7 @@
                 <!-- end of the menu item -->
 
                 <!-- menu item -->
-                <a href="#" class="active">
+                <a href="https://docs.bethel.network/" class="active" target="_blank">
                     <div class="min-[320px]:flex sm:flex lg:flex md:flex w-full px-3 hover:bg-[#293793] my-2 py-2 hover:text-[white] transition-all ease-linear">
                         <span class=" material-symbols-outlined top-2 right-[20px] text-[#E9983C] mr-2
                         ">
@@ -175,7 +169,7 @@
         <div class=" flex justify-center bg-[#f7f1f1c2] z-0 lg:w-[100%] lg:mx-[0px] mt-[80px] h-full 
         md:px-[5px] sm:w-full min-[320px]:w-full min-[320px]:ml-0">
             <!-- router view must be here -->
-            <div class="w-full h-full mx-2 lg:pl-[240px] md:pl-[150px]"> 
+            <div class="w-full h-full mx-2 lg:pl-[240px] md:pl-[150px]" :class="modalStore.onBlur"> 
                 <router-view></router-view> 
             </div>
         </div>

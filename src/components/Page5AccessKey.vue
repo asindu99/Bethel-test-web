@@ -1,5 +1,6 @@
 <template>
-    <div class="w-full px-2">
+    
+    <div class="w-full px-2 animate__animated animate__fadeInLeft animate__faster">
         <!-- access key name -->
         <div class="relative">
             <div class="w-[4px] h-[40px] bg-[#293793] absolute top-[10px] "></div>
@@ -8,16 +9,16 @@
         <!-- end of the access key name -->
 
         <!-- access keys table content -->
-        <div class="py-1 px-2 bg-white rounded-lg my-2">
+        <div class="py-1 min-[320px]:px-[4px] sm:px-2 md:px-2 lg:px-2 bg-white rounded-lg my-2">
             <!-- start of the table -->
-            <table class="table-auto border-separate py-2 w-full rounded-lg">
+            <table class="table-auto border-separate py-1 w-full rounded-lg">
                     <thead class="">
                         <tr class="">
-                        <th class="text-[14px] border p-3 bg-blue-50">USER NAME</th>
-                        <th class="text-[14px] border p-3 bg-blue-50">KEY</th>
-                        <th class="text-[14px] border p-3 bg-blue-50">SECRET</th>
-                        <th class="text-[14px] border p-3 bg-blue-50">CREATED ON</th>
-                        <th class="text-[14px] border p-3 bg-blue-50">STATUS</th>
+                        <th class="min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] border p-3 bg-blue-50">USER NAME</th>
+                        <th class="min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] border p-3 bg-blue-50">KEY</th>
+                        <th class="min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] border p-3 bg-blue-50">SECRET</th>
+                        <th class="min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] border p-3 bg-blue-50">CREATED ON</th>
+                        <th class="min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] border p-3 bg-blue-50">STATUS</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -46,17 +47,40 @@
 
             <div class="mt-2">
                 <form action="" class="flex gap-2">
-                    <input type="text" class="w-[250px] border-[2px] rounded-lg px-3" placeholder="https://s3.filebase.com">
+                    <input type="text" class="w-[250px] border-[2px] rounded-md px-3" placeholder="https://s3.filebase.com">
                     <!-- button -->
-                    <div class="flex items-center gap-2 border-[2px] px-1 py-1 rounded-lg bg-white">
-                        <button class="text-[15px] ml-1 text-[#293793]">Copy</button>
+                    <button class="text-[15px] text-[#293793]"><div class="flex items-center gap-2 border-[2px] px-1 py-1 rounded-lg bg-white">
+                        Copy
                         <img src="../img/icons/icons-copy.png" alt="" class="w-[20px] h-[20px]">
 
-                    </div>
+                    </div></button>
                     <!-- end of buttton -->
                     
                 </form>
             </div>
+
+
+            <!-- IPFS Pinning Service API Endpoint  section -->
+            <div>
+
+                <div class="relative mt-6 ">
+                    <div class="w-[4px] h-[25px] bg-[#293793] absolute top-[6px] "></div>
+                    <h3 class="ml-4 text-[25px] font-medium">IPFS Pinning Service API Endpoint</h3> 
+                </div> 
+
+                <form action="" class="flex gap-2 mt-2">
+                    <input type="text" class="w-[250px] border-[2px] rounded-md px-3" placeholder="https://api.filebase.io/v1/ipfs">
+                    <!-- button -->
+                    <button class="text-[15px] text-[#293793]"><div class="flex items-center gap-2 border-[2px] px-1 py-1 rounded-lg bg-white">
+                        Copy
+                        <img src="../img/icons/icons-copy.png" alt="" class="w-[20px] h-[20px]">
+
+                    </div></button>
+                    <!-- end of buttton -->
+                    
+                </form>
+            </div>
+            <!-- end IPFS Pinning Service API Endpoint  -->
 
         </div>
         <!-- end of the middle -->
@@ -64,6 +88,8 @@
 
 
     </div>
+
+    
 </template>
 
 <script >
