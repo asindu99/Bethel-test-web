@@ -1,5 +1,5 @@
 <template>
-    <div class="lg:px-0 md:px-5 sm:px-4 min-[320px]:px-2">
+    <div class="relative lg:px-0 md:px-5 sm:px-4 min-[320px]:px-2 animate__animated animate__fadeInLeft animate__faster">
         <!-- wallet section -->
         <div class="lg:w-[100%] md:w-[100%] sm:w-[100%] min-[320px]:w-[full]">
             <!-- head wallet div  -->
@@ -99,7 +99,6 @@
 
 
         <!-- transation section -->
-
         <div class="my-10">
             <!-- transaction making sec -->
             <div class="">
@@ -114,7 +113,7 @@
             <div class="flex basis-2 flex-wrap justify-center gap-10 mt-4">
                 <!-- 1st container -->
                 <div class="bg-white flex flex-col items-center justify-center border-[2px] shadow-md py-[20px] px-[60px] 
-                lg:w-[550px] md:w-[550px] rounded-lg">
+                lg:w-[550px] md:w-[550px] sm:w-[550px] min-[320px]:w-[350px] rounded-lg">
                     <!-- bethel logo image -->
                     <div class="py-10">
                         <img src="../img/logos/bethellogo.png" alt="" class="w-[150px]">
@@ -131,7 +130,7 @@
 
                 <!-- 2nd container -->
                 <div class="bg-white flex flex-col items-center justify-center border-[2px] shadow-md py-[20px] px-[60px] 
-                lg:w-[550px] md:w-[550px] rounded-lg">
+                lg:w-[550px] md:w-[550px] sm:w-[550px] min-[320px]:w-[350px] rounded-lg">
                     <!-- bethel logo image -->
                     <div class="py-10">
                         <img src="../img/logos/bethellogo.png" alt="" class="w-[150px]">
@@ -163,20 +162,20 @@
                 <table class="table-auto border-separate py-2 w-full rounded-lg">
                     <thead class="">
                         <tr class="">
-                        <th class="text-[14px] border p-3 bg-blue-50">TIME</th>
-                        <th class="text-[14px] border p-3 bg-blue-50">TYPE</th>
-                        <th class="text-[14px] border p-3 bg-blue-50">WALLET ADDRESS</th>
-                        <th class="text-[14px] border p-3 bg-blue-50">AMOUNT</th>
-                        <th class="text-[14px] border p-3 bg-blue-50">STATUS</th>
+                        <th class="text-[14px] border p-3 bg-blue-50 min-[320px]:text-[8px] lg:text-[14px] md:text-[12px]">TIME</th>
+                        <th class="text-[14px] border p-3 bg-blue-50 min-[320px]:text-[8px] lg:text-[14px] md:text-[12px]">TYPE</th>
+                        <th class="text-[14px] border p-3 bg-blue-50 min-[320px]:text-[8px] lg:text-[14px] md:text-[12px]">WALLET ADDRESS</th>
+                        <th class="text-[14px] border p-3 bg-blue-50 min-[320px]:text-[8px] lg:text-[14px] md:text-[12px]">AMOUNT</th>
+                        <th class="text-[14px] border p-3 bg-blue-50 min-[320px]:text-[8px] lg:text-[14px] md:text-[12px]">STATUS</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                        <td class="text-[12px] text-center bg-white border p-3"> Future CX</td>
-                        <td class="text-[12px] text-center bg-white border p-3">14$</td>
-                        <td class="text-[12px] text-center bg-white border p-3">24-10-2023 14:00</td>
-                        <td class="text-[12px] text-center bg-white border p-3">Details</td>
-                        <td class="text-[12px] text-center bg-white border p-3">ONLINE</td>
+                        <td class="min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] text-center bg-white border p-3"> Future CX</td>
+                        <td class="min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] text-center bg-white border p-3">14$</td>
+                        <td class="min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] text-center bg-white border p-3">24-10-2023 14:00</td>
+                        <td class="min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] text-center bg-white border p-3">Details</td>
+                        <td class="min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] text-center bg-white border p-3">ONLINE</td>
                         </tr>
                     </tbody>
                 </table>
@@ -184,7 +183,88 @@
 
             </div>
         </div> 
+        <!-- end of the transaction sec -->
+
+        <!-- pop up model for Create wallet -->
+        <div class="absolute top-0 w-[500px] bg-red-100 p-2 border-2">
+            <!-- wallet details -->
+            <div class="bg-gray-100 p-2">
+                <h3>Wallet Details</h3>
+            </div>
+
+            <!-- wallet information main div -->
+            <div class="bg-white p-6 flex flex-col flex-wrap">
+
+                <div>
+                    <h3>Your Wallet Informations</h3>
+                </div>
+
+                <div>
+                    <input type="text" placeholder="5FxUz8N6BztaerGhJYpjL5gTGBFZevK96vjpvxsWvs6QgJ7W5FxUz8N6BztaerGhJYpjL5gTGBFZevK96vjpvxsWvs6QgJ7W" class="mt-2 w-[350px] border-[2px] rounded-lg p-1">
+                </div>
+
+                <div class="mt-4">
+                    <h3>Seeds</h3>
+                </div>
+
+                <!-- seeds catergory Flex -->
+                <div class="p-2 flex flex-warp">
+                    <!-- cards -->
+                    <div class="flex gap-2">
+                            <!-- card 1 -->
+                        <div class="flex border-2 py-1 px-2 rounded-md bg-[#f6f5f5b4]">
+                            <h3 class="text-[14px] text-[#706c6c]">Organ</h3>
+                        </div>
+                        <!-- card 1 end -->
+                           <!-- card 1 -->
+                           <div class="flex border-2 py-1 px-2 rounded-md bg-[#f6f5f5b4]">
+                            <h3 class="text-[14px] text-[#706c6c]">Organ</h3>
+                        </div>
+                        <!-- card 1 end -->
+
+                        <!-- card 1 -->
+                        <div class="flex border-2 py-1 px-2 rounded-md bg-[#f6f5f5b4]">
+                            <h3 class="text-[14px] text-[#706c6c]">Organ</h3>
+                        </div>
+                        <!-- card 1 end -->
+
+                        <!-- card 1 -->
+                        <div class="flex border-2 py-1 px-2 rounded-md bg-[#f6f5f5b4]">
+                            <h3 class="text-[14px] text-[#706c6c]">Organ</h3>
+                        </div>
+                        <!-- card 1 end -->
+
+                        <!-- card 1 -->
+                        <div class="flex border-2 py-1 px-2 rounded-md bg-[#f6f5f5b4]">
+                            <h3 class="text-[14px] text-[#706c6c]">Organ</h3>
+                        </div>
+                        <!-- card 1 end -->
+
+                        <!-- card 1 -->
+                        <div class="flex border-2 py-1 px-2 rounded-md bg-[#f6f5f5b4]">
+                            <h3 class="text-[14px] text-[#706c6c]">Organ</h3>
+                        </div>
+                        <!-- card 1 end -->
+
+                        <!-- card 1 -->
+                        <div class="flex border-2 py-1 px-2 rounded-md bg-[#f6f5f5b4]">
+                            <h3 class="text-[14px] text-[#706c6c]">Organ</h3>
+                        </div>
+                        <!-- card 1 end -->
+                    </div>
+                    
+
+                    <!-- end of the cards -->
+                </div>
+                <!-- end of seeds catergory  -->
+
+            </div>
+            <!-- end wallet info div -->
+        </div>
+        <!-- end of ppop  -->
     </div>
+
+    
     
         
 </template>

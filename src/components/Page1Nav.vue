@@ -22,17 +22,81 @@
             <!-- right side -->
             <div class="md:flex lg:flex sm:flex  min-[320px]:flex items-center w-[300px] basis-[42%] gap-2 justify-end">
 
-                <button class="mr-2 text-[12px] border-[2px] rounded-full p-[7px] px-[18px]
+                <router-link to="/wallet"><button class="mr-2 text-[12px] border-[2px] rounded-full p-[7px] px-[18px]
                 bg-[#293793] text-white border-[#293793]
-                hover:bg-white hover:text-[#293793] transition-all ease-linear sm:hidden min-[320px]:hidden lg:flex md:flex">Connect Wallet</button>
+                hover:bg-white hover:text-[#293793] transition-all ease-linear sm:hidden min-[320px]:hidden lg:flex md:flex">Connect Wallet</button></router-link>
 
                 <img src="../img/icons/icon-account.png" alt="" class="w-[30px] ">
                 <h3 class="text-[14px] lg:flex md:flex sm:flex min-[320px]:hidden">User's name</h3>
-                <div>
-                    <span class="material-symbols-outlined mt-[10px]">
+
+                <!-- drop down -->
+                <div class="relative">
+                    <!-- drop down button -->
+                    <button @click="DropMenu">
+                        <span class="material-symbols-outlined mt-[10px]">
                         expand_more
                     </span>
+                    </button>
+                    <!-- end of drop down button  -->
+
+                    <!-- drop down content -->
+                    <div  v-if="modalStore.dropMenuOC" class="absolute w-[250px] bg-white right-0 top-[55px] rounded-lg p-1 border-[2px] animate__animated animate__fadeInDown">
+
+                        <!-- box 1 -->
+                        <div class="flex flex-col w-full hover:bg-blue-200 px-2 py-2 border-b-2  transition-all ease-in-out">
+                            <h1 class="text-[14px]">Bethel User Name</h1>
+                            <h1 class="text-[11px] text-[#293793] cursor-pointer">behtelnetwork@bethel.mail.com</h1>
+                        </div>
+                        <!-- end box1 -->
+
+                        <!-- box 2 -->
+                        <button @click="modalStore.dropMenuOC = false" class="w-full"><RouterLink to="/" class="active">
+                            <div class="w-full hover:bg-blue-200 px-2 rounded-lg transition-all ease-linear">
+                                <div class="lg:flex md:flex sm:flex min-[320px]:flex
+                                    w-full px-3 my-2 py-2 ">
+                                    <span class=" material-symbols-outlined top-2 right-[20px] text-[#E9983C] mr-2 scale-[.9]
+                                    ">
+                                        grid_view
+                                    </span>  
+                                    <h3 class="text-[15px]">Dashboard</h3>
+                            
+                                </div>
+                            </div>
+                        </RouterLink>
+                        </button>
+                        <!-- end box 2 -->
+
+                        <!-- box 3 -->
+                        <div class="w-full hover:bg-blue-200 px-2 rounded-lg transition-all ease-linear">
+                            <div class="min-[320px]:flex sm:flex lg:flex md:flex w-full px-3  py-2">
+                                <span class=" material-symbols-outlined top-2 right-[20px] text-[#E9983C] mr-2 scale-[.9]
+                                ">
+                                    person_pin
+                                </span>  
+                                <h3 class="text-[15px]">Profile </h3>
+                            
+                            </div>
+                        </div>
+                        <!-- end box 3 -->
+
+                        <!-- box 3 -->
+                        <div class="w-full hover:bg-blue-200 px-2 rounded-lg transition-all ease-linear">
+                            <div class="min-[320px]:flex sm:flex lg:flex md:flex w-full px-3 my-2 py-2 hover:text-[white] transition-all ease-linear">
+                                <span class=" material-symbols-outlined top-2 right-[20px] text-[#E9983C] mr-2 scale-[.9]
+                                ">
+                                    logout
+                                </span>  
+                                <h3 class="text-[15px]">Log Out </h3>
+                    
+                            </div>
+                        </div>
+
+                    </div>  
+                    <!-- end of drop down content -->
+
                 </div>
+                <!-- end of drop down -->
+
 
                 <div class="gap-3 sm:flex min-[320px]:flex lg:hidden md:hidden items-center ">
                 <button @click="showSide">
@@ -44,18 +108,17 @@
             </div>
             <!-- end of the right side -->
 
-
-
-
-            <!-- mobile size nav -->
-            
-            <!-- end of the mobile size nav -->
-
         </nav>
         <!-- end of the nav bar -->
 
+        
         <!-- side bar in mobile size window -->
-        <div v-if="modalStore.isOpen" class=" bg-white lg:w-[220px] md:w-[150px] sm:w-[250px] sm:fixed z-[0]
+        <Transition
+            enter-active-class="animate__animated animate__fadeInLeft"
+            leave-active-class="animate__animated animate__fadeOutLeft"
+        >
+        <div v-if="modalStore.isOpen" class="
+        relative bg-white lg:w-[220px] md:w-[150px] sm:w-[250px] sm:fixed z-[0]
         min-[320px]:fixed min-[320px]:top-0 min-[320px]:bottom-0 min-[320px]:z-[10] min-[320px]:w-[200px]
          lg:hidden md:hidden flex-col shadow-md pt-4">
             <!-- top menu section -->
@@ -69,12 +132,25 @@
 
                 </div>
                 <!-- end of menu text -->
+      
             </div>
-            
+                
+            <!-- close button -->
+            <button @click="closeSide">
+                <div class="absolute top-6 right-2">
+                    <span class="material-symbols-outlined">
+                        close
+                    </span> 
+                </div>
+            </button>
+            <!-- end of the close button -->
+
+
             <!-- middle section  -->
             <div class="flex flex-col">
                 <!-- menu item -->
-                <RouterLink to="/" class="active">
+                <button @click="closeSide">
+                    <RouterLink to="/" class="active">
                     <div class="lg:flex md:flex sm:flex min-[320px]:flex
                      w-full px-3 hover:bg-[#293793] my-2 py-2 hover:text-[white] transition-all ease-linear">
                         <span class=" material-symbols-outlined top-2 right-[20px] text-[#E9983C] mr-2
@@ -86,10 +162,12 @@
                     </div>
 
                 </RouterLink>
+                </button>
                 <!-- end of the menu item -->
 
                 <!-- menu item -->
-                <router-link to="/storage" class="active">
+                <button @click="closeSide">
+                    <router-link to="/storage" class="active">
                     <div class="lg:flex md:flex sm:flex min-[320px]:flex
                     w-full px-3 hover:bg-[#293793] my-2 py-2 hover:text-[white] transition-all ease-linear">
                         <span class=" material-symbols-outlined top-2 right-[20px] text-[#E9983C] mr-2
@@ -101,11 +179,14 @@
                     </div>
 
                     
-                </router-link>
+                    </router-link>
+                </button>
+                
                 <!-- end of the menu item -->
 
                 <!-- menu item -->
-                <router-link to="/wallet">
+                <button @click="closeSide">
+                    <router-link href="/wallet">
                     <div class="lg:flex md:flex sm:flex min-[320px]:flex
                      w-full px-3 hover:bg-[#293793] my-2 py-2 hover:text-[white] transition-all ease-linear">
                         <span class=" material-symbols-outlined top-2 right-[20px] text-[#E9983C] mr-2
@@ -118,23 +199,28 @@
 
                     <!-- samll size -->
                     
-                </router-link>
+                    </router-link>
+                </button>
+                
                 <!-- end of the menu item -->
 
                 <!-- menu item -->
-                <a href="#" class="active flex justify-center items-center">
-                    <div class="min-[320px]:flex lg:flex sm:flex md:flex w-full px-3 hover:bg-[#293793] my-2 py-2 hover:text-[white] transition-all ease-linear">
-                        <span class=" material-symbols-outlined top-2 right-[20px] text-[#E9983C] mr-2
-                        ">
-                            key
-                        </span>  
-                        <h3>Access Keys </h3>
-                    
-                    </div>
+                <button @click="closeSide">
+                    <router-link to="/accesskey">
+                        <div class="min-[320px]:flex lg:flex sm:flex md:flex w-full px-3 hover:bg-[#293793] my-2 py-2 hover:text-[white] transition-all ease-linear">
+                            <span class=" material-symbols-outlined top-2 right-[20px] text-[#E9983C] mr-2
+                            ">
+                                key
+                            </span>  
+                            <h3>Access Keys </h3>
+                        
+                        </div>
 
-                    <!-- small size -->
-                    
-                </a>
+                        <!-- small size -->
+                        
+                    </router-link>
+                </button>
+                
                 <!-- end of the menu item -->
             </div>
             <!-- end of the middle section -->
@@ -190,7 +276,7 @@
                 <!-- end of the menu item -->
 
                 <!-- menu item -->
-                <a href="#" class="active">
+                <a href="https://docs.bethel.network/" class="active" target="_blank">
                     <div class="min-[320px]:flex sm:flex lg:flex md:flex w-full px-3 hover:bg-[#293793] my-2 py-2 hover:text-[white] transition-all ease-linear">
                         <span class=" material-symbols-outlined top-2 right-[20px] text-[#E9983C] mr-2
                         ">
@@ -225,12 +311,17 @@
             
         </div>
         <!-- end of the side bar in small windows -->
+
+        </Transition>
     </div>
 </template>
 
 <script>
 import {mapStores} from "pinia";
 import useModalStore from "@/stores/modal";
+
+
+
 
 export default{ 
     name : 'Page1Dashboard',
@@ -245,7 +336,17 @@ export default{
     }, 
     methods :{
         showSide(){
-            this.modalStore.isOpen = !this.modalStore.isOpen;
+            this.modalStore.isOpen = true;
+            this.modalStore.onBlur = 'blur-md'
+        },
+
+        closeSide(){
+            this.modalStore.isOpen = false;
+            this.modalStore.onBlur = '';
+
+        },
+        DropMenu(){
+            this.modalStore.dropMenuOC = !this.modalStore.dropMenuOC
         }
     }
 

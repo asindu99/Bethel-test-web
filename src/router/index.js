@@ -9,9 +9,8 @@ import Page5AccessKey from '@/components/Page5AccessKey.vue';
 
 
 
-const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
-  routes: [
+
+const routes = [
     { 
       path : '/',
       component :MainContent,
@@ -37,6 +36,12 @@ const router = createRouter({
     }
     
   ]
+
+
+const router = createRouter({
+    history: createWebHistory(import.meta.env.BASE_URL),
+    routes,
+    linkExactActiveClass : 'bg-[#293793] text-[#E9983C]'
 })
 
 export default router

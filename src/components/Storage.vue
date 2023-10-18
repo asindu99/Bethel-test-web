@@ -1,7 +1,7 @@
 <template>
 <!-- storage  -->
 
-        <div class="">
+        <div class="animate__animated animate__fadeInLeft animate__faster">
 
             <!-- header  -->
             <div class="flex flex-row justify-between h-full bg-white shadow-lg px-2 py-2 rounded-lg">
@@ -36,17 +36,17 @@
                     <table class="w-full border-separate border-spacing-2 border border-none">
 
                         <tr class=" bg-[linear-gradient(to_right,rgba(240,245,254,1),rgba(240,245,254,1))] text-[13px]">
-                        <th class="font-['Montserrat'] font-bold text-center">STORAGE NAME</th>
-                        <th class="font-['Montserrat'] font-bold text-center">ACCESS</th>
-                        <th class="font-['Montserrat'] font-bold text-center">NETWORK</th>
-                        <th class="font-['Montserrat'] font-bold text-center">DATE CREATED</th>
+                        <th class="font-['Montserrat'] font-bold text-center min-[320px]:text-[8px] lg:text-[14px] md:text-[12px]">STORAGE NAME</th>
+                        <th class="font-['Montserrat'] font-bold text-center min-[320px]:text-[8px] lg:text-[14px] md:text-[12px]">ACCESS</th>
+                        <th class="font-['Montserrat'] font-bold text-center min-[320px]:text-[8px] lg:text-[14px] md:text-[12px]">NETWORK</th>
+                        <th class="font-['Montserrat'] font-bold text-center min-[320px]:text-[8px] lg:text-[14px] md:text-[12px]">DATE CREATED</th>
                         </tr>
 
                         <tr class="bg-[#f5f5f5]">
-                            <td class="text-center p-3 font-['Montserrat'] text-[14px]">ABCD</td>
-                            <td class="text-center font-['Montserrat'] text-[14px]">Private</td>
-                            <td class="text-center font-['Montserrat'] text-[14px]">IPFS</td>
-                            <td class="text-center font-['Montserrat'] text-[14px]">2023-10-13 06:46:10 -0400</td>
+                            <td class="text-center p-3 font-['Montserrat'] min-[320px]:text-[8px] lg:text-[14px] md:text-[12px]">ABCD</td>
+                            <td class="text-center font-['Montserrat'] min-[320px]:text-[8px] lg:text-[14px] md:text-[12px]">Private</td>
+                            <td class="text-center font-['Montserrat'] min-[320px]:text-[8px] lg:text-[14px] md:text-[12px]">IPFS</td>
+                            <td class="text-center font-['Montserrat'] min-[320px]:text-[8px] lg:text-[14px] md:text-[12px]">2023-10-13 06:46:10 -0400</td>
 
                         </tr>
                         <tr class="">

@@ -1,5 +1,5 @@
 <template>
-    <div :class="paddingClass" class="lg:w-full md:w-full md:mx-auto min-[320px]:w-[80%] min-[320px]:mx-auto">
+    <div :class="paddingClass" class="lg:w-full md:w-full md:mx-auto min-[320px]:w-[100%] min-[320px]:px-[10px] animate__animated animate__fadeInLeft animate__faster">
         <!-- 1st caption section -->
         <div class="relative">
             <div class="w-[2px] h-[20px] bg-[#293793] absolute top-[5px] "></div>
