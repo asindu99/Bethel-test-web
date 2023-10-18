@@ -2,14 +2,37 @@
     
     <div class="w-full px-2 animate__animated animate__fadeInLeft animate__faster">
         <!-- access key name -->
-        <div class="relative">
-            <div class="w-[4px] h-[40px] bg-[#293793] absolute top-[10px] "></div>
-            <h3 class="ml-4 text-[40px]">Access Keys</h3> 
-        </div>
-        <!-- end of the access key name -->
+        <!-- head wallet div  -->
+        <div class="flex items-center justify-between shadow-sm rounded-lg px-3 py-3 bg-white">
+                <!-- left side text -->
+                 <div>
+                    <!-- storage with arrow -->
+                    <div class="flex">
+                        <div>
+                            <h3>Access Keys </h3>
+                        </div>
+
+                        <!-- right arrow -->
+                        <div class="ml-2">
+                            <span class="material-symbols-outlined">
+                                chevron_right
+                            </span>
+                        </div>
+                        
+                    </div>
+                    <!-- end of the storage with arrrow -->
+
+                    <!-- Main Bucket -->
+                    <div>
+                        <h1 class="font-bold text-[30px]">Access Keys </h1>
+                    </div>
+                    <!-- end of the bucket main -->
+                </div>
+            </div>
+        <!-- end of the head key name -->
 
         <!-- access keys table content -->
-        <div class="py-1 min-[320px]:px-[4px] sm:px-2 md:px-2 lg:px-2 bg-white rounded-lg my-2">
+        <div class="mt-4 py-1 min-[320px]:px-[4px] sm:px-2 md:px-2 lg:px-2 bg-white rounded-lg my-2">
             <!-- start of the table -->
             <table class="table-auto border-separate py-1 w-full rounded-lg">
                     <thead class="">

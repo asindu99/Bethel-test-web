@@ -1,7 +1,38 @@
 <template>
     <div :class="paddingClass" class="lg:w-full md:w-full md:mx-auto min-[320px]:w-[100%] min-[320px]:px-[10px] animate__animated animate__fadeInLeft animate__faster">
+
+        <!-- head wallet div  -->
+        <div class="flex items-center justify-between shadow-sm rounded-lg px-3 py-3 bg-white">
+                <!-- left side text -->
+                 <div>
+                    <!-- storage with arrow -->
+                    <div class="flex">
+                        <div>
+                            <h3>Dashboard </h3>
+                        </div>
+
+                        <!-- right arrow -->
+                        <div class="ml-2">
+                            <span class="material-symbols-outlined">
+                                chevron_right
+                            </span>
+                        </div>
+                        
+                    </div>
+                    <!-- end of the storage with arrrow -->
+
+                    <!-- Main Bucket -->
+                    <div>
+                        <h1 class="font-bold text-[30px]">Dashboard </h1>
+                    </div>
+                    <!-- end of the bucket main -->
+                </div>
+            </div>
+        <!-- end of the head key name -->
+
+
         <!-- 1st caption section -->
-        <div class="relative">
+        <div class="relative mt-4">
             <div class="w-[2px] h-[20px] bg-[#293793] absolute top-[5px] "></div>
             <h3 class="ml-2 text-[20px]">OverView</h3> 
         </div>
