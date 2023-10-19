@@ -152,7 +152,7 @@
                 </a>
                 <!-- end of the menu item -->
                 <!-- menu item -->
-                <a href="#" class=" w-full">
+                <RouterLink to="/login" class=" w-full">
                     <div class="min-[320px]:flex sm:flex lg:flex md:flex w-full px-3  my-2 py-2 hover:text-[#E9983C] transition-all ease-linear">
                         <span class=" material-symbols-outlined top-2 right-[20px] text-[#E9983C] mr-2
                         ">
@@ -163,7 +163,7 @@
                     </div>
 
                     
-                </a>
+                </RouterLink>
                 <!-- end of the menu item -->
             </div>
             <!-- end of the account section -->
