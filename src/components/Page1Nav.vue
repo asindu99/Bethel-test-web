@@ -13,7 +13,7 @@
 
             <!-- middle side -->
             <div class="lg:flex md:hidden items-center justify-start basis-[50%]  sm:hidden min-[320px]:hidden">
-                <h2 class="md:ml-10 lg:ml-0">Dashboard</h2>
+                <h2 class="md:ml-10 lg:ml-0"></h2>
             </div>
             <!-- end of the middle -->
 

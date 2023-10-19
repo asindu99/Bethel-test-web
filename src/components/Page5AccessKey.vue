@@ -31,6 +31,12 @@
             </div>
         <!-- end of the head key name -->
 
+         <!-- text of table -->
+         <div class="relative mt-10">
+                <div class="w-[2px] h-[20px] bg-[#293793] absolute top-[5px] "></div>
+                <h3 class="ml-2 text-[20px]">Access Keys Details</h3> 
+            </div>
+
         <!-- access keys table content -->
         <div class="mt-4 py-1 min-[320px]:px-[4px] sm:px-2 md:px-2 lg:px-2 bg-white rounded-lg my-2">
             <!-- start of the table -->
@@ -62,9 +68,9 @@
         <!-- start of middle -->
         <div>
             <!-- S3 API Endpoint -->
-            <div class="relative mt-6 ">
-                <div class="w-[4px] h-[25px] bg-[#293793] absolute top-[6px] "></div>
-                <h3 class="ml-4 text-[25px] font-medium">S3 API Endpoint</h3> 
+            <div class="relative mt-10 ">
+                <div class="w-[2px] h-[20px] bg-[#293793] absolute top-[5px] "></div>
+                <h3 class="ml-2 text-[20px] font-medium">S3 API Endpoint</h3> 
             </div>  
             <!-- end of the S3 API Endpoint -->
 
@@ -86,9 +92,9 @@
             <!-- IPFS Pinning Service API Endpoint  section -->
             <div>
 
-                <div class="relative mt-6 ">
-                    <div class="w-[4px] h-[25px] bg-[#293793] absolute top-[6px] "></div>
-                    <h3 class="ml-4 text-[25px] font-medium">IPFS Pinning Service API Endpoint</h3> 
+                <div class="relative mt-10 ">
+                    <div class="w-[2px] h-[20px] bg-[#293793] absolute top-[4px] "></div>
+                    <h3 class="ml-2 text-[20px] font-medium">IPFS Pinning Service API Endpoint</h3> 
                 </div> 
 
                 <form action="" class="flex gap-2 mt-2">
