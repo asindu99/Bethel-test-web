@@ -24,7 +24,7 @@
                             <label for="cars" class="mt-6 lg:text-[14px] md:text-[14px] sm:text-[14px] min-[320px]:text-[12px]">Enter the Mobile number :</label>
                             <input type="number" class="p-1 bg-transparent border-b-2 border-blue-300 mx-2">
                                 
-                            <router-link to="/Mobile-Verfication/Number-Verify">
+                            <router-link to="/Mobile-Verification/Number-Verify">
                                 <button type="submit" class="mt-4 border-2 p-1 bg-blue-300 rounded-md w-[100px]">Verify</button>
                             </router-link>
 

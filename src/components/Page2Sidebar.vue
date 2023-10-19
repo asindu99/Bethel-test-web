@@ -1,10 +1,16 @@
 <template>
     <div class="flex">
         <!-- main side bar  -->
-        <div class=" bg-white md:fixed bottom-0 md:flex z-[10]
+        <div class=" bg-[white] md:fixed bottom-0 md:flex z-[10]
         lg:w-[220px] md:w-[150px] sm:hidden
         min-[320px]:hidden lg:fixed md:top-0 
-         flex-col shadow-md pt-20">
+         flex-col ">
+
+         <!-- left side -->
+        <div class="flex items-center w-[250px] py-4 pl-4">
+                <img src="../img/logos/bethellogo.png" alt="" class="w-[30px]">
+                <h1 class="font-medium ml-1 text-[18px] text-[#293793]">BETHEL</h1>
+        </div>
 
             <!-- top menu section -->
             <div class="flex py-2 flex-col px-[10px] bg-[linear-gradient(to_right,rgba(240,245,254,1),rgba(240,245,254,1))]"> 
@@ -23,7 +29,7 @@
                 <!-- menu item -->
                 <RouterLink to="/" class="">
                     <div class="lg:flex md:flex sm:flex min-[320px]:flex
-                     w-full px-3 hover:bg-[#293793] my-2 py-2 hover:text-[white] transition-all ease-linear">
+                     w-full px-3  my-2 py-2 hover:text-[#E9983C] transition-all ease-linear">
                         <span class=" material-symbols-outlined top-2 right-[20px] text-[#E9983C] mr-2
                         ">
                             grid_view
@@ -38,7 +44,7 @@
                 <!-- menu item -->
                 <router-link to="/storage">
                     <div class="lg:flex md:flex sm:flex min-[320px]:flex
-                    w-full px-3 hover:bg-[#293793] my-2 py-2 hover:text-[white] transition-all ease-linear">
+                    w-full px-3  my-2 py-2 hover:text-[#E9983C] transition-all ease-linear">
                         <span class=" material-symbols-outlined top-2 right-[20px] text-[#E9983C] mr-2
                         ">
                             hard_drive
@@ -53,7 +59,7 @@
                 <!-- menu item -->
                 <router-link to="/wallet">
                     <div class="lg:flex md:flex sm:flex min-[320px]:flex
-                     w-full px-3 hover:bg-[#293793] my-2 py-2 hover:text-[white] transition-all ease-linear">
+                     w-full px-3  my-2 py-2 hover:text-[#E9983C] transition-all ease-linear">
                         <span class=" material-symbols-outlined top-2 right-[20px] text-[#E9983C] mr-2
                         ">
                             wallet
@@ -69,7 +75,7 @@
 
                 <!-- menu item -->
                 <RouterLink to="/accesskey" class="flex justify-center items-center">
-                    <div class="min-[320px]:flex lg:flex sm:flex md:flex w-full px-3 hover:bg-[#293793] my-2 py-2 hover:text-[white] transition-all ease-linear">
+                    <div class="min-[320px]:flex lg:flex sm:flex md:flex w-full px-3 my-2 py-2 hover:text-[#E9983C] transition-all ease-linear">
                         <span class=" material-symbols-outlined top-2 right-[20px] text-[#E9983C] mr-2
                         ">
                             key
@@ -100,7 +106,7 @@
 
                 <!-- menu item -->
                 <a href="#" class="active mt-3">
-                    <div class="min-[320px]:flex sm:flex lg:flex md:flex w-full px-3 hover:bg-[#293793] my-2 py-2 hover:text-[white] transition-all ease-linear">
+                    <div class="min-[320px]:flex sm:flex lg:flex md:flex w-full px-3  my-2 py-2 hover:text-[#E9983C] transition-all ease-linear">
                         <span class=" material-symbols-outlined top-2 right-[20px] text-[#E9983C] mr-2
                         ">
                             person_pin
@@ -116,7 +122,7 @@
 
                 <!-- menu item -->
                 <router-link to="/billing">
-                    <div class="min-[320px]:flex sm:flex lg:flex md:flex w-full px-3 hover:bg-[#293793] my-2 py-2 hover:text-[white] transition-all ease-linear">
+                    <div class="min-[320px]:flex sm:flex lg:flex md:flex w-full px-3  my-2 py-2 hover:text-[#E9983C] transition-all ease-linear">
                         <span class=" material-symbols-outlined top-2 right-[20px] text-[#E9983C] mr-2
                         ">
                             attach_money
@@ -131,7 +137,7 @@
 
                 <!-- menu item -->
                 <a href="https://docs.bethel.network/" class="active" target="_blank">
-                    <div class="min-[320px]:flex sm:flex lg:flex md:flex w-full px-3 hover:bg-[#293793] my-2 py-2 hover:text-[white] transition-all ease-linear">
+                    <div class="min-[320px]:flex sm:flex lg:flex md:flex w-full px-3 hover:bg-[#f0ebebc2] my-2 py-2 hover:text-[#E9983C] transition-all ease-linear">
                         <span class=" material-symbols-outlined top-2 right-[20px] text-[#E9983C] mr-2
                         ">
                             support
@@ -147,7 +153,7 @@
                 <!-- end of the menu item -->
                 <!-- menu item -->
                 <a href="#" class=" w-full">
-                    <div class="min-[320px]:flex sm:flex lg:flex md:flex w-full px-3 hover:bg-[#293793] my-2 py-2 hover:text-[white] transition-all ease-linear">
+                    <div class="min-[320px]:flex sm:flex lg:flex md:flex w-full px-3  my-2 py-2 hover:text-[#E9983C] transition-all ease-linear">
                         <span class=" material-symbols-outlined top-2 right-[20px] text-[#E9983C] mr-2
                         ">
                             logout
