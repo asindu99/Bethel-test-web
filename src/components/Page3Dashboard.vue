@@ -203,7 +203,7 @@
         </div>
 
         <!-- log activies table -->
-        <div class=" w-[95%] mx-auto mt-4 bg-white rounded-lg px-2 shadow-md ">
+        <div class=" w-[95%] mx-auto mt-4 bg-white rounded-lg px-2 shadow-md mb-10">
             <!-- start of the table -->
             <table class="table-auto border-separate py-2 w-full rounded-lg">
                 <thead class="">

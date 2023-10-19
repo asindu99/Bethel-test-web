@@ -88,8 +88,28 @@
                         <td class="text-[12px] text-center bg-white border p-3"> --address of wallet--</td>
                         <td class="text-[12px] text-center bg-white border p-3">Ipv4 / Ipv6</td>
                         <td class="text-[12px] text-center bg-white border p-3">Loged In</td>
-                        <td class="text-[12px] text-center bg-white border p-3">2023-10-14 14:00</td>
+
+                        <!-- more button functions -->
+                        <td class="text-[12px] text-center bg-white border p-3">
+                            <div class="relative w-full">
+                                <!-- more button auth modal -->
+                                <div class="absolute right-[-15px] w-[60px] shadow-md border-[1px] bg-blue-50 rounded-md top-10">
+                                    <button>
+                                        <div class="p-1">
+                                            <h3>Delete</h3>
+                                        </div>
+                                    </button>
+                                    
+                                </div>
+                            <!-- end of the auth modal -->
+                            </div>
+                            <button><span class="material-symbols-outlined">more_vert</span></button>
+                        </td>
+                        <!-- more button end --> 
                         </tr>
+
+                        
+                        
                     </tbody>
                 </table>
 

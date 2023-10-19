@@ -4,69 +4,85 @@
         <div class="animate__animated animate__fadeInLeft animate__faster">
 
             <!-- header  -->
-            <div class="flex flex-row justify-between h-full bg-white shadow-lg px-2 py-2 rounded-lg">
-                <div class="lg:ml-[15px] lg:mt-[15px]">
-                    <p class="font-['Montserrat']"><span class="text-md">Storage></span><br>
-                        <span class="text-3xl font-bold">Storage</span><br>
-                        <div class="flex flex-row">
-                            <img src="../img/images/storage.svg" alt="">
-                                
-                            <span class=" lg:ml-[5px]">1 Storage</span>
+            <div class="flex flex-row items-center justify-between h-full bg-white shadow-lg px-2 py-2 rounded-lg">
+                <div class="lg:ml-[15px] my-2">
+                    <!-- storage with arrow -->
+                    <div class="flex">
+                        <div>
+                            <h3>Storage</h3>
                         </div>
-                    </p>
+
+                        <!-- right arrow -->
+                        <div class="ml-2">
+                            <span class="material-symbols-outlined">
+                                chevron_right
+                            </span>
+                        </div>
+                        
+                    </div>
+                    <!-- end of the storage with arrrow -->
+
+                    <!-- Main Bucket -->
+                    <div>
+                        <h1 class="font-bold text-[30px]">Bucket</h1>
+                    </div>
+                    <!-- end of the bucket main -->
+
+                    <!-- bucket with images -->
+                    <div class="flex items-center mt-2">
+                        <!-- image -->
+                        <div class="flex">
+                            <span class=" material-symbols-outlined text-[blue] mr-2
+                            ">
+                                glass_cup
+                            </span> 
+                        </div>
+                        <!-- text -->
+                        <div class="flex gap-1">
+                            <div>3</div>
+                            <h3>Buckets</h3>
+                        </div>
+                    </div>
                 </div>
         
                 <!-- create bucktes  -->
                 <div class="mr-[10px]">
-                    <button class="flex items-center justify-center ml-10 border-2 w-[200px] h-[50px] rounded-lg bg-gradient-to-r from-[#F48320] to-[#f8b878] shadow-lg text-white text-center font-['Montserrat'] mt-[30px] cursor-pointer">Create Bucket</button>
+                    <button @click="openAuthModal" class="border-[2px] px-2 py-2 rounded-xl bg-[#E9983C] w-[150px] text-[white] 
+                        font-medium hover:text-[#E9983C] hover:bg-[white] transition-all ease-linear hover:border-[#E9983C]">Create Bucket</button>
                 </div>
             </div>
-  
+            
+             <!-- text of table -->
+             <div class="relative mt-10">
+                <div class="w-[2px] h-[20px] bg-[#293793] absolute top-[5px] "></div>
+                <h3 class="ml-2 text-[20px]">Storage History</h3> 
+            </div>
 
-            <!-- storage table  -->
-            <div  class="flex items-center justify-center w-full bg-white mt-20">
-                <div class="font-['Montserrat'] lg:mt-10 lg:ml-[21px] text-xl font-bold">
-
-                    <span></span>
-
-                </div>
-
-
-                <div class="bg-light lg:px-4 w-full">
-                    <table class="w-full border-separate border-spacing-2 border border-none">
-
-                        <tr class=" bg-[linear-gradient(to_right,rgba(240,245,254,1),rgba(240,245,254,1))] text-[13px]">
-                        <th class="font-['Montserrat'] font-bold text-center min-[320px]:text-[8px] lg:text-[14px] md:text-[12px]">STORAGE NAME</th>
-                        <th class="font-['Montserrat'] font-bold text-center min-[320px]:text-[8px] lg:text-[14px] md:text-[12px]">ACCESS</th>
-                        <th class="font-['Montserrat'] font-bold text-center min-[320px]:text-[8px] lg:text-[14px] md:text-[12px]">NETWORK</th>
-                        <th class="font-['Montserrat'] font-bold text-center min-[320px]:text-[8px] lg:text-[14px] md:text-[12px]">DATE CREATED</th>
-                        </tr>
-
-                        <tr class="bg-[#f5f5f5]">
-                            <td class="text-center p-3 font-['Montserrat'] min-[320px]:text-[8px] lg:text-[14px] md:text-[12px]">ABCD</td>
-                            <td class="text-center font-['Montserrat'] min-[320px]:text-[8px] lg:text-[14px] md:text-[12px]">Private</td>
-                            <td class="text-center font-['Montserrat'] min-[320px]:text-[8px] lg:text-[14px] md:text-[12px]">IPFS</td>
-                            <td class="text-center font-['Montserrat'] min-[320px]:text-[8px] lg:text-[14px] md:text-[12px]">2023-10-13 06:46:10 -0400</td>
-
-                        </tr>
-                        <tr class="">
-                            <td class="text-center"></td>
-                            <td class="text-center"></td>
-                            <td class="text-center"></td>
-                            <td class="text-center"></td>
-                            <td class="text-center "></td>
-                        </tr>
-                        <tr class="">
-                            <td class="text-center "></td>
-                            <td class="text-center "></td>
-                            <td class="text-center"></td>
-                            <td class="text-center"></td>
-                            <td class="text-center"></td>
-                        </tr>
+            <!-- table -->
+            <div class=" w-[100%] mx-auto mt-4 bg-white rounded-lg px-2 shadow-md ">
+                    <!-- start of the table -->
+                    <table class="table-auto border-separate py-2 w-full rounded-lg">
+                        <thead class="">
+                            <tr class="">
+                            <th class="text-[14px] border p-3 bg-blue-50">BUCKET NAME</th>
+                            <th class="text-[14px] border p-3 bg-blue-50">ACCESS</th>
+                            <th class="text-[14px] border p-3 bg-blue-50">NETWORK</th>
+                            <th class="text-[14px] border p-3 bg-blue-50">DATE CREATED</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                            <td class="text-[12px] text-center bg-white border p-3"> --NAME--</td>
+                            <td class="text-[12px] text-center bg-white border p-3">PRIVATE</td>
+                            <td class="text-[12px] text-center bg-white border p-3">IPFS</td>
+                            <td class="text-[12px] text-center bg-white border p-3">2023-10-14 14:00</td>
+                            </tr>
+                        </tbody>
                     </table>
 
-                </div>
+
             </div>
+            
 
         </div>
 

@@ -5,6 +5,7 @@ import Page3Dashboard from '@/components/Page3Dashboard.vue';
 import Page4Wallet from '@/components/Page4Wallet.vue';
 import Storage from '@/components/Storage.vue'
 import Page5AccessKey from '@/components/Page5AccessKey.vue';
+import MobileVerifyComp from '@/components/MobileVerifyComp.vue'
 
 
 
@@ -33,6 +34,10 @@ const routes = [
         }
 
       ]
+    },
+    {
+      path : '/Mobile-Verfication',
+      component : MobileVerifyComp,
     }
     
   ]
