@@ -44,20 +44,20 @@
 
             <!-- pricing plans  -->
             <div class="flex basis-2/4 px-6">
-                <div class="flex lg:flex-row min-[320px]:flex-col md:flex-col-2 gap-5 p-4">
+                <div class="flex lg:flex-row min-[320px]:flex-col md:flex-col-2 gap-6 p-10">
 
                     <!-- plan-1  -->
-                    <div class=" basis-1/4 shadow-md rounded-lg bg-[#F48320] bg-opacity-75 min-[320px]:pb-10">
-                        <h4 class="m-10 font-bold text-2xl">Free</h4>
+                    <div class="basis-1/4 shadow-xl rounded-lg bg-[#F48320] bg-opacity-75 min-[320px]:pb-10">
+                            <div> <h4 class="m-10 font-bold text-2xl">Free</h4></div>
 
-                            <p class="m-10">Features for creators and developers who need more storage.</p>
+                           <div> <p class="m-10">Features for creators and developers who need more storage.</p></div>
 
-                            <p  class="m-10"><span class="font-bold text-2xl">$20</span><span> /mo</span></p>
+                            <div><p  class="m-10"><span class="font-bold text-2xl">$0</span><span> /mo</span></p></div>
 
                             
                             <div class="font-['Montserrat'] text-center font-bold">Your Current Plan</div>
 
-                            <p class="mx-10 mt-[60px] font-bold">What's included</p>
+                            <div><p class="mx-10 mt-[60px] font-bold">What's included</p></div>
 
                             <div class="flex flex-row mx-10 mt-10">
                                 <span class="material-symbols-outlined">
@@ -102,20 +102,20 @@
                     </div>
 
                     <!-- plan-2  -->
-                    <div class=" basis-1/4 bg-white shadow-md rounded-lg pb-4">
+                    <div class="basis-1/4 bg-white shadow-xl rounded-lg pb-4">
                         <div class="">
-                            <h4 class="m-10 font-bold text-2xl">Starter</h4>
+                            <div><h4 class="m-10 font-bold text-2xl">Starter</h4></div>
 
-                            <p class="m-10">Features for creators and developers who need more storage.</p>
+                            <div><p class="m-10">Features for creators and developers who need more storage.</p></div>
 
-                            <p  class="m-10"><span class="font-bold text-2xl">$20</span><span> /mo</span></p>
+                            <div><p  class="m-10"><span class="font-bold text-2xl">$20</span><span> /mo</span></p></div>
 
                             <div class="px-10 ">
-                                <button class="border-2 w-[150px] h-[40px] rounded-lg bg-gradient-to-r from-[#F48320] to-[#f8b878] shadow-lg hover:bg-none hover:border-[#F48320] text-white hover:text-[#000000]">Select Buisness</button>
+                                <button class="border-2 w-[150px] h-[40px] rounded-lg bg-gradient-to-r from-[#F48320] to-[#f8b878] shadow-lg hover:bg-none hover:border-[#F48320] text-white hover:text-[#000000]">Select Starter</button>
                         
                             </div>
 
-                            <p class="mx-10 mt-[50px] font-bold">What's included</p>
+                            <div><p class="mx-10 mt-[50px] font-bold">What's included</p></div>
 
                             <div class="flex flex-row mx-10 mt-10">
                                 <span class="material-symbols-outlined">
@@ -162,19 +162,19 @@
                     </div>
 
                     <!-- plan-3  -->
-                    <div class=" basis-1/4 bg-white shadow-md rounded-lg pb-4">
-                        <h4 class="m-10 font-bold text-2xl">Pro</h4>
+                    <div class=" basis-1/4 bg-white shadow-xl rounded-lg pb-4">
+                            <div><h4 class="m-10 font-bold text-2xl">Pro</h4></div>
 
-                            <p class="m-10">Features for creators and developers who need even more storage.</p>
+                            <div><p class="m-10">Features for creators and developers who need more storage.</p></div>
 
-                            <p  class="m-10"><span class="font-bold text-2xl">$100</span><span> /mo</span></p>
+                            <div><p  class="m-10"><span class="font-bold text-2xl">$100</span><span> /mo</span></p></div>
 
                             <div class="px-10 ">
-                                <button class="border-2 w-[150px] h-[40px] rounded-lg bg-gradient-to-r from-[#F48320] to-[#f8b878] shadow-lg hover:bg-none hover:border-[#F48320] text-white hover:text-[#000000]">Select Buisness</button>
+                                <button class="border-2 w-[150px] h-[40px] rounded-lg bg-gradient-to-r from-[#F48320] to-[#f8b878] shadow-lg hover:bg-none hover:border-[#F48320] text-white hover:text-[#000000]">Select Pro</button>
                         
                             </div>
 
-                            <p class="mx-10 mt-[50px] font-bold">What's included</p>
+                            <div><p class="mx-10 mt-[50px] font-bold">What's included</p></div>
 
                             <div class="flex flex-row mx-10 mt-10">
                                 <span class="material-symbols-outlined">
@@ -219,10 +219,10 @@
                     </div>
 
                     <!-- plan-4  -->
-                    <div class=" basis-1/4 bg-white shadow-md rounded-lg pb-4">
+                    <div class="basis-1/4 bg-white shadow-xl rounded-lg pb-4">
                         <h4 class="m-10 font-bold text-2xl">Buisness</h4>
                         
-                        <p class="m-10">Features for creators and developers who need even more storage.</p>
+                        <p class="m-10">Features for creators and developers who need more storage.</p>
 
                         <p  class="m-10"><span class="font-bold text-2xl">$500</span><span> /mo</span></p>
 
