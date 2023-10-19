@@ -1,12 +1,12 @@
 <template>
     <div class="fixed w-full">
         <!-- start of the nav bar -->
-        <nav class="flex justify-between lg:py-2 lg:px-10 bg-gray-100 shadow-md z-[100]
+        <nav class="flex justify-between lg:py-2 lg:px-10 bg-white z-[100]
         md:py-2 md:px-10
         sm:py-2 sm:px-10
         min-[320px]:py-2 min-[320px]:px-4 gap-4 ">
             <!-- left side -->
-            <div class="flex items-center w-[250px] basis-[20%]">
+            <div class="flex items-center w-[250px] basis-[20%] py-2">
                 <img src="../img/logos/bethellogo.png" alt="" class="w-[30px]">
                 <h1 class="font-medium ml-1 text-[18px] text-[#293793]">BETHEL</h1>
             </div>
@@ -43,10 +43,13 @@
                     <div  v-if="modalStore.dropMenuOC" class="absolute w-[250px] bg-white right-0 top-[55px] rounded-lg p-1 border-[2px] animate__animated animate__fadeInDown">
 
                         <!-- box 1 -->
-                        <div class="flex flex-col w-full hover:bg-blue-200 px-2 py-2 border-b-2  transition-all ease-in-out">
-                            <h1 class="text-[14px]">Bethel User Name</h1>
-                            <h1 class="text-[11px] text-[#293793] cursor-pointer">behtelnetwork@bethel.mail.com</h1>
-                        </div>
+                        <RouterLink to="/Mobile-Verification">
+                            <div class="flex flex-col w-full hover:bg-blue-200 px-2 py-2 border-b-2  transition-all ease-in-out">
+                                <h1 class="text-[14px]">Bethel User Name</h1>
+                                <h1 class="text-[11px] text-[#293793] cursor-pointer">behtelnetwork@bethel.mail.com</h1>
+                            </div>
+                        </RouterLink>
+                        
                         <!-- end box1 -->
 
                         <!-- box 2 -->
@@ -80,16 +83,20 @@
                         <!-- end box 3 -->
 
                         <!-- box 3 -->
-                        <div class="w-full hover:bg-blue-200 px-2 rounded-lg transition-all ease-linear">
-                            <div class="min-[320px]:flex sm:flex lg:flex md:flex w-full px-3 my-2 py-2 hover:text-[white] transition-all ease-linear">
-                                <span class=" material-symbols-outlined top-2 right-[20px] text-[#E9983C] mr-2 scale-[.9]
-                                ">
-                                    logout
-                                </span>  
-                                <h3 class="text-[15px]">Log Out </h3>
-                    
-                            </div>
-                        </div>
+                        <RouterLink to="/login">
+                            <button @click="modalStore.dropMenuOC = false" class="w-full">
+                                <div class="w-full hover:bg-blue-200 px-2 rounded-lg transition-all ease-linear">
+                                    <div class="min-[320px]:flex sm:flex lg:flex md:flex w-full px-3 my-2 py-2 hover:text-[white] transition-all ease-linear">
+                                        <span class=" material-symbols-outlined top-2 right-[20px] text-[#E9983C] mr-2 scale-[.9]
+                                        ">
+                                            logout
+                                        </span>  
+                                        <h3 class="text-[15px]">Log Out </h3>
+                            
+                                    </div>
+                                </div>
+                            </button>
+                        </RouterLink>
 
                     </div>  
                     <!-- end of drop down content -->

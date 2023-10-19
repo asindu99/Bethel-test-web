@@ -1,7 +1,7 @@
 <template>
     <div class="">
-        <Page1Nav class="z-[100]"/>
-        <Page2Sidebar class="h-full z-[10]"/>
+        <Page1Nav class="z-[10]"/>
+        <Page2Sidebar class="h-full z-[100]"/>
         <!-- <page3Dashboard/>  -->
         <!-- <Page4Wallet/> -->
     </div>

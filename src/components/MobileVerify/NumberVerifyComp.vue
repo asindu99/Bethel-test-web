@@ -16,12 +16,12 @@
                             <label for="cars" class="mt-6 lg:text-[14px] md:text-[14px] sm:text-[14px] min-[320px]:text-[12px]">Enter the Code :</label>
                             <input type="number" class="p-1 bg-transparent border-b-2 border-blue-300 mx-2">
                                 
-                            <button type="submit" class="mt-4 border-2 p-1 bg-blue-300 rounded-md w-[100px]">Confirm</button>
+                            <router-link to="/"><button type="submit" class="mt-4 border-2 p-1 bg-blue-300 rounded-md w-[100px]">Confirm</button></router-link>
 
                         </form>
                     </div>
 
-                    <router-link to="/Mobile-Verfication">
+                    <router-link to="/Mobile-Verification">
                        <div class="absolute top-[-40px] left-[0] flex items-center">
                         <img src="../../img/icons/icons-back.png" alt="" class="w-[20px]">
                         <h3 class="text-[12px] text-[gray] ml-1">back</h3>
