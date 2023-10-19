@@ -1,12 +1,18 @@
-// impor
+// import componets
 import { createRouter, createWebHistory } from 'vue-router';
 import MainContent from "@/components/MainContent.vue";
 import Page3Dashboard from '@/components/Page3Dashboard.vue';
 import Page4Wallet from '@/components/Page4Wallet.vue';
 import Storage from '@/components/Storage.vue'
 import Page5AccessKey from '@/components/Page5AccessKey.vue';
-import MobileVerifyComp from '@/components/MobileVerifyComp.vue'
+
 import Billing from '@/components/Billing.vue';
+
+import MobileVerifyComp from '@/components/MobileVerify/MobileVerifyComp.vue'
+
+import VerifyComp from '@/components/MobileVerify/VerifyComp.vue';
+import NumberVerifyComp from '@/components/MobileVerify/NumberVerifyComp.vue';
+
 
 
 
@@ -43,6 +49,16 @@ const routes = [
     {
       path : '/Mobile-Verfication',
       component : MobileVerifyComp,
+      children : [
+        {
+          path : '',
+          component : VerifyComp,
+        },
+        {
+          path : '/Mobile-Verfication/Number-Verify',
+          component : NumberVerifyComp,
+        }
+      ]
     }
     
   ]
