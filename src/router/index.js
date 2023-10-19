@@ -6,7 +6,6 @@ import Page4Wallet from '@/components/Page4Wallet.vue';
 import Storage from '@/components/Storage.vue'
 import Page5AccessKey from '@/components/Page5AccessKey.vue';
 
-import MobileVerifyComp from '@/components/MobileVerifyComp.vue'
 import Billing from '@/components/Billing.vue';
 
 import MobileVerifyComp from '@/components/MobileVerify/MobileVerifyComp.vue'
