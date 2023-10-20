@@ -4,7 +4,7 @@
     <div class="flex flex-row items-center justify-end my-20 mx-[300px] shadow-xl">
         <!-- left-side  -->
         <div class="flex min-[320px]:flex-col w-[500px] h-[550px] bg-[linear-gradient(to_right,rgba(240,245,254,1),rgba(240,245,254,1))]">
-            <img src="../../img/images/LoginSignup-page-images/BG-img1.jpg" alt="" class=" rounded-l-xl  scale-[0.8] my-[50px]">
+            <img src="../../img/images/login-image.png" alt="" class=" rounded-l-xl  scale-[0.8] my-[50px]">
     
         </div>
         
