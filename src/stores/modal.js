@@ -5,6 +5,7 @@ export default defineStore('modal' , {
         isOpen : false,
         showSideBar : 'min-[320px]:hidden md:hidden',
         onBlur : '',
+        dropMenuOC : false,
         
     })
 });
