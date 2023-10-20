@@ -4,7 +4,7 @@
         <div class="">
 
             <!-- header  -->
-            <div class="flex flex-row items-center justify-between h-full bg-white shadow-lg px-2 py-2 rounded-lg">
+            <div class="flex flex-row items-center justify-between h-full bg-white shadow-sm px-2 py-2 rounded-lg">
                 <div class="lg:ml-[15px] my-2">
                     <!-- storage with arrow -->
                     <div class="flex">

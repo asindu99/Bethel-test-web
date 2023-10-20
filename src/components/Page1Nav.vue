@@ -120,21 +120,23 @@
 
         
         <!-- side bar in mobile size window -->
+
+        <!-- 1st color theme  -->
         <Transition
             enter-active-class="animate__animated animate__fadeInLeft"
             leave-active-class="animate__animated animate__fadeOutLeft"
         >
         <div v-if="modalStore.isOpen" class="
-        relative bg-white lg:w-[220px] md:w-[150px] sm:w-[250px] sm:fixed z-[0]
+        relative bg-[#161937] lg:w-[220px] md:w-[150px] sm:w-[250px] sm:fixed z-[0]
         min-[320px]:fixed min-[320px]:top-0 min-[320px]:bottom-0 min-[320px]:z-[10] min-[320px]:w-[200px]
          lg:hidden md:hidden flex-col shadow-md pt-4">
             <!-- top menu section -->
-            <div class="flex py-2 flex-col px-[10px] bg-[linear-gradient(to_right,rgba(240,245,254,1),rgba(240,245,254,1))]"> 
+            <div class="flex py-2 flex-col px-[10px] bg-[#1d2455]"> 
                 <!-- menu text -->
                 <div class="">
                     <div class="relative lg:flex md:flex min-[320px]:flex sm:flex placeholder:">
-                        <div class="absolute h-[15px] w-[3px] bg-[#293793] top-1"></div>
-                        <h3 class="text-[#293793] ml-2">Menu</h3>
+                        <div class="absolute h-[15px] w-[3px] bg-[#E9983C] top-1"></div>
+                        <h3 class="text-[#c4c9ea] ml-2">Menu</h3>
                     </div>
 
                 </div>
@@ -144,7 +146,7 @@
                 
             <!-- close button -->
             <button @click="closeSide">
-                <div class="absolute top-6 right-2">
+                <div class="absolute top-6 right-2 text-white">
                     <span class="material-symbols-outlined">
                         close
                     </span> 
@@ -158,9 +160,9 @@
                 <!-- menu item -->
                 <button @click="closeSide">
                     <RouterLink to="/" class="active">
-                    <div class="lg:flex md:flex sm:flex min-[320px]:flex
-                     w-full px-3 hover:bg-[#293793] my-2 py-2 hover:text-[white] transition-all ease-linear">
-                        <span class=" material-symbols-outlined top-2 right-[20px] text-[#E9983C] mr-2
+                    <div class="lg:flex md:flex sm:flex min-[320px]:flex text-[#293793]
+                     w-full px-3  my-2 py-2 hover:text-[white] transition-all ease-linear">
+                        <span class=" material-symbols-outlined top-2 right-[20px] mr-2
                         ">
                             grid_view
                         </span>  
@@ -175,9 +177,9 @@
                 <!-- menu item -->
                 <button @click="closeSide">
                     <router-link to="/storage" class="active">
-                    <div class="lg:flex md:flex sm:flex min-[320px]:flex
+                    <div class="lg:flex md:flex sm:flex min-[320px]:flex text-[#293793]
                     w-full px-3 hover:bg-[#293793] my-2 py-2 hover:text-[white] transition-all ease-linear">
-                        <span class=" material-symbols-outlined top-2 right-[20px] text-[#E9983C] mr-2
+                        <span class=" material-symbols-outlined top-2 right-[20px] mr-2
                         ">
                             hard_drive
                         </span>  
@@ -194,9 +196,9 @@
                 <!-- menu item -->
                 <button @click="closeSide">
                     <router-link to="/wallet">
-                    <div class="lg:flex md:flex sm:flex min-[320px]:flex
+                    <div class="lg:flex md:flex sm:flex min-[320px]:flex text-[#293793]
                      w-full px-3 hover:bg-[#293793] my-2 py-2 hover:text-[white] transition-all ease-linear">
-                        <span class=" material-symbols-outlined top-2 right-[20px] text-[#E9983C] mr-2
+                        <span class=" material-symbols-outlined top-2 right-[20px] mr-2
                         ">
                             wallet
                         </span>  
@@ -214,8 +216,8 @@
                 <!-- menu item -->
                 <button @click="closeSide">
                     <router-link to="/accesskey">
-                        <div class="min-[320px]:flex lg:flex sm:flex md:flex w-full px-3 hover:bg-[#293793] my-2 py-2 hover:text-[white] transition-all ease-linear">
-                            <span class=" material-symbols-outlined top-2 right-[20px] text-[#E9983C] mr-2
+                        <div class="text-[#293793] min-[320px]:flex lg:flex sm:flex md:flex w-full px-3 hover:bg-[#293793] my-2 py-2 hover:text-[white] transition-all ease-linear">
+                            <span class=" material-symbols-outlined top-2 right-[20px] mr-2 
                             ">
                                 key
                             </span>  
@@ -236,10 +238,10 @@
             <!-- account section -->
             <div class="flex flex-col mt-3"> 
                 <!-- menu text -->
-                <div class="lg:flex md:flex px-[10px] py-2 bg-[linear-gradient(to_right,rgba(240,245,254,1),rgba(240,245,254,1))]">
-                    <div class="relative">
-                        <div class="absolute h-[15px] w-[3px] bg-[#293793] top-1"></div>
-                        <h3 class="text-[#293793] ml-2">Account</h3>
+                <div class=" lg:flex md:flex px-[10px] py-2 bg-[#1d2455]">
+                    <div class=" relative lg:flex md:flex min-[320px]:flex sm:flex placeholder:">
+                        <div class="absolute h-[15px] w-[3px] bg-[#E9983C] top-1"></div>
+                        <h3 class="text-[#c4c9ea] ml-2">Account</h3>
                     </div>
                 </div>
 
@@ -253,8 +255,8 @@
 
                 <!-- menu item -->
                 <a href="#" class="active mt-3">
-                    <div class="min-[320px]:flex sm:flex lg:flex md:flex w-full px-3 hover:bg-[#293793] my-2 py-2 hover:text-[white] transition-all ease-linear">
-                        <span class=" material-symbols-outlined top-2 right-[20px] text-[#E9983C] mr-2
+                    <div class="text-[#293793] min-[320px]:flex sm:flex lg:flex md:flex w-full px-3 hover:bg-[#293793] my-2 py-2 hover:text-[white] transition-all ease-linear">
+                        <span class=" material-symbols-outlined top-2 right-[20px] mr-2
                         ">
                             person_pin
                         </span>  
@@ -269,8 +271,8 @@
 
                 <!-- menu item -->
                 <a href="#" class="active">
-                    <div class="min-[320px]:flex sm:flex lg:flex md:flex w-full px-3 hover:bg-[#293793] my-2 py-2 hover:text-[white] transition-all ease-linear">
-                        <span class=" material-symbols-outlined top-2 right-[20px] text-[#E9983C] mr-2
+                    <div class="text-[#293793] min-[320px]:flex sm:flex lg:flex md:flex w-full px-3 hover:bg-[#293793] my-2 py-2 hover:text-[white] transition-all ease-linear">
+                        <span class=" material-symbols-outlined top-2 right-[20px] mr-2
                         ">
                             attach_money
                         </span>  
@@ -284,8 +286,8 @@
 
                 <!-- menu item -->
                 <a href="https://docs.bethel.network/" class="active" target="_blank">
-                    <div class="min-[320px]:flex sm:flex lg:flex md:flex w-full px-3 hover:bg-[#293793] my-2 py-2 hover:text-[white] transition-all ease-linear">
-                        <span class=" material-symbols-outlined top-2 right-[20px] text-[#E9983C] mr-2
+                    <div class="text-[#293793] min-[320px]:flex sm:flex lg:flex md:flex w-full px-3 hover:bg-[#293793] my-2 py-2 hover:text-[white] transition-all ease-linear">
+                        <span class=" material-symbols-outlined top-2 right-[20px] mr-2
                         ">
                             support
                         </span>  
@@ -300,8 +302,8 @@
                 <!-- end of the menu item -->
                 <!-- menu item -->
                 <a href="#" class=" w-full">
-                    <div class="min-[320px]:flex sm:flex lg:flex md:flex w-full px-3 hover:bg-[#293793] my-2 py-2 hover:text-[white] transition-all ease-linear">
-                        <span class=" material-symbols-outlined top-2 right-[20px] text-[#E9983C] mr-2
+                    <div class="text-[#293793] min-[320px]:flex sm:flex lg:flex md:flex w-full px-3 hover:bg-[#293793] my-2 py-2 hover:text-[white] transition-all ease-linear">
+                        <span class=" material-symbols-outlined top-2 right-[20px] mr-2
                         ">
                             logout
                         </span>  
@@ -320,6 +322,9 @@
         <!-- end of the side bar in small windows -->
 
         </Transition>
+
+
+        
     </div>
 </template>
 
