@@ -9,7 +9,7 @@
         </div>
         
         <!-- right-side  -->
-        <div class="flex flex-col light w-[500px] h-[550px] rounded-r-xl">
+        <div class="flex flex-col bg-white w-[500px] h-[550px] rounded-r-xl">
             <div class="flex flex-row">
                 <img src="../../img/logos/bethellogo.png" alt="" class="w-[30px] h-[30px] ml-[40px] mt-[20px]">
                 <span class="font-bold text-xl mt-[20px] font-['Montserrat']">BETHEL</span>
