@@ -1,7 +1,7 @@
 <template>
 <!-- storage  -->
 
-        <div class="animate__animated animate__fadeInLeft animate__faster">
+        <div class="">
 
             <!-- header  -->
             <div class="flex flex-row items-center justify-between h-full bg-white shadow-lg px-2 py-2 rounded-lg">

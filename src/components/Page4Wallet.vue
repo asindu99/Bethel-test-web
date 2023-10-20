@@ -1,5 +1,5 @@
 <template>
-    <div class="relative lg:px-0 md:px-5 sm:px-4 min-[320px]:px-2 animate__animated animate__fadeInLeft animate__faster">
+    <div class="relative lg:px-0 md:px-5 sm:px-4 min-[320px]:px-2">
         <!-- wallet section -->
 
     <div :class="authBlur">
@@ -84,9 +84,9 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                        <td class="text-[12px] text-center bg-white border p-3"> --address of wallet--</td>
-                        <td class="text-[12px] text-center bg-white border p-3">Ipv4 / Ipv6</td>
+                        <tr v-for="wallet in walletTableArr" :key="wallet.Waddress">
+                        <td class="text-[12px] text-center bg-white border p-3"> {{wallet.Waddress}}</td>
+                        <td class="text-[12px] text-center bg-white border p-3">{{wallet.Seeds}}</td>
                         <td class="text-[12px] text-center bg-white border p-3">Loged In</td>
 
                         <!-- more button functions -->
@@ -94,7 +94,7 @@
                             <div class="relative w-full">
                                 <!-- more button auth modal -->
                                 <div class="absolute right-[-15px] w-[60px] shadow-md border-[1px] bg-blue-50 rounded-md top-10">
-                                    <button>
+                                    <button @click="deleteWalletData">
                                         <div class="p-1">
                                             <h3>Delete</h3>
                                         </div>
@@ -363,7 +363,15 @@ export default {
     data(){
         return{
             openClose : false,
-            authBlur : ''
+            authBlur : '',
+            walletTableArr : [
+                {
+                    Waddress : 'ip:232303',
+                    Seeds : 'Organ',
+                    Active : 'online',
+                },
+                
+            ],
         }
     },
 
@@ -376,6 +384,9 @@ export default {
         closeAuthModal(){
             this.openClose = false;
             this.authBlur = '';
+        },
+        deleteWalletData(){
+            
         }
     }
 }

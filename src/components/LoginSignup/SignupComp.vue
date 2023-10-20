@@ -1,19 +1,19 @@
 <template>
     <!-- signup -->
-<div class="">
-    <div class="flex lg:flex-row lg:shadow-xl lg:drop-shadow-xl lg:p-12">
+<div class="h-screen">
+    <div class="flex lg:flex-row shadow:xl lg:p-12">
         <!-- left-side  -->
-        <div class="lg:h-[600px] bg-[linear-gradient(to_right,rgba(240,245,254,1),rgba(240,245,254,1))] lg:basis-1/2 lg:rounded-l-xl">
+        <div class="lg:h-[600px] bg-[linear-gradient(to_right,rgba(240,245,254,1),rgba(240,245,254,1))] lg:rounded-l-xl">
             <!-- image  -->
             <div class="">
-                <img src="../../img/images/LoginSignup-page-images/BG-img2.jpg" alt="" class="lg:mt-20 lg:mx-20 lg:transform   lg:scale-[1.1]">
+                <img src="../../img/images/signup-pic1.png" alt="" class="lg:mt-20 lg:mx-20 lg:transform  lg:scale-[1.1]">
 
             </div>
 
         </div>
 
         <!-- right-side  -->
-        <div class="lg:h-[600px] lg:bg-[#FDFDFD] lg:basis-1/2 lg:rounded-r-xl">
+        <div class="lg:h-[600px] lg:bg-[#FDFDFD] lg:rounded-r-xl">
             <div class="flex lg:flex-row lg:items-center lg:justify-center lg:ml-[-100px]">
                 <div class="flex lg:flex-row lg:cursor-pointer">
                     <div class="flex lg:items-center lg:justify-center bg-[#293793] lg:w-[50px] lg:h-[50px] lg:m-10 lg:rounded-md">
