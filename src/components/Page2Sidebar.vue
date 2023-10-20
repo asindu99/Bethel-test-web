@@ -1,7 +1,7 @@
 <template>
     <div class="flex">
         <!-- main side bar  -->
-        <div class=" bg-[white] md:fixed bottom-0 md:flex z-[10]
+        <div class=" bg-[#161937] text-[#7882c3] md:fixed bottom-0 md:flex z-[10]
         lg:w-[220px] md:w-[150px] sm:hidden
         min-[320px]:hidden lg:fixed md:top-0 
          flex-col ">
@@ -13,12 +13,12 @@
         </div>
 
             <!-- top menu section -->
-            <div class="flex py-2 flex-col px-[10px] bg-[linear-gradient(to_right,rgba(240,245,254,1),rgba(240,245,254,1))]"> 
+            <div class="flex py-2 flex-col px-[10px] bg-[#1d2455]"> 
                 <!-- menu text -->
                 <div class="">
                     <div class="relative lg:flex md:flex min-[320px]:flex sm:flex placeholder:">
-                        <div class="absolute h-[15px] w-[3px] bg-[#293793] top-1"></div>
-                        <h3 class="text-[#293793] ml-2">Menu</h3>
+                        <div class="absolute h-[15px] w-[3px] bg-[#E9983C]  top-1"></div>
+                        <h3 class="text-[#c4c9ea] ml-2">Menu</h3>
                     </div>
                 </div>
                 <!-- end of menu text -->
@@ -29,8 +29,8 @@
                 <!-- menu item -->
                 <RouterLink to="/" class="">
                     <div class="lg:flex md:flex sm:flex min-[320px]:flex
-                     w-full px-3  my-2 py-2 hover:text-[#E9983C] transition-all ease-linear">
-                        <span class=" material-symbols-outlined top-2 right-[20px] text-[#E9983C] mr-2
+                     w-full px-3  my-2 py-2 hover:text-[white] transition-all ease-linear">
+                        <span class=" material-symbols-outlined top-2 right-[20px] mr-2
                         ">
                             grid_view
                         </span>  
@@ -44,8 +44,8 @@
                 <!-- menu item -->
                 <router-link to="/storage">
                     <div class="lg:flex md:flex sm:flex min-[320px]:flex
-                    w-full px-3  my-2 py-2 hover:text-[#E9983C] transition-all ease-linear">
-                        <span class=" material-symbols-outlined top-2 right-[20px] text-[#E9983C] mr-2
+                    w-full px-3  my-2 py-2 hover:text-[white] transition-all ease-linear">
+                        <span class=" material-symbols-outlined top-2 right-[20px] mr-2
                         ">
                             hard_drive
                         </span>  
@@ -59,8 +59,8 @@
                 <!-- menu item -->
                 <router-link to="/wallet">
                     <div class="lg:flex md:flex sm:flex min-[320px]:flex
-                     w-full px-3  my-2 py-2 hover:text-[#E9983C] transition-all ease-linear">
-                        <span class=" material-symbols-outlined top-2 right-[20px] text-[#E9983C] mr-2
+                     w-full px-3  my-2 py-2 hover:text-[white] transition-all ease-linear">
+                        <span class=" material-symbols-outlined top-2 right-[20px]  mr-2
                         ">
                             wallet
                         </span>  
@@ -75,8 +75,8 @@
 
                 <!-- menu item -->
                 <RouterLink to="/accesskey" class="flex justify-center items-center">
-                    <div class="min-[320px]:flex lg:flex sm:flex md:flex w-full px-3 my-2 py-2 hover:text-[#E9983C] transition-all ease-linear">
-                        <span class=" material-symbols-outlined top-2 right-[20px] text-[#E9983C] mr-2
+                    <div class="min-[320px]:flex lg:flex sm:flex md:flex w-full px-3 my-2 py-2 hover:text-[white] transition-all ease-linear">
+                        <span class=" material-symbols-outlined top-2 right-[20px] mr-2
                         ">
                             key
                         </span>  
@@ -95,19 +95,23 @@
             <!-- account section -->
             <div class="flex flex-col mt-3">
                 <!-- menu text -->
-                <div class="lg:flex md:flex px-[10px] py-2 bg-[linear-gradient(to_right,rgba(240,245,254,1),rgba(240,245,254,1))]">
-                    <div class="relative">
-                        <div class="absolute h-[15px] w-[3px] bg-[#293793] top-1"></div>
-                        <h3 class="text-[#293793] ml-2">Account</h3>
+                <div class="flex py-2 flex-col px-[10px] bg-[#1d2455]"> 
+                <!-- menu text -->
+                <div class="">
+                    <div class="relative lg:flex md:flex min-[320px]:flex sm:flex placeholder:">
+                        <div class="absolute h-[15px] w-[3px] bg-[#E9983C]  top-1"></div>
+                        <h3 class="text-[#c4c9ea] ml-2">Account</h3>
                     </div>
                 </div>
+                <!-- end of menu text -->
+            </div>
 
                 <!-- end of menu text -->
 
                 <!-- menu item -->
                 <a href="#" class="active mt-3">
-                    <div class="min-[320px]:flex sm:flex lg:flex md:flex w-full px-3  my-2 py-2 hover:text-[#E9983C] transition-all ease-linear">
-                        <span class=" material-symbols-outlined top-2 right-[20px] text-[#E9983C] mr-2
+                    <div class="min-[320px]:flex sm:flex lg:flex md:flex w-full px-3  my-2 py-2 hover:text-[white] transition-all ease-linear">
+                        <span class=" material-symbols-outlined top-2 right-[20px] mr-2
                         ">
                             person_pin
                         </span>  
@@ -122,8 +126,8 @@
 
                 <!-- menu item -->
                 <router-link to="/billing">
-                    <div class="min-[320px]:flex sm:flex lg:flex md:flex w-full px-3  my-2 py-2 hover:text-[#E9983C] transition-all ease-linear">
-                        <span class=" material-symbols-outlined top-2 right-[20px] text-[#E9983C] mr-2
+                    <div class="min-[320px]:flex sm:flex lg:flex md:flex w-full px-3  my-2 py-2 hover:text-[white] transition-all ease-linear">
+                        <span class=" material-symbols-outlined top-2 right-[20px]  mr-2
                         ">
                             attach_money
                         </span>  
@@ -137,8 +141,8 @@
 
                 <!-- menu item -->
                 <a href="https://docs.bethel.network/" class="active" target="_blank">
-                    <div class="min-[320px]:flex sm:flex lg:flex md:flex w-full px-3 hover:bg-[#f0ebebc2] my-2 py-2 hover:text-[#E9983C] transition-all ease-linear">
-                        <span class=" material-symbols-outlined top-2 right-[20px] text-[#E9983C] mr-2
+                    <div class="min-[320px]:flex sm:flex lg:flex md:flex w-full px-3 hover:bg-[] my-2 py-2 hover:text-[white] transition-all ease-linear">
+                        <span class=" material-symbols-outlined top-2 right-[20px]  mr-2
                         ">
                             support
                         </span>  
@@ -153,12 +157,12 @@
                 <!-- end of the menu item -->
                 <!-- menu item -->
                 <RouterLink to="/login" class=" w-full">
-                    <div class="min-[320px]:flex sm:flex lg:flex md:flex w-full px-3  my-2 py-2 hover:text-[#E9983C] transition-all ease-linear">
-                        <span class=" material-symbols-outlined top-2 right-[20px] text-[#E9983C] mr-2
+                    <div class="hover:text-[#E9983C] min-[320px]:flex sm:flex lg:flex md:flex w-full px-3 bg-[#120c2651] my-2 py-2  transition-all ease-linear">
+                        <span class=" material-symbols-outlined top-2 right-[20px] mr-2
                         ">
                             logout
                         </span>  
-                        <h3>Log Out </h3>
+                        <h3 c>Log Out </h3>
                     
                     </div>
 

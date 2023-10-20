@@ -1,5 +1,5 @@
 <template>
-    <div :class="paddingClass" class="lg:w-full md:w-full md:mx-auto min-[320px]:w-[100%] min-[320px]:px-[10px] animate__animated animate__fadeInLeft animate__faster">
+    <div :class="paddingClass" class="lg:w-full md:w-full md:mx-auto min-[320px]:w-[100%] min-[320px]:px-[10px]">
 
         <!-- head wallet div  -->
         <div class="flex items-center justify-between shadow-sm rounded-lg px-3 py-3 bg-white">
