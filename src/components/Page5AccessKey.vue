@@ -1,6 +1,6 @@
 <template>
     
-    <div class="w-full px-2 animate__animated animate__fadeInLeft animate__faster">
+    <div class="w-full px-2">
         <!-- access key name -->
         <!-- head wallet div  -->
         <div class="flex items-center justify-between shadow-sm rounded-lg px-3 py-3 bg-white">
