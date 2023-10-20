@@ -28,7 +28,7 @@
             <div class="flex flex-col">
                 <!-- menu item -->
                 <RouterLink to="/" class="">
-                    <div class="lg:flex md:flex sm:flex min-[320px]:flex
+                    <div class="hover:bg-[#181d42] lg:flex md:flex sm:flex min-[320px]:flex
                      w-full px-3  my-2 py-2 hover:text-[white] transition-all ease-linear">
                         <span class=" material-symbols-outlined top-2 right-[20px] mr-2
                         ">
@@ -43,7 +43,7 @@
 
                 <!-- menu item -->
                 <router-link to="/storage">
-                    <div class="lg:flex md:flex sm:flex min-[320px]:flex
+                    <div class="hover:bg-[#181d42] lg:flex md:flex sm:flex min-[320px]:flex
                     w-full px-3  my-2 py-2 hover:text-[white] transition-all ease-linear">
                         <span class=" material-symbols-outlined top-2 right-[20px] mr-2
                         ">
@@ -58,7 +58,7 @@
 
                 <!-- menu item -->
                 <router-link to="/wallet">
-                    <div class="lg:flex md:flex sm:flex min-[320px]:flex
+                    <div class="hover:bg-[#181d42] lg:flex md:flex sm:flex min-[320px]:flex
                      w-full px-3  my-2 py-2 hover:text-[white] transition-all ease-linear">
                         <span class=" material-symbols-outlined top-2 right-[20px]  mr-2
                         ">
@@ -75,7 +75,7 @@
 
                 <!-- menu item -->
                 <RouterLink to="/accesskey" class="flex justify-center items-center">
-                    <div class="min-[320px]:flex lg:flex sm:flex md:flex w-full px-3 my-2 py-2 hover:text-[white] transition-all ease-linear">
+                    <div class="hover:bg-[#181d42] min-[320px]:flex lg:flex sm:flex md:flex w-full px-3 my-2 py-2 hover:text-[white] transition-all ease-linear">
                         <span class=" material-symbols-outlined top-2 right-[20px] mr-2
                         ">
                             key
@@ -110,7 +110,7 @@
 
                 <!-- menu item -->
                 <a href="#" class="active mt-3">
-                    <div class="min-[320px]:flex sm:flex lg:flex md:flex w-full px-3  my-2 py-2 hover:text-[white] transition-all ease-linear">
+                    <div class="hover:bg-[#181d42] min-[320px]:flex sm:flex lg:flex md:flex w-full px-3  my-2 py-2 hover:text-[white] transition-all ease-linear">
                         <span class=" material-symbols-outlined top-2 right-[20px] mr-2
                         ">
                             person_pin
@@ -126,7 +126,7 @@
 
                 <!-- menu item -->
                 <router-link to="/billing">
-                    <div class="min-[320px]:flex sm:flex lg:flex md:flex w-full px-3  my-2 py-2 hover:text-[white] transition-all ease-linear">
+                    <div class="hover:bg-[#181d42] min-[320px]:flex sm:flex lg:flex md:flex w-full px-3  my-2 py-2 hover:text-[white] transition-all ease-linear">
                         <span class=" material-symbols-outlined top-2 right-[20px]  mr-2
                         ">
                             attach_money
@@ -141,7 +141,7 @@
 
                 <!-- menu item -->
                 <a href="https://docs.bethel.network/" class="active" target="_blank">
-                    <div class="min-[320px]:flex sm:flex lg:flex md:flex w-full px-3 hover:bg-[] my-2 py-2 hover:text-[white] transition-all ease-linear">
+                    <div class="hover:bg-[#181d42] min-[320px]:flex sm:flex lg:flex md:flex w-full px-3 hover:bg-[] my-2 py-2 hover:text-[white] transition-all ease-linear">
                         <span class=" material-symbols-outlined top-2 right-[20px]  mr-2
                         ">
                             support
@@ -178,20 +178,21 @@
 
         <div class=" flex justify-center bg-[#f7f1f1c2] z-0 lg:w-[100%] lg:mx-[0px] mt-[80px] h-full 
         md:px-[5px] sm:w-full min-[320px]:w-full min-[320px]:ml-0">
+
+
             <!-- router view must be here -->
-            <div class="w-full h-full mx-2 lg:pl-[240px] md:pl-[150px]" :class="modalStore.onBlur"> 
-                <router-view></router-view> 
+            <div class="w-full h-full mx-2 lg:pl-[220px] md:pl-[150px] " :class="modalStore.onBlur"> 
+                <router-view class="animate__animated animate__fadeInLeft animate__faster"></router-view> 
             </div>
+            <!-- end of the router view here -->
+
         </div>
     </div>
 </template>
 
 <script>
 // import components 
-import Page3Dashboard from '@/components/Page3Dashboard.vue';
-import Page4Wallet from '@/components/Page4Wallet.vue';
-import Storage from '@/components/Storage.vue';
-import Page5AccessKey from '@/components/Page5AccessKey.vue';
+
 
 // import stores
 import {mapStores} from "pinia";
@@ -200,10 +201,7 @@ import useModalStore from "@/stores/modal";
 export default{
     name : 'Page2Sidebar',
     components : {
-        Page3Dashboard,
-        Page4Wallet,
-        Storage,
-        Page5AccessKey,
+        
     },
     computed :{
         ...mapStores(useModalStore)

@@ -16,7 +16,7 @@
 
                                 <select id="country" name="country" class="mt-2 w-[200px] p-2 mx-2 bg-transparent border-b-2 border-blue-300 rounded-md">
                                     <option value="volvo">Sri Lanka</option>
-                                    <option value="saab">Australiya</option>
+                                    <option value="saab">Australia</option>
                                     <option value="fiat">France</option>
                                     <option value="audi">England</option>
                                 </select>
