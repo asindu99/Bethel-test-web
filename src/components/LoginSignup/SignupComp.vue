@@ -13,7 +13,7 @@
         </div>
 
         <!-- right-side  -->
-        <div class="lg:h-[600px] lg:bg-[#FDFDFD] lg:rounded-r-xl">
+        <div class="lg:h-[600px] bg-white lg:rounded-r-xl">
             <div class="flex lg:flex-row lg:items-center lg:justify-center lg:ml-[-100px]">
                 <div class="flex lg:flex-row lg:cursor-pointer">
                     <div class="flex lg:items-center lg:justify-center bg-[#293793] lg:w-[50px] lg:h-[50px] lg:m-10 lg:rounded-md">
