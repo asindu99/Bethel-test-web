@@ -6,7 +6,7 @@
         <div class="lg:h-[600px] bg-[linear-gradient(to_right,rgba(240,245,254,1),rgba(240,245,254,1))] lg:basis-1/2 lg:rounded-l-xl">
             <!-- image  -->
             <div class="">
-                <img src="./img/signup-pic1.png" alt="" class="lg:mt-20 lg:mx-20 lg:transform lg:skew-x-6 lg:rotate-[5deg] lg:scale-[1.1]">
+                <img src="../../img/images/LoginSignup-page-images/BG-img2.jpg" alt="" class="lg:mt-20 lg:mx-20 lg:transform   lg:scale-[1.1]">
 
             </div>
 
@@ -64,7 +64,7 @@
                                     <input type="password" placeholder="  password" class="lg:border-2 lg:border-[#4e78c0] lg:text-[D3D3D3] lg:bg-light lg:opacity-25 lg:w-[250px] lg:h-[40px] lg:rounded-md">
                                     
                                     <div class="flex lg:absolute lg:right-[15px] lg:p-[10px]">
-                                        <img src="./img/visibility-lock.svg" alt="">
+                                        <img src="../../img/images/LoginSignup-page-images/visibility-lock.svg" alt="">
                                     </div>
                                 </div>
                             </div>
@@ -76,7 +76,7 @@
                                     <input type="password" placeholder="  confirm password" class="lg:border-2 lg:border-[#4e78c0] lg:text-[D3D3D3] lg:bg-light lg:opacity-25 lg:w-[250px] lg:h-[40px] lg:rounded-md">
                                     
                                     <div class="flex lg:absolute lg:right-[15px] lg:p-[10px]">
-                                        <img src="./img/visibility-lock.svg" alt="">
+                                        <img src="../../img/images/LoginSignup-page-images/visibility-lock.svg" alt="">
                                     </div>
                                 </div>
                             </div>

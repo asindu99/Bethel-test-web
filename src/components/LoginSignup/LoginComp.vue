@@ -4,14 +4,14 @@
     <div class="flex flex-row items-center justify-end my-20 mx-[300px] shadow-xl">
         <!-- left-side  -->
         <div class="flex min-[320px]:flex-col w-[500px] h-[550px] bg-[linear-gradient(to_right,rgba(240,245,254,1),rgba(240,245,254,1))]">
-            <img src="./img/login-image.png" alt="" class=" rounded-l-xl  scale-[0.8] my-[50px]">
+            <img src="../../img/images/LoginSignup-page-images/BG-img1.jpg" alt="" class=" rounded-l-xl  scale-[0.8] my-[50px]">
     
         </div>
         
         <!-- right-side  -->
         <div class="flex flex-col light w-[500px] h-[550px] rounded-r-xl">
             <div class="flex flex-row">
-                <img src="./img/bethel.png" alt="" class="w-[30px] h-[30px] ml-[40px] mt-[20px]">
+                <img src="../../img/logos/bethellogo.png" alt="" class="w-[30px] h-[30px] ml-[40px] mt-[20px]">
                 <span class="font-bold text-xl mt-[20px] font-['Montserrat']">BETHEL</span>
             </div>
     
@@ -31,7 +31,7 @@
                             <input type="password" placeholder="  password" class="border-2 border-[#4e78c0] text-[D3D3D3] bg-light opacity-25 w-[300px] h-[40px] rounded-md">
                             
                             <div class="flex absolute right-[40px] p-[10px]">
-                                <img src="./img/visibility-lock.svg" alt="">
+                                <img src="../../img/images/LoginSignup-page-images/visibility-lock.svg" alt="">
                             </div>
                         </div>
                    </div>
