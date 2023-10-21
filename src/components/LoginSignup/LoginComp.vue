@@ -1,9 +1,9 @@
 <template>
-    <div>
+    <div class="lg:my-20 md:my-20">
        <!-- login -->
-    <div class="flex flex-row items-center justify-end my-20 mx-[300px] shadow-xl">
+    <div class="flex lg:flex-row md:flex-row sm:flex-col min-[320px]:flex-col items-center justify-center">
         <!-- left-side  -->
-        <div class="flex min-[320px]:flex-col w-[500px] h-[550px] bg-[linear-gradient(to_right,rgba(240,245,254,1),rgba(240,245,254,1))]">
+        <div class="flex w-[500px] h-[550px] bg-[linear-gradient(to_right,rgba(240,245,254,1),rgba(240,245,254,1))]">
             <img src="../../img/images/login-image.png" alt="" class=" rounded-l-xl  scale-[0.8] my-[50px]">
     
         </div>
@@ -20,7 +20,7 @@
                     <!-- Email -->
                     <div>
                         <label for="" class="font-['Montserrat'] text-[14px]">Email</label><br>
-                        <input type="text" placeholder="  john@gmail.com" class="lg:border-2 border-[#4e78c0] text-[D3D3D3] bg-light opacity-25 w-[300px] h-[40px] rounded-md">
+                        <input type="text" placeholder="  john@gmail.com" class="border-2 border-[#4e78c0] text-[D3D3D3] bg-light opacity-25 w-[300px] h-[40px] rounded-md">
                         
                     </div><br>
     
