@@ -1,7 +1,7 @@
 <template>
     <!-- right-side  -->
-    <div class="h-screen">
-        <div class="h-[600px] bg-white rounded-r-xl">
+    <div class="">
+        <div class="bg-white rounded-r-xl">
         <div class="flex flex-row items-center justify-center lg:ml-[-100px]">
             <router-link to="/">
                 <div class="flex lg:flex-row cursor-pointer">
@@ -59,7 +59,7 @@
                             <div class="flex flex-row relative">
                                 <input type="password" placeholder="  password" class="border-2 border-[#4e78c0] text-[D3D3D3] bg-light opacity-25 w-[250px] h-[40px] rounded-md">
                                 
-                                <div class="flex absolute lg:right-[15px] min-[320px]:right-[100px] p-[10px]">
+                                <div class="flex absolute lg:right-[15px] min-[320px]:right-[90px] p-[10px]">
                                     <img src="../../img/images/LoginSignup-page-images/visibility-lock.svg" alt="">
                                 </div>
                             </div>
