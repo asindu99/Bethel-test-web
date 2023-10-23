@@ -9,8 +9,10 @@ import Billing from '@/components/Billing.vue';
 import MobileVerifyComp from '@/components/MobileVerify/MobileVerifyComp.vue'
 import VerifyComp from '@/components/MobileVerify/VerifyComp.vue';
 import NumberVerifyComp from '@/components/MobileVerify/NumberVerifyComp.vue';
-import LoginComp from '@/components/LoginSignup/LoginComp.vue'
-import SignupComp from '@/components/LoginSignup/SignupComp.vue'
+import LoginComp from '@/components/LoginSignup/LoginComp.vue';
+import Signup from '@/components/LoginSignup/Signup.vue';
+import SignupAccount from '@/components/LoginSignup/SignupAccount.vue';
+import SignupPersonal from '@/components/LoginSignup/SignupPersonal.vue';
 
 
 
@@ -65,8 +67,18 @@ const routes = [
     },
     {
       path : '/signup',
-      component : SignupComp
-    }
+      component : Signup,
+      children : [
+        {
+          path : '',
+          component : SignupAccount,
+        },
+        {
+          path: '/signup/signup-personal',
+          component: SignupPersonal,
+        }
+      ]
+    },
     
   ]
 

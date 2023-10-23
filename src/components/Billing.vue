@@ -44,10 +44,10 @@
 
             <!-- pricing plans  -->
             <div class="flex basis-2/4 px-6">
-                <div class="flex lg:flex-row min-[320px]:flex-col md:flex-col-2 gap-6 p-10">
+                <div class="flex lg:flex-row min-[320px]:flex-col md:flex-col-2 gap-6">
 
                     <!-- plan-1  -->
-                    <div class="basis-1/4 shadow-xl rounded-lg bg-[#F48320] bg-opacity-75 min-[320px]:pb-10">
+                    <div class="basis-1/4 shadow-xl rounded-lg bg-[#F48320] bg-opacity-75 min-[320px]:pb-10 mt-10">
                             <div> <h4 class="m-10 font-bold text-2xl">Free</h4></div>
 
                            <div> <p class="m-10">Features for creators and developers who need more storage.</p></div>
@@ -102,7 +102,7 @@
                     </div>
 
                     <!-- plan-2  -->
-                    <div class="basis-1/4 bg-white shadow-xl rounded-lg pb-4">
+                    <div class="basis-1/4 bg-white shadow-xl rounded-lg pb-4 mt-10">
                         <div class="">
                             <div><h4 class="m-10 font-bold text-2xl">Starter</h4></div>
 
@@ -162,7 +162,7 @@
                     </div>
 
                     <!-- plan-3  -->
-                    <div class=" basis-1/4 bg-white shadow-xl rounded-lg pb-4">
+                    <div class=" basis-1/4 bg-white shadow-xl rounded-lg pb-4  mt-10">
                             <div><h4 class="m-10 font-bold text-2xl">Pro</h4></div>
 
                             <div><p class="m-10">Features for creators and developers who need more storage.</p></div>
@@ -219,7 +219,7 @@
                     </div>
 
                     <!-- plan-4  -->
-                    <div class="basis-1/4 bg-white shadow-xl rounded-lg pb-4">
+                    <div class="basis-1/4 bg-white shadow-xl rounded-lg pb-4  mt-10">
                         <h4 class="m-10 font-bold text-2xl">Buisness</h4>
                         
                         <p class="m-10">Features for creators and developers who need more storage.</p>
