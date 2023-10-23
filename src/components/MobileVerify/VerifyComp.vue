@@ -1,16 +1,16 @@
 <template>
     <!-- content section div -->
-    <div class="p-3 flex bg-blue-100  items-center rounded-lg">
+    <div class="p-3 flex bg-blue-100  items-center justify-center rounded-lg">
                 <!-- content -->
                 <div class="flex flex-col w-full px-3">
                     <!-- verify account -->
-                    <div class="flex flex-col justify-center text-center mb-6">
+                    <div class="flex flex-col justify-center text-center mb-6 items-center">
                         <h3 class="lg:text-[30px] md:text-[30px] sm:text-[30px] min-[320px]:text-[18px] font-medium text-blue-400 ">Verify Account</h3>
                         <p class="lg:text-[14px] md:text-[14px] sm:text-[14px] min-[320px]:text-[12px]">Please Select the Country to verify your account</p>
                     </div>
 
                     <!-- country selection sector -->
-                    <div class="mt-6">
+                    <div class="mt-6 flex justify-center">
                         <form action="" class="flex flex-col items-center">
                             <label for="cars" class="lg:text-[14px] md:text-[14px] sm:text-[14px] min-[320px]:text-[12px]">Choose Your Country :</label>
 

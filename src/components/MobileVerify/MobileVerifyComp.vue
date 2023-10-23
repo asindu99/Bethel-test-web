@@ -11,7 +11,7 @@
 
 
             <!--------- router view section  ---------------->
-            <div class="p-3 flex bg-blue-50 items-center rounded-lg">
+            <div class="p-3 flex bg-blue-50 items-center justify-center rounded-lg">
                 <router-view></router-view>
             </div>
             
