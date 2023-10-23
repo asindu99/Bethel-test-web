@@ -76,9 +76,14 @@
 
             <div class="mt-2">
                 <form action="" class="flex gap-2">
-                    <input type="text" class="w-[250px] border-[2px] rounded-md px-3" placeholder="https://s3.filebase.com">
+                    <input v-on:focus = $event.target.select()
+                    ref = "clone"
+                    :value="text"
+                    readonly
+                     type="text"
+                      class="w-[250px] border-[2px] rounded-md px-3" placeholder="https://s3.filebase.com">
                     <!-- button -->
-                    <button class="text-[15px] text-[#293793]"><div class="flex items-center gap-2 border-[2px] px-1 py-1 rounded-lg bg-white">
+                    <button @click.prevent="copy" class="text-[15px] text-[#293793]"><div class="flex items-center gap-2 border-[2px] px-1 py-1 rounded-lg bg-white">
                         Copy
                         <img src="../img/icons/icons-copy.png" alt="" class="w-[20px] h-[20px]">
 
@@ -98,9 +103,14 @@
                 </div> 
 
                 <form action="" class="flex gap-2 mt-2">
-                    <input type="text" class="w-[250px] border-[2px] rounded-md px-3" placeholder="https://api.filebase.io/v1/ipfs">
+                    <input v-on:focus = $event.target.select()
+                    ref = "clone2"
+                    :value="text2"
+                    readonly
+                    
+                    type="text" class="w-[250px] border-[2px] rounded-md px-3">
                     <!-- button -->
-                    <button class="text-[15px] text-[#293793]"><div class="flex items-center gap-2 border-[2px] px-1 py-1 rounded-lg bg-white">
+                    <button @click.prevent="copy2" class="text-[15px] text-[#293793]"><div class="flex items-center gap-2 border-[2px] px-1 py-1 rounded-lg bg-white">
                         Copy
                         <img src="../img/icons/icons-copy.png" alt="" class="w-[20px] h-[20px]">
 
@@ -123,7 +133,25 @@
 
 <script >
 export default {
-    name : 'Page5AccessKey'
+    name : 'Page5AccessKey',
+    data(){
+        return{
+            text : 'https://api.filebase.io/v1/ipfs',
+            text2 :'asindu'
+        }
+    },
+
+    methods : {
+        copy(){
+            this.$refs.clone.focus();
+            document.execCommand('copy')  
+        },
+
+        copy2(){
+            this.$refs.clone2.focus();
+            document.execCommand('copy')  
+        }
+    }
 }
 
 </script>

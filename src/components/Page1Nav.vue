@@ -40,13 +40,13 @@
                     <!-- end of drop down button  -->
 
                     <!-- drop down content -->
-                    <div  v-if="modalStore.dropMenuOC" class="absolute w-[250px] bg-white right-0 top-[55px] rounded-lg p-1 border-[2px] animate__animated animate__fadeInDown">
+                    <div  v-if="modalStore.dropMenuOC" class="absolute w-[250px] bg-[#191f49] right-0 top-[55px] rounded-lg p-1 border-[2px] animate__animated animate__fadeInDown">
 
                         <!-- box 1 -->
                         <RouterLink to="/Mobile-Verification">
                             <div class="flex flex-col w-full hover:bg-blue-200 px-2 py-2 border-b-2  transition-all ease-in-out">
-                                <h1 class="text-[14px]">Bethel User Name</h1>
-                                <h1 class="text-[11px] text-[#293793] cursor-pointer">behtelnetwork@bethel.mail.com</h1>
+                                <h1 class="text-[14px] text-[#c4c9ea]">Bethel User Name</h1>
+                                <h1 class="text-[11px] text-[white] cursor-pointer">behtelnetwork@bethel.mail.com</h1>
                             </div>
                         </RouterLink>
                         
@@ -54,10 +54,10 @@
 
                         <!-- box 2 -->
                         <button @click="modalStore.dropMenuOC = false" class="w-full"><RouterLink to="/" class="active">
-                            <div class="w-full hover:bg-blue-200 px-2 rounded-lg transition-all ease-linear">
+                            <div class="w-full text-[#7882c3] hover:bg-[#181d42] px-2 rounded-lg transition-all ease-linear">
                                 <div class="lg:flex md:flex sm:flex min-[320px]:flex
-                                    w-full px-3 my-2 py-2 ">
-                                    <span class=" material-symbols-outlined top-2 right-[20px] text-[#E9983C] mr-2 scale-[.9]
+                                    w-full px-3 my-2 py-2">
+                                    <span class=" material-symbols-outlined top-2 right-[20px] mr-2 scale-[.9]
                                     ">
                                         grid_view
                                     </span>  
@@ -70,13 +70,13 @@
                         <!-- end box 2 -->
 
                         <!-- box 3 -->
-                        <div class="w-full hover:bg-blue-200 px-2 rounded-lg transition-all ease-linear">
+                        <div class="w-full hover:bg-[#181d42] px-2 rounded-lg transition-all ease-linear">
                             <div class="min-[320px]:flex sm:flex lg:flex md:flex w-full px-3  py-2">
-                                <span class=" material-symbols-outlined top-2 right-[20px] text-[#E9983C] mr-2 scale-[.9]
+                                <span class=" material-symbols-outlined top-2 right-[20px] text-[#7882c3] mr-2 scale-[.9]
                                 ">
                                     person_pin
                                 </span>  
-                                <h3 class="text-[15px]">Profile </h3>
+                                <h3 class="text-[15px] text-[#7882c3]">Profile </h3>
                             
                             </div>
                         </div>
@@ -85,13 +85,13 @@
                         <!-- box 3 -->
                         <RouterLink to="/login">
                             <button @click="modalStore.dropMenuOC = false" class="w-full">
-                                <div class="w-full hover:bg-blue-200 px-2 rounded-lg transition-all ease-linear">
+                                <div class="w-full hover:bg-[#181d42] px-2 rounded-lg transition-all ease-linear">
                                     <div class="min-[320px]:flex sm:flex lg:flex md:flex w-full px-3 my-2 py-2 hover:text-[white] transition-all ease-linear">
                                         <span class=" material-symbols-outlined top-2 right-[20px] text-[#E9983C] mr-2 scale-[.9]
                                         ">
                                             logout
                                         </span>  
-                                        <h3 class="text-[15px]">Log Out </h3>
+                                        <h3 class="text-[15px] text-[#7882c3]">Log Out </h3>
                             
                                     </div>
                                 </div>

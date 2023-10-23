@@ -154,7 +154,7 @@
                 lg:w-[550px] md:w-[550px] sm:w-[550px] min-[320px]:w-[350px] rounded-lg">
                     <!-- bethel logo image -->
                     <div class="py-10">
-                        <img src="../img/logos/bethellogo.png" alt="" class="w-[150px]">
+                        <img src="../img/icons/icon-upload.png" alt="" class="w-[150px]">
                     </div>
 
                     <!-- input fields -->
@@ -171,7 +171,7 @@
                 lg:w-[550px] md:w-[550px] sm:w-[550px] min-[320px]:w-[350px] rounded-lg">
                     <!-- bethel logo image -->
                     <div class="py-10">
-                        <img src="../img/logos/bethellogo.png" alt="" class="w-[150px]">
+                        <img src="../img/icons/icon-upload-download.png" alt="" class="w-[150px]">
                     </div>
 
                     <!-- input fields -->
@@ -371,6 +371,7 @@
         </div>
         </Transition>
         <!-- end of pop up modal  -->
+
     </div>
 
     
