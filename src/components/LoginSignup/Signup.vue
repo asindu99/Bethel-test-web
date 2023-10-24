@@ -5,7 +5,7 @@
 
             <!-- image sec -->
             <div class="flex justify-center">
-                <img src="src/img/images/LoginSignup-page-images/BG-img2.jpg" alt="" class="lg:w-[600px] lg:h-full
+                <img src="../../img/images/LoginSignup-page-images/BG-img2.jpg" alt="" class="lg:w-[600px] lg:h-full
                  md:w-[500px] transform lg:scale-x-[0.8] lg:scale-y-[0.6] md:scale-[0.9] min-[320px]:w-[300px]">
             </div>
             
