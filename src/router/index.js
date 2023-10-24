@@ -13,8 +13,8 @@ import LoginComp from '@/components/LoginSignup/LoginComp.vue';
 import Signup from '@/components/LoginSignup/Signup.vue';
 import SignupAccount from '@/components/LoginSignup/SignupAccount.vue';
 import SignupPersonal from '@/components/LoginSignup/SignupPersonal.vue';
-import LoginComp2 from '@/components/LoginSignup2/LoginComp2.vue'
-
+import LoginComp2 from '@/components/LoginSignup2/LoginComp2.vue';
+import StorageFolder from '@/components/StorageFolder.vue';
 
 
 
@@ -44,6 +44,10 @@ const routes = [
         {
           path:'/billing',
           component: Billing,
+        },
+        {
+          path:'/bucketFolder',
+          component:StorageFolder,
         }
 
       ]

@@ -61,7 +61,7 @@
 
 
             
-            <!-- bucket content section -->
+            <!-- wallet content section -->
             <div class="my-10">
                 <!-- end of the bucket content section -->
             <!-- text of table -->
@@ -72,21 +72,21 @@
             
 
             <!-- table -->
-            <div class=" w-[100%] mx-auto mt-4 bg-white rounded-lg px-2 shadow-sm ">
+            <div class="w-[100%] mx-auto mt-4 bg-white rounded-lg px-2 shadow-sm ">
                 <!-- start of the table -->
-                <table class="table-auto border-separate py-2 w-full rounded-lg">
+                <table class="table-auto border-separate py-2 w-[100%] rounded-lg">
                     <thead class="">
                         <tr class="">
-                        <th class="text-[14px] border p-3 bg-blue-50">BUCKET NAME</th>
-                        <th class="text-[14px] border p-3 bg-blue-50">ACCESS</th>
-                        <th class="text-[14px] border p-3 bg-blue-50">NETWORK</th>
-                        <th class="text-[14px] border p-3 bg-blue-50">DATE CREATED</th>
-                        <th class="text-[14px] border p-3 bg-blue-50">MORE</th>
+                        <th class="text-[13px] border p-3 bg-blue-50">BUCKET NAME</th>
+                        <th class="text-[13px] border p-3 bg-blue-50">ACCESS</th>
+                        <th class="text-[13px] border p-3 bg-blue-50">NETWORK</th>
+                        <th class="text-[13px] border p-3 bg-blue-50">DATE CREATED</th>
+                        <th class="text-[13px] border p-3 bg-blue-50">MORE</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr v-for="bucket in bucketTableArr" :key="bucket.Baddress">
-                        <td class="text-[12px] text-center bg-white border p-3"> {{bucket.bucketName}}</td>
+                        <td class="text-[12px] text-center bg-white border p-3 cursor-pointer hover:text-[#E9983C] font-bold"><router-link to="/bucketFolder"> {{bucket.bucketName}} </router-link></td>
                         <td class="text-[12px] text-center bg-white border p-3">{{bucket.bucketAccess}}</td>
                         <td class="text-[12px] text-center bg-white border p-3">{{bucket.bucketNetwork}}</td>
                         <td class="text-[12px] text-center bg-white border p-3">{{bucket.bucketDateCreated}}</td>
@@ -112,9 +112,6 @@
                         </td>
                         <!-- more button end --> 
                         </tr>
-
-                        
-                        
                     </tbody>
                 </table>
 
