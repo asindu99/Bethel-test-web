@@ -3,7 +3,7 @@
     <div class="">
         <div class="rounded-r-xl pb-6">
         <div class="flex lg:flex-row min-[320px]:flex-col items-center justify-center lg:ml-[-100px] min-[320px]:ml-[-100px]">
-            <router-link to="/">
+            <router-link to="/signup">
                 <div class="flex lg:flex-row cursor-pointer">
                     <div class="flex items-center justify-center bg-[#293793] w-[50px] h-[50px] m-10 rounded-md">
                         <span class="material-symbols-outlined text-white">
@@ -36,7 +36,7 @@
         </div>
 
         <div class="bg-blue-100 rounded-md pt-10 pb-[2px]">
-            <div class="lg:ml-[-80px] min-[320px]:ml-[-125px]">
+            <div class="lg:ml-[-110px] min-[320px]:ml-[-125px]">
                 <p class="font-['Montserrat'] ml-40"><span class="text-[20px] font-bold">Account Information</span><br><span class="pt-[50px] min-[320px]:text-[12px] lg:text-[13px]">Enter your email address & password details !</span></p>
             </div>
 
