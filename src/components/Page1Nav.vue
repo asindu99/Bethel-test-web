@@ -156,11 +156,11 @@
 
 
             <!-- middle section  -->
-            <div class="flex flex-col">
+            <div class="flex flex-col text-[#7882c3]">
                 <!-- menu item -->
                 <button @click="closeSide">
-                    <RouterLink to="/" class="active">
-                    <div class="lg:flex md:flex sm:flex min-[320px]:flex text-[#293793]
+                    <RouterLink to="/" class="">
+                    <div class="lg:flex md:flex sm:flex min-[320px]:flex
                      w-full px-3  my-2 py-2 hover:text-[white] transition-all ease-linear">
                         <span class=" material-symbols-outlined top-2 right-[20px] mr-2
                         ">
@@ -176,8 +176,8 @@
 
                 <!-- menu item -->
                 <button @click="closeSide">
-                    <router-link to="/storage" class="active">
-                    <div class="lg:flex md:flex sm:flex min-[320px]:flex text-[#293793]
+                    <router-link to="/storage" class="">
+                    <div class="lg:flex md:flex sm:flex min-[320px]:flex 
                     w-full px-3 hover:bg-[#293793] my-2 py-2 hover:text-[white] transition-all ease-linear">
                         <span class=" material-symbols-outlined top-2 right-[20px] mr-2
                         ">
@@ -196,8 +196,8 @@
                 <!-- menu item -->
                 <button @click="closeSide">
                     <router-link to="/wallet">
-                    <div class="lg:flex md:flex sm:flex min-[320px]:flex text-[#293793]
-                     w-full px-3 hover:bg-[#293793] my-2 py-2 hover:text-[white] transition-all ease-linear">
+                    <div class="lg:flex md:flex sm:flex min-[320px]:flex
+                     w-full px-3 my-2 py-2 transition-all ease-linear">
                         <span class=" material-symbols-outlined top-2 right-[20px] mr-2
                         ">
                             wallet
@@ -216,7 +216,7 @@
                 <!-- menu item -->
                 <button @click="closeSide">
                     <router-link to="/accesskey">
-                        <div class="text-[#293793] min-[320px]:flex lg:flex sm:flex md:flex w-full px-3 hover:bg-[#293793] my-2 py-2 hover:text-[white] transition-all ease-linear">
+                        <div class=" min-[320px]:flex lg:flex sm:flex md:flex w-full px-3 my-2 py-2 transition-all ease-linear">
                             <span class=" material-symbols-outlined top-2 right-[20px] mr-2 
                             ">
                                 key
@@ -236,7 +236,7 @@
 
 
             <!-- account section -->
-            <div class="flex flex-col mt-3"> 
+            <div class="flex flex-col mt-3 text-[#7882c3]"> 
                 <!-- menu text -->
                 <div class=" lg:flex md:flex px-[10px] py-2 bg-[#1d2455]">
                     <div class=" relative lg:flex md:flex min-[320px]:flex sm:flex placeholder:">
@@ -254,8 +254,8 @@
                 <!-- end of menu text -->
 
                 <!-- menu item -->
-                <a href="#" class="active mt-3">
-                    <div class="text-[#293793] min-[320px]:flex sm:flex lg:flex md:flex w-full px-3 hover:bg-[#293793] my-2 py-2 hover:text-[white] transition-all ease-linear">
+                <a href="#" class=" mt-3">
+                    <div class=" min-[320px]:flex sm:flex lg:flex md:flex w-full px-3 hover:bg-[#293793] my-2 py-2 hover:text-[white] transition-all ease-linear">
                         <span class=" material-symbols-outlined top-2 right-[20px] mr-2
                         ">
                             person_pin
@@ -270,8 +270,9 @@
                 <!-- end of the menu item -->
 
                 <!-- menu item -->
-                <a href="#" class="active">
-                    <div class="text-[#293793] min-[320px]:flex sm:flex lg:flex md:flex w-full px-3 hover:bg-[#293793] my-2 py-2 hover:text-[white] transition-all ease-linear">
+                <button @click="closeSide">
+                <router-link to="/billing" class="">
+                    <div class=" min-[320px]:flex sm:flex lg:flex md:flex w-full px-3 hover:bg-[#293793] my-2 py-2 hover:text-[white] transition-all ease-linear">
                         <span class=" material-symbols-outlined top-2 right-[20px] mr-2
                         ">
                             attach_money
@@ -281,12 +282,13 @@
                     </div>
 
                     
-                </a>
+                </router-link>
+                </button>
                 <!-- end of the menu item -->
 
                 <!-- menu item -->
                 <a href="https://docs.bethel.network/" class="active" target="_blank">
-                    <div class="text-[#293793] min-[320px]:flex sm:flex lg:flex md:flex w-full px-3 hover:bg-[#293793] my-2 py-2 hover:text-[white] transition-all ease-linear">
+                    <div class=" min-[320px]:flex sm:flex lg:flex md:flex w-full px-3 hover:bg-[#293793] my-2 py-2 hover:text-[white] transition-all ease-linear">
                         <span class=" material-symbols-outlined top-2 right-[20px] mr-2
                         ">
                             support
@@ -301,8 +303,8 @@
                 </a>
                 <!-- end of the menu item -->
                 <!-- menu item -->
-                <a href="#" class=" w-full">
-                    <div class="text-[#293793] min-[320px]:flex sm:flex lg:flex md:flex w-full px-3 hover:bg-[#293793] my-2 py-2 hover:text-[white] transition-all ease-linear">
+                <router-link to="/login" class=" w-full">
+                    <div class=" min-[320px]:flex sm:flex lg:flex md:flex w-full px-3 hover:bg-[#293793] my-2 py-2 hover:text-[white] transition-all ease-linear">
                         <span class=" material-symbols-outlined top-2 right-[20px] mr-2
                         ">
                             logout
@@ -312,7 +314,7 @@
                     </div>
 
                     
-                </a>
+                </router-link>
                 <!-- end of the menu item -->
             </div>
             <!-- end of the account section -->
