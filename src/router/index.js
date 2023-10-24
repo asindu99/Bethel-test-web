@@ -6,15 +6,13 @@ import Page4Wallet from '@/components/Page4Wallet.vue';
 import Storage from '@/components/Storage.vue'
 import Page5AccessKey from '@/components/Page5AccessKey.vue';
 import Billing from '@/components/Billing.vue';
-import MobileVerifyComp from '@/components/MobileVerify/MobileVerifyComp.vue'
-import VerifyComp from '@/components/MobileVerify/VerifyComp.vue';
-import NumberVerifyComp from '@/components/MobileVerify/NumberVerifyComp.vue';
-import LoginComp from '@/components/LoginSignup/LoginComp.vue';
-import Signup from '@/components/LoginSignup/Signup.vue';
-import SignupAccount from '@/components/LoginSignup/SignupAccount.vue';
-import SignupPersonal from '@/components/LoginSignup/SignupPersonal.vue';
+
+
 import LoginComp2 from '@/components/LoginSignup2/LoginComp2.vue';
 import StorageFolder from '@/components/StorageFolder.vue';
+import MobileVerify from "@/components/LoginSignup2/Mobile-verify/MobileVerify.vue"
+import SignupSecond from '@/components/LoginSignup2/FormContent/Signup-second.vue';
+import SignupThird from '@/components/LoginSignup2/FormContent/Signup-third.vue';
 
 
 
@@ -52,41 +50,37 @@ const routes = [
 
       ]
     },
-    {
-      path : '/Mobile-Verification',
-      component : MobileVerifyComp,
-      children : [
-        {
-          path : '',
-          component : VerifyComp,
-        },
-        {
-          path : '/Mobile-Verification/Number-Verify',
-          component : NumberVerifyComp,
-        }
-      ]
-    },
+    // {
+    //   path : '/signup',
+    //   component : Signup,
+    //   children : [
+    //     {
+    //       path : '',
+    //       component : SignupAccount,
+    //     },
+    //     {
+    //       path: '/signup/signup-personal',
+    //       component: SignupPersonal,
+    //     }
+    //   ]
+    // },
     {
       path : '/login',
-      component : LoginComp,
-    },
-    {
-      path : '/signup',
-      component : Signup,
+      component : LoginComp2,
       children : [
         {
           path : '',
-          component : SignupAccount,
+          component : SignupThird,
         },
         {
-          path: '/signup/signup-personal',
-          component: SignupPersonal,
+          path : '/login2/personal',
+          component : SignupSecond,
         }
       ]
     },
     {
-      path : '/login2',
-      component : LoginComp2,
+      path : '/mobile-verify',
+      component : MobileVerify,
     }
     
   ]

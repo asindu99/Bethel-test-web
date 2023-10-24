@@ -11,11 +11,10 @@
 
                 <img class="w-[600px] lg:hidden md:hidden sm:hidden min-[320px]:flex sm:w-[300px]" src="../../img/images/LoginSignup-page-images/BG-login.png" alt="">
 
-                <div class="flex flex-1 px-10 lg:py-20 md:py-5 lg:w-[600px] lg:h-[700px] md:w-full
-                min-[320px]:py-10">
+                <div class="flex flex-1 px-10 lg:py-20 md:py-5 lg:w-[600px] lg:rounded-l-xl md:w-full
+                min-[320px]:py-10 bg-blue-50">
 
-                <!---------------------- router view goes here------------------- -->
-                <!-- <LoginContent/> -->
+                
                 <SignupContent/>
 
                 </div>
