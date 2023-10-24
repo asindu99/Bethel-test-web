@@ -5,7 +5,7 @@
         <div class="flex lg:flex-row min-[320px]:flex-col items-center justify-center lg:ml-[-100px] min-[320px]:ml-[-70px]">
             <router-link to="/">
                 <div class="flex lg:flex-row cursor-pointer">
-                    <div class="flex items-center justify-center bg-[#293793] w-[50px] h-[50px] m-10 rounded-md">
+                    <div class="flex items-center justify-center bg-[#808080] w-[50px] h-[50px] m-10 rounded-md">
                         <!-- <img src="./img/home.svg" alt="" class=""> -->
                         <span class="material-symbols-outlined text-white">
                             home
@@ -14,7 +14,7 @@
 
                     <div class="flex items-center lg:text-[16px] min-[320px]:text-[12px] min-[320px]:ml-[-20px] lg:ml-2">
                     
-                        <p class="font-['Montserrat'] text-[#293793]"><span class="font-bold">Account Information</span> <br> <span>Enter username</span></p>
+                        <p class="font-['Montserrat'] text-[#808080]"><span class="font-bold">Account Information</span> <br> <span>Enter username</span></p>
                     
                     </div>
                 </div>
@@ -22,7 +22,7 @@
 
             <router-link to="/signup/signup-personal">
                 <div class="flex flex-row cursor-pointer min-[320px]:mt-[-40px] lg:mt-1 ">
-                    <div class="flex items-center justify-center bg-[#808080] w-[50px] h-[50px] m-10 rounded-md">
+                    <div class="flex items-center justify-center bg-[#293793] w-[50px] h-[50px] m-10 rounded-md">
                         <!-- <img src="./img/home.svg" alt="" class=""> -->
                         <span class="material-symbols-outlined text-white">
                             person
@@ -31,7 +31,7 @@
 
                     
                         <div class="flex items-center lg:text-[16px] min-[320px]:text-[12px] min-[320px]:ml-[-20px] lg:ml-2">
-                            <p class="font-['Montserrat'] text-[#808080]"><span class="font-bold">Personal Information</span> <br> <span>Enter Information</span></p>
+                            <p class="font-['Montserrat'] text-[#293793]"><span class="font-bold">Personal Information</span> <br> <span>Enter Information</span></p>
                         </div>
                 </div>
             </router-link>
