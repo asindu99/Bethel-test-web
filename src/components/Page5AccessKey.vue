@@ -137,7 +137,7 @@ export default {
     data(){
         return{
             text : 'https://api.filebase.io/v1/ipfs',
-            text2 :'asindu'
+            text2 :'https://api.filebase.io/v1/ipfsasda'
         }
     },
 

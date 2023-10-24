@@ -5,7 +5,7 @@
 
             <!-- image sec -->
             <div class="">
-                <img src="src/img/images/LoginSignup-page-images/bg-login1.jpg" alt="" class="lg:w-[500px] lg:h-full
+                <img src="../../img/images/LoginSignup-page-images/bg-login1.jpg" alt="" class="lg:w-[500px] lg:h-full
                  md:w-[500px] min-[320px]:w-[500px] lg:scale-[0.9] min-[320px]:scale-[0.8] bg-opacity-25">
             </div>
             
