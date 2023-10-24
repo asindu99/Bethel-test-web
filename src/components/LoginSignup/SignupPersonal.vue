@@ -102,7 +102,7 @@
                     </router-link>
                 </form>
 
-                <div class="m-8">
+                <div class="mt-2">
                     <p class="font-[montserrat] text-[13px] text-center text-[14px]"> <span>Already have an account?</span> <RouterLink to="/login"><a href="#" class="text-[#293793] cursor-pointer">Sign in Instead </a></RouterLink> </p>
                 </div>
             </div>
