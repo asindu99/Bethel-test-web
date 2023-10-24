@@ -5,7 +5,7 @@
 
             <!-- image sec -->
             <div class="">
-                <img src="../../img/images/Varification-Page-images/Verfication-img.jpg" alt="" class="lg:w-[500px] lg:h-full
+                <img src="../../img/images/Varification-Page-images/Verfication-img.jpg" alt="" class="lg:w-[600px] lg:h-full
                  md:w-[500px] ">
             </div>
 
