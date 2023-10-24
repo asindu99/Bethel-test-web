@@ -13,6 +13,7 @@ import LoginComp from '@/components/LoginSignup/LoginComp.vue';
 import Signup from '@/components/LoginSignup/Signup.vue';
 import SignupAccount from '@/components/LoginSignup/SignupAccount.vue';
 import SignupPersonal from '@/components/LoginSignup/SignupPersonal.vue';
+import LoginComp2 from '@/components/LoginSignup2/LoginComp2.vue'
 
 
 
@@ -79,6 +80,10 @@ const routes = [
         }
       ]
     },
+    {
+      path : '/login2',
+      component : LoginComp2,
+    }
     
   ]
 
