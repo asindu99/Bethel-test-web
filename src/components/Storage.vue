@@ -61,7 +61,7 @@
 
 
             
-            <!-- wallet content section -->
+            <!-- bucket content section -->
             <div class="my-10">
                 <!-- end of the bucket content section -->
             <!-- text of table -->
