@@ -3,7 +3,7 @@
     <div class="">
         <div class="rounded-r-xl pb-6">
         <div class="flex lg:flex-row min-[320px]:flex-col items-center justify-center lg:ml-[-100px] min-[320px]:ml-[-70px]">
-            <router-link to="/">
+            <router-link to="/signup">
                 <div class="flex lg:flex-row cursor-pointer">
                     <div class="flex items-center justify-center bg-[#808080] w-[50px] h-[50px] m-10 rounded-md">
                         <!-- <img src="./img/home.svg" alt="" class=""> -->
