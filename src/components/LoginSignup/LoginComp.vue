@@ -1,64 +1,57 @@
 <template>
     <div class="flex h-auto lg:mt-16 md:mt-6 sm:mt-2 min-[320px]:mt-2 justify-center items-center">
         <!-- main container div -->
-        <div class="flex lg:flex-row md:flex-col p-2 sm:flex min-[320px]:flex-col border-2 bg-white shadow-lg rounded-xl mx-8">
+        <div class="flex lg:flex-row md:flex-col p-2 sm:flex-col min-[320px]:flex-col border-2 bg-white shadow-lg rounded-xl mx-8">
 
             <!-- image sec -->
             <div class="">
-                <img src="src/img/images/LoginSignup-page-images/BG-img1.jpg" alt="" class="lg:w-[500px] lg:h-full
-                 md:w-[500px] scale-[0.8]">
+                <img src="src/img/images/LoginSignup-page-images/bg-login1.jpg" alt="" class="lg:w-[500px] lg:h-full
+                 md:w-[500px] min-[320px]:w-[500px] lg:scale-[0.9] min-[320px]:scale-[0.8] bg-opacity-25">
             </div>
             
-            <!-- right-side  -->
-            <div class="p-3 flex bg-blue-50 items-center rounded-lg">
-                <div class="flex flex-col w-[500px] h-[550px] rounded-r-xl">
-                    <div class="flex flex-row mt-6">
+            <div class="relative p-3 flex bg-blue-50  items-center rounded-lg">
+
+                <!-- content -->
+                <div class="flex flex-col w-full px-3">
+                    <div class="flex flex-row lg:mt-[-20px]">
                         <img src="../../img/logos/bethellogo.png" alt="" class="w-[30px] h-[30px] ml-[80px] mt-[20px]">
                         <span class="font-bold text-xl mt-[20px] font-['Montserrat']">BETHEL</span>
                     </div>
-            
-                    <div class="py-10 px-20 mt-10 bg-blue-100 ">
-                        <form>
-                            <!-- Email -->
-                            <div>
-                                <label for="" class="font-['Montserrat'] text-[14px]">Email</label><br>
-                                <input type="text" placeholder="  john@gmail.com" class="border-2 border-[#4e78c0] text-[D3D3D3] bg-light opacity-25 w-[300px] h-[40px] rounded-md">
-                                
-                            </div><br>
-            
+
+                    <div class="mt-8">
+                        <form action="" class="flex flex-col ">
+
+                            <!-- email  -->
+                            <label for="" class="font-['Montserrat'] text-[13px]">Email</label>
+                            <input type="text" placeholder="  john@example.com" class="border-2 border-[#4e78c0] text-[D3D3D3] bg-light opacity-25 p-1 rounded-md">
+                    
                             <!-- password -->
-                            <div class="mb-[15px]">
-                                    <label for="" class="font-['Montserrat'] text-[14px]">Password</label><br>
-                                    <div class="flex flex-row relative">
-                                        <input type="password" placeholder="  password" class="border-2 border-[#4e78c0] text-[D3D3D3] bg-light opacity-25 w-[300px] h-[40px] rounded-md">
+                            <label for="" class="font-['Montserrat'] text-[13px] mt-6">Password</label>
+                            <div class="flex flex-row relative">
+                                <input type="password" placeholder="  password" class="border-2 border-[#4e78c0] text-[D3D3D3] bg-light opacity-25 p-1 rounded-md lg:w-[350px] md:w-[350px] sm:w-[350px] min-[320px]:w-[350px]">
                                         
-                                        <div class="flex absolute right-[40px] p-[10px]">
+                                        <!-- <div class="flex absolute lg:right-[100px] min-[320px]:right-[100px] p-[10px]">
                                             <img src="../../img/images/LoginSignup-page-images/visibility-lock.svg" alt="">
-                                        </div>
-                                    </div>
+                                        </div> -->
                             </div>
-            
-                        <!-- button  -->
-                        <div class="mb-[10px]">
-                                <button class="border-2 bg-[#293793] w-[300px] h-[40px] rounded-lg text-white shadow-lg hover:bg-none hover:border-[#293793]">Sign In</button>
-                        </div>
-                        
-                        <!-- checkbox  -->
-                        <div class="flex items-center">
-                                <input type="checkbox" class="w-[18px] h-[18px]">
-                                <span class="font-['Montserrat'] text-[13px] text-center pl-[10px]">Accept Terms & Conditions*</span>
-                        </div>
-            
-            
-                        </form><br>
-            
-                        <div class="pt-[10px] pl-[10px]">
-                            <p class="font-[montserrat] text-[13px]"> <span>New on our platform?</span> <RouterLink to="/signup" class="text-[#293793] cursor-pointer ">Create an account</RouterLink> </p>
+                            
+                            <!-- button  -->
+                            <router-link to="/"><button type="submit" class="mt-4 border-2 p-2 bg-[#293793] rounded-md w-[350px] text-white text-[14px]">Sign In</button></router-link>
+
+                            <!-- checkbox  -->
+                            <div class="p-4">
+                                    <input type="checkbox" class="p-10">
+                                    <span class="font-['Montserrat'] text-[13px] lg:text-center lg:pl-4 min-[320px]:pl-4">Accept Terms & Conditions*</span>
+                            </div>
+                        </form>
+
+                        <div class="p-6">
+                            <p class="font-[montserrat] text-[13px] lg:text-center min-[320px]:text-center"> <span>New on our platform?</span> <RouterLink to="/signup" class="text-[#293793] cursor-pointer ">Create an account</RouterLink> </p>
                         </div>
                     </div>
-            
-            </div>
-            </div>
+                    
+                </div>
+    </div>
 
         </div>
     </div>

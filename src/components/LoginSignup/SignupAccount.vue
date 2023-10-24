@@ -2,17 +2,16 @@
     <!-- right-side  -->
     <div class="">
         <div class="rounded-r-xl pb-6">
-        <div class="flex flex-row items-center justify-center lg:ml-[-100px]">
+        <div class="flex lg:flex-row min-[320px]:flex-col items-center justify-center lg:ml-[-100px] min-[320px]:ml-[-100px]">
             <router-link to="/">
                 <div class="flex lg:flex-row cursor-pointer">
                     <div class="flex items-center justify-center bg-[#293793] w-[50px] h-[50px] m-10 rounded-md">
-                        <!-- <img src="./img/home.svg" alt="" class=""> -->
                         <span class="material-symbols-outlined text-white">
                             home
                         </span>
                     </div>
 
-                    <div class="flex items-center lg:text-[16px] min-[320px]:text-[13px]">
+                    <div class="flex items-center lg:text-[16px] min-[320px]:text-[12px] min-[320px]:ml-[-20px] lg:ml-2">
                     
                         <p class="font-['Montserrat'] text-[#293793]"><span class="font-bold">Account Information</span> <br> <span>Enter username</span></p>
                     
@@ -21,16 +20,15 @@
             </router-link>
 
             <router-link to="/signup/signup-personal">
-                <div class="flex flex-row cursor-pointer">
+                <div class="flex flex-row cursor-pointer lg:mt-1 min-[320px]:mt-[-50px]">
                     <div class="flex items-center justify-center bg-[#808080] w-[50px] h-[50px] m-10 rounded-md">
-                        <!-- <img src="./img/home.svg" alt="" class=""> -->
                         <span class="material-symbols-outlined text-white">
                             person
                         </span>
                     </div>
 
                     
-                        <div class="flex items-center lg:text-[16px] min-[320px]:text-[12px]">
+                        <div class="flex items-center lg:text-[16px] min-[320px]:text-[12px] min-[320px]:ml-[-20px] lg:ml-2">
                             <p class="font-['Montserrat'] text-[#808080]"><span class="font-bold">Personal Information</span> <br> <span>Enter Information</span></p>
                         </div>
                 </div>
@@ -39,11 +37,11 @@
 
         <div class="bg-blue-100 rounded-md pt-10 pb-[2px]">
             <div class="lg:ml-[-80px] min-[320px]:ml-[-125px]">
-                <p class="font-['Montserrat'] ml-40"><span class="text-[20px] font-bold">Account Information</span><br><span class="pt-[50px]">Enter your email address & password details !</span></p>
+                <p class="font-['Montserrat'] ml-40"><span class="text-[20px] font-bold">Account Information</span><br><span class="pt-[50px] min-[320px]:text-[12px] lg:text-[13px]">Enter your email address & password details !</span></p>
             </div>
 
             <div class="">
-                <form action="">
+                <form action="" class="min-[320px]:ml-[-30px]">
                     <!-- email  -->
 
                     <div class="lg:m-10 lg:pl-10 min-[320px]:m-10 min-[320px]:pl-10 ">
@@ -59,7 +57,7 @@
                             <div class="flex flex-row relative">
                                 <input type="password" placeholder="  password" class="border-2 border-[#4e78c0] text-[D3D3D3] bg-light opacity-25 w-[250px] h-[40px] rounded-md">
                                 
-                                <div class="flex absolute lg:right-[15px] min-[320px]:right-[90px] p-[10px]">
+                                <div class="flex absolute lg:right-[15px] min-[320px]:right-[50px] p-[10px]">
                                     <img src="../../img/images/LoginSignup-page-images/visibility-lock.svg" alt="">
                                 </div>
                             </div>
@@ -71,7 +69,7 @@
                             <div class="flex flex-row relative">
                                 <input type="password" placeholder="  confirm password" class="border-2 border-[#4e78c0] text-[D3D3D3] bg-light opacity-25 w-[250px] h-[40px] rounded-md">
                                 
-                                <div class="flex absolute lg:right-[15px] min-[320px]:right-[130px] p-[10px]">
+                                <div class="flex absolute lg:right-[15px] min-[320px]:right-[90px] p-[10px]">
                                     <img src="../../img/images/LoginSignup-page-images/visibility-lock.svg" alt="">
                                 </div>
                             </div>
