@@ -222,7 +222,7 @@
 
 <script>
 export default {
-    name : 'Page4Wallet',
+    name : 'Storage',
     data(){
         return{
             // moreButton open and close
