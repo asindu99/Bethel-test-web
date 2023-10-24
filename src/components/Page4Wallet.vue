@@ -41,7 +41,7 @@
                         </div>
                         <!-- text -->
                         <div class="flex gap-1">
-                            <div>3</div>
+                            <div>{{ walletCount }}</div>
                             <h3>Wallets</h3>
                         </div>
                     </div>
@@ -402,7 +402,10 @@ export default {
                 publicKeys : 'Publickkey1231413',
                 walletAddress : 'ipv4/dsfsdfsdfs',
                 Active : 'Online',
-            }
+            },
+
+            // wallets count
+            walletCount : 0,
         }
     },
 
@@ -419,13 +422,15 @@ export default {
         deleteWalletData(wallet){
             this.walletTableArr = this.walletTableArr.filter((item) => {
                 return wallet !== item
-            })
+            });
+            this.walletCount = this.walletCount - 1 ;
         }, 
         addData(){
             this.walletTableArr.push(this.walletAuthModalData);
             this.openClose = false;
             this.authBlur = '';
-            console.log(this.walletTableArr)
+            console.log(this.walletTableArr);
+            this.walletCount = this.walletCount + 1 ;
         },
         handleSubmit(values){
             console.log(values)

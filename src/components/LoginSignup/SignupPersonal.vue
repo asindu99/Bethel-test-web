@@ -96,7 +96,7 @@
 
 
                     <!-- button  -->
-                    <router-link to="/signup/signup-personal">
+                    <router-link to="/Mobile-Verification">
                         <button class="font-['Montserrat' bg-[#293793] w-[250px] h-[40px] rounded-md shadow-lg text-white opacity-85 lg:ml-20 min-[320px]:ml-20 transition duration-300 ease-in-out 
                             hover:bg-[#293793] lg:mt-[-50px]">Create Account</button>
                     </router-link>
