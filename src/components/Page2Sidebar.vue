@@ -109,7 +109,7 @@
                 <!-- end of menu text -->
 
                 <!-- menu item -->
-                <a href="#" class="active mt-3">
+                <router-link to="/profile">
                     <div class="hover:bg-[#181d42] min-[320px]:flex sm:flex lg:flex md:flex w-full px-3  my-2 py-2 hover:text-[white] transition-all ease-linear">
                         <span class=" material-symbols-outlined top-2 right-[20px] mr-2
                         ">
@@ -121,7 +121,7 @@
 
                     <!-- small size -->
                     
-                </a>
+                </router-link>
                 <!-- end of the menu item -->
 
                 <!-- menu item -->
