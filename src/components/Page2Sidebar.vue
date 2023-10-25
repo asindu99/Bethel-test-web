@@ -109,7 +109,7 @@
                 <!-- end of menu text -->
 
                 <!-- menu item -->
-                <a href="#" class="active mt-3">
+                <router-link to="/profile">
                     <div class="hover:bg-[#181d42] min-[320px]:flex sm:flex lg:flex md:flex w-full px-3  my-2 py-2 hover:text-[white] transition-all ease-linear">
                         <span class=" material-symbols-outlined top-2 right-[20px] mr-2
                         ">
@@ -121,7 +121,7 @@
 
                     <!-- small size -->
                     
-                </a>
+                </router-link>
                 <!-- end of the menu item -->
 
                 <!-- menu item -->
@@ -176,7 +176,7 @@
         </div>
         <!-- end of the main side bar -->
 
-        <div class=" flex justify-center bg-[#f7f1f1c2] z-0 lg:w-[100%] lg:mx-[0px] mt-[80px] h-full 
+        <div class=" flex justify-center bg-[#f7f1f1c2] z-0 lg:w-[100%] lg:mx-[0px] mt-[70px] h-full 
         md:px-[5px] sm:w-full min-[320px]:w-full min-[320px]:ml-0">
 
 

@@ -15,13 +15,13 @@
                     <!-- first name -->
                     <div class="flex flex-col">
                         <label for="" class="text-[14px]">First Name :</label>
-                        <input type="text" class="text-[#757784] bg-transparent p-1 border-b-2 border-[#29379384] outline-none">
+                        <input type="text" class="lg:w-[235px] md:w-[240px] text-[#757784] bg-transparent p-1 border-b-2 border-[#29379384] ">
                     </div>
 
                     <!-- last name -->
-                    <div class="flex flex-col min-[302px]:mt-4 lg:mt-0 md:mt-0 sm:mt-0">
+                    <div class="flex flex-col min-[320px]:mt-4 lg:mt-0 md:mt-0 sm:mt-0">
                         <label for="" class="text-[14px]">Last Name :</label>
-                        <input type="text" class="text-[#757784] bg-transparent p-1 border-b-2 border-[#29379384] outline-none">
+                        <input type="text" class="lg:w-[235px] text-[#757784] bg-transparent p-1 border-b-2 border-[#29379384] outline-1">
                     </div>
                 </div>
 
@@ -32,7 +32,7 @@
                     <div  class="flex flex-col">
                         <label for="" class="text-[14px]">Select Country :</label>
                         <!-- <input type="text" class=" bg-transparent p-1 border-b-2 border-[#29379384] outline-none"> -->
-                        <select v-model="selected" id="" class="text-[#757784] bg-transparent p-1 border-b-2 border-[#29379384] outline-none lg:w-[235px] md:w-[230px] min-[320px]:w-full w-[340px]">
+                        <select v-model="selected" id="" class="text-[#757784] bg-transparent p-1 border-b-2 border-[#29379384]  lg:w-[235px] md:w-[230px] min-[320px]:w-full w-[340px]">
                             <option v-for="country in countryList" :value="country" class="w-[200px] bg-transparent">{{ country.Name }}</option>
                         </select>
 
@@ -43,7 +43,7 @@
                     <div  class="flex flex-col min-[302px]:mt-4 lg:mt-0 md:mt-0 sm:mt-0">
                         <label for="" class="text-[14px]">Country Code :</label>
 
-                        <select name="" id="" class="text-[#757784] bg-transparent p-1 border-b-2 border-[#29379384] outline-none lg:w-[235px] md:w-[230px] min-[320px]:w-full w-[340px]">
+                        <select name="" id="" class="text-[#757784] bg-transparent p-1 border-b-2 border-[#29379384]  lg:w-[235px] md:w-[230px] min-[320px]:w-full w-[340px]">
                             <option  class="w-[200px] bg-transparent">{{ selected.MobileCode }}</option>
                         </select>
                         <!-- <input type="text" class="text-[#757784] bg-transparent p-1 border-b-2 border-[#29379384] outline-none"> -->
@@ -57,7 +57,8 @@
                     <!-- first name -->
                     <div class="flex flex-col">
                         <label for="" class="text-[14px]">Mobile Number :</label>
-                        <input type="number" class="text-[#757784] bg-transparent p-1 border-b-2 border-[#29379384] outline-none">
+                        <input type="number" class="text-[#757784] bg-transparent p-1 border-b-2 border-[#29379384]
+                        [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none ">
                     </div>
 
                 </div>

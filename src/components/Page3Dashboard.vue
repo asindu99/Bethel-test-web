@@ -32,7 +32,7 @@
 
 
         <!-- 1st caption section -->
-        <div class="relative mt-4">
+        <div class="relative mt-2">
             <div class="w-[2px] h-[20px] bg-[#293793] absolute top-[5px] "></div>
             <h3 class="ml-2 text-[20px]">OverView</h3> 
         </div>
@@ -41,7 +41,7 @@
         <div class="flex mt-4 justify-evenly w-full flex-wrap gap-3 ">
 
             <!-- buckets  -->
-            <div class="bg-white flex flex-col gap-2 p-4 border-2 w-[380px] h-[100px] items-start justify-center rounded-xl shadow-md 
+            <div class="bg-white flex flex-col gap-2 p-4 border-2 w-[380px] h-[80px] items-start justify-center rounded-xl shadow-md 
             hover:shadow-none hover:border-blue-100 hover:translate-y-[-10px] transition-all ease-in">
                 <!-- content inside -->
                 <div class="flex items-center gap-3">
@@ -66,7 +66,7 @@
             <!-- end of the bucket section -->
 
             <!-- Total strorage Section -->
-            <div class="bg-white flex flex-col gap-2 p-4 border-2 w-[380px] h-[100px] items-start justify-center rounded-xl shadow-md 
+            <div class="bg-white flex flex-col gap-2 p-4 border-2 w-[380px] h-[80px] items-start justify-center rounded-xl shadow-md 
             hover:shadow-none hover:border-blue-100 hover:translate-y-[-10px] transition-all ease-in">
                 <!-- content inside -->
                 <div class="flex items-center gap-3">
@@ -90,7 +90,7 @@
             </div>
 
             <!-- Bandwidth flex -->
-            <div class="bg-white flex flex-col gap-2 p-4 border-2 w-[380px] h-[100px] items-start justify-center rounded-xl shadow-md 
+            <div class="bg-white flex flex-col gap-2 p-4 border-2 w-[380px] h-[80px] items-start justify-center rounded-xl shadow-md 
             hover:shadow-none hover:border-blue-100 hover:translate-y-[-10px] transition-all ease-in">
                 <!-- content inside -->
                 <div class="flex items-center gap-3">
@@ -117,7 +117,7 @@
         <!-- end of the overview content -->
 
         <!-- 2nd caption section -->
-        <div class="relative mt-6">
+        <div class="relative mt-4">
             <div class="w-[2px] h-[20px] bg-[#293793] absolute top-[5px] "></div>
             <h3 class="ml-2 text-[20px]">Data Usage</h3> 
         </div>
@@ -153,7 +153,7 @@
                 <!-- storage chart -->
                 <div class="mt-2 w-[550px]
                 lg:w-[550px] md:w-[550px] sm:w-[550px] min-[320px]:w-[320px] 
-                lg:h-[300px] md:h-[300px] sm:h-[300px] min-[320px]:h-[200px] ">
+                lg:h-[250px] md:h-[300px] sm:h-[300px] min-[320px]:h-[200px] ">
                     <canvas id="myChart2" class="w-[650px] ml-3"></canvas>
                 </div>
 
@@ -185,7 +185,7 @@
                 <!-- storage chart -->
                 <div class="mt-2 w-[550px]
                 lg:w-[550px] md:w-[550px] sm:w-[550px] min-[320px]:w-[320px] 
-                lg:h-[300px] md:h-[300px] sm:h-[300px] min-[320px]:h-[200px] ">
+                lg:h-[250px] md:h-[300px] sm:h-[300px] min-[320px]:h-[200px] ">
                     <canvas id="myChart" class="
                     lg:w-[650px] md:w-[650px] sm:w-[650px] min-[320px]:w-[200px] ml-3"></canvas>
                 </div>
