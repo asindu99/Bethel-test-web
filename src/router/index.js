@@ -1,13 +1,13 @@
-// import componets
+// import router
 import { createRouter, createWebHistory } from 'vue-router';
+
+// import all the components
 import MainContent from "@/components/MainContent.vue";
 import Page3Dashboard from '@/components/Page3Dashboard.vue';
 import Page4Wallet from '@/components/Page4Wallet.vue';
 import Storage from '@/components/Storage.vue'
 import Page5AccessKey from '@/components/Page5AccessKey.vue';
 import Billing from '@/components/Billing.vue';
-
-
 import LoginComp2 from '@/components/LoginSignup2/LoginComp2.vue';
 import StorageFolder from '@/components/StorageFolder.vue';
 import MobileVerify from "@/components/LoginSignup2/Mobile-verify/MobileVerify.vue"
@@ -19,6 +19,7 @@ import SignupThird from '@/components/LoginSignup2/FormContent/Signup-third.vue'
 
 
 const routes = [
+    // main section routings
     { 
       path : '/',
       component :MainContent,
@@ -50,20 +51,8 @@ const routes = [
 
       ]
     },
-    // {
-    //   path : '/signup',
-    //   component : Signup,
-    //   children : [
-    //     {
-    //       path : '',
-    //       component : SignupAccount,
-    //     },
-    //     {
-    //       path: '/signup/signup-personal',
-    //       component: SignupPersonal,
-    //     }
-    //   ]
-    // },
+
+    // log in section routings
     {
       path : '/login',
       component : LoginComp2,
@@ -78,6 +67,7 @@ const routes = [
         }
       ]
     },
+    // mobile verify routings
     {
       path : '/mobile-verify',
       component : MobileVerify,
