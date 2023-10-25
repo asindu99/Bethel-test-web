@@ -17,7 +17,7 @@ lg:p-20 md:py-[10px] md:h-screen sm:p-10 min-[320px]:p-3 ">
             <!-- mobile verifcation text -->
             <div class="relative flex flex-col w-full mt-2  items-center">
                 <!-- verified imgage -->
-                <img src="src/img/images/Varification-Page-images/BG-Verified.png" alt="" class=" w-[150px]">
+                <img src="../../../img/images/Varification-Page-images/BG-Verified.png" alt="" class=" w-[150px]">
 
                 <h3 class="lg:text-[30px] md:text-[30px] sm:text-[30px] min-[320px]:text-[25px] text-[#293793]">Mobile Verification</h3>
                 <h4 class="lg:text-[14px] md:text-[14px] sm:text-[14px] min-[320px]:text-[13px] text-center text-[#757784]">Please verify your mobile by using verification code !</h4>
