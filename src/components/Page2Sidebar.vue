@@ -176,7 +176,7 @@
         </div>
         <!-- end of the main side bar -->
 
-        <div class=" flex justify-center bg-[#f7f1f1c2] z-0 lg:w-[100%] lg:mx-[0px] mt-[80px] h-full 
+        <div class=" flex justify-center bg-[#f7f1f1c2] z-0 lg:w-[100%] lg:mx-[0px] mt-[70px] h-full 
         md:px-[5px] sm:w-full min-[320px]:w-full min-[320px]:ml-0">
 
 
