@@ -34,7 +34,7 @@
                 <!-- button div -->
                 <router-link to="/login2/personal">
                     <div class="flex justify-between w-full mt-10">
-                        <button class="p-2 bg-[#293793] rounded-lg px-10 text-white">Next Step</button>
+                        <button class="p-2 bg-[#293793] rounded-lg px-10 text-white border-[1px] hover:bg-white hover:text-[#293793] hover:border-[1px] hover:border-[#293793] transition-all ease-in-out ">Next Step</button>
                     </div>
                 </router-link>
 </template>

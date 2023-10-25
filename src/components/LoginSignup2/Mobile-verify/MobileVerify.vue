@@ -20,8 +20,10 @@ lg:p-20 md:py-[10px] md:h-screen sm:p-10 min-[320px]:p-3 ">
                 <h4 class="text-[14px] text-[#757784]">Please verify your mobile by using verification code !</h4>
             </div>
 
-            <div class="flex w-full items-center justify-center">
-                
+            <div class="flex flex-col w-full items-center justify-center gap-4 mt-10">
+                <h3>Enter the OTP code sent to your Mobile :</h3>
+                <input type="number" class="text-[20px] tracking-tighter bg-transparent p-1 border-b-2 border-[#29379384] outline-none">
+                <router-link to="/"><button class="p-2 bg-[#293793] rounded-lg px-10 text-white border-[1px] hover:bg-white hover:text-[#293793] hover:border-[1px] hover:border-[#293793] transition-all ease-in-out ">Verify</button></router-link>
             </div>
         
 
