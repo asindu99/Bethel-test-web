@@ -13,7 +13,7 @@ import StorageFolder from '@/components/StorageFolder.vue';
 import MobileVerify from "@/components/LoginSignup2/Mobile-verify/MobileVerify.vue"
 import SignupSecond from '@/components/LoginSignup2/FormContent/Signup-second.vue';
 import SignupThird from '@/components/LoginSignup2/FormContent/Signup-third.vue';
-
+import Profile from '@/components/Profile.vue';
 
 
 
@@ -47,6 +47,10 @@ const routes = [
         {
           path:'/bucketFolder',
           component:StorageFolder,
+        },
+        {
+          path:'/profile',
+          component:Profile,
         }
 
       ]
