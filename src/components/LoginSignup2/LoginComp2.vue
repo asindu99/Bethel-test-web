@@ -14,8 +14,8 @@
                 <div class="flex flex-1 px-10 lg:py-20 md:py-5 lg:w-[600px] lg:rounded-l-xl md:w-full
                 min-[320px]:py-10 bg-blue-50">
 
-                
-                <SignupContent/>
+                    <!-- import another side components -->
+                    <SignupContent/>
 
                 </div>
 
