@@ -181,7 +181,7 @@
 
 
             <!-- router view must be here -->
-            <div class="w-full h-full mx-2 lg:pl-[240px] md:pl-[150px] " :class="modalStore.onBlur"> 
+            <div @click="asideHide"  class="w-full h-full mx-2 lg:pl-[240px] md:pl-[150px] " :class="modalStore.onBlur"> 
                 <router-view class=""></router-view> 
             </div>
             <!-- end of the router view here -->
@@ -210,6 +210,14 @@ export default{
     data(){
         return{
             
+        }
+    },
+    methods : {
+        asideHide(){
+            this.modalStore.isOpen = false;
+            this.modalStore.dropMenuOC = false;
+            this.modalStore.onBlur = '';
+
         }
     }
 }

@@ -14,7 +14,7 @@
                         <!-- right arrow -->
                         <div class="ml-2 flex flex-col">
                             <h3 class="font-bold text-[17px]">Welcome to the Bethel</h3>
-                            <h3 class="text-[#293793] font-medium text-[18px] ">Future CX</h3>
+                            <h3 class="text-[#293793] font-bold text-[16px] ">Future CX</h3>
                         </div>
                         
                     </div>
@@ -25,7 +25,7 @@
         
 
         <!-- 1st caption section -->
-        <div class="relative mt-2">
+        <div class="relative mt-4">
             <div class="w-[2px] h-[20px] bg-[#293793] absolute top-[5px] "></div>
             <h3 class="ml-2 text-[20px]">OverView</h3> 
         </div>
@@ -35,7 +35,7 @@
 
             <!-- buckets  -->
             <div class="bg-white flex flex-col gap-2 p-4 border-2 w-full h-[80px] items-start justify-center rounded-xl shadow-md 
-            hover:shadow-none hover:border-blue-100 hover:translate-y-[-10px] transition-all ease-in">
+            ">
                 <!-- content inside -->
                 <div class="flex items-center gap-3">
                     <!-- image side -->
@@ -58,14 +58,38 @@
             </div>
             <!-- end of the bucket section -->
 
-            <!-- Total strorage Section -->
+            <!-- object flex -->
             <div class="bg-white flex flex-col gap-2 p-4 border-2 w-full h-[80px] items-start justify-center rounded-xl shadow-md 
-            hover:shadow-none hover:border-blue-100 hover:translate-y-[-10px] transition-all ease-in">
+            ">
                 <!-- content inside -->
                 <div class="flex items-center gap-3">
                     <!-- image side -->
                     <div>
-                        <img src="../img/icons/icon-bucket.png" alt="" class="w-[35px] mx-3">
+                        <img src="../img/icons/icon-file.png" alt="" class="w-[35px] mx-3">
+                    </div>
+                    <!-- content side -->
+                    <div class="flex flex-col">
+                        <h1>Objects</h1>
+                        <div class="flex items-center">             
+                          <h3 class="text-[13px]">Total Objects</h3> 
+                          <div class="ml-3 w-[30px] h-[25px] bg-blue-100 rounded-lg text-center justify-center items-center">
+                            <h1 class="text-blue-600">2</h1>
+                        </div> 
+                        </div>
+                        
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Total strorage Section -->
+            <div class="bg-white flex flex-col gap-2 p-4 border-2 w-full h-[80px] items-start justify-center rounded-xl shadow-md 
+            ">
+                <!-- content inside -->
+                <div class="flex items-center gap-3">
+                    <!-- image side -->
+                    <div>
+                        <img src="../img/icons/icon-storage.png" alt="" class="w-[35px] mx-3">
                     </div>
                     <!-- content side -->
                     <div class="flex flex-col">
@@ -84,12 +108,12 @@
 
             <!-- Bandwidth flex -->
             <div class="bg-white flex flex-col gap-2 p-4 border-2 w-full h-[80px] items-start justify-center rounded-xl shadow-md 
-            hover:shadow-none hover:border-blue-100 hover:translate-y-[-10px] transition-all ease-in">
+            ">
                 <!-- content inside -->
                 <div class="flex items-center gap-3">
                     <!-- image side -->
                     <div>
-                        <img src="../img/icons/icon-bucket.png" alt="" class="w-[35px] mx-3">
+                        <img src="../img/icons/icon-bandwidth.png" alt="" class="w-[35px] mx-3">
                     </div>
                     <!-- content side -->
                     <div class="flex flex-col">
@@ -106,29 +130,7 @@
 
             </div>
 
-            <!-- Bandwidth flex -->
-            <div class="bg-white flex flex-col gap-2 p-4 border-2 w-full h-[80px] items-start justify-center rounded-xl shadow-md 
-            hover:shadow-none hover:border-blue-100 hover:translate-y-[-10px] transition-all ease-in">
-                <!-- content inside -->
-                <div class="flex items-center gap-3">
-                    <!-- image side -->
-                    <div>
-                        <img src="../img/icons/icon-bucket.png" alt="" class="w-[35px] mx-3">
-                    </div>
-                    <!-- content side -->
-                    <div class="flex flex-col">
-                        <h1>Bandwidth</h1>
-                        <div class="flex items-center">             
-                          <h3 class="text-[13px]">Total Bandwidth</h3> 
-                          <div class="ml-3 w-[30px] h-[25px] bg-blue-100 rounded-lg text-center justify-center items-center">
-                            <h1 class="text-blue-600">2</h1>
-                        </div> 
-                        </div>
-                        
-                    </div>
-                </div>
-
-            </div>
+            
 
         </div>
         <!-- end of the overview content -->
@@ -170,10 +172,57 @@
                 
 
                 <!-- storage chart -->
-                <div class="mt-2
+                <div class=" flex items-center justify-evenly mt-2
                 lg:w-full md:w-full sm:w-[550px] min-[320px]:w-[320px] 
                 lg:h-[250px] md:h-[300px] sm:h-[300px] min-[320px]:h-[200px] ">
-                    <canvas id="myChart2" class="lg:w-full md:w-full sm:w-[650px] min-[320px]:w-[200px] ml-3"></canvas>
+
+                    <!-- storage status extend -->
+                    <div class="lg:flex md:flex sm:flex min-[320px]:hidden flex-col gap-4">
+                        
+                        <!-- total file -->
+                        <div class="flex flex-col items-center">
+                            <div>
+                                <img src="../img/icons/icon-play.png" alt="" class="w-[40px]">
+                            </div>
+
+                            <div class="flex items-center mt-[2px]">
+                                <h3 class="text-[16px]">Total Files :</h3>
+                                <h3 class="text-[#8d8d8d] text-[14px] ml-1">13 files</h3>
+                            </div>
+                        </div>
+
+                        <!-- total file -->
+                        <div class="flex flex-col items-center">
+                            <div>
+                                <img src="../img/icons/icon-play.png" alt="" class="w-[40px]">
+                            </div>
+
+                            <div class="flex items-center mt-[2px]">
+                                <h3 class="text-[16px]">Total Files :</h3>
+                                <h3 class="text-[#8d8d8d] text-[14px] ml-1">13 files</h3>
+                            </div>
+                        </div>
+
+                        <!-- total file -->
+                        <div class="flex flex-col items-center">
+                            <div>
+                                <img src="../img/icons/icon-play.png" alt="" class="w-[40px]">
+                            </div>
+
+                            <div class="flex items-center mt-[2px]">
+                                <h3 class="text-[16px]">Total Files :</h3>
+                                <h3 class="text-[#8d8d8d] text-[14px] ml-1">13 files</h3>
+                            </div>
+                        </div>
+
+  
+
+                    </div>
+                    <!-- end of the storage status extend -->
+
+                    <!-- chart view -->
+                    <canvas id="myChart" class="lg:w-full md:w-full sm:w-[650px] min-[320px]:w-[200px] ml-3"></canvas>
+
                 </div>
 
             </div>
@@ -202,10 +251,10 @@
                 
 
                 <!-- storage chart -->
-                <div class="mt-2
+                <div class="mt-2 flex items-center justify-center
                 lg:w-full md:w-full sm:w-[550px] min-[320px]:w-[320px] 
                 lg:h-[250px] md:h-[300px] sm:h-[300px] min-[320px]:h-[200px] ">
-                    <canvas id="myChart" class="
+                    <canvas id="myChart2" class="
                     lg:w-full md:w-full sm:w-[650px] min-[320px]:w-[200px] ml-3"></canvas>
                 </div>
 
@@ -222,7 +271,7 @@
         </div>
 
         <!-- log activies table -->
-        <div class=" w-[94%] mx-auto mt-4 bg-white rounded-lg px-2 shadow-md mb-10">
+        <div class=" w-full mx-auto mt-4 bg-white rounded-lg px-2 shadow-md mb-10">
             <!-- start of the table -->
             <table class="table-auto border-separate py-2 w-full rounded-lg">
                 <thead class="">
@@ -264,13 +313,19 @@ export default {
         const ctx1 = document.getElementById('myChart2');
 
         const myChart = new Chart(ctx, {
-        type: 'line',
+        type: 'doughnut',
     data: {
-      labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun','Jul','Aug', 'Sep','Oct','Nov','Dec'],
+      labels: ['Total', 'Used', 'Remaining'],
       datasets: [{
-        label: '# of Votes',
-        data: [12, 19, 3, 5, 2, 3,4,4,6,7,8,20],
-        borderWidth: 2
+        label: 'Storage',
+        data: [300, 50, 100],
+        backgroundColor: [
+      'rgb(0, 71, 171)',
+      'rgb(54, 162, 235)',
+      'rgb(0, 150, 255)'
+    ],
+    hoverOffset: 10,
+    position : 'bottom',
       }]
     },
     // options: {

@@ -13,9 +13,7 @@ import StorageFolder from '@/components/StorageFolder.vue';
 import MobileVerify from "@/components/LoginSignup2/Mobile-verify/MobileVerify.vue"
 import SignupSecond from '@/components/LoginSignup2/FormContent/Signup-second.vue';
 import SignupThird from '@/components/LoginSignup2/FormContent/Signup-third.vue';
-// import Profile from '@/components/Profile.vue';
 import LoginContent from '@/components/LoginSignup2/FormContent/LoginContent.vue'
-
 import Profile1 from '@/components/Profile/Profile1.vue';
 import ProfileEdit from '@/components/Profile/ProfileEdit.vue';
 import ChangePassword from '@/components/Profile/ChangePassword.vue';
@@ -88,21 +86,7 @@ const routes = [
         }
       ]
     },
-    // {
-    //   path : '/profile',
-    //   component : Profile1,
-    //   children : [
-    //     {
-    //       path : '',
-    //       component : ProfileEdit,
-    //     },
-    //     {
-    //       path: '/profile/changePassword',
-    //       component: ChangePassword,
-    //     }
-    //   ]
-    // },
-    // mobile verify routings
+    // mobile verfication routings
     {
       path : '/mobile-verify',
       component : MobileVerify,
@@ -119,7 +103,7 @@ const routes = [
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
     routes,
-    linkExactActiveClass : ' text-white'
+    linkExactActiveClass : 'text-white'
 })
 
 export default router

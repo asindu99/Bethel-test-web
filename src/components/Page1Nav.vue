@@ -70,7 +70,7 @@
                         <!-- end box 2 -->
 
                         <!-- box 3 -->
-                        <div class="w-full hover:bg-[#181d42] px-2 rounded-lg transition-all ease-linear">
+                        <router-link to="/profile" @click="modalStore.dropMenuOC = false"> <div class="w-full hover:bg-[#181d42] px-2 rounded-lg transition-all ease-linear">
                             <div class="min-[320px]:flex sm:flex lg:flex md:flex w-full px-3  py-2">
                                 <span class=" material-symbols-outlined top-2 right-[20px] text-[#7882c3] mr-2 scale-[.9]
                                 ">
@@ -79,7 +79,7 @@
                                 <h3 class="text-[15px] text-[#7882c3]">Profile </h3>
                             
                             </div>
-                        </div>
+                        </div></router-link> 
                         <!-- end box 3 -->
 
                         <!-- box 3 -->
@@ -254,7 +254,7 @@
                 <!-- end of menu text -->
 
                 <!-- menu item -->
-                <a href="#" class=" mt-3">
+                <router-link to="/profile" class=" mt-3" @click="closeSide">
                     <div class=" min-[320px]:flex sm:flex lg:flex md:flex w-full px-3 hover:bg-[#293793] my-2 py-2 hover:text-[white] transition-all ease-linear">
                         <span class=" material-symbols-outlined top-2 right-[20px] mr-2
                         ">
@@ -266,7 +266,7 @@
 
                     <!-- small size -->
                     
-                </a>
+                </router-link>
                 <!-- end of the menu item -->
 
                 <!-- menu item -->

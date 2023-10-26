@@ -1,5 +1,5 @@
 <template>
-    <div class="relative lg:px-0 md:px-5 sm:px-4 min-[320px]:px-2">
+    <div class="relative lg:pl-[-1px] md:px-5 sm:px-4 min-[320px]:px-2">
         
 
         <div :class="authBlur">
@@ -26,7 +26,7 @@
 
                         <!-- Main Bucket -->
                         <div>
-                            <h2 class="font-bold text-[30px]">--FOLDER--</h2>
+                            <h2 class="font-bold text-[30px]">--Folder--</h2>
                         </div>
                         <!-- end of the bucket main -->
                     </div>
