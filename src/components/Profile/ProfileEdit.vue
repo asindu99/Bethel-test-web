@@ -1,11 +1,13 @@
 <template>
     <div>
-        <div class="flex absolute items-center justify-center top-[-70px] lg:left-80 min-[320px]:left-40">
+        <!-- admin-image  -->
+        <!-- <div class="flex absolute items-center justify-center top-[-70px] lg:left-80 min-[320px]:left-40">
                             <img src="../../img/images/profile-admin.png" alt="" class="w-[60px] h-[60px]">
-        </div>
+        </div> -->
+        <!-- admin-image end  -->
     
         <!-- form - 1  -->
-        <div class="w-full bg-white rounded-lg p-6">
+        <div class="w-full bg-white rounded-lg p-10 shadow-lg">
     
                         <div class="lg:mt-[-15px]">
     
@@ -14,8 +16,12 @@
                                     <h1 class="font-['Montserrat'] text-[#293793] pl-8 text-2xl font-bold ml-[-20px]">Edit Profile</h1>
                                 </div>
                             </div>
+
+                            <div class="flex absolute items-center justify-center lg:left-[400px] min-[320px]:left-40">
+                                <img src="../../img/images/profile-admin.png" alt="" class="w-[70px] h-[70px]">
+                            </div>
     
-                            <form action="" class="min-[320px]:ml-[-50px] lg:mt-[-20px]">
+                            <form action="" class="min-[320px]:ml-[-50px] mt-10">
     
                                 <div class="flex lg:flex-row min-[320px]:flex-col">
                                     <!-- first name -->
@@ -85,6 +91,7 @@
                         </div>
                                 
         </div>
+        <!-- form - 1 end  -->
     
     </div>
     
