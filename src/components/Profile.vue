@@ -125,7 +125,7 @@
 
 
                             <!-- button  -->
-                            <router-link to="/Mobile-Verification">
+                            <router-link to="/mobile-verify">
                                 <button class="font-['Montserrat' bg-[#293793] w-[250px] h-[40px] rounded-lg shadow-lg text-white opacity-85 lg:ml-20 min-[320px]:ml-20 transition duration-300 ease-in-out 
                                     hover:bg-[#293793] lg:mt-[-50px] hover:text-[#293793] hover:bg-[white] hover:border-[#293793] border-[2px]">Save Changes</button>
                             </router-link>
