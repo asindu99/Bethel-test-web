@@ -5,7 +5,7 @@
         </div>
     
         <!-- form - 1  -->
-        <div class="w-full bg-white rounded-lg p-8">
+        <div class="w-full bg-white rounded-lg p-6">
     
                         <div class="lg:mt-[-15px]">
     

@@ -9,7 +9,7 @@
     
                             <div class="flex flex-row ml-4">
                                 <div>
-                                    <img src="../../img/images/password-change.png" alt="" class="w-[50px] h-[50px]">
+                                    <img src="../../img/images/password-change.png" alt="" class="w-[35px] h-[35px]">
                                 </div>
                                 <div>
                                     <h1 class="font-['Montserrat'] text-[#293793] pl-8 text-2xl font-bold ml-[-20px]">Change Password</h1>
