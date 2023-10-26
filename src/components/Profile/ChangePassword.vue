@@ -3,7 +3,7 @@
     <div>
     
         <!-- form - 2  -->
-        <div class="w-full bg-white rounded-lg p-8">
+        <div class="w-auto bg-white rounded-lg p-10 shadow-lg">
     
                         <div class="lg:mt-[-15px]">
     
