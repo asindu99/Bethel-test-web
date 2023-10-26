@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-col gap-4 w-full font-['Montserrat']">
+    <div class="px-2 flex flex-col gap-4 w-full font-['Montserrat']">
             <!-- header  -->
             <div class="flex flex-row items-center justify-between h-full bg-white shadow-lg px-2 py-2 rounded-lg">
                 <div class="lg:ml-[30px] my-2">

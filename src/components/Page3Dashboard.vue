@@ -1,8 +1,28 @@
 <template>
     <div :class="paddingClass" class="lg:w-full md:w-full md:mx-auto min-[320px]:w-[100%] min-[320px]:px-[10px]">
 
-        
+        <!-- head wallet div  -->
+        <div class="flex items-center justify-between shadow-sm rounded-lg px-3 py-3 bg-white">
+                <!-- left side text -->
+                 <div>
+                    <!-- storage with arrow -->
+                    <div class="flex items-center">
+                        <div>
+                            <img src="../img/logos/bethellogo.png" alt="" class="w-[40px]">
+                        </div>
 
+                        <!-- right arrow -->
+                        <div class="ml-2 flex flex-col">
+                            <h3 class="font-bold text-[17px]">Welcome to the Bethel</h3>
+                            <h3 class="text-[#293793] font-medium text-[18px] ">Future CX</h3>
+                        </div>
+                        
+                    </div>
+                    <!-- end of the storage with arrrow -->
+                </div>
+            </div>
+        <!-- end of the head key name -->
+        
 
         <!-- 1st caption section -->
         <div class="relative mt-2">
@@ -11,10 +31,10 @@
         </div>
 
         <!-- overview content flex -->
-        <div class="flex mt-4 justify-evenly w-full flex-wrap gap-10 ">
+        <div class="flex lg:flex-row md:flex-col sm:flex-col min-[320px]:flex-col items-center mt-4 w-full flex-warp gap-2 justify-center">
 
             <!-- buckets  -->
-            <div class="bg-white flex flex-col gap-2 p-4 border-2 w-[340px] h-[80px] items-start justify-center rounded-xl shadow-md 
+            <div class="bg-white flex flex-col gap-2 p-4 border-2 w-full h-[80px] items-start justify-center rounded-xl shadow-md 
             hover:shadow-none hover:border-blue-100 hover:translate-y-[-10px] transition-all ease-in">
                 <!-- content inside -->
                 <div class="flex items-center gap-3">
@@ -39,7 +59,7 @@
             <!-- end of the bucket section -->
 
             <!-- Total strorage Section -->
-            <div class="bg-white flex flex-col gap-2 p-4 border-2 w-[340px] h-[80px] items-start justify-center rounded-xl shadow-md 
+            <div class="bg-white flex flex-col gap-2 p-4 border-2 w-full h-[80px] items-start justify-center rounded-xl shadow-md 
             hover:shadow-none hover:border-blue-100 hover:translate-y-[-10px] transition-all ease-in">
                 <!-- content inside -->
                 <div class="flex items-center gap-3">
@@ -63,7 +83,31 @@
             </div>
 
             <!-- Bandwidth flex -->
-            <div class="bg-white flex flex-col gap-2 p-4 border-2 w-[340px] h-[80px] items-start justify-center rounded-xl shadow-md 
+            <div class="bg-white flex flex-col gap-2 p-4 border-2 w-full h-[80px] items-start justify-center rounded-xl shadow-md 
+            hover:shadow-none hover:border-blue-100 hover:translate-y-[-10px] transition-all ease-in">
+                <!-- content inside -->
+                <div class="flex items-center gap-3">
+                    <!-- image side -->
+                    <div>
+                        <img src="../img/icons/icon-bucket.png" alt="" class="w-[35px] mx-3">
+                    </div>
+                    <!-- content side -->
+                    <div class="flex flex-col">
+                        <h1>Bandwidth</h1>
+                        <div class="flex items-center">             
+                          <h3 class="text-[13px]">Total Bandwidth</h3> 
+                          <div class="ml-3 w-[30px] h-[25px] bg-blue-100 rounded-lg text-center justify-center items-center">
+                            <h1 class="text-blue-600">2</h1>
+                        </div> 
+                        </div>
+                        
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Bandwidth flex -->
+            <div class="bg-white flex flex-col gap-2 p-4 border-2 w-full h-[80px] items-start justify-center rounded-xl shadow-md 
             hover:shadow-none hover:border-blue-100 hover:translate-y-[-10px] transition-all ease-in">
                 <!-- content inside -->
                 <div class="flex items-center gap-3">
@@ -101,11 +145,11 @@
 
         
         <!-- data usage content flex -->
-        <div class="flex mt-4 justify-evenly w-full flex-wrap gap-10 
+        <div class="flex lg:flex-row md:flex-col sm:flex-col min-[320px]:flex-col mt-4 justify-center items-center w-full gap-2 
         ">
             <!-- data usage flex 1-->
             <div class="bg-white flex flex-col gap-2 pl-3 pt-4 pb-2 border-2 
-            lg:w-[555px] md:w-[595px] sm:w-[595px] min-[320px]:w-[340px]
+            lg:w-full md:w-[595px] sm:w-[595px] min-[320px]:w-[340px]
              justify-start items-start rounded-xl shadow-md">
                 <!-- icon and text-->
                 <div class="flex items-center">
@@ -126,10 +170,10 @@
                 
 
                 <!-- storage chart -->
-                <div class="mt-2 w-[550px]
-                lg:w-[550px] md:w-[550px] sm:w-[550px] min-[320px]:w-[320px] 
-                lg:h-[180px] md:h-[300px] sm:h-[300px] min-[320px]:h-[200px] ">
-                    <canvas id="myChart2" class="lg:w-[650px] md:w-[650px] sm:w-[650px] min-[320px]:w-[200px] ml-3"></canvas>
+                <div class="mt-2
+                lg:w-full md:w-full sm:w-[550px] min-[320px]:w-[320px] 
+                lg:h-[250px] md:h-[300px] sm:h-[300px] min-[320px]:h-[200px] ">
+                    <canvas id="myChart2" class="lg:w-full md:w-full sm:w-[650px] min-[320px]:w-[200px] ml-3"></canvas>
                 </div>
 
             </div>
@@ -137,7 +181,7 @@
 
             <!-- data usage flex 2 -->
             <div class="bg-white flex flex-col gap-2 pl-3 pt-4 pb-2 border-2 
-            lg:w-[555px] md:w-[595px] sm:w-[595px] min-[320px]:w-[340px]
+            lg:w-full md:w-[595px] sm:w-[595px] min-[320px]:w-[340px]
              justify-start items-start rounded-xl shadow-md">
                 <!-- icon and text-->
                 <div class="flex items-center">
@@ -158,11 +202,11 @@
                 
 
                 <!-- storage chart -->
-                <div class="mt-2 w-[550px]
-                lg:w-[550px] md:w-[550px] sm:w-[550px] min-[320px]:w-[320px] 
-                lg:h-[180px] md:h-[300px] sm:h-[300px] min-[320px]:h-[200px] ">
+                <div class="mt-2
+                lg:w-full md:w-full sm:w-[550px] min-[320px]:w-[320px] 
+                lg:h-[250px] md:h-[300px] sm:h-[300px] min-[320px]:h-[200px] ">
                     <canvas id="myChart" class="
-                    lg:w-[650px] md:w-[650px] sm:w-[650px] min-[320px]:w-[200px] ml-3"></canvas>
+                    lg:w-full md:w-full sm:w-[650px] min-[320px]:w-[200px] ml-3"></canvas>
                 </div>
 
             </div>
