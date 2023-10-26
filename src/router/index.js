@@ -13,7 +13,13 @@ import StorageFolder from '@/components/StorageFolder.vue';
 import MobileVerify from "@/components/LoginSignup2/Mobile-verify/MobileVerify.vue"
 import SignupSecond from '@/components/LoginSignup2/FormContent/Signup-second.vue';
 import SignupThird from '@/components/LoginSignup2/FormContent/Signup-third.vue';
-import Profile from '@/components/Profile.vue';
+// import Profile from '@/components/Profile.vue';
+import LoginContent from '@/components/LoginSignup2/FormContent/LoginContent.vue'
+
+import Profile1 from '@/components/Profile/Profile1.vue';
+import ProfileEdit from '@/components/Profile/ProfileEdit.vue';
+import ChangePassword from '@/components/Profile/ChangePassword.vue';
+
 
 
 
@@ -49,16 +55,27 @@ const routes = [
           component:StorageFolder,
         },
         {
-          path:'/profile',
-          component:Profile,
+          path : '/profile',
+          component : Profile1,
+          children : [
+            {
+              path : '',
+              component : ProfileEdit,
+            },
+            {
+              path: '/profile/changePassword',
+              component: ChangePassword,
+            }
+          ]
         }
+        
 
       ]
     },
 
-    // log in section routings
+    // Sign up section routings
     {
-      path : '/login',
+      path : '/signup',
       component : LoginComp2,
       children : [
         {
@@ -66,17 +83,36 @@ const routes = [
           component : SignupThird,
         },
         {
-          path : '/login2/personal',
+          path : '/signup/personal',
           component : SignupSecond,
         }
       ]
     },
+    // {
+    //   path : '/profile',
+    //   component : Profile1,
+    //   children : [
+    //     {
+    //       path : '',
+    //       component : ProfileEdit,
+    //     },
+    //     {
+    //       path: '/profile/changePassword',
+    //       component: ChangePassword,
+    //     }
+    //   ]
+    // },
     // mobile verify routings
     {
       path : '/mobile-verify',
       component : MobileVerify,
+    },
+    // sign in section routins
+    {
+      path : '/login',
+      component : LoginContent,
     }
-    
+
   ]
 
 

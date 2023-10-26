@@ -1,9 +1,9 @@
 <template>
-    <div class="flex flex-col">
+    <div class=" flex flex-col px-2">
         <!-- header  -->
-        <div>
-            <div class="flex flex-row items-center justify-between h-full bg-white shadow-lg px-2 py-2 rounded-lg">
-                <div class="lg:ml-[30px] my-2">
+        <div class="mx-2" >
+            <div class="flex flex-row items-center justify-between h-full bg-white shadow-lg py-2 rounded-lg">
+                <div class="my-2">
                     <!-- account setting with arrow -->
                     <div class="flex">
                         <div>

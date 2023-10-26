@@ -2,7 +2,7 @@
     <div class="relative lg:px-0 md:px-5 sm:px-4 min-[320px]:px-2">
         <!-- wallet section -->
 
-    <div :class="authBlur">
+    <div :class="authBlur" class="px-2">
         <div :class="authBlur" class="lg:w-[100%] md:w-[100%] sm:w-[100%] min-[320px]:w-[full]">
             <!-- head wallet div  -->
             <div class="flex items-center justify-between shadow-sm rounded-lg px-3 py-3 bg-white">
@@ -154,7 +154,7 @@
                 lg:w-[550px] md:w-[550px] sm:w-[550px] min-[320px]:w-[350px] rounded-lg">
                     <!-- bethel logo image -->
                     <div class="py-10">
-                        <img src="../img/icons/icon-upload.png" alt="" class="w-[150px]">
+                        <img src="../img/icons/icon-upload.png" alt="" class="w-[150px] opacity-25">
                     </div>
 
                     <!-- input fields -->
@@ -171,7 +171,7 @@
                 lg:w-[550px] md:w-[550px] sm:w-[550px] min-[320px]:w-[350px] rounded-lg">
                     <!-- bethel logo image -->
                     <div class="py-10">
-                        <img src="../img/icons/icon-upload-download.png" alt="" class="w-[150px]">
+                        <img src="../img/icons/icon-upload-download.png" alt="" class="w-[150px] opacity-25 ">
                     </div>
 
                     <!-- input fields -->
