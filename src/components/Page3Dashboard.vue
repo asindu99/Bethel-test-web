@@ -38,10 +38,10 @@
         </div>
 
         <!-- overview content flex -->
-        <div class="flex mt-4 justify-evenly w-full flex-wrap gap-3 ">
+        <div class="flex mt-4 justify-evenly w-full flex-wrap gap-10 ">
 
             <!-- buckets  -->
-            <div class="bg-white flex flex-col gap-2 p-4 border-2 w-[380px] h-[80px] items-start justify-center rounded-xl shadow-md 
+            <div class="bg-white flex flex-col gap-2 p-4 border-2 w-[340px] h-[80px] items-start justify-center rounded-xl shadow-md 
             hover:shadow-none hover:border-blue-100 hover:translate-y-[-10px] transition-all ease-in">
                 <!-- content inside -->
                 <div class="flex items-center gap-3">
@@ -66,7 +66,7 @@
             <!-- end of the bucket section -->
 
             <!-- Total strorage Section -->
-            <div class="bg-white flex flex-col gap-2 p-4 border-2 w-[380px] h-[80px] items-start justify-center rounded-xl shadow-md 
+            <div class="bg-white flex flex-col gap-2 p-4 border-2 w-[340px] h-[80px] items-start justify-center rounded-xl shadow-md 
             hover:shadow-none hover:border-blue-100 hover:translate-y-[-10px] transition-all ease-in">
                 <!-- content inside -->
                 <div class="flex items-center gap-3">
@@ -90,7 +90,7 @@
             </div>
 
             <!-- Bandwidth flex -->
-            <div class="bg-white flex flex-col gap-2 p-4 border-2 w-[380px] h-[80px] items-start justify-center rounded-xl shadow-md 
+            <div class="bg-white flex flex-col gap-2 p-4 border-2 w-[340px] h-[80px] items-start justify-center rounded-xl shadow-md 
             hover:shadow-none hover:border-blue-100 hover:translate-y-[-10px] transition-all ease-in">
                 <!-- content inside -->
                 <div class="flex items-center gap-3">
