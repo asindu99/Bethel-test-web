@@ -5,7 +5,7 @@
         </div>
     
         <!-- form - 1  -->
-        <div class="w-full bg-white rounded-lg p-14">
+        <div class="w-full bg-white rounded-lg p-8">
     
                         <div class="lg:mt-[-15px]">
     
@@ -15,7 +15,7 @@
                                 </div>
                             </div>
     
-                            <form action="" class="min-[320px]:ml-[-50px]">
+                            <form action="" class="min-[320px]:ml-[-50px] lg:mt-[-20px]">
     
                                 <div class="flex lg:flex-row min-[320px]:flex-col">
                                     <!-- first name -->

@@ -3,7 +3,7 @@
     <div>
     
         <!-- form - 2  -->
-        <div class="w-full bg-white rounded-lg p-14">
+        <div class="w-full bg-white rounded-lg p-8">
     
                         <div class="lg:mt-[-15px]">
     
@@ -17,7 +17,7 @@
                             </div>
     
     
-                            <form action="" class="min-[320px]:ml-[-50px]">
+                            <form action="" class="min-[320px]:ml-[-60px]">
     
                                 <div class="flex lg:flex-row min-[320px]:flex-col">
                                     <!-- Old password -->
@@ -37,10 +37,10 @@
                                     </div>
                                 </div>
     
-                                <div class="flex lg:flex-row min-[320px]:flex-col lg:mt-[-80px]">
+                                <div class="flex lg:flex-row min-[320px]:flex-col">
                                    
                                     <!-- new password  -->
-                                    <div class="lg:m-20 min-[320px]:mt-[-10px] min-[320px]:ml-20 min-[320px]:mb-10 lg:mt-[70px]">
+                                    <div class="lg:mx-20 lg:mt-20 lg:mb-8 min-[320px]:mt-[-10px] min-[320px]:ml-20 min-[320px]:mb-10 lg:mt-[-20px]">
                                         <label for="" class="font-['Montserrat'] text-[13px]">New Password</label><br>
                                         <div class="flex flex-row">
                                             <input type="text" placeholder="  New password" class="border-2 border-[#4e78c0] text-[D3D3D3] bg-light opacity-25 w-[250px] h-[40px] rounded-md">
