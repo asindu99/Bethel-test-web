@@ -4,7 +4,7 @@
     
         <!-- form - 2  -->
     
-            <div class="lg:mt-[-15px] pb-20">
+            <div class="lg:mt-[-15px] pb-[50px]">
     
                             <div class="flex flex-row ml-4 pt-8">
                                 <div>
@@ -17,13 +17,24 @@
     
     
                             <form action="" class="min-[320px]:ml-[-60px]">
+
+                                <div class="flex lg:flex-row min-[320px]:flex-col">
+                                   
+                                   <!-- new password  -->
+                                   <div class="lg:mx-20 lg:mb-[-5px] lg:mt-10 min-[320px]:mt-8 min-[320px]:ml-20 min-[320px]:mb-10">
+                                       <label for="" class="font-['Montserrat'] text-[13px]">Old Password</label><br>
+                                       <div class="flex flex-row">
+                                           <input type="password" placeholder="     Old password" class="border-2 border-[#4e78c0] text-[#293793] bg-light opacity-50 w-[580px] h-[40px] rounded-md">
+                                       </div>
+                                   </div>
+                               </div>
     
                                 <div class="flex lg:flex-row min-[320px]:flex-col">
                                     <!-- Old password -->
-                                    <div class="lg:m-10 lg:pl-10 min-[320px]:m-10 min-[320px]:pl-10">
-                                        <label for="" class="font-['Montserrat'] text-[13px]">Old Password</label><br>
+                                    <div class="lg:m-10 lg:pl-10 min-[320px]:m-10 min-[320px]:pl-10 min-[320px]:mt-[-10px]">
+                                        <label for="" class="font-['Montserrat'] text-[13px]">New Password</label><br>
                                         <div class="flex flex-row">
-                                            <input type="password" placeholder="  Old password" class="border-2 border-[#4e78c0] text-[#293793] bg-light opacity-50 w-[250px] h-[40px] rounded-md">
+                                            <input type="password" placeholder="  New password" class="border-2 border-[#4e78c0] text-[#293793] bg-light opacity-50 w-[250px] h-[40px] rounded-md">
                                         </div>
                                     </div>
     
@@ -32,17 +43,6 @@
                                         <label for="" class="font-['Montserrat'] text-[13px]">Confirm Password</label><br>
                                         <div class="flex flex-row">
                                             <input type="password" placeholder="  COnfirm password" class="border-2 border-[#4e78c0] text-[#293793] bg-light opacity-50 w-[250px] h-[40px] rounded-md">
-                                        </div>
-                                    </div>
-                                </div>
-    
-                                <div class="flex lg:flex-row min-[320px]:flex-col">
-                                   
-                                    <!-- new password  -->
-                                    <div class="lg:mx-20 lg:mb-8 min-[320px]:mt-[-10px] min-[320px]:ml-20 min-[320px]:mb-10">
-                                        <label for="" class="font-['Montserrat'] text-[13px]">New Password</label><br>
-                                        <div class="flex flex-row">
-                                            <input type="password" placeholder="  New password" class="border-2 border-[#4e78c0] text-[#293793] bg-light opacity-50 w-[250px] h-[40px] rounded-md">
                                         </div>
                                     </div>
                                 </div>
