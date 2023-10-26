@@ -2,7 +2,7 @@
     <div class="flex">
         <!-- main side bar  -->
         <div class=" bg-[#161937] text-[#7882c3] md:fixed bottom-0 md:flex z-[10]
-        lg:w-[220px] md:w-[150px] sm:hidden
+        lg:w-[250px] md:w-[150px] sm:hidden
         min-[320px]:hidden lg:fixed md:top-0 
          flex-col ">
 
@@ -181,8 +181,8 @@
 
 
             <!-- router view must be here -->
-            <div class="w-full h-full mx-2 lg:pl-[220px] md:pl-[150px] " :class="modalStore.onBlur"> 
-                <router-view class="animate__animated animate__fadeInLeft animate__faster"></router-view> 
+            <div class="w-full h-full mx-2 lg:pl-[240px] md:pl-[150px] " :class="modalStore.onBlur"> 
+                <router-view class=""></router-view> 
             </div>
             <!-- end of the router view here -->
 
