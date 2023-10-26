@@ -126,11 +126,11 @@
 
         
         <!-- data usage content flex -->
-        <div class="flex mt-4 justify-evenly w-full flex-wrap gap-2
+        <div class="flex mt-4 justify-evenly w-full flex-wrap gap-10 
         ">
             <!-- data usage flex -->
             <div class="bg-white flex flex-col gap-2 pl-3 pt-4 pb-2 border-2 
-            lg:w-[595px] md:w-[595px] sm:w-[595px] min-[320px]:w-[340px]
+            lg:w-[555px] md:w-[595px] sm:w-[595px] min-[320px]:w-[340px]
              justify-start items-start rounded-xl shadow-md">
                 <!-- icon and text-->
                 <div class="flex items-center">
@@ -162,7 +162,7 @@
 
             <!-- data usage flex -->
             <div class="bg-white flex flex-col gap-2 pl-3 pt-4 pb-2 border-2 
-            lg:w-[595px] md:w-[595px] sm:w-[595px] min-[320px]:w-[340px]
+            lg:w-[555px] md:w-[595px] sm:w-[595px] min-[320px]:w-[340px]
              justify-start items-start rounded-xl shadow-md">
                 <!-- icon and text-->
                 <div class="flex items-center">
