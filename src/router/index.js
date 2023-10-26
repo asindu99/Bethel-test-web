@@ -13,14 +13,13 @@ import StorageFolder from '@/components/StorageFolder.vue';
 import MobileVerify from "@/components/LoginSignup2/Mobile-verify/MobileVerify.vue"
 import SignupSecond from '@/components/LoginSignup2/FormContent/Signup-second.vue';
 import SignupThird from '@/components/LoginSignup2/FormContent/Signup-third.vue';
-<<<<<<< Updated upstream
 import Profile from '@/components/Profile.vue';
 import LoginContent from '@/components/LoginSignup2/FormContent/LoginContent.vue'
-=======
-// import Profile1 from '@/components/Profile/Profile1.vue';
-// import ProfileEdit from '@/components/Profile/ProfileEdit.vue';
-// import ChangePassword from '@/components/Profile/ChangePassword.vue';
->>>>>>> Stashed changes
+
+import Profile1 from '@/components/Profile/Profile1.vue';
+import ProfileEdit from '@/components/Profile/ProfileEdit.vue';
+import ChangePassword from '@/components/Profile/ChangePassword.vue';
+
 
 
 
@@ -55,6 +54,21 @@ const routes = [
           path:'/bucketFolder',
           component:StorageFolder,
         },
+        {
+          path : '/profile',
+          component : Profile1,
+          children : [
+            {
+              path : '',
+              component : ProfileEdit,
+            },
+            {
+              path: '/profile/changePassword',
+              component: ChangePassword,
+            }
+          ]
+        }
+        
 
       ]
     },
