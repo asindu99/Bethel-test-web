@@ -1,34 +1,7 @@
 <template>
     <div :class="paddingClass" class="lg:w-full md:w-full md:mx-auto min-[320px]:w-[100%] min-[320px]:px-[10px]">
 
-        <!-- head wallet div  -->
-        <div class="flex items-center justify-between shadow-sm rounded-lg px-3 py-3 bg-white">
-                <!-- left side text -->
-                 <div>
-                    <!-- storage with arrow -->
-                    <div class="flex">
-                        <div>
-                            <h3>Dashboard </h3>
-                        </div>
-
-                        <!-- right arrow -->
-                        <div class="ml-2">
-                            <span class="material-symbols-outlined">
-                                chevron_right
-                            </span>
-                        </div>
-                        
-                    </div>
-                    <!-- end of the storage with arrrow -->
-
-                    <!-- Main Bucket -->
-                    <div>
-                        <h1 class="font-bold text-[30px]">Dashboard </h1>
-                    </div>
-                    <!-- end of the bucket main -->
-                </div>
-            </div>
-        <!-- end of the head key name -->
+        
 
 
         <!-- 1st caption section -->
@@ -116,6 +89,8 @@
         </div>
         <!-- end of the overview content -->
 
+
+
         <!-- 2nd caption section -->
         <div class="relative mt-4">
             <div class="w-[2px] h-[20px] bg-[#293793] absolute top-[5px] "></div>
@@ -128,7 +103,7 @@
         <!-- data usage content flex -->
         <div class="flex mt-4 justify-evenly w-full flex-wrap gap-10 
         ">
-            <!-- data usage flex -->
+            <!-- data usage flex 1-->
             <div class="bg-white flex flex-col gap-2 pl-3 pt-4 pb-2 border-2 
             lg:w-[555px] md:w-[595px] sm:w-[595px] min-[320px]:w-[340px]
              justify-start items-start rounded-xl shadow-md">
@@ -153,14 +128,14 @@
                 <!-- storage chart -->
                 <div class="mt-2 w-[550px]
                 lg:w-[550px] md:w-[550px] sm:w-[550px] min-[320px]:w-[320px] 
-                lg:h-[250px] md:h-[300px] sm:h-[300px] min-[320px]:h-[200px] ">
-                    <canvas id="myChart2" class="w-[650px] ml-3"></canvas>
+                lg:h-[180px] md:h-[300px] sm:h-[300px] min-[320px]:h-[200px] ">
+                    <canvas id="myChart2" class="lg:w-[650px] md:w-[650px] sm:w-[650px] min-[320px]:w-[200px] ml-3"></canvas>
                 </div>
 
             </div>
             <!-- end of the data usage flex -->
 
-            <!-- data usage flex -->
+            <!-- data usage flex 2 -->
             <div class="bg-white flex flex-col gap-2 pl-3 pt-4 pb-2 border-2 
             lg:w-[555px] md:w-[595px] sm:w-[595px] min-[320px]:w-[340px]
              justify-start items-start rounded-xl shadow-md">
@@ -185,7 +160,7 @@
                 <!-- storage chart -->
                 <div class="mt-2 w-[550px]
                 lg:w-[550px] md:w-[550px] sm:w-[550px] min-[320px]:w-[320px] 
-                lg:h-[250px] md:h-[300px] sm:h-[300px] min-[320px]:h-[200px] ">
+                lg:h-[180px] md:h-[300px] sm:h-[300px] min-[320px]:h-[200px] ">
                     <canvas id="myChart" class="
                     lg:w-[650px] md:w-[650px] sm:w-[650px] min-[320px]:w-[200px] ml-3"></canvas>
                 </div>
@@ -203,23 +178,23 @@
         </div>
 
         <!-- log activies table -->
-        <div class=" w-[95%] mx-auto mt-4 bg-white rounded-lg px-2 shadow-md mb-10">
+        <div class=" w-[94%] mx-auto mt-4 bg-white rounded-lg px-2 shadow-md mb-10">
             <!-- start of the table -->
             <table class="table-auto border-separate py-2 w-full rounded-lg">
                 <thead class="">
                     <tr class="">
-                    <th class="text-[14px] border p-3 bg-blue-50">User's Name</th>
-                    <th class="text-[14px] border p-3 bg-blue-50">Ip Address</th>
-                    <th class="text-[14px] border p-3 bg-blue-50">Log Status</th>
-                    <th class="text-[14px] border p-3 bg-blue-50">Date and time</th>
+                    <th class="lg:text-[14px] md:text-[14px] sm:text-[14px] min-[320px]:text-[10px] border p-3 bg-blue-50">User's Name</th>
+                    <th class="lg:text-[14px] md:text-[14px] sm:text-[14px] min-[320px]:text-[10px] border p-3 bg-blue-50">Ip Address</th>
+                    <th class="lg:text-[14px] md:text-[14px] sm:text-[14px] min-[320px]:text-[10px] border p-3 bg-blue-50">Log Status</th>
+                    <th class="lg:text-[14px] md:text-[14px] sm:text-[14px] min-[320px]:text-[10px] border p-3 bg-blue-50">Date and time</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                    <td class="text-[12px] text-center bg-white border p-3">User Name </td>
-                    <td class="text-[12px] text-center bg-white border p-3">Ipv4 / Ipv6</td>
-                    <td class="text-[12px] text-center bg-white border p-3">Loged In</td>
-                    <td class="text-[12px] text-center bg-white border p-3">2023-10-14 14:00</td>
+                    <td class="lg:text-[14px] md:text-[14px] sm:text-[14px] min-[320px]:text-[10px] text-center bg-white border p-3">User Name </td>
+                    <td class="lg:text-[14px] md:text-[14px] sm:text-[14px] min-[320px]:text-[10px] text-center bg-white border p-3">Ipv4 / Ipv6</td>
+                    <td class="lg:text-[14px] md:text-[14px] sm:text-[14px] min-[320px]:text-[10px] text-center bg-white border p-3">Loged In</td>
+                    <td class="lg:text-[14px] md:text-[14px] sm:text-[14px] min-[320px]:text-[10px] text-center bg-white border p-3">2023-10-14 14:00</td>
                     </tr>
                 </tbody>
             </table>
@@ -247,11 +222,11 @@ export default {
         const myChart = new Chart(ctx, {
         type: 'line',
     data: {
-      labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange','black'],
+      labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun','Jul','Aug', 'Sep','Oct','Nov','Dec'],
       datasets: [{
         label: '# of Votes',
-        data: [12, 19, 3, 5, 2, 3,4],
-        borderWidth: 1
+        data: [12, 19, 3, 5, 2, 3,4,4,6,7,8,20],
+        borderWidth: 2
       }]
     },
     // options: {
@@ -266,11 +241,11 @@ export default {
     const myChart2 = new Chart(ctx1, {
         type: 'line',
     data: {
-      labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange','black'],
+      labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun','Jul','Aug', 'Sep','Oct','Nov','Dec'],
       datasets: [{
         label: '# of Votes',
-        data: [12, 19, 3, 5, 2, 3,4],
-        borderWidth: 1
+        data: [12, 19, 3, 5, 2, 3,4,4,6,7,8,20],
+        borderWidth: 2
       }]
     },
     // options: {

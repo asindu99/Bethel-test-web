@@ -14,6 +14,7 @@ import MobileVerify from "@/components/LoginSignup2/Mobile-verify/MobileVerify.v
 import SignupSecond from '@/components/LoginSignup2/FormContent/Signup-second.vue';
 import SignupThird from '@/components/LoginSignup2/FormContent/Signup-third.vue';
 import Profile from '@/components/Profile.vue';
+import LoginContent from '@/components/LoginSignup2/FormContent/LoginContent.vue'
 
 
 
@@ -56,9 +57,9 @@ const routes = [
       ]
     },
 
-    // log in section routings
+    // Sign up section routings
     {
-      path : '/login',
+      path : '/signup',
       component : LoginComp2,
       children : [
         {
@@ -66,7 +67,7 @@ const routes = [
           component : SignupThird,
         },
         {
-          path : '/login2/personal',
+          path : '/signup/personal',
           component : SignupSecond,
         }
       ]
@@ -75,8 +76,13 @@ const routes = [
     {
       path : '/mobile-verify',
       component : MobileVerify,
+    },
+    // sign in section routins
+    {
+      path : '/login',
+      component : LoginContent,
     }
-    
+
   ]
 
 
