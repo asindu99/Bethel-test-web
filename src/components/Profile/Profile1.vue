@@ -59,8 +59,12 @@
 
                     <!-- right-side  -->
                     <div class="flex relative h-[100%] md:px-20">
+
+                        <div class="w-full bg-white rounded-lg py-10 px-28 shadow-lg">
                         
-                        <Router-view></Router-view>
+                            <Router-view></Router-view>
+
+                        </div>
 
                     </div>
                     <!-- end of right side  -->
