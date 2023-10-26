@@ -25,7 +25,7 @@
         
 
         <!-- 1st caption section -->
-        <div class="relative mt-2">
+        <div class="relative mt-4">
             <div class="w-[2px] h-[20px] bg-[#293793] absolute top-[5px] "></div>
             <h3 class="ml-2 text-[20px]">OverView</h3> 
         </div>
@@ -172,10 +172,57 @@
                 
 
                 <!-- storage chart -->
-                <div class="mt-2 flex items-center justify-center
+                <div class=" flex items-center justify-evenly mt-2
                 lg:w-full md:w-full sm:w-[550px] min-[320px]:w-[320px] 
                 lg:h-[250px] md:h-[300px] sm:h-[300px] min-[320px]:h-[200px] ">
+
+                    <!-- storage status extend -->
+                    <div class="lg:flex md:flex sm:flex min-[320px]:hidden flex-col gap-4">
+                        
+                        <!-- total file -->
+                        <div class="flex flex-col items-center">
+                            <div>
+                                <img src="../img/icons/icon-play.png" alt="" class="w-[40px]">
+                            </div>
+
+                            <div class="flex items-center mt-[2px]">
+                                <h3 class="text-[16px]">Total Files :</h3>
+                                <h3 class="text-[#8d8d8d] text-[14px] ml-1">13 files</h3>
+                            </div>
+                        </div>
+
+                        <!-- total file -->
+                        <div class="flex flex-col items-center">
+                            <div>
+                                <img src="../img/icons/icon-play.png" alt="" class="w-[40px]">
+                            </div>
+
+                            <div class="flex items-center mt-[2px]">
+                                <h3 class="text-[16px]">Total Files :</h3>
+                                <h3 class="text-[#8d8d8d] text-[14px] ml-1">13 files</h3>
+                            </div>
+                        </div>
+
+                        <!-- total file -->
+                        <div class="flex flex-col items-center">
+                            <div>
+                                <img src="../img/icons/icon-play.png" alt="" class="w-[40px]">
+                            </div>
+
+                            <div class="flex items-center mt-[2px]">
+                                <h3 class="text-[16px]">Total Files :</h3>
+                                <h3 class="text-[#8d8d8d] text-[14px] ml-1">13 files</h3>
+                            </div>
+                        </div>
+
+  
+
+                    </div>
+                    <!-- end of the storage status extend -->
+
+                    <!-- chart view -->
                     <canvas id="myChart" class="lg:w-full md:w-full sm:w-[650px] min-[320px]:w-[200px] ml-3"></canvas>
+
                 </div>
 
             </div>
