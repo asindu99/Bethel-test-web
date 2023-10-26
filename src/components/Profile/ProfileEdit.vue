@@ -16,9 +16,9 @@
                                 </div>
                             </div>
 
-                            <div class="flex absolute items-center justify-center lg:left-[480px] min-[320px]:left-40">
+                            <!-- <div class="flex absolute items-center justify-center lg:left-[480px] md:left-[300px] min-[320px]:left-40">
                                 <img src="../../img/images/profile-admin.png" alt="" class="w-[70px] h-[70px]">
-                            </div>
+                            </div> -->
     
                             <form action="" class="min-[320px]:ml-[-50px] mt-10">
     
@@ -44,8 +44,8 @@
                                     <!-- select country -->
                                     <div class="lg:m-10 lg:pl-10 min-[320px]:m-10 min-[320px]:pl-10">
                                         <label for="" class="font-['Montserrat'] text-[13px]">Select country</label><br>
-                                        <select v-model="selected" id="" class="border-2 w-[250px] h-[40px] rounded-md font-['Montserrat'] text-[13px] opacity-50 border-2 border-[#4e78c0] bg-white">
-                                            <option v-for="country in countryList" :value="country" class="w-[200px] text-[#293793]" value="    Country">
+                                        <select v-model="selected" id="" class="border-2 lg:w-[250px] lg:h-[40px] md:w-[230px] md:h-[40px] min-[320px]:w-[230px] min-[320px]:h-[40px] rounded-md font-['Montserrat'] text-[13px] opacity-50 border-2 border-[#4e78c0] bg-white">
+                                            <option v-for="country in countryList" :value="country" class="text-[#293793]" value="    Country">
                                                 {{ country.Name }}</option>
                                         </select>
 
@@ -54,8 +54,8 @@
                                     <!-- country code  -->
                                     <div class="lg:m-10 min-[320px]:mt-[-10px] min-[320px]:ml-20 min-[320px]:mb-10">
                                         <label for="" class="font-['Montserrat'] text-[13px]">Country Code</label><br>
-                                        <select id="" class="border-2 w-[250px] h-[40px] rounded-md font-['Montserrat'] text-[13px] opacity-50 border-2 border-[#4e78c0] bg-white ">
-                                            <option class="w-[200px] text-[#293793]" value="    Country code">
+                                        <select id="" class="border-2 lg:w-[250px] lg:h-[40px] min-[320px]:w-[230px] min-[320px]:h-[40px] rounded-md font-['Montserrat'] text-[13px] opacity-50 border-2 border-[#4e78c0] bg-white ">
+                                            <option class="text-[#293793]" value="    Country code">
                                                 {{ selected.MobileCode }}</option>
                                         </select>
                                     </div>

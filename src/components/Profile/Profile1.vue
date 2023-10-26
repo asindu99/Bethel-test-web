@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-col">
+    <div class="flex flex-col lg:pl-[5px]">
         <!-- header  -->
         <div>
             <div class="flex flex-row items-center justify-between h-full bg-white shadow-lg px-2 py-2 rounded-lg">
@@ -58,9 +58,10 @@
                 <!-- <div class="bg-blue-100 pt-20 px-2 pb-2 rounded-lg shadow-lg min-[320px]:mt-10 lg:mt-0"> -->
 
                     <!-- right-side  -->
-                    <div class="flex relative h-[100%] md:px-20">
+                    <div class="flex h-[100%] md:px-20">
 
-                        <div class="w-full bg-white rounded-lg py-10 px-28 shadow-lg">
+                        <div class="flex items-center justify-center w-full bg-white rounded-lg shadow-lg lg:px-40 md:px-10 sm:px-10 min-[320px]:px-10
+                        lg:py-14 md:py-10 sm:py-10 min-[320px]:py-10">
                         
                             <Router-view></Router-view>
 
