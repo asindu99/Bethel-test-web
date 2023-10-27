@@ -2,7 +2,7 @@
     <div>
         <!-- form - 1  -->
         
-            <div class="">
+            <div class="px-8">
         
                 <div class="flex lg:justify-start md:justify-center sm:justify-center min-[320px]:justify-center">
                                     <div>
