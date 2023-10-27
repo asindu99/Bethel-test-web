@@ -108,36 +108,36 @@
 
                 <!-- end of menu text -->
 
-                <!-- menu item -->
-                <router-link to="/profile">
-                    <div class=" min-[320px]:flex sm:flex lg:flex md:flex w-full px-3  my-2 py-2  transition-all ease-linear">
-                        <span class=" material-symbols-outlined top-2 right-[20px] mr-2
-                        ">
-                            person_pin
-                        </span>  
-                        <h3>Profile </h3>
-                    
-                    </div>
+            <!-- menu item -->
+            <router-link to="/profile">
+                <div class=" min-[320px]:flex sm:flex lg:flex md:flex w-full px-3  my-2 py-2  transition-all ease-linear">
+                    <span class=" material-symbols-outlined top-2 right-[20px] mr-2
+                    ">
+                        person_pin
+                    </span>  
+                    <h3>Profile </h3>
+                
+                </div>
 
-                    <!-- small size -->
-                    
-                </router-link>
-                <!-- end of the menu item -->
+                <!-- small size -->
+                
+            </router-link>
+            <!-- end of the menu item -->
 
-                <!-- menu item -->
-                <router-link to="/billing">
-                    <div class=" min-[320px]:flex sm:flex lg:flex md:flex w-full px-3  my-2 py-2  transition-all ease-linear">
-                        <span class=" material-symbols-outlined top-2 right-[20px]  mr-2
-                        ">
-                            attach_money
-                        </span>  
-                        <h3>Billing </h3>
-                    
-                    </div>
+            <!-- menu item -->
+            <router-link to="/billing">
+                <div class=" min-[320px]:flex sm:flex lg:flex md:flex w-full px-3  my-2 py-2  transition-all ease-linear">
+                    <span class=" material-symbols-outlined top-2 right-[20px]  mr-2
+                    ">
+                        attach_money
+                    </span>  
+                    <h3>Billing </h3>
+                
+                </div>
 
-                    
-                </router-link>
-                <!-- end of the menu item -->
+                
+            </router-link>
+            <!-- end of the menu item -->
 
                 <!-- menu item -->
                 <a href="https://docs.bethel.network/" class="active" target="_blank">

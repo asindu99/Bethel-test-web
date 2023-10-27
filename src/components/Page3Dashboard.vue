@@ -173,30 +173,30 @@
 
                 <!-- storage chart -->
                 <div class=" flex items-center justify-evenly mt-2
-                lg:w-full md:w-full sm:w-[550px] min-[320px]:w-[320px] 
+                lg:w-full md:w-full sm:w-[550px] min-[320px]:w-full 
                 lg:h-[250px] md:h-[300px] sm:h-[300px] min-[320px]:h-[200px] ">
 
                     <!-- chart view -->
-                    <canvas id="myChart" class="lg:w-full md:w-full sm:w-[650px] min-[320px]:w-[200px] ml-3"></canvas>
+                    <canvas id="myChart" class="lg:w-full md:w-full sm:w-full min-[320px]:[400px]"></canvas>
 
                     <!-- storage status extend -->
-                    <div class="lg:flex md:flex sm:flex min-[320px]:hidden flex-col gap-4">
+                    <div class="lg:flex md:flex sm:flex min-[320px]:hidden flex-col gap-8 items-start justify-start mr-20">
                         
                         <!-- total file -->
-                        <div class="flex flex-col items-start">
-                            <div>
+                        <div class="flex items-start">
+                            <div class="mr-2">
                                 <img src="../img/icons/icon-play.png" alt="" class="w-[25px]">
                             </div>
 
                             <div class="flex items-center mt-[2px]">
-                                <h3 class="text-[16px]">Total Files :</h3>
+                                <h3 class="text-[16px]">Files :</h3>
                                 <h3 class="text-[#8d8d8d] text-[14px] ml-1">13 files</h3>
                             </div>
                         </div>
 
                         <!-- total file -->
-                        <div class="flex flex-col items-start">
-                            <div>
+                        <div class="flex items-start">
+                            <div class="mr-2">
                                 <img src="../img/icons/icon-play.png" alt="" class="w-[25px]">
                             </div>
 
@@ -207,13 +207,25 @@
                         </div>
 
                         <!-- total file -->
-                        <div class="flex flex-col items-start">
-                            <div>
+                        <div class="flex items-start">
+                            <div class="mr-2">
                                 <img src="../img/icons/icon-play.png" alt="" class="w-[25px]">
                             </div>
 
                             <div class="flex items-center mt-[2px]">
                                 <h3 class="text-[16px]">Videos :</h3>
+                                <h3 class="text-[#8d8d8d] text-[14px] ml-1">13 files</h3>
+                            </div>
+                        </div>
+
+                        <!-- total file -->
+                        <div class="flex items-start">
+                            <div class="mr-2">
+                                <img src="../img/icons/icon-play.png" alt="" class="w-[25px]">
+                            </div>
+
+                            <div class="flex items-center mt-[2px]">
+                                <h3 class="text-[16px]">Others :</h3>
                                 <h3 class="text-[#8d8d8d] text-[14px] ml-1">13 files</h3>
                             </div>
                         </div>
@@ -335,7 +347,7 @@ export default {
         },
         title: {
             display: true,
-            text: 'Chart.js Doughnut Chart'
+            text: 'Storage'
         }
         }
     }
