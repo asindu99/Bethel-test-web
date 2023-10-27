@@ -131,7 +131,7 @@
         min-[320px]:fixed min-[320px]:top-0 min-[320px]:bottom-0 min-[320px]:z-[10] min-[320px]:w-[200px]
          lg:hidden md:hidden flex-col shadow-md pt-4">
             <!-- top menu section -->
-            <div class="flex py-2 flex-col px-[10px] bg-[#1d2455]"> 
+            <div class="flex py-2 flex-col px-[10px] bg-[#1d2455] hidden"> 
                 <!-- menu text -->
                 <div class="">
                     <div class="relative lg:flex md:flex min-[320px]:flex sm:flex placeholder:">
@@ -158,10 +158,10 @@
             <!-- middle section  -->
             <div class="flex flex-col text-[#7882c3]">
                 <!-- menu item -->
-                <button @click="closeSide">
-                    <RouterLink to="/" class="">
+                
+                    <RouterLink to="/" class=""><button @click="closeSide">
                     <div class="lg:flex md:flex sm:flex min-[320px]:flex
-                     w-full px-3  my-2 py-2 hover:text-[white] transition-all ease-linear">
+                     w-full px-3  my-2 py-2 transition-all ease-linear">
                         <span class=" material-symbols-outlined top-2 right-[20px] mr-2
                         ">
                             grid_view
@@ -169,16 +169,17 @@
                         <h3>Dashboard</h3>
                     
                     </div>
-
+                    </button>
                 </RouterLink>
-                </button>
+               
                 <!-- end of the menu item -->
 
                 <!-- menu item -->
+                <router-link to="/storage" class="">
                 <button @click="closeSide">
-                    <router-link to="/storage" class="">
+                    
                     <div class="lg:flex md:flex sm:flex min-[320px]:flex 
-                    w-full px-3 hover:bg-[#293793] my-2 py-2 hover:text-[white] transition-all ease-linear">
+                    w-full px-3  my-2 py-2  transition-all ease-linear">
                         <span class=" material-symbols-outlined top-2 right-[20px] mr-2
                         ">
                             hard_drive
@@ -187,15 +188,15 @@
                     
                     </div>
 
-                    
+                    </button>
                     </router-link>
-                </button>
+                
                 
                 <!-- end of the menu item -->
 
                 <!-- menu item -->
-                <button @click="closeSide">
-                    <router-link to="/wallet">
+                
+                    <router-link to="/wallet"><button @click="closeSide">
                     <div class="lg:flex md:flex sm:flex min-[320px]:flex
                      w-full px-3 my-2 py-2 transition-all ease-linear">
                         <span class=" material-symbols-outlined top-2 right-[20px] mr-2
@@ -207,15 +208,15 @@
                     </div>
 
                     <!-- samll size -->
-                    
+                    </button>
                     </router-link>
-                </button>
+                
                 
                 <!-- end of the menu item -->
 
                 <!-- menu item -->
-                <button @click="closeSide">
-                    <router-link to="/accesskey">
+                
+                    <router-link to="/accesskey"><button @click="closeSide">
                         <div class=" min-[320px]:flex lg:flex sm:flex md:flex w-full px-3 my-2 py-2 transition-all ease-linear">
                             <span class=" material-symbols-outlined top-2 right-[20px] mr-2 
                             ">
@@ -226,9 +227,9 @@
                         </div>
 
                         <!-- small size -->
-                        
+                        </button>
                     </router-link>
-                </button>
+                
                 
                 <!-- end of the menu item -->
             </div>
@@ -236,9 +237,9 @@
 
 
             <!-- account section -->
-            <div class="flex flex-col mt-3 text-[#7882c3]"> 
+            <div class="flex flex-col text-[#7882c3]"> 
                 <!-- menu text -->
-                <div class=" lg:flex md:flex px-[10px] py-2 bg-[#1d2455]">
+                <div class=" lg:flex md:flex px-[10px] py-2 bg-[#1d2455] hidden">
                     <div class=" relative lg:flex md:flex min-[320px]:flex sm:flex placeholder:">
                         <div class="absolute h-[15px] w-[3px] bg-[#E9983C] top-1"></div>
                         <h3 class="text-[#c4c9ea] ml-2">Account</h3>
@@ -255,7 +256,7 @@
 
                 <!-- menu item -->
                 <router-link to="/profile" class=" mt-3" @click="closeSide">
-                    <div class=" min-[320px]:flex sm:flex lg:flex md:flex w-full px-3 hover:bg-[#293793] my-2 py-2 hover:text-[white] transition-all ease-linear">
+                    <div class=" min-[320px]:flex sm:flex lg:flex md:flex w-full px-3  my-2 py-2  transition-all ease-linear">
                         <span class=" material-symbols-outlined top-2 right-[20px] mr-2
                         ">
                             person_pin
@@ -272,7 +273,7 @@
                 <!-- menu item -->
                 <button @click="closeSide">
                 <router-link to="/billing" class="">
-                    <div class=" min-[320px]:flex sm:flex lg:flex md:flex w-full px-3 hover:bg-[#293793] my-2 py-2 hover:text-[white] transition-all ease-linear">
+                    <div class=" min-[320px]:flex sm:flex lg:flex md:flex w-full px-3  my-2 py-2  transition-all ease-linear">
                         <span class=" material-symbols-outlined top-2 right-[20px] mr-2
                         ">
                             attach_money
@@ -288,7 +289,7 @@
 
                 <!-- menu item -->
                 <a href="https://docs.bethel.network/" class="active" target="_blank">
-                    <div class=" min-[320px]:flex sm:flex lg:flex md:flex w-full px-3 hover:bg-[#293793] my-2 py-2 hover:text-[white] transition-all ease-linear">
+                    <div class=" min-[320px]:flex sm:flex lg:flex md:flex w-full px-3  my-2 py-2  transition-all ease-linear">
                         <span class=" material-symbols-outlined top-2 right-[20px] mr-2
                         ">
                             support
@@ -304,7 +305,7 @@
                 <!-- end of the menu item -->
                 <!-- menu item -->
                 <router-link to="/login" class=" w-full">
-                    <div class=" min-[320px]:flex sm:flex lg:flex md:flex w-full px-3 hover:bg-[#293793] my-2 py-2 hover:text-[white] transition-all ease-linear">
+                    <div class="absolute bottom-3 min-[320px]:flex sm:flex lg:flex md:flex w-full px-3  my-2 py-2  transition-all ease-linear">
                         <span class=" material-symbols-outlined top-2 right-[20px] mr-2
                         ">
                             logout
