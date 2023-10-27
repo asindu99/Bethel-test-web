@@ -71,23 +71,23 @@
             </div>
             
 
-            <!-- table -->
+            <!-- wallet table -->
             <div class=" w-[100%] mx-auto mt-4 bg-white rounded-lg px-2 shadow-sm ">
                 <!-- start of the table -->
                 <table class="table-auto border-separate py-2 w-full rounded-lg">
                     <thead class="">
                         <tr class="">
-                        <th class="text-[14px] border p-3 bg-blue-50">WALLET ADDRESS</th>
-                        <th class="text-[14px] border p-3 bg-blue-50">SEEDS</th>
-                        <th class="text-[14px] border p-3 bg-blue-50">ACTIVE SEEDS</th>
-                        <th class="text-[14px] border p-3 bg-blue-50">MORE</th>
+                        <th class="text-[14px] min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] border p-3 bg-blue-50">WALLET ADDRESS</th>
+                        <th class="text-[14px] min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] border p-3 bg-blue-50">SEEDS</th>
+                        <th class="text-[14px] min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] border p-3 bg-blue-50">ACTIVE SEEDS</th>
+                        <th class="text-[14px] min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] border p-3 bg-blue-50">MORE</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr v-for="wallet in walletTableArr" :key="wallet.Waddress">
-                        <td class="text-[12px] text-center bg-white border p-3"> {{wallet.publicKeys}}</td>
-                        <td class="text-[12px] text-center bg-white border p-3">{{wallet.walletAddress}}</td>
-                        <td class="text-[12px] text-center bg-white border p-3">{{ wallet.Active }}</td>
+                        <td class="text-[14px] min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] text-center bg-white border p-3"> {{wallet.publicKeys}}</td>
+                        <td class="text-[14px] min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] text-center bg-white border p-3">{{wallet.walletAddress}}</td>
+                        <td class="text-[14px] min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] text-center bg-white border p-3">{{ wallet.Active }}</td>
                         
                         <!-- toogle button table data -->
                         <!-- <td class="text-[12px] text-center bg-white border p-3">
@@ -96,7 +96,6 @@
                                 
                                     <input type="checkbox" value="" class="sr-only peer">
                                     <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white  after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-orange-600"></div>
-                                
                             </button>
 
                         </td> -->

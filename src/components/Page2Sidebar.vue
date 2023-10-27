@@ -2,7 +2,7 @@
     <div class="flex">
         <!-- main side bar  -->
         <div class=" bg-[#161937] text-[#7882c3] md:fixed bottom-0 md:flex z-[10]
-        lg:w-[250px] md:w-[150px] sm:hidden gap-2
+        lg:w-[250px] md:w-[180px] sm:hidden gap-2
         min-[320px]:hidden lg:fixed md:top-0 
          flex-col">
 
@@ -108,36 +108,36 @@
 
                 <!-- end of menu text -->
 
-                <!-- menu item -->
-                <router-link to="/profile">
-                    <div class=" min-[320px]:flex sm:flex lg:flex md:flex w-full px-3  my-2 py-2  transition-all ease-linear">
-                        <span class=" material-symbols-outlined top-2 right-[20px] mr-2
-                        ">
-                            person_pin
-                        </span>  
-                        <h3>Profile </h3>
-                    
-                    </div>
+            <!-- menu item -->
+            <router-link to="/profile">
+                <div class=" min-[320px]:flex sm:flex lg:flex md:flex w-full px-3  my-2 py-2  transition-all ease-linear">
+                    <span class=" material-symbols-outlined top-2 right-[20px] mr-2
+                    ">
+                        person_pin
+                    </span>  
+                    <h3>Profile </h3>
+                
+                </div>
 
-                    <!-- small size -->
-                    
-                </router-link>
-                <!-- end of the menu item -->
+                <!-- small size -->
+                
+            </router-link>
+            <!-- end of the menu item -->
 
-                <!-- menu item -->
-                <router-link to="/billing">
-                    <div class=" min-[320px]:flex sm:flex lg:flex md:flex w-full px-3  my-2 py-2  transition-all ease-linear">
-                        <span class=" material-symbols-outlined top-2 right-[20px]  mr-2
-                        ">
-                            attach_money
-                        </span>  
-                        <h3>Billing </h3>
-                    
-                    </div>
+            <!-- menu item -->
+            <router-link to="/billing">
+                <div class=" min-[320px]:flex sm:flex lg:flex md:flex w-full px-3  my-2 py-2  transition-all ease-linear">
+                    <span class=" material-symbols-outlined top-2 right-[20px]  mr-2
+                    ">
+                        attach_money
+                    </span>  
+                    <h3>Billing </h3>
+                
+                </div>
 
-                    
-                </router-link>
-                <!-- end of the menu item -->
+                
+            </router-link>
+            <!-- end of the menu item -->
 
                 <!-- menu item -->
                 <a href="https://docs.bethel.network/" class="active" target="_blank">
@@ -183,7 +183,7 @@
 
 
             <!-- router view must be here -->
-            <div @click="asideHide"  class="w-full h-full mx-2 lg:pl-[240px] md:pl-[150px] " :class="modalStore.onBlur"> 
+            <div @click="asideHide"  class="w-full h-full mx-2 lg:pl-[240px] md:pl-[180px] " :class="modalStore.onBlur"> 
                 <router-view class=""></router-view> 
             </div>
             <!-- end of the router view here -->

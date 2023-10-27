@@ -1,129 +1,128 @@
 <template>
     <div class="relative lg:px-2 md:px-5 sm:px-4 min-[320px]:px-2">
-    <!-- bucket section -->
+    
+        <!-- bucket section -->
+        <div :class="authBlur">
+            <div :class="authBlur" class="lg:w-[100%] md:w-[100%] sm:w-[100%] min-[320px]:w-[full]">
+                <!-- head storage div  -->
+                <div class="flex items-center justify-between shadow-sm rounded-lg px-3 py-3 bg-white">
+                    <!-- left side text -->
+                    <div>
+                        <!-- storage with arrow -->
+                        <div class="flex">
+                            <div>
+                                <h3>Storage</h3>
+                            </div>
 
-    <div :class="authBlur">
-        <div :class="authBlur" class="lg:w-[100%] md:w-[100%] sm:w-[100%] min-[320px]:w-[full]">
-            <!-- head storage div  -->
-            <div class="flex items-center justify-between shadow-sm rounded-lg px-3 py-3 bg-white">
-                <!-- left side text -->
-                 <div>
-                    <!-- storage with arrow -->
+                            <!-- right arrow -->
+                            <div class="ml-2">
+                                <span class="material-symbols-outlined">
+                                    chevron_right
+                                </span>
+                            </div>
+                            
+                        </div>
+                        <!-- end of the storage with arrrow -->
+
+                        <!-- Main Bucket -->
+                        <div>
+                            <h1 class="font-bold text-[30px]">Storage</h1>
+                        </div>
+                        <!-- end of the bucket main -->
+
+                        <!-- bucket with images -->
+                        <div class="flex items-center mt-2">
+                            <!-- image -->
+                            <div class="flex">
+                                <span class=" material-symbols-outlined text-[blue] mr-2
+                                ">
+                                    glass_cup
+                                </span> 
+                            </div>
+                            <!-- text -->
+                            <div class="flex gap-1">
+                                <div>{{ bucketCount }}</div>
+                                <h3>Buckets</h3>
+                            </div>
+                        </div>
+                        <!-- end of the bucket with images -->
+                    </div>
+
+                    <!-- right side button -->
                     <div class="flex">
                         <div>
-                            <h3>Storage</h3>
-                        </div>
-
-                        <!-- right arrow -->
-                        <div class="ml-2">
-                            <span class="material-symbols-outlined">
-                                chevron_right
-                            </span>
+                            <button @click="openAuthModal" class="border-[2px] px-2 py-2 rounded-xl bg-[#E9983C] w-[150px] text-[white] 
+                            font-medium hover:text-[#E9983C] hover:bg-[white] transition-all ease-linear hover:border-[#E9983C]">Create Bucket</button>
                         </div>
                         
                     </div>
-                    <!-- end of the storage with arrrow -->
-
-                    <!-- Main Bucket -->
-                    <div>
-                        <h1 class="font-bold text-[30px]">Storage</h1>
-                    </div>
-                    <!-- end of the bucket main -->
-
-                    <!-- bucket with images -->
-                    <div class="flex items-center mt-2">
-                        <!-- image -->
-                        <div class="flex">
-                            <span class=" material-symbols-outlined text-[blue] mr-2
-                            ">
-                                glass_cup
-                            </span> 
-                        </div>
-                        <!-- text -->
-                        <div class="flex gap-1">
-                            <div>{{ bucketCount }}</div>
-                            <h3>Buckets</h3>
-                        </div>
-                    </div>
-                    <!-- end of the bucket with images -->
                 </div>
+                <!-- end of the head section -->
 
-                <!-- right side button -->
-                <div class="flex">
-                    <div>
-                        <button @click="openAuthModal" class="border-[2px] px-2 py-2 rounded-xl bg-[#E9983C] w-[150px] text-[white] 
-                        font-medium hover:text-[#E9983C] hover:bg-[white] transition-all ease-linear hover:border-[#E9983C]">Create Bucket</button>
-                    </div>
-                    
+
+                
+                <!-- bucket content section -->
+                <div class="my-10">
+                    <!-- end of the bucket content section -->
+                <!-- text of table -->
+                <div class="relative ">
+                    <div class="w-[2px] h-[20px] bg-[#293793] absolute top-[5px] "></div>
+                    <h3 class="ml-2 text-[20px]">Bucket History</h3> 
                 </div>
-            </div>
-            <!-- end of the head section -->
+                
 
+                <!-- table -->
+                <div class="w-[100%] mx-auto mt-4 bg-white rounded-lg px-2 shadow-sm ">
+                    <!-- start of the table -->
+                    <table class="table-auto border-separate py-2 w-[100%] rounded-lg">
+                        <thead class="">
+                            <tr class="">
+                            <th class="text-[13px] border p-3 bg-blue-50">BUCKET NAME</th>
+                            <th class="text-[13px] border p-3 bg-blue-50">ACCESS</th>
+                            <th class="text-[13px] border p-3 bg-blue-50">NETWORK</th>
+                            <th class="text-[13px] border p-3 bg-blue-50">DATE CREATED</th>
+                            <th class="text-[13px] border p-3 bg-blue-50">MORE</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr v-for="bucket in bucketTableArr" :key="bucket.Baddress">
+                            <td class="text-[12px] text-center bg-white border p-3 cursor-pointer hover:text-[#E9983C] font-bold"><router-link to="/bucketFolder"> {{bucket.bucketName}} </router-link></td>
+                            <td class="text-[12px] text-center bg-white border p-3">{{bucket.bucketAccess}}</td>
+                            <td class="text-[12px] text-center bg-white border p-3">{{bucket.bucketNetwork}}</td>
+                            <td class="text-[12px] text-center bg-white border p-3">{{bucket.bucketDateCreated}}</td>
+                            
 
-            
-            <!-- wallet content section -->
-            <div class="my-10">
-                <!-- end of the bucket content section -->
-            <!-- text of table -->
-            <div class="relative ">
-                <div class="w-[2px] h-[20px] bg-[#293793] absolute top-[5px] "></div>
-                <h3 class="ml-2 text-[20px]">Bucket History</h3> 
-            </div>
-            
-
-            <!-- table -->
-            <div class="w-[100%] mx-auto mt-4 bg-white rounded-lg px-2 shadow-sm ">
-                <!-- start of the table -->
-                <table class="table-auto border-separate py-2 w-[100%] rounded-lg">
-                    <thead class="">
-                        <tr class="">
-                        <th class="text-[13px] border p-3 bg-blue-50">BUCKET NAME</th>
-                        <th class="text-[13px] border p-3 bg-blue-50">ACCESS</th>
-                        <th class="text-[13px] border p-3 bg-blue-50">NETWORK</th>
-                        <th class="text-[13px] border p-3 bg-blue-50">DATE CREATED</th>
-                        <th class="text-[13px] border p-3 bg-blue-50">MORE</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr v-for="bucket in bucketTableArr" :key="bucket.Baddress">
-                        <td class="text-[12px] text-center bg-white border p-3 cursor-pointer hover:text-[#E9983C] font-bold"><router-link to="/bucketFolder"> {{bucket.bucketName}} </router-link></td>
-                        <td class="text-[12px] text-center bg-white border p-3">{{bucket.bucketAccess}}</td>
-                        <td class="text-[12px] text-center bg-white border p-3">{{bucket.bucketNetwork}}</td>
-                        <td class="text-[12px] text-center bg-white border p-3">{{bucket.bucketDateCreated}}</td>
-                        
-
-                        <!-- more button functions -->
-                        <td class="text-[12px] text-center bg-white border p-3">
-                            <div class="relative w-full">
-                                <!-- more button auth modal -->
-                                <div class="absolute right-[-15px] w-[60px] shadow-md border-[1px] bg-blue-50 rounded-md top-10 animate__animated animate__zoomIn animate__faster">
-                                    <button @click="deleteBucketData(bucket)">
-                                        <div class="p-1">
-                                            <h3>Delete</h3>
-                                        </div>
-                                    </button>
-                                    
+                            <!-- more button functions -->
+                            <td class="text-[12px] text-center bg-white border p-3">
+                                <div class="relative w-full">
+                                    <!-- more button auth modal -->
+                                    <div class="absolute right-[-15px] w-[60px] shadow-md border-[1px] bg-blue-50 rounded-md top-10 animate__animated animate__zoomIn animate__faster">
+                                        <button @click="deleteBucketData(bucket)">
+                                            <div class="p-1">
+                                                <h3>Delete</h3>
+                                            </div>
+                                        </button>
+                                        
+                                    </div>
+                                <!-- end of the auth modal -->
                                 </div>
-                            <!-- end of the auth modal -->
-                            </div>
-                            <button>
-                                <span class="material-symbols-outlined">more_vert</span>
-                            </button>
-                        </td>
-                        <!-- more button end --> 
-                        </tr>
-                    </tbody>
-                </table>
+                                <button>
+                                    <span class="material-symbols-outlined">more_vert</span>
+                                </button>
+                            </td>
+                            <!-- more button end --> 
+                            </tr>
+                        </tbody>
+                    </table>
 
 
+                </div>
+                </div>
+                
             </div>
-            </div>
-            
+        
         </div>
         <!-- end of the bucket section -->
-
-    </div>
-        
 
         <!-- pop up model for Create bucket -->
         <Transition 
