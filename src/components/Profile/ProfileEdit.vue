@@ -1,93 +1,88 @@
 <template>
     <div>
-        <!-- admin-image  -->
-        <!-- <div class="flex absolute items-center justify-center top-[-70px] lg:left-80 min-[320px]:left-40">
-                            <img src="../../img/images/profile-admin.png" alt="" class="w-[60px] h-[60px]">
-        </div> -->
-        <!-- admin-image end  -->
-    
         <!-- form - 1  -->
-    
-                        <div class="lg:mt-[-15px]">
-    
-                            <div class="flex ml-4">
-                                <div>
-                                    <h1 class="font-['Montserrat'] text-[#293793] pl-8 text-2xl font-bold ml-[-20px]">Edit Profile</h1>
-                                </div>
-                            </div>
+        
+            <div class="">
+        
+                <div class="flex lg:justify-start md:justify-center sm:justify-center min-[320px]:justify-center">
+                                    <div>
+                                        <h1 class="font-['Montserrat'] text-[#293793] text-2xl font-bold">Edit Profile</h1>
+                                    </div>
+                </div>
 
-                            <!-- <div class="flex absolute items-center justify-center lg:left-[480px] md:left-[300px] min-[320px]:left-40">
-                                <img src="../../img/images/profile-admin.png" alt="" class="w-[70px] h-[70px]">
-                            </div> -->
-    
-                            <form action="" class="min-[320px]:ml-[-50px] mt-10">
-    
-                                <div class="flex lg:flex-row min-[320px]:flex-col">
-                                    <!-- first name -->
-                                    <div class="lg:m-10 lg:pl-10 min-[320px]:m-10 min-[320px]:pl-10">
-                                        <label for="" class="font-['Montserrat'] text-[13px]">First Name</label><br>
-                                        <div class="flex flex-row">
-                                            <input type="text" placeholder="  First name" class="border-2 border-[#4e78c0] text-[#293793] bg-light opacity-50 w-[250px] h-[40px] rounded-md">
+                <div class="flex justify-center">
+                    <img src="../../img/images/profile-admin.png" alt="" class="w-[50px] h-[50px]">
+                </div>
+        
+                <form action="" class="">
+        
+                                    <div class="flex lg:flex-row min-[320px]:flex-col lg:justify-center min-[320px]:justify-center md:justify-center sm:justify-center py-2 ">
+                                        <!-- first name -->
+                                        <div class="pr-10">
+                                            <label for="" class="font-['Montserrat'] text-[13px]">First Name</label><br>
+                                            <div class="flex flex-row">
+                                                <input type="text" placeholder="  First name" class="h-[30px] border-2 border-[#4e78c0] text-[#293793] bg-light opacity-50 rounded-md">
+                                            </div>
+                                        </div>
+        
+                                        <!-- last name  -->
+                                        <div class="min-[320px]:pt-4 lg:pt-0">
+                                            <label for="" class="font-['Montserrat'] text-[13px]">Last Name</label><br>
+                                            <div class="flex flex-row">
+                                                <input type="text" placeholder="  Last name" class="h-[30px] border-2 border-[#4e78c0] text-[#293793] bg-light opacity-50 rounded-md">
+                                            </div>
                                         </div>
                                     </div>
-    
-                                    <!-- last name  -->
-                                    <div class="lg:m-10 min-[320px]:mt-[-10px] min-[320px]:ml-20 min-[320px]:mb-10">
-                                        <label for="" class="font-['Montserrat'] text-[13px]">Last Name</label><br>
-                                        <div class="flex flex-row">
-                                            <input type="text" placeholder="  Last name" class="border-2 border-[#4e78c0] text-[#293793] bg-light opacity-50 w-[250px] h-[40px] rounded-md">
-                                        </div>
-                                    </div>
-                                </div>
-    
-                                <div class="flex lg:flex-row min-[320px]:flex-col mt-[-60px]">
-                                    <!-- select country -->
-                                    <div class="lg:m-10 lg:pl-10 min-[320px]:m-10 min-[320px]:pl-10">
-                                        <label for="" class="font-['Montserrat'] text-[13px]">Select country</label><br>
-                                        <select v-model="selected" id="" class="border-2 lg:w-[250px] lg:h-[40px] md:w-[230px] md:h-[40px] min-[320px]:w-[230px] min-[320px]:h-[40px] rounded-md font-['Montserrat'] text-[13px] opacity-50 border-2 border-[#4e78c0] bg-white">
-                                            <option v-for="country in countryList" :value="country" class="text-[#293793]" value="    Country">
-                                                {{ country.Name }}</option>
-                                        </select>
+        
+                                    <div class="flex lg:justify-start md:justify-start sm:justify-start min-[320px]:justify-start lg:flex-row py-2 md:flex-col sm:flex-col min-[320px]:flex-col">
+                                        <!-- select country -->
+                                        <div class="pr-10">
+                                            <label for="" class="font-['Montserrat'] text-[13px]">Select country</label><br>
+                                            <select v-model="selected" id="" class="w-[230px] h-[30px] border-2 rounded-md font-['Montserrat'] text-[13px] opacity-50 border-[#4e78c0] bg-white">
+                                                <option v-for="country in countryList" :value="country" class="text-[#293793]" value="    Country">
+                                                    {{ country.Name }}</option>
+                                            </select>
 
-                                    </div>
-    
-                                    <!-- country code  -->
-                                    <div class="lg:m-10 min-[320px]:mt-[-10px] min-[320px]:ml-20 min-[320px]:mb-10">
-                                        <label for="" class="font-['Montserrat'] text-[13px]">Country Code</label><br>
-                                        <select id="" class="border-2 lg:w-[250px] lg:h-[40px] min-[320px]:w-[230px] min-[320px]:h-[40px] rounded-md font-['Montserrat'] text-[13px] opacity-50 border-2 border-[#4e78c0] bg-white ">
-                                            <option class="text-[#293793]" value="    Country code">
-                                                {{ selected.MobileCode }}</option>
-                                        </select>
-                                    </div>
-                                </div>
-    
-                                
-                                <div class="flex lg:flex-row min-[320px]:flex-col lg:mt-[-60px] lg:ml-10">
-                                    <!-- email  -->
-                                    <div class="lg:m-10 min-[320px]:mt-[-10px] min-[320px]:ml-20 min-[320px]:mb-10">
-                                        <label for="" class="font-['Montserrat'] text-[13px]">Email</label><br>
-                                        <div class="flex flex-row">
-                                            <input type="text" placeholder="  john@example.com" class="border-2 border-[#4e78c0]  text-[#293793] bg-light opacity-50 w-[250px] h-[40px] rounded-md">
+                                        </div>
+        
+                                        <!-- country code  -->
+                                        <div class="min-[320px]:pt-4 lg:pt-0">
+                                            <label for="" class="font-['Montserrat'] text-[13px]">Country Code</label><br>
+                                            <select id="" class="w-[230px] h-[30px] border-2 rounded-md font-['Montserrat'] text-[13px] opacity-50 border-2 border-[#4e78c0] bg-white ">
+                                                <option class="text-[#293793]" value="    Country code">
+                                                    {{ selected.MobileCode }}</option>
+                                            </select>
                                         </div>
                                     </div>
-    
-                                    <div class="lg:m-10 min-[320px]:mt-[-10px] min-[320px]:ml-20 min-[320px]:mb-10">
-                                        <label for="" class="font-['Montserrat'] text-[13px]">Mobile number</label><br>
-                                        <div class="flex flex-row">
-                                            <input type="text" placeholder="  Mobile number" class="border-2 border-[#4e78c0]  text-[#293793] bg-light opacity-50 w-[250px] h-[40px] rounded-md">
+        
+                                    
+                                    <div class="flex lg:flex-row min-[320px]:flex-col lg:justify-center min-[320px]:justify-center md:justify-center sm:justify-center py-2">
+                                        <!-- email  -->
+                                        <div class="pr-10">
+                                            <label for="" class="font-['Montserrat'] text-[13px]">Email</label><br>
+                                            <div class="flex flex-row">
+                                                <input type="text" placeholder="  john@example.com" class="h-[30px] border-2 border-[#4e78c0]  text-[#293793] bg-light opacity-50 rounded-md">
+                                            </div>
+                                        </div>
+        
+                                        <div class="min-[320px]:pt-4 lg:pt-0">
+                                            <label for="" class="font-['Montserrat'] text-[13px]">Mobile number</label><br>
+                                            <div class="flex flex-row">
+                                                <input type="text" placeholder="  Mobile number" class="h-[30px] border-2 border-[#4e78c0]  text-[#293793] bg-light opacity-50 rounded-md">
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-    
-    
-                                <!-- button  -->
-                                <router-link to="/mobile-verify">
-                                    <button class="font-['Montserrat' bg-[#293793] w-[250px] h-[40px] rounded-lg shadow-lg text-white opacity-85 lg:ml-20 min-[320px]:ml-20 transition duration-300 ease-in-out 
-                                        hover:bg-[#293793] lg:mt-[-50px] hover:text-[#293793] hover:bg-[white] hover:border-[#293793] border-[2px]">Save Changes</button>
-                                </router-link>
-                            </form>
-    
-                        </div>
+        
+        
+                                    <!-- button  -->
+                                    <router-link to="/mobile-verify">
+                                        <div class="pt-4">
+                                            <button class="font-['Montserrat' bg-[#293793] rounded-lg shadow-lg text-white opacity-85 transition duration-300 ease-in-out hover:bg-[#293793] hover:text-[#293793] hover:bg-[white] hover:border-[#293793] border-[2px] w-[230px] h-[40px]">Save Changes</button>
+                                        </div>
+                                    </router-link>
+                </form>
+        
+            </div>
 
         <!-- form - 1 end  -->
     

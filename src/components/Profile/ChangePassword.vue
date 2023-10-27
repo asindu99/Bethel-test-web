@@ -24,7 +24,7 @@
                                    <div class="">
                                        <label for="" class="font-['Montserrat'] text-[13px]">Old Password</label><br>
                                        <div class="flex flex-row">
-                                           <input type="password" placeholder="     Old password" class="lg:w-[500px] border-2 border-[#4e78c0] text-[#293793] h-[40px] bg-light opacity-50 rounded-md">
+                                           <input type="password" placeholder="     Old password" class="lg:w-[500px] border-2 border-[#4e78c0] text-[#293793] h-[30px] bg-light opacity-50 rounded-md">
                                        </div>
                                    </div>
                                </div>
@@ -34,7 +34,7 @@
                                     <div class="pr-10">
                                         <label for="" class="font-['Montserrat'] text-[13px]">New Password</label><br>
                                         <div class="flex flex-row">
-                                            <input type="password" placeholder="  New password" class="border-2 border-[#4e78c0] text-[#293793] h-[40px] bg-light opacity-50 rounded-md">
+                                            <input type="password" placeholder="  New password" class="border-2 border-[#4e78c0] text-[#293793] h-[30px] bg-light opacity-50 rounded-md">
                                         </div>
                                     </div>
     
@@ -42,14 +42,14 @@
                                     <div class="min-[320px]:pt-8 lg:pt-0">
                                         <label for="" class="font-['Montserrat'] text-[13px]">Confirm Password</label><br>
                                         <div class="flex flex-row">
-                                            <input type="password" placeholder="  COnfirm password" class="border-2 border-[#4e78c0] text-[#293793] h-[40px] bg-light opacity-50 rounded-md">
+                                            <input type="password" placeholder="  COnfirm password" class="border-2 border-[#4e78c0] text-[#293793] h-[30px] bg-light opacity-50 rounded-md">
                                         </div>
                                     </div>
                                 </div>
     
     
                                 <!-- button  -->
-                                <div class="flex items-center">
+                                <div class="flex items-center pt-4">
                                     <router-link to="/Mobile-Verification">
                                         <button class="font-['Montserrat'] w-[230px] h-[40px] bg-[#293793] rounded-lg shadow-lg text-white opacity-85 transition duration-300 ease-in-out 
                                         hover:bg-[#293793] hover:text-[#293793] hover:bg-[white] hover:border-[#293793] border-[2px]">Change Password</button>
