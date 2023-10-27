@@ -13,7 +13,7 @@
         </div>
 
             <!-- top menu section -->
-            <div class="flex py-2 flex-col px-[10px] bg-[#1d2455]"> 
+            <div class="py-2 flex-col px-[10px] bg-[#1d2455] hidden"> 
                 <!-- menu text -->
                 <div class="">
                     <div class="relative lg:flex md:flex min-[320px]:flex sm:flex placeholder:">
@@ -75,7 +75,7 @@
 
                 <!-- menu item -->
                 <RouterLink to="/accesskey" class="flex justify-center items-center">
-                    <div class="hover:bg-[#181d42] min-[320px]:flex lg:flex sm:flex md:flex w-full px-3 my-2 py-2 hover:text-[white] transition-all ease-linear">
+                    <div class="hover:bg-[#181d42] min-[320px]:flex lg:flex sm:flex md:flex w-full px-3 my-2 py-2 hover:text-[white] transition-all ease-linear hidden">
                         <span class=" material-symbols-outlined top-2 right-[20px] mr-2
                         ">
                             key
@@ -93,9 +93,9 @@
 
 
             <!-- account section -->
-            <div class="flex flex-col mt-3">
+            <div class="flex flex-col">
                 <!-- menu text -->
-                <div class="flex py-2 flex-col px-[10px] bg-[#1d2455]"> 
+                <div class="flex py-2 flex-col px-[10px] bg-[#1d2455] hidden"> 
                 <!-- menu text -->
                 <div class="">
                     <div class="relative lg:flex md:flex min-[320px]:flex sm:flex placeholder:">
@@ -157,8 +157,10 @@
                 <!-- end of the menu item -->
                 <!-- menu item -->
                 <RouterLink to="/login" class=" w-full">
-                    <div class="hover:text-[#E9983C] min-[320px]:flex sm:flex lg:flex md:flex w-full px-3 bg-[#120c2651] my-2 py-2  transition-all ease-linear">
+                    <div class="hover:text-[#E9983C] min-[320px]:flex sm:flex lg:flex md:flex w-full px-3 bg-[#120c2651] my-2 py-2  transition-all ease-linear
+                    absolute bottom-4">
                         <span class=" material-symbols-outlined top-2 right-[20px] mr-2
+                        
                         ">
                             logout
                         </span>  
