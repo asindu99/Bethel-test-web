@@ -60,7 +60,7 @@
                     <!-- right-side  -->
                     <div class="flex h-[100%] md:px-20">
 
-                        <div class="flex items-center justify-center w-full bg-white rounded-xl shadow-lg lg:px-40 md:px-10 sm:px-10 min-[320px]:px-10
+                        <div class="flex items-center justify-center w-full bg-blue-50 rounded-xl shadow-lg lg:px-40 md:px-10 sm:px-10 min-[320px]:px-10
                         lg:py-12 md:py-10 sm:py-10 min-[320px]:py-10">
                         
                             <Router-view></Router-view>

@@ -21,7 +21,7 @@
                                         <div class="pr-10">
                                             <label for="" class="font-['Montserrat'] text-[13px]">First Name</label><br>
                                             <div class="flex flex-row">
-                                                <input type="text" placeholder="  First name" class="h-[30px] border-2 border-[#4e78c0] text-[#293793] bg-light opacity-50 rounded-md">
+                                                <input type="text" placeholder="  First name" class="h-[38px] border-2 border-[#4e78c0] text-[#293793] bg-light opacity-50 rounded-md">
                                             </div>
                                         </div>
         
@@ -29,16 +29,16 @@
                                         <div class="min-[320px]:pt-4 lg:pt-0">
                                             <label for="" class="font-['Montserrat'] text-[13px]">Last Name</label><br>
                                             <div class="flex flex-row">
-                                                <input type="text" placeholder="  Last name" class="h-[30px] border-2 border-[#4e78c0] text-[#293793] bg-light opacity-50 rounded-md">
+                                                <input type="text" placeholder="  Last name" class="h-[38px] border-2 border-[#4e78c0] text-[#293793] bg-light opacity-50 rounded-md">
                                             </div>
                                         </div>
                                     </div>
         
-                                    <div class="flex lg:justify-start md:justify-start sm:justify-start min-[320px]:justify-start lg:flex-row py-2 md:flex-col sm:flex-col min-[320px]:flex-col">
+                                    <div class="flex lg:justify-start md:justify-center sm:justify-center min-[320px]:justify-center lg:flex-row py-2 md:flex-col sm:flex-col min-[320px]:flex-col">
                                         <!-- select country -->
                                         <div class="pr-10">
                                             <label for="" class="font-['Montserrat'] text-[13px]">Select country</label><br>
-                                            <select v-model="selected" id="" class="w-[230px] h-[30px] border-2 rounded-md font-['Montserrat'] text-[13px] opacity-50 border-[#4e78c0] bg-white">
+                                            <select v-model="selected" id="" class="w-[230px] h-[38px] border-2 rounded-md font-['Montserrat'] text-[13px] opacity-50 border-[#4e78c0] bg-white">
                                                 <option v-for="country in countryList" :value="country" class="text-[#293793]" value="    Country">
                                                     {{ country.Name }}</option>
                                             </select>
@@ -48,7 +48,7 @@
                                         <!-- country code  -->
                                         <div class="min-[320px]:pt-4 lg:pt-0">
                                             <label for="" class="font-['Montserrat'] text-[13px]">Country Code</label><br>
-                                            <select id="" class="w-[230px] h-[30px] border-2 rounded-md font-['Montserrat'] text-[13px] opacity-50 border-2 border-[#4e78c0] bg-white ">
+                                            <select id="" class="w-[230px] h-[38px] border-2 rounded-md font-['Montserrat'] text-[13px] opacity-50 border-2 border-[#4e78c0] bg-white ">
                                                 <option class="text-[#293793]" value="    Country code">
                                                     {{ selected.MobileCode }}</option>
                                             </select>
@@ -61,14 +61,14 @@
                                         <div class="pr-10">
                                             <label for="" class="font-['Montserrat'] text-[13px]">Email</label><br>
                                             <div class="flex flex-row">
-                                                <input type="text" placeholder="  john@example.com" class="h-[30px] border-2 border-[#4e78c0]  text-[#293793] bg-light opacity-50 rounded-md">
+                                                <input type="text" placeholder="  john@example.com" class="h-[38px] border-2 border-[#4e78c0]  text-[#293793] bg-light opacity-50 rounded-md">
                                             </div>
                                         </div>
         
                                         <div class="min-[320px]:pt-4 lg:pt-0">
                                             <label for="" class="font-['Montserrat'] text-[13px]">Mobile number</label><br>
                                             <div class="flex flex-row">
-                                                <input type="text" placeholder="  Mobile number" class="h-[30px] border-2 border-[#4e78c0]  text-[#293793] bg-light opacity-50 rounded-md">
+                                                <input type="text" placeholder="  Mobile number" class="h-[38px] border-2 border-[#4e78c0]  text-[#293793] bg-light opacity-50 rounded-md">
                                             </div>
                                         </div>
                                     </div>

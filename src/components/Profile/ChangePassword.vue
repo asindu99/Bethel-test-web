@@ -24,17 +24,17 @@
                         <div class="">
                                        <label for="" class="font-['Montserrat'] text-[13px]">Old Password</label><br>
                                        <div class="flex flex-row">
-                                           <input type="password" placeholder="     Old password" class="lg:w-[500px] border-2 border-[#4e78c0] text-[#293793] h-[30px] bg-light opacity-50 rounded-md">
+                                           <input type="password" placeholder="     Old password" class="lg:w-[500px] border-2 border-[#4e78c0] text-[#293793] h-[38px] bg-light opacity-50 rounded-md">
                                        </div>
                         </div>
                     </div>
     
-                    <div class="flex lg:flex-row min-[320px]:flex-col lg:items-center lg:justify-center min-[320px]:justify py-8">
+                    <div class="flex lg:flex-row min-[320px]:flex-col lg:justify-center min-[320px]:justify-center md:justify-center sm:justify-center py-8">
                         <!-- Old password -->
                         <div class="pr-10">
                             <label for="" class="font-['Montserrat'] text-[13px]">New Password</label><br>
                             <div class="flex flex-row">
-                                <input type="password" placeholder="  New password" class="border-2 border-[#4e78c0] text-[#293793] h-[30px] bg-light opacity-50 rounded-md">
+                                <input type="password" placeholder="  New password" class="border-2 border-[#4e78c0] text-[#293793] h-[38px] bg-light opacity-50 rounded-md">
                             </div>
                         </div>
     
@@ -42,7 +42,7 @@
                         <div class="min-[320px]:pt-8 lg:pt-0">
                             <label for="" class="font-['Montserrat'] text-[13px]">Confirm Password</label><br>
                             <div class="flex flex-row">
-                                <input type="password" placeholder="  COnfirm password" class="border-2 border-[#4e78c0] text-[#293793] h-[30px] bg-light opacity-50 rounded-md">
+                                <input type="password" placeholder="  COnfirm password" class="border-2 border-[#4e78c0] text-[#293793] h-[38px] bg-light opacity-50 rounded-md">
                             </div>
                         </div>
                     </div>
