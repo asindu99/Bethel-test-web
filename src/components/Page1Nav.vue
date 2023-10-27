@@ -146,7 +146,7 @@
                 
             <!-- close button -->
             <button @click="closeSide">
-                <div class="absolute top-6 right-2 text-white">
+                <div class="absolute top-2 right-2 text-white">
                     <span class="material-symbols-outlined">
                         close
                     </span> 

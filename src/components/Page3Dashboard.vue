@@ -172,7 +172,7 @@
                 
 
                 <!-- storage chart -->
-                <div class=" flex items-center justify-evenly mt-2
+                <div class=" flex items-center justify-center mt-2 gap-2
                 lg:w-full md:w-full sm:w-[550px] min-[320px]:w-full 
                 lg:h-[250px] md:h-[300px] sm:h-[300px] min-[320px]:h-[200px] ">
 
@@ -187,10 +187,10 @@
                             <!-- total file -->
                             <div class="flex items-center">
                                 <div class="mr-1">
-                                    <img src="../img/icons/icon-play.png" alt="" class="w-[35px]">
+                                    <img src="../img/icons/icon-file.png" alt="" class="w-[35px]">
                                 </div>
 
-                                <div class="flex items-center mt-[2px]">
+                                <div class="flex flex-col items-center justify-center mt-[2px]">
                                     <h3 class="text-[16px]">Files :</h3>
                                     <h3 class="text-[#8d8d8d] text-[14px] ml-1">13 files</h3>
                                 </div>
@@ -199,10 +199,10 @@
                             <!-- total file -->
                             <div class="flex items-center">
                                 <div class="mr-1">
-                                    <img src="../img/icons/icon-play.png" alt="" class="w-[35px]">
+                                    <img src="../img/icons/icon-image.png" alt="" class="w-[35px]">
                                 </div>
 
-                                <div class="flex items-center mt-[2px]">
+                                <div class="flex flex-col items-center justify-center mt-[2px]">
                                     <h3 class="text-[16px]">Images :</h3>
                                     <h3 class="text-[#8d8d8d] text-[14px] ml-1">13 files</h3>
                                 </div>
@@ -221,8 +221,8 @@
                                     <img src="../img/icons/icon-play.png" alt="" class="w-[35px]">
                                 </div>
 
-                                <div class="flex items-center mt-[2px]">
-                                    <h3 class="text-[16px]">VIdeos :</h3>
+                                <div class="flex flex-col items-center justify-center mt-[2px]">
+                                    <h3 class="text-[16px]">Videos :</h3>
                                     <h3 class="text-[#8d8d8d] text-[14px] ml-1">13 files</h3>
                                 </div>
                             </div>
@@ -230,10 +230,10 @@
                             <!-- total file -->
                             <div class="flex items-center">
                                 <div class="mr-1">
-                                    <img src="../img/icons/icon-play.png" alt="" class="w-[35px]">
+                                    <img src="../img/icons/icon-other.png" alt="" class="w-[35px]">
                                 </div>
 
-                                <div class="flex items-center mt-[2px]">
+                                <div class="flex flex-col items-center justify-center mt-[2px]">
                                     <h3 class="text-[16px]">Others :</h3>
                                     <h3 class="text-[#8d8d8d] text-[14px] ml-1">13 files</h3>
                                 </div>
