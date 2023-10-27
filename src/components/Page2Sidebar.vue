@@ -2,9 +2,9 @@
     <div class="flex">
         <!-- main side bar  -->
         <div class=" bg-[#161937] text-[#7882c3] md:fixed bottom-0 md:flex z-[10]
-        lg:w-[250px] md:w-[150px] sm:hidden
+        lg:w-[250px] md:w-[150px] sm:hidden gap-2
         min-[320px]:hidden lg:fixed md:top-0 
-         flex-col ">
+         flex-col">
 
          <!-- left side -->
         <div class="flex items-center w-[250px] py-4 pl-4">
@@ -25,7 +25,7 @@
             </div>
             
             <!-- middle section  -->
-            <div class="flex flex-col">
+            <div class="flex flex-col gap-2">
                 <!-- menu item -->
                 <RouterLink to="/" class="">
                     <div class="hover:bg-[#181d42] lg:flex md:flex sm:flex min-[320px]:flex
@@ -93,7 +93,7 @@
 
 
             <!-- account section -->
-            <div class="flex flex-col">
+            <div class="flex flex-col gap-2">
                 <!-- menu text -->
                 <div class="flex py-2 flex-col px-[10px] bg-[#1d2455] hidden"> 
                 <!-- menu text -->

@@ -154,7 +154,7 @@
             lg:w-full md:w-[595px] sm:w-[595px] min-[320px]:w-[340px]
              justify-start items-start rounded-xl shadow-md">
                 <!-- icon and text-->
-                <div class="flex items-center">
+                <div class="flex items-start">
                     <!-- image side -->
                     <div class="mr-2">
                         <img src="../img/icons/icon-storage.png" alt="" class="w-[35px] mx-3">
@@ -176,13 +176,16 @@
                 lg:w-full md:w-full sm:w-[550px] min-[320px]:w-[320px] 
                 lg:h-[250px] md:h-[300px] sm:h-[300px] min-[320px]:h-[200px] ">
 
+                    <!-- chart view -->
+                    <canvas id="myChart" class="lg:w-full md:w-full sm:w-[650px] min-[320px]:w-[200px] ml-3"></canvas>
+
                     <!-- storage status extend -->
                     <div class="lg:flex md:flex sm:flex min-[320px]:hidden flex-col gap-4">
                         
                         <!-- total file -->
-                        <div class="flex flex-col items-center">
+                        <div class="flex flex-col items-start">
                             <div>
-                                <img src="../img/icons/icon-play.png" alt="" class="w-[40px]">
+                                <img src="../img/icons/icon-play.png" alt="" class="w-[25px]">
                             </div>
 
                             <div class="flex items-center mt-[2px]">
@@ -192,25 +195,25 @@
                         </div>
 
                         <!-- total file -->
-                        <div class="flex flex-col items-center">
+                        <div class="flex flex-col items-start">
                             <div>
-                                <img src="../img/icons/icon-play.png" alt="" class="w-[40px]">
+                                <img src="../img/icons/icon-play.png" alt="" class="w-[25px]">
                             </div>
 
                             <div class="flex items-center mt-[2px]">
-                                <h3 class="text-[16px]">Total Files :</h3>
+                                <h3 class="text-[16px]">Media :</h3>
                                 <h3 class="text-[#8d8d8d] text-[14px] ml-1">13 files</h3>
                             </div>
                         </div>
 
                         <!-- total file -->
-                        <div class="flex flex-col items-center">
+                        <div class="flex flex-col items-start">
                             <div>
-                                <img src="../img/icons/icon-play.png" alt="" class="w-[40px]">
+                                <img src="../img/icons/icon-play.png" alt="" class="w-[25px]">
                             </div>
 
                             <div class="flex items-center mt-[2px]">
-                                <h3 class="text-[16px]">Total Files :</h3>
+                                <h3 class="text-[16px]">Videos :</h3>
                                 <h3 class="text-[#8d8d8d] text-[14px] ml-1">13 files</h3>
                             </div>
                         </div>
@@ -219,9 +222,6 @@
 
                     </div>
                     <!-- end of the storage status extend -->
-
-                    <!-- chart view -->
-                    <canvas id="myChart" class="lg:w-full md:w-full sm:w-[650px] min-[320px]:w-[200px] ml-3"></canvas>
 
                 </div>
 
@@ -314,27 +314,31 @@ export default {
 
         const myChart = new Chart(ctx, {
         type: 'doughnut',
-    data: {
-      labels: ['Total', 'Used', 'Remaining'],
-      datasets: [{
-        label: 'Storage',
-        data: [300, 50, 100],
-        backgroundColor: [
-      'rgb(0, 71, 171)',
-      'rgb(54, 162, 235)',
-      'rgb(0, 150, 255)'
-    ],
-    hoverOffset: 10,
-    position : 'bottom',
-      }]
-    },
-    // options: {
-    //   scales: {
-    //     y: {
-    //       beginAtZero: true
-    //     }
-    //   }
-    // }
+            data: {
+            labels: ['Used', 'Remaining'],
+            datasets: [{
+                label: 'Storage',
+                data: [300, 100],
+                backgroundColor: [
+            'rgb(0, 71, 171)',
+            'rgb(54, 162, 235)',
+            ],
+            hoverOffset: 10,
+            position : 'bottom',
+            }]
+            },
+    options: {
+        responsive: true,
+        plugins: {
+        legend: {
+            position: 'bottom',
+        },
+        title: {
+            display: true,
+            text: 'Chart.js Doughnut Chart'
+        }
+        }
+    }
     });
 
     const myChart2 = new Chart(ctx1, {
