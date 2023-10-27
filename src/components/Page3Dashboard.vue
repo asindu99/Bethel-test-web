@@ -180,60 +180,75 @@
                     <canvas id="myChart" class="lg:w-full md:w-full sm:w-full min-[320px]:[400px]"></canvas>
 
                     <!-- storage status extend -->
-                    <div class="lg:flex md:flex sm:flex min-[320px]:hidden flex-col gap-8 items-start justify-start mr-20">
-                        
-                        <!-- total file -->
-                        <div class="flex items-start">
-                            <div class="mr-2">
-                                <img src="../img/icons/icon-play.png" alt="" class="w-[25px]">
+
+                    <div class="flex gap-2">
+                        <div class="lg:flex md:flex sm:flex min-[320px]:hidden flex-col gap-12 items-start">
+                            
+                            <!-- total file -->
+                            <div class="flex items-center">
+                                <div class="mr-1">
+                                    <img src="../img/icons/icon-play.png" alt="" class="w-[35px]">
+                                </div>
+
+                                <div class="flex items-center mt-[2px]">
+                                    <h3 class="text-[16px]">Files :</h3>
+                                    <h3 class="text-[#8d8d8d] text-[14px] ml-1">13 files</h3>
+                                </div>
                             </div>
 
-                            <div class="flex items-center mt-[2px]">
-                                <h3 class="text-[16px]">Files :</h3>
-                                <h3 class="text-[#8d8d8d] text-[14px] ml-1">13 files</h3>
+                            <!-- total file -->
+                            <div class="flex items-center">
+                                <div class="mr-1">
+                                    <img src="../img/icons/icon-play.png" alt="" class="w-[35px]">
+                                </div>
+
+                                <div class="flex items-center mt-[2px]">
+                                    <h3 class="text-[16px]">Images :</h3>
+                                    <h3 class="text-[#8d8d8d] text-[14px] ml-1">13 files</h3>
+                                </div>
                             </div>
+                            
                         </div>
+                        <!-- end of the storage status extend -->
 
-                        <!-- total file -->
-                        <div class="flex items-start">
-                            <div class="mr-2">
-                                <img src="../img/icons/icon-play.png" alt="" class="w-[25px]">
+
+                        <!-- storage status extend -->
+                        <div class="lg:flex md:flex sm:flex min-[320px]:hidden flex-col gap-12 items-start">
+                            
+                            <!-- total file -->
+                            <div class="flex items-center">
+                                <div class="mr-1">
+                                    <img src="../img/icons/icon-play.png" alt="" class="w-[35px]">
+                                </div>
+
+                                <div class="flex items-center mt-[2px]">
+                                    <h3 class="text-[16px]">VIdeos :</h3>
+                                    <h3 class="text-[#8d8d8d] text-[14px] ml-1">13 files</h3>
+                                </div>
                             </div>
 
-                            <div class="flex items-center mt-[2px]">
-                                <h3 class="text-[16px]">Media :</h3>
-                                <h3 class="text-[#8d8d8d] text-[14px] ml-1">13 files</h3>
+                            <!-- total file -->
+                            <div class="flex items-center">
+                                <div class="mr-1">
+                                    <img src="../img/icons/icon-play.png" alt="" class="w-[35px]">
+                                </div>
+
+                                <div class="flex items-center mt-[2px]">
+                                    <h3 class="text-[16px]">Others :</h3>
+                                    <h3 class="text-[#8d8d8d] text-[14px] ml-1">13 files</h3>
+                                </div>
                             </div>
+                            
                         </div>
-
-                        <!-- total file -->
-                        <div class="flex items-start">
-                            <div class="mr-2">
-                                <img src="../img/icons/icon-play.png" alt="" class="w-[25px]">
-                            </div>
-
-                            <div class="flex items-center mt-[2px]">
-                                <h3 class="text-[16px]">Videos :</h3>
-                                <h3 class="text-[#8d8d8d] text-[14px] ml-1">13 files</h3>
-                            </div>
-                        </div>
-
-                        <!-- total file -->
-                        <div class="flex items-start">
-                            <div class="mr-2">
-                                <img src="../img/icons/icon-play.png" alt="" class="w-[25px]">
-                            </div>
-
-                            <div class="flex items-center mt-[2px]">
-                                <h3 class="text-[16px]">Others :</h3>
-                                <h3 class="text-[#8d8d8d] text-[14px] ml-1">13 files</h3>
-                            </div>
-                        </div>
-
-  
-
+                        <!-- end of the storage status extend --> 
                     </div>
-                    <!-- end of the storage status extend -->
+                    
+
+                    
+
+                    
+
+                    
 
                 </div>
 
