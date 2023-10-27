@@ -94,7 +94,7 @@
             </div>
 
 
-            <!-- IPFS Pinning Service API Endpoint  section -->
+            <!-- IPFS Pinning Service API Endpoint section -->
             <div>
 
                 <div class="relative mt-10 ">
