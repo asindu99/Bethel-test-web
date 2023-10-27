@@ -28,8 +28,8 @@
             <div class="flex flex-col gap-2">
                 <!-- menu item -->
                 <RouterLink to="/" class="">
-                    <div class="hover:bg-[#181d42] lg:flex md:flex sm:flex min-[320px]:flex
-                     w-full px-3  my-2 py-2 hover:text-[white] transition-all ease-linear">
+                    <div class=" lg:flex md:flex sm:flex min-[320px]:flex
+                     w-full px-3  my-2 py-2  transition-all ease-linear">
                         <span class=" material-symbols-outlined top-2 right-[20px] mr-2
                         ">
                             grid_view
@@ -43,8 +43,8 @@
 
                 <!-- menu item -->
                 <router-link to="/storage">
-                    <div class="hover:bg-[#181d42] lg:flex md:flex sm:flex min-[320px]:flex
-                    w-full px-3  my-2 py-2 hover:text-[white] transition-all ease-linear">
+                    <div class=" lg:flex md:flex sm:flex min-[320px]:flex
+                    w-full px-3  my-2 py-2  transition-all ease-linear">
                         <span class=" material-symbols-outlined top-2 right-[20px] mr-2
                         ">
                             hard_drive
@@ -58,8 +58,8 @@
 
                 <!-- menu item -->
                 <router-link to="/wallet">
-                    <div class="hover:bg-[#181d42] lg:flex md:flex sm:flex min-[320px]:flex
-                     w-full px-3  my-2 py-2 hover:text-[white] transition-all ease-linear">
+                    <div class=" lg:flex md:flex sm:flex min-[320px]:flex
+                     w-full px-3  my-2 py-2  transition-all ease-linear">
                         <span class=" material-symbols-outlined top-2 right-[20px]  mr-2
                         ">
                             wallet
@@ -75,7 +75,7 @@
 
                 <!-- menu item -->
                 <RouterLink to="/accesskey" class="flex justify-center items-center">
-                    <div class="hover:bg-[#181d42] min-[320px]:flex lg:flex sm:flex md:flex w-full px-3 my-2 py-2 hover:text-[white] transition-all ease-linear hidden">
+                    <div class=" min-[320px]:flex lg:flex sm:flex md:flex w-full px-3 my-2 py-2  transition-all ease-linear hidden">
                         <span class=" material-symbols-outlined top-2 right-[20px] mr-2
                         ">
                             key
@@ -110,7 +110,7 @@
 
                 <!-- menu item -->
                 <router-link to="/profile">
-                    <div class="hover:bg-[#181d42] min-[320px]:flex sm:flex lg:flex md:flex w-full px-3  my-2 py-2 hover:text-[white] transition-all ease-linear">
+                    <div class=" min-[320px]:flex sm:flex lg:flex md:flex w-full px-3  my-2 py-2  transition-all ease-linear">
                         <span class=" material-symbols-outlined top-2 right-[20px] mr-2
                         ">
                             person_pin
@@ -126,7 +126,7 @@
 
                 <!-- menu item -->
                 <router-link to="/billing">
-                    <div class="hover:bg-[#181d42] min-[320px]:flex sm:flex lg:flex md:flex w-full px-3  my-2 py-2 hover:text-[white] transition-all ease-linear">
+                    <div class=" min-[320px]:flex sm:flex lg:flex md:flex w-full px-3  my-2 py-2  transition-all ease-linear">
                         <span class=" material-symbols-outlined top-2 right-[20px]  mr-2
                         ">
                             attach_money
@@ -141,7 +141,7 @@
 
                 <!-- menu item -->
                 <a href="https://docs.bethel.network/" class="active" target="_blank">
-                    <div class="hover:bg-[#181d42] min-[320px]:flex sm:flex lg:flex md:flex w-full px-3 hover:bg-[] my-2 py-2 hover:text-[white] transition-all ease-linear">
+                    <div class="hover:bg-[#181d42] min-[320px]:flex sm:flex lg:flex md:flex w-full px-3 hover:bg-[] my-2 py-2  transition-all ease-linear">
                         <span class=" material-symbols-outlined top-2 right-[20px]  mr-2
                         ">
                             support
