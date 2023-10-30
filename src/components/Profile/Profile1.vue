@@ -29,7 +29,7 @@
 
                 <!-- left side -->
                 <div class="flex lg:flex-row md:flex-col sm:flex-col min-[320px]:flex-col">
-                <div class="flex items-center justify-center lg:pl-[-150px] lg:mr-2">
+                <div class="flex items-center justify-center lg:pl-[-150px] lg:mr-2 md:mr-0 sm:mr-2 min-[320px]:ml-2">
                     <router-link to="/profile/profileEdit">
                         <button class="border-[2px] px-1 py-2 rounded-xl hover:bg-[#293793] w-[160px] hover:text-[white] text-[14px]
                                 font-medium text-[#293793] bg-[white] transition-all ease-linear border-[#293793]">Profile
@@ -60,7 +60,7 @@
                     <!-- right-side  -->
                     <div class="flex h-[100%]">
 
-                        <div class="bg-white rounded-2xl shadow-xl py-4 px-10">
+                        <div class="bg-white rounded-2xl shadow-xl py-4 lg:px-6 sm:px-6 min-[320px]:px-6 md:px-20 min-[320px]:mb-10">
                         
                             <Router-view></Router-view>
 

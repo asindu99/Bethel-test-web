@@ -1,7 +1,7 @@
 <template>
     <!-- personal info form cont... -->
 
-    <div class="px-10 lg:pb-6">
+    <div class="lg:px-10 md:px-8 sm:px-8 min-[320px]:px-[-200px] lg:pb-8">
         <!-- personal information div -->
         <div class="flex flex-col w-full mt-8 lg:justify-start min-[320px]:items-center">
             <h1 class="text-[20px] text-[#293793] font-bold">Edit Profile</h1>
@@ -20,13 +20,13 @@
             <!-- first name -->
             <div class="flex flex-col mr-2">
                 <label for="" class="text-[14px]">First Name :</label>
-                <input type="text" class="lg:w-[235px] md:w-[240px] text-[#757784] bg-transparent p-1 border-b-2 border-[#29379384]">
+                <input type="text" class="lg:w-[235px] md:w-[235px] text-[#757784] bg-transparent p-1 border-b-2 border-[#29379384]">
             </div>
 
             <!-- last name -->
-            <div class="flex flex-col min-[320px]:mt-4 lg:mt-0 md:mt-2 sm:mt-0">
+            <div class="flex flex-col min-[320px]:mt-4 lg:mt-0 md:mt-4 sm:mt-0">
                 <label for="" class="text-[14px]">Last Name :</label>
-                <input type="text" class="lg:w-[235px] text-[#757784] bg-transparent p-1 border-b-2 border-[#29379384] outline-1 ">
+                <input type="text" class="lg:w-[235px] md:w-[235px] text-[#757784] bg-transparent p-1 border-b-2 border-[#29379384] outline-1 ">
             </div>
         </div>
 
@@ -45,7 +45,7 @@
             </div>
 
             <!-- country code -->
-            <div  class="flex flex-col min-[302px]:mt-4 lg:mt-0 md:mt-0 sm:mt-0">
+            <div  class="flex flex-col min-[302px]:mt-4 lg:mt-0 md:mt-4 sm:mt-0">
                 <label for="" class="text-[14px]">Country Code :</label>
 
                 <select name="" id="" class="text-[#757784] bg-transparent p-2 border-b-2 border-[#29379384] lg:w-[235px] md:w-[230px] min-[320px]:w-full w-[340px]">

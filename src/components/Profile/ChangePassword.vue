@@ -1,7 +1,7 @@
 <template>
     <!-- change password info form cont... -->
 
-<div class="px-8 lg:py-14 min-[320px]:py-4 lg:mt-[-70px]">
+<div class="lg:px-4 md:px-4 sm:px-4 lg:py-14 min-[320px]:py-2 lg:mt-[-70px] min-[320px]:px-0">
     <!-- change passowrd information div -->
     <div class="flex flex-col w-full mt-10 lg:justify-start min-[320px]:items-center">
         <h1 class="text-[20px] text-[#293793] font-bold">Change Password</h1>
@@ -25,14 +25,14 @@
     <div class="flex justify-between w-full mt-8 lg:flex-row md:flex-col sm:flex-col min-[320px]:flex-col">
 
         <!-- new password -->
-        <div class="flex flex-col min-[320px]:mt-0 lg:mt-0 md:mt-0 sm:mt-0 mr-2">
+        <div class="flex flex-col min-[320px]:mt-0 lg:mt-0 md:mt-0 sm:mt-0">
             <label for="" class="text-[14px]">New Password :</label>
             <input type="password" class="lg:w-[235px] text-[#757784] bg-transparent p-1 border-b-2 border-[#29379384] outline-1 ">
         </div>
         <!-- confirm password -->
-        <div class="flex flex-col min-[320px]:mt-2 lg:mt-0">
+        <div class="flex flex-col min-[320px]:mt-2 lg:mt-0 md:mt-4 sm:mt-4">
             <label for="" class="text-[14px]">Confirm Password :</label>
-            <input type="password" class="text-[#757784] bg-transparent p-1 border-b-2 border-[#29379384] w-[235px] 
+            <input type="password" class="text-[#757784] bg-transparent p-1 border-b-2 border-[#29379384] lg:w-[235px] md:w-[240px] sm:w-[240px] min-[320px]:w-[240px]
             [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none ">
         </div>
 
