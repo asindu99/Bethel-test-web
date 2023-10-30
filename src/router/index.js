@@ -58,6 +58,10 @@ const routes = [
           children : [
             {
               path : '',
+              component:ProfileEdit,
+            },
+            {
+              path : '/profile/profileEdit',
               component : ProfileEdit,
             },
             {

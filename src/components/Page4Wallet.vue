@@ -422,7 +422,15 @@ export default {
             this.walletTableArr = this.walletTableArr.filter((item) => {
                 return wallet !== item
             });
-            this.walletCount = this.walletCount - 1 ;
+            
+            // handdle the walet count
+            if(this.walletTableArr.length == 0){
+                this.walletCount = this.walletTableArr.length
+            }
+            else{
+                this.walletCount = this.walletCount - 1 ;
+            }
+            
         }, 
         addData(){
             this.walletTableArr.push(this.walletAuthModalData);
@@ -430,6 +438,7 @@ export default {
             this.authBlur = '';
             console.log(this.walletTableArr);
             this.walletCount = this.walletCount + 1 ;
+            console.log(this.walletTableArr.length)
         },
         handleSubmit(values){
             console.log(values)

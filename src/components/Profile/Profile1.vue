@@ -35,7 +35,7 @@
             <!-- left side -->
             <div class="lg:flex-col md:flex-row sm:flex-col min-[320px]:flex-col basis-1/4">
                 <div class="flex  items-center justify-center">
-                    <router-link to="/profile">
+                    <router-link to="/profile/profileEdit">
                         <button class="border-[2px] px-3 py-3 rounded-xl bg-[#293793] w-[200px] text-[white] text-[14px]
                                 font-medium hover:text-[#293793] hover:bg-[white] transition-all ease-linear hover:border-[#293793]">Profile
                         </button>
