@@ -22,7 +22,7 @@
     </div>
 
 
-    <div class="flex justify-between w-full mt-4 lg:flex-row md:flex-col sm:flex-col min-[320px]:flex-col">
+    <div class="flex justify-between w-full mt-8 lg:flex-row md:flex-col sm:flex-col min-[320px]:flex-col">
 
         <!-- new password -->
         <div class="flex flex-col min-[320px]:mt-0 lg:mt-0 md:mt-0 sm:mt-0 mr-2">
@@ -38,7 +38,7 @@
 
     </div>
 
-    <div class="flex flex-col justify-between w-full mt-4">
+    <div class="flex flex-col justify-between w-full mt-12">
 
         <router-link to="">
             <div class="flex justify-between w-full mt-4">
