@@ -1,7 +1,7 @@
 <template>
     <!-- change password info form cont... -->
 
-<div class="px-8 lg:py-14 min-[320px]:py-4 lg:mt-[-50px]">
+<div class="px-8 lg:py-14 min-[320px]:py-4 lg:mt-[-70px]">
     <!-- change passowrd information div -->
     <div class="flex flex-col w-full mt-10 lg:justify-start min-[320px]:items-center">
         <h1 class="text-[20px] text-[#293793] font-bold">Change Password</h1>
@@ -40,7 +40,7 @@
 
     <div class="flex flex-col justify-between w-full mt-4">
 
-        <router-link to="/mobile-verify">
+        <router-link to="">
             <div class="flex justify-between w-full mt-4">
                 <button class="p-2 bg-[#293793] rounded-lg px-10  text-white border-[1px] hover:bg-white hover:text-[#293793] hover:border-[1px] hover:border-[#293793] transition-all ease-in-out ">Change Password</button>
             </div>
