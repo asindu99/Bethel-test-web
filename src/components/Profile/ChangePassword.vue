@@ -1,7 +1,7 @@
 <template>
     <!-- change password info form cont... -->
 
-<div class="lg:px-4 md:px-4 sm:px-4 lg:py-14 min-[320px]:py-2 lg:mt-[-70px] min-[320px]:px-0">
+<div class="lg:px-20 md:px-4 sm:px-4 lg:py-14 min-[320px]:py-2 lg:mt-[-70px] min-[320px]:px-0">
     <!-- change passowrd information div -->
     <div class="flex flex-col w-full mt-10 lg:justify-start min-[320px]:items-center">
         <h1 class="text-[20px] text-[#293793] font-bold">Change Password</h1>
