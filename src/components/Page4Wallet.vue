@@ -34,7 +34,7 @@
                     <div class="flex items-center mt-2">
                         <!-- image -->
                         <div class="flex">
-                            <span class=" material-symbols-outlined text-[blue] mr-2
+                            <span class=" material-symbols-outlined text-bethelBlue mr-2
                             ">
                                 wallet
                             </span> 
@@ -51,8 +51,8 @@
                 <!-- right side button -->
                 <div class="flex">
                     <div>
-                        <button @click="openAuthModal" class="border-[2px] px-2 py-2 rounded-xl bg-[#E9983C] w-[150px] text-[white] 
-                        font-medium hover:text-[#E9983C] hover:bg-[white] transition-all ease-linear hover:border-[#E9983C]">Create Wallet</button>
+                        <button @click="openAuthModal" class="border-[2px] px-2 py-2 rounded-xl bg-bethelOrange w-[150px] text-[white] 
+                        font-medium hover:text-bethelOrange hover:bg-[white] transition-all ease-linear hover:border-bethelOrange">Create Wallet</button>
                     </div>
                     
                 </div>
@@ -66,7 +66,7 @@
                 <!-- end of the wallet content section -->
             <!-- text of table -->
             <div class="relative ">
-                <div class="w-[2px] h-[20px] bg-[#293793] absolute top-[5px] "></div>
+                <div class="w-[2px] h-[20px] bg-bethelBlue absolute top-[5px] "></div>
                 <h3 class="ml-2 text-[20px]">Wallet Content</h3> 
             </div>
             
@@ -140,7 +140,7 @@
             <!-- transaction making sec -->
             <div class="">
                 <div class="relative mt-6">
-                <div class="w-[2px] h-[20px] bg-[#293793] absolute top-[5px] "></div>
+                <div class="w-[2px] h-[20px] bg-bethelBlue absolute top-[5px] "></div>
                 <h3 class="ml-2 text-[20px]">Transaction</h3> 
             </div>
             </div>
@@ -189,7 +189,7 @@
             <div class="relative my-10">
                 <!-- table of content -->
                 <!-- text of table -->
-                <div class="w-[2px] h-[20px] bg-[#293793] absolute top-[5px] "></div>
+                <div class="w-[2px] h-[20px] bg-bethelBlue absolute top-[5px] "></div>
                 <h3 class="ml-2 text-[20px]">Transation Details</h3> 
             </div>
             
@@ -245,7 +245,7 @@
                 </button>
                 <!-- end of modal close button -->
 
-                <h3 class="text-[#293793]">Wallet Details</h3>
+                <h3 class="text-bethelBlue">Wallet Details</h3>
             </div>
 
             <!-- wallet information main div -->
@@ -353,10 +353,10 @@
                     <!-- close and okat sec -->
                     <div class="mr-2 mt-4 flex gap-2 justify-end border-t-[2px] py-2">
                         <button @click="closeAuthModal" class="border-[2px] py-2 px-4 rounded-lg bg-[#f7f5f5]">
-                            <h3 class="text-[14px] text-[#293793] ">Close</h3>
+                            <h3 class="text-[14px] text-bethelBlue ">Close</h3>
                         </button>
 
-                        <button @click="addData" type="submit" class="border-[2px] py-2 px-4 rounded-lg bg-[#293793]">
+                        <button @click="addData" type="submit" class="border-[2px] py-2 px-4 rounded-lg bg-bethelBlue">
                             <h3 class="text-[14px] text-[white] ">Okay</h3>
                         </button>
 
@@ -422,7 +422,15 @@ export default {
             this.walletTableArr = this.walletTableArr.filter((item) => {
                 return wallet !== item
             });
-            this.walletCount = this.walletCount - 1 ;
+            
+            // handdle the walet count
+            if(this.walletTableArr.length == 0){
+                this.walletCount = this.walletTableArr.length
+            }
+            else{
+                this.walletCount = this.walletCount - 1 ;
+            }
+            
         }, 
         addData(){
             this.walletTableArr.push(this.walletAuthModalData);
@@ -430,6 +438,7 @@ export default {
             this.authBlur = '';
             console.log(this.walletTableArr);
             this.walletCount = this.walletCount + 1 ;
+            console.log(this.walletTableArr.length)
         },
         handleSubmit(values){
             console.log(values)

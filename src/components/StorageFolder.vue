@@ -38,7 +38,7 @@
                     <!-- topic of upload file  -->
                     <div class="">
                         <div class="relative mt-6">
-                            <div class="w-[2px] h-[20px] bg-[#293793] absolute top-[5px] "></div>
+                            <div class="w-[2px] h-[20px] bg-bethelBlue absolute top-[5px] "></div>
                             <h3 class="ml-2 text-[20px]">Upload File</h3> 
 
 
@@ -112,7 +112,7 @@
                     <!-- recent activites  -->
                     <div class="relative my-10">
                         <!-- table of content -->
-                        <div class="w-[2px] h-[20px] bg-[#293793] absolute top-[5px] "></div>
+                        <div class="w-[2px] h-[20px] bg-bethelBlue absolute top-[5px] "></div>
                         <h3 class="ml-2 text-[20px]">Recent Activities</h3> 
                     </div>
                     

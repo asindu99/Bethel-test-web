@@ -282,7 +282,7 @@
             <div class="mb-10">
              <!-- text of table -->
                 <div class="relative mt-10 ml-10">
-                    <div class="w-[2px] h-[20px] bg-[#293793] absolute top-[5px] "></div>
+                    <div class="w-[2px] h-[20px] bg-bethelBlue absolute top-[5px] "></div>
                     <h3 class="ml-4 text-[20px]">Billing History</h3> 
                 </div>
 

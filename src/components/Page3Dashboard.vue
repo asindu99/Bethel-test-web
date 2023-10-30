@@ -13,8 +13,7 @@
 
                         <!-- right arrow -->
                         <div class="ml-2 flex flex-col">
-                            <h3 class="font-bold text-[17px]">Welcome to the Bethel</h3>
-                            <h3 class="text-[#293793] font-bold text-[16px] ">Future CX</h3>
+                            <h3 class="font-bethelBlue font-bold text-[16px] ">Future CX</h3>
                         </div>
                         
                     </div>
@@ -26,7 +25,7 @@
 
         <!-- 1st caption section -->
         <div class="relative mt-4">
-            <div class="w-[2px] h-[20px] bg-[#293793] absolute top-[5px] "></div>
+            <div class="w-[2px] h-[20px] bg-bethelBlue absolute top-[5px] "></div>
             <h3 class="ml-2 text-[20px]">OverView</h3> 
         </div>
 
@@ -139,7 +138,7 @@
 
         <!-- 2nd caption section -->
         <div class="relative mt-4">
-            <div class="w-[2px] h-[20px] bg-[#293793] absolute top-[5px] "></div>
+            <div class="w-[2px] h-[20px] bg-bethelBlue absolute top-[5px] "></div>
             <h3 class="ml-2 text-[20px]">Data Usage</h3> 
         </div>
 
@@ -293,7 +292,7 @@
 
         <!-- 3rd caption section -->
         <div class="relative mt-6">
-            <div class="w-[2px] h-[20px] bg-[#293793] absolute top-[5px] "></div>
+            <div class="w-[2px] h-[20px] bg-bethelBlue absolute top-[5px] "></div>
             <h3 class="ml-2 text-[20px]">Recent Log Activies</h3> 
         </div>
 
