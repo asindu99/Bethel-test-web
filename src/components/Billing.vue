@@ -43,7 +43,7 @@
     
 
             <!-- pricing plans  -->
-            <div class="flex basis-2/4 px-6">
+            <div class="flex basis-2/4 px-6 mb-10">
                 <div class="flex lg:flex-row min-[320px]:flex-col md:flex-col-2 gap-6">
 
                     <!-- plan-1  -->
@@ -279,16 +279,16 @@
 
             <!-- billing History -->
 
-            <div class="mb-10">
+            <!-- <div class="mb-10"> -->
              <!-- text of table -->
-                <div class="relative mt-10 ml-10">
+                <!-- <div class="relative mt-10 ml-10">
                     <div class="w-[2px] h-[20px] bg-bethelBlue absolute top-[5px] "></div>
                     <h3 class="ml-4 text-[20px]">Billing History</h3> 
-                </div>
+                </div> -->
 
-                <div class="mx-10 mt-4 bg-white rounded-lg px-2 shadow-md">
+                <!-- <div class="mx-10 mt-4 bg-white rounded-lg px-2 shadow-md"> -->
                     <!-- start of the table -->
-                    <table class="table-auto border-separate py-2 w-full rounded-lg">
+                    <!-- <table class="table-auto border-separate py-2 w-full rounded-lg">
                         <thead class="">
                             <tr class="">
                             <th class="text-[14px] border p-3 bg-blue-50">DATE</th>
@@ -306,8 +306,8 @@
                     </table>
 
 
-                </div>
-            </div>
+                </div> -->
+            <!-- </div> -->
 
     </div>
 </template>
