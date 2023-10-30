@@ -33,7 +33,7 @@
         <div class="flex lg:flex-row md:flex-col sm:flex-col min-[320px]:flex-col items-center mt-4 w-full flex-warp gap-2 justify-center">
 
             <!-- buckets  -->
-            <div class="bg-white flex flex-col gap-2 p-4 border-2 w-full h-[80px] items-start justify-center rounded-xl shadow-md 
+            <div class="bg-sidebarBG flex flex-col gap-2 p-4 border-2 w-full h-[80px] items-start justify-center rounded-xl 
             ">
                 <!-- content inside -->
                 <div class="flex items-center gap-3">
@@ -45,9 +45,9 @@
                     </div>
                     <!-- content side -->
                     <div class="flex flex-col">
-                        <h1>Buckets</h1>
+                        <h1 class="text-white">Buckets</h1>
                         <div class="flex items-center">             
-                          <h3 class="text-[13px]">Total Buckets</h3> 
+                          <h3 class="text-[13px] text-white">Total Buckets</h3> 
                           <div class="ml-3 w-[30px] h-[25px] bg-blue-100 rounded-lg text-center justify-center items-center">
                             <h1 class="text-blue-600">2</h1>
                             </div> 
@@ -60,7 +60,7 @@
             <!-- end of the bucket section -->
 
             <!-- object flex -->
-            <div class="bg-white flex flex-col gap-2 p-4 border-2 w-full h-[80px] items-start justify-center rounded-xl shadow-md 
+            <div class="bg-sidebarBG flex flex-col gap-2 p-4 border-2 w-full h-[80px] items-start justify-center rounded-xl  
             ">
                 <!-- content inside -->
                 <div class="flex items-center gap-3">
@@ -74,9 +74,9 @@
                     <!-- end of icons -->
 
                     <!-- content side -->
-                    <div class="flex flex-col">
+                    <div class="flex flex-col text-white">
                         <h1>Objects</h1>
-                        <div class="flex items-center">             
+                        <div class="flex items-center ">             
                           <h3 class="text-[13px]">Total Objects</h3> 
                           <div class="ml-3 w-[30px] h-[25px] bg-blue-100 rounded-lg text-center justify-center items-center">
                             <h1 class="text-blue-600">2</h1>
@@ -89,7 +89,7 @@
             </div>
 
             <!-- Total strorage Section -->
-            <div class="bg-white flex flex-col gap-2 p-4 border-2 w-full h-[80px] items-start justify-center rounded-xl shadow-md 
+            <div class="bg-sidebarBG flex flex-col gap-2 p-4 border-2 w-full h-[80px] items-start justify-center rounded-xl  
             ">
                 <!-- content inside -->
                 <div class="flex items-center gap-3">
@@ -102,7 +102,7 @@
                     <!-- end of icons -->
 
                     <!-- content side -->
-                    <div class="flex flex-col">
+                    <div class="flex flex-col text-white">
                         <h1>Storage</h1>
                         <div class="flex items-center">             
                           <h3 class="text-[13px]">Total Storage</h3> 
@@ -117,10 +117,10 @@
             </div>
 
             <!-- Bandwidth flex -->
-            <div class="bg-white flex flex-col gap-2 p-4 border-2 w-full h-[80px] items-start justify-center rounded-xl shadow-md 
+            <div class="bg-sidebarBG flex flex-col gap-2 p-4 border-2 w-full h-[80px] items-start justify-center rounded-xl  
             ">
                 <!-- content inside -->
-                <div class="flex items-center gap-3">
+                <div class="flex items-center gap-3 text-white">
                     <!-- icon -->
                     <div class="text-iconColor w-[35px] flex items-center justify-center">
                         <span class="material-symbols-outlined scale-[1.5]">
@@ -161,136 +161,8 @@
 
         
         <!-- data usage content flex -->
-        <div class="flex lg:flex-row md:flex-col sm:flex-col min-[320px]:flex-col mt-4 justify-center items-center w-full gap-2 
+        <div class="h-full flex lg:flex-row md:flex-col sm:flex-col min-[320px]:flex-col mt-4 justify-center items-center w-full gap-2 
         ">
-            <!-- data usage flex 1-->
-            <div class="bg-white flex flex-col gap-2 pl-3 pt-4 pb-2 border-2 
-            lg:w-full md:w-[595px] sm:w-[595px] min-[320px]:w-[340px]
-             justify-start items-start rounded-xl shadow-md">
-                <!-- icon and text-->
-                <div class="flex items-center">
-                    <!-- image side -->
-                    <!-- icon -->
-                    <div class="text-iconColor w-[55px] flex items-center justify-center">
-                        <span class="material-symbols-outlined scale-[1.5]">
-                        hard_drive
-                        </span>
-                    </div>
-                    <!-- end of icons -->
-                        <!-- content side -->
-                        <div class="flex flex-col">
-                            <h1>Storage Data Usage</h1>
-                            <div class="flex items-center">             
-                            <h3 class="text-[13px]">Chart View</h3> 
-                            
-                        </div>
-                            
-                    </div>
-                </div>
-                
-
-                <!-- storage chart -->
-                <div class=" flex items-center justify-center mt-2 gap-2
-                lg:w-full md:w-full sm:w-[550px] min-[320px]:w-full 
-                lg:h-[250px] md:h-[300px] sm:h-[300px] min-[320px]:h-[200px] ">
-
-                    <!-- chart view -->
-                    <canvas id="myChart" class="lg:w-full md:w-full sm:w-full min-[320px]:[400px]"></canvas>
-
-                    <!-- storage status extend -->
-
-                    <div class="flex gap-4">
-                        <div class="lg:flex md:flex sm:flex min-[320px]:hidden flex-col gap-12 items-start">
-                            
-                            <!-- total file -->
-                            <div class="flex items-center justify-center">
-                                <!-- icon -->
-                                <div class="text-iconColor w-[35px] flex items-center justify-center mr-1">
-                                    <span class="material-symbols-outlined scale-[1.5]">
-                                    folder
-                                    </span>
-                                </div>
-                                <!-- end of icons -->
-
-                                <div class="flex flex-col items-center justify-center mt-[2px]">
-                                    <h3 class="text-[16px]">Files</h3>
-                                    <h3 class="text-[#8d8d8d] text-[14px] ml-1">13 files</h3>
-                                </div>
-                            </div>
-
-                            <!-- total file -->
-                            <div class="flex items-center justify-center">
-                                <!-- icon -->
-                                <div class="text-iconColor w-[35px] flex items-center justify-center mr-1">
-                                    <span class="material-symbols-outlined scale-[1.5]">
-                                    image
-                                    </span>
-                                </div>
-                                <!-- end of icons -->
-
-                                <div class="flex flex-col items-center justify-center mt-[2px]">
-                                    <h3 class="text-[16px]">Images</h3>
-                                    <h3 class="text-[#8d8d8d] text-[14px] ml-1">13 files</h3>
-                                </div>
-                            </div>
-                            
-                        </div>
-                        <!-- end of the storage status extend -->
-
-
-                        <!-- storage status extend -->
-                        <div class="lg:flex md:flex sm:flex min-[320px]:hidden flex-col gap-12 items-start">
-                            
-                            <!-- total file -->
-                            <div class="flex items-center justify-center">
-                                <!-- icon -->
-                                <div class="text-iconColor w-[35px] flex items-center justify-center mr-1">
-                                    <span class="material-symbols-outlined scale-[1.5]">
-                                    movie
-                                    </span>
-                                </div>
-                                <!-- end of icons -->
-
-                                <div class="flex flex-col items-center justify-center mt-[2px]">
-                                    <h3 class="text-[16px]">Videos</h3>
-                                    <h3 class="text-[#8d8d8d] text-[14px] ml-1">13 files</h3>
-                                </div>
-                            </div>
-
-                            <!-- total file -->
-                            <div class="flex items-center justify-center">
-                                <!-- icon -->
-                                <div class="text-iconColor w-[35px] flex items-center justify-center mr-1">
-                                    <span class="material-symbols-outlined scale-[1.5]">
-                                        <span class="material-symbols-outlined">
-                                        other_admission
-                                        </span>
-                                    </span>
-                                </div>
-                                <!-- end of icons -->
-
-                                <div class="flex flex-col items-center justify-center mt-[2px]">
-                                    <h3 class="text-[16px]">Other</h3>
-                                    <h3 class="text-[#8d8d8d] text-[14px] ml-1">13 files</h3>
-                                </div>
-                            </div>
-                            
-                        </div>
-                        <!-- end of the storage status extend --> 
-                    </div>
-                    
-
-                    
-
-                    
-
-                    
-
-                </div>
-
-            </div>
-            <!-- end of the data usage flex -->
-
             <!-- data usage flex 2 -->
             <div class="bg-white flex flex-col gap-2 pl-3 pt-4 pb-2 border-2 
             lg:w-full md:w-[595px] sm:w-[595px] min-[320px]:w-[340px]
@@ -299,7 +171,7 @@
                 <div class="flex items-center">
                     <!-- image side -->
                     <!-- icon -->
-                    <div class="text-iconColor w-[45px] flex items-center justify-center mr-1">
+                    <div class="text-iconColor2 w-[45px] flex items-center justify-center mr-1">
                         <span class="material-symbols-outlined scale-[1.5]">
                             <span class="material-symbols-outlined">
                             paid
@@ -329,8 +201,140 @@
 
             </div>
             <!-- end of the data usage flex -->
-        </div>
-        <!-- end of the data usage flex -->
+
+             <!-- data usage flex 1-->
+             <div class="bg-white  flex flex-col gap-2 pl-3 pt-4 pb-2 border-2 
+            lg:w-full md:w-[595px] sm:w-[595px] min-[320px]:w-[340px]
+             justify-start items-start rounded-xl shadow-md ">
+                <!-- icon and text-->
+                <div class="flex items-center">
+                    <!-- image side -->
+                    <!-- icon -->
+                    <div class="text-iconColor2 w-[55px] flex items-center justify-center">
+                        <span class="material-symbols-outlined scale-[1.5]">
+                        hard_drive
+                        </span>
+                    </div>
+                    <!-- end of icons -->
+                        <!-- content side -->
+                        <div class="flex flex-col">
+                            <h1>Storage Data Usage</h1>
+                            <div class="flex items-center">             
+                            <h3 class="text-[13px]">Chart View</h3> 
+                            
+                        </div>
+                            
+                    </div>
+                </div>
+                
+
+                <!-- storage chart -->
+                <div class=" flex items-center justify-center mt-2 gap-2
+                lg:w-full md:w-full sm:w-[550px] min-[320px]:w-full 
+                lg:h-[250px] md:h-[300px] sm:h-[300px] min-[320px]:h-[200px] ">
+
+                    <!-- chart view -->
+                    <canvas id="myChart" class="lg:w-full md:w-full sm:w-full min-[320px]:[400px]"></canvas>
+                    
+
+                </div>
+
+            </div>
+            <!-- end of the data usage flex -->
+
+            <!-- storage side exteds -->
+            <div class="flex lg:flex-col md:flex sm:flex-row min-[320px]:hidden items-center justify-start h-full
+            px-4 py-[19px] gap-4 bg-blue-50 lg:w-[500px] md:w-[595px] sm:w-[595px] min-[320px]:w-[340px] shadow-md rounded-xl">
+                
+                <!-- total file -->
+                <div class="flex items-center justify-start w-full" >
+                    <!-- icon -->
+                    <div class="text-iconColor2 w-[35px] flex items-center justify-center mr-1">
+                        <span class="material-symbols-outlined scale-[1.5]">
+                        folder
+                        </span>
+                    </div>
+                    <!-- end of icons -->
+
+                    <div class="flex flex-col items-center justify-center mt-[2px]">
+                        <h3 class="text-[16px]">Files</h3>
+                        <h3 class="text-[#8d8d8d] text-[14px] ml-1">13 files</h3>
+                    </div>
+                </div>
+
+                <!-- total file -->
+                <div class="flex items-center justify-start w-full">
+                    <!-- icon -->
+                    <div class="text-iconColor2 w-[35px] flex items-center justify-center mr-1">
+                        <span class="material-symbols-outlined scale-[1.5]">
+                        image
+                        </span>
+                    </div>
+                    <!-- end of icons -->
+
+                    <div class="flex flex-col items-center justify-center mt-[2px]">
+                        <h3 class="text-[16px]">Images</h3>
+                        <h3 class="text-[#8d8d8d] text-[14px] ml-1">13 files</h3>
+                    </div>
+                </div>
+
+                <!-- total file -->
+                <div class="flex items-center justify-start w-full">
+                    <!-- icon -->
+                    <div class="text-iconColor2 w-[35px] flex items-center justify-center mr-1">
+                        <span class="material-symbols-outlined scale-[1.5]">
+                        image
+                        </span>
+                    </div>
+                    <!-- end of icons -->
+
+                    <div class="flex flex-col items-center justify-center mt-[2px]">
+                        <h3 class="text-[16px]">Images</h3>
+                        <h3 class="text-[#8d8d8d] text-[14px] ml-1">13 files</h3>
+                    </div>
+                </div>
+                
+                
+                <!-- total file -->
+                <div class="flex items-center justify-start w-full">
+                    <!-- icon -->
+                    <div class="text-iconColor2 w-[35px] flex items-center justify-center mr-1">
+                        <span class="material-symbols-outlined scale-[1.5]">
+                        movie
+                        </span>
+                    </div>
+                    <!-- end of icons -->
+
+                    <div class="flex flex-col items-center justify-center mt-[2px]">
+                        <h3 class="text-[16px]">Videos</h3>
+                        <h3 class="text-[#8d8d8d] text-[14px] ml-1">13 files</h3>
+                    </div>
+                </div>
+
+                <!-- total file -->
+                <div class="flex items-center justify-start w-full">
+                    <!-- icon -->
+                    <div class="text-iconColor2 w-[35px] flex items-center justify-center mr-1">
+                        <span class="material-symbols-outlined scale-[1.5]">
+                            <span class="material-symbols-outlined">
+                            other_admission
+                            </span>
+                        </span>
+                    </div>
+                    <!-- end of icons -->
+
+                    <div class="flex flex-col items-center justify-center mt-[2px]">
+                        <h3 class="text-[16px]">Other</h3>
+                        <h3 class="text-[#8d8d8d] text-[14px] ml-1">13 files</h3>
+                    </div>
+                </div>
+                
+            </div>
+            <!-- end of the storage status extend --> 
+            
+            </div>
+            <!-- end of the storage side extends -->
+      
         
 
         <!-- 3rd caption section -->
@@ -369,6 +373,7 @@
 
 <script>
 import Chart from 'chart.js/auto';
+// import Page1Nav from '@/components/Page1Nav.vue';
 
 export default {
     name : 'Page3Dashboard',
@@ -377,6 +382,9 @@ export default {
             paddingClass : ''
         }
     },
+    // components : {
+    //     Page1Nav,
+    // },
     mounted(){
         const ctx = document.getElementById('myChart');
         const ctx1 = document.getElementById('myChart2');
@@ -437,3 +445,13 @@ export default {
     
 }
 </script>
+
+<style scoped>
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 100,
+  'GRAD' 0,
+  'opsz' 24
+}
+</style>

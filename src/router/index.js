@@ -61,7 +61,7 @@ const routes = [
               component:ProfileEdit,
             },
             {
-              path : '/profile/profileEdit',
+              path : '/profile',
               component : ProfileEdit,
             },
             {
@@ -107,7 +107,7 @@ const routes = [
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
     routes,
-    linkExactActiveClass : 'text-[#5669cc] bg-white h-[50px] mr-2 rounded-full items-center  flex '
+    linkExactActiveClass : 'text-[#5669cc] bg-white h-[55px] lg:mx-3 md:mx-0 rounded-full justify-start flex ',
 })
 
 export default router

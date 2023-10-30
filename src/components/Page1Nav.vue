@@ -40,11 +40,11 @@
                     <!-- end of drop down button  -->
 
                     <!-- drop down content -->
-                    <div  v-if="modalStore.dropMenuOC" class="absolute w-[250px] bg-[#191f49] right-0 top-[55px] rounded-lg p-1 border-[2px] animate__animated animate__fadeInDown">
+                    <div  v-if="modalStore.dropMenuOC" class="absolute w-[250px] bg-sidebarBG text-sidebarText right-0 top-[55px] rounded-lg p-1 border-[2px] animate__animated animate__fadeInDown">
 
                         <!-- box 1 -->
                         <RouterLink to="/Mobile-Verification">
-                            <div class="flex flex-col w-full hover:bg-blue-200 px-2 py-2 border-b-2  transition-all ease-in-out">
+                            <div class="flex flex-col w-full px-2 py-2 border-b-2  transition-all ease-in-out">
                                 <h1 class="text-[14px] text-[#c4c9ea]">Bethel User Name</h1>
                                 <h1 class="text-[11px] text-[white] cursor-pointer">behtelnetwork@bethel.mail.com</h1>
                             </div>
@@ -54,7 +54,7 @@
 
                         <!-- box 2 -->
                         <button @click="modalStore.dropMenuOC = false" class="w-full mt-2"><RouterLink to="/" class="active">
-                            <div class="w-full text-sidebarText px-2 rounded-lg transition-all ease-linear">
+                            <div class="w-full  px-2 rounded-lg transition-all ease-linear">
                                 <div class="lg:flex md:flex sm:flex min-[320px]:flex
                                     w-full px-3 my-2 py-2">
                                     <span class=" material-symbols-outlined top-2 right-[20px] mr-2 scale-[.9]
@@ -98,13 +98,13 @@
                         <!-- box 3 -->
                         <RouterLink to="/login">
                             <button @click="modalStore.dropMenuOC = false" class="w-full">
-                                <div class="w-full hover:bg-[#181d42] px-2 rounded-lg transition-all ease-linear">
-                                    <div class="min-[320px]:flex sm:flex lg:flex md:flex w-full px-3 my-2 py-2 hover:text-[white] transition-all ease-linear">
-                                        <span class=" material-symbols-outlined top-2 right-[20px] text-[#E9983C] mr-2 scale-[.9]
+                                <div class="w-full px-2 rounded-lg transition-all ease-linear">
+                                    <div class="min-[320px]:flex sm:flex lg:flex md:flex w-full px-3 my-2 py-2 transition-all ease-linear">
+                                        <span class=" material-symbols-outlined top-2 right-[20px] mr-2 scale-[.9]
                                         ">
                                             logout
                                         </span>  
-                                        <h3 class="text-[15px] text-sidebarText">Log Out </h3>
+                                        <h3 class="text-[15px] ">Log Out </h3>
                             
                                     </div>
                                 </div>
@@ -140,7 +140,7 @@
             leave-active-class="animate__animated animate__fadeOutLeft"
         >
         <div v-if="modalStore.isOpen" class="
-        relative bg-[#161937] lg:w-[220px] md:w-[150px] sm:w-[250px] sm:fixed z-[0]
+        relative bg-sidebarBG lg:w-[220px] md:w-[150px] sm:w-[250px] sm:fixed z-[0]
         min-[320px]:fixed min-[320px]:top-0 min-[320px]:bottom-0 min-[320px]:z-[10] min-[320px]:w-[200px]
          lg:hidden md:hidden flex-col shadow-md pt-4">
             <!-- top menu section -->
