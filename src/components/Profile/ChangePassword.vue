@@ -15,7 +15,7 @@
         <!-- old password -->
         <div class="flex flex-col mr-2">
             <label for="" class="text-[14px]">Old Password :</label>
-            <input type="password" class="lg:w-[460px] md:w-[240px] text-[#757784] bg-transparent p-1 border-b-2 border-[#29379384]">
+            <input type="password" class="lg:w-[550px] md:w-[240px] text-[#757784] bg-transparent p-1 border-b-2 border-[#29379384]">
         </div>
 
 
