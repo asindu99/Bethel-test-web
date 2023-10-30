@@ -147,30 +147,13 @@
             <!-- end of the transaction making  -->
 
             <!-- transation  -->
-            <div class="flex basis-2 flex-wrap justify-center gap-10 mt-4">
+            <div class="flex basis-2 flex-wrap justify-start gap-10 mt-4">
                 <!-- 1st container -->
                 <div class="bg-white flex flex-col items-center justify-center border-[2px] shadow-md py-[20px] px-[60px] 
                 lg:w-[550px] md:w-[550px] sm:w-[550px] min-[320px]:w-[350px] rounded-lg">
                     <!-- bethel logo image -->
                     <div class="py-10">
                         <img src="../img/icons/icon-upload.png" alt="" class="w-[150px] opacity-25">
-                    </div>
-
-                    <!-- input fields -->
-                    <div class="flex flex-col items-center justify-center gap-4">
-                        <input type="text" placeholder="Enter the wallet Address" class="w-[300px] p-2 border-2 rounded-lg border-blue-200">
-                        <input type="text" placeholder="Enter the Amount" class="w-[200px] p-2 border-2 rounded-lg border-blue-200">
-                        <button class="border-[2px] px-2 py-2 rounded-xl bg-[#E9983C] w-[150px] text-[white] 
-                        font-medium hover:text-[#E9983C] hover:bg-[white] transition-all ease-linear hover:border-[#E9983C]">Transfer</button>
-                    </div>
-                </div>
-
-                <!-- 2nd container -->
-                <div class="bg-white flex flex-col items-center justify-center border-[2px] shadow-md py-[20px] px-[60px] 
-                lg:w-[550px] md:w-[550px] sm:w-[550px] min-[320px]:w-[350px] rounded-lg">
-                    <!-- bethel logo image -->
-                    <div class="py-10">
-                        <img src="../img/icons/icon-upload-download.png" alt="" class="w-[150px] opacity-25 ">
                     </div>
 
                     <!-- input fields -->
