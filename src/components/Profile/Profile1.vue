@@ -60,7 +60,7 @@
                     <!-- right-side  -->
                     <div class="flex h-[100%]">
 
-                        <div class="bg-blue-50 rounded-xl shadow-lg py-4 px-10">
+                        <div class="bg-white rounded-2xl shadow-xl py-4 px-10">
                         
                             <Router-view></Router-view>
 

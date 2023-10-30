@@ -1,7 +1,7 @@
 <template>
     <!-- personal info form cont... -->
 
-    <div class="px-10">
+    <div class="px-10 lg:pb-6">
         <!-- personal information div -->
         <div class="flex flex-col w-full mt-8 lg:justify-start min-[320px]:items-center">
             <h1 class="text-[20px] text-[#293793] font-bold">Edit Profile</h1>
@@ -14,7 +14,7 @@
 
         <hr class="w-full mt-2">
 
-        <div class="lg:flex-row md:flex-row sm:flex min-[320px]:flex-col justify-between w-full mt-4">
+        <div class="lg:flex-row md:flex-col sm:flex min-[320px]:flex-col justify-between w-full mt-4">
 
 
             <!-- first name -->
@@ -24,14 +24,14 @@
             </div>
 
             <!-- last name -->
-            <div class="flex flex-col min-[320px]:mt-4 lg:mt-0 md:mt-0 sm:mt-0">
+            <div class="flex flex-col min-[320px]:mt-4 lg:mt-0 md:mt-2 sm:mt-0">
                 <label for="" class="text-[14px]">Last Name :</label>
                 <input type="text" class="lg:w-[235px] text-[#757784] bg-transparent p-1 border-b-2 border-[#29379384] outline-1 ">
             </div>
         </div>
 
 
-        <div class="justify-between w-full mt-4 lg:flex-row md:flex-row sm:flex min-[320px]:flex-col">
+        <div class="justify-between w-full mt-4 lg:flex-row md:flex-col sm:flex min-[320px]:flex-col">
 
             <!-- Select country name -->
             <div  class="flex flex-col">
@@ -44,7 +44,7 @@
                 
             </div>
 
-            <!-- last name -->
+            <!-- country code -->
             <div  class="flex flex-col min-[302px]:mt-4 lg:mt-0 md:mt-0 sm:mt-0">
                 <label for="" class="text-[14px]">Country Code :</label>
 
@@ -58,7 +58,7 @@
 
         <div class="flex justify-between w-full mt-4">
 
-            <!-- first name -->
+            <!-- mobile number -->
             <div class="flex flex-col">
                 <label for="" class="text-[14px]">Mobile Number :</label>
                 <input type="number" class="text-[#757784] bg-transparent p-1 border-b-2 border-[#29379384] w-[235px] 
@@ -80,7 +80,7 @@
 
 <script>
 export default{
-name : 'Signup-second',
+name : 'ProfileEdit',
 data(){
 return {
     selected : {},
