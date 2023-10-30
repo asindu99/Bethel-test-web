@@ -10,7 +10,7 @@ module.exports = {
         'bethelLinear' : 'bg-[linear-gradient(to_right,rgba(240,245,254,1),rgba(240,245,254,1))]',
 
         // sidebar color themes
-        'sidebarBG' : '#0400ff',
+        'sidebarBG' : '#5e5bff',
         'sidebarText' : '#ffffffb5'
       }
     },

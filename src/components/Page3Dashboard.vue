@@ -39,7 +39,7 @@
                 <div class="flex items-center gap-3">
                     <!-- image side -->
                     <div>
-                        <img src="../img/icons/icon-bucket.png" alt="" class="w-[35px] mx-3">
+                        <img src="../img/icons-svg/bucket-svg.svg" alt="" class="w-[35px] mx-3 text-bethelOrange">
                     </div>
                     <!-- content side -->
                     <div class="flex flex-col">
