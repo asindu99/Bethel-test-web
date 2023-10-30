@@ -447,11 +447,5 @@ export default {
 </script>
 
 <style scoped>
-.material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 100,
-  'GRAD' 0,
-  'opsz' 24
-}
+
 </style>
