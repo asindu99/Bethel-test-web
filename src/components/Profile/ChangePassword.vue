@@ -1,74 +1,56 @@
 <template>
+    <!-- personal info form cont... -->
 
-    <div>
-    
-        <!-- form - 2  -->
-    
-            <div class="">
-    
-                <div class="flex flex-row items-start">
-                                <div>
-                                    <img src="../../img/images/password-change.png" alt="" class="w-[35px] h-[35px]">
-                                </div>
-                                <div class="px-2">
-                                    <h1 class="font-['Montserrat'] text-[#293793] text-2xl font-bold">Change Password</h1>
-                                </div>
-                </div>
-    
-    
-                <form action="" class="flex flex-col p-8">
-
-                    <div class="flex lg:flex-row lg:justify-start min-[320px]:justify-start md:justify-start sm:justify-start">
-                                   
-                        <!-- new password  -->
-                        <div class="">
-                                       <label for="" class="font-['Montserrat'] text-[13px]">Old Password</label><br>
-                                       <div class="flex flex-row">
-                                           <input type="password" placeholder="     Old password" class="lg:w-[500px] border-2 border-[#4e78c0] text-[#293793] h-[38px] bg-light opacity-50 rounded-md">
-                                       </div>
-                        </div>
-                    </div>
-    
-                    <div class="flex lg:flex-row min-[320px]:flex-col lg:justify-center min-[320px]:justify-center md:justify-center sm:justify-center py-8">
-                        <!-- Old password -->
-                        <div class="pr-10">
-                            <label for="" class="font-['Montserrat'] text-[13px]">New Password</label><br>
-                            <div class="flex flex-row">
-                                <input type="password" placeholder="  New password" class="border-2 border-[#4e78c0] text-[#293793] h-[38px] bg-light opacity-50 rounded-md">
-                            </div>
-                        </div>
-    
-                        <!-- confirm password  -->
-                        <div class="min-[320px]:pt-8 lg:pt-0">
-                            <label for="" class="font-['Montserrat'] text-[13px]">Confirm Password</label><br>
-                            <div class="flex flex-row">
-                                <input type="password" placeholder="  COnfirm password" class="border-2 border-[#4e78c0] text-[#293793] h-[38px] bg-light opacity-50 rounded-md">
-                            </div>
-                        </div>
-                    </div>
-    
-    
-                    <!-- button  -->
-                    <div class="flex items-center pt-4">
-                        <router-link to="/Mobile-Verification">
-                            <button class="font-['Montserrat'] w-[230px] h-[40px] bg-[#293793] rounded-lg shadow-lg text-white opacity-85 transition duration-300 ease-in-out 
-                            hover:bg-[#293793] hover:text-[#293793] hover:bg-[white] hover:border-[#293793] border-[2px]">Change Password</button>
-                        </router-link>
-                    </div>
-                </form>
-    
-            </div>
-
-        <!-- form - 2  end  -->
-                            
-    
+<div class="px-8 lg:py-14 min-[320px]:py-4 lg:mt-[-50px]">
+    <!-- personal information div -->
+    <div class="flex flex-col w-full mt-10 lg:justify-start min-[320px]:items-center">
+        <h1 class="text-[20px] text-[#293793] font-bold">Change Password</h1>
     </div>
-    
-    </template>
-    
-    <script>
-        export default {
-            
-        }
-    </script>
-    
+
+    <hr class="w-full lg:mt-8 md:mt-2 sm:mt-2 min-[320px]:mt-2">
+
+    <div class="lg:flex-row md:flex-row sm:flex min-[320px]:flex-col justify-between w-full mt-8">
+
+
+        <!-- first name -->
+        <div class="flex flex-col mr-2">
+            <label for="" class="text-[14px]">Old Password :</label>
+            <input type="password" class="lg:w-[460px] md:w-[240px] text-[#757784] bg-transparent p-1 border-b-2 border-[#29379384]">
+        </div>
+
+
+    </div>
+
+
+    <div class="flex justify-between w-full mt-4 lg:flex-row md:flex-col sm:flex-col min-[320px]:flex-col">
+
+        <!-- last name -->
+        <div class="flex flex-col min-[320px]:mt-0 lg:mt-0 md:mt-0 sm:mt-0 mr-2">
+            <label for="" class="text-[14px]">New Password :</label>
+            <input type="password" class="lg:w-[235px] text-[#757784] bg-transparent p-1 border-b-2 border-[#29379384] outline-1 ">
+        </div>
+        <!-- first name -->
+        <div class="flex flex-col min-[320px]:mt-2">
+            <label for="" class="text-[14px]">Confirm Password :</label>
+            <input type="password" class="text-[#757784] bg-transparent p-1 border-b-2 border-[#29379384] w-[235px] 
+            [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none ">
+        </div>
+
+    </div>
+
+    <div class="flex flex-col justify-between w-full mt-4">
+
+        <router-link to="/mobile-verify">
+            <div class="flex justify-between w-full mt-4">
+                <button class="p-2 bg-[#293793] rounded-lg px-10  text-white border-[1px] hover:bg-white hover:text-[#293793] hover:border-[1px] hover:border-[#293793] transition-all ease-in-out ">Change Password</button>
+            </div>
+        </router-link>
+    </div>
+</div>
+</template>
+
+<script>
+export default{
+name : 'Signup-second',
+}
+</script>
