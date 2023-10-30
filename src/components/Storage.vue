@@ -33,10 +33,10 @@
                         <!-- bucket with images -->
                         <div class="flex items-center mt-2">
                             <!-- image -->
-                            <div class="flex">
-                                <span class=" material-symbols-outlined text-[blue] mr-2
+                            <div class="flex w-[30px] justify-center">
+                                <span class=" material-symbols-outlined scale-[1.3] text-iconColor mr-2
                                 ">
-                                    glass_cup
+                                    cleaning_bucket
                                 </span> 
                             </div>
                             <!-- text -->
@@ -66,7 +66,7 @@
                     <!-- end of the bucket content section -->
                 <!-- text of table -->
                 <div class="relative ">
-                    <div class="w-[2px] h-[20px] bg-[#293793] absolute top-[5px] "></div>
+                    <div class="w-[2px] h-[20px] bg-bethelBlue absolute top-[5px] "></div>
                     <h3 class="ml-2 text-[20px]">Bucket History</h3> 
                 </div>
                 
@@ -145,7 +145,7 @@
                 </button>
                 <!-- end of modal close button -->
 
-                <h3 class="text-[#293793]">Create New Bucket</h3>
+                <h3 class="text-bethelBlue">Create New Bucket</h3>
             </div>
 
             <!-- bucket information main div -->
@@ -191,10 +191,10 @@
                     <!-- close and ok sec -->
                     <div class="mr-2 mt-4 flex gap-2 justify-end border-t-[2px] py-2">
                         <button @click="closeAuthModal" class="border-[2px] py-2 px-4 rounded-lg bg-[#f7f5f5]">
-                            <h3 class="text-[14px] text-[#293793] ">Close</h3>
+                            <h3 class="text-[14px] text-bethelBlue ">Close</h3>
                         </button>
 
-                        <button @click="addData" type="submit" class="border-[2px] py-2 px-4 rounded-lg bg-[#293793]">
+                        <button @click="addData" type="submit" class="border-[2px] py-2 px-4 rounded-lg bg-bethelBlue">
                             <h3 class="text-[14px] text-[white] ">Ok</h3>
                         </button>
 

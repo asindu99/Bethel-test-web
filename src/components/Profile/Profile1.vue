@@ -26,42 +26,41 @@
                     </div>
                     <!-- end of the main -->
                 </div>
-            </div>
-        </div>
-        <!-- header-end  -->
 
-        <!-- main-container  -->
-        <div class="flex lg:flex-row md:flex-col sm:flex-col min-[320px]:flex-col py-8">
-            <!-- left side -->
-            <div class="lg:flex-col md:flex-row sm:flex-col min-[320px]:flex-col basis-1/4">
-                <div class="flex  items-center justify-center">
-                    <router-link to="/profile/profileEdit">
-                        <button class="border-[2px] px-3 py-3 rounded-xl bg-[#293793] w-[200px] text-[white] text-[14px]
-                                font-medium hover:text-[#293793] hover:bg-[white] transition-all ease-linear hover:border-[#293793]">Profile
+                <!-- left side -->
+                <div class="flex lg:flex-row md:flex-col sm:flex-col min-[320px]:flex-col">
+                <div class="flex items-center justify-center lg:pl-[-150px] lg:mr-2 md:mr-0 sm:mr-2 min-[320px]:ml-2">
+                    <router-link to="/profile">
+                        <button class="border-[2px] px-1 py-2 rounded-xl hover:bg-[#293793] w-[160px] hover:text-[white] text-[14px]
+                                font-medium text-[#293793] bg-[white] transition-all ease-linear border-[#293793]">Profile
                         </button>
                     </router-link>
                 </div>
 
                 <div class="flex items-center justify-center">
                     <router-link to="/profile/changePassword">
-                        <button class="border-[2px] px-3 py-3 rounded-xl bg-[#293793] w-[200px] text-[white] text-[14px]
-                                font-medium hover:text-[#293793] hover:bg-[white] transition-all ease-linear hover:border-[#293793] mt-2">Change Password
+                        <button class="border-[2px] px-1 py-2 rounded-xl hover:bg-[#293793] w-[160px] hover:text-[white] text-[14px]
+                                font-medium text-[#293793] bg-[white] transition-all ease-linear border-[#293793]">Change Password
                         </button>
                     </router-link>
                 </div>
+                </div>
+                <!-- end of left side  -->
             </div>
-            <!-- end of left side  -->
+        </div>
+        <!-- header-end  -->
+
+        <!-- main-container  -->
+        <div class="flex lg:flex-row md:flex-col sm:flex-col min-[320px]:flex-col pt-8 lg:items-center lg:justify-center
+        md:items-center md:justify-center sm:items-center sm:justify-center min-[320px]:items-center min-[320px]:justify-center">
 
             <!-- main wrap -->
-            <div class="h-[100%]">
-                <!-- form wrap -->
-                <!-- <div class="bg-blue-100 pt-20 px-2 pb-2 rounded-lg shadow-lg min-[320px]:mt-10 lg:mt-0"> -->
+            <div class="h-[100%] px-4 mt-4">
 
                     <!-- right-side  -->
-                    <div class="flex h-[100%] md:px-20">
+                    <div class="flex h-[100%]">
 
-                        <div class="flex items-center justify-center w-full bg-blue-50 rounded-xl shadow-lg lg:px-40 md:px-10 sm:px-10 min-[320px]:px-10
-                        lg:py-12 md:py-10 sm:py-10 min-[320px]:py-10">
+                        <div class="bg-white rounded-2xl shadow-xl py-4 lg:px-6 sm:px-6 min-[320px]:px-6 md:px-20 min-[320px]:mb-10">
                         
                             <Router-view></Router-view>
 
@@ -69,9 +68,6 @@
 
                     </div>
                     <!-- end of right side  -->
-
-                <!-- </div> -->
-                <!-- form wrap end end  -->
             </div>
             <!-- main wrap end  -->
 

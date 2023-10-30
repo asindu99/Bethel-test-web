@@ -10,8 +10,12 @@ module.exports = {
         'bethelLinear' : 'bg-[linear-gradient(to_right,rgba(240,245,254,1),rgba(240,245,254,1))]',
 
         // sidebar color themes
-        'sidebarBG' : '#161937',
-        'sidebarText' : '#7882c3'
+        'sidebarBG' : '#5669cc',
+        'sidebarText' : '#ffffffb5',
+
+        // icon  colors
+        'iconColor' : 'white',
+        'iconColor2' : '#5669cc'
       }
     },
   },

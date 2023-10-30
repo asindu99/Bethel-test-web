@@ -33,7 +33,7 @@
 
          <!-- text of table -->
          <div class="relative mt-10">
-                <div class="w-[2px] h-[20px] bg-[#293793] absolute top-[5px] "></div>
+                <div class="w-[2px] h-[20px] bg-bethelBlue absolute top-[5px] "></div>
                 <h3 class="ml-2 text-[20px]">Access Keys Details</h3> 
             </div>
 
@@ -69,7 +69,7 @@
         <div>
             <!-- S3 API Endpoint -->
             <div class="relative mt-10 ">
-                <div class="w-[2px] h-[20px] bg-[#293793] absolute top-[5px] "></div>
+                <div class="w-[2px] h-[20px] bg-bethelBlue absolute top-[5px] "></div>
                 <h3 class="ml-2 text-[20px] font-medium">S3 API Endpoint</h3> 
             </div>  
             <!-- end of the S3 API Endpoint -->
@@ -83,7 +83,7 @@
                      type="text"
                       class="w-[250px] border-[2px] rounded-md px-3" placeholder="https://s3.filebase.com">
                     <!-- button -->
-                    <button @click.prevent="copy" class="text-[15px] text-[#293793]"><div class="flex items-center gap-2 border-[2px] px-1 py-1 rounded-lg bg-white">
+                    <button @click.prevent="copy" class="text-[15px] text-bethelBlue"><div class="flex items-center gap-2 border-[2px] px-1 py-1 rounded-lg bg-white">
                         Copy
                         <img src="../img/icons/icons-copy.png" alt="" class="w-[20px] h-[20px]">
 
@@ -98,7 +98,7 @@
             <div>
 
                 <div class="relative mt-10 ">
-                    <div class="w-[2px] h-[20px] bg-[#293793] absolute top-[4px] "></div>
+                    <div class="w-[2px] h-[20px] bg-bethelBlue absolute top-[4px] "></div>
                     <h3 class="ml-2 text-[20px] font-medium">IPFS Pinning Service API Endpoint</h3> 
                 </div> 
 
@@ -110,7 +110,7 @@
                     
                     type="text" class="w-[250px] border-[2px] rounded-md px-3">
                     <!-- button -->
-                    <button @click.prevent="copy2" class="text-[15px] text-[#293793]"><div class="flex items-center gap-2 border-[2px] px-1 py-1 rounded-lg bg-white">
+                    <button @click.prevent="copy2" class="text-[15px] text-bethelBlue"><div class="flex items-center gap-2 border-[2px] px-1 py-1 rounded-lg bg-white">
                         Copy
                         <img src="../img/icons/icons-copy.png" alt="" class="w-[20px] h-[20px]">
 
@@ -136,8 +136,8 @@ export default {
     name : 'Page5AccessKey',
     data(){
         return{
-            text : 'https://api.filebase.io/v1/ipfs',
-            text2 :'https://api.filebase.io/v1/ipfsasda'
+            text : 'https://api.bethel.io/v1/ipfs',
+            text2 :'https://api.bethel.io/v1/ipfsasda'
         }
     },
 
