@@ -51,6 +51,6 @@
 
 <script>
 export default{
-name : 'Signup-second',
+name : 'ChangePassword',
 }
 </script>

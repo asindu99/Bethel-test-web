@@ -80,7 +80,7 @@
 
 <script>
 export default{
-name : 'Signup-second',
+name : 'ProfileEdit',
 data(){
 return {
     selected : {},
