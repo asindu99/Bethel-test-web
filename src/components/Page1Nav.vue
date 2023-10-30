@@ -83,6 +83,19 @@
                         <!-- end box 3 -->
 
                         <!-- box 3 -->
+                        <a href="#" @click="modalStore.dropMenuOC = false"> <div class="w-full  px-2 rounded-lg transition-all ease-linear">
+                            <div class="min-[320px]:flex sm:flex lg:flex md:flex w-full px-3  py-2">
+                                <span class=" material-symbols-outlined top-2 right-[20px] text-[#7882c3] mr-2 scale-[.9]
+                                ">
+                                    switch_account
+                                </span>  
+                                <h3 class="text-[15px] text-[#7882c3]">Accounts </h3>
+                            
+                            </div>
+                        </div></a> 
+                        <!-- end box 3 -->
+
+                        <!-- box 3 -->
                         <RouterLink to="/login">
                             <button @click="modalStore.dropMenuOC = false" class="w-full">
                                 <div class="w-full hover:bg-[#181d42] px-2 rounded-lg transition-all ease-linear">
