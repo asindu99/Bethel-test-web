@@ -33,10 +33,10 @@
                         <!-- bucket with images -->
                         <div class="flex items-center mt-2">
                             <!-- image -->
-                            <div class="flex">
-                                <span class=" material-symbols-outlined text-[blue] mr-2
+                            <div class="flex w-[30px] justify-center">
+                                <span class=" material-symbols-outlined scale-[1.3] text-iconColor mr-2
                                 ">
-                                    glass_cup
+                                    cleaning_bucket
                                 </span> 
                             </div>
                             <!-- text -->
