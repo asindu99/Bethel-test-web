@@ -1,7 +1,7 @@
 <template>
     <!-- personal info form cont... -->
 
-    <div class="px-10">
+    <div class="px-10 lg:pb-6">
         <!-- personal information div -->
         <div class="flex flex-col w-full mt-8 lg:justify-start min-[320px]:items-center">
             <h1 class="text-[20px] text-[#293793] font-bold">Edit Profile</h1>
