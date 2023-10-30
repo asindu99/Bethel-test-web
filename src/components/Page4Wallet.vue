@@ -34,7 +34,7 @@
                     <div class="flex items-center mt-2">
                         <!-- image -->
                         <div class="flex">
-                            <span class=" material-symbols-outlined text-bethelBlue mr-2
+                            <span class=" material-symbols-outlined text-iconColor mr-2
                             ">
                                 wallet
                             </span> 

@@ -38,8 +38,10 @@
                 <!-- content inside -->
                 <div class="flex items-center gap-3">
                     <!-- image side -->
-                    <div>
-                        <img src="../img/icons/icon-bucket.png" alt="" class="w-[35px] mx-3">
+                    <div class="text-iconColor w-[35px] flex items-center justify-center">
+                        <span class="material-symbols-outlined scale-[1.5]">
+                        cleaning_bucket
+                        </span>
                     </div>
                     <!-- content side -->
                     <div class="flex flex-col">
@@ -62,10 +64,15 @@
             ">
                 <!-- content inside -->
                 <div class="flex items-center gap-3">
-                    <!-- image side -->
-                    <div>
-                        <img src="../img/icons/icon-file.png" alt="" class="w-[35px] mx-3">
+
+                    <!-- icon -->
+                    <div class="text-iconColor w-[35px] flex items-center justify-center">
+                        <span class="material-symbols-outlined scale-[1.5]">
+                        description
+                        </span>
                     </div>
+                    <!-- end of icons -->
+
                     <!-- content side -->
                     <div class="flex flex-col">
                         <h1>Objects</h1>
@@ -86,10 +93,14 @@
             ">
                 <!-- content inside -->
                 <div class="flex items-center gap-3">
-                    <!-- image side -->
-                    <div>
-                        <img src="../img/icons/icon-storage.png" alt="" class="w-[35px] mx-3">
+                    <!-- icon -->
+                    <div class="text-iconColor w-[35px] flex items-center justify-center">
+                        <span class="material-symbols-outlined scale-[1.5]">
+                        hard_drive
+                        </span>
                     </div>
+                    <!-- end of icons -->
+
                     <!-- content side -->
                     <div class="flex flex-col">
                         <h1>Storage</h1>
@@ -110,10 +121,14 @@
             ">
                 <!-- content inside -->
                 <div class="flex items-center gap-3">
-                    <!-- image side -->
-                    <div>
-                        <img src="../img/icons/icon-bandwidth.png" alt="" class="w-[35px] mx-3">
+                    <!-- icon -->
+                    <div class="text-iconColor w-[35px] flex items-center justify-center">
+                        <span class="material-symbols-outlined scale-[1.5]">
+                        wifi
+                        </span>
                     </div>
+                    <!-- end of icons -->
+
                     <!-- content side -->
                     <div class="flex flex-col">
                         <h1>Bandwidth</h1>
@@ -153,11 +168,15 @@
             lg:w-full md:w-[595px] sm:w-[595px] min-[320px]:w-[340px]
              justify-start items-start rounded-xl shadow-md">
                 <!-- icon and text-->
-                <div class="flex items-start">
+                <div class="flex items-center">
                     <!-- image side -->
-                    <div class="mr-2">
-                        <img src="../img/icons/icon-storage.png" alt="" class="w-[35px] mx-3">
+                    <!-- icon -->
+                    <div class="text-iconColor w-[55px] flex items-center justify-center">
+                        <span class="material-symbols-outlined scale-[1.5]">
+                        hard_drive
+                        </span>
                     </div>
+                    <!-- end of icons -->
                         <!-- content side -->
                         <div class="flex flex-col">
                             <h1>Storage Data Usage</h1>
@@ -180,29 +199,37 @@
 
                     <!-- storage status extend -->
 
-                    <div class="flex gap-2">
+                    <div class="flex gap-4">
                         <div class="lg:flex md:flex sm:flex min-[320px]:hidden flex-col gap-12 items-start">
                             
                             <!-- total file -->
-                            <div class="flex items-center">
-                                <div class="mr-1">
-                                    <img src="../img/icons/icon-file.png" alt="" class="w-[35px]">
+                            <div class="flex items-center justify-center">
+                                <!-- icon -->
+                                <div class="text-iconColor w-[35px] flex items-center justify-center mr-1">
+                                    <span class="material-symbols-outlined scale-[1.5]">
+                                    folder
+                                    </span>
                                 </div>
+                                <!-- end of icons -->
 
                                 <div class="flex flex-col items-center justify-center mt-[2px]">
-                                    <h3 class="text-[16px]">Files :</h3>
+                                    <h3 class="text-[16px]">Files</h3>
                                     <h3 class="text-[#8d8d8d] text-[14px] ml-1">13 files</h3>
                                 </div>
                             </div>
 
                             <!-- total file -->
-                            <div class="flex items-center">
-                                <div class="mr-1">
-                                    <img src="../img/icons/icon-image.png" alt="" class="w-[35px]">
+                            <div class="flex items-center justify-center">
+                                <!-- icon -->
+                                <div class="text-iconColor w-[35px] flex items-center justify-center mr-1">
+                                    <span class="material-symbols-outlined scale-[1.5]">
+                                    image
+                                    </span>
                                 </div>
+                                <!-- end of icons -->
 
                                 <div class="flex flex-col items-center justify-center mt-[2px]">
-                                    <h3 class="text-[16px]">Images :</h3>
+                                    <h3 class="text-[16px]">Images</h3>
                                     <h3 class="text-[#8d8d8d] text-[14px] ml-1">13 files</h3>
                                 </div>
                             </div>
@@ -215,25 +242,35 @@
                         <div class="lg:flex md:flex sm:flex min-[320px]:hidden flex-col gap-12 items-start">
                             
                             <!-- total file -->
-                            <div class="flex items-center">
-                                <div class="mr-1">
-                                    <img src="../img/icons/icon-play.png" alt="" class="w-[35px]">
+                            <div class="flex items-center justify-center">
+                                <!-- icon -->
+                                <div class="text-iconColor w-[35px] flex items-center justify-center mr-1">
+                                    <span class="material-symbols-outlined scale-[1.5]">
+                                    movie
+                                    </span>
                                 </div>
+                                <!-- end of icons -->
 
                                 <div class="flex flex-col items-center justify-center mt-[2px]">
-                                    <h3 class="text-[16px]">Videos :</h3>
+                                    <h3 class="text-[16px]">Videos</h3>
                                     <h3 class="text-[#8d8d8d] text-[14px] ml-1">13 files</h3>
                                 </div>
                             </div>
 
                             <!-- total file -->
-                            <div class="flex items-center">
-                                <div class="mr-1">
-                                    <img src="../img/icons/icon-other.png" alt="" class="w-[35px]">
+                            <div class="flex items-center justify-center">
+                                <!-- icon -->
+                                <div class="text-iconColor w-[35px] flex items-center justify-center mr-1">
+                                    <span class="material-symbols-outlined scale-[1.5]">
+                                        <span class="material-symbols-outlined">
+                                        other_admission
+                                        </span>
+                                    </span>
                                 </div>
+                                <!-- end of icons -->
 
                                 <div class="flex flex-col items-center justify-center mt-[2px]">
-                                    <h3 class="text-[16px]">Others :</h3>
+                                    <h3 class="text-[16px]">Other</h3>
                                     <h3 class="text-[#8d8d8d] text-[14px] ml-1">13 files</h3>
                                 </div>
                             </div>
@@ -261,9 +298,15 @@
                 <!-- icon and text-->
                 <div class="flex items-center">
                     <!-- image side -->
-                <div class="mr-2">
-                    <img src="../img/icons/icon-transaction.png" alt="" class="w-[35px] mx-3">
+                    <!-- icon -->
+                    <div class="text-iconColor w-[45px] flex items-center justify-center mr-1">
+                        <span class="material-symbols-outlined scale-[1.5]">
+                            <span class="material-symbols-outlined">
+                            paid
+                            </span>
+                        </span>
                     </div>
+                    <!-- end of icons -->
                     <!-- content side -->
                     <div class="flex flex-col">
                         <h1>Trasactions </h1>
