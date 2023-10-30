@@ -14,7 +14,8 @@ module.exports = {
         'sidebarText' : '#ffffffb5',
 
         // icon  colors
-        'iconColor' : '#293793'
+        'iconColor' : 'white',
+        'iconColor2' : '#5669cc'
       }
     },
   },

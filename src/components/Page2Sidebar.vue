@@ -2,17 +2,18 @@
     <div class="flex">
         <!-- main side bar  -->
         <div class=" bg-sidebarBG text-sidebarText md:fixed bottom-0 md:flex z-[10]
-        lg:w-[250px] md:w-[180px] sm:hidden gap-2
+        lg:w-[250px] md:w-[190px] sm:hidden gap-2
         min-[320px]:hidden lg:fixed md:top-0 
          flex-col">
 
          <!-- left side -->
-        <div class="flex items-center w-[250px] py-4 pl-4">
-                <img src="../img/logos/bethellogo.png" alt="" class="w-[30px]">
-                <h1 class="font-medium ml-1 text-[18px] text-bethelBlue">BETHEL</h1>
+        <div class="flex items-center w-[250px] py-4 pl-4 ml-[30px]">
+                <img src="../img/logos/bethel-white.png" alt="" class="w-[23px]">
+                <h1 class="font-bold ml-1 text-[18px] text-sidebarText">BETHEL</h1>
         </div>
 
 
+        <!-- sidebar content -->
         <div class="flex flex-col justify-evenly h-full ">
             <!-- top of sidebar content -->
             <div class="">
@@ -20,8 +21,8 @@
                 <div class="flex flex-col gap-2">
                     <!-- menu item -->
                     <RouterLink to="/" class="">
-                        <div class=" lg:flex md:flex sm:flex min-[320px]:flex
-                        w-full px-3  my-2 py-2  transition-all ease-linear">
+                        <div class="lg:ml-7 md:ml-6 lg:flex md:flex sm:flex min-[320px]:flex
+                        w-full lg:px-3 md:px-1  my-2 py-2  transition-all ease-linear">
                             <span class=" material-symbols-outlined top-2 right-[20px] mr-2
                             ">
                                 grid_view
@@ -35,8 +36,8 @@
 
                     <!-- menu item -->
                     <router-link to="/storage">
-                        <div class=" lg:flex md:flex sm:flex min-[320px]:flex
-                        w-full px-3  my-2 py-2  transition-all ease-linear">
+                        <div class="lg:ml-7 md:ml-6 lg:flex md:flex sm:flex min-[320px]:flex
+                        w-full lg:px-3 md:px-1  my-2 py-2  transition-all ease-linear">
                             <span class=" material-symbols-outlined top-2 right-[20px] mr-2
                             ">
                                 hard_drive
@@ -50,8 +51,8 @@
 
                     <!-- menu item -->
                     <router-link to="/wallet">
-                        <div class=" lg:flex md:flex sm:flex min-[320px]:flex
-                        w-full px-3  my-2 py-2  transition-all ease-linear">
+                        <div class="lg:ml-7 md:ml-6 lg:flex md:flex sm:flex min-[320px]:flex
+                        w-full lg:px-3 md:px-1  my-2 py-2  transition-all ease-linear">
                             <span class=" material-symbols-outlined top-2 right-[20px]  mr-2
                             ">
                                 wallet
@@ -67,7 +68,7 @@
 
                     <!-- menu item -->
                     <RouterLink to="/accesskey" class="flex justify-center items-center">
-                        <div class=" min-[320px]:flex lg:flex sm:flex md:flex w-full px-3 my-2 py-2  transition-all ease-linear hidden">
+                        <div class="lg:ml-7  md:ml-4 min-[320px]:flex lg:flex sm:flex md:flex w-full px-3 my-2 py-2  transition-all ease-linear hidden">
                             <span class=" material-symbols-outlined top-2 right-[20px] mr-2
                             ">
                                 key
@@ -102,7 +103,7 @@
 
                 <!-- menu item -->
                 <router-link to="/profile">
-                    <div class=" min-[320px]:flex sm:flex lg:flex md:flex w-full px-3  my-2 py-2  transition-all ease-linear">
+                    <div class="lg:ml-7 md:ml-6 min-[320px]:flex sm:flex lg:flex md:flex w-full px-3  my-2 py-2 ">
                         <span class=" material-symbols-outlined top-2 right-[20px] mr-2
                         ">
                             person_pin
@@ -118,7 +119,7 @@
 
                 <!-- menu item -->
                 <router-link to="/billing">
-                    <div class=" min-[320px]:flex sm:flex lg:flex md:flex w-full px-3  my-2 py-2  transition-all ease-linear">
+                    <div class="lg:ml-7 md:ml-6  min-[320px]:flex sm:flex lg:flex md:flex w-full px-3  my-2 py-2 ">
                         <span class=" material-symbols-outlined top-2 right-[20px]  mr-2
                         ">
                             attach_money
@@ -133,7 +134,7 @@
 
                     <!-- menu item -->
                     <router-link to="/login">
-                        <div class="hover:bg-[#181d42] min-[320px]:flex sm:flex lg:flex md:flex w-full px-3 hover:bg-[] my-2 py-2  transition-all ease-linear">
+                        <div class="lg:ml-7 md:ml-6 min-[320px]:flex sm:flex lg:flex md:flex w-full px-3 hover:bg-[] my-2 py-2">
                             <span class=" material-symbols-outlined top-2 right-[20px]  mr-2
                             ">
                                 logout
@@ -153,7 +154,7 @@
             <!-- logout -->
             <!-- menu item -->
             <a href="https://docs.bethel.network/" class="active" target="_blank">
-                        <div class="hover:text-[#E9983C] min-[320px]:flex sm:flex lg:flex md:flex w-full px-3 bg-[#6048ae51] my-2 py-2  transition-all ease-linear
+                        <div class="lg:ml-7 md:ml-6 min-[320px]:flex sm:flex lg:flex md:flex w-full px-3 my-2 py-2
                         absolute bottom-2">
                             <span class=" material-symbols-outlined top-2 right-[20px] mr-2
                             
@@ -168,13 +169,14 @@
                     </a>
                     <!-- end of the menu item -->
         </div>
+        <!-- end of the sidebar content -->
             
 
             
         </div>
         <!-- end of the main side bar -->
 
-        <div class=" flex justify-center bg-[#f7f1f1c2] z-0 lg:w-[100%] lg:mx-[0px] mt-[70px] h-full 
+        <div class=" flex justify-center bg-[#ededed] z-0 lg:w-[100%] lg:mx-[0px] mt-[70px] h-full 
         md:px-[5px] sm:w-full min-[320px]:w-full min-[320px]:ml-0">
 
 
