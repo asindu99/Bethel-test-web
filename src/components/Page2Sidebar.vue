@@ -1,15 +1,15 @@
 <template>
     <div class="flex">
         <!-- main side bar  -->
-        <div class=" bg-sidebarBG text-sidebarText md:fixed bottom-0 md:flex z-[10]
+        <div class=" bg-sidebarBG text-sidebarText md:fixed bottom-0 md:flex z-[100] relative
         lg:w-[250px] md:w-[190px] sm:hidden gap-2
         min-[320px]:hidden lg:fixed md:top-0 
-         flex-col">
+         flex-col" :class="sidebarWidth">
 
          <!-- left side -->
-        <div class="flex items-center w-[250px] py-4 pl-4 ml-[30px]">
+        <div class="flex items-center w-[250px] py-4 pl-4 ml-[25px]">
                 <img src="../img/logos/bethel-white.png" alt="" class="w-[23px]">
-                <h1 class="font-bold ml-1 text-[18px] text-white">BETHEL</h1>
+                <h1 class="font-bold ml-1 text-[18px] text-white" :class="sidebarHideShow">BETHEL</h1>
         </div>
 
 
@@ -27,7 +27,7 @@
                             ">
                                 grid_view
                             </span>  
-                            <h3>Dashboard</h3>
+                            <h3 :class="sidebarHideShow">Dashboard</h3>
                         
                         </div>
 
@@ -42,7 +42,7 @@
                             ">
                                 hard_drive
                             </span>  
-                            <h3>Storage </h3>
+                            <h3 :class="sidebarHideShow">Storage </h3>
                         
                         </div>
                     </router-link>
@@ -57,7 +57,7 @@
                             ">
                                 wallet
                             </span>  
-                            <h3>Wallet </h3>
+                            <h3 :class="sidebarHideShow">Wallet </h3>
                         
                         </div>
 
@@ -73,7 +73,7 @@
                             ">
                                 key
                             </span>  
-                            <h3>Access Keys </h3>
+                            <h3 :class="sidebarHideShow">Access Keys </h3>
                         
                         </div>
 
@@ -108,7 +108,7 @@
                         ">
                             person_pin
                         </span>  
-                        <h3>Profile </h3>
+                        <h3 :class="sidebarHideShow">Profile </h3>
                     
                     </div>
 
@@ -124,7 +124,7 @@
                         ">
                             attach_money
                         </span>  
-                        <h3>Billing </h3>
+                        <h3 :class="sidebarHideShow">Billing </h3>
                     
                     </div>
 
@@ -139,7 +139,7 @@
                             ">
                                 logout
                             </span>  
-                            <h3>Log Out </h3>
+                            <h3 :class="sidebarHideShow">Log Out </h3>
                         
                         </div>
 
@@ -161,7 +161,7 @@
                             ">
                             support
                             </span>  
-                            <h3 c>Help </h3>
+                            <h3 :class="sidebarHideShow">Help </h3>
                         
                         </div>
 
@@ -170,6 +170,17 @@
                     <!-- end of the menu item -->
         </div>
         <!-- end of the sidebar content -->
+
+        <!-- sidebar hide show button -->
+        <div class="absolute top-1 right-2">
+            <button>
+                <span class="material-symbols-outlined">
+                sync_alt
+                </span>
+            </button>
+            
+        </div>
+        <!-- end of side bar hide show button -->
             
 
             
@@ -181,8 +192,8 @@
 
 
             <!-- router view must be here -->
-            <div @click="asideHide"  class="w-full h-full mx-2 lg:pl-[240px] md:pl-[180px] " :class="modalStore.onBlur"> 
-                <router-view class=""></router-view> 
+            <div @click="asideHide"  class="w-full h-full mx-2 lg:pl-[240px] " :class="modalStore.onBlur, paddingMD"> 
+                <router-view class="scale-[1]"></router-view> 
             </div>
             <!-- end of the router view here -->
 
@@ -209,7 +220,9 @@ export default{
 
     data(){
         return{
-            
+            paddingMD : 'md:pl-[180px]',
+            sidebarHideShow : '',
+            sidebarWidth : ''
         }
     },
     methods : {
