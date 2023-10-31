@@ -292,7 +292,7 @@
 
                                 <div class="flex flex-col items-center justify-center mt-[2px]">
                                     <h3 class="text-[14px]">Files</h3>
-                                    <h3 class="text-[#8d8d8d] text-[12px] ml-1">13 files</h3>
+                                    <h3 class="text-[#8d8d8d] text-[12px] ml-1">0 files</h3>
                                 </div>
                             </div>
 
@@ -308,7 +308,7 @@
 
                                 <div class="flex flex-col items-center justify-center mt-[2px]">
                                     <h3 class="text-[14px]">Images</h3>
-                                    <h3 class="text-[#8d8d8d] text-[12px] ml-1">13 files</h3>
+                                    <h3 class="text-[#8d8d8d] text-[12px] ml-1">0 files</h3>
                                 </div>
                             </div>
 
@@ -324,7 +324,7 @@
 
                                 <div class="flex flex-col items-center justify-center mt-[2px]">
                                     <h3 class="text-[14px]">Musics</h3>
-                                    <h3 class="text-[#8d8d8d] text-[12px] ml-1">13 files</h3>
+                                    <h3 class="text-[#8d8d8d] text-[12px] ml-1">0 files</h3>
                                 </div>
                             </div>
                             
@@ -341,7 +341,7 @@
 
                                 <div class="flex flex-col items-center justify-center mt-[2px]">
                                     <h3 class="text-[14px]">Videos</h3>
-                                    <h3 class="text-[#8d8d8d] text-[12px] ml-1">13 files</h3>
+                                    <h3 class="text-[#8d8d8d] text-[12px] ml-1">0 files</h3>
                                 </div>
                             </div>
 
@@ -379,12 +379,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                    <td class="lg:text-[12px] md:text-[12px] sm:text-[12px] min-[320px]:text-[10px] text-center bg-white border p-3">User Name </td>
-                    <td class="lg:text-[12px] md:text-[12px] sm:text-[12px] min-[320px]:text-[10px] text-center bg-white border p-3">Ipv4 / Ipv6</td>
-                    <td class="lg:text-[12px] md:text-[12px] sm:text-[12px] min-[320px]:text-[10px] text-center bg-white border p-3">Loged In</td>
-                    <td class="lg:text-[12px] md:text-[12px] sm:text-[12px] min-[320px]:text-[10px] text-center bg-white border p-3">2023-10-14 14:00</td>
-                    </tr>
+                    
                 </tbody>
             </table>
 
@@ -419,7 +414,7 @@ export default {
             labels: ['Used', 'Remaining'],
             datasets: [{
                 label: 'Storage',
-                data: [300, 100],
+                data: [0,1],
                 backgroundColor: [
             'rgb(86, 105, 204)',
             'rgb(233, 152, 60)',
@@ -448,7 +443,7 @@ export default {
       labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun','Jul','Aug', 'Sep','Oct','Nov','Dec'],
       datasets: [{
         label: 'Transactions',
-        data: [12, 19, 3, 5, 2, 3,4,4,6,7,8,20],
+        data: [],
         borderWidth: 2,
         backgroundColor: [
             'rgb(86, 105, 204)'
@@ -464,7 +459,7 @@ export default {
       labels: ['files', 'videos', 'images', 'musics',],
       datasets: [{
         label: 'Used (GB)',
-        data: [12, 19, 3, 5],
+        data: [],
         borderWidth: 2,
         backgroundColor: [
             'rgb(86, 105, 204)'

@@ -1,14 +1,14 @@
 <template>
     <div class="fixed w-full">
         <!-- start of the nav bar -->
-        <nav class="flex justify-between lg:py-2 lg:px-10 bg-white z-[100]
+        <nav class="flex justify-between lg:py-2 lg:px-10 bg-white shadow-md z-[100]
         md:py-2 md:px-[5px]
         sm:py-2 sm:px-10
         min-[320px]:py-2 min-[320px]:px-4 gap-4 ">
             <!-- left side -->
-            <div class="flex items-center w-[50px] py-2">
+            <div class="flex items-center w-[50px] py-2 ">
                 <img src="../img/logos/bethellogo.png" alt="" class="w-[30px]">
-                <h1 class="font-medium ml-1 lg:text-[18px] md:text-[18px] sm:text-[18px] min-[320px]:text-[12px] text-bethelBlue">BETHEL</h1>
+                <h1 class="font-medium ml-1 lg:text-[18px] md:text-[18px] sm:text-[18px] min-[320px]:text-[12px] text-bethelBlue"></h1>
             </div>
 
             <!-- middle side -->
@@ -24,9 +24,12 @@
             lg:w-[300px] md:w-[300px] sm:w-[300px] min-[320px]:w-[500px]
              basis-[42%] gap-2 justify-end">
 
-                <router-link to="/wallet"><button class="mr-2 text-[10px] border-[2px] rounded-full p-[7px] px-[18px]
-                bg-sidebarBG text-white border-sidebarBG
-                hover:bg-white hover:text-sidebarBG transition-all ease-linear sm:hidden min-[320px]:hidden lg:flex md:flex">Connect Wallet</button></router-link>
+                <router-link to="/wallet">
+                    <button class="mr-2 text-[10px] border-[2px] rounded-xl p-[7px] px-[18px]
+                     bg-sidebarBG text-white border-sidebarBG
+                     hover:bg-white hover:text-sidebarBG transition-all ease-linear sm:hidden min-[320px]:hidden lg:flex md:flex">Connect Wallet
+                    </button>
+                </router-link>
                 
                 <img src="../img/people/CraigState.jpg" alt="" class="lg:flex md:flex sm:flex min-[320px]:hidden
                 w-[45px] h-[45px] rounded-[50px] border-[1px] border-sidebarBG">
