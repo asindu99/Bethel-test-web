@@ -86,7 +86,7 @@
                         </thead>
                         <tbody>
                             <tr v-for="bucket in bucketTableArr" :key="bucket.Baddress">
-                            <td class="text-[12px] text-center bg-white border p-3 cursor-pointer hover:text-[#E9983C] font-bold"><router-link to="/bucketFolder"> {{bucket.bucketName}} </router-link></td>
+                            <td class="text-[12px] text-center bg-white border p-3 cursor-pointer hover:text-sidebarBG font-bold"><router-link to="/bucketFolder"> {{bucket.bucketName}} </router-link></td>
                             <td class="text-[12px] text-center bg-white border p-3">{{bucket.bucketAccess}}</td>
                             <td class="text-[12px] text-center bg-white border p-3">{{bucket.bucketNetwork}}</td>
                             <td class="text-[12px] text-center bg-white border p-3">{{bucket.bucketDateCreated}}</td>
@@ -103,12 +103,15 @@
                                             </div>
                                         </button>
                                         
+                                        
                                     </div> -->
+
+                                    <button @click="deleteBucketData(bucket)">Delete</button>
                                 <!-- end of the auth modal -->
                                 </div>
-                                <button>
+                                <!-- <button>
                                     <span class="material-symbols-outlined">more_vert</span>
-                                </button>
+                                </button> -->
                             </td>
                             <!-- more button end --> 
                             </tr>
