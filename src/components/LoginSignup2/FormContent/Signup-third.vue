@@ -1,7 +1,7 @@
 <template>
     <!-- top account information text section -->
     <div class="flex flex-col w-full mt-2">
-                    <h3 class="text-[20px] text-[#293793]">Account Information</h3>
+                    <h3 class="text-[20px] text-sidebarBG">Account Information</h3>
                     <h4 class="text-[14px] text-[#757784]">Enter Your email address and password details ! </h4>
                 </div>
 
@@ -34,7 +34,7 @@
                 <!-- button div -->
                 <router-link to="/signup/personal">
                     <div class="flex justify-between w-full mt-10">
-                        <button class="p-2 bg-[#293793] rounded-lg px-10 text-white border-[1px] hover:bg-white hover:text-[#293793] hover:border-[1px] hover:border-[#293793] transition-all ease-in-out ">Next Step</button>
+                        <button class="p-2 bg-sidebarBG rounded-lg px-10 text-white border-[1px] hover:bg-white hover:text-sidebarBG hover:border-[1px] hover:border-sidebarBG transition-all ease-in-out ">Next Step</button>
                     </div>
                 </router-link>
 </template>

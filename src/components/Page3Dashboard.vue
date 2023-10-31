@@ -1,19 +1,24 @@
 <template>
-    <div :class="paddingClass" class="lg:w-full md:w-full md:mx-auto min-[320px]:w-[100%] min-[320px]:px-[10px]">
+    <div :class="paddingClass" class="relative lg:w-full md:w-full md:mx-auto min-[320px]:w-[100%] min-[320px]:px-[10px]">
 
         <!-- head wallet div  -->
-        <div class="flex items-center justify-between shadow-sm rounded-lg px-3 py-3 bg-white">
+        <div class="">
                 <!-- left side text -->
                  <div>
                     <!-- storage with arrow -->
-                    <div class="flex items-center">
-                        <div>
-                            <img src="../img/logos/bethellogo.png" alt="" class="w-[40px]">
+                    <div class="flex items-center absolute lg:top-[-75px] lg:left-4
+                    md:top-[-75px] md:left-4
+                    sm:top-[-75px] sm:left-[180px]
+                    
+                    
+                    z-[100]">
+                        <div class="lg:flex md:flex sm:hidden min-[320px]:hidden">
+                            <img src="../img/logos/bethellogo.png" alt="" class="w-[30px]">
                         </div>
 
                         <!-- right arrow -->
-                        <div class="ml-2 flex flex-col">
-                            <h3 class="font-bethelBlue font-bold text-[16px] ">Future CX</h3>
+                        <div class="ml-2 flex flex-col lg:flex md:flex sm:hidden min-[320px]:hidden">
+                            <h3 class="font-bethelBlue font-medium lg:text-[18px] md:text-[18px] sm:text-[18px] min-[320px]:text-[12px] "><span class="text-sidebarBG ">Weclome to BEHTEL,</span> Criag </h3>
                         </div>
                         
                     </div>
@@ -49,7 +54,7 @@
                         <div class="flex items-center">             
                           <h3 class="text-[13px] text-white">Total Buckets</h3> 
                           <div class="ml-3 w-[30px] h-[25px] bg-blue-100 rounded-lg text-center justify-center items-center">
-                            <h1 class="text-blue-600">2</h1>
+                            <h1 class="text-blue-600">0</h1>
                             </div> 
                         </div>
                         
@@ -79,7 +84,7 @@
                         <div class="flex items-center ">             
                           <h3 class="text-[13px]">Total Objects</h3> 
                           <div class="ml-3 w-[30px] h-[25px] bg-blue-100 rounded-lg text-center justify-center items-center">
-                            <h1 class="text-blue-600">2</h1>
+                            <h1 class="text-blue-600">0</h1>
                         </div> 
                         </div>
                         
@@ -107,7 +112,7 @@
                         <div class="flex items-center">             
                           <h3 class="text-[13px]">Total Storage</h3> 
                           <div class="ml-3 w-[30px] h-[25px] bg-blue-100 rounded-lg text-center justify-center items-center">
-                            <h1 class="text-blue-600 ">2</h1>
+                            <h1 class="text-blue-600 ">0</h1>
                         </div> 
                         </div>
                         
@@ -135,7 +140,7 @@
                         <div class="flex items-center">             
                           <h3 class="text-[13px]">Total Bandwidth</h3> 
                           <div class="ml-3 w-[30px] h-[25px] bg-blue-100 rounded-lg text-center justify-center items-center">
-                            <h1 class="text-blue-600">2</h1>
+                            <h1 class="text-blue-600">0</h1>
                         </div> 
                         </div>
                         
@@ -397,11 +402,11 @@ export default {
                 label: 'Storage',
                 data: [300, 100],
                 backgroundColor: [
+            'rgb(86, 105, 204)',
             'rgb(0, 71, 171)',
-            'rgb(54, 162, 235)',
             ],
             hoverOffset: 10,
-            position : 'bottom',
+            position : 'right',
             }]
             },
     options: {
@@ -423,18 +428,11 @@ export default {
     data: {
       labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun','Jul','Aug', 'Sep','Oct','Nov','Dec'],
       datasets: [{
-        label: '# of Votes',
+        label: 'Transactions',
         data: [12, 19, 3, 5, 2, 3,4,4,6,7,8,20],
         borderWidth: 2
       }]
     },
-    // options: {
-    //   scales: {
-    //     y: {
-    //       beginAtZero: true
-    //     }
-    //   }
-    // }
     });
 
     myChart;

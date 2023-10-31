@@ -19,9 +19,6 @@ import ProfileEdit from '@/components/Profile/ProfileEdit.vue';
 import ChangePassword from '@/components/Profile/ChangePassword.vue';
 
 
-
-
-
 const routes = [
     // main section routings
     { 
@@ -61,7 +58,7 @@ const routes = [
               component:ProfileEdit,
             },
             {
-              path : '/profile',
+              path : '/profile/profileEdit',
               component : ProfileEdit,
             },
             {
@@ -107,7 +104,7 @@ const routes = [
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
     routes,
-    linkExactActiveClass : 'text-[#5669cc] bg-white  lg:mx-3 md:mx-0 rounded-full justify-start flex ',
+    linkExactActiveClass : 'text-[#5669cc] bg-white lg:mx-3 md:mx-0 rounded-full justify-start flex ',
 })
 
 export default router
