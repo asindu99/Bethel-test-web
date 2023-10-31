@@ -18,7 +18,7 @@
 
                         <!-- right arrow -->
                         <div class="ml-2 flex flex-col lg:flex md:flex sm:hidden min-[320px]:hidden">
-                            <h3 class="font-bethelBlue font-medium lg:text-[18px] md:text-[18px] sm:text-[18px] min-[320px]:text-[12px] "><span class="text-sidebarBG ">Weclome to BEHTEL,</span> Criag </h3>
+                            <h3 class="font-bethelBlue font-medium lg:text-[18px] md:text-[18px] sm:text-[18px] min-[320px]:text-[12px] "><span class="text-sidebarBG ">Weclome to BEHTEL,</span> Craig </h3>
                         </div>
                         
                     </div>
