@@ -3,7 +3,7 @@
 
     <!-- personal information div -->
     <div class="flex flex-col w-full mt-8">
-                    <h3 class="text-[20px] text-[#293793]">Personal Information</h3>
+                    <h3 class="text-[20px] text-sidebarBG">Personal Information</h3>
                     <h4 class="text-[14px] text-[#757784]">Enter Your personal details ! </h4>
                 </div>
 
@@ -73,7 +73,7 @@
 
                     <router-link to="/mobile-verify">
                     <div class="flex justify-between w-full mt-7">
-                        <button class="p-2 bg-[#293793] rounded-lg px-10  text-white border-[1px] hover:bg-white hover:text-[#293793] hover:border-[1px] hover:border-[#293793] transition-all ease-in-out">Create Account</button>
+                        <button class="p-2 bg-sidebarBG rounded-lg px-10  text-white border-[1px] hover:bg-white hover:text-sidebarBG hover:border-[1px] hover:border-sidebarBG transition-all ease-in-out">Create Account</button>
                     </div>
                     </router-link>
                 </div>

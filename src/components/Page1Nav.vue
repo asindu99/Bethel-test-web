@@ -23,8 +23,8 @@
             <div class="md:flex lg:flex sm:flex  min-[320px]:flex items-center w-[300px] basis-[42%] gap-2 justify-end">
 
                 <router-link to="/wallet"><button class="mr-2 text-[12px] border-[2px] rounded-full p-[7px] px-[18px]
-                bg-bethelBlue text-white border-bethelBlue
-                hover:bg-white hover:text-bethelBlue transition-all ease-linear sm:hidden min-[320px]:hidden lg:flex md:flex">Connect Wallet</button></router-link>
+                bg-sidebarBG text-white border-sidebarBG
+                hover:bg-white hover:text-sidebarBG transition-all ease-linear sm:hidden min-[320px]:hidden lg:flex md:flex">Connect Wallet</button></router-link>
 
                 <img src="../img/icons/icon-account.png" alt="" class="w-[30px] ">
                 <h3 class="text-[14px] lg:flex md:flex sm:flex min-[320px]:hidden">User's name</h3>

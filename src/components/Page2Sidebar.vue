@@ -9,7 +9,7 @@
          <!-- left side -->
         <div class="flex items-center w-[250px] py-4 pl-4 ml-[30px]">
                 <img src="../img/logos/bethel-white.png" alt="" class="w-[23px]">
-                <h1 class="font-bold ml-1 text-[18px] text-sidebarText">BETHEL</h1>
+                <h1 class="font-bold ml-1 text-[18px] text-white">BETHEL</h1>
         </div>
 
 
@@ -176,7 +176,7 @@
         </div>
         <!-- end of the main side bar -->
 
-        <div class=" flex justify-center bg-[#ededed] z-0 lg:w-[100%] lg:mx-[0px] mt-[75px] h-full 
+        <div class=" flex justify-center bg-[#ededed] lg:w-[100%] lg:mx-[0px] mt-[75px] h-full 
         md:px-[5px] sm:w-full min-[320px]:w-full min-[320px]:ml-0">
 
 

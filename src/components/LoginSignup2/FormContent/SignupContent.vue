@@ -4,7 +4,7 @@
         <!-- bethel logo div -->
     <div class="flex md:items-center lg:justify-start md:justify-center w-full gap-1">
         <img class="w-[30px]" src="../../../img/logos/bethellogo.png" alt="">
-        <h3 class="text-[#293793] font-medium ">BETHEL</h3>
+        <h3 class="text-sidebarBG font-medium ">BETHEL</h3>
     </div>
 
         
