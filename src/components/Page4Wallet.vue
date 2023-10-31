@@ -34,7 +34,7 @@
                     <div class="flex items-center mt-2">
                         <!-- image -->
                         <div class="flex">
-                            <span class=" material-symbols-outlined text-iconColor mr-2
+                            <span class=" material-symbols-outlined text-iconColor2 mr-2
                             ">
                                 wallet
                             </span> 
@@ -51,8 +51,8 @@
                 <!-- right side button -->
                 <div class="flex">
                     <div>
-                        <button @click="openAuthModal" class="border-[2px] px-2 py-2 rounded-xl bg-bethelOrange w-[150px] text-[white] 
-                        font-medium hover:text-bethelOrange hover:bg-[white] transition-all ease-linear hover:border-bethelOrange">Create Wallet</button>
+                        <button @click="openAuthModal" class="border-[2px] px-2 py-2 rounded-xl bg-sidebarBG w-[150px] text-[white] 
+                        font-medium hover:text-sidebarBG hover:bg-[white] transition-all ease-linear hover:border-sidebarBG">Create Wallet</button>
                     </div>
                     
                 </div>
@@ -105,18 +105,18 @@
                         <td class="text-[12px] text-center bg-white border p-3">
                             <div class="relative w-full">
                                 <!-- more button auth modal -->
-                                <div class="absolute right-[-15px] w-[60px] shadow-md border-[1px] bg-blue-50 rounded-md top-10 animate__animated animate__zoomIn animate__faster">
-                                    <button @click="deleteWalletData(wallet)">
+                                <!-- <div class="absolute right-[-15px] w-[60px] shadow-md border-[1px] bg-blue-50 rounded-md top-10 animate__animated animate__zoomIn animate__faster">
+                                    <button >
                                         <div class="p-1">
                                             <h3>Delete</h3>
                                         </div>
                                     </button>
                                     
-                                </div>
+                                </div> -->
                             <!-- end of the auth modal -->
                             </div>
-                            <button>
-                                <span class="material-symbols-outlined">more_vert</span>
+                            <button @click="deleteWalletData(wallet)">
+                                Delete
                             </button>
                         </td>
                         <!-- more button end --> 
@@ -160,8 +160,8 @@
                     <div class="flex flex-col items-center justify-center gap-4">
                         <input type="text" placeholder="Enter the wallet Address" class="w-[300px] p-2 border-2 rounded-lg border-blue-200">
                         <input type="text" placeholder="Enter the Amount" class="w-[200px] p-2 border-2 rounded-lg border-blue-200">
-                        <button class="border-[2px] px-2 py-2 rounded-xl bg-[#E9983C] w-[150px] text-[white] 
-                        font-medium hover:text-[#E9983C] hover:bg-[white] transition-all ease-linear hover:border-[#E9983C]">Transfer</button>
+                        <button class="border-[2px] px-2 py-2 rounded-xl bg-sidebarBG w-[150px] text-[white] 
+                        font-medium hover:text-sidebarBG hover:bg-[white] transition-all ease-linear hover:border-sidebarBG">Transfer</button>
                     </div>
                 </div>
             </div>
