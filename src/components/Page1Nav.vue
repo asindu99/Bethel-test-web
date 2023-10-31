@@ -7,8 +7,8 @@
         min-[320px]:py-2 min-[320px]:px-4 gap-4 ">
             <!-- left side -->
             <div class="flex items-center w-[50px] py-2 ">
-                <img src="../img/logos/bethellogo.png" alt="" class="w-[30px]">
-                <h1 class="font-medium ml-1 lg:text-[18px] md:text-[18px] sm:text-[18px] min-[320px]:text-[12px] text-bethelBlue"></h1>
+                <img src="../img/logos/bethellogo.png" alt="" class="w-[30px] ml-[230px]">
+                <h1 class="font-medium ml-1 lg:text-[18px] md:text-[18px] sm:text-[18px] min-[320px]:text-[12px] text-bethelBlue">BETHEL</h1>
             </div>
 
             <!-- middle side -->
