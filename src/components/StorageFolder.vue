@@ -26,7 +26,7 @@
 
                         <!-- Main Bucket -->
                         <div>
-                            <h2 class="font-bold text-[30px]">--Folder--</h2>
+                            <h2 class="font-bold text-[30px]">Folder</h2>
                         </div>
                         <!-- end of the bucket main -->
                     </div>
@@ -58,7 +58,12 @@
                             <div class="w-full px-10 py-20 rounded text-center cursor-pointer border border-dashed border-gray-400 text-gray-400 transition duration-500 hover:text-[#000000] hover:bg-[linear-gradient(to_right,rgba(240,245,254,1),rgba(240,245,254,1))] hover:border-green-400 hover:border-solid">
                                 <h5>Drop your files here</h5>
                             </div>
-                            <input type="file" multiple/>
+                            <div class="flex flex-row justify-between mt-8">
+                                <input type="file" multiple/>
+
+                                <button class="bg-sidebarBG px-6 py-2 text-[white] rounded-xl text-[14px] hover:text-sidebarBG hover:bg-[white] border-2 hover:border-sidebarBG ml-14">Upload</button>
+
+                            </div>
                             <hr class="my-6" />
                             <!-- Progess Bars -->
                             <div class="mb-4">
@@ -220,7 +225,7 @@ export default {
                 const yValues = [0, 100];
                 const barColors = [
                 "#f2003c",
-                "#293793",
+                "#5669cc",
         ];
             
 
