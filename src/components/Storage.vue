@@ -103,12 +103,15 @@
                                             </div>
                                         </button>
                                         
+                                        
                                     </div> -->
+
+                                    <button @click="deleteBucketData(bucket)">Delete</button>
                                 <!-- end of the auth modal -->
                                 </div>
-                                <button>
+                                <!-- <button>
                                     <span class="material-symbols-outlined">more_vert</span>
-                                </button>
+                                </button> -->
                             </td>
                             <!-- more button end --> 
                             </tr>
