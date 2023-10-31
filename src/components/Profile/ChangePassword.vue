@@ -5,7 +5,7 @@
     <!-- change passowrd information div -->
     <div class="flex flex-col w-full mt-10 lg:justify-start min-[320px]:items-center">
 
-        <h1 class="text-[20px] text-sidebarBG font-bold">Change Password</h1>
+        <h1 class="text-sidebarBG lg:text-2xl md:text-2xl sm:text-2xl min-[320px]:text-xl ">Change Password</h1>
 
     </div>
 

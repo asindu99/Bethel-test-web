@@ -5,11 +5,11 @@
         <!-- personal information div -->
         <div class="flex flex-col w-full mt-8 lg:justify-start min-[320px]:items-center">
 
-            <h1 class="text-[20px] text-sidebarBG font-bold">Edit Profile</h1>
+            <h1 class="text-sidebarBG lg:text-2xl md:text-2xl sm:text-2xl min-[320px]:text-xl ">Edit Profile</h1>
 
 
             <div class="flex justify-center items-center pt-2">
-                <img src="../../img/images/profile-admin.png" alt="" class="w-[50px] h-[50px]">
+                <img src="../../img/images/AdminProfile.png" alt="" class="w-[50px] h-[50px]">
             </div>
 
         </div>

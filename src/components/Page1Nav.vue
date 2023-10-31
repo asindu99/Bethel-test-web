@@ -72,11 +72,11 @@
                         <!-- box 3 -->
                         <router-link to="/profile" @click="modalStore.dropMenuOC = false"> <div class="w-full  px-2 rounded-lg transition-all ease-linear">
                             <div class="min-[320px]:flex sm:flex lg:flex md:flex w-full px-3  py-2">
-                                <span class=" material-symbols-outlined top-2 right-[20px] text-[#7882c3] mr-2 scale-[.9]
+                                <span class=" material-symbols-outlined top-2 right-[20px] text-[#c4c9ea] mr-2 scale-[.9]
                                 ">
                                     person_pin
                                 </span>  
-                                <h3 class="text-[15px] text-[#7882c3]">Profile </h3>
+                                <h3 class="text-[15px] text-[#c4c9ea]">Profile </h3>
                             
                             </div>
                         </div></router-link> 
@@ -85,11 +85,11 @@
                         <!-- box 3 -->
                         <a href="#" @click="modalStore.dropMenuOC = false"> <div class="w-full  px-2 rounded-lg transition-all ease-linear">
                             <div class="min-[320px]:flex sm:flex lg:flex md:flex w-full px-3  py-2">
-                                <span class=" material-symbols-outlined top-2 right-[20px] text-[#7882c3] mr-2 scale-[.9]
+                                <span class=" material-symbols-outlined top-2 right-[20px] text-[#c4c9ea] mr-2 scale-[.9]
                                 ">
                                     switch_account
                                 </span>  
-                                <h3 class="text-[15px] text-[#7882c3]">Accounts </h3>
+                                <h3 class="text-[15px] text-[#c4c9ea]">Accounts </h3>
                             
                             </div>
                         </div></a> 
