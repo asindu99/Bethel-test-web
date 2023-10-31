@@ -6,19 +6,17 @@
                 <!-- left side text -->
                  <div>
                     <!-- storage with arrow -->
-                    <div class="flex items-center absolute lg:top-[-75px] lg:left-4
-                    md:top-[-75px] md:left-4
+                    <div class="flex items-center fixed lg:top-[15px] lg:left-[280px]
+                    md:top-[25px] md:left-[200px]
                     sm:top-[-75px] sm:left-[180px]
-                    
-                    
                     z-[100]">
-                        <div class="lg:flex md:flex sm:hidden min-[320px]:hidden">
+                        <div class="lg:flex md:hidden sm:hidden min-[320px]:hidden">
                             <img src="../img/logos/bethellogo.png" alt="" class="w-[30px]">
                         </div>
 
                         <!-- right arrow -->
                         <div class="ml-2 flex flex-col lg:flex md:flex sm:hidden min-[320px]:hidden">
-                            <h3 class="font-bethelBlue font-medium lg:text-[18px] md:text-[18px] sm:text-[18px] min-[320px]:text-[12px] "><span class="text-sidebarBG ">Weclome to BEHTEL,</span> Craig </h3>
+                            <h3 class="font-bethelBlue font-medium lg:text-[18px] md:text-[15px] sm:text-[18px] min-[320px]:text-[12px] "><span class="text-sidebarBG ">Weclome to BEHTEL,</span> Craig </h3>
                         </div>
                         
                     </div>
