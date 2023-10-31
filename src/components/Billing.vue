@@ -47,12 +47,12 @@
                 <div class="flex lg:flex-row min-[320px]:flex-col md:flex-col-2 gap-6">
 
                     <!-- plan-1  -->
-                    <div class="basis-1/4 shadow-xl rounded-lg bg-sidebarBG bg-opacity-75 min-[320px]:pb-10 mt-10">
+                    <div class="basis-1/4 shadow-xl rounded-lg bg-[#F48320] bg-opacity-75 min-[320px]:pb-10 mt-10">
                             <div> <h4 class="m-10 font-bold text-2xl">Free</h4></div>
 
                            <div> <p class="m-10">Features for creators and developers who need more storage.</p></div>
 
-                            <div><p  class="m-10"><span class="font-bold text-2xl">$0</span><span> /mo</span></p></div>
+                            <div><p  class="m-10"><span class="font-bold text-2xl">$</span><span> /mo</span></p></div>
 
                             
                             <div class="font-['Montserrat'] text-center font-bold">Your Current Plan</div>
@@ -108,10 +108,10 @@
 
                             <div><p class="m-10">Features for creators and developers who need more storage.</p></div>
 
-                            <div><p  class="m-10"><span class="font-bold text-2xl">$20</span><span> /mo</span></p></div>
+                            <div><p  class="m-10"><span class="font-bold text-2xl">$</span><span> /mo</span></p></div>
 
                             <div class="px-10 ">
-                                <button class="border-2 w-[150px] h-[40px] rounded-lg bg-sidebarBG shadow-lg hover:bg-[white] hover:border-sidebarBG text-white hover:text-sidebarBG">Select Starter</button>
+                                <button class="border-2 w-[150px] h-[40px] rounded-lg bg-gradient-to-r from-[#F48320] to-[#f8b878] shadow-lg hover:bg-none hover:border-[#F48320] text-white hover:text-[#000000]">Select Starter</button>
                         
                             </div>
 
@@ -167,10 +167,10 @@
 
                             <div><p class="m-10">Features for creators and developers who need more storage.</p></div>
 
-                            <div><p  class="m-10"><span class="font-bold text-2xl">$100</span><span> /mo</span></p></div>
+                            <div><p  class="m-10"><span class="font-bold text-2xl">$</span><span> /mo</span></p></div>
 
                             <div class="px-10 ">
-                                <button class="border-2 w-[150px] h-[40px] rounded-lg bg-sidebarBG shadow-lg hover:bg-[white] hover:border-sidebarBG text-white hover:text-[#000000]">Select Pro</button>
+                                <button class="border-2 w-[150px] h-[40px] rounded-lg bg-gradient-to-r from-[#F48320] to-[#f8b878] shadow-lg hover:bg-none hover:border-[#F48320] text-white hover:text-[#000000]">Select Pro</button>
                         
                             </div>
 
@@ -224,10 +224,10 @@
                         
                         <p class="m-10">Features for creators and developers who need more storage.</p>
 
-                        <p  class="m-10"><span class="font-bold text-2xl">$500</span><span> /mo</span></p>
+                        <p  class="m-10"><span class="font-bold text-2xl">$</span><span> /mo</span></p>
 
                         <div class="px-10 ">
-                            <button class="border-2 w-[150px] h-[40px] rounded-lg bg-sidebarBG shadow-lg hover:bg-[white] hover:border-sidebarBG text-white hover:text-[#000000]">Select Buisness</button>
+                            <button class="border-2 w-[150px] h-[40px] rounded-lg bg-gradient-to-r from-[#F48320] to-[#f8b878] shadow-lg hover:bg-none hover:border-[#F48320] text-white hover:text-[#000000]">Select Buisness</button>
                     
                         </div>
                         
