@@ -7,9 +7,10 @@
          flex-col" :class="sidebarWidth">
 
          <!-- left side -->
-        <div class="flex items-center w-[250px] py-4 pl-4 ml-[25px]">
-                <img src="../img/logos/bethel-white.png" alt="" class="w-[23px]">
-                <h1 class="font-bold ml-1 text-[18px] text-white" :class="sidebarHideShow">BETHEL</h1>
+        <div class="flex items-center justify-center w-full py-6">
+                <h1 class="font-bold ml-1 lg:text-[18px] md:text-[14px]
+                 md:mt-3 lg:mt-1
+                  text-white" :class="sidebarHideShow">BETHEL ENGINE V4</h1>
         </div>
 
 
@@ -22,8 +23,8 @@
                     <!-- menu item -->
                     <RouterLink to="/" class="">
                         <div class="lg:ml-7 md:ml-6 lg:flex md:flex sm:flex min-[320px]:flex
-                        w-full lg:px-3 md:px-1  my-2 py-2  transition-all ease-linear">
-                            <span class=" material-symbols-outlined top-2 right-[20px] mr-2
+                        w-full lg:px-3  my-2 py-2  transition-all ease-linear">
+                            <span class=" material-symbols-outlined
                             ">
                                 grid_view
                             </span>  
@@ -37,7 +38,7 @@
                     <!-- menu item -->
                     <router-link to="/storage">
                         <div class="lg:ml-7 md:ml-6 lg:flex md:flex sm:flex min-[320px]:flex
-                        w-full lg:px-3 md:px-1  my-2 py-2  transition-all ease-linear">
+                        w-full lg:px-3   my-2 py-2  transition-all ease-linear">
                             <span class=" material-symbols-outlined top-2 right-[20px] mr-2
                             ">
                                 hard_drive
@@ -52,7 +53,7 @@
                     <!-- menu item -->
                     <router-link to="/wallet">
                         <div class="lg:ml-7 md:ml-6 lg:flex md:flex sm:flex min-[320px]:flex
-                        w-full lg:px-3 md:px-1  my-2 py-2  transition-all ease-linear">
+                        w-full lg:px-3   my-2 py-2  transition-all ease-linear">
                             <span class=" material-symbols-outlined top-2 right-[20px]  mr-2
                             ">
                                 wallet
@@ -103,7 +104,7 @@
 
                 <!-- menu item -->
                 <router-link to="/profile">
-                    <div class="lg:ml-7 md:ml-6 min-[320px]:flex sm:flex lg:flex md:flex w-full px-3  my-2 py-2 ">
+                    <div class="lg:ml-7 md:ml-6 min-[320px]:flex sm:flex lg:flex md:flex w-full lg:px-3 md:px-0  my-2 py-2 ">
                         <span class=" material-symbols-outlined top-2 right-[20px] mr-2
                         ">
                             person_pin
@@ -119,8 +120,8 @@
 
                 <!-- menu item -->
                 <router-link to="/billing">
-                    <div class="lg:ml-7 md:ml-6  min-[320px]:flex sm:flex lg:flex md:flex w-full px-3  my-2 py-2 ">
-                        <span class=" material-symbols-outlined top-2 right-[20px]  mr-2
+                    <div class="lg:ml-7 md:ml-6  min-[320px]:flex sm:flex lg:flex md:flex w-full lg:px-3 md:px-0  my-2 py-2 ">
+                        <span class=" material-symbols-outlined top-2 right-[20px]
                         ">
                             attach_money
                         </span>  
@@ -134,7 +135,7 @@
 
                     <!-- menu item -->
                     <router-link to="/login">
-                        <div class="lg:ml-7 md:ml-6 min-[320px]:flex sm:flex lg:flex md:flex w-full px-3 hover:bg-[] my-2 py-2">
+                        <div class="lg:ml-7 md:ml-6 min-[320px]:flex sm:flex lg:flex md:flex w-full lg:px-3 md:px-0  hover:bg-[] my-2 py-2">
                             <span class=" material-symbols-outlined top-2 right-[20px]  mr-2
                             ">
                                 logout
@@ -154,7 +155,7 @@
             <!-- logout -->
             <!-- menu item -->
             <a href="https://docs.bethel.network/" class="active" target="_blank">
-                        <div class="lg:ml-7 md:ml-6 min-[320px]:flex sm:flex lg:flex md:flex w-full px-3 my-2 py-2
+                        <div class="lg:ml-7 md:ml-6 min-[320px]:flex sm:flex lg:flex md:flex w-full lg:px-3 md:px-0  my-2 py-2
                         absolute bottom-2">
                             <span class=" material-symbols-outlined top-2 right-[20px] mr-2
                             
@@ -172,8 +173,19 @@
         <!-- end of the sidebar content -->
 
         <!-- sidebar hide show button -->
-        <div class="absolute top-1 right-2">
-            <button>
+        <div :class="buttonHide" class="absolute top-1 right-2 lg:hidden flex">
+            <button @click="fnSidebarHide">
+                <span class="material-symbols-outlined">
+                sync_alt
+                </span>
+            </button>
+            
+        </div>
+        <!-- end of side bar hide show button -->
+
+        <!-- sidebar hide show button -->
+        <div :class="buttonHide2" class="absolute top-2 right-7">
+            <button @click="fnSidebarShow">
                 <span class="material-symbols-outlined">
                 sync_alt
                 </span>
@@ -192,7 +204,7 @@
 
 
             <!-- router view must be here -->
-            <div @click="asideHide"  class="w-full h-full mx-2 lg:pl-[240px] " :class="modalStore.onBlur, paddingMD"> 
+            <div @click="asideHide"  class="w-full h-full mx-2 lg:pl-[240px] md:pl-[180px]" :class="modalStore.onBlur, paddingMD"> 
                 <router-view class="scale-[1]"></router-view> 
             </div>
             <!-- end of the router view here -->
@@ -220,9 +232,17 @@ export default{
 
     data(){
         return{
-            paddingMD : 'md:pl-[180px]',
+            // adding classes for the sidebar
+            paddingMD : '',
             sidebarHideShow : '',
-            sidebarWidth : ''
+            sidebarWidth : '',
+
+            //for the funtion 
+            fnSidebar : false,
+
+            // button hide
+            buttonHide : '',
+            buttonHide2 : 'hidden',
         }
     },
     methods : {
@@ -231,6 +251,20 @@ export default{
             this.modalStore.dropMenuOC = false;
             this.modalStore.onBlur = '';
 
+        },
+        fnSidebarHide(){
+            this.sidebarHideShow = 'hidden';
+            this.sidebarWidth = 'md:w-[80px]'
+            this.paddingMD = 'md:pl-[80px]'
+            this.buttonHide = 'hidden'
+            this.buttonHide2 = ''
+        },
+        fnSidebarShow(){
+            this.sidebarHideShow = '';
+            this.sidebarWidth = 'md:w-[190px]';
+            this.paddingMD = 'md:pl-[190px]';
+            this.buttonHide2 = 'hidden';
+            this.buttonHide = '';
         }
     }
 }

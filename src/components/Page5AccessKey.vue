@@ -52,11 +52,7 @@
                     </thead>
                     <tbody>
                         <tr>
-                        <td class="text-[12px] text-center bg-white border p-3"> Future CX</td>
-                        <td class="text-[12px] text-center bg-white border p-3">14$</td>
-                        <td class="text-[12px] text-center bg-white border p-3">24-10-2023 14:00</td>
-                        <td class="text-[12px] text-center bg-white border p-3">Details</td>
-                        <td class="text-[12px] text-center bg-white border p-3">ONLINE</td>
+                        
                         </tr>
                     </tbody>
             </table>

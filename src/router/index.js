@@ -104,7 +104,7 @@ const routes = [
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
     routes,
-    linkExactActiveClass : 'text-[#5669cc] bg-white lg:mx-3 md:mx-0 rounded-full justify-start flex ',
+    linkExactActiveClass : 'text-[#5669cc] bg-white lg:mx-3 md:mx-[5px] sm:mx-2 h-[40px] rounded-xl justify-center items-center flex ',
 })
 
 export default router

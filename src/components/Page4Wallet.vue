@@ -30,22 +30,7 @@
                     </div>
                     <!-- end of the bucket main -->
 
-                    <!-- bucket with images -->
-                    <div class="flex items-center mt-2">
-                        <!-- image -->
-                        <div class="flex">
-                            <span class=" material-symbols-outlined text-iconColor2 mr-2
-                            ">
-                                wallet
-                            </span> 
-                        </div>
-                        <!-- text -->
-                        <div class="flex gap-1">
-                            <div>{{ walletCount }}</div>
-                            <h3>Wallets</h3>
-                        </div>
-                    </div>
-                    <!-- end of the bucket with images -->
+                    
                 </div>
 
                 <!-- right side button -->
@@ -147,21 +132,26 @@
             <!-- end of the transaction making  -->
 
             <!-- transation  -->
-            <div class="flex basis-2 flex-wrap justify-start gap-10 mt-4">
+            <div class="flex flex-wrap justify-start mt-4">
                 <!-- 1st container -->
-                <div class="bg-white flex flex-col items-center justify-center border-[2px] shadow-md py-[20px] px-[60px] 
-                lg:w-[550px] md:w-[550px] sm:w-[550px] min-[320px]:w-[350px] rounded-lg">
+                <div class="bg-white lg:flex-row md:flex-row sm:flex min-[320px]:flex-col items-center justify-center border-[2px] shadow-md 
+                w-full rounded-lg gap-10 py-8 px-10">
                     <!-- bethel logo image -->
-                    <div class="py-10">
-                        <img src="../img/icons/icon-upload.png" alt="" class="w-[150px] opacity-25">
-                    </div>
+                    
+                    <img src="../img/icons/icon-upload.png" alt="" class="w-[50px] opacity-25 lg:flex md:flex sm:flex min-[320px]:hidden">
+                    
 
                     <!-- input fields -->
-                    <div class="flex flex-col items-center justify-center gap-4">
-                        <input type="text" placeholder="Enter the wallet Address" class="w-[300px] p-2 border-2 rounded-lg border-blue-200">
-                        <input type="text" placeholder="Enter the Amount" class="w-[200px] p-2 border-2 rounded-lg border-blue-200">
-                        <button class="border-[2px] px-2 py-2 rounded-xl bg-sidebarBG w-[150px] text-[white] 
-                        font-medium hover:text-sidebarBG hover:bg-[white] transition-all ease-linear hover:border-sidebarBG">Transfer</button>
+                    <div class="flex lg:flex-row md:flex-row sm:flex min-[320px]:flex-col
+                     items-center justify-center gap-4 w-full">
+                        <input type="text" placeholder="Enter the wallet Address" class="text-[14px] w-full  p-2 border-2 rounded-lg border-blue-200">
+
+                        <input type="text" placeholder="Enter the Amount" class="text-[14px] w-full p-2 border-2 rounded-lg border-blue-200">
+                        
+                        <button class="border-[2px] px-10 py-2 rounded-xl bg-sidebarBG text-[white] text-[14px]
+                        font-medium hover:text-sidebarBG hover:bg-[white] transition-all ease-linear hover:border-sidebarBG">
+                            Transfer
+                        </button>
                     </div>
                 </div>
             </div>
@@ -177,7 +167,7 @@
             </div>
             
             <!--  transaction table -->
-            <div class=" w-[100%] mx-auto mt-4 bg-white rounded-lg px-2 shadow-md ">
+            <div class=" w-[100%] mx-auto mt-4 bg-white rounded-lg px-2 shadow-md "> 
                 <!-- start of the table -->
                 <table class="table-auto border-separate py-2 w-full rounded-lg">
                     <thead class="">
@@ -190,13 +180,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                        <td class="min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] text-center bg-white border p-3"> Future CX</td>
-                        <td class="min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] text-center bg-white border p-3">14$</td>
-                        <td class="min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] text-center bg-white border p-3">24-10-2023 14:00</td>
-                        <td class="min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] text-center bg-white border p-3">Details</td>
-                        <td class="min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] text-center bg-white border p-3">ONLINE</td>
-                        </tr>
+                        
                     </tbody>
                 </table>
 
