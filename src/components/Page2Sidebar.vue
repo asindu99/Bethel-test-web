@@ -22,8 +22,8 @@
                     <!-- menu item -->
                     <RouterLink to="/" class="">
                         <div class="lg:ml-7 md:ml-6 lg:flex md:flex sm:flex min-[320px]:flex
-                        w-full lg:px-3 md:px-1  my-2 py-2  transition-all ease-linear">
-                            <span class=" material-symbols-outlined top-2 right-[20px] mr-2
+                        w-full lg:px-3  my-2 py-2  transition-all ease-linear">
+                            <span class=" material-symbols-outlined
                             ">
                                 grid_view
                             </span>  
@@ -103,7 +103,7 @@
 
                 <!-- menu item -->
                 <router-link to="/profile">
-                    <div class="lg:ml-7 md:ml-6 min-[320px]:flex sm:flex lg:flex md:flex w-full px-3  my-2 py-2 ">
+                    <div class="lg:ml-7 md:ml-6 min-[320px]:flex sm:flex lg:flex md:flex w-full lg:px-3 md:px-0  my-2 py-2 ">
                         <span class=" material-symbols-outlined top-2 right-[20px] mr-2
                         ">
                             person_pin
@@ -119,7 +119,7 @@
 
                 <!-- menu item -->
                 <router-link to="/billing">
-                    <div class="lg:ml-7 md:ml-6  min-[320px]:flex sm:flex lg:flex md:flex w-full px-3  my-2 py-2 ">
+                    <div class="lg:ml-7 md:ml-6  min-[320px]:flex sm:flex lg:flex md:flex w-full lg:px-3 md:px-0  my-2 py-2 ">
                         <span class=" material-symbols-outlined top-2 right-[20px]  mr-2
                         ">
                             attach_money
@@ -134,7 +134,7 @@
 
                     <!-- menu item -->
                     <router-link to="/login">
-                        <div class="lg:ml-7 md:ml-6 min-[320px]:flex sm:flex lg:flex md:flex w-full px-3 hover:bg-[] my-2 py-2">
+                        <div class="lg:ml-7 md:ml-6 min-[320px]:flex sm:flex lg:flex md:flex w-full lg:px-3 md:px-0  hover:bg-[] my-2 py-2">
                             <span class=" material-symbols-outlined top-2 right-[20px]  mr-2
                             ">
                                 logout
@@ -154,7 +154,7 @@
             <!-- logout -->
             <!-- menu item -->
             <a href="https://docs.bethel.network/" class="active" target="_blank">
-                        <div class="lg:ml-7 md:ml-6 min-[320px]:flex sm:flex lg:flex md:flex w-full px-3 my-2 py-2
+                        <div class="lg:ml-7 md:ml-6 min-[320px]:flex sm:flex lg:flex md:flex w-full lg:px-3 md:px-0  my-2 py-2
                         absolute bottom-2">
                             <span class=" material-symbols-outlined top-2 right-[20px] mr-2
                             
@@ -173,7 +173,7 @@
 
         <!-- sidebar hide show button -->
         <div class="absolute top-1 right-2">
-            <button>
+            <button @click="fnSidebarShowHide">
                 <span class="material-symbols-outlined">
                 sync_alt
                 </span>
@@ -220,9 +220,16 @@ export default{
 
     data(){
         return{
-            paddingMD : 'md:pl-[180px]',
+            // adding classes for the sidebar
+            paddingMD : 'md:pl-[80px]',
             sidebarHideShow : '',
-            sidebarWidth : ''
+            sidebarWidth : '',
+
+            //for the funtion 
+            fnSidebar : false,
+
+            // button hide
+            buttonHide : '',
         }
     },
     methods : {
@@ -231,6 +238,10 @@ export default{
             this.modalStore.dropMenuOC = false;
             this.modalStore.onBlur = '';
 
+        },
+        fnSidebarShowHide(){
+            this.sidebarHideShow = 'hidden';
+            this.sidebarWidth = 'md:w-[80px]'
         }
     }
 }
