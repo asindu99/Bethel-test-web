@@ -46,8 +46,7 @@
                     </div>
 
                     <!-- file upload content -->
-                    <div class="flex mt-4 justify-evenly w-full flex-wrap gap-2
-                    ">
+                    <div class="flex mt-4 justify-evenly w-full flex-wrap gap-2">
                         <!-- file uplaod flex -->
                         <div class="bg-white flex flex-col gap-2 pl-3 pt-4 pb-2 border-2 
                         lg:w-[595px] md:w-[595px] sm:w-[595px] min-[320px]:w-[340px]
@@ -71,7 +70,7 @@
                                      hover:file:bg-sidebarBG  hover:file:text-[white]  focus:border-primary focus:text-sidebarBG focus:shadow-te-primary 
                                      dark:text-sidebarBG sidebarBG:file:bg-sidebarBG sidebarBG:file:text-sidebarBG 
                                      sidebarBG:focus:border-primary"
-                                    type="file" />
+                                    type="file"/>
                                 </div>
 
                                 <div class=" lg:mt-10 md:mt-8 sm:mt-8 min-[320px]:mt-9">
