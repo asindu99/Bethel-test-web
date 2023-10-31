@@ -4,7 +4,7 @@
 <div class="lg:px-20 md:px-4 sm:px-4 lg:py-14 min-[320px]:py-2 lg:mt-[-70px] min-[320px]:px-0">
     <!-- change passowrd information div -->
     <div class="flex flex-col w-full mt-10 lg:justify-start min-[320px]:items-center">
-        <h1 class="text-[20px] text-[#293793] font-bold">Change Password</h1>
+        <h1 class="text-sidebarBG min-[320px]:text-xl lg:text-2xl md:text-2xl sm:text-2xl">Change Password</h1>
     </div>
 
     <hr class="w-full lg:mt-10 md:mt-2 sm:mt-2 min-[320px]:mt-2">
@@ -42,7 +42,7 @@
 
         <router-link to="">
             <div class="flex justify-between w-full mt-4">
-                <button class="p-2 bg-[#293793] rounded-lg px-10  text-white border-[1px] hover:bg-white hover:text-[#293793] hover:border-[1px] hover:border-[#293793] transition-all ease-in-out ">Change Password</button>
+                <button class="p-2 bg-sidebarBG rounded-lg px-10  text-white border-[1px] hover:bg-white hover:text-sidebarBG hover:border-[1px] hover:border-sidebarBG transition-all ease-in-out ">Change Password</button>
             </div>
         </router-link>
     </div>
