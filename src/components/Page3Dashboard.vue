@@ -49,7 +49,7 @@
                         <div class="flex items-center">             
                           <h3 class="text-[13px] text-white">Total Buckets</h3> 
                           <div class="ml-3 w-[30px] h-[25px] bg-blue-100 rounded-lg text-center justify-center items-center">
-                            <h1 class="text-blue-600">2</h1>
+                            <h1 class="text-blue-600">0</h1>
                             </div> 
                         </div>
                         
@@ -79,7 +79,7 @@
                         <div class="flex items-center ">             
                           <h3 class="text-[13px]">Total Objects</h3> 
                           <div class="ml-3 w-[30px] h-[25px] bg-blue-100 rounded-lg text-center justify-center items-center">
-                            <h1 class="text-blue-600">2</h1>
+                            <h1 class="text-blue-600">0</h1>
                         </div> 
                         </div>
                         
@@ -107,7 +107,7 @@
                         <div class="flex items-center">             
                           <h3 class="text-[13px]">Total Storage</h3> 
                           <div class="ml-3 w-[30px] h-[25px] bg-blue-100 rounded-lg text-center justify-center items-center">
-                            <h1 class="text-blue-600 ">2</h1>
+                            <h1 class="text-blue-600 ">0</h1>
                         </div> 
                         </div>
                         
@@ -135,7 +135,7 @@
                         <div class="flex items-center">             
                           <h3 class="text-[13px]">Total Bandwidth</h3> 
                           <div class="ml-3 w-[30px] h-[25px] bg-blue-100 rounded-lg text-center justify-center items-center">
-                            <h1 class="text-blue-600">2</h1>
+                            <h1 class="text-blue-600">0</h1>
                         </div> 
                         </div>
                         
@@ -423,18 +423,11 @@ export default {
     data: {
       labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun','Jul','Aug', 'Sep','Oct','Nov','Dec'],
       datasets: [{
-        label: '# of Votes',
+        label: 'Transactions',
         data: [12, 19, 3, 5, 2, 3,4,4,6,7,8,20],
         borderWidth: 2
       }]
     },
-    // options: {
-    //   scales: {
-    //     y: {
-    //       beginAtZero: true
-    //     }
-    //   }
-    // }
     });
 
     myChart;
