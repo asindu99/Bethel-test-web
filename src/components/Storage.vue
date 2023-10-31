@@ -33,14 +33,14 @@
                         <!-- bucket with images -->
                         <div class="flex items-center mt-2">
                             <!-- image -->
-                            <div class="flex w-[30px] justify-center">
-                                <span class=" material-symbols-outlined scale-[1.3] text-iconColor mr-2
+                            <div class="flex w-[30px] justify-center items-center">
+                                <span class=" material-symbols-outlined scale-[1.5] text-iconColor2 mr-2
                                 ">
                                     cleaning_bucket
                                 </span> 
                             </div>
                             <!-- text -->
-                            <div class="flex gap-1">
+                            <div class="flex gap-1 mt-1">
                                 <div>{{ bucketCount }}</div>
                                 <h3>Buckets</h3>
                             </div>
@@ -51,8 +51,8 @@
                     <!-- right side button -->
                     <div class="flex">
                         <div>
-                            <button @click="openAuthModal" class="border-[2px] px-2 py-2 rounded-xl bg-[#E9983C] w-[150px] text-[white] 
-                            font-medium hover:text-[#E9983C] hover:bg-[white] transition-all ease-linear hover:border-[#E9983C]">Create Bucket</button>
+                            <button @click="openAuthModal" class="border-[2px] px-2 py-2 rounded-xl bg-sidebarBG w-[150px] text-[white] 
+                            font-medium hover:text-sidebarBG hover:bg-[white] transition-all ease-linear hover:border-sidebarBG">Create Bucket</button>
                         </div>
                         
                     </div>
@@ -86,7 +86,7 @@
                         </thead>
                         <tbody>
                             <tr v-for="bucket in bucketTableArr" :key="bucket.Baddress">
-                            <td class="text-[12px] text-center bg-white border p-3 cursor-pointer hover:text-[#E9983C] font-bold"><router-link to="/bucketFolder"> {{bucket.bucketName}} </router-link></td>
+                            <td class="text-[12px] text-center bg-white border p-3 cursor-pointer hover:text-sidebarBG font-bold"><router-link to="/bucketFolder"> {{bucket.bucketName}} </router-link></td>
                             <td class="text-[12px] text-center bg-white border p-3">{{bucket.bucketAccess}}</td>
                             <td class="text-[12px] text-center bg-white border p-3">{{bucket.bucketNetwork}}</td>
                             <td class="text-[12px] text-center bg-white border p-3">{{bucket.bucketDateCreated}}</td>
@@ -96,19 +96,22 @@
                             <td class="text-[12px] text-center bg-white border p-3">
                                 <div class="relative w-full">
                                     <!-- more button auth modal -->
-                                    <div class="absolute right-[-15px] w-[60px] shadow-md border-[1px] bg-blue-50 rounded-md top-10 animate__animated animate__zoomIn animate__faster">
+                                    <!-- <div class="absolute right-[-15px] w-[60px] shadow-md border-[1px] bg-blue-50 rounded-md top-10 animate__animated animate__zoomIn animate__faster">
                                         <button @click="deleteBucketData(bucket)">
                                             <div class="p-1">
                                                 <h3>Delete</h3>
                                             </div>
                                         </button>
                                         
-                                    </div>
+                                        
+                                    </div> -->
+
+                                    <button @click="deleteBucketData(bucket)">Delete</button>
                                 <!-- end of the auth modal -->
                                 </div>
-                                <button>
+                                <!-- <button>
                                     <span class="material-symbols-outlined">more_vert</span>
-                                </button>
+                                </button> -->
                             </td>
                             <!-- more button end --> 
                             </tr>
@@ -194,7 +197,7 @@
                             <h3 class="text-[14px] text-bethelBlue ">Close</h3>
                         </button>
 
-                        <button @click="addData" type="submit" class="border-[2px] py-2 px-4 rounded-lg bg-bethelBlue">
+                        <button @click="addData" type="submit" class="border-[2px] py-2 px-4 rounded-lg bg-sidebarBG">
                             <h3 class="text-[14px] text-[white] ">Ok</h3>
                         </button>
 

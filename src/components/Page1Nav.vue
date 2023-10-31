@@ -2,13 +2,13 @@
     <div class="fixed w-full">
         <!-- start of the nav bar -->
         <nav class="flex justify-between lg:py-2 lg:px-10 bg-white z-[100]
-        md:py-2 md:px-10
+        md:py-2 md:px-[5px]
         sm:py-2 sm:px-10
         min-[320px]:py-2 min-[320px]:px-4 gap-4 ">
             <!-- left side -->
-            <div class="flex items-center w-[250px] basis-[20%] py-2">
+            <div class="flex items-center w-[50px] py-2">
                 <img src="../img/logos/bethellogo.png" alt="" class="w-[30px]">
-                <h1 class="font-medium ml-1 text-[18px] text-bethelBlue">BETHEL</h1>
+                <h1 class="font-medium ml-1 lg:text-[18px] md:text-[18px] sm:text-[18px] min-[320px]:text-[12px] text-bethelBlue">BETHEL</h1>
             </div>
 
             <!-- middle side -->
@@ -20,20 +20,24 @@
 
 
             <!-- right side -->
-            <div class="md:flex lg:flex sm:flex  min-[320px]:flex items-center w-[300px] basis-[42%] gap-2 justify-end">
+            <div class="md:flex lg:flex sm:flex  min-[320px]:flex items-center 
+            lg:w-[300px] md:w-[300px] sm:w-[300px] min-[320px]:w-[500px]
+             basis-[42%] gap-2 justify-end">
 
-                <router-link to="/wallet"><button class="mr-2 text-[12px] border-[2px] rounded-full p-[7px] px-[18px]
+                <router-link to="/wallet"><button class="mr-2 text-[10px] border-[2px] rounded-full p-[7px] px-[18px]
                 bg-sidebarBG text-white border-sidebarBG
                 hover:bg-white hover:text-sidebarBG transition-all ease-linear sm:hidden min-[320px]:hidden lg:flex md:flex">Connect Wallet</button></router-link>
-
-                <img src="../img/icons/icon-account.png" alt="" class="w-[30px] ">
-                <h3 class="text-[14px] lg:flex md:flex sm:flex min-[320px]:hidden">User's name</h3>
+                
+                <img src="../img/people/CraigState.jpg" alt="" class="lg:flex md:flex sm:flex min-[320px]:hidden
+                w-[45px] h-[45px] rounded-[50px] border-[1px] border-sidebarBG">
+                <h3 class="lg:text-[14px] md:text-[14px] sm:text-[14px] min-[320px]:text-[10px]
+                 lg:flex md:flex sm:flex min-[320px]:flex">Craig Bricknell</h3>
 
                 <!-- drop down -->
                 <div class="relative">
                     <!-- drop down button -->
                     <button @click="DropMenu">
-                        <span class="material-symbols-outlined mt-[10px]">
+                        <span class="material-symbols-outlined mt-[10px] mr-1">
                         expand_more
                     </span>
                     </button>
@@ -72,11 +76,11 @@
                         <!-- box 3 -->
                         <router-link to="/profile" @click="modalStore.dropMenuOC = false"> <div class="w-full  px-2 rounded-lg transition-all ease-linear">
                             <div class="min-[320px]:flex sm:flex lg:flex md:flex w-full px-3  py-2">
-                                <span class=" material-symbols-outlined top-2 right-[20px] text-[#7882c3] mr-2 scale-[.9]
+                                <span class=" material-symbols-outlined top-2 right-[20px] text-[#c4c9ea] mr-2 scale-[.9]
                                 ">
                                     person_pin
                                 </span>  
-                                <h3 class="text-[15px] text-[#7882c3]">Profile </h3>
+                                <h3 class="text-[15px] text-[#c4c9ea]">Profile </h3>
                             
                             </div>
                         </div></router-link> 
@@ -85,11 +89,11 @@
                         <!-- box 3 -->
                         <a href="#" @click="modalStore.dropMenuOC = false"> <div class="w-full  px-2 rounded-lg transition-all ease-linear">
                             <div class="min-[320px]:flex sm:flex lg:flex md:flex w-full px-3  py-2">
-                                <span class=" material-symbols-outlined top-2 right-[20px] text-[#7882c3] mr-2 scale-[.9]
+                                <span class=" material-symbols-outlined top-2 right-[20px] text-[#c4c9ea] mr-2 scale-[.9]
                                 ">
                                     switch_account
                                 </span>  
-                                <h3 class="text-[15px] text-[#7882c3]">Accounts </h3>
+                                <h3 class="text-[15px] text-[#c4c9ea]">Accounts </h3>
                             
                             </div>
                         </div></a> 

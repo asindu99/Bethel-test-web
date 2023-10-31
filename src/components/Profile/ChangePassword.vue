@@ -4,7 +4,9 @@
 <div class="lg:px-20 md:px-4 sm:px-4 lg:py-14 min-[320px]:py-2 lg:mt-[-70px] min-[320px]:px-0">
     <!-- change passowrd information div -->
     <div class="flex flex-col w-full mt-10 lg:justify-start min-[320px]:items-center">
-        <h1 class="text-[20px] text-sidebarBG font-bold">Change Password</h1>
+
+        <h1 class="text-sidebarBG lg:text-2xl md:text-2xl sm:text-2xl min-[320px]:text-xl ">Change Password</h1>
+
     </div>
 
     <hr class="w-full lg:mt-10 md:mt-2 sm:mt-2 min-[320px]:mt-2">
