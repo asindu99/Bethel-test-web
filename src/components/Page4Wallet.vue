@@ -336,10 +336,10 @@
                     <!-- close and okat sec -->
                     <div class="mr-2 mt-4 flex gap-2 justify-end border-t-[2px] py-2">
                         <button @click="closeAuthModal" class="border-[2px] py-2 px-4 rounded-lg bg-[#f7f5f5]">
-                            <h3 class="text-[14px] text-bethelBlue ">Close</h3>
+                            <h3 class="text-[14px] text-sidebarBG ">Close</h3>
                         </button>
 
-                        <button @click="addData" type="submit" class="border-[2px] py-2 px-4 rounded-lg bg-bethelBlue">
+                        <button @click="addData" type="submit" class="border-[2px] py-2 px-4 rounded-lg bg-sidebarBG">
                             <h3 class="text-[14px] text-[white] ">Okay</h3>
                         </button>
 

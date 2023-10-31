@@ -33,14 +33,14 @@
                         <!-- bucket with images -->
                         <div class="flex items-center mt-2">
                             <!-- image -->
-                            <div class="flex w-[30px] justify-center">
-                                <span class=" material-symbols-outlined scale-[1.3] text-iconColor2 mr-2
+                            <div class="flex w-[30px] justify-center items-center">
+                                <span class=" material-symbols-outlined scale-[1.5] text-iconColor2 mr-2
                                 ">
                                     cleaning_bucket
                                 </span> 
                             </div>
                             <!-- text -->
-                            <div class="flex gap-1">
+                            <div class="flex gap-1 mt-1">
                                 <div>{{ bucketCount }}</div>
                                 <h3>Buckets</h3>
                             </div>
