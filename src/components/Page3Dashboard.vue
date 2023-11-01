@@ -379,7 +379,12 @@
                     </tr>
                 </thead>
                 <tbody>
-                    
+                    <tr v-for="logs in logActivityArr" :key="logs.user" class="lg:text-[12px] md:text-[12px] sm:text-[12px] min-[320px]:text-[10px] border p-3 bg-blue-50">
+                        <td>{{ logs.user }}</td>
+                        <td>{{ logs.ip }}</td>
+                        <td>{{ logs.logStats }}</td>
+                        <td>{{ logs.DT }}</td>
+                    </tr>
                 </tbody>
             </table>
 
@@ -397,7 +402,16 @@ export default {
     name : 'Page3Dashboard',
     data(){
         return{
-            paddingClass : ''
+            paddingClass : '',
+
+            // log activity array
+            logActivityArr : [{
+                user : 'Criage Briknell',
+                ip : '12234',
+                logStats : 'Online',
+                DT : '10/9/2024'
+
+             }],
         }
     },
     // components : {
