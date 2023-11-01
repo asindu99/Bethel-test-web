@@ -142,17 +142,19 @@
                     
 
                     <!-- input fields -->
+                    <VeeForm action="" @submit="transferData" class="w-full">
                     <div class="flex lg:flex-row md:flex-row sm:flex min-[320px]:flex-col
                      items-center justify-center gap-4 w-full">
-                        <input type="text" placeholder="Enter the wallet Address" class="text-[14px] w-full  p-2 border-2 rounded-lg border-blue-200">
+                        <VeeField name="walletAddress" type="text" placeholder="Enter the wallet Address" class="text-[14px] w-full  p-2 border-2 rounded-lg border-blue-200"/>
 
-                        <input type="text" placeholder="Enter the Amount" class="text-[14px] w-full p-2 border-2 rounded-lg border-blue-200">
+                        <VeeField name="walletAmount" type="text" placeholder="Enter the Amount" class="text-[14px] w-full p-2 border-2 rounded-lg border-blue-200"/>
                         
-                        <button class="border-[2px] px-10 py-2 rounded-xl bg-sidebarBG text-[white] text-[14px]
+                        <button type="submit" class="border-[2px] px-10 py-2 rounded-xl bg-sidebarBG text-[white] text-[14px]
                         font-medium hover:text-sidebarBG hover:bg-[white] transition-all ease-linear hover:border-sidebarBG">
                             Transfer
                         </button>
                     </div>
+                </VeeForm>
                 </div>
             </div>
             <!-- end of the transation sec -->
@@ -374,7 +376,10 @@ export default {
 
             // transation details array
             transactionArr : [],
-            
+
+            // wallet Trasaction details arr
+            walletTransactionDetailArr : [],
+
 
             // wallets count
             walletCount : 0,
@@ -415,6 +420,10 @@ export default {
         },
         handleSubmit(values){
             console.log(values)
+        },
+
+        transferData(values){         
+            this.walletTransactionDetailArr.push(values);
         }
     }
 }

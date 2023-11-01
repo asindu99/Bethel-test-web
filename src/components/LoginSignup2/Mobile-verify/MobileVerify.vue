@@ -24,13 +24,24 @@ lg:p-20 md:py-[10px] md:h-screen sm:p-10 min-[320px]:p-3 ">
             </div>
 
             <!-- mobile otp section -->
-            <div class="flex flex-col w-full items-center justify-center gap-4 mt-10">
+            <!-- form details -->
+            <VeeForm action="" @submit="getOTP"
+            :validation-schema="mobileSchema">
+                <div class="flex flex-col w-full items-center justify-center gap-4 mt-10 relative">
 
-                <h3 class="min-[320px]:text-center lg:text-[14px] md:text-[14px] sm:text-[14px] min-[320px]:text-[15px] text-center text-sidebarBG">Enter the OTP code sent to your Mobile :</h3>
-                <input type="number" class="[appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none
-                text-[20px] tracking-tighter bg-transparent p-1 border-b-2 border-[#29379384] outline-none">
-                <router-link to="/"><button class="p-2 bg-sidebarBG rounded-lg px-10 text-white border-[1px] hover:bg-white hover:text-sidebarBG hover:border-[1px] hover:border-sidebarBG transition-all ease-in-out ">Verify</button></router-link>
-            </div>
+                    
+                        <h3 class="min-[320px]:text-center lg:text-[14px] md:text-[14px] sm:text-[14px] min-[320px]:text-[15px] text-center text-sidebarBG">Enter the OTP code sent to your Mobile :</h3>
+                        <VeeField name="OTP" type="number" class="[appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none
+                        text-[20px] tracking-tighter bg-transparent p-1 border-b-2 border-[#29379384] outline-none"/>
+                        <ErrorMessage name="OTP" class="absolute text-[12px] text-red-500 bottom-[52px]"/>
+
+                        <!-- <router-link to="/"> -->
+                            <button class="mt-4 p-2 bg-sidebarBG rounded-lg px-10 text-white border-[1px] hover:bg-white hover:text-sidebarBG hover:border-[1px] hover:border-sidebarBG transition-all ease-in-out ">Verify</button>
+                        <!-- </router-link> -->
+                    
+                    <!-- end of the form details -->
+                </div>
+            </VeeForm>
         
 
         </div>
@@ -51,5 +62,24 @@ lg:p-20 md:py-[10px] md:h-screen sm:p-10 min-[320px]:p-3 ">
 </template>
 
 <script>
+export default{
+    name : 'LoginContent',
+    data(){
+        return{
+            mobileSchema: {
+                OTP: "required",
+            },
 
+            // logindetails array
+            OTPArr : [],
+
+        }
+    },
+    methods:{
+        getOTP(values){
+            this.OTPArr.push(values)
+            console.log(this.OTPArr)
+        }
+    }
+}
 </script>
