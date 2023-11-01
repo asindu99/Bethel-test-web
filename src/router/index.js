@@ -9,7 +9,7 @@ import Storage from '@/components/Storage.vue'
 import Page5AccessKey from '@/components/Page5AccessKey.vue';
 import Billing from '@/components/Billing.vue';
 import LoginComp2 from '@/components/LoginSignup2/LoginComp2.vue';
-import StorageFolder from '@/components/StorageFolder.vue';
+import BucketFolder from '@/components/BucketFolder.vue';
 import MobileVerify from "@/components/LoginSignup2/Mobile-verify/MobileVerify.vue"
 import SignupSecond from '@/components/LoginSignup2/FormContent/Signup-second.vue';
 import SignupThird from '@/components/LoginSignup2/FormContent/Signup-third.vue';
@@ -17,6 +17,7 @@ import LoginContent from '@/components/LoginSignup2/FormContent/LoginContent.vue
 import Profile1 from '@/components/Profile/Profile1.vue';
 import ProfileEdit from '@/components/Profile/ProfileEdit.vue';
 import ChangePassword from '@/components/Profile/ChangePassword.vue';
+import NewFolder from '@/components/NewFolder.vue';
 
 
 const routes = [
@@ -47,7 +48,12 @@ const routes = [
         },
         {
           path:'/bucketFolder',
-          component:StorageFolder,
+          component:BucketFolder,
+        },
+        {
+          path:'/newFolder',
+          component:NewFolder,
+
         },
         {
           path : '/profile',
