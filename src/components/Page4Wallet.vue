@@ -364,11 +364,17 @@ export default {
 
             // wallet table data
             walletTableArr : [],
+
+            // wallet auth modal data array
             walletAuthModalData : {
                 publicKeys : 'Publickkey1231413',
                 walletAddress : 'ipv4/dsfsdfsdfs',
                 Active : 'Online',
             },
+
+            // transation details array
+            transactionArr : [],
+            
 
             // wallets count
             walletCount : 0,

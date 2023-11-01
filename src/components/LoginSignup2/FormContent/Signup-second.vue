@@ -3,15 +3,13 @@
 
     <!-- personal information div -->
     <div class="flex flex-col w-full mt-8">
-                    <h3 class="text-[20px] text-sidebarBG">Personal Information</h3>
-                    <h4 class="text-[14px] text-[#757784]">Enter Your personal details ! </h4>
-                </div>
+        <h3 class="text-[20px] text-sidebarBG">Personal Information</h3>
+        <h4 class="text-[14px] text-[#757784]">Enter Your personal details ! </h4>
+    </div>
 
-                <hr class="w-full mt-2">
-
-    <div class="lg:flex-row md:flex-row sm:flex min-[320px]:flex-col justify-between w-full mt-10">
-
-        
+    <hr class="w-full mt-2">
+        <VeeForm action="">
+            <div class="lg:flex-row md:flex-row sm:flex min-[320px]:flex-col justify-between w-full mt-10">
                     <!-- first name -->
                     <div class="flex flex-col">
                         <label for="" class="text-[14px]">First Name :</label>
@@ -77,6 +75,8 @@
                     </div>
                     </router-link>
                 </div>
+        </VeeForm>
+                
 </template>
 
 <script>

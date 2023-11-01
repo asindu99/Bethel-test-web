@@ -380,10 +380,10 @@
                 </thead>
                 <tbody>
                     <tr v-for="logs in logActivityArr" :key="logs.user" class="lg:text-[12px] md:text-[12px] sm:text-[12px] min-[320px]:text-[10px] border p-3 bg-blue-50">
-                        <td>{{ logs.user }}</td>
-                        <td>{{ logs.ip }}</td>
-                        <td>{{ logs.logStats }}</td>
-                        <td>{{ logs.DT }}</td>
+                        <td class="lg:text-[14px] md:text-[14px] sm:text-[14px] min-[320px]:text-[10px] text-center bg-white border p-3">{{ logs.user }}</td>
+                        <td class="lg:text-[14px] md:text-[14px] sm:text-[14px] min-[320px]:text-[10px] text-center bg-white border p-3">{{ logs.ip }}</td>
+                        <td class="lg:text-[14px] md:text-[14px] sm:text-[14px] min-[320px]:text-[10px] text-center bg-white border p-3">{{ logs.logStats }}</td>
+                        <td class="lg:text-[14px] md:text-[14px] sm:text-[14px] min-[320px]:text-[10px] text-center bg-white border p-3">{{ logs.DT }}</td>
                     </tr>
                 </tbody>
             </table>
@@ -405,13 +405,7 @@ export default {
             paddingClass : '',
 
             // log activity array
-            logActivityArr : [{
-                user : 'Criage Briknell',
-                ip : '12234',
-                logStats : 'Online',
-                DT : '10/9/2024'
-
-             }],
+            logActivityArr : [],
         }
     },
     // components : {
