@@ -91,11 +91,11 @@
                         <label for="" class="text-[12px]">I agree to the terms of Bethel Platform cloud terms of service , General terms of service and Privacy Policy </label>
                     </div>
 
-                    <!-- <router-link to="/mobile-verify"> -->
+                    <router-link to="/mobile-verify">
                     <div class="flex justify-between w-full mt-8">
                         <button type="submit" class="p-2 bg-sidebarBG rounded-lg px-10  text-white border-[1px] hover:bg-white hover:text-sidebarBG hover:border-[1px] hover:border-sidebarBG transition-all ease-in-out">Create Account</button>
                     </div>
-                    <!-- </router-link> -->
+                    </router-link>
                 </div>
         </VeeForm>
                 
@@ -105,6 +105,7 @@
 
 import {mapStores} from 'pinia'
 import useModalStore from '@/stores/modal'
+import { authUser } from '@/stores/AuthUser'
 
 export default{
     name : 'Signup-second',
@@ -127,7 +128,7 @@ export default{
         }
     },
     computed:{
-        ...mapStores(useModalStore)
+        ...mapStores(useModalStore, authUser)
     },
     methods : {
         createAcc(values){

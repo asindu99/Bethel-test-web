@@ -70,9 +70,9 @@
                     </thead>
                     <tbody>
                         <tr v-for="wallet in walletStore.walletTableArr" :key="wallet.Waddress">
-                        <td class="text-[14px] min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] text-center bg-white border p-3"> {{wallet.publicKeys}}</td>
-                        <td class="text-[14px] min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] text-center bg-white border p-3">{{wallet.walletAddress}}</td>
-                        <td class="text-[14px] min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] text-center bg-white border p-3">{{ wallet.Active }}</td>
+                        <td class="text-[14px] min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] text-center bg-white border p-3"> {{wallet.id}}</td>
+                        <td class="text-[14px] min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] text-center bg-white border p-3">{{wallet.quote}}</td>
+                        <td class="text-[14px] min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] text-center bg-white border p-3">{{ wallet.author }}</td>
                         
                         <!-- toogle button table data -->
                         <!-- <td class="text-[12px] text-center bg-white border p-3">
@@ -149,7 +149,7 @@
 
                         <VeeField name="walletAmount" type="text" placeholder="Enter the Amount" class="text-[14px] w-full p-2 border-2 rounded-lg border-blue-200"/>
                         
-                        <button type="submit" class="border-[2px] px-10 py-2 rounded-xl bg-sidebarBG text-[white] text-[14px]
+                        <button @click="addTransferData" type="submit" class="border-[2px] px-10 py-2 rounded-xl bg-sidebarBG text-[white] text-[14px]
                         font-medium hover:text-sidebarBG hover:bg-[white] transition-all ease-linear hover:border-sidebarBG">
                             Transfer
                         </button>
@@ -371,6 +371,9 @@ export default {
             walletCount : 0,
         }
     },
+    mounted(){
+        this.walletStore.getData();
+    },
     computed : {
         ...mapStores(useWalletData)
     },
@@ -402,7 +405,14 @@ export default {
         submitData(){
             this.walletStore.openClose = false;
             this.walletStore.addData();
-        }
+        },
+
+        transferData(values){
+            this.walletStore.addTransactionData(values)
+            
+            
+        },
+
     }
 }
 </script>
