@@ -185,13 +185,10 @@
                                                 <!-- button -->
                                                 <div class="flex flex-col mt-8">
                                                     
-                                                    <button class="w-[200px] p-2 bg-sidebarBG rounded-lg px-8 text-white border-[1px] hover:bg-white hover:text-sidebarBG hover:border-[1px] hover:border-sidebarBG transition-all ease-in-out text-[14px]">Save Changes</button>
+                                                    <button class="w-[200px] p-2 bg-sidebarBG rounded-lg px-8 text-white border-[1px] hover:bg-white hover:text-sidebarBG hover:border-[1px] hover:border-sidebarBG transition-all ease-in-out text-[14px]">Change Password</button>
                                                     
                                                 </div>
                                             </div>
-
-
-
 
                                         </form>
                                     </div>
