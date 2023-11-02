@@ -161,7 +161,7 @@
                                                 <!-- old password -->
                                                 <div class="flex  flex-col mt-4">
                                                     <label for="" class="text-[14px]">Old Password :</label>
-                                                    <input type="password" class="lg:w-[700px] md:w-[235px] text-[#757784] bg-transparent p-1 border-b-2 border-[#29379384]">
+                                                    <input type="password" class="lg:w-full md:w-[235px] text-[#757784] bg-transparent p-1 border-b-2 border-[#29379384]">
                                                 </div>
                                             </div>
                                             <!-- new and confirm password section -->
