@@ -40,7 +40,7 @@
                 
                     <div class="flex flex-col w-[200px] justify-center gap-2 mt-10">                              
                         <router-link to="/signup/personal">
-                            <button type="submit" class="p-2 bg-sidebarBG rounded-lg px-10
+                            <button @click="modalStore.toggleSignLog = false" type="submit" class="p-2 bg-sidebarBG rounded-lg px-10
                              text-white border-[1px] hover:bg-white hover:text-sidebarBG hover:border-[1px] hover:border-sidebarBG
                               transition-all ease-in-out ">Next Step</button>
                         </router-link>
@@ -51,6 +51,9 @@
 </template>
 
 <script >
+import {mapStores} from 'pinia'
+import useModalStore from "@/stores/modal"
+
 export default{
     name : 'Signup-third',
     data(){
@@ -62,6 +65,10 @@ export default{
             },
         }
     },
+    computed : {
+        ...mapStores(useModalStore)
+    },
+
     methods : {
         onReg(values){
             console.log(values)

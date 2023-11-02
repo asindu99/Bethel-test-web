@@ -2,8 +2,8 @@
     <div class="relative lg:px-0 md:px-5 sm:px-4 min-[320px]:px-2">
         <!-- wallet section -->
 
-    <div :class="authBlur" class="px-2">
-        <div :class="authBlur" class="lg:w-[100%] md:w-[100%] sm:w-[100%] min-[320px]:w-[full]">
+    <div :class="walletStore.authBlur" class="px-2">
+        <div  class="lg:w-[100%] md:w-[100%] sm:w-[100%] min-[320px]:w-[full]">
             <!-- head wallet div  -->
             <div class="flex items-center justify-between shadow-sm rounded-lg px-3 py-3 bg-white">
                 <!-- left side text -->
@@ -69,7 +69,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr v-for="wallet in walletTableArr" :key="wallet.Waddress">
+                        <tr v-for="wallet in walletStore.walletTableArr" :key="wallet.Waddress">
                         <td class="text-[14px] min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] text-center bg-white border p-3"> {{wallet.publicKeys}}</td>
                         <td class="text-[14px] min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] text-center bg-white border p-3">{{wallet.walletAddress}}</td>
                         <td class="text-[14px] min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] text-center bg-white border p-3">{{ wallet.Active }}</td>
@@ -197,7 +197,7 @@
         <Transition 
         enter-active-class="animate__animated animate__zoomIn animate__faster"
         leave-active-class="animate__animated animate__zoomOut">
-        <div v-if="openClose" class="
+        <div v-if="walletStore.openClose" class="
         absolute lg:top-[5%] lg:left-[25%] md:top-[5%] md:left-[15%] sm:top-[5%] sm:left-[10%] min-[320px]:top-[5%] min-[320px]:left-[2%]
          lg:w-[500px] md:w-[500px] sm:w-[500px] min-[320px]:w-[350px]
           shadow-mlg bg-white rounded-2xl p-2 border-[2px]">
@@ -325,7 +325,7 @@
                             <h3 class="text-[14px] text-sidebarBG ">Close</h3>
                         </button>
 
-                        <button @click="addData" type="submit" class="border-[2px] py-2 px-4 rounded-lg bg-sidebarBG">
+                        <button @click="submitData" type="submit" class="border-[2px] py-2 px-4 rounded-lg bg-sidebarBG">
                             <h3 class="text-[14px] text-[white] ">Okay</h3>
                         </button>
 
@@ -348,6 +348,9 @@
 </template>
 
 <script>
+import {mapStores} from 'pinia'
+import {useWalletData} from '@/stores/DataStore';
+
 export default {
     name : 'Page4Wallet',
     data(){
@@ -355,24 +358,8 @@ export default {
             // moreButton open and close
             isMore : false,
 
-            // wallet auth model open and close
-            openClose : false,
-
-            // auth model blur
-            authBlur : '',
-
             // show seeds
             showSeedValue : false,
-
-            // wallet table data
-            walletTableArr : [],
-
-            // wallet auth modal data array
-            walletAuthModalData : {
-                publicKeys : 'Publickkey1231413',
-                walletAddress : 'ipv4/dsfsdfsdfs',
-                Active : 'Online',
-            },
 
             // transation details array
             transactionArr : [],
@@ -380,50 +367,41 @@ export default {
             // wallet Trasaction details arr
             walletTransactionDetailArr : [],
 
-
             // wallets count
             walletCount : 0,
         }
     },
+    computed : {
+        ...mapStores(useWalletData)
+    },
 
     methods : {
         openAuthModal(){
-            this.openClose = true;
-            this.authBlur = 'blur-md'
+            this.walletStore.openClose = true;
+            this.walletStore.authBlur = 'blur-md'
         },
 
         closeAuthModal(){
-            this.openClose = false;
-            this.authBlur = '';
+            this.walletStore.openClose = false;
+            this.walletStore.authBlur = '';
         },
         deleteWalletData(wallet){
-            this.walletTableArr = this.walletTableArr.filter((item) => {
+            this.walletStore.walletTableArr = this.walletStore.walletTableArr.filter((item) => {
                 return wallet !== item
             });
-            
-            // handdle the walet count
-            if(this.walletTableArr.length == 0){
-                this.walletCount = this.walletTableArr.length
-            }
-            else{
-                this.walletCount = this.walletCount - 1 ;
-            }
-            
-        }, 
-        addData(){
-            this.walletTableArr.push(this.walletAuthModalData);
-            this.openClose = false;
-            this.authBlur = '';
-            console.log(this.walletTableArr);
-            this.walletCount = this.walletCount + 1 ;
-            console.log(this.walletTableArr.length)
+
         },
+
         handleSubmit(values){
             console.log(values)
         },
 
         transferData(values){         
             this.walletTransactionDetailArr.push(values);
+        },
+        submitData(){
+            this.walletStore.openClose = false;
+            this.walletStore.addData();
         }
     }
 }
