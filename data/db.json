@@ -45,18 +45,6 @@
       "mobile": 1313434556456,
       "tos": "0",
       "id": 1
-    },
-    {
-      "email": "asindu@gmail.com",
-      "password": "123456789",
-      "confirm_password": "123456789",
-      "FirstName": "asindu",
-      "LastName": "shashan",
-      "country": "Bahamas, The",
-      "code": "+54",
-      "mobile": 1313434556456,
-      "tos": "0",
-      "id": 2
     }
   ]
 }
