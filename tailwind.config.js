@@ -18,7 +18,7 @@ module.exports = {
         'iconColor2' : '#5669cc',
 
         //billing 
-        'Silver' : '#c0c0c0'
+        'Dark Grey' : '#a9a9a9 '
       }
     },
   },

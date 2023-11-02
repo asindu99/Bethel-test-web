@@ -59,7 +59,7 @@
 
                             <div><p class="mx-10 mt-[60px] font-bold">What's included</p></div>
 
-                            <div class="flex flex-row mx-10 mt-10 text-Silver">
+                            <div class="flex flex-row mx-10 mt-10 text-zinc-500">
                                 <span class="material-symbols-outlined">
                                     done
                                 </span>
@@ -67,7 +67,7 @@
                                 
                             </div>
 
-                            <div class="flex flex-row mx-10 text-Silver">
+                            <div class="flex flex-row mx-10 text-zinc-500">
                                 <span class="material-symbols-outlined">
                                     done
                                 </span>
@@ -75,7 +75,7 @@
                                 
                             </div>
 
-                            <div class="flex flex-row mx-10 text-Silver">
+                            <div class="flex flex-row mx-10 text-zinc-500">
                                 <span class="material-symbols-outlined">
                                     done
                                 </span>
@@ -83,7 +83,7 @@
                                 
                             </div>
 
-                            <div class="flex flex-row mx-10 text-Silver ">
+                            <div class="flex flex-row mx-10 text-zinc-500 ">
                                 <span class="material-symbols-outlined">
                                     done
                                 </span>
@@ -91,7 +91,7 @@
                                 
                             </div>
             
-                            <div class="flex flex-row mx-10 text-Silver">
+                            <div class="flex flex-row mx-10 text-zinc-500">
                                 <span class="material-symbols-outlined">
                                     done
                                 </span>
@@ -117,7 +117,7 @@
 
                             <div><p class="mx-10 mt-[50px] font-bold">What's included</p></div>
 
-                            <div class="flex flex-row mx-10 mt-10 text-Silver">
+                            <div class="flex flex-row mx-10 mt-10 text-zinc-500">
                                 <span class="material-symbols-outlined">
                                     done
                                 </span>
@@ -125,7 +125,7 @@
                                 
                             </div>
 
-                            <div class="flex flex-row mx-10 text-Silver">
+                            <div class="flex flex-row mx-10 text-zinc-500">
                                 <span class="material-symbols-outlined">
                                     done
                                 </span>
@@ -133,7 +133,7 @@
                                 
                             </div>
 
-                            <div class="flex flex-row mx-10 text-Silver">
+                            <div class="flex flex-row mx-10 text-zinc-500">
                                 <span class="material-symbols-outlined">
                                     done
                                 </span>
@@ -141,7 +141,7 @@
                                 
                             </div>
 
-                            <div class="flex flex-row mx-10 text-Silver">
+                            <div class="flex flex-row mx-10 text-zinc-500">
                                 <span class="material-symbols-outlined">
                                     done
                                 </span>
@@ -149,7 +149,7 @@
                                 
                             </div>
             
-                            <div class="flex flex-row mx-10 text-Silver">
+                            <div class="flex flex-row mx-10 text-zinc-500">
                                 <span class="material-symbols-outlined">
                                     done
                                 </span>
@@ -176,7 +176,7 @@
 
                             <div><p class="mx-10 mt-[50px] font-bold">What's included</p></div>
 
-                            <div class="flex flex-row mx-10 mt-10 text-Silver">
+                            <div class="flex flex-row mx-10 mt-10 text-zinc-500">
                                 <span class="material-symbols-outlined">
                                     done
                                 </span>
@@ -184,7 +184,7 @@
                                 
                             </div>
 
-                            <div class="flex flex-row mx-10 text-Silver">
+                            <div class="flex flex-row mx-10 text-zinc-500">
                                 <span class="material-symbols-outlined">
                                     done
                                 </span>
@@ -192,7 +192,7 @@
                                 
                             </div>
 
-                            <div class="flex flex-row mx-10 text-Silver">
+                            <div class="flex flex-row mx-10 text-zinc-500">
                                 <span class="material-symbols-outlined">
                                     done
                                 </span>
@@ -200,7 +200,7 @@
                                 
                             </div>
 
-                            <div class="flex flex-row mx-10 text-Silver">
+                            <div class="flex flex-row mx-10 text-zinc-500">
                                 <span class="material-symbols-outlined">
                                     done
                                 </span>
@@ -208,7 +208,7 @@
                                 
                             </div>
             
-                            <div class="flex flex-row mx-10 text-Silver">
+                            <div class="flex flex-row mx-10 text-zinc-500">
                                 <span class="material-symbols-outlined">
                                     done
                                 </span>
@@ -233,7 +233,7 @@
                         
                         <p class="mx-10 mt-[50px] font-bold">What's included</p>
 
-                        <div class="flex flex-row mx-10 mt-10 text-Silver">
+                        <div class="flex flex-row mx-10 mt-10 text-zinc-500">
                             <span class="material-symbols-outlined">
                                 done
                             </span>
@@ -241,7 +241,7 @@
                             
                         </div>
 
-                        <div class="flex flex-row mx-10 text-Silver">
+                        <div class="flex flex-row mx-10 text-zinc-500">
                             <span class="material-symbols-outlined">
                                 done
                             </span>
@@ -249,7 +249,7 @@
                             
                         </div>
 
-                        <div class="flex flex-row mx-10 text-Silver">
+                        <div class="flex flex-row mx-10 text-zinc-500">
                             <span class="material-symbols-outlined">
                                 done
                             </span>
@@ -257,7 +257,7 @@
                             
                         </div>
 
-                        <div class="flex flex-row mx-10 text-Silver">
+                        <div class="flex flex-row mx-10 text-zinc-500">
                             <span class="material-symbols-outlined">
                                 done
                             </span>
@@ -265,7 +265,7 @@
                             
                         </div>
 
-                        <div class="flex flex-row mx-10 text-Silver">
+                        <div class="flex flex-row mx-10 text-zinc-500">
                             <span class="material-symbols-outlined">
                                 done
                             </span>
