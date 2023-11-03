@@ -5,6 +5,7 @@ export const authUser = defineStore('authUser', {
     state : () => ({
         authUserDetailsArr : [],
         authMobileOTP : [],
+        loginDataArr : [],
 
     }),
 
@@ -42,6 +43,24 @@ export const authUser = defineStore('authUser', {
                 console.log(res.error)
             }
             else{
+                router.push('/')
+            }
+        },
+
+        // add login details into the jason file --> component --> loginContent2
+
+        async postLoginData(values){
+            this.loginDataArr.push(values)
+
+            const res  = await fetch('http://localhost:3000/loginDetails' , {
+                method : 'POST',
+                body : JSON.stringify(values),
+                headers : {'Content-Type' : 'application/json'}
+            })
+            if(res.error){
+                console.log(res.error)
+            }
+            else {
                 router.push('/')
             }
         }
