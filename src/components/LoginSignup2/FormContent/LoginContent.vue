@@ -79,7 +79,8 @@ lg:p-20 md:py-[10px] md:h-screen sm:p-10 min-[320px]:p-3 ">
 </template>
 
 <script>
-
+import {mapStores} from 'pinia'
+import { authUser } from '@/stores/AuthUser';
 
 export default{
     name : 'LoginContent',
@@ -95,9 +96,12 @@ export default{
 
         }
     },
+    computed : {
+        ...mapStores(authUser)
+    },
     methods : {
         onSubmit(values){
-            this.loginDetailsArr.push(values);
+            this.authUserStore.postLoginData(values);
         }
     }
     

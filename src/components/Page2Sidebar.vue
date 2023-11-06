@@ -204,8 +204,33 @@
 
 
             <!-- router view must be here -->
-            <div @click="asideHide"  class="w-full h-full mx-2 lg:pl-[240px] md:pl-[180px]" :class="modalStore.onBlur, paddingMD"> 
-                <router-view class="scale-[1]"></router-view> 
+            <div @click="asideHide"  class="w-full h-full mx-2 lg:pl-[240px] md:pl-[180px]" :class="modalStore.onBlur, paddingMD">
+
+                
+                <!-- sign in sucess msg -->
+                <div v-show="elementVisible" class="absolute z-[10] right-2 animate__animated animate__animated animate__fadeIn">
+                        <div class="relative flex p-2  rounded-xl  items-center gap-2 bg-green-500 
+                    lg:w-[320px] md:w-[320px] sm:w-[320px] min-[320px]:w-[200px]
+                    ">
+
+                        <!-- msg div -->
+                        <div class="flex flex-col text-white lg:text-[14px] md:text-[14px] sm:text-[14px] min-[320px]:text-[11px]">
+                            <h3>Success!</h3>
+                            <h4>You successfully loged-in</h4>
+                        </div>
+
+                        <!-- bethel logo -->
+                        <div class="absolute top-2 right-2 flex gap-1">
+                            <img src="../img/logos/bethellogo.png" alt="" class="w-[15px]">
+                            <h3 class="text-[10px] font-bold text-bethelBlue">BETHEL</h3>
+                        </div>
+                    </div>
+                 
+                </div>
+                <!-- end of the sign in  sucess msg -->
+                
+
+                <router-view class="scale-[1] z-[0]"></router-view> 
             </div>
             <!-- end of the router view here -->
 
@@ -226,6 +251,9 @@ export default{
     components : {
         
     },
+    created(){
+        setTimeout(() => this.elementVisible = false, 4000)
+    },
     computed :{
         ...mapStores(useModalStore)
     },
@@ -239,6 +267,10 @@ export default{
 
             //for the funtion 
             fnSidebar : false,
+
+
+            // LOG IN SUCESS MSG
+            elementVisible : true,
 
             // button hide
             buttonHide : '',

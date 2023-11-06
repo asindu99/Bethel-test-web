@@ -35,9 +35,9 @@ lg:p-20 md:py-[10px] md:h-screen sm:p-10 min-[320px]:p-3 ">
                         text-[20px] tracking-tighter bg-transparent p-1 border-b-2 border-[#29379384] outline-none"/>
                         <ErrorMessage name="OTP" class="absolute text-[12px] text-red-500 bottom-[52px]"/>
 
-                        <!-- <router-link to="/"> -->
+                        
                             <button class="mt-4 p-2 bg-sidebarBG rounded-lg px-10 text-white border-[1px] hover:bg-white hover:text-sidebarBG hover:border-[1px] hover:border-sidebarBG transition-all ease-in-out ">Verify</button>
-                        <!-- </router-link> -->
+                        
                     
                     <!-- end of the form details -->
                 </div>
@@ -62,6 +62,9 @@ lg:p-20 md:py-[10px] md:h-screen sm:p-10 min-[320px]:p-3 ">
 </template>
 
 <script>
+import {mapStores} from 'pinia';
+import { authUser } from '@/stores/AuthUser';
+
 export default{
     name : 'LoginContent',
     data(){
@@ -75,10 +78,12 @@ export default{
 
         }
     },
+    computed : {
+        ...mapStores(authUser)
+    },
     methods:{
         getOTP(values){
-            this.OTPArr.push(values)
-            console.log(this.OTPArr)
+            this.authUserStore.postMobileOTP(values);
         }
     }
 }
