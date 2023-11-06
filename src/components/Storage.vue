@@ -265,11 +265,8 @@ export default {
             this.bucketCount = this.bucketCount - 1;
         },
         addData() {
-            this.bucketTableArr.push(this.bucketAuthModalData);
             this.openClose = false;
             this.authBlur = '';
-            console.log(this.bucketTableArr);
-            this.bucketCount = this.bucketCount + 1;
         },
         handleSubmit(values) {
             console.log(values);
