@@ -16,6 +16,9 @@ export const useWalletData = defineStore('wallet' , {
         // transation POST data arr
         transactionArr : [],
 
+        //create bucket data Arr,
+        bucketNameArr : [],
+
         
     }),
     actions :{
