@@ -16,8 +16,10 @@ export const useWalletData = defineStore('wallet' , {
         // transation POST data arr
         transactionArr : [],
 
-        //create bucket data Arr,
+        // bucket name info data Arr,
         bucketNameArr : [],
+
+        //
 
         
     }),
@@ -59,6 +61,9 @@ export const useWalletData = defineStore('wallet' , {
             }
 
         }
+
+        // add data into the bucket name json --> component --> storage
+        async addbucketNameData(values)
 
     },
 })

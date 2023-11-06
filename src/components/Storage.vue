@@ -160,7 +160,7 @@
 
 
                 <!-- adding a form -->
-                <vee-form :validation-schema="authSchema" action="" @submit.prevent="handleSubmit">
+                <vee-form :validation-schema="authSchema" action="" @submit="handleSubmit">
                         <div class="mt-2 text-[#5b5b5b]">
                             <h3 class="text-[16px]">Bucket Name</h3>
                         </div>
@@ -198,7 +198,7 @@
                             <h3 class="text-[14px] text-bethelBlue ">Close</h3>
                         </button>
 
-                        <button @click="addData" type="submit" class="border-[2px] py-2 px-4 rounded-lg bg-sidebarBG">
+                        <button type="submit" class="border-[2px] py-2 px-4 rounded-lg bg-sidebarBG">
                             <h3 class="text-[14px] text-[white] ">Ok</h3>
                         </button>
 
@@ -221,6 +221,8 @@
 </template>
 
 <script>
+import {mapStores} from "pinia";
+import { useWalletData } from "../stores/DataStore";
 import { ErrorMessage } from 'vee-validate';
 
 export default {
@@ -249,6 +251,9 @@ export default {
             }
         };
     },
+    computed : {
+        ...mapStores(useWalletData)
+    },
     methods: {
         openAuthModal() {
             this.openClose = true;
@@ -258,18 +263,13 @@ export default {
             this.openClose = false;
             this.authBlur = '';
         },
-        deleteBucketData(bucket) {
-            this.bucketTableArr = this.bucketTableArr.filter((item) => {
-                return bucket !== item;
-            });
-            this.bucketCount = this.bucketCount - 1;
-        },
-        addData() {
+
+        handleSubmit(values) {
+            
             this.openClose = false;
             this.authBlur = '';
-        },
-        handleSubmit(values) {
-            console.log(values);
+            this.walletStore.bucketNameArr.push(values);
+            console.log(this.walletStore.bucketNameArr);
         }
     },
     components: { ErrorMessage }
