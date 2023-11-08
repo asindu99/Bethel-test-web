@@ -85,28 +85,19 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr v-for="bucket in bucketTableArr" :key="bucket.Baddress">
-                            <td class="text-[12px] text-center bg-white border p-3 cursor-pointer hover:text-sidebarBG font-bold"><router-link to="/bucketFolder"> {{bucket.bucketName}} </router-link></td>
-                            <td class="text-[12px] text-center bg-white border p-3">{{bucket.bucketAccess}}</td>
-                            <td class="text-[12px] text-center bg-white border p-3">{{bucket.bucketNetwork}}</td>
+                            <tr v-for="bucket in walletStore.bucketNameArr" :key="bucket.id">
+                            <td class="text-[12px] text-center bg-white border p-3 cursor-pointer hover:text-sidebarBG font-bold"><router-link to="/bucketFolder"> {{bucket.name}} </router-link></td>
+                            <td class="text-[12px] text-center bg-white border p-3">{{bucket.id}}</td>
+                            <td class="text-[12px] text-center bg-white border p-3">{{bucket.network}}</td>
                             <td class="text-[12px] text-center bg-white border p-3">{{bucket.bucketDateCreated}}</td>
                             
 
                             <!-- more button functions -->
                             <td class="text-[12px] text-center bg-white border p-3">
                                 <div class="relative w-full">
-                                    <!-- more button auth modal -->
-                                    <!-- <div class="absolute right-[-15px] w-[60px] shadow-md border-[1px] bg-blue-50 rounded-md top-10 animate__animated animate__zoomIn animate__faster">
-                                        <button @click="deleteBucketData(bucket)">
-                                            <div class="p-1">
-                                                <h3>Delete</h3>
-                                            </div>
-                                        </button>
-                                        
-                                        
-                                    </div> -->
+                                    
 
-                                    <button @click="deleteBucketData(bucket)">Delete</button>
+                                    <button @click="walletStore.deleteBucketName(bucket.id)">Delete</button>
                                 <!-- end of the auth modal -->
                                 </div>
                                 <!-- <button>
@@ -235,21 +226,14 @@ export default {
             openClose: false,
             // auth model blur
             authBlur: '',
-            // bucket table data
-            bucketTableArr: [],
-            bucketAuthModalData: {
-                bucketName: 'ABC',
-                bucketAccess: 'Private',
-                bucketNetwork: 'IPFS',
-                bucketDateCreated: '2023-10-13 06:46:10 -0400',
-            },
-            // bucket count
-            bucketCount: 0,
+
             authSchema: {
                 name: 'required',
                 network : 'required'
             }
         };
+    },
+    mounted(){
     },
     computed : {
         ...mapStores(useWalletData)
@@ -268,8 +252,8 @@ export default {
             
             this.openClose = false;
             this.authBlur = '';
-            this.walletStore.bucketNameArr.push(values);
-            console.log(this.walletStore.bucketNameArr);
+            this.walletStore.postBucketNameData(values);
+            // console.log(this.walletStore.bucketNameArr);
         }
     },
     components: { ErrorMessage }

@@ -10,7 +10,7 @@ export const authUser = defineStore('authUser', {
     }),
 
     actions : {
-        // add signup form data into json --> componet --> signup-third
+        // post signup form data into json --> componet --> signup-third
         async postAuthUserData(values){
             this.authUserDetailsArr.push(values)
 
@@ -28,7 +28,7 @@ export const authUser = defineStore('authUser', {
             }
         },
 
-        // add mobile OTP into the json --> component --> mobileVerify
+        // post mobile OTP into the json --> component --> mobileVerify
         async postMobileOTP(values){
             this.authMobileOTP.push(values)
 
@@ -47,7 +47,7 @@ export const authUser = defineStore('authUser', {
             }
         },
 
-        // add login details into the jason file --> component --> loginContent2
+        // post login details into the jason file --> component --> loginContent2
 
         async postLoginData(values){
             this.loginDataArr.push(values)

@@ -200,8 +200,7 @@ export default {
                 bucketDateCreated : '2023-10-13 06:46:10 -0400',
             },
 
-            // bucket count
-            bucketCount : 0,
+            
         }
     },
 

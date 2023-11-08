@@ -52,7 +52,7 @@
                         <div class="flex items-center">             
                           <h3 class="text-[10px] text-white">Total Buckets</h3> 
                           <div class="ml-3 w-[30px] h-[25px] bg-blue-100 rounded-lg text-center justify-center items-center">
-                            <h1 class="text-blue-600">0</h1>
+                            <h1 class="text-blue-600">{{bucketCount1 }}</h1>
                             </div> 
                         </div>
                         
@@ -418,6 +418,9 @@
 </template>
 
 <script>
+import {mapStores} from 'pinia'
+import {useWalletData} from '@/stores/DataStore'
+
 import Chart from 'chart.js/auto';
 // import Page1Nav from '@/components/Page1Nav.vue';
 
@@ -432,16 +435,20 @@ export default {
 
             // log activity array
             logActivityArr : [],
+
+            // bucket counts
+            bucketCount1 : 0,
+
+            
         }
     },
-
-    // created(){
-    //     setTimeout(() => this.elementVisible = false, 4000)
-    // },
-    // components : {
-    //     Page1Nav,
-    // },
+    computed : {
+        ...mapStores(useWalletData),
+        
+    },
     mounted(){
+        this.bucketCount1 = this.walletStore.bucketNameArr.length
+       this.walletStore.getBucketNames();
         const ctx = document.getElementById('myChart');
         const ctx1 = document.getElementById('myChart2');
         const ctx2 = document.getElementById('myChart3');
