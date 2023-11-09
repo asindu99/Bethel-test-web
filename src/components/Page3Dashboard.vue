@@ -392,25 +392,25 @@
         </div>
 
     <!-- sign in sucess msg -->
-    <!-- <div v-show="elementVisible" class="absolute z-[10] top-0 right-2 animate__animated animate__animated animate__fadeIn">
+    <div v-show="elementVisible" class="absolute z-[10] top-0 right-2 animate__animated animate__animated animate__fadeIn">
         <div class="relative flex p-2  rounded-xl  items-center gap-2 bg-green-500 
     lg:w-[320px] md:w-[320px] sm:w-[320px] min-[320px]:w-[200px]
-    "> -->
+    ">
 
         <!-- msg div -->
-        <!-- <div class="flex flex-col text-white lg:text-[14px] md:text-[14px] sm:text-[14px] min-[320px]:text-[11px]">
+        <div class="flex flex-col text-white lg:text-[14px] md:text-[14px] sm:text-[14px] min-[320px]:text-[11px]">
             <h3>Success!</h3>
             <h4>You successfully loged-in</h4>
-        </div> -->
+        </div>
 
         <!-- bethel logo -->
-        <!-- <div class="absolute top-2 right-2 flex gap-1">
+        <div class="absolute top-2 right-2 flex gap-1">
             <img src="../img/logos/bethellogo.png" alt="" class="w-[15px]">
             <h3 class="text-[10px] font-bold text-bethelBlue">BETHEL</h3>
         </div>
     </div>
     
-</div> -->
+</div>
 <!-- end of the sign in  sucess msg -->
                 
        
@@ -431,7 +431,7 @@ export default {
             paddingClass : '',
 
             // LOG IN SUCESS MSG
-            elementVisible : true,
+            elementVisible : false,
 
             // log activity array
             logActivityArr : [],
@@ -445,6 +445,9 @@ export default {
     computed : {
         ...mapStores(useWalletData),
         
+    },
+    onMounted(){
+        this.elementVisible = true;
     },
     mounted(){
         this.bucketCount1 = this.walletStore.bucketNameArr.length

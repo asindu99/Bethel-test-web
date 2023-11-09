@@ -34,6 +34,29 @@
       "mobile": 1231231231212312,
       "tos": "0",
       "id": 1
+    },
+    {
+      "email": "asindu@gmail.com",
+      "password": "123456789",
+      "confirm_password": "123456789",
+      "FirstName": "asindu",
+      "LastName": "shashan",
+      "country": "Australia",
+      "code": "+374",
+      "mobile": 9234234234,
+      "tos": "0",
+      "id": 2
+    },
+    {
+      "email": "asindu@gmail.com",
+      "username": "asindu",
+      "password": "123456789",
+      "firstName": "asi",
+      "lastName": "asi",
+      "country": "Australia",
+      "code": "+1-268",
+      "mobile": 12131312312313,
+      "id": 3
     }
   ],
   "OTP": [
