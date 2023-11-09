@@ -9,11 +9,24 @@
         <VeeForm @submit="onReg"
         :validation-schema="signupSchema">
             <!-- email div -->
-                <div class="flex flex-col mt-8 relative">
-                    <label for="" class="text-[14px]">Email :</label>
-                    <VeeField ref="anyName" name="email" type="text" class=" bg-transparent p-1 border-b-2 border-[#29379384] outline-none"/>
+            
+                <div class="flex w-full justify-between gap-2 mt-10
+                lg:flex-row md:flex-row sm:flex min-[320px]:flex-col">
+                    <!-- password div -->
+                    <div class="flex flex-col relative">
+                        <label for="" class="text-[14px]">Email :</label>
+                        <VeeField  name="email" type="text" class=" bg-transparent p-1 border-b-2 border-[#29379384] outline-none"/>
 
-                    <ErrorMessage name="email" class="absolute text-[12px] text-red-500 bottom-[-20px]"/>
+                        <ErrorMessage name="email" class="absolute text-[12px] text-red-500 bottom-[-20px]"/>
+                    </div>
+
+                    <!-- confirm password div -->
+                    <div class="flex flex-col relative lg:mt-0 md:mt-0 sm:mt-2 min-[320px]:mt-5">
+                        <label for="" class="text-[14px]">User Name :</label>
+                        <VeeField  name="username" type="text" class=" bg-transparent p-1 border-b-2 border-[#29379384] outline-none"/>
+                        <ErrorMessage name="name" class="absolute text-[12px] text-red-500 bottom-[-20px]"/>
+                    </div>
+
                 </div>
 
                 <!-- password and confirm password section -->
