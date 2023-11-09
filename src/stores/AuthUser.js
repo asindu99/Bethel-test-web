@@ -10,6 +10,9 @@ export const authUser = defineStore('authUser', {
         userLog : false,
         user : '',
         userID : null,
+        
+
+        userDetails : [],
 
     }),
 
@@ -57,6 +60,11 @@ export const authUser = defineStore('authUser', {
             }
             else {
                 this.userLog = true;
+                this.userDetails.push(res.data)
+
+                this.userID = this.userDetails[0]._id
+                console.log(this.userID)
+                console.log(this.userDetails)
                 router.push('/home');
             }
         }

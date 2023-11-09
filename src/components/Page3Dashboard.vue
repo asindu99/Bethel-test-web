@@ -422,6 +422,7 @@
 <script>
 import {mapStores} from 'pinia'
 import {useWalletData} from '@/stores/DataStore'
+import {authUser} from '@/stores/AuthUser'
 
 import Chart from 'chart.js/auto';
 import axios from 'axios';
@@ -448,7 +449,7 @@ export default {
         }
     },
     computed : {
-        ...mapStores(useWalletData),
+        ...mapStores(useWalletData, authUser),
         
     },
     // async created(){
@@ -458,7 +459,9 @@ export default {
     // },
     mounted(){
         
-    
+        console.log(this.authUserStore.userID);
+
+        
         this.bucketCount1 = this.walletStore.bucketNameArr.length
         this.walletStore.getBucketNames();
         const ctx = document.getElementById('myChart');

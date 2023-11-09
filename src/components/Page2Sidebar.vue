@@ -134,7 +134,7 @@
                 <!-- end of the menu item -->
 
                     <!-- menu item -->
-                    <router-link to="/login">
+                    <router-link to="/">
                         <div class="lg:ml-7 md:ml-6 min-[320px]:flex sm:flex lg:flex md:flex w-full lg:px-3 md:px-0  hover:bg-[] my-2 py-2">
                             <span class=" material-symbols-outlined top-2 right-[20px]  mr-2
                             ">

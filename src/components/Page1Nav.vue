@@ -179,7 +179,7 @@
             <div class="flex flex-col text-sidebarText">
                 <!-- menu item -->
                 
-                    <RouterLink to="/" class=""><button @click="closeSide">
+                    <RouterLink to="/home" class=""><button @click="closeSide">
                     <div class="lg:flex md:flex sm:flex min-[320px]:flex
                      w-full px-3  my-2 py-2 transition-all ease-linear">
                         <span class=" material-symbols-outlined top-2 right-[20px] mr-2
@@ -324,7 +324,7 @@
                 </a>
                 <!-- end of the menu item -->
                 <!-- menu item -->
-                <router-link to="/login" class=" w-full">
+                <router-link to="/" class=" w-full">
                     <div class="absolute bottom-3 min-[320px]:flex sm:flex lg:flex md:flex w-full px-3  my-2 py-2  transition-all ease-linear">
                         <span class=" material-symbols-outlined top-2 right-[20px] mr-2
                         ">
