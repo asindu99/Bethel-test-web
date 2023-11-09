@@ -71,7 +71,7 @@
 
                                 <div class="bg-blue-50 w-full px-10 py-4 mt-2 justify-around ">
                                     <div class="flex justify-center items-center pt-2">
-                                    <img src="src/img/images/AdminProfile.png" alt="" class="w-[70px] h-[70px]">
+                                    <img src="../img/images/AdminProfile.png" alt="" class="w-[70px] h-[70px]">
                                     </div>
 
                                     <hr class="w-full mt-2">
