@@ -158,21 +158,22 @@
 
 
                 <!-- adding a form -->
-                <form action="" @submit.prevent="handleSubmit">
+                <vee-form action="" @submit="handleSubmit" :validation-schema="schema">
                         <div class="mt-2 text-[#5b5b5b]">
                             <h3 class="text-[16px]">Folder Name</h3>
                         </div>
 
-                        <div>
-                            <input type="text" placeholder=""
+                        <div class="relative">
+                            <vee-field name="name" type="text" placeholder=""
                             class="mt-2 lg:w-[350px] md:w-[350px] sm:w-[350px] min-[320px]:w-[300px]
-                            border-[2px] rounded-lg p-1" >
+                            border-[2px] rounded-lg p-1" />
+                            <ErrorMessage name="name" class="absolute left-0 bottom-[-20px] text-[12px] text-red-400" />
                         </div>
 
 
                     <!-- close and ok sec -->
-                    <div class="mr-2 mt-4 flex gap-2 justify-end border-t-[2px] py-2">
-                        <button @click="closeAuthModal" class="border-[2px] py-2 px-4 rounded-lg bg-[#f7f5f5]">
+                    <div class="mr-2 mt-8 flex gap-2 justify-end border-t-[2px] py-2">
+                        <button @click="closeAuthModal" type="submit" class="border-[2px] py-2 px-4 rounded-lg bg-[#f7f5f5]">
                             <h3 class="text-[14px] text-bethelBlue ">Close</h3>
                         </button>
 
@@ -181,7 +182,7 @@
                         </button>
 
                     </div>
-                </form>
+                </vee-form>
                 <!-- end of the form -->
                 
                 <!-- end of the close and okay sec -->
@@ -199,6 +200,9 @@
 </template>
 
 <script>
+import {mapStores} from 'pinia'
+import {useWalletData} from '@/stores/DataStore'
+
 export default {
     name : 'Storage',
     data(){
@@ -222,7 +226,15 @@ export default {
 
             // folder count
             folderCount : 0,
+
+            // schma
+            schema : {
+                name : 'required'
+            }
         }
+    },
+    computed : {
+        ...mapStores(useWalletData)
     },
 
     methods : {
@@ -235,20 +247,8 @@ export default {
             this.openClose = false;
             this.authBlur = '';
         },
-        deleteFolderData(folder){
-            this.folderTableArr = this.folderTableArr.filter((item) => {
-                return folder !== item
-            });
-            this.folderCount = this.folderCount - 1 ;
-        }, 
-        addData(){
-            this.folderTableArr.push(this.folderAuthModalData);
-            this.openClose = false;
-            this.authBlur = '';
-            console.log(this.folderTableArr);
-            this.folderCount = this.folderCount + 1 ;
-        },
         handleSubmit(values){
+            this.walletStore.postFolderName(values);
             console.log(values)
         }
     }

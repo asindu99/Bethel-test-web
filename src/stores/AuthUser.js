@@ -6,11 +6,12 @@ export const authUser = defineStore('authUser', {
         authUserDetailsArr : [],
         authMobileOTP : [],
         loginDataArr : [],
+        userLog : false,
 
     }),
 
     actions : {
-        // add signup form data into json --> componet --> signup-third
+        // post signup form data into json --> componet --> signup-third
         async postAuthUserData(values){
             this.authUserDetailsArr.push(values)
 
@@ -28,7 +29,7 @@ export const authUser = defineStore('authUser', {
             }
         },
 
-        // add mobile OTP into the json --> component --> mobileVerify
+        // post mobile OTP into the json --> component --> mobileVerify
         async postMobileOTP(values){
             this.authMobileOTP.push(values)
 
@@ -44,24 +45,28 @@ export const authUser = defineStore('authUser', {
             }
             else{
                 router.push('/')
+                
             }
         },
 
-        // add login details into the jason file --> component --> loginContent2
+        // post login details into the jason file --> component --> loginContent2
 
         async postLoginData(values){
-            this.loginDataArr.push(values)
+            // this.loginDataArr.push(values)
 
-            const res  = await fetch('http://localhost:3000/loginDetails' , {
+            const res  = await fetch('https://mw.bethel.network/auth/login' , {
                 method : 'POST',
                 body : JSON.stringify(values),
+                credentials : 'include',
                 headers : {'Content-Type' : 'application/json'}
             })
             if(res.error){
                 console.log(res.error)
             }
             else {
-                router.push('/')
+                router.push('/');
+                console.log('loged in');
+                this.userLog = true;
             }
         }
     }

@@ -85,28 +85,19 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr v-for="bucket in bucketTableArr" :key="bucket.Baddress">
-                            <td class="text-[12px] text-center bg-white border p-3 cursor-pointer hover:text-sidebarBG font-bold"><router-link to="/bucketFolder"> {{bucket.bucketName}} </router-link></td>
-                            <td class="text-[12px] text-center bg-white border p-3">{{bucket.bucketAccess}}</td>
-                            <td class="text-[12px] text-center bg-white border p-3">{{bucket.bucketNetwork}}</td>
+                            <tr v-for="bucket in walletStore.bucketNameArr" :key="bucket.id">
+                            <td class="text-[12px] text-center bg-white border p-3 cursor-pointer hover:text-sidebarBG font-bold"><router-link to="/bucketFolder"> {{bucket.name}} </router-link></td>
+                            <td class="text-[12px] text-center bg-white border p-3">{{bucket.id}}</td>
+                            <td class="text-[12px] text-center bg-white border p-3">{{bucket.network}}</td>
                             <td class="text-[12px] text-center bg-white border p-3">{{bucket.bucketDateCreated}}</td>
                             
 
                             <!-- more button functions -->
                             <td class="text-[12px] text-center bg-white border p-3">
                                 <div class="relative w-full">
-                                    <!-- more button auth modal -->
-                                    <!-- <div class="absolute right-[-15px] w-[60px] shadow-md border-[1px] bg-blue-50 rounded-md top-10 animate__animated animate__zoomIn animate__faster">
-                                        <button @click="deleteBucketData(bucket)">
-                                            <div class="p-1">
-                                                <h3>Delete</h3>
-                                            </div>
-                                        </button>
-                                        
-                                        
-                                    </div> -->
+                                    
 
-                                    <button @click="deleteBucketData(bucket)">Delete</button>
+                                    <button @click="walletStore.deleteBucketName(bucket.id)">Delete</button>
                                 <!-- end of the auth modal -->
                                 </div>
                                 <!-- <button>
@@ -160,32 +151,33 @@
 
 
                 <!-- adding a form -->
-                <form action="" @submit.prevent="handleSubmit">
+                <vee-form :validation-schema="authSchema" action="" @submit="handleSubmit">
                         <div class="mt-2 text-[#5b5b5b]">
                             <h3 class="text-[16px]">Bucket Name</h3>
                         </div>
 
-                    <div>
-                        <input type="text" placeholder=""
+                    <div class="relative">
+                        <vee-field name="name" type="text" placeholder=""
                         class="mt-2 lg:w-[350px] md:w-[350px] sm:w-[350px] min-[320px]:w-[300px]
-                        border-[2px] rounded-lg p-1" >
+                        border-[2px] rounded-lg p-1" />
+                        <ErrorMessage class="absolute left-0 bottom-[-20px] text-[12px] text-red-400 " name="name"></ErrorMessage>
                     </div>
 
                     <!-- network section -->
-                    <div>
+                    <div class="mt-8">
                         <div class="mt-2 text-[#5b5b5b]">
                             <h3 class="text-[16px]">Network</h3>
                         </div>
 
                         <div>
                             <div>
-                                <select class="mt-2 lg:w-[350px] md:w-[350px] sm:w-[350px] min-[320px]:w-[300px]
+                                <vee-field name="network" as="select" class="mt-2 lg:w-[350px] md:w-[350px] sm:w-[350px] min-[320px]:w-[300px]
                                 border-[2px] rounded-lg p-2">
 
                                     <option value="Public">Public</option>
                                     <option value="Private"> Private</option>
 
-                                </select>
+                                </vee-field>
                             </div>
                         </div>
                     </div>
@@ -197,12 +189,12 @@
                             <h3 class="text-[14px] text-bethelBlue ">Close</h3>
                         </button>
 
-                        <button @click="addData" type="submit" class="border-[2px] py-2 px-4 rounded-lg bg-sidebarBG">
+                        <button type="submit" class="border-[2px] py-2 px-4 rounded-lg bg-sidebarBG">
                             <h3 class="text-[14px] text-[white] ">Ok</h3>
                         </button>
 
                     </div>
-                </form>
+                </vee-form>
                 <!-- end of the form -->
                 
                 <!-- end of the close and okay sec -->
@@ -220,59 +212,50 @@
 </template>
 
 <script>
+import {mapStores} from "pinia";
+import { useWalletData } from "../stores/DataStore";
+import { ErrorMessage } from 'vee-validate';
+
 export default {
-    name : 'Storage',
-    data(){
-        return{
+    name: 'Storage',
+    data() {
+        return {
             // moreButton open and close
-            isMore : false,
-
+            isMore: false,
             // bucket auth model open and close
-            openClose : false,
-
+            openClose: false,
             // auth model blur
-            authBlur : '',
+            authBlur: '',
 
-            // bucket table data
-            bucketTableArr : [],
-            bucketAuthModalData : {
-                bucketName: 'ABC',
-                bucketAccess:'Private',
-                bucketNetwork: 'IPFS',
-                bucketDateCreated : '2023-10-13 06:46:10 -0400',
-            },
+            authSchema: {
+                name: 'required',
+                network : 'required'
+            }
+        };
+    },
+    mounted(){
+    },
+    computed : {
+        ...mapStores(useWalletData)
+    },
+    methods: {
+        openAuthModal() {
+            this.openClose = true;
+            this.authBlur = 'blur-md';
+        },
+        closeAuthModal() {
+            this.openClose = false;
+            this.authBlur = '';
+        },
 
-            // bucket count
-            bucketCount : 0,
+        handleSubmit(values) {
+            
+            this.openClose = false;
+            this.authBlur = '';
+            this.walletStore.postBucketNameData(values);
+            // console.log(this.walletStore.bucketNameArr);
         }
     },
-
-    methods : {
-        openAuthModal(){
-            this.openClose = true;
-            this.authBlur = 'blur-md'
-        },
-
-        closeAuthModal(){
-            this.openClose = false;
-            this.authBlur = '';
-        },
-        deleteBucketData(bucket){
-            this.bucketTableArr = this.bucketTableArr.filter((item) => {
-                return bucket !== item
-            });
-            this.bucketCount = this.bucketCount - 1 ;
-        }, 
-        addData(){
-            this.bucketTableArr.push(this.bucketAuthModalData);
-            this.openClose = false;
-            this.authBlur = '';
-            console.log(this.bucketTableArr);
-            this.bucketCount = this.bucketCount + 1 ;
-        },
-        handleSubmit(values){
-            console.log(values)
-        }
-    }
+    components: { ErrorMessage }
 }
 </script>

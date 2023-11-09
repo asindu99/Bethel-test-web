@@ -52,7 +52,7 @@
                         <div class="flex items-center">             
                           <h3 class="text-[10px] text-white">Total Buckets</h3> 
                           <div class="ml-3 w-[30px] h-[25px] bg-blue-100 rounded-lg text-center justify-center items-center">
-                            <h1 class="text-blue-600">0</h1>
+                            <h1 class="text-blue-600">{{ bucketCount1 }}</h1>
                             </div> 
                         </div>
                         
@@ -390,11 +390,37 @@
 
 
         </div>
+
+    <!-- sign in sucess msg -->
+    <!-- <div v-show="elementVisible" class="absolute z-[10] top-0 right-2 animate__animated animate__animated animate__fadeIn">
+        <div class="relative flex p-2  rounded-xl  items-center gap-2 bg-green-500 
+    lg:w-[320px] md:w-[320px] sm:w-[320px] min-[320px]:w-[200px]
+    "> -->
+
+        <!-- msg div -->
+        <!-- <div class="flex flex-col text-white lg:text-[14px] md:text-[14px] sm:text-[14px] min-[320px]:text-[11px]">
+            <h3>Success!</h3>
+            <h4>You successfully loged-in</h4>
+        </div> -->
+
+        <!-- bethel logo -->
+        <!-- <div class="absolute top-2 right-2 flex gap-1">
+            <img src="../img/logos/bethellogo.png" alt="" class="w-[15px]">
+            <h3 class="text-[10px] font-bold text-bethelBlue">BETHEL</h3>
+        </div>
+    </div>
+    
+</div> -->
+<!-- end of the sign in  sucess msg -->
+                
        
     </div>
 </template>
 
 <script>
+import {mapStores} from 'pinia'
+import {useWalletData} from '@/stores/DataStore'
+
 import Chart from 'chart.js/auto';
 // import Page1Nav from '@/components/Page1Nav.vue';
 
@@ -404,14 +430,25 @@ export default {
         return{
             paddingClass : '',
 
+            // LOG IN SUCESS MSG
+            elementVisible : true,
+
             // log activity array
             logActivityArr : [],
+
+            // bucket counts
+            bucketCount1 : 0,
+
+            
         }
     },
-    // components : {
-    //     Page1Nav,
-    // },
+    computed : {
+        ...mapStores(useWalletData),
+        
+    },
     mounted(){
+        this.bucketCount1 = this.walletStore.bucketNameArr.length
+       this.walletStore.getBucketNames();
         const ctx = document.getElementById('myChart');
         const ctx1 = document.getElementById('myChart2');
         const ctx2 = document.getElementById('myChart3');
