@@ -21,7 +21,7 @@
                     <!-- middle section  -->
                 <div class="flex flex-col gap-2">
                     <!-- menu item -->
-                    <RouterLink to="/" class="">
+                    <RouterLink to="/home" class="">
                         <div class="lg:ml-7 md:ml-6 lg:flex md:flex sm:flex min-[320px]:flex
                         w-full lg:px-3  my-2 py-2  transition-all ease-linear">
                             <span class=" material-symbols-outlined
@@ -254,14 +254,14 @@ export default{
             buttonHide2 : 'hidden',
         }
     },
-    async created(){
-        const res = await axios.get('https://mw.bethel.network/users/654c7d92790f2e8de15da0e3', 
-                {withCredentials:true},
-                );
+    // async created(){
+    //     const res = await axios.get('https://mw.bethel.network/users/654c7d92790f2e8de15da0e3', 
+    //             {withCredentials:true},
+    //             );
                 
-                // getting user id 
-                console.log(res);
-    },
+    //             // getting user id 
+    //             console.log(res);
+    // },
     methods : {
         asideHide(){
             this.modalStore.isOpen = false;

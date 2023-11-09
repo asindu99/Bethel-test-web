@@ -81,6 +81,8 @@ lg:p-20 md:py-[10px] md:h-screen sm:p-10 min-[320px]:p-3 ">
 <script>
 import {mapStores} from 'pinia'
 import { authUser } from '@/stores/AuthUser';
+import axios from 'axios';
+import router from '@/router/index'
 
 export default{
     name : 'LoginContent',
@@ -96,6 +98,22 @@ export default{
 
         }
     },
+    // async onBeforeMount(){
+    //     try{
+    //         const res = await axios.post('https://mw.bethel.network/auth/user', 
+    //             {withCredentials:true},
+    //             );
+    //         if(res.status === 200){
+    //             router.push('/')
+    //         }else {
+    //             router.push('/home')
+    //         } 
+    //     }
+    //     catch(error){
+    //         console.log(error)
+    //     }
+        
+    // },
     computed : {
         ...mapStores(authUser)
     },

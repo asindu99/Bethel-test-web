@@ -57,7 +57,7 @@ export const authUser = defineStore('authUser', {
             }
             else {
                 this.userLog = true;
-                router.push('/');
+                router.push('/home');
             }
         }
 
