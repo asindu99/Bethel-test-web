@@ -59,7 +59,7 @@
         md:items-center md:justify-center sm:items-center sm:justify-center min-[320px]:items-center min-[320px]:justify-center">
 
                     <!--bg container  -->
-                        <div class="w-full bg-white shadow-sm rounded-lg py-2 lg:w-full sm:px-4 min-[320px]:px-4 md:px-4 lg:px-2 md:mx-2 md:mb-10 sm:mx-2 sm:my-2 min-[320px]:mx-2 min-[320px]:mb-4">
+                        <div class="w-full bg-gray-200 shadow-sm rounded-lg py-2 lg:w-full sm:px-4 min-[320px]:px-4 md:px-4 lg:px-2 md:mx-2 md:mb-10 sm:mx-2 sm:my-2 min-[320px]:mx-2 min-[320px]:mb-4">
                             
                             <!-- edit profile form container  -->
                             <div class="w-full">
