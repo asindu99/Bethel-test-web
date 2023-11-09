@@ -55,24 +55,29 @@
         <!-- header-end  -->
 
         <!-- main-container  -->
-        <div class="flex lg:flex-row md:flex-col sm:flex-col min-[320px]:flex-col pt-8 lg:items-center lg:justify-center
+        <div class="flex lg:flex-row md:flex-col sm:flex-col min-[320px]:flex-col pt-2 lg:items-center lg:justify-center
         md:items-center md:justify-center sm:items-center sm:justify-center min-[320px]:items-center min-[320px]:justify-center">
 
                     <!--bg container  -->
-                        <div class="w-full bg-white rounded-xl shadow-xl py-4 lg:w-full sm:px-4 min-[320px]:px-4 md:px-4 lg:px-2 md:mx-2 md:mb-10 sm:mx-2 sm:my-2 min-[320px]:mx-2 min-[320px]:mb-4">
+                        <div class="w-full bg-white shadow-sm rounded-lg py-2 lg:w-full sm:px-4 min-[320px]:px-4 md:px-4 lg:px-2 md:mx-2 md:mb-10 sm:mx-2 sm:my-2 min-[320px]:mx-2 min-[320px]:mb-4">
                             
                             <!-- edit profile form container  -->
                             <div class="w-full">
                                 <!-- personal information div -->
 
-                                <div class="flex w-full mt-8 lg:justify-start md:justify-center sm:justify-center min-[320px]:justify-center min-[320px]:items-center bg-gray-100 p-4">
-                                    <h1 class="text-sidebarBG lg:text-2xl md:text-2xl sm:text-2xl min-[320px]:text-xl ">Edit Profile</h1>
+                                <div class="flex w-full mt-8 lg:justify-start md:justify-center sm:justify-center min-[320px]:justify-center min-[320px]:items-center p-4">
+                                    <!-- <h1 class="text-sidebarBG lg:text-2xl md:text-2xl sm:text-2xl min-[320px]:text-xl ">Edit Profile</h1> -->
+                                    
+                                    <div class="relative ">
+                                        <div class="w-[2px] h-[20px] bg-bethelBlue absolute top-[5px] "></div>
+                                        <h3 class="ml-4 text-sidebarBG lg:text-2xl md:text-2xl sm:text-2xl min-[320px]:text-xl">Edit Profile</h3> 
+                                    </div>
                                 </div>
 
-                                <div class="bg-blue-50 w-full px-10 py-4 mt-2 justify-around ">
-                                    <div class="flex justify-center items-center pt-2">
+                                <!-- <div class="bg-blue-50 w-full px-10 py-4 mt-2 justify-around "> -->
+                                    <!-- <div class="flex justify-center items-center pt-2">
                                     <img src="../img/images/AdminProfile.png" alt="" class="w-[70px] h-[70px]">
-                                    </div>
+                                    </div> -->
 
                                     <hr class="w-full mt-2">
 
@@ -80,37 +85,35 @@
                                     <div class="w-full">
                                         <form action="">
                                             <!-- name section -->
-                                            <div class="flex lg:flex-row md:flex-row sm:flex min-[320px]:flex-col w-full justify-between">
-                                                <!-- first name -->
-                                                <div class="flex flex-col">
+                                            <div class="flex lg:flex-row md:flex-row sm:flex min-[320px]:flex-col w-full justify-between lg:gap-20 md:gap-10 sm:gap-8 min-[320px]:gap-2 px-8">
+                                                <div class="z-0 w-full mb-6 group">
                                                     <label for="" class="text-[14px]">First Name :</label>
-                                                    <input type="text" class="lg:w-[335px] md:w-[235px] text-[#757784] bg-transparent p-1 border-b-2 border-[#29379384]">
+                                                    <input type="text" name="floating_phone"  class="block py-1.5 px-0 w-full text-sm text-gray-900 bg-transparent rounded-md border-2 border-[#29379384] appearance-none  dark:border-[#29379384] dark:focus:border-[#29379384] focus:outline-none focus:ring-0 focus:border-[#29379384] peer" placeholder=" " required />
                                                 </div>
 
-                                                <!-- last name -->
-                                                <div class="flex flex-col min-[320px]:mt-4 lg:mt-0 md:mt-0">
-                                                    <label for="" class="text-[14px]">Last Name :</label>
-                                                    <input type="text" class="lg:w-[335px] md:w-[235px] text-[#757784] bg-transparent p-1 border-b-2 border-[#29379384]">
+                                                <div class="z-0 w-full mb-6 group">
+                                                    <label for="" class="text-[14px]"> Last Name:</label>
+                                                    <input type="text" name="floating_phone"  class="block py-1.5 px-0 w-full text-sm text-gray-900 bg-transparent rounded-md border-2 border-[#29379384] appearance-none  dark:border-[#29379384] dark:focus:border-[#29379384] focus:outline-none focus:ring-0 focus:border-[#29379384] peer" placeholder=" " required />
                                                 </div>
                                             </div>
                                             <!-- end of the name section -->
 
                                             <!-- country section -->
-                                            <div class="flex  lg:flex-row md:flex-row sm:flex min-[320px]:flex-col w-full justify-between mt-4 min-[320px]:mt-4 lg:mt-4">
+                                            <div class="flex lg:flex-row md:flex-row sm:flex min-[320px]:flex-col w-full justify-between mt-4 min-[320px]:mt-4 lg:mt-4 lg:gap-20 md:gap-10 sm:gap-8 min-[320px]:gap-2 px-8">
                                                 <!-- country -->
-                                                <div class="flex flex-col">
+                                                <div class="z-0 w-full mb-6 group">
                                                     <label for="" class="text-[14px]">Select Country :</label>
                                                     <!-- <input type="text" class="lg:w-[335px] md:w-[235px] text-[#757784] bg-transparent p-1 border-b-2 border-[#29379384]"> -->
-                                                    <select v-model="selected" id="" class="text-[#757784] bg-transparent p-2 border-b-2 border-[#29379384] lg:w-[335px] md:w-[235px]">
+                                                    <select v-model="selected" id="" class="block py-1.5 px-0 w-full text-sm text-gray-900 bg-transparent rounded-md border-2 border-[#29379384] appearance-none dark:border-[#29379384] dark:focus:border-[#29379384] focus:outline-none focus:ring-0 focus:border-[#29379384] peer" >
                                                         <option v-for="country in countryList" :value="country" class="w-[200px] bg-transparent">{{ country.Name }}</option>
                                                     </select>
                                                 </div>
 
                                                 <!-- select country -->
-                                                <div class="flex flex-col min-[320px]:mt-4 lg:mt-0 md:mt-0">
+                                                <div class="z-0 w-full mb-6 group">
                                                     <label for="" class="text-[14px]">Country Code :</label>
                                                     <!-- <input type="text" class="lg:w-[335px] md:w-[235px] text-[#757784] bg-transparent p-1 border-b-2 border-[#29379384]"> -->
-                                                    <select name="" id="" class="text-[#757784] bg-transparent p-2 border-b-2 border-[#29379384]  lg:w-[335px] md:w-[235px]">
+                                                    <select name="" id="" class="block py-1.5 px-0 w-full text-sm text-gray-900 bg-transparent rounded-md border-2 border-[#29379384] appearance-none dark:border-[#29379384] dark:focus:border-[#29379384] focus:outline-none focus:ring-0 focus:border-[#29379384] peer">
                                                         <option  class="w-[200px] bg-transparent">{{ selected.MobileCode }}</option>
                                                     </select>
                                                 </div>
@@ -118,11 +121,11 @@
                                             <!-- end of the select country -->
 
                                             <!-- mobile and button -->
-                                            <div>
+                                            <div class="px-8">
                                                 <!-- mobile number -->
-                                                <div class="flex  flex-col mt-4">
+                                                <div class="flex  flex-col mt-4 ">
                                                     <label for="" class="text-[14px]">Mobile Number :</label>
-                                                    <input type="text" class="lg:w-[335px] md:w-[235px] text-[#757784] bg-transparent p-1 border-b-2 border-[#29379384]">
+                                                    <input type="text" class="block py-1.5 px-0 w-full text-sm text-gray-900 bg-transparent rounded-md border-2 border-[#29379384] appearance-none dark:border-[#29379384] dark:focus:border-[#29379384] focus:outline-none focus:ring-0 focus:border-[#29379384] peer">
                                                 </div>
 
                                                 <!-- button -->
@@ -137,7 +140,7 @@
                                     <!-- end of the form  -->
                                     
 
-                                </div>
+                                <!-- </div> -->
                             </div>
                             <!-- end of profile form container  -->
 
@@ -146,36 +149,41 @@
                             <div class="lg:pb-8">
                                 <!-- change password information div -->
 
-                                <div class="flex w-full mt-8 lg:justify-start md:justify-center sm:justify-center min-[320px]:justify-center min-[320px]:items-center bg-gray-100 p-4">
-                                    <h1 class="text-sidebarBG lg:text-2xl md:text-2xl sm:text-2xl min-[320px]:text-xl ">Change Password</h1>
+                                <div class="flex w-full mt-8 lg:justify-start md:justify-center sm:justify-center min-[320px]:justify-center min-[320px]:items-center p-4">
+                                    <!-- <h1 class="text-sidebarBG lg:text-2xl md:text-2xl sm:text-2xl min-[320px]:text-xl ">Change Password</h1> -->
+
+                                    <div class="relative ">
+                                        <div class="w-[2px] h-[20px] bg-bethelBlue absolute top-[5px] "></div>
+                                        <h3 class="ml-4 text-sidebarBG lg:text-2xl md:text-2xl sm:text-2xl min-[320px]:text-xl">Change Password</h3> 
+                                    </div>
                                 </div>
 
-                                <div class="bg-blue-50 px-8 py-4 mt-2">
+                                <!-- <div class="bg-blue-50 px-8 py-4 mt-2"> -->
                                     <hr class="w-full mt-2">
 
                                     <!-- start of the form -->
                                     <div class="w-full">
                                         <form action="">
                                             <!-- old password -->
-                                            <div>
+                                            <div class="px-8">
                                                 <!-- old password -->
                                                 <div class="flex  flex-col mt-4">
                                                     <label for="" class="text-[14px]">Old Password :</label>
-                                                    <input type="password" class="lg:w-full md:w-[235px] text-[#757784] bg-transparent p-1 border-b-2 border-[#29379384]">
+                                                    <input type="password" class="lg:w-full md:w-full text-[#757784] bg-transparent p-1 border-2 border-[#29379384] rounded-md">
                                                 </div>
                                             </div>
                                             <!-- new and confirm password section -->
-                                            <div class="flex lg:flex-row md:flex-row sm:flex min-[320px]:flex-col w-full justify-between mt-4">
+                                            <div class="flex lg:flex-row md:flex-row sm:flex min-[320px]:flex-col w-full justify-between mt-4 lg:gap-20 md:gap-12 sm:gap-8 min-[320px]:gap-2 mt-8 px-8">
                                                 <!-- first name -->
-                                                <div class="flex flex-col">
+                                                <div class="flex flex-col w-full">
                                                     <label for="" class="text-[14px]">New Password :</label>
-                                                    <input type="password" class="lg:w-[335px] md:w-[235px] text-[#757784] bg-transparent p-1 border-b-2 border-[#29379384]">
+                                                    <input type="password" class="block py-1.5 px-0 w-full text-sm text-gray-900 bg-transparent rounded-md border-2 border-[#29379384] appearance-none dark:border-[#29379384] dark:focus:border-[#29379384] focus:outline-none focus:ring-0 focus:border-[#29379384] peer">
                                                 </div>
 
                                                 <!-- last name -->
-                                                <div class="flex flex-col min-[320px]:mt-4 lg:mt-0 md:mt-0">
+                                                <div class="flex flex-col min-[320px]:mt-4 lg:mt-0 md:mt-0 w-full">
                                                     <label for="" class="text-[14px]">Confirm Password :</label>
-                                                    <input type="password" class="lg:w-[335px] md:w-[235px] text-[#757784] bg-transparent p-1 border-b-2 border-[#29379384]">
+                                                    <input type="password" class="block py-1.5 px-0 w-full text-sm text-gray-900 bg-transparent rounded-md border-2 border-[#29379384] appearance-none dark:border-[#29379384] dark:focus:border-[#29379384] focus:outline-none focus:ring-0 focus:border-[#29379384] peer">
                                                 </div>
                                             </div>
                                             <!-- end of the new and confirm password section -->
@@ -183,7 +191,7 @@
                                             <!--button -->
                                             <div>
                                                 <!-- button -->
-                                                <div class="flex flex-col mt-8">
+                                                <div class="flex flex-col mt-8 px-8">
                                                     
                                                     <button class="w-[200px] p-2 bg-sidebarBG rounded-lg px-8 text-white border-[1px] hover:bg-white hover:text-sidebarBG hover:border-[1px] hover:border-sidebarBG transition-all ease-in-out text-[14px]">Change Password</button>
                                                     
@@ -194,7 +202,7 @@
                                     </div>
                                     <!-- end of the form  -->
 
-                                </div>
+                                <!-- </div> -->
                             </div>
                             <!-- end of change Password form container  -->
 
