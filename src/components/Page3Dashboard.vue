@@ -52,7 +52,7 @@
                         <div class="flex items-center">             
                           <h3 class="text-[10px] text-white">Total Buckets</h3> 
                           <div class="ml-3 w-[30px] h-[25px] bg-blue-100 rounded-lg text-center justify-center items-center">
-                            <h1 class="text-blue-600">{{bucketCount1 }}</h1>
+                            <h1 class="text-blue-600">{{ bucketCount1 }}</h1>
                             </div> 
                         </div>
                         
