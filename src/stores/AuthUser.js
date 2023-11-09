@@ -6,6 +6,7 @@ export const authUser = defineStore('authUser', {
         authUserDetailsArr : [],
         authMobileOTP : [],
         loginDataArr : [],
+        userLog : false,
 
     }),
 
@@ -44,24 +45,28 @@ export const authUser = defineStore('authUser', {
             }
             else{
                 router.push('/')
+                
             }
         },
 
         // post login details into the jason file --> component --> loginContent2
 
         async postLoginData(values){
-            this.loginDataArr.push(values)
+            // this.loginDataArr.push(values)
 
-            const res  = await fetch('http://localhost:3000/loginDetails' , {
+            const res  = await fetch('https://mw.bethel.network/auth/login' , {
                 method : 'POST',
                 body : JSON.stringify(values),
+                credentials : 'include',
                 headers : {'Content-Type' : 'application/json'}
             })
             if(res.error){
                 console.log(res.error)
             }
             else {
-                router.push('/')
+                router.push('/');
+                console.log('loged in');
+                this.userLog = true;
             }
         }
     }
