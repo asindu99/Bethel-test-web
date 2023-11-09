@@ -1,6 +1,8 @@
 <template>
     <div :class="paddingClass" class="relative lg:w-full md:w-full md:mx-auto min-[320px]:w-[100%] min-[320px]:px-[10px]">
-
+        <div>
+            helloooo {{ user.FirstName }}
+        </div>
         <!-- head wallet div  -->
         <div class=" hidden">
                 <!-- left side text -->
@@ -422,6 +424,7 @@ import {mapStores} from 'pinia'
 import {useWalletData} from '@/stores/DataStore'
 
 import Chart from 'chart.js/auto';
+import axios from 'axios';
 // import Page1Nav from '@/components/Page1Nav.vue';
 
 export default {
@@ -439,6 +442,8 @@ export default {
             // bucket counts
             bucketCount1 : 0,
 
+            user : '',
+
             
         }
     },
@@ -446,12 +451,16 @@ export default {
         ...mapStores(useWalletData),
         
     },
-    onMounted(){
-        this.elementVisible = true;
-    },
+    // async created(){
+    //     const res = await axios.get('https://mw.bethel.network/users/USERID');
+    //     this.user = res.data
+    //     console.log(this.user)
+    // },
     mounted(){
+        
+    
         this.bucketCount1 = this.walletStore.bucketNameArr.length
-       this.walletStore.getBucketNames();
+        this.walletStore.getBucketNames();
         const ctx = document.getElementById('myChart');
         const ctx1 = document.getElementById('myChart2');
         const ctx2 = document.getElementById('myChart3');

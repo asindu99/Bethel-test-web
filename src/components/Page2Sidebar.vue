@@ -224,13 +224,14 @@
 // import stores
 import {mapStores} from "pinia";
 import useModalStore from "@/stores/modal";
+import axios from "axios";
 
 export default{
     name : 'Page2Sidebar',
     components : {
         
     },
-    
+
     computed :{
         ...mapStores(useModalStore)
     },

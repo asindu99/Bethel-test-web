@@ -8,6 +8,8 @@ export const authUser = defineStore('authUser', {
         authMobileOTP : [],
         loginDataArr : [],
         userLog : false,
+        user : '',
+        userToken : null,
 
     }),
 
@@ -19,6 +21,7 @@ export const authUser = defineStore('authUser', {
             console.log(values.email)
 
             const res = await axios.post('https://mw.bethel.network/auth/register' , 
+            
             {
                 email: values.email,
                 username: values.username,
@@ -39,45 +42,28 @@ export const authUser = defineStore('authUser', {
             }
         },
 
-        // post login details into the jason file --> component --> loginContent2
-
-        // async postLoginData(values){
-        //     this.loginDataArr.push(values)
-
-        //     const res  = await fetch('https://mw.bethel.network/auth/login' , {
-        //         method : 'POST',
-        //         body : JSON.stringify(values),
-        //         credentials : 'include',
-        //         headers : {'Content-Type' : 'application/json'}
-        //     })
-        //     if(res.error){
-        //         console.log(res.error)
-        //     }
-        //     else {
-        //         router.push('/');
-        //         console.log('loged in');
-        //         this.userLog = true;
-        //     }
-        // }
-
         async postLoginData(values){
             // this.loginDataArr.push(values)
 
             const res  = await axios.post('https://mw.bethel.network/auth/login' ,
                 {
                     email: values.email,
-                    password: values.password
-                }
+                    password: values.password,  
+                },
+      
             )
-
             console.log(res)
+            this.userToken = res.data
+
+            console.log(this.userToken)
+            
+            
             if(res.error){
                 console.log(res.error)
             }
             else {
-                router.push('/');
-                console.log('loged in');
                 this.userLog = true;
+                router.push('/');
             }
         }
 

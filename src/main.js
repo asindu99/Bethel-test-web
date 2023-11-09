@@ -9,6 +9,8 @@ import "./assets/base.css"
 import './axios'
 
 
+import VueCookies from 'vue-cookies'
+
 import VeeValidatePlugin from "@/includes/validation"
 
 const app = createApp(App)
@@ -16,5 +18,6 @@ const app = createApp(App)
 app.use(createPinia())
 app.use(router)
 app.use(VeeValidatePlugin)
+app.use(VueCookies);
 
 app.mount('#app')

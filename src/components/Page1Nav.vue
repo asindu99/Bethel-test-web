@@ -24,12 +24,12 @@
             lg:w-[300px] md:w-[300px] sm:w-[300px] min-[320px]:w-[500px]
              basis-[42%] gap-2 justify-end">
 
-                <router-link to="/wallet">
-                    <button class="mr-2 text-[10px] border-[2px] rounded-xl p-[7px] px-[18px]
+                <!-- <router-link to="/wallet"> -->
+                    <button @click="oncok" class="mr-2 text-[10px] border-[2px] rounded-xl p-[7px] px-[18px]
                      bg-sidebarBG text-white border-sidebarBG
                      hover:bg-white hover:text-sidebarBG transition-all ease-linear sm:hidden min-[320px]:hidden lg:flex md:flex">Connect Wallet
                     </button>
-                </router-link>
+                <!-- </router-link> -->
                 
                 <img src="../img/people/CraigState.jpg" alt="" class="lg:flex md:flex sm:flex min-[320px]:hidden
                 w-[45px] h-[45px] rounded-[50px] border-[1px] border-sidebarBG">
@@ -354,7 +354,7 @@
 <script>
 import {mapStores} from "pinia";
 import useModalStore from "@/stores/modal";
-
+import axios from "axios";
 
 
 
@@ -367,6 +367,8 @@ export default{
 
     data(){
         return{
+            cok : null,
+            cok2 : null,
         }
     }, 
     methods :{
@@ -382,6 +384,24 @@ export default{
         },
         DropMenu(){
             this.modalStore.dropMenuOC = !this.modalStore.dropMenuOC
+        },
+
+        async oncok(){
+
+            // const config = {
+            //     headers: { Authorization: `Bearer ` }
+            // };
+
+
+            const res = await axios.get('https://mw.bethel.network/users/654c7d10790f2e8de15da0e0', 
+            {withCredentials:true},
+            );
+
+
+            this.user = res.data
+            console.log(this.user)
+            // const cookie = browser.cookies.get()
+            // console.log(cookie)
         }
     }
 
