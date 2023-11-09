@@ -59,6 +59,7 @@ export const authUser = defineStore('authUser', {
                 console.log(res.error)
             }
             else {
+                console.log(res)
                 this.userLog = true;
                 this.userDetails.push(res.data)
 
