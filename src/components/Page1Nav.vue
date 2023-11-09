@@ -367,8 +367,7 @@ export default{
 
     data(){
         return{
-            cok : null,
-            cok2 : null,
+            
         }
     }, 
     methods :{
@@ -387,21 +386,12 @@ export default{
         },
 
         async oncok(){
-
-            // const config = {
-            //     headers: { Authorization: `Bearer ` }
-            // };
-
-
-            const res = await axios.get('https://mw.bethel.network/users/654c7d10790f2e8de15da0e0', 
+            const res = await axios.get('https://mw.bethel.network/users', 
             {withCredentials:true},
             );
 
-
             this.user = res.data
             console.log(this.user)
-            // const cookie = browser.cookies.get()
-            // console.log(cookie)
         }
     }
 

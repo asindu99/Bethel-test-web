@@ -9,7 +9,7 @@ export const authUser = defineStore('authUser', {
         loginDataArr : [],
         userLog : false,
         user : '',
-        userToken : null,
+        userID : null,
 
     }),
 
@@ -45,19 +45,13 @@ export const authUser = defineStore('authUser', {
         async postLoginData(values){
             // this.loginDataArr.push(values)
 
-            const res  = await axios.post('https://mw.bethel.network/auth/login' ,
+            const res = await axios.post('https://mw.bethel.network/auth/login' ,
                 {
                     email: values.email,
                     password: values.password,  
                 },
-      
-            )
-            console.log(res)
-            this.userToken = res.data
+            );
 
-            console.log(this.userToken)
-            
-            
             if(res.error){
                 console.log(res.error)
             }

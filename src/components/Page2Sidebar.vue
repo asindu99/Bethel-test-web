@@ -254,6 +254,14 @@ export default{
             buttonHide2 : 'hidden',
         }
     },
+    async created(){
+        const res = await axios.get('https://mw.bethel.network/users/654c7d92790f2e8de15da0e3', 
+                {withCredentials:true},
+                );
+                
+                // getting user id 
+                console.log(res);
+    },
     methods : {
         asideHide(){
             this.modalStore.isOpen = false;
