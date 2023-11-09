@@ -24,25 +24,32 @@ lg:p-20 md:py-[10px] md:h-screen sm:p-10 min-[320px]:p-3 ">
 
                 <!-- form section -->
                 <div class="mt-10 w-full">
-                    <form action="" class="flex flex-col">
-                        <div class="flex flex-col">
+                    <VeeForm
+                    :validation-schema = "loginSchema"
+                    @submit="onSubmit"
+                     action="" class="flex flex-col">
+                        <div class="flex flex-col relative">
                             <label for="" class="text-[14px]">Email :</label>
-                            <input type="text" placeholder="Jhon@example.com" class="text-[#757784] bg-transparent p-1 border-b-2 border-[#29379384]
-                        [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none ">
+                            <VeeField name="email" type="text" placeholder="Jhon@example.com" class="text-[#757784] bg-transparent p-1 border-b-2 border-[#29379384]
+                        [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none "/>
+                        <!-- display error message -->
+                        <ErrorMessage name="email" class="absolute text-[12px] text-red-500 bottom-[-20px]"/>
                         </div>
                     
-                        <div class="flex flex-col mt-6">
+                        <div class="flex flex-col mt-8 relative">
                             <label for="" class="text-[14px]">Password :</label>
-                            <input type="password" placeholder="Password"
-                            class="mt-2 text-[#757784] bg-transparent p-1 border-b-2 border-[#29379384]
-                        [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none ">
-                            <button class=""><h3 class="text-sidebarBG text-[12px] mt-2 text-right">forgot password?</h3></button>
+                            <VeeField name="password" type="password" placeholder="Password"
+                            class=" text-[#757784] bg-transparent p-1 border-b-2 border-[#29379384]
+                        [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none "/>
+                            <!-- disply error message -->
+                            <button class=""><h3 class="text-sidebarBG text-[12px] mt-4 text-right">forgot password?</h3></button>
+                            <ErrorMessage name="password" class="absolute text-[12px] text-red-500 bottom-[15px]"/>
                         </div>
 
                         <div class="w-full mt-8">
-                            <button class="w-full p-2 bg-sidebarBG rounded-lg px-10  text-white border-[1px] hover:bg-white hover:text-sidebarBG hover:border-[1px] hover:border-sidebarBG transition-all ease-in-out">Sign in</button>
+                            <button  type="submit" class="w-full p-2 bg-sidebarBG rounded-lg px-10  text-white border-[1px] hover:bg-white hover:text-sidebarBG hover:border-[1px] hover:border-sidebarBG transition-all ease-in-out">Sign in</button>
                         </div>
-                    </form>
+                    </VeeForm>
                 </div>
                 <!-- end of the form sec -->
 
@@ -72,7 +79,31 @@ lg:p-20 md:py-[10px] md:h-screen sm:p-10 min-[320px]:p-3 ">
 </template>
 
 <script>
+import {mapStores} from 'pinia'
+import { authUser } from '@/stores/AuthUser';
+
 export default{
-    name : 'LoginContent'
+    name : 'LoginContent',
+    data(){
+        return{
+            loginSchema: {
+                email: "required|email",
+                password: "required",
+            },
+
+            // logindetails array
+            loginDetailsArr : [],
+
+        }
+    },
+    computed : {
+        ...mapStores(authUser)
+    },
+    methods : {
+        onSubmit(values){
+            this.authUserStore.postLoginData(values);
+        }
+    }
+    
 }
 </script>

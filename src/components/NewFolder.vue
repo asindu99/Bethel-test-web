@@ -150,7 +150,7 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                <td class="min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] min-[320px]:text-[8px] text-center bg-white border p-3"> ABC</td>
+                                <td class="min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] min-[320px]:text-[8px] text-center bg-white border p-3"> file-1</td>
                                 <td class="min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] min-[320px]:text-[8px] text-center bg-white border p-3">QmchJZ4J2yAS45t</td>
                                 <td class="min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] min-[320px]:text-[8px] text-center bg-white border p-3">Pinned</td>
                                 <td class="min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] min-[320px]:text-[8px] text-center bg-white border p-3">2023-10-16 02:10:13-0400</td>
@@ -200,8 +200,7 @@ export default {
                 bucketDateCreated : '2023-10-13 06:46:10 -0400',
             },
 
-            // bucket count
-            bucketCount : 0,
+            
         }
     },
 

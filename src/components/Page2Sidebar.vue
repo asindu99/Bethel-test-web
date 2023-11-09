@@ -204,8 +204,12 @@
 
 
             <!-- router view must be here -->
-            <div @click="asideHide"  class="w-full h-full mx-2 lg:pl-[240px] md:pl-[180px]" :class="modalStore.onBlur, paddingMD"> 
-                <router-view class="scale-[1]"></router-view> 
+            <div @click="asideHide"  class="w-full h-full mx-2 lg:pl-[240px] md:pl-[180px]" :class="modalStore.onBlur, paddingMD">
+
+                
+                
+
+                <router-view class="scale-[1] z-[0]"></router-view> 
             </div>
             <!-- end of the router view here -->
 
@@ -226,6 +230,7 @@ export default{
     components : {
         
     },
+    
     computed :{
         ...mapStores(useModalStore)
     },
@@ -239,6 +244,9 @@ export default{
 
             //for the funtion 
             fnSidebar : false,
+
+
+            
 
             // button hide
             buttonHide : '',

@@ -15,7 +15,10 @@ module.exports = {
 
         // icon  colors
         'iconColor' : 'white',
-        'iconColor2' : '#5669cc'
+        'iconColor2' : '#5669cc',
+
+        //billing 
+        'Dark Grey' : '#a9a9a9 '
       }
     },
   },

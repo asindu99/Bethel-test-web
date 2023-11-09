@@ -1,0 +1,92 @@
+{
+  "wallets": [],
+  "recentLogActivities": [
+    {
+      "UserName": "username",
+      "ipAddress": "ipv4/",
+      "logStatus": "online",
+      "DateAndTime": "2023-11-06 14:30"
+    }
+  ],
+  "transactions": [
+    {
+      "walletAddress": "wallet-1231-31231",
+      "walletAmount": "500",
+      "id": 1
+    }
+  ],
+  "transactionDetails": [
+    {
+      "walletAddress": "wallet-Address",
+      "seeds": "seeds",
+      "activeSeeds": "active"
+    }
+  ],
+  "userDetails": [
+    {
+      "email": "asindu@gmail.com",
+      "password": "123456789",
+      "confirm_password": "123456789",
+      "FirstName": "Asindu",
+      "LastName": "Shashan",
+      "country": "Afghanistan",
+      "code": "+93",
+      "mobile": 1231231231212312,
+      "tos": "0",
+      "id": 1
+    }
+  ],
+  "OTP": [
+    {
+      "OTP": 123456,
+      "id": 1
+    }
+  ],
+  "loginDetails": [
+    {
+      "email": "asindu@gmail.com",
+      "password": "123456789",
+      "id": 1
+    }
+  ],
+  "bucketNames": [
+    {
+      "name": "yooo",
+      "network": "Private",
+      "id": 1
+    }
+  ],
+  "folderNames": [
+    {
+      "name": "New Folder",
+      "folderSize": 3,
+      "dateCreated": "2023-11-06 14:30",
+      "id": 1
+    }
+  ],
+  "editProfile": [
+    {
+      "firstName": "Nula",
+      "LastName": "rig",
+      "Mobile": 764433221,
+      "Country": "Sri Lanka",
+      "CountryCode": "+94"
+    }
+  ],
+  "changePassword": [
+    {
+      "oldPassword": "oldPassword",
+      "newPassword": "newPassword",
+      "confirm_password": "confirm_password"
+    }
+  ],
+  "accessKeyDetails": [
+    {
+      "userName": "UserName",
+      "key": "123-1213-12312-1213",
+      "secret": "secret key",
+      "createdOn": "2023-11-06 14:30",
+      "status": "online"
+    }
+  ]
+}

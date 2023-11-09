@@ -26,25 +26,25 @@
 
                         <!-- Main Bucket -->
                         <div>
-                            <h1 class="font-bold text-[30px]">Storage</h1>
+                            <h1 class="font-bold text-[30px]">Bucket</h1>
                         </div>
                         <!-- end of the bucket main -->
 
                         <!-- bucket with images -->
-                        <!-- <div class="flex items-center mt-2"> -->
+                        <div class="flex items-center mt-2">
                             <!-- image -->
-                            <!-- <div class="flex w-[30px] justify-center items-center">
+                            <div class="flex w-[30px] justify-center items-center">
                                 <span class=" material-symbols-outlined scale-[1.5] text-iconColor2 mr-2
                                 ">
                                     cleaning_bucket
                                 </span> 
-                            </div> -->
-                            <!-- text -->
-                            <!-- <div class="flex gap-1 mt-1">
-                                <div>{{ bucketCount }}</div>
-                                <h3>Buckets</h3>
                             </div>
-                        </div> -->
+                            <!-- text -->
+                            <div class="flex gap-1 mt-1">
+                                <div>{{ folderCount }}</div>
+                                <h3>Folders</h3>
+                            </div>
+                        </div>
                         <!-- end of the bucket with images -->
                     </div>
 
@@ -52,7 +52,7 @@
                     <div class="flex">
                         <div>
                             <button @click="openAuthModal" class="border-[2px] px-2 py-2 rounded-xl bg-sidebarBG w-[150px] text-[white] 
-                            font-medium hover:text-sidebarBG hover:bg-[white] transition-all ease-linear hover:border-sidebarBG">Create Bucket</button>
+                            font-medium hover:text-sidebarBG hover:bg-[white] transition-all ease-linear hover:border-sidebarBG">New Folder</button>
                         </div>
                         
                     </div>
@@ -61,13 +61,13 @@
 
 
                 
-                <!-- bucket content section -->
+                <!-- folder content section -->
                 <div class="my-10">
-                    <!-- end of the bucket content section -->
+                    <!-- end of the folder content section -->
                 <!-- text of table -->
                 <div class="relative ">
                     <div class="w-[2px] h-[20px] bg-bethelBlue absolute top-[5px] "></div>
-                    <h3 class="ml-2 text-[20px]">Bucket History</h3> 
+                    <h3 class="ml-2 text-[20px]">Folder History</h3> 
                 </div>
                 
 
@@ -77,27 +77,34 @@
                     <table class="table-auto border-separate py-2 w-[100%] rounded-lg">
                         <thead class="">
                             <tr class="">
-                            <th class="text-[13px] border p-3 bg-blue-50">BUCKET NAME</th>
-                            <th class="text-[13px] border p-3 bg-blue-50">ACCESS</th>
-                            <th class="text-[13px] border p-3 bg-blue-50">NETWORK</th>
+                            <th class="text-[13px] border p-3 bg-blue-50">FOLDER NAME</th>
+                            <th class="text-[13px] border p-3 bg-blue-50">FOLDER SIZE</th>
                             <th class="text-[13px] border p-3 bg-blue-50">DATE CREATED</th>
                             <th class="text-[13px] border p-3 bg-blue-50">MORE</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr v-for="bucket in walletStore.bucketNameArr" :key="bucket.id">
-                            <td class="text-[12px] text-center bg-white border p-3 cursor-pointer hover:text-sidebarBG font-bold"><router-link to="/bucketFolder"> {{bucket.name}} </router-link></td>
-                            <td class="text-[12px] text-center bg-white border p-3">{{bucket.id}}</td>
-                            <td class="text-[12px] text-center bg-white border p-3">{{bucket.network}}</td>
-                            <td class="text-[12px] text-center bg-white border p-3">{{bucket.bucketDateCreated}}</td>
+                            <tr v-for="folder in folderTableArr" :key="folder.Faddress">
+                            <td class="text-[12px] text-center bg-white border p-3 cursor-pointer hover:text-sidebarBG font-bold"><router-link to="/newFolder"> {{folder.folderName}} </router-link></td>
+                            <td class="text-[12px] text-center bg-white border p-3">{{folder.folderSize}}</td>
+                            <td class="text-[12px] text-center bg-white border p-3">{{folder.folderDateCreated}}</td>
                             
 
                             <!-- more button functions -->
                             <td class="text-[12px] text-center bg-white border p-3">
                                 <div class="relative w-full">
-                                    
+                                    <!-- more button auth modal -->
+                                    <!-- <div class="absolute right-[-15px] w-[60px] shadow-md border-[1px] bg-blue-50 rounded-md top-10 animate__animated animate__zoomIn animate__faster">
+                                        <button @click="deleteBucketData(bucket)">
+                                            <div class="p-1">
+                                                <h3>Delete</h3>
+                                            </div>
+                                        </button>
+                                        
+                                        
+                                    </div> -->
 
-                                    <button @click="walletStore.deleteBucketName(bucket.id)">Delete</button>
+                                    <button @click="deleteFolderData(folder)">Delete</button>
                                 <!-- end of the auth modal -->
                                 </div>
                                 <!-- <button>
@@ -139,57 +146,38 @@
                 </button>
                 <!-- end of modal close button -->
 
-                <h3 class="text-bethelBlue">Create New Bucket</h3>
+                <h3 class="text-bethelBlue">Create New Folder</h3>
             </div>
 
             <!-- bucket information main div -->
             <div class="bg-white p-6 flex flex-col flex-wrap w-full">
 
                 <div>
-                    <h3 class="text-[#5b5b5b]">Bucket Informations</h3>
+                    <h3 class="text-[#5b5b5b]">Folder Informations</h3>
                 </div>
 
 
                 <!-- adding a form -->
-                <vee-form :validation-schema="authSchema" action="" @submit="handleSubmit">
+                <vee-form action="" @submit="handleSubmit" :validation-schema="schema">
                         <div class="mt-2 text-[#5b5b5b]">
-                            <h3 class="text-[16px]">Bucket Name</h3>
+                            <h3 class="text-[16px]">Folder Name</h3>
                         </div>
 
-                    <div class="relative">
-                        <vee-field name="name" type="text" placeholder=""
-                        class="mt-2 lg:w-[350px] md:w-[350px] sm:w-[350px] min-[320px]:w-[300px]
-                        border-[2px] rounded-lg p-1" />
-                        <ErrorMessage class="absolute left-0 bottom-[-20px] text-[12px] text-red-400 " name="name"></ErrorMessage>
-                    </div>
-
-                    <!-- network section -->
-                    <div class="mt-8">
-                        <div class="mt-2 text-[#5b5b5b]">
-                            <h3 class="text-[16px]">Network</h3>
+                        <div class="relative">
+                            <vee-field name="name" type="text" placeholder=""
+                            class="mt-2 lg:w-[350px] md:w-[350px] sm:w-[350px] min-[320px]:w-[300px]
+                            border-[2px] rounded-lg p-1" />
+                            <ErrorMessage name="name" class="absolute left-0 bottom-[-20px] text-[12px] text-red-400" />
                         </div>
 
-                        <div>
-                            <div>
-                                <vee-field name="network" as="select" class="mt-2 lg:w-[350px] md:w-[350px] sm:w-[350px] min-[320px]:w-[300px]
-                                border-[2px] rounded-lg p-2">
-
-                                    <option value="Public">Public</option>
-                                    <option value="Private"> Private</option>
-
-                                </vee-field>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end of the network section -->
 
                     <!-- close and ok sec -->
-                    <div class="mr-2 mt-4 flex gap-2 justify-end border-t-[2px] py-2">
-                        <button @click="closeAuthModal" class="border-[2px] py-2 px-4 rounded-lg bg-[#f7f5f5]">
+                    <div class="mr-2 mt-8 flex gap-2 justify-end border-t-[2px] py-2">
+                        <button @click="closeAuthModal" type="submit" class="border-[2px] py-2 px-4 rounded-lg bg-[#f7f5f5]">
                             <h3 class="text-[14px] text-bethelBlue ">Close</h3>
                         </button>
 
-                        <button type="submit" class="border-[2px] py-2 px-4 rounded-lg bg-sidebarBG">
+                        <button @click="addData" type="submit" class="border-[2px] py-2 px-4 rounded-lg bg-sidebarBG">
                             <h3 class="text-[14px] text-[white] ">Ok</h3>
                         </button>
 
@@ -212,50 +200,57 @@
 </template>
 
 <script>
-import {mapStores} from "pinia";
-import { useWalletData } from "../stores/DataStore";
-import { ErrorMessage } from 'vee-validate';
+import {mapStores} from 'pinia'
+import {useWalletData} from '@/stores/DataStore'
 
 export default {
-    name: 'Storage',
-    data() {
-        return {
+    name : 'Storage',
+    data(){
+        return{
             // moreButton open and close
-            isMore: false,
-            // bucket auth model open and close
-            openClose: false,
-            // auth model blur
-            authBlur: '',
+            isMore : false,
 
-            authSchema: {
-                name: 'required',
-                network : 'required'
+            // bucket auth model open and close
+            openClose : false,
+
+            // auth model blur
+            authBlur : '',
+
+            // bucket table data
+            folderTableArr : [],
+            folderAuthModalData : {
+                folderName: 'fdrf',
+                folderSize: 'sef',
+                folderDateCreated : '2023-10-13 06:46:10 -0400',
+            },
+
+            // folder count
+            folderCount : 0,
+
+            // schma
+            schema : {
+                name : 'required'
             }
-        };
-    },
-    mounted(){
+        }
     },
     computed : {
         ...mapStores(useWalletData)
     },
-    methods: {
-        openAuthModal() {
+
+    methods : {
+        openAuthModal(){
             this.openClose = true;
-            this.authBlur = 'blur-md';
-        },
-        closeAuthModal() {
-            this.openClose = false;
-            this.authBlur = '';
+            this.authBlur = 'blur-md'
         },
 
-        handleSubmit(values) {
-            
+        closeAuthModal(){
             this.openClose = false;
             this.authBlur = '';
-            this.walletStore.postBucketNameData(values);
-            // console.log(this.walletStore.bucketNameArr);
+        },
+        handleSubmit(values){
+            this.walletStore.postFolderName(values);
+            console.log(values)
         }
-    },
-    components: { ErrorMessage }
+    }
 }
 </script>
