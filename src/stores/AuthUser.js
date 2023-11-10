@@ -12,8 +12,11 @@ export const authUser = defineStore('authUser', {
         userID : null,
         token : null,
         
-
+        // axios res details arr
         userDetails : [],
+
+        // auth user details arr
+        authUserDetails : []
 
     }),
 
@@ -56,29 +59,28 @@ export const authUser = defineStore('authUser', {
                     password: values.password,  
                 },
             );
-
+            // get user data
+            // const userData = res.data.details.firstName
+            // console.log(userData)
+            
             if(res.error){
                 console.log(res.error)
             }
             else {
                 console.log(res)
-                this.userLog = true;
                 this.userDetails.push(res.data)
 
+                // gettinf user id
                 this.userID = this.userDetails[0]._id
-
-
-                const token = res.data.authentication.sessionToken
-                // this.$cookies.set("token" , token)
-                this.token = token
-                
-                console.log(token)
-
-
-
                 console.log(this.userID)
-                console.log(this.userDetails.details)
 
+                // getting user data
+                const userData = this.userDetails[0].details
+                this.authUserDetails.push(userData);
+
+                console.log(this.authUserDetails[0])
+
+                // console.log(this.userDetails.details)
                 router.push('/home');
             }
         }

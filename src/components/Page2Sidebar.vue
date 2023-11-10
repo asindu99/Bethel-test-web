@@ -253,11 +253,6 @@ export default{
             buttonHide2 : 'hidden',
         }
     },
-    async beforeMount(){
-        this.$cookies.set("framework",this.authUserStore.token)
-        // console.log()
-
-    },
     async mounted(){
         try {
             const res = await axios.post('https://mw.bethel.network/auth/user' ,
@@ -270,6 +265,8 @@ export default{
                 this.authUserStore.userDetails.push(res.data);
                 this.authUserStore.userID = this.authUserStore.userDetails[0]._id
                 console.log(this.authUserStore.userID);
+
+                
             }
             else{
                 router.push('/')

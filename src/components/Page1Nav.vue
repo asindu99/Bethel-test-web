@@ -31,10 +31,9 @@
                     </button>
                 <!-- </router-link> -->
                 
-                <img src="../img/people/CraigState.jpg" alt="" class="lg:flex md:flex sm:flex min-[320px]:hidden
-                w-[45px] h-[45px] rounded-[50px] border-[1px] border-sidebarBG">
-                <h3 class="lg:text-[14px] md:text-[14px] sm:text-[14px] min-[320px]:text-[10px]
-                 lg:flex md:flex sm:flex min-[320px]:flex">Craig Bricknell</h3>
+                
+                <h3 class="lg:text-[16px] md:text-[14px] sm:text-[14px] min-[320px]:text-[10px]
+                 lg:flex md:flex sm:flex min-[320px]:flex font-medium">{{ authUserStore.authUserDetails[0].firstName }} {{ authUserStore.authUserDetails[0].lastName }}</h3>
 
                 <!-- drop down -->
                 <div class="relative">
@@ -355,6 +354,7 @@
 import {mapStores} from "pinia";
 import useModalStore from "@/stores/modal";
 import axios from "axios";
+import { authUser } from "@/stores/AuthUser";
 
 
 
@@ -362,12 +362,16 @@ export default{
     name : 'Page1Dashboard',
 
     computed:{
-        ...mapStores(useModalStore),
+        ...mapStores(useModalStore, authUser),
+    },
+    mounted() {
+        console.log(this.authUserStore.authUserDetails[0].lastName)
+        
     },
 
     data(){
         return{
-            
+            names : []
         }
     }, 
     methods :{
