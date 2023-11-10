@@ -452,20 +452,15 @@ export default {
         ...mapStores(useWalletData, authUser),
         
     },
-    // async created(){
-    //     const res = await axios.get('https://mw.bethel.network/users/USERID');
-    //     this.user = res.data
-    //     console.log(this.user)
-    // },
     async mounted(){
 
-        const res = await axios.get('https://mw.bethel.network/users/' + this.authUserStore.userID);
-        this.user.push(res.data.details);
-        console.log(res.data.details)
+        // const res = await axios.get('https://mw.bethel.network/users/' + this.authUserStore.userID);
+        // this.user.push(res.data.details);
+        // console.log(res.data.details)
 
-        console.log(this.user);
+        // console.log(this.user);
         
-        console.log(this.authUserStore.userID);
+        // console.log(this.authUserStore.userID);
 
 
         this.bucketCount1 = this.walletStore.bucketNameArr.length

@@ -98,22 +98,10 @@ export default{
 
         }
     },
-    // async onBeforeMount(){
-    //     try{
-    //         const res = await axios.post('https://mw.bethel.network/auth/user', 
-    //             {withCredentials:true},
-    //             );
-    //         if(res.status === 200){
-    //             router.push('/')
-    //         }else {
-    //             router.push('/home')
-    //         } 
-    //     }
-    //     catch(error){
-    //         console.log(error)
-    //     }
+    async mounted(){
         
-    // },
+
+    },
     computed : {
         ...mapStores(authUser)
     },

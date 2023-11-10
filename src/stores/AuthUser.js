@@ -66,10 +66,11 @@ export const authUser = defineStore('authUser', {
                 this.userID = this.userDetails[0]._id
                 console.log(this.userID)
                 console.log(this.userDetails)
+
                 router.push('/home');
             }
         }
 
 
     }
-})
+},{persist: true,})

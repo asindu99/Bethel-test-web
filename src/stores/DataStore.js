@@ -133,4 +133,5 @@ export const useWalletData = defineStore('wallet' , {
             }
         }
     },
-})
+    
+},{persist: true,})

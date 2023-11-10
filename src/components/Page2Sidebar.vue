@@ -224,7 +224,9 @@
 // import stores
 import {mapStores} from "pinia";
 import useModalStore from "@/stores/modal";
+import { authUser } from "@/stores/AuthUser";
 import axios from "axios";
+import router from '@/router/index'
 
 export default{
     name : 'Page2Sidebar',
@@ -233,7 +235,7 @@ export default{
     },
 
     computed :{
-        ...mapStores(useModalStore)
+        ...mapStores(useModalStore ,authUser)
     },
 
     data(){
@@ -254,14 +256,28 @@ export default{
             buttonHide2 : 'hidden',
         }
     },
-    // async created(){
-    //     const res = await axios.get('https://mw.bethel.network/users/654c7d92790f2e8de15da0e3', 
-    //             {withCredentials:true},
-    //             );
-                
-    //             // getting user id 
-    //             console.log(res);
-    // },
+    async mounted(){
+
+        try {
+            const res = await axios.post('https://mw.bethel.network/auth/user')
+
+            if(res.status === 200){
+                this.authUserStore.userDetails.push(res.data);
+                this.authUserStore.userID = this.authUserStore.userDetails[0]._id
+                console.log(this.authUserStore.userID);
+            }
+            else{
+                router.push('/')
+        }
+        } catch (error) {
+            router.push('/')
+        }
+        
+
+        
+
+
+    },
     methods : {
         asideHide(){
             this.modalStore.isOpen = false;
