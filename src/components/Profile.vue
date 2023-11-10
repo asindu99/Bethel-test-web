@@ -118,10 +118,12 @@
                                                     <label for="" class="text-[14px]">Country Code :</label>
 
 
+
                                                     <vee-field as="select"  name="code" id=""
                                                      class="block py-1.5 px-0 w-full text-sm text-gray-900 bg-transparent rounded-md border-2 border-[#29379384] appearance-none dark:border-[#29379384] dark:focus:border-[#29379384] focus:outline-none focus:ring-0 focus:border-[#29379384] peer">
                                                         <option v-for="country in countryList" :value="country.MobileCode"
                                                           class="w-[200px] bg-transparent">{{ country.MobileCode }}</option>
+
                                                     </vee-field>
                                                 </div>
                                             </div>
@@ -132,7 +134,9 @@
                                                 <!-- mobile number -->
                                                 <div class="flex  flex-col mt-4 ">
                                                     <label for="" class="text-[14px]">Mobile Number :</label>
+
                                                     <vee-field name="mobile" type="tel" class="block py-1.5 px-0 w-full text-sm text-gray-900 bg-transparent rounded-md border-2 border-[#29379384] appearance-none dark:border-[#29379384] dark:focus:border-[#29379384] focus:outline-none focus:ring-0 focus:border-[#29379384] peer"/>
+
 
                                                 </div>
 
