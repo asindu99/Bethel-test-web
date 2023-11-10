@@ -64,7 +64,7 @@
                         <tr class="">
                         <th class="text-[14px] min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] border p-3 bg-blue-50">WALLET ADDRESS</th>
                         <th class="text-[14px] min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] border p-3 bg-blue-50">SEEDS</th>
-                        <th class="text-[14px] min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] border p-3 bg-blue-50">ACTIVE SEEDS</th>
+                        <th class="text-[14px] min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] border p-3 bg-blue-50">PUBLIC KEY</th>
                         <th class="text-[14px] min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] border p-3 bg-blue-50">MORE</th>
                         </tr>
                     </thead>
@@ -350,6 +350,7 @@
 <script>
 import {mapStores} from 'pinia'
 import {useWalletData} from '@/stores/DataStore';
+import axios from 'axios';
 
 export default {
     name : 'Page4Wallet',
@@ -368,11 +369,17 @@ export default {
             walletTransactionDetailArr : [],
 
             // wallets count
-            walletCount : 0,
+            walletData : [],
         }
     },
-    mounted(){
-        this.walletStore.getData();
+    async mounted(){
+        const res = await axios.get('https://mw.bethel.network/createwallet',
+            {withCredentials :true})
+            console.log(res.data)
+            this.walletData.push(res.data)
+            console.log(this.walletData)
+            
+        
     },
     computed : {
         ...mapStores(useWalletData)
@@ -395,23 +402,23 @@ export default {
 
         },
 
-        handleSubmit(values){
-            console.log(values)
-        },
+        // handleSubmit(values){
+        //     console.log(values)
+        // },
 
-        transferData(values){         
-            this.walletTransactionDetailArr.push(values);
-        },
-        submitData(){
-            this.walletStore.openClose = false;
-            this.walletStore.addData();
-        },
+        // transferData(values){         
+        //     this.walletTransactionDetailArr.push(values);
+        // },
+        // submitData(){
+        //     this.walletStore.openClose = false;
+        //     this.walletStore.addData();
+        // },
 
-        transferData(values){
-            this.walletStore.addTransactionData(values)
+        // transferData(values){
+        //     this.walletStore.addTransactionData(values)
             
             
-        },
+        // },
 
     }
 }

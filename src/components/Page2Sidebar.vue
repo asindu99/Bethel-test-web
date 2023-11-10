@@ -266,10 +266,12 @@ export default{
                 
             }
             else{
-                router.push('/')
+                // router.push('/')
         }
         } catch (error) {
-            router.push('/')
+            router.push('/home')
+            
+            
         }
         
     },

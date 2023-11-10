@@ -378,6 +378,18 @@ export default{
 
         }
     },
+    beforeMount(){
+        
+        try {
+            const userData = JSON.parse(localStorage.getItem('userDetails'))
+             if(!userData){
+                // router.push('/')
+             }
+            }
+            catch (error) {
+                router.push('/')
+            }
+    },
     mounted(){
         const userData = JSON.parse(localStorage.getItem('userDetails'))
 
@@ -388,6 +400,8 @@ export default{
 
         this.userEmail = userData2.email
         this.userName = userData2.username
+
+        
     },
     
     methods :{

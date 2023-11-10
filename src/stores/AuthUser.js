@@ -56,7 +56,11 @@ export const authUser = defineStore('authUser', {
         },
 
         async postLoginData(values){
-            // this.loginDataArr.push(values)
+            try {
+                
+            } catch (error) {
+                
+            }
 
             const res = await axios.post('https://mw.bethel.network/auth/login' ,
             
