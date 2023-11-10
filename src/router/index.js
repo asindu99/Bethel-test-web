@@ -24,7 +24,7 @@ import NewFolder from '@/components/NewFolder.vue';
 const routes = [
     // main section routings
     { 
-      path : '/',
+      path : '/home',
       component :MainContent,
       children :[
         {
@@ -105,7 +105,7 @@ const routes = [
     },
     // sign in section routins
     {
-      path : '/login',
+      path : '/',
       component : LoginContent,
     }
 

@@ -21,7 +21,7 @@
                     <!-- middle section  -->
                 <div class="flex flex-col gap-2">
                     <!-- menu item -->
-                    <RouterLink to="/" class="">
+                    <RouterLink to="/home" class="">
                         <div class="lg:ml-7 md:ml-6 lg:flex md:flex sm:flex min-[320px]:flex
                         w-full lg:px-3  my-2 py-2  transition-all ease-linear">
                             <span class=" material-symbols-outlined
@@ -134,7 +134,7 @@
                 <!-- end of the menu item -->
 
                     <!-- menu item -->
-                    <router-link to="/login">
+                    <router-link to="/">
                         <div class="lg:ml-7 md:ml-6 min-[320px]:flex sm:flex lg:flex md:flex w-full lg:px-3 md:px-0  hover:bg-[] my-2 py-2">
                             <span class=" material-symbols-outlined top-2 right-[20px]  mr-2
                             ">
@@ -224,15 +224,18 @@
 // import stores
 import {mapStores} from "pinia";
 import useModalStore from "@/stores/modal";
+import { authUser } from "@/stores/AuthUser";
+import axios from "axios";
+import router from '@/router/index'
 
 export default{
     name : 'Page2Sidebar',
     components : {
         
     },
-    
+
     computed :{
-        ...mapStores(useModalStore)
+        ...mapStores(useModalStore ,authUser)
     },
 
     data(){
@@ -252,6 +255,28 @@ export default{
             buttonHide : '',
             buttonHide2 : 'hidden',
         }
+    },
+    async mounted(){
+
+        try {
+            const res = await axios.post('https://mw.bethel.network/auth/user')
+
+            if(res.status === 200){
+                this.authUserStore.userDetails.push(res.data);
+                this.authUserStore.userID = this.authUserStore.userDetails[0]._id
+                console.log(this.authUserStore.userID);
+            }
+            else{
+                router.push('/')
+        }
+        } catch (error) {
+            router.push('/')
+        }
+        
+
+        
+
+
     },
     methods : {
         asideHide(){

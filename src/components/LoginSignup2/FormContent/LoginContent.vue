@@ -81,6 +81,8 @@ lg:p-20 md:py-[10px] md:h-screen sm:p-10 min-[320px]:p-3 ">
 <script>
 import {mapStores} from 'pinia'
 import { authUser } from '@/stores/AuthUser';
+import axios from 'axios';
+import router from '@/router/index'
 
 export default{
     name : 'LoginContent',
@@ -95,6 +97,10 @@ export default{
             loginDetailsArr : [],
 
         }
+    },
+    async mounted(){
+        
+
     },
     computed : {
         ...mapStores(authUser)

@@ -24,12 +24,12 @@
             lg:w-[300px] md:w-[300px] sm:w-[300px] min-[320px]:w-[500px]
              basis-[42%] gap-2 justify-end">
 
-                <router-link to="/wallet">
-                    <button class="mr-2 text-[10px] border-[2px] rounded-xl p-[7px] px-[18px]
+                <!-- <router-link to="/wallet"> -->
+                    <button @click="oncok" class="mr-2 text-[10px] border-[2px] rounded-xl p-[7px] px-[18px]
                      bg-sidebarBG text-white border-sidebarBG
                      hover:bg-white hover:text-sidebarBG transition-all ease-linear sm:hidden min-[320px]:hidden lg:flex md:flex">Connect Wallet
                     </button>
-                </router-link>
+                <!-- </router-link> -->
                 
                 <img src="../img/people/CraigState.jpg" alt="" class="lg:flex md:flex sm:flex min-[320px]:hidden
                 w-[45px] h-[45px] rounded-[50px] border-[1px] border-sidebarBG">
@@ -179,7 +179,7 @@
             <div class="flex flex-col text-sidebarText">
                 <!-- menu item -->
                 
-                    <RouterLink to="/" class=""><button @click="closeSide">
+                    <RouterLink to="/home" class=""><button @click="closeSide">
                     <div class="lg:flex md:flex sm:flex min-[320px]:flex
                      w-full px-3  my-2 py-2 transition-all ease-linear">
                         <span class=" material-symbols-outlined top-2 right-[20px] mr-2
@@ -324,7 +324,7 @@
                 </a>
                 <!-- end of the menu item -->
                 <!-- menu item -->
-                <router-link to="/login" class=" w-full">
+                <router-link to="/" class=" w-full">
                     <div class="absolute bottom-3 min-[320px]:flex sm:flex lg:flex md:flex w-full px-3  my-2 py-2  transition-all ease-linear">
                         <span class=" material-symbols-outlined top-2 right-[20px] mr-2
                         ">
@@ -354,7 +354,7 @@
 <script>
 import {mapStores} from "pinia";
 import useModalStore from "@/stores/modal";
-
+import axios from "axios";
 
 
 
@@ -367,6 +367,7 @@ export default{
 
     data(){
         return{
+            
         }
     }, 
     methods :{
@@ -382,6 +383,15 @@ export default{
         },
         DropMenu(){
             this.modalStore.dropMenuOC = !this.modalStore.dropMenuOC
+        },
+
+        async oncok(){
+            const res = await axios.get('https://mw.bethel.network/users', 
+            {withCredentials:true},
+            );
+
+            this.user = res.data
+            console.log(this.user)
         }
     }
 

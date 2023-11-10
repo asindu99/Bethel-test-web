@@ -35,7 +35,7 @@ export const useWalletData = defineStore('wallet' , {
 
         // get  data from the bucket names and push into to getarr 
         async getBucketNames(){
-            const res = await fetch('https://jsonplaceholder.typicode.com/users')
+            const res = await fetch('')
             const data = await res.json();
 
             this.bucketNameArr = data; 
@@ -133,4 +133,5 @@ export const useWalletData = defineStore('wallet' , {
             }
         }
     },
-})
+    
+},{persist: true,})
