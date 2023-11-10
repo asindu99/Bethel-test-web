@@ -266,13 +266,18 @@ export default{
                 
             }
             else{
-                // router.push('/')
+                router.push('/')
         }
         } catch (error) {
-            router.push('/home')
+            // router.push('/')
             
             
         }
+        const res = await axios.get('https://mw.bethel.network/createwallet',
+                {withCredentials :true})
+                console.log(res.data)
+        // save wallet details
+        localStorage.setItem('walletDetails', JSON.stringify(res.data))
         
     },
     methods : {
@@ -305,6 +310,7 @@ export default{
                 console.log("successfully logged out!")
                 localStorage.removeItem('userDetails');
                 localStorage.removeItem('userData');
+                localStorage.removeItem('walletDetails');
             }
         }
     }

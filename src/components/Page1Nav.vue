@@ -358,6 +358,8 @@ import {mapStores} from "pinia";
 import useModalStore from "@/stores/modal";
 import axios from "axios";
 import { authUser } from "@/stores/AuthUser";
+import router from '@/router/index'
+
 
 
 
@@ -378,28 +380,23 @@ export default{
 
         }
     },
-    beforeMount(){
-        
+    mounted(){
         try {
             const userData = JSON.parse(localStorage.getItem('userDetails'))
-             if(!userData){
-                // router.push('/')
-             }
-            }
-            catch (error) {
-                router.push('/')
-            }
-    },
-    mounted(){
-        const userData = JSON.parse(localStorage.getItem('userDetails'))
 
-        const userData2 = JSON.parse(localStorage.getItem('userData'))
+            const userData2 = JSON.parse(localStorage.getItem('userData'))
 
-        this.firstName = userData.firstName
-        this.lastName = userData.lastName
+            this.firstName = userData.firstName
+            this.lastName = userData.lastName
 
-        this.userEmail = userData2.email
-        this.userName = userData2.username
+            this.userEmail = userData2.email
+            this.userName = userData2.username 
+        } catch (error) {
+            console.log('this error is pffffff')
+            router.push('/')
+
+        }
+        
 
         
     },

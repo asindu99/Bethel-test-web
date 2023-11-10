@@ -63,11 +63,14 @@ export const authUser = defineStore('authUser', {
             }
 
             const res = await axios.post('https://mw.bethel.network/auth/login' ,
-            
                 {
                     email: values.email,
                     password: values.password,  
                 },
+                {
+                    withCredentials: true,
+                    
+                }
             );
             
             if(res.error){
@@ -97,6 +100,8 @@ export const authUser = defineStore('authUser', {
 
                 // save user data
                 localStorage.setItem('userData', JSON.stringify(res.data))
+
+                
 
                 router.push('/home');
             }

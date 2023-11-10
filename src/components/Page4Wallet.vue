@@ -37,7 +37,7 @@
                 <div class="flex">
                     <div>
                         <button @click="openAuthModal" class="border-[2px] px-2 py-2 rounded-xl bg-sidebarBG w-[150px] text-[white] 
-                        font-medium hover:text-sidebarBG hover:bg-[white] transition-all ease-linear hover:border-sidebarBG">Create Wallet</button>
+                        font-medium hover:text-sidebarBG hover:bg-[white] transition-all ease-linear hover:border-sidebarBG">Create Faucet</button>
                     </div>
                     
                 </div>
@@ -69,10 +69,10 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr v-for="wallet in walletStore.walletTableArr" :key="wallet.Waddress">
-                        <td class="text-[14px] min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] text-center bg-white border p-3"> {{wallet.id}}</td>
-                        <td class="text-[14px] min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] text-center bg-white border p-3">{{wallet.quote}}</td>
-                        <td class="text-[14px] min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] text-center bg-white border p-3">{{ wallet.author }}</td>
+                        <tr v-for="wallet in walletData" :key="wallet.Waddress">
+                        <td class="text-[14px] min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] text-center bg-white border p-3"> {{wallet.address}}</td>
+                        <td class="text-[14px] min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] text-center bg-white border p-3">{{wallet.seeds}}</td>
+                        <td class="text-[14px] min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] text-center bg-white border p-3">{{ wallet.public_key }}</td>
                         
                         <!-- toogle button table data -->
                         <!-- <td class="text-[12px] text-center bg-white border p-3">
@@ -373,11 +373,9 @@ export default {
         }
     },
     async mounted(){
-        const res = await axios.get('https://mw.bethel.network/createwallet',
-            {withCredentials :true})
-            console.log(res.data)
-            this.walletData.push(res.data)
-            console.log(this.walletData)
+        const userData = JSON.parse(localStorage.getItem('walletDetails'))
+        this.walletData.push(userData)
+        console.log(this.walletData)
             
         
     },
