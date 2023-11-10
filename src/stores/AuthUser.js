@@ -68,7 +68,7 @@ export const authUser = defineStore('authUser', {
                     password: values.password,  
                 },
                 {
-                    withCredentials: true,
+                    withCredentials: "same-origin",
                     
                 }
             );
