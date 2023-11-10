@@ -271,15 +271,14 @@ methods: {
             console.log(this.authUserStore.userID)
             const res = await axios.patch('https://mw.bethel.network/users/' + this.authUserStore.userID,
             {withCredentials :true},
-            {
-                email: values.email,
-                username: values.username,
-                password: values.password,
-                firstName: values.FirstName,
-                lastName: values.LastName,
-                country: values.country,
-                code: values.code,
-                mobile: values.mobile
+            { "details" : {
+                "firstName": "values.FirstName",
+                "lastName": "values.LastName",
+                "country": "values.country",
+                "code": "values.code",
+                "mobile": "values.mobile"
+            }
+                
             })
             console.log(res)
 

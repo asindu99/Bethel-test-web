@@ -4,6 +4,8 @@ import axios from 'axios';
 
 export const authUser = defineStore('authUser', {
     state : () => ({
+        
+         
         authUserDetailsArr : [],
         authMobileOTP : [],
         loginDataArr : [],
@@ -16,7 +18,11 @@ export const authUser = defineStore('authUser', {
         userDetails : [],
 
         // auth user details arr
-        authUserDetails : []
+        authUserDetails : [],
+
+        // user data arr
+        userDataArr : [],
+
 
     }),
 
@@ -59,9 +65,6 @@ export const authUser = defineStore('authUser', {
                     password: values.password,  
                 },
             );
-            // get user data
-            // const userData = res.data.details.firstName
-            // console.log(userData)
             
             if(res.error){
                 console.log(res.error)
@@ -80,11 +83,22 @@ export const authUser = defineStore('authUser', {
 
                 console.log(this.authUserDetails[0])
 
-                // console.log(this.userDetails.details)
+                const userData2 = res.data.details
+                this.userDataArr.push(userData2);
+
+                // Save the updated data to localStorage whenever it changes
+
+                // save user details
+                localStorage.setItem('userDetails', JSON.stringify(res.data.details))
+
+                // save user data
+                localStorage.setItem('userData', JSON.stringify(res.data))
+
                 router.push('/home');
             }
         }
 
 
     }
-},{persist: true,})
+}
+)

@@ -33,7 +33,7 @@
                 
                 
                 <h3 class="lg:text-[16px] md:text-[14px] sm:text-[14px] min-[320px]:text-[10px]
-                 lg:flex md:flex sm:flex min-[320px]:flex font-medium">user name</h3>
+                 lg:flex md:flex sm:flex min-[320px]:flex font-medium">{{ firstName }} {{ lastName }} </h3>
 
                 <!-- drop down -->
                 <div class="relative">
@@ -51,15 +51,15 @@
                         <!-- box 1 -->
                         <RouterLink to="/Mobile-Verification">
                             <div class="flex flex-col w-full px-2 py-2 border-b-2  transition-all ease-in-out">
-                                <h1 class="text-[14px] text-[#c4c9ea]">Bethel User Name</h1>
-                                <h1 class="text-[11px] text-[white] cursor-pointer">behtelnetwork@bethel.mail.com</h1>
+                                <h1 class="text-[14px] text-[#c4c9ea]">{{ userName }}</h1>
+                                <h1 class="text-[11px] text-[white] cursor-pointer">{{ userEmail }}</h1>
                             </div>
                         </RouterLink>
                         
                         <!-- end box1 -->
 
                         <!-- box 2 -->
-                        <button @click="modalStore.dropMenuOC = false" class="w-full mt-2"><RouterLink to="/" class="active">
+                        <button @click="modalStore.dropMenuOC = false" class="w-full mt-2"><RouterLink to="/home" class="active">
                             <div class="w-full  px-2 rounded-lg transition-all ease-linear">
                                 <div class="lg:flex md:flex sm:flex min-[320px]:flex
                                     w-full px-3 my-2 py-2">
@@ -102,8 +102,8 @@
                         <!-- end box 3 -->
 
                         <!-- box 3 -->
-                        <RouterLink to="/login">
-                            <button @click="modalStore.dropMenuOC = false" class="w-full">
+                        <RouterLink to="/">
+                            <button @click="logout" class="w-full">
                                 <div class="w-full px-2 rounded-lg transition-all ease-linear">
                                     <div class="min-[320px]:flex sm:flex lg:flex md:flex w-full px-3 my-2 py-2 transition-all ease-linear">
                                         <span class=" material-symbols-outlined top-2 right-[20px] mr-2 scale-[.9]
@@ -367,12 +367,29 @@ export default{
     computed:{
         ...mapStores(useModalStore, authUser),
     },
+    
 
     data(){
         return{
-            names : []
+            firstName : '', 
+            lastName : '',
+            userEmail : '',
+            userName : ''
+
         }
     },
+    mounted(){
+        const userData = JSON.parse(localStorage.getItem('userDetails'))
+
+        const userData2 = JSON.parse(localStorage.getItem('userData'))
+
+        this.firstName = userData.firstName
+        this.lastName = userData.lastName
+
+        this.userEmail = userData2.email
+        this.userName = userData2.username
+    },
+    
     methods :{
         showSide(){
             this.modalStore.isOpen = true;
@@ -389,11 +406,16 @@ export default{
         },
         async logout(){
             const res = await axios.post('https://mw.bethel.network/auth/logout',{withCredentials : true});
+            
             if(res.error){
                 console.log(res.error)
             }
             else{
+                this.modalStore.dropMenuOC = false
                 console.log("successfully logged out!")
+                localStorage.removeItem('userDetails');
+                localStorage.removeItem('userData');
+
             }
         }
     }

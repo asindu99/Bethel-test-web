@@ -301,6 +301,8 @@ export default{
             }
             else{
                 console.log("successfully logged out!")
+                localStorage.removeItem('userDetails');
+                localStorage.removeItem('userData');
             }
         }
     }
