@@ -44,8 +44,8 @@
 
 
                 <div class="flex justify-center p-20 mt-10">
-                    <input type="file" @change="handleFileChange" id="upload"/>
-                    <button @click="postFileData" class="border-[2px] px-2 py-2 rounded-xl bg-sidebarBG w-[150px] text-[white] text-center
+                    <input type="file" @change="handleFileUpload" id="upload"/>
+                    <button @click="uploadFile" class="border-[2px] px-2 py-2 rounded-xl bg-sidebarBG w-[150px] text-[white] text-center
                             font-medium hover:text-sidebarBG hover:bg-[white] transition-all ease-linear hover:border-sidebarBG cursor-pointer">Upload File</button>
                 </div>
                 
@@ -69,60 +69,36 @@
   export default {
     data() {
       return {
-        authUserStore: {
+
           userID: "1", 
-    
-        },
-        file:null
+  
+        file:null,
 
       };
     },
     methods: { 
-      handleFileChange(event) {
+      handleFileUpload(event) {
         this.file = event.target.files[0];
       },
-      // async uploadFile() {
-      //   try {
-      //     await this.postFileData({ file: this.file });
-      //   } catch (error) {
-      //     console.error("Error uploading file:", error);
-      //   }
-      // },
-      async postFileData(values) {
+      async uploadFile() {
+        const formData = new FormData();
+        formData.append('file', this.file);
+        formData.append('userid', '1');
+        formData.append('bucket', 'Public_storage_0');
+  
         try {
-          console.log(values);
-          console.log(this.authUserStore.userID);
-  
-          const formData = new FormData();
-            formData.append("file", this.file);
-
-            formData.append("userid", this.authUserStore.userID);
-
-            formData.append("bucketName", "public_storage_0");
-
-
-          const res = await axios.post(
-            `https://api.bethel.network/upload`,
-            formData,
-            {
-              withCredentials: true,
-              headers: {
-                "Content-Type": "multipart/form-data",
-              },
+          const response = await axios.post('https://api.bethel.network/upload', formData, {
+            headers: {
+              'Content-Type': 'multipart/form-data'
             }
-          );
-  
-          console.log(res);
-  
-          if (res.data && res.data.error) {
-            console.error(res.data.error);
-          } else {
-            console.log("File uploaded successfully");
-          }
+          });
+          console.log(response.data);
+          alert('File uploaded successfully');
         } catch (error) {
-          console.error("Error uploading file:", error);
+          console.error(error);
+          alert('Error uploading file');
         }
-      },
+      }
     },
   };
   </script>
