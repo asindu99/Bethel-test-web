@@ -270,9 +270,6 @@ methods: {
         },
 
  async patchAuthPassData(values){
-            // this.authUserDetailsArr.push(values)
-
-            // console.log(values.email)
 
             const res = await axios.get('https://mw.bethel.network/users/' + this.authUserStore.userID,
             {
