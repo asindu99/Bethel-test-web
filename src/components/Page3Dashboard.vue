@@ -1,8 +1,5 @@
 <template>
     <div :class="paddingClass" class="relative lg:w-full md:w-full md:mx-auto min-[320px]:w-[100%] min-[320px]:px-[10px]">
-        <div>
-            helloooo {{ user.FirstName }}
-        </div>
         <!-- head wallet div  -->
         <div class=" hidden">
                 <!-- left side text -->

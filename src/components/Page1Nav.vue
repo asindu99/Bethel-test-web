@@ -33,7 +33,7 @@
                 
                 
                 <h3 class="lg:text-[16px] md:text-[14px] sm:text-[14px] min-[320px]:text-[10px]
-                 lg:flex md:flex sm:flex min-[320px]:flex font-medium">{{ authUserStore.authUserDetails[0].firstName }} {{ authUserStore.authUserDetails[0].lastName }}</h3>
+                 lg:flex md:flex sm:flex min-[320px]:flex font-medium">user name</h3>
 
                 <!-- drop down -->
                 <div class="relative">
@@ -324,14 +324,17 @@
                 <!-- end of the menu item -->
                 <!-- menu item -->
                 <router-link to="/" class=" w-full">
-                    <div class="absolute bottom-3 min-[320px]:flex sm:flex lg:flex md:flex w-full px-3  my-2 py-2  transition-all ease-linear">
-                        <span class=" material-symbols-outlined top-2 right-[20px] mr-2
-                        ">
-                            logout
-                        </span>  
-                        <h3>Log Out </h3>
+                    <button @click="logout">
+                        <div class="absolute bottom-3 min-[320px]:flex sm:flex lg:flex md:flex w-full px-3  my-2 py-2  transition-all ease-linear">
+                            <span class=" material-symbols-outlined top-2 right-[20px] mr-2
+                            ">
+                                logout
+                            </span>  
+                            <h3>Log Out </h3>
+                        
+                        </div>
+                    </button>
                     
-                    </div>
 
                     
                 </router-link>
@@ -364,16 +367,12 @@ export default{
     computed:{
         ...mapStores(useModalStore, authUser),
     },
-    mounted() {
-        console.log(this.authUserStore.authUserDetails[0].lastName)
-        
-    },
 
     data(){
         return{
             names : []
         }
-    }, 
+    },
     methods :{
         showSide(){
             this.modalStore.isOpen = true;
@@ -388,14 +387,14 @@ export default{
         DropMenu(){
             this.modalStore.dropMenuOC = !this.modalStore.dropMenuOC
         },
-
-        async oncok(){
-            const res = await axios.get('https://mw.bethel.network/users', 
-            {withCredentials:true},
-            );
-
-            this.user = res.data
-            console.log(this.user)
+        async logout(){
+            const res = await axios.post('https://mw.bethel.network/auth/logout',{withCredentials : true});
+            if(res.error){
+                console.log(res.error)
+            }
+            else{
+                console.log("successfully logged out!")
+            }
         }
     }
 
