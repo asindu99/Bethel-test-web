@@ -33,9 +33,7 @@ export const authUser = defineStore('authUser', {
 
             console.log(values.email)
 
-            const res = await axios.post('https://mw.bethel.network/auth/register' , 
-            {withCredentials : true},
-            {
+            const res = await axios.post('https://mw.bethel.network/auth/register', {
                 email: values.email,
                 username: values.username,
                 password: values.password,
@@ -44,8 +42,9 @@ export const authUser = defineStore('authUser', {
                 country: values.country,
                 code: values.code,
                 mobile: values.mobile
-            })
-            console.log(res)
+            }, {
+                withCredentials: true
+            });
 
             if(res.error){
                 console.log(res.error)
