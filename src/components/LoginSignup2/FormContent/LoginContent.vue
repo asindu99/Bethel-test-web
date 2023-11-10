@@ -30,8 +30,8 @@ lg:p-20 md:py-[10px] md:h-screen sm:p-10 min-[320px]:p-3 ">
                      action="" class="flex flex-col">
                         <div class="flex flex-col relative">
                             <label for="" class="text-[14px]">Email :</label>
-                            <VeeField name="email" type="text" placeholder="Jhon@example.com" class="text-[#757784] bg-transparent p-1 border-b-2 border-[#29379384]
-                        [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none "/>
+                            <VeeField name="email" type="text" placeholder="Jhon@example.com" class="text-[#757784] bg-transparent p-1 border-2 border-[#29379384]
+                        [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none rounded-md"/>
                         <!-- display error message -->
                         <ErrorMessage name="email" class="absolute text-[12px] text-red-500 bottom-[-20px]"/>
                         </div>
@@ -39,8 +39,8 @@ lg:p-20 md:py-[10px] md:h-screen sm:p-10 min-[320px]:p-3 ">
                         <div class="flex flex-col mt-8 relative">
                             <label for="" class="text-[14px]">Password :</label>
                             <VeeField name="password" type="password" placeholder="Password"
-                            class=" text-[#757784] bg-transparent p-1 border-b-2 border-[#29379384]
-                        [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none "/>
+                            class=" text-[#757784] bg-transparent p-1 border-2 border-[#29379384]
+                        [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none rounded-md"/>
                             <!-- disply error message -->
                             <button class=""><h3 class="text-sidebarBG text-[12px] mt-4 text-right">forgot password?</h3></button>
                             <ErrorMessage name="password" class="absolute text-[12px] text-red-500 bottom-[15px]"/>
