@@ -1,49 +1,49 @@
 <template>
     <!-- top account information text section -->
-    <div class="flex flex-col w-full mt-2">
+    <div class="flex flex-col w-full mt-8">
                     <h3 class="text-[20px] text-sidebarBG">Account Information</h3>
                     <h4 class="text-[14px] text-[#757784]">Enter Your email address and password details ! </h4>
                 </div>
 
                 <hr class="w-full mt-2">
-        <VeeForm @submit="onReg"
-        :validation-schema="signupSchema">
+        <VeeForm @submit="onReg" :validation-schema="signupSchema">
             <!-- email div -->
             
-                <div class="flex w-full justify-between gap-2 mt-10
-                lg:flex-row md:flex-row sm:flex min-[320px]:flex-col">
+                <div class="flex w-full justify-between mt-8
+                    lg:flex-row md:flex-row sm:flex min-[320px]:flex-col lg:gap-8">
                     <!-- password div -->
                     <div class="flex flex-col relative">
                         <label for="" class="text-[14px]">Email :</label>
-                        <VeeField  name="email" type="text" class=" bg-transparent p-1 border-b-2 border-[#29379384] outline-none"/>
+                        <VeeField  name="email" type="text" class=" bg-transparent p-1 border-2 border-[#29379384] outline-none rounded-md
+                        lg:gap-4 md:gap-4 sm:gap-4 min-[320px]:gap-4 lg:w-[235px] md:w-[238px] min-[320px]:w-full w-[340px]"/>
 
                         <ErrorMessage name="email" class="absolute text-[12px] text-red-500 bottom-[-20px]"/>
                     </div>
 
                     <!-- confirm password div -->
-                    <div class="flex flex-col relative lg:mt-0 md:mt-0 sm:mt-2 min-[320px]:mt-5">
+                    <div class="flex flex-col relative lg:mt-0 md:mt-0 sm:mt-4 min-[320px]:mt-5">
                         <label for="" class="text-[14px]">User Name :</label>
-                        <VeeField  name="username" type="text" class=" bg-transparent p-1 border-b-2 border-[#29379384] outline-none"/>
+                        <VeeField  name="username" type="text" class=" bg-transparent p-1 border-2 border-[#29379384] outline-none rounded-md lg:w-[235px] md:w-[238px] min-[320px]:w-full w-[340px]"/>
                         <ErrorMessage name="name" class="absolute text-[12px] text-red-500 bottom-[-20px]"/>
                     </div>
 
                 </div>
 
                 <!-- password and confirm password section -->
-                <div class="flex w-full justify-between gap-2 mt-10
-                lg:flex-row md:flex-row sm:flex min-[320px]:flex-col">
+                <div class="flex w-full justify-between gap-2 mt-4
+                lg:flex-row md:flex-row sm:flex min-[320px]:flex-col lg:gap-8">
                     <!-- password div -->
                     <div class="flex flex-col relative">
                         <label for="" class="text-[14px]">Password :</label>
-                        <VeeField  name="password" type="password" class=" bg-transparent p-1 border-b-2 border-[#29379384] outline-none"/>
+                        <VeeField  name="password" type="password" class=" bg-transparent p-1 border-2 border-[#29379384] outline-none rounded-md lg:w-[235px] md:w-[238px] min-[320px]:w-full w-[340px]"/>
 
                         <ErrorMessage name="password" class="absolute text-[12px] text-red-500 bottom-[-20px]"/>
                     </div>
 
                     <!-- confirm password div -->
-                    <div class="flex flex-col relative lg:mt-0 md:mt-0 sm:mt-2 min-[320px]:mt-5">
+                    <div class="flex flex-col relative lg:mt-0 md:mt-0 sm:mt-4 min-[320px]:mt-4">
                         <label for="" class="text-[14px]">Confirm Password :</label>
-                        <VeeField  name="confirm_password" type="password" class=" bg-transparent p-1 border-b-2 border-[#29379384] outline-none"/>
+                        <VeeField  name="confirm_password" type="password" class=" bg-transparent p-1 border-2 border-[#29379384] outline-none rounded-md lg:w-[235px] md:w-[238px] min-[320px]:w-full w-[340px]"/>
                         <ErrorMessage name="confirm_password" class="absolute text-[12px] text-red-500 bottom-[-20px]"/>
                     </div>
 
@@ -61,33 +61,33 @@
 
                 
 
-                <div class="lg:flex-row md:flex-row sm:flex min-[320px]:flex-col justify-between w-full mt-10">
+                <div class="lg:flex-row md:flex-row sm:flex min-[320px]:flex-col justify-between w-full mt-4 lg:gap-8">
                     <!-- first name -->
                     <div class="flex flex-col relative">
                         <label for="" class="text-[14px]">First Name :</label>
-                        <VeeField name="FirstName" type="text" class="lg:w-[235px] md:w-[240px] text-[#757784] bg-transparent p-1 border-b-2 border-[#29379384] "/>
+                        <VeeField name="FirstName" type="text" class="lg:w-[235px] md:w-[240px] text-[#757784] bg-transparent p-1 border-2 border-[#29379384] rounded-md lg:w-[235px] md:w-[238px] min-[320px]:w-full w-[340px]"/>
                         <ErrorMessage name="FirstName" class="absolute text-[12px] text-red-500 bottom-[-20px]"/>
 
                     </div>
 
                     <!-- last name -->
-                    <div class="flex flex-col min-[320px]:mt-4 lg:mt-0 md:mt-0 sm:mt-0 relative">
+                    <div class="flex flex-col min-[320px]:mt-4 lg:mt-0 md:mt-0 sm:mt-4 relative">
                         <label for="" class="text-[14px]">Last Name :</label>
-                        <VeeField name="LastName" type="text" class="lg:w-[235px] text-[#757784] bg-transparent p-1 border-b-2 border-[#29379384] outline-1"/>
+                        <VeeField name="LastName" type="text" class="lg:w-[235px] text-[#757784] bg-transparent p-1 border-2 border-[#29379384] outline-1 rounded-md lg:w-[235px] md:w-[238px] min-[320px]:w-full w-[340px]"/>
                         <ErrorMessage name="LastName" class="absolute text-[12px] text-red-500 bottom-[-20px]"/>
 
                     </div>
                 </div>
 
 
-                <div class="justify-between w-full mt-8 lg:flex-row md:flex-row sm:flex min-[320px]:flex-col">
+                <div class="justify-between w-full mt-4 lg:flex-row md:flex-row sm:flex min-[320px]:flex-col lg:gap-8">
 
                     <!-- Select country name -->
                     <div  class="flex flex-col">
                         <label for="" class="text-[14px]">Select Country :</label>
                         <!-- <input type="text" class=" bg-transparent p-1 border-b-2 border-[#29379384] outline-none"> -->
 
-                        <vee-field as="select" name="country" v-model="selected" class="text-[#757784] bg-transparent p-1 border-b-2 border-[#29379384]  lg:w-[235px] md:w-[230px] min-[320px]:w-full w-[340px]">
+                        <vee-field as="select" name="country" v-model="selected" class="text-[#757784] bg-transparent p-2 border-2 border-[#29379384]  lg:w-[235px] md:w-[238px] min-[320px]:w-full w-[340px] rounded-md">
                             <option v-for="country in countryList" :value="country.Name" class="w-[200px] bg-transparent">
                                 {{ country.Name }}
                             </option>
@@ -97,10 +97,10 @@
                     </div>
 
                     <!-- last name -->
-                    <div  class="flex flex-col min-[302px]:mt-4 lg:mt-0 md:mt-0 sm:mt-0">
+                    <div  class="flex flex-col min-[320px]:mt-4 lg:mt-0 md:mt-0 sm:mt-4">
                         <label for="" class="text-[14px]">Country Code :</label>
 
-                        <VeeField as="select"  name="code" class="text-[#757784] bg-transparent p-1 border-b-2 border-[#29379384]  lg:w-[235px] md:w-[230px] min-[320px]:w-full w-[340px]">
+                        <VeeField as="select"  name="code" class="text-[#757784] bg-transparent p-2 border-2 border-[#29379384]  lg:w-[235px] md:w-[238px] min-[320px]:w-full w-[340px] rounded-md">
                             <option v-for="code in countryList" :value="code.MobileCode" class="w-[200px] bg-transparent">
                                 {{ code.MobileCode }}
                             </option>
@@ -111,19 +111,19 @@
                 </div>
 
 
-                <div class="flex justify-between w-full mt-4">
+                <div class="flex justify-between w-full mt-2">
 
                     <!-- first name -->
-                    <div class="flex flex-col relative">
+                    <div class="flex flex-col relative mt-2 w-full">
                         <label for="" class="text-[14px]">Mobile Number :</label>
-                        <VeeField name="mobile" type="Number" class="text-[#757784] bg-transparent p-1 border-b-2 border-[#29379384]
-                        [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none "/>
+                        <VeeField name="mobile" type="Number" class="text-[#757784] bg-transparent p-1 border-2 border-[#29379384]
+                        [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none rounded-md"/>
                         <ErrorMessage name="mobile" class="absolute text-[12px] text-red-500 bottom-[-20px]"/>
                     </div>
 
                 </div>
 
-                <div class="flex flex-col justify-between w-full mt-4">
+                <div class="flex flex-col justify-between w-full mt-2">
 
                     <!-- tos name -->
                     <div class="flex items-center gap-2 mt-4 relative">
@@ -133,7 +133,7 @@
                     </div>
 
                     <!-- <router-link to="/mobile-verify"> -->
-                    <div class="flex justify-between w-full mt-8">
+                    <div class="flex justify-between w-full mt-4">
                         <button type="submit" class="p-2 bg-sidebarBG rounded-lg px-10  text-white border-[1px] hover:bg-white hover:text-sidebarBG hover:border-[1px] hover:border-sidebarBG transition-all ease-in-out">Create Account</button>
                     </div>
                     <!-- </router-link> -->
