@@ -24,7 +24,7 @@ export const authUser = defineStore('authUser', {
             console.log(values.email)
 
             const res = await axios.post('https://mw.bethel.network/auth/register' , 
-            
+            {withCredentials : true},
             {
                 email: values.email,
                 username: values.username,
@@ -49,6 +49,7 @@ export const authUser = defineStore('authUser', {
             // this.loginDataArr.push(values)
 
             const res = await axios.post('https://mw.bethel.network/auth/login' ,
+            
                 {
                     email: values.email,
                     password: values.password,  

@@ -16,7 +16,7 @@ import piniaPluginPersistedState from "pinia-plugin-persistedstate"
 import axios from 'axios'
 
 // async function getAuth(){
-//     const res = await axios.post('https://mw.bethel.network/auth/user')
+//     const res = await axios.post('https://mw.bethel.network/auth/user', {withCredentials : true})
 //     console.log(res)
 // }
 

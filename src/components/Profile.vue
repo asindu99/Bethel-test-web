@@ -228,7 +228,7 @@ methods: {
             console.log(values.email)
 
             console.log(this.authUserStore.userID)
-            const res = await axios.patch('https://mw.bethel.network/users/' + this.authUserStore.userID ,
+            const res = await axios.patch('https://mw.bethel.network/users/' + this.authUserStore.userID,
             
             {
                 email: values.email,
