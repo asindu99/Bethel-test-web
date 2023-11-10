@@ -106,41 +106,41 @@ export const authUser = defineStore('authUser', {
             }
         },
 
-        async postFileData(values) {
-            try {
-                console.log(values);
-                console.log(this.authUserStore.userID);
+        // async postFileData(values) {
+        //     try {
+        //         console.log(values);
+        //         console.log(this.authUserStore.userID);
 
-                const formData = new FormData();
-                formData.append("file", values.file);
+        //         const formData = new FormData();
+        //         formData.append("file", values.file);
 
-                formData.append("userid", 1);
+        //         formData.append("userid", 1);
 
-                formData.append("bucket", public_storage_0);
+        //         formData.append("bucket", public_storage_0);
 
 
-                const res = await axios.post(
-                `https://api.bethel.network/upload`,
-                formData,
-                {
-                    withCredentials: true,
-                    headers: {
-                    "Content-Type": "multipart/form-data",
-                    },
-                }
-                );
+        //         const res = await axios.post(
+        //         `https://api.bethel.network/upload`,
+        //         formData,
+        //         {
+        //             withCredentials: true,
+        //             headers: {
+        //             "Content-Type": "multipart/form-data",
+        //             },
+        //         }
+        //         );
 
-                console.log(res);
+        //         console.log(res);
 
-                if (res.data && res.data.error) {
-                console.error(res.data.error);
-                } else {
-                console.log("File uploaded successfully");
-                }
-            } catch (error) {
-                console.error("Error uploading file:", error);
-            }
-            }
+        //         if (res.data && res.data.error) {
+        //         console.error(res.data.error);
+        //         } else {
+        //         console.log("File uploaded successfully");
+        //         }
+        //     } catch (error) {
+        //         console.error("Error uploading file:", error);
+        //     }
+        //     }
 
 
     }

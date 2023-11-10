@@ -15,15 +15,20 @@ lg:p-20 md:py-[10px] md:h-screen sm:p-10 min-[320px]:p-3 ">
         min-[320px]:py-10 bg-blue-50">
             <!-- left side log in content -->
             <div class="flex flex-col w-full items-start justify-center">
+
+                <div class="w-full flex items-center justify-center">
+                    <img src="../../../img/logos/bethellogo.png" alt="" class="w-[80px]">
+                </div>
                     <!-- TOP CAPTION SEC -->
-                <div class="w-full text-center">
+                <div class="w-full text-center mt-2">
                     <h3 class="text-sidebarBG font-bold text-[25px]">Welcome to the BETHEL!</h3>
                     <p class="text-[#757784] text-[14px]">Please sign in to the your account and start the adventure!</p>
+                    <h3 class="text-[white] text-[14px] bg-bethelOrange p-2 mt-2 rounded-md">Please use Firefox Browser for Better Experience, support for other browsers will be made soon.</h3>
                 </div>
                 <!-- END OF TOP CAPTION SEC -->
 
                 <!-- form section -->
-                <div class="mt-10 w-full">
+                <div class="mt-4 w-full">
                     <VeeForm
                     :validation-schema = "loginSchema"
                     @submit="onSubmit"

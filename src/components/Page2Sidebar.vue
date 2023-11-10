@@ -273,12 +273,31 @@ export default{
             
             
         }
-        const res = await axios.get('https://mw.bethel.network/createwallet',
+        const res = await axios.get('https://mw.bethel.network/createwallet/' + this.authUserStore.userID ,
                 {withCredentials :true})
                 console.log(res.data)
         // save wallet details
         localStorage.setItem('walletDetails', JSON.stringify(res.data))
+
+        const res2 = await axios.get('https://mw.bethel.network/storage/' + this.authUserStore.userID ,
+                {withCredentials :true})
+                console.log(res2.data)
+        // save wallet details
+        localStorage.setItem('uploadDetails', JSON.stringify(res2.data))
+
+
+        // get storage status
+        const res3 = await axios.get('https://mw.bethel.network/storagedetails/' + this.authUserStore.userID ,
+                {withCredentials :true})
+                console.log(res3.data)
+        // save wallet details
+        localStorage.setItem('storageDetails', JSON.stringify(res3.data))
+
+
+
         
+
+
     },
     methods : {
         asideHide(){
@@ -311,6 +330,7 @@ export default{
                 localStorage.removeItem('userDetails');
                 localStorage.removeItem('userData');
                 localStorage.removeItem('walletDetails');
+                localStorage.removeItem('uploadDetails');
             }
         }
     }
