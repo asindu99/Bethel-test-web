@@ -248,20 +248,25 @@ export default{
             //for the funtion 
             fnSidebar : false,
 
-
-            
-
             // button hide
             buttonHide : '',
             buttonHide2 : 'hidden',
         }
     },
-    async mounted(){
+    async beforeMount(){
+        this.$cookies.set("framework",this.authUserStore.token)
+        // console.log()
 
+    },
+    async mounted(){
         try {
-            const res = await axios.post('https://mw.bethel.network/auth/user')
+            const res = await axios.post('https://mw.bethel.network/auth/user' ,
+            {
+                withCredentials : true,
+            });
 
             if(res.status === 200){
+                console.log(res.status)
                 this.authUserStore.userDetails.push(res.data);
                 this.authUserStore.userID = this.authUserStore.userDetails[0]._id
                 console.log(this.authUserStore.userID);
@@ -270,14 +275,9 @@ export default{
                 router.push('/')
         }
         } catch (error) {
-            console.log(error)
             router.push('/')
         }
         
-
-        
-
-
     },
     methods : {
         asideHide(){

@@ -10,6 +10,7 @@ export const authUser = defineStore('authUser', {
         userLog : false,
         user : '',
         userID : null,
+        token : null,
         
 
         userDetails : [],
@@ -65,8 +66,18 @@ export const authUser = defineStore('authUser', {
                 this.userDetails.push(res.data)
 
                 this.userID = this.userDetails[0]._id
+
+
+                const token = res.data.authentication.sessionToken
+                // this.$cookies.set("token" , token)
+                this.token = token
+                
+                console.log(token)
+
+
+
                 console.log(this.userID)
-                console.log(this.userDetails)
+                console.log(this.userDetails.details)
 
                 router.push('/home');
             }
