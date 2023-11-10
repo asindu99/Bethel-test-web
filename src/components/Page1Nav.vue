@@ -392,7 +392,7 @@ export default{
             this.userEmail = userData2.email
             this.userName = userData2.username 
         } catch (error) {
-            console.log('this error is pffffff')
+            
             router.push('/')
 
         }

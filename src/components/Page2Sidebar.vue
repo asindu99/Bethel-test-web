@@ -269,7 +269,7 @@ export default{
                 router.push('/')
         }
         } catch (error) {
-            // router.push('/')
+            router.push('/')
             
             
         }
