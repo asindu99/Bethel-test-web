@@ -82,6 +82,21 @@
       "name": "sgsg",
       "network": "Public",
       "id": 2
+    },
+    {
+      "name": "nsfnjsf",
+      "network": "Private",
+      "id": 3
+    },
+    {
+      "name": "nfdfn",
+      "network": "Public",
+      "id": 4
+    },
+    {
+      "name": "mklg",
+      "network": "Public",
+      "id": 5
     }
   ],
   "folderNames": [
@@ -90,6 +105,18 @@
       "folderSize": 3,
       "dateCreated": "2023-11-06 14:30",
       "id": 1
+    },
+    {
+      "name": "nfdkfn",
+      "id": 2
+    },
+    {
+      "name": "nfdkfn",
+      "id": 3
+    },
+    {
+      "name": "nfdkfn",
+      "id": 4
     }
   ],
   "editProfile": [
