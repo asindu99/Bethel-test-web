@@ -65,6 +65,8 @@
   
   <script>
   import axios from "axios";
+  import {mapStores} from 'pinia'
+  import {authUser} from '@/stores/authUser'
   
   export default {
     data() {
@@ -76,6 +78,9 @@
 
       };
     },
+    computed : {
+      ...mapStores(authUser)
+    },
     methods: { 
       handleFileUpload(event) {
         this.file = event.target.files[0];
@@ -83,7 +88,7 @@
       async uploadFile() {
         const formData = new FormData();
         formData.append('file', this.file);
-        formData.append('userid', '1');
+        formData.append('userid', this.authUserStore.userID);
         formData.append('bucket', 'Public_storage_0');
   
         try {
