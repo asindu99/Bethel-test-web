@@ -54,7 +54,33 @@
         </div>
         <!-- end of the bucket section -->
 
+        <!-- table section -->
+        <div>
+          <table class="table-auto border-separate py-2 w-full rounded-lg bg-white px-2">
+                    <thead class="">
+                        <tr class="">
+                        <th class="text-[14px] min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] border p-3 bg-blue-50">File Name</th>
+                        <th class="text-[14px] min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] border p-3 bg-blue-50">CID</th>
+                        <th class="text-[14px] min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] border p-3 bg-blue-50">BECX URL</th>
+                        <th class="text-[14px] min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] border p-3 bg-blue-50">GCS URL</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr v-for="upload in uploadDetails" :key="upload.cid">
+                          <td class="text-[14px] min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] text-center bg-white border p-3"> {{upload.filename}}</td>
+                          <td class="text-[14px] min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] text-center bg-white border p-3">{{upload.cid}}</td>
+                          <td class="text-[14px] min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] text-center bg-white border p-3"><a :href=upload.downurl target="_blank">Download</a></td>
+                          <td class="text-[14px] min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] text-center bg-white border p-3"><a :href=upload.gcsurl target="_blank">Download</a></td>
+                        
+                  
+                       
+                        </tr>
 
+                        
+                        
+                    </tbody>
+                </table>
+        </div>
 
     </div>
 
@@ -70,13 +96,19 @@
   
   export default {
     data() {
-      return {
-
-          userID: "1", 
+      return { 
   
         file:null,
+        uploadDetails : null,
 
       };
+    },
+    mounted(){
+      const uploadDetails2 = JSON.parse(localStorage.getItem('uploadDetails'))
+      this.uploadDetails = uploadDetails2
+      console.log(this.uploadDetails)
+      
+
     },
     computed : {
       ...mapStores(authUser)

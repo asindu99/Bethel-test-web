@@ -51,7 +51,7 @@
                         <div class="flex items-center">             
                           <h3 class="text-[10px] text-white">Total Buckets</h3> 
                           <div class="ml-3 w-[30px] h-[25px] bg-blue-100 rounded-lg text-center justify-center items-center">
-                            <h1 class="text-blue-600">{{ bucketCount1 }}</h1>
+                            <h1 class="text-blue-600">1</h1>
                             </div> 
                         </div>
                         
@@ -81,7 +81,7 @@
                         <div class="flex items-center ">             
                           <h3 class="text-[10px]">Total Objects</h3> 
                           <div class="ml-3 w-[30px] h-[25px] bg-blue-100 rounded-lg text-center justify-center items-center">
-                            <h1 class="text-blue-600">0</h1>
+                            <h1 class="text-blue-600">{{ storageDetails[0].filecount }}</h1>
                         </div> 
                         </div>
                         
@@ -108,8 +108,8 @@
                         <h1 class=" text-[14px]">Storage</h1>
                         <div class="flex items-center">             
                           <h3 class="text-[10px]">Total Storage</h3> 
-                          <div class="ml-3 w-[30px] h-[25px] bg-blue-100 rounded-lg text-center justify-center items-center">
-                            <h1 class="text-blue-600 ">0</h1>
+                          <div class="ml-3 w-[90px] h-[25px] bg-blue-100 rounded-lg text-center justify-center items-center">
+                            <h1 class="text-blue-600 ">{{ storageDetails[0].totalsize }}</h1>
                         </div> 
                         </div>
                         
@@ -422,8 +422,7 @@ import {useWalletData} from '@/stores/DataStore'
 import {authUser} from '@/stores/AuthUser'
 
 import Chart from 'chart.js/auto';
-// import axios from 'axios';
-// import Page1Nav from '@/components/Page1Nav.vue';
+
 
 export default {
     name : 'Page3Dashboard',
@@ -437,10 +436,11 @@ export default {
             // log activity array
             logActivityArr : [],
 
-            // bucket counts
-            bucketCount1 : 0,
+            // storage user details
+            storageDetails : null,
 
             user : [],
+
 
             
         }
@@ -450,6 +450,11 @@ export default {
         
     },
     mounted(){
+
+        const storageDetails1 = JSON.parse(localStorage.getItem('storageDetails'))
+        this.storageDetails = storageDetails1
+        console.log(this.storageDetails)
+
 
         this.bucketCount1 = this.walletStore.bucketNameArr.length
         this.walletStore.getBucketNames();

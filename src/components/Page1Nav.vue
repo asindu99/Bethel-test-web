@@ -426,6 +426,8 @@ export default{
                 console.log("successfully logged out!")
                 localStorage.removeItem('userDetails');
                 localStorage.removeItem('userData');
+                localStorage.removeItem('walletDetails');
+                localStorage.removeItem('uploadDetails');
 
             }
         }
