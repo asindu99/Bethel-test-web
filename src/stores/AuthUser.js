@@ -10,6 +10,7 @@ export const authUser = defineStore('authUser', {
         userLog : false,
         user : '',
         userID : null,
+        token : null,
         
 
         userDetails : [],
@@ -24,7 +25,7 @@ export const authUser = defineStore('authUser', {
             console.log(values.email)
 
             const res = await axios.post('https://mw.bethel.network/auth/register' , 
-            
+            {withCredentials : true},
             {
                 email: values.email,
                 username: values.username,
@@ -49,6 +50,7 @@ export const authUser = defineStore('authUser', {
             // this.loginDataArr.push(values)
 
             const res = await axios.post('https://mw.bethel.network/auth/login' ,
+            
                 {
                     email: values.email,
                     password: values.password,  
@@ -64,8 +66,18 @@ export const authUser = defineStore('authUser', {
                 this.userDetails.push(res.data)
 
                 this.userID = this.userDetails[0]._id
+
+
+                const token = res.data.authentication.sessionToken
+                // this.$cookies.set("token" , token)
+                this.token = token
+                
+                console.log(token)
+
+
+
                 console.log(this.userID)
-                console.log(this.userDetails)
+                console.log(this.userDetails.details)
 
                 router.push('/home');
             }
