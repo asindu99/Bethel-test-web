@@ -425,7 +425,7 @@ import {useWalletData} from '@/stores/DataStore'
 import {authUser} from '@/stores/AuthUser'
 
 import Chart from 'chart.js/auto';
-import axios from 'axios';
+// import axios from 'axios';
 // import Page1Nav from '@/components/Page1Nav.vue';
 
 export default {
@@ -452,16 +452,7 @@ export default {
         ...mapStores(useWalletData, authUser),
         
     },
-    async mounted(){
-
-        // const res = await axios.get('https://mw.bethel.network/users/' + this.authUserStore.userID);
-        // this.user.push(res.data.details);
-        // console.log(res.data.details)
-
-        // console.log(this.user);
-        
-        // console.log(this.authUserStore.userID);
-
+    mounted(){
 
         this.bucketCount1 = this.walletStore.bucketNameArr.length
         this.walletStore.getBucketNames();
