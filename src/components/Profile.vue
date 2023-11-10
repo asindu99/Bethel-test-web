@@ -104,10 +104,6 @@
                                                 <div class="z-0 w-full mb-6 group">
                                                     <label for="" class="text-[14px]">Select Country :</label>
                                                     <!-- <input type="text" class="lg:w-[335px] md:w-[235px] text-[#757784] bg-transparent p-1 border-b-2 border-[#29379384]"> -->
-<<<<<<< Updated upstream
-                                                    <!-- <vee-field type="text" name="country"  class="block py-1.5 px-0 w-full text-sm text-gray-900 bg-transparent rounded-md border-2 border-[#29379384] appearance-none  dark:border-[#29379384] dark:focus:border-[#29379384] focus:outline-none focus:ring-0 focus:border-[#29379384] peer" placeholder=" " required /> -->
-=======
->>>>>>> Stashed changes
                                                     <vee-field as="select" name="country" v-model="selected" id="" class="block py-1.5 px-0 w-full text-sm text-gray-900 bg-transparent rounded-md border-2 border-[#29379384] appearance-none dark:border-[#29379384] dark:focus:border-[#29379384] focus:outline-none focus:ring-0 focus:border-[#29379384] peer" >
                                                         <option v-for="country in countryList" :value="country" class="w-[200px] bg-transparent">{{ country.Name }}</option>
                                                     </vee-field>
@@ -117,10 +113,6 @@
                                                 <div class="z-0 w-full mb-6 group">
                                                     <label for="" class="text-[14px]">Country Code :</label>
                                                     <!-- <input type="text" class="lg:w-[335px] md:w-[235px] text-[#757784] bg-transparent p-1 border-b-2 border-[#29379384]"> -->
-<<<<<<< Updated upstream
-                                                    <!-- <vee-field type="text" name="code"  class="block py-1.5 px-0 w-full text-sm text-gray-900 bg-transparent rounded-md border-2 border-[#29379384] appearance-none  dark:border-[#29379384] dark:focus:border-[#29379384] focus:outline-none focus:ring-0 focus:border-[#29379384] peer" placeholder=" " required /> -->
-=======
->>>>>>> Stashed changes
                                                     <vee-field as="select"  name="code" id="" class="block py-1.5 px-0 w-full text-sm text-gray-900 bg-transparent rounded-md border-2 border-[#29379384] appearance-none dark:border-[#29379384] dark:focus:border-[#29379384] focus:outline-none focus:ring-0 focus:border-[#29379384] peer">
                                                         <option  class="w-[200px] bg-transparent">{{ selected.MobileCode }}</option>
                                                     </vee-field>
@@ -133,11 +125,7 @@
                                                 <!-- mobile number -->
                                                 <div class="flex  flex-col mt-4 ">
                                                     <label for="" class="text-[14px]">Mobile Number :</label>
-<<<<<<< Updated upstream
-                                                    <vee-field name="mobile" type="tel" class="block py-1.5 px-0 w-full text-sm text-gray-900 bg-transparent rounded-md border-2 border-[#29379384] appearance-none dark:border-[#29379384] dark:focus:border-[#29379384] focus:outline-none focus:ring-0 focus:border-[#29379384] peer"/>
-=======
                                                     <vee-field name="mobile" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" class="block py-1.5 px-0 w-full text-sm text-gray-900 bg-transparent rounded-md border-2 border-[#29379384] appearance-none dark:border-[#29379384] dark:focus:border-[#29379384] focus:outline-none focus:ring-0 focus:border-[#29379384] peer"/>
->>>>>>> Stashed changes
                                                 </div>
 
                                                 <!-- button -->
