@@ -90,12 +90,15 @@
           const response = await axios.post('https://api.bethel.network/upload', formData, {
             headers: {
               'Content-Type': 'multipart/form-data'
-            }
+            },
+            
+          },{
+            withCredentials : true,
           });
           console.log(response.data);
           alert('File uploaded successfully');
         } catch (error) {
-          console.error(error);
+          console.log(error);
           alert('Error uploading file');
         }
       }
