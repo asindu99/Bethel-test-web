@@ -41,7 +41,7 @@ export const authUser = defineStore('authUser', {
                 console.log(res.error)
             }
             else{
-                router.push('/login')
+                router.push('/')
             }
         },
 

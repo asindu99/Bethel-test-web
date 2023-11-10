@@ -127,7 +127,7 @@
                                                 <!-- button -->
                                                 <div class="flex flex-col mt-8">
                                                     
-                                                    <button class="w-[200px] p-2 bg-sidebarBG rounded-lg px-8 text-white border-[1px] hover:bg-white hover:text-sidebarBG hover:border-[1px] hover:border-sidebarBG transition-all ease-in-out text-[14px]">Save Changes</button>
+                                                    <button type="submit" class="w-[200px] p-2 bg-sidebarBG rounded-lg px-8 text-white border-[1px] hover:bg-white hover:text-sidebarBG hover:border-[1px] hover:border-sidebarBG transition-all ease-in-out text-[14px]">Save Changes</button>
                                                     
                                                 </div>
                                             </div>
@@ -212,7 +212,6 @@
 </template>
 
 <script>
-import {defineStore} from 'pinia'
 import router from '@/router/index'
 import {mapStores} from 'pinia'
 import axios from 'axios';
@@ -222,14 +221,14 @@ name : 'Profile',
 computed:{
     ...mapStores(authUser)
 },
+methods: {
+   async patchAuthUserData(values){
+            console.log(values)
 
-async patchAuthUserData(values){
-            this.authUserDetailsArr.push(values)
+            console.log(values.email)
 
-            // console.log(values.email)
-
-            
-            const res = await axios.patch('https://mw.bethel.network/users/' + this.authUserStore.UserID ,
+            console.log(this.authUserStore.userID)
+            const res = await axios.patch('https://mw.bethel.network/users/' + this.authUserStore.userID ,
             
             {
                 email: values.email,
@@ -253,7 +252,7 @@ async patchAuthUserData(values){
 
             // console.log(values.email)
 
-            const res = await axios.get('https://mw.bethel.network/users/' + this.authUserStore.UserID,
+            const res = await axios.get('https://mw.bethel.network/users/' + this.authUserStore.userID,
             {
                 email: values.email,
                 oldpassword: values.oldpassword,
@@ -268,6 +267,8 @@ async patchAuthUserData(values){
                 router.push('/login')
             }
         },  
+}
+
     
 }
 </script>
