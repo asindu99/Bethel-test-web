@@ -295,11 +295,11 @@ export default{
 
 
         // get storage status
-        const res3 = await axios.get('https://mw.bethel.network/storagedetails/' + this.authUserStore.userID ,
-        {withCredentials :true});
+        // const res3 = await axios.get('https://mw.bethel.network/storagedetails/' + this.authUserStore.userID ,
+        // {withCredentials :true});
                 
-        // save wallet details
-        localStorage.setItem('storageDetails', JSON.stringify(res3.data))
+        // // save wallet details
+        // localStorage.setItem('storageDetails', JSON.stringify(res3.data))
 
 
         

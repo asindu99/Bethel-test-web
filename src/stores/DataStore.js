@@ -19,10 +19,6 @@ export const useWalletData = defineStore('wallet' , {
         // bucket name info data Arr,
         bucketNameArr : [],
 
-
-        // storage details
-        storageD : [],
-
         // folders array
         folderName : [],
 

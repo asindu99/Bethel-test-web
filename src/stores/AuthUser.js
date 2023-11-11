@@ -23,27 +23,29 @@ export const authUser = defineStore('authUser', {
         // user data arr
         userDataArr : [],
 
+        
+
 
     }),
 
     actions : {
         // post signup form data into json --> componet --> signup-third
         async postAuthUserData(values){
-            this.authUserDetailsArr.push(values)
 
-            console.log(values.email)
+            console.log(values.country)
+
 
             const res = await axios.post('https://mw.bethel.network/auth/register' , 
             {withCredentials : true},
             {
-                email: values.email,
-                username: values.username,
-                password: values.password,
-                firstName: values.FirstName,
-                lastName: values.LastName,
-                country: values.country,
-                code: values.code,
-                mobile: values.mobile
+                "email": values.email,
+                "username": values.username,
+                "password": values.password,
+                "firstName": values.FirstName,
+                "lastName": values.LastName,
+                "country": values.country,
+                "code": values.code,
+                "mobile": values.mobile
             })
             console.log(res)
 
@@ -101,7 +103,14 @@ export const authUser = defineStore('authUser', {
                 // save user data
                 localStorage.setItem('userData', JSON.stringify(res.data))
 
+                const res3 = await axios.get('https://mw.bethel.network/storagedetails/' + this.userID ,
+                {withCredentials :true});
+
+                // save wallet details
+                localStorage.setItem('storageDetails', JSON.stringify(res3.data))
+
                 
+            
 
                 router.push('/home');
             }

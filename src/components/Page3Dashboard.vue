@@ -81,7 +81,7 @@
                         <div class="flex items-center ">             
                           <h3 class="text-[10px]">Total Objects</h3> 
                           <div class="ml-3 w-[30px] h-[25px] bg-blue-100 rounded-lg text-center justify-center items-center">
-                            <h1 class="text-blue-600">{{ walletStore.storageD.filecount}}</h1>
+                            <h1 class="text-blue-600">{{ storageD.filecount}}</h1>
                         </div> 
                         </div>
                         
@@ -109,7 +109,7 @@
                         <div class="flex items-center">             
                           <h3 class="text-[10px]">Total Storage</h3> 
                           <div class="ml-3 w-[90px] h-[25px] bg-blue-100 rounded-lg text-center justify-center items-center">
-                            <h1 class="text-blue-600 ">{{ walletStore.storageD.totalsize }}</h1>
+                            <h1 class="text-blue-600 ">{{ storageD.totalsize  }}</h1>
                         </div> 
                         </div>
                         
@@ -439,6 +439,9 @@ export default {
 
             user : [],
 
+            // storage details
+            storageD : null,
+
 
             
         }
@@ -448,7 +451,9 @@ export default {
         
     },
     created(){
-        
+        // get storage details
+        const storageDetails = JSON.parse(localStorage.getItem('storageDetails'))
+        this.storageD = storageDetails[0]
     },
     mounted(){
         

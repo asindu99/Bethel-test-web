@@ -105,7 +105,8 @@ export default{
     },
     async mounted(){
         
-
+        // save wallet details
+        // localStorage.setItem('storageDetails', JSON.stringify(res3.data))
     },
     computed : {
         ...mapStores(authUser)
