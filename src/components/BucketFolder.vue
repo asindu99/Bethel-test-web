@@ -1,5 +1,5 @@
 <template>
-    <div class="relative lg:px-2 md:px-5 sm:px-4 min-[320px]:px-2">
+    <div class="relative lg:px-2 md:px-5 sm:px-4 min-[320px]:px-2 mb-10">
     
         <!-- bucket section -->
         <div :class="authBlur">
@@ -41,14 +41,36 @@
                     </div> -->
                 </div>
                 <!-- end of the head section -->
-
-
-                <div class="flex justify-center p-20 mt-10">
-                    <input type="file" @change="handleFileUpload" id="upload"/>
-                    <button @click="uploadFile" class="border-[2px] px-2 py-2 rounded-xl bg-sidebarBG w-[150px] text-[white] text-center
-                            font-medium hover:text-sidebarBG hover:bg-[white] transition-all ease-linear hover:border-sidebarBG cursor-pointer">Upload File</button>
-                </div>
                 
+              
+                <div class="flex flex-col py-20 px-10 mt-10  bg-white rounded-lg shadow-lg">
+                    <h1 class="flex items-start lg:text-2xl md:text-2xl sm:text-xl min-[320px]:text-[20px] font-bold text-center mt-[-30px] text-left">You can Upload Files</h1>
+                    <div class="flex lg:flex-col md:flex-col sm:flex-col items-center min-[320px]:flex-col justify-between mt-8 border-4 border-dashed rounded-lg border-blue-100 w-full py-10">
+                        <div class="flex flex-col items-center">
+                                <input type="file"  @change="handleFileUpload" id="upload" hidden>
+                                  <label for="upload" class="border-[2px] px-2 py-2 rounded-xl bg-sidebarBG text-[white] text-center
+                                  font-medium hover:text-sidebarBG hover:bg-[white] transition-all ease-linear hover:border-sidebarBG cursor-pointer w-[200px]">Select file</label>
+                          
+                              <div class="">
+                                <button @click="uploadFile" class="border-[2px] px-2 py-2 rounded-xl bg-sidebarBG w-[200px] text-[white] text-center
+                                    font-medium hover:text-sidebarBG hover:bg-[white] transition-all ease-linear hover:border-sidebarBG cursor-pointer mt-4 drop-shadow-xl">Upload File
+                                </button>
+                              </div>
+                          
+                        </div>
+
+                        <div class="flex mt-8">
+                       
+                          <div id="loader" class="flex items-center"></div>
+                          <div class="ml-10"> <p class="text-14px">Bethel.png</p> </div>
+                      
+                        </div>
+
+                    
+                    </div>
+ 
+                </div>
+
             </div>
         
         </div>
@@ -56,7 +78,12 @@
 
         <!-- table section -->
         <div>
-          <table class="table-auto border-separate py-2 w-full rounded-lg bg-white px-2">
+
+          <div class="relative mt-10">
+                    <div class="w-[2px] h-[20px] bg-bethelBlue absolute top-[5px] "></div>
+                    <h3 class="ml-2 text-[20px]">File History</h3> 
+          </div>
+          <table class="table-auto border-separate py-2 w-full rounded-lg bg-white px-2 mt-8">
                     <thead class="">
                         <tr class="">
                         <th class="text-[14px] min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] border p-3 bg-blue-50">File Name</th>
@@ -142,6 +169,27 @@
     },
   };
   </script>
-  
 
+<style scoped>
+#loader {
+  border: 8px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 8px solid #5669cc;
+  border-bottom: 8px solid #5669cc;
+  width: 40px;
+  height:40px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
   
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+</style>
