@@ -14,14 +14,7 @@
                               <h3>Storage</h3>
                           </div>
 
-<<<<<<< HEAD
-                          <!-- right arrow -->
-                          <div class="ml-2">
-                              <span class="material-symbols-outlined">
-                                  chevron_right
-                              </span>
-                          </div>
-=======
+
                             <!-- right arrow -->
                             <div class="ml-2">
                                 <span class="material-symbols-outlined">
@@ -58,12 +51,12 @@
                                 <input type="file"  @change="handleFileUpload" id="upload" >
                                   <label for="upload" class="border-[2px] px-2 py-2 rounded-xl bg-sidebarBG text-[white] text-center
                                   font-medium hover:text-sidebarBG hover:bg-[white] transition-all ease-linear hover:border-sidebarBG cursor-pointer w-[200px]">Select file</label>
->>>>>>> b4bdbbc0501e6a27457a3990ea72b250e98503eb
+
                           
                       </div>
                       <!-- end of the storage with arrrow -->
 
-<<<<<<< HEAD
+
                       <!-- Main Bucket -->
                       <div>
                           <h4 class="font-bold text-[30px]">Public_storage_0 </h4>
@@ -171,91 +164,6 @@
 </template>
 
 <script>
-import axios from "axios";
-import {mapStores} from 'pinia'
-import {authUser} from '@/stores/AuthUser'
-
-export default {
-  data() {
-    return { 
-
-      file:null,
-      uploadDetails : null,
-
-    };
-  },
-  mounted(){
-    const uploadDetails2 = JSON.parse(localStorage.getItem('uploadDetails'))
-    this.uploadDetails = uploadDetails2
-    console.log(this.uploadDetails)
-    
-
-  },
-  computed : {
-    ...mapStores(authUser)
-  },
-  methods: { 
-    handleFileUpload(event) {
-      this.file = event.target.files[0];
-=======
-                        <div :class="showClass" class="flex mt-8 ">
-                       
-                          <div id="loader" class="flex items-center"></div>
-                          <div class="ml-10"> <p class="text-14px"></p> </div>
-                      
-                        </div>
-
-                    
-                    </div>
- 
-                </div>
-
-            </div>
-        
-        </div>
-        <!-- end of the bucket section -->
-
-        <!-- table section -->
-        <div>
-
-          <div class="relative mt-10">
-                    <div class="w-[2px] h-[20px] bg-bethelBlue absolute top-[5px] "></div>
-                    <h3 class="ml-2 text-[20px]">File History</h3> 
-          </div>
-          <table class="table-auto border-separate py-2 w-full rounded-lg bg-white px-2 mt-8">
-                    <thead class="">
-                        <tr class="">
-                        <th class="text-[14px] min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] border p-3 bg-blue-50">File Name</th>
-                        <th class="text-[14px] min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] border p-3 bg-blue-50">CID</th>
-                        <th class="text-[14px] min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] border p-3 bg-blue-50">BECX URL</th>
-                        <th class="text-[14px] min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] border p-3 bg-blue-50">GCS URL</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr v-for="upload in uploadDetails" :key="upload.cid">
-                          <td class="text-[14px] min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] text-center bg-white border p-3"> {{upload.filename}}</td>
-                          <td class="text-[14px] min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] text-center bg-white border p-3">{{upload.cid}}</td>
-                          <td class="text-[14px] min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] text-center bg-white border p-3"><a :href=upload.downurl target="_blank">Download</a></td>
-                          <td class="text-[14px] min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] text-center bg-white border p-3"><a :href=upload.gcsurl target="_blank">Download</a></td>
-                        
-                  
-                       
-                        </tr>
-
-                        
-                        
-                    </tbody>
-                </table>
-        </div>
-
-    </div>
-
-    
-    
-        
-</template>
-  
-  <script>
   import axios from "axios";
   import {mapStores} from 'pinia'
   import {authUser} from '@/stores/AuthUser'
@@ -309,33 +217,9 @@ export default {
           alert('Error uploading file');
         }
       }
->>>>>>> b4bdbbc0501e6a27457a3990ea72b250e98503eb
     },
-    async uploadFile() {
-      const formData = new FormData();
-      formData.append('file', this.file);
-      formData.append('userid', this.authUserStore.userID);
-      formData.append('bucket', 'Public_storage_0');
-
-      try {
-        const response = await axios.post('https://api.bethel.network/upload', formData, {
-          headers: {
-            'Content-Type': 'multipart/form-data'
-          },
-          
-        },{
-          withCredentials : true,
-        });
-        console.log(response.data);
-        alert('File uploaded successfully');
-      } catch (error) {
-        console.log(error);
-        alert('Error uploading file');
-      }
-    }
-  },
-};
-</script>
+  };
+  </script>
 
 <style scoped>
 #loader {
