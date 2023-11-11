@@ -453,12 +453,14 @@ export default {
     },
     created(){
         // get storage 
-        try {
             const storageDetails = JSON.parse(localStorage.getItem('storageDetails'))
+            console.log(storageDetails)
             this.storageD = storageDetails[0]
-        } catch (error) {
-            
-        }
+            // if(this.storageD.lenth !== 0){
+            //     console.log("this is when arra is not null")
+            // }else{
+            //     console.log("this is when array is null")
+            // }
         
     },
     mounted(){

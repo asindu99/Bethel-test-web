@@ -23,7 +23,7 @@ lg:p-20 md:py-[10px] md:h-screen sm:p-10 min-[320px]:p-3 ">
                 <div class="w-full text-center mt-2">
                     <h3 class="text-sidebarBG font-bold text-[25px]">Welcome to the BETHEL!</h3>
                     <p class="text-[#757784] text-[14px]">Please sign in to the your account and start the adventure!</p>
-                    <h3 class="text-[white] text-[14px] bg-bethelOrange p-2 mt-2 rounded-md">Please use Firefox Browser for Better Experience, support for other browsers will be made soon.</h3>
+                    <!-- <h3 class="text-[white] text-[14px] bg-bethelOrange p-2 mt-2 rounded-md">Please use Firefox Browser for Better Experience, support for other browsers will be made soon.</h3> -->
                 </div>
                 <!-- END OF TOP CAPTION SEC -->
 
