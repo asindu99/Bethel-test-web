@@ -48,7 +48,11 @@
                   <div class="flex lg:flex-col md:flex-col sm:flex-col items-center min-[320px]:flex-col justify-between mt-8 border-4 border-dashed rounded-lg border-blue-100 w-full py-10">
                       <div class="flex flex-col items-center">
 
+<<<<<<< Updated upstream
                             <div  class="flex lg:ml-[110px] md:ml-[80px] sm:ml-[80px] min-[320px]:ml-[-10px]">
+=======
+                             <div  class="flex lg:ml-[110px] md:ml-[80px] sm:ml-[80px] min-[320px]:ml-[-10px]">
+>>>>>>> Stashed changes
                                 <input type="file" @change="handleFileUpload" id="upload" hidden class="relative m-0 block w-full min-w-0 flex-auto cursor-pointer rounded border 
                                         border-none border-sidebarBG bg-clip-padding px-4 py-4 text-[14px] file:bg-sidebarBG
                                         text-[white] transition duration-300 ease-in-out file:-mx-3 file:-my-[0.32rem] file:cursor-pointer 
