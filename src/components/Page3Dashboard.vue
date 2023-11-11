@@ -420,6 +420,7 @@
 import {mapStores} from 'pinia'
 import {useWalletData} from '@/stores/DataStore'
 import {authUser} from '@/stores/AuthUser'
+import router from '@/router/index';
 
 import Chart from 'chart.js/auto';
 
@@ -451,17 +452,16 @@ export default {
         
     },
     created(){
-        // get storage details
-        const storageDetails = JSON.parse(localStorage.getItem('storageDetails'))
-        this.storageD = storageDetails[0]
+        // get storage 
+        try {
+            const storageDetails = JSON.parse(localStorage.getItem('storageDetails'))
+            this.storageD = storageDetails[0]
+        } catch (error) {
+            router.push('/')
+        }
+        
     },
     mounted(){
-        
-        
-
-
-        this.bucketCount1 = this.walletStore.bucketNameArr.length
-        this.walletStore.getBucketNames();
         const ctx = document.getElementById('myChart');
         const ctx1 = document.getElementById('myChart2');
         const ctx2 = document.getElementById('myChart3');

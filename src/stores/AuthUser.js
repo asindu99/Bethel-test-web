@@ -23,31 +23,28 @@ export const authUser = defineStore('authUser', {
         // user data arr
         userDataArr : [],
 
-        
-
 
     }),
 
     actions : {
         // post signup form data into json --> componet --> signup-third
         async postAuthUserData(values){
+            this.authUserDetailsArr.push(values)
 
-            console.log(values.country)
+            console.log(values.email)
 
-
-            const res = await axios.post('https://mw.bethel.network/auth/register' , 
-            {withCredentials : true},
-            {
-                "email": values.email,
-                "username": values.username,
-                "password": values.password,
-                "firstName": values.FirstName,
-                "lastName": values.LastName,
-                "country": values.country,
-                "code": values.code,
-                "mobile": values.mobile
-            })
-            console.log(res)
+            const res = await axios.post('https://mw.bethel.network/auth/register', {
+                email: values.email,
+                username: values.username,
+                password: values.password,
+                firstName: values.FirstName,
+                lastName: values.LastName,
+                country: values.country,
+                code: values.code,
+                mobile: values.mobile
+            }, {
+                withCredentials: true
+            });
 
             if(res.error){
                 console.log(res.error)
@@ -70,7 +67,7 @@ export const authUser = defineStore('authUser', {
                     password: values.password,  
                 },
                 {
-                    withCredentials: "same-origin",
+                    withCredentials: "true",
                     
                 }
             );
@@ -103,55 +100,18 @@ export const authUser = defineStore('authUser', {
                 // save user data
                 localStorage.setItem('userData', JSON.stringify(res.data))
 
-                const res3 = await axios.get('https://mw.bethel.network/storagedetails/' + this.userID ,
-                {withCredentials :true});
 
-                // save wallet details
+                //get storage details
+                const res3 = await axios.get('https://mw.bethel.network/storagedetails/' + this.userID,
+                {withCredentials : true})
                 localStorage.setItem('storageDetails', JSON.stringify(res3.data))
 
+
                 
-            
 
                 router.push('/home');
             }
         },
-
-        // async postFileData(values) {
-        //     try {
-        //         console.log(values);
-        //         console.log(this.authUserStore.userID);
-
-        //         const formData = new FormData();
-        //         formData.append("file", values.file);
-
-        //         formData.append("userid", 1);
-
-        //         formData.append("bucket", public_storage_0);
-
-
-        //         const res = await axios.post(
-        //         `https://api.bethel.network/upload`,
-        //         formData,
-        //         {
-        //             withCredentials: true,
-        //             headers: {
-        //             "Content-Type": "multipart/form-data",
-        //             },
-        //         }
-        //         );
-
-        //         console.log(res);
-
-        //         if (res.data && res.data.error) {
-        //         console.error(res.data.error);
-        //         } else {
-        //         console.log("File uploaded successfully");
-        //         }
-        //     } catch (error) {
-        //         console.error("Error uploading file:", error);
-        //     }
-        //     }
-
 
     }
 }

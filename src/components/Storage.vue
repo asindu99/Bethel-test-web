@@ -137,8 +137,6 @@ export default {
         }
     },
     mounted(){
-        this.bucketStore.getData();
-        // this.fetchStorageName();
     },
     computed : {
         ...mapStores(useBucketData)
@@ -161,24 +159,7 @@ export default {
 
         },
 
-        handleSubmit(values){
-            console.log(values)
-        },
-
-        bucketData(values){         
-            this.bucketTableArr.push(values);
-        },
-        addData(values){
-            console.log(values)
-            this.bucketStore.closeAuthModal();
-            this.bucketStore.addBucketData(values)
-        },
-
-        bucketData(values){
-            
-            
-        },
-
+        
     }
 }
 </script>

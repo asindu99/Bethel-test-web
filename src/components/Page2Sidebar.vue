@@ -253,7 +253,7 @@ export default{
     },
     async mounted(){
         try {
-            const res = await axios.post('https://mw.bethel.network/auth/user' ,
+            const res = await axios.post('https://mw.bethel.network/auth/user', {},
             {
                 withCredentials : true,
             });
@@ -264,14 +264,7 @@ export default{
                 this.authUserStore.userID = this.authUserStore.userDetails[0]._id
                 console.log(this.authUserStore.userID);
 
-                try {
-                    const storageDetails1 = JSON.parse(localStorage.getItem('storageDetails'))
-                    this.walletStore.storageD = storageDetails1[0]
-                    console.log("this is a aaaaaaa" ,this.walletStore.storageD)
-                } catch (error) {
-                    console.log(error)
-        }
-                
+                    
             }
             else{
                 router.push('/')
@@ -281,6 +274,7 @@ export default{
             
             
         }
+
         const res = await axios.get('https://mw.bethel.network/createwallet/' + this.authUserStore.userID ,
                 {withCredentials :true})
                 console.log(res.data)
@@ -292,23 +286,6 @@ export default{
                 console.log(res2.data)
         // save wallet details
         localStorage.setItem('uploadDetails', JSON.stringify(res2.data))
-
-
-        // get storage status
-        // const res3 = await axios.get('https://mw.bethel.network/storagedetails/' + this.authUserStore.userID ,
-        // {withCredentials :true});
-                
-        // // save wallet details
-        // localStorage.setItem('storageDetails', JSON.stringify(res3.data))
-
-
-        
-
-
-
-        
-
-
     },
     methods : {
         asideHide(){
