@@ -92,7 +92,7 @@
   <script>
   import axios from "axios";
   import {mapStores} from 'pinia'
-  import {authUser} from '@/stores/authUser'
+  import {authUser} from '@/stores/AuthUser'
   
   export default {
     data() {

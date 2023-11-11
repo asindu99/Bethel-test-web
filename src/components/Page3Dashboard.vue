@@ -457,7 +457,7 @@ export default {
             const storageDetails = JSON.parse(localStorage.getItem('storageDetails'))
             this.storageD = storageDetails[0]
         } catch (error) {
-            router.push('/')
+            
         }
         
     },
