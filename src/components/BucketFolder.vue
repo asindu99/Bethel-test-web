@@ -50,14 +50,14 @@
 
                              <div  class="flex content-center">
                                 <input type="file" @change="handleFileUpload" id="upload" hidden class="relative m-0 block w-full min-w-0 flex-auto cursor-pointer rounded border 
-                                        border-none border-sidebarBG bg-clip-padding px-4 py-4 text-[14px] file:bg-sidebarBG
+                                        border-none border-sidebarBG bg-clip-padding px-3 py-3 text-[14px] file:bg-sidebarBG
                                         text-[white] transition duration-300 ease-in-out file:-mx-3 file:-my-[0.32rem] file:cursor-pointer 
                                         file:overflow-hidden file:rounded-lg file:border-2 file:border-sidebarBG file:border-inherit 
                                         file:px-8 file:py-1 file:text-sidebarBG file:transition file:duration-150 
                                         file:ease-in-out file:[border-inline-end-width:1px] file:[margin-inline-end:0.75rem]
                                         hover:file:bg-none  hover:file:text-white focus:border-primary focus:text-sidebarBG focus:shadow-te-primary 
                                         dark:text-sidebarBG sidebarBG:file:bg-sidebarBG file:text-white 
-                                        sidebarBG:focus:border-primary file:w-[200px] file:px-2 file:py-[0.7em] file:font-['Montserrat']"/>
+                                        sidebarBG:focus:border-primary file:w-[200px] file:px-2 file:py-2 file:font-['Montserrat']"/>
                                 
                               </div>
                             <div class="">
