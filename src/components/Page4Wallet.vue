@@ -37,7 +37,7 @@
                 <div class="flex">
                     <div>
                         <button @click="openAuthModal" class="border-[2px] px-2 py-2 rounded-xl bg-sidebarBG w-[150px] text-[white] 
-                        font-medium hover:text-sidebarBG hover:bg-[white] transition-all ease-linear hover:border-sidebarBG">Create Wallet</button>
+                        font-medium hover:text-sidebarBG hover:bg-[white] transition-all ease-linear hover:border-sidebarBG">Create Faucet</button>
                     </div>
                     
                 </div>
@@ -64,47 +64,15 @@
                         <tr class="">
                         <th class="text-[14px] min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] border p-3 bg-blue-50">WALLET ADDRESS</th>
                         <th class="text-[14px] min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] border p-3 bg-blue-50">SEEDS</th>
-                        <th class="text-[14px] min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] border p-3 bg-blue-50">ACTIVE SEEDS</th>
-                        <th class="text-[14px] min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] border p-3 bg-blue-50">MORE</th>
+                        <th class="text-[14px] min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] border p-3 bg-blue-50">PUBLIC KEY</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr v-for="wallet in walletStore.walletTableArr" :key="wallet.Waddress">
-                        <td class="text-[14px] min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] text-center bg-white border p-3"> {{wallet.id}}</td>
-                        <td class="text-[14px] min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] text-center bg-white border p-3">{{wallet.quote}}</td>
-                        <td class="text-[14px] min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] text-center bg-white border p-3">{{ wallet.author }}</td>
+                        <tr v-for="wallet in walletData" :key="wallet.Waddress">
+                            <td class="text-[14px] min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] text-center bg-white border p-3"> {{wallet.publicaddr}}</td>
+                            <td class="text-[14px] min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] text-center bg-white border p-3">{{wallet.seeds}}</td>
+                            <td class="text-[14px] min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] text-center bg-white border p-3">{{ wallet.addr }}</td>
                         
-                        <!-- toogle button table data -->
-                        <!-- <td class="text-[12px] text-center bg-white border p-3">
-                            
-                            <button @click="showSeedValue = !showSeedValue">
-                                
-                                    <input type="checkbox" value="" class="sr-only peer">
-                                    <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white  after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-orange-600"></div>
-                            </button>
-
-                        </td> -->
-                        <!-- end of tooge button table data -->
-
-                        <!-- more button functions -->
-                        <td class="text-[12px] text-center bg-white border p-3">
-                            <div class="relative w-full">
-                                <!-- more button auth modal -->
-                                <!-- <div class="absolute right-[-15px] w-[60px] shadow-md border-[1px] bg-blue-50 rounded-md top-10 animate__animated animate__zoomIn animate__faster">
-                                    <button >
-                                        <div class="p-1">
-                                            <h3>Delete</h3>
-                                        </div>
-                                    </button>
-                                    
-                                </div> -->
-                            <!-- end of the auth modal -->
-                            </div>
-                            <button @click="deleteWalletData(wallet)">
-                                Delete
-                            </button>
-                        </td>
-                        <!-- more button end --> 
                         </tr>
 
                         
@@ -350,6 +318,7 @@
 <script>
 import {mapStores} from 'pinia'
 import {useWalletData} from '@/stores/DataStore';
+import axios from 'axios';
 
 export default {
     name : 'Page4Wallet',
@@ -368,11 +337,15 @@ export default {
             walletTransactionDetailArr : [],
 
             // wallets count
-            walletCount : 0,
+            walletData : [],
         }
     },
-    mounted(){
-        this.walletStore.getData();
+    async mounted(){
+        const userData = JSON.parse(localStorage.getItem('walletDetails'))
+        this.walletData.push(userData)
+        console.log(this.walletData)
+            
+        
     },
     computed : {
         ...mapStores(useWalletData)
@@ -395,23 +368,23 @@ export default {
 
         },
 
-        handleSubmit(values){
-            console.log(values)
-        },
+        // handleSubmit(values){
+        //     console.log(values)
+        // },
 
-        transferData(values){         
-            this.walletTransactionDetailArr.push(values);
-        },
-        submitData(){
-            this.walletStore.openClose = false;
-            this.walletStore.addData();
-        },
+        // transferData(values){         
+        //     this.walletTransactionDetailArr.push(values);
+        // },
+        // submitData(){
+        //     this.walletStore.openClose = false;
+        //     this.walletStore.addData();
+        // },
 
-        transferData(values){
-            this.walletStore.addTransactionData(values)
+        // transferData(values){
+        //     this.walletStore.addTransactionData(values)
             
             
-        },
+        // },
 
     }
 }

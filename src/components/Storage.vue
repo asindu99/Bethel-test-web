@@ -2,8 +2,8 @@
     <div class="relative lg:px-2 md:px-5 sm:px-4 min-[320px]:px-2">
     
         <!-- bucket section -->
-        <div :class="authBlur">
-            <div :class="authBlur" class="lg:w-[100%] md:w-[100%] sm:w-[100%] min-[320px]:w-[full]">
+        <!-- <div :class="authBlur"> -->
+            <div :class="bucketStore.authBlur" class="lg:w-[100%] md:w-[100%] sm:w-[100%] min-[320px]:w-[full]">
                 <!-- head storage div  -->
                 <div class="flex items-center justify-between shadow-sm rounded-lg px-3 py-3 bg-white">
                     <!-- left side text -->
@@ -49,13 +49,13 @@
                     </div>
 
                     <!-- right side button -->
-                    <div class="flex">
+                    <!-- <div class="flex">
                         <div>
                             <button @click="openAuthModal" class="border-[2px] px-2 py-2 rounded-xl bg-sidebarBG w-[150px] text-[white] 
                             font-medium hover:text-sidebarBG hover:bg-[white] transition-all ease-linear hover:border-sidebarBG">Create Bucket</button>
                         </div>
                         
-                    </div>
+                    </div> -->
                 </div>
                 <!-- end of the head section -->
 
@@ -78,32 +78,20 @@
                         <thead class="">
                             <tr class="">
                             <th class="text-[13px] border p-3 bg-blue-50">BUCKET NAME</th>
-                            <th class="text-[13px] border p-3 bg-blue-50">ACCESS</th>
+                            <!-- <th class="text-[13px] border p-3 bg-blue-50">ACCESS</th> -->
                             <th class="text-[13px] border p-3 bg-blue-50">NETWORK</th>
-                            <th class="text-[13px] border p-3 bg-blue-50">DATE CREATED</th>
-                            <th class="text-[13px] border p-3 bg-blue-50">MORE</th>
+                            <!-- <th class="text-[13px] border p-3 bg-blue-50">DATE CREATED</th>
+                            <th class="text-[13px] border p-3 bg-blue-50">MORE</th> -->
                             </tr>
                         </thead>
                         <tbody>
-                            <tr v-for="bucket in walletStore.bucketNameArr" :key="bucket.id">
-                            <td class="text-[12px] text-center bg-white border p-3 cursor-pointer hover:text-sidebarBG font-bold"><router-link to="/bucketFolder"> {{bucket.name}} </router-link></td>
-                            <td class="text-[12px] text-center bg-white border p-3">{{bucket.id}}</td>
-                            <td class="text-[12px] text-center bg-white border p-3">{{bucket.network}}</td>
-                            <td class="text-[12px] text-center bg-white border p-3">{{bucket.bucketDateCreated}}</td>
+                            <tr>
+                            <td class="text-[12px] text-center bg-white border p-3 cursor-pointer hover:text-sidebarBG font-bold"><router-link to="/bucketFolder"> public_storage_0 </router-link></td>
+                            <td class="text-[12px] text-center bg-white border p-3">IPFS/GCS</td>
+                            <!-- <td class="text-[12px] text-center bg-white border p-3">{{bucket.bucketNetwork}}</td> -->
+                            <!-- <td class="text-[12px] text-center bg-white border p-3">{{bucket.bucketDateCreated}}</td>  -->
                             
 
-                            <!-- more button functions -->
-                            <td class="text-[12px] text-center bg-white border p-3">
-                                <div class="relative w-full">
-                                    
-
-                                    <button @click="walletStore.deleteBucketName(bucket.id)">Delete</button>
-                                <!-- end of the auth modal -->
-                                </div>
-                                <!-- <button>
-                                    <span class="material-symbols-outlined">more_vert</span>
-                                </button> -->
-                            </td>
                             <!-- more button end --> 
                             </tr>
                         </tbody>
@@ -115,94 +103,10 @@
                 
             </div>
         
-        </div>
+        <!-- </div> -->
         <!-- end of the bucket section -->
 
-        <!-- pop up model for Create bucket -->
-        <Transition 
-        enter-active-class="animate__animated animate__zoomIn animate__faster"
-        leave-active-class="animate__animated animate__zoomOut">
-        <div v-if="openClose" class="
-        absolute lg:top-[5%] lg:left-[25%] md:top-[5%] md:left-[15%] sm:top-[5%] sm:left-[10%] min-[320px]:top-[5%] min-[320px]:left-[2%]
-         lg:w-[500px] md:w-[500px] sm:w-[500px] min-[320px]:w-[350px]
-          shadow-mlg bg-white rounded-2xl p-2 border-[2px]">
-            <!-- bucket details -->
-            <div class="realtive bg-gray-100 p-3 rounded-md">
 
-                <!-- modal close btn -->
-                <button @click="closeAuthModal" class="absolute top-5 right-4">
-                    <div >
-                        <span class="material-symbols-outlined">
-                            close
-                        </span>
-                    </div>
-                </button>
-                <!-- end of modal close button -->
-
-                <h3 class="text-bethelBlue">Create New Bucket</h3>
-            </div>
-
-            <!-- bucket information main div -->
-            <div class="bg-white p-6 flex flex-col flex-wrap w-full">
-
-                <div>
-                    <h3 class="text-[#5b5b5b]">Bucket Informations</h3>
-                </div>
-
-
-                <!-- adding a form -->
-                <vee-form :validation-schema="authSchema" action="" @submit="handleSubmit">
-                        <div class="mt-2 text-[#5b5b5b]">
-                            <h3 class="text-[16px]">Bucket Name</h3>
-                        </div>
-
-                    <div class="relative">
-                        <vee-field name="name" type="text" placeholder=""
-                        class="mt-2 lg:w-[350px] md:w-[350px] sm:w-[350px] min-[320px]:w-[300px]
-                        border-[2px] rounded-lg p-1" />
-                        <ErrorMessage class="absolute left-0 bottom-[-20px] text-[12px] text-red-400 " name="name"></ErrorMessage>
-                    </div>
-
-                    <!-- network section -->
-                    <div class="mt-8">
-                        <div class="mt-2 text-[#5b5b5b]">
-                            <h3 class="text-[16px]">Network</h3>
-                        </div>
-
-                        <div>
-                            <div>
-                                <vee-field name="network" as="select" class="mt-2 lg:w-[350px] md:w-[350px] sm:w-[350px] min-[320px]:w-[300px]
-                                border-[2px] rounded-lg p-2">
-
-                                    <option value="Public">Public</option>
-                                    <option value="Private"> Private</option>
-
-                                </vee-field>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end of the network section -->
-
-                    <!-- close and ok sec -->
-                    <div class="mr-2 mt-4 flex gap-2 justify-end border-t-[2px] py-2">
-                        <button @click="closeAuthModal" class="border-[2px] py-2 px-4 rounded-lg bg-[#f7f5f5]">
-                            <h3 class="text-[14px] text-bethelBlue ">Close</h3>
-                        </button>
-
-                        <button type="submit" class="border-[2px] py-2 px-4 rounded-lg bg-sidebarBG">
-                            <h3 class="text-[14px] text-[white] ">Ok</h3>
-                        </button>
-
-                    </div>
-                </vee-form>
-                <!-- end of the form -->
-                
-                <!-- end of the close and okay sec -->
-            </div>
-            <!-- end bucket info div -->
-        </div>
-        </Transition>
-        <!-- end of pop up modal  -->
 
     </div>
 
@@ -212,50 +116,50 @@
 </template>
 
 <script>
-import {mapStores} from "pinia";
-import { useWalletData } from "../stores/DataStore";
-import { ErrorMessage } from 'vee-validate';
-
+import {mapStores} from 'pinia'
+import {useBucketData} from '@/stores/bucketDataStore';
 export default {
-    name: 'Storage',
-    data() {
-        return {
+    name : 'Storage',
+    data(){
+        return{
             // moreButton open and close
-            isMore: false,
-            // bucket auth model open and close
-            openClose: false,
-            // auth model blur
-            authBlur: '',
+            isMore : false,
 
-            authSchema: {
-                name: 'required',
-                network : 'required'
-            }
-        };
+            // bucket details array
+            bucketTableArr : [],
+
+            bucketTableArr2 : [],
+
+            // bucket count
+            bucketCount : 0,
+
+            // storageName: null,
+        }
     },
     mounted(){
     },
     computed : {
-        ...mapStores(useWalletData)
+        ...mapStores(useBucketData)
     },
-    methods: {
-        openAuthModal() {
-            this.openClose = true;
-            this.authBlur = 'blur-md';
-        },
-        closeAuthModal() {
-            this.openClose = false;
-            this.authBlur = '';
+
+    methods : {
+        openAuthModal(){
+            this.bucketStore.openClose = true;
+            this.bucketStore.authBlur = 'blur-md'
         },
 
-        handleSubmit(values) {
-            
-            this.openClose = false;
-            this.authBlur = '';
-            this.walletStore.postBucketNameData(values);
-            // console.log(this.walletStore.bucketNameArr);
-        }
-    },
-    components: { ErrorMessage }
+        closeAuthModal(){
+            this.bucketStore.openClose = false;
+            this.bucketStore.authBlur = '';
+        },
+        deleteBucketData(bucket){
+            this.bucketStore.bucketTableArr2 = this.bucketStore.bucketTableArr2.filter((item) => {
+                return bucket !== item
+            });
+
+        },
+
+        
+    }
 }
 </script>

@@ -1,6 +1,5 @@
 <template>
     <div :class="paddingClass" class="relative lg:w-full md:w-full md:mx-auto min-[320px]:w-[100%] min-[320px]:px-[10px]">
-
         <!-- head wallet div  -->
         <div class=" hidden">
                 <!-- left side text -->
@@ -52,7 +51,7 @@
                         <div class="flex items-center">             
                           <h3 class="text-[10px] text-white">Total Buckets</h3> 
                           <div class="ml-3 w-[30px] h-[25px] bg-blue-100 rounded-lg text-center justify-center items-center">
-                            <h1 class="text-blue-600">{{ bucketCount1 }}</h1>
+                            <h1 class="text-blue-600">1</h1>
                             </div> 
                         </div>
                         
@@ -82,7 +81,7 @@
                         <div class="flex items-center ">             
                           <h3 class="text-[10px]">Total Objects</h3> 
                           <div class="ml-3 w-[30px] h-[25px] bg-blue-100 rounded-lg text-center justify-center items-center">
-                            <h1 class="text-blue-600">0</h1>
+                            <h1 class="text-blue-600">{{ storageD.filecount}}</h1>
                         </div> 
                         </div>
                         
@@ -109,8 +108,8 @@
                         <h1 class=" text-[14px]">Storage</h1>
                         <div class="flex items-center">             
                           <h3 class="text-[10px]">Total Storage</h3> 
-                          <div class="ml-3 w-[30px] h-[25px] bg-blue-100 rounded-lg text-center justify-center items-center">
-                            <h1 class="text-blue-600 ">0</h1>
+                          <div class="ml-3 w-[90px] h-[25px] bg-blue-100 rounded-lg text-center justify-center items-center">
+                            <h1 class="text-blue-600 ">{{ storageD.totalsize  }}</h1>
                         </div> 
                         </div>
                         
@@ -420,9 +419,11 @@
 <script>
 import {mapStores} from 'pinia'
 import {useWalletData} from '@/stores/DataStore'
+import {authUser} from '@/stores/AuthUser'
+import router from '@/router/index';
 
 import Chart from 'chart.js/auto';
-// import Page1Nav from '@/components/Page1Nav.vue';
+
 
 export default {
     name : 'Page3Dashboard',
@@ -436,22 +437,33 @@ export default {
             // log activity array
             logActivityArr : [],
 
-            // bucket counts
-            bucketCount1 : 0,
+
+            user : [],
+
+            // storage details
+            storageD : null,
+
 
             
         }
     },
     computed : {
-        ...mapStores(useWalletData),
+        ...mapStores(useWalletData, authUser),
         
     },
-    onMounted(){
-        this.elementVisible = true;
+    created(){
+        // get storage 
+            const storageDetails = JSON.parse(localStorage.getItem('storageDetails'))
+            console.log(storageDetails)
+            this.storageD = storageDetails[0]
+            // if(this.storageD.lenth !== 0){
+            //     console.log("this is when arra is not null")
+            // }else{
+            //     console.log("this is when array is null")
+            // }
+        
     },
     mounted(){
-        this.bucketCount1 = this.walletStore.bucketNameArr.length
-       this.walletStore.getBucketNames();
         const ctx = document.getElementById('myChart');
         const ctx1 = document.getElementById('myChart2');
         const ctx2 = document.getElementById('myChart3');

@@ -10,9 +10,6 @@ import {useWalletData} from '@/stores/DataStore'
 
 export default {
   name : 'app',
-  mounted(){
-    this.walletStore.getBucketNames();
-  },
   computed : {
     ...mapStores(useWalletData)
   }

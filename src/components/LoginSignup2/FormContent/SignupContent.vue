@@ -10,7 +10,7 @@
         
 
         <!-- form section -->
-        <div class="w-full mt-4">
+        <div class="w-full mt-4 lg:mr-20">
             <form action="">
                 <!---------------------- router view goes here------------------- -->
                 <!-- <router-view></router-view> -->

@@ -4,10 +4,25 @@ import axios from 'axios';
 
 export const authUser = defineStore('authUser', {
     state : () => ({
+        
+         
         authUserDetailsArr : [],
         authMobileOTP : [],
         loginDataArr : [],
         userLog : false,
+        user : '',
+        userID : null,
+        token : null,
+        
+        // axios res details arr
+        userDetails : [],
+
+        // auth user details arr
+        authUserDetails : [],
+
+        // user data arr
+        userDataArr : [],
+
 
     }),
 
@@ -18,8 +33,7 @@ export const authUser = defineStore('authUser', {
 
             console.log(values.email)
 
-            const res = await axios.post('https://mw.bethel.network/auth/register' , 
-            {
+            const res = await axios.post('https://mw.bethel.network/auth/register', {
                 email: values.email,
                 username: values.username,
                 password: values.password,
@@ -28,59 +42,82 @@ export const authUser = defineStore('authUser', {
                 country: values.country,
                 code: values.code,
                 mobile: values.mobile
-            })
-            console.log(res)
+            }, {
+                withCredentials: true
+            });
 
             if(res.error){
                 console.log(res.error)
             }
             else{
-                router.push('/login')
+                router.push('/')
             }
         },
 
-        // post login details into the jason file --> component --> loginContent2
-
-        // async postLoginData(values){
-        //     this.loginDataArr.push(values)
-
-        //     const res  = await fetch('https://mw.bethel.network/auth/login' , {
-        //         method : 'POST',
-        //         body : JSON.stringify(values),
-        //         credentials : 'include',
-        //         headers : {'Content-Type' : 'application/json'}
-        //     })
-        //     if(res.error){
-        //         console.log(res.error)
-        //     }
-        //     else {
-        //         router.push('/');
-        //         console.log('loged in');
-        //         this.userLog = true;
-        //     }
-        // }
-
         async postLoginData(values){
-            // this.loginDataArr.push(values)
+            try {
+                
+            } catch (error) {
+                
+            }
 
-            const res  = await axios.post('https://mw.bethel.network/auth/login' ,
+            const res = await axios.post('https://mw.bethel.network/auth/login' ,
                 {
                     email: values.email,
-                    password: values.password
+                    password: values.password,  
+                },
+                {
+                    withCredentials: "true",
+                    
                 }
-            )
-
-            console.log(res)
+            );
+            
             if(res.error){
                 console.log(res.error)
             }
             else {
-                router.push('/');
-                console.log('loged in');
-                this.userLog = true;
-            }
-        }
+                console.log(res)
+                this.userDetails.push(res.data)
 
+                // gettinf user id
+                this.userID = this.userDetails[0]._id
+                console.log(this.userID)
+
+                // getting user data
+                const userData = this.userDetails[0].details
+                this.authUserDetails.push(userData);
+
+                console.log(this.authUserDetails[0])
+
+                const userData2 = res.data.details
+                this.userDataArr.push(userData2);
+
+                // Save the updated data to localStorage whenever it changes
+
+                // save user details
+                localStorage.setItem('userDetails', JSON.stringify(res.data.details))
+
+                // save user data
+                localStorage.setItem('userData', JSON.stringify(res.data))
+
+
+                //get storage details
+                try {
+                    const res3 = await axios.get('https://mw.bethel.network/storagedetails/' + this.userID,
+                    {withCredentials : true})
+                    localStorage.setItem('storageDetails', JSON.stringify(res3.data))
+                } catch (error) {
+                    
+                }
+                
+
+
+                
+
+                router.push('/home');
+            }
+        },
 
     }
-})
+}
+)

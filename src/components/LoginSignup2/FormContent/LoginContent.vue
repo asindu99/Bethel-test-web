@@ -15,23 +15,28 @@ lg:p-20 md:py-[10px] md:h-screen sm:p-10 min-[320px]:p-3 ">
         min-[320px]:py-10 bg-blue-50">
             <!-- left side log in content -->
             <div class="flex flex-col w-full items-start justify-center">
+
+                <div class="w-full flex items-center justify-center">
+                    <img src="../../../img/logos/bethellogo.png" alt="" class="w-[80px]">
+                </div>
                     <!-- TOP CAPTION SEC -->
-                <div class="w-full text-center">
+                <div class="w-full text-center mt-2">
                     <h3 class="text-sidebarBG font-bold text-[25px]">Welcome to the BETHEL!</h3>
                     <p class="text-[#757784] text-[14px]">Please sign in to the your account and start the adventure!</p>
+                    <!-- <h3 class="text-[white] text-[14px] bg-bethelOrange p-2 mt-2 rounded-md">Please use Firefox Browser for Better Experience, support for other browsers will be made soon.</h3> -->
                 </div>
                 <!-- END OF TOP CAPTION SEC -->
 
                 <!-- form section -->
-                <div class="mt-10 w-full">
+                <div class="mt-4 w-full">
                     <VeeForm
                     :validation-schema = "loginSchema"
                     @submit="onSubmit"
                      action="" class="flex flex-col">
                         <div class="flex flex-col relative">
                             <label for="" class="text-[14px]">Email :</label>
-                            <VeeField name="email" type="text" placeholder="Jhon@example.com" class="text-[#757784] bg-transparent p-1 border-b-2 border-[#29379384]
-                        [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none "/>
+                            <VeeField name="email" type="text" placeholder="Jhon@example.com" class="text-[#757784] bg-transparent p-1 border-2 border-[#29379384]
+                        [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none rounded-md"/>
                         <!-- display error message -->
                         <ErrorMessage name="email" class="absolute text-[12px] text-red-500 bottom-[-20px]"/>
                         </div>
@@ -39,8 +44,8 @@ lg:p-20 md:py-[10px] md:h-screen sm:p-10 min-[320px]:p-3 ">
                         <div class="flex flex-col mt-8 relative">
                             <label for="" class="text-[14px]">Password :</label>
                             <VeeField name="password" type="password" placeholder="Password"
-                            class=" text-[#757784] bg-transparent p-1 border-b-2 border-[#29379384]
-                        [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none "/>
+                            class=" text-[#757784] bg-transparent p-1 border-2 border-[#29379384]
+                        [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none rounded-md"/>
                             <!-- disply error message -->
                             <button class=""><h3 class="text-sidebarBG text-[12px] mt-4 text-right">forgot password?</h3></button>
                             <ErrorMessage name="password" class="absolute text-[12px] text-red-500 bottom-[15px]"/>
@@ -81,6 +86,8 @@ lg:p-20 md:py-[10px] md:h-screen sm:p-10 min-[320px]:p-3 ">
 <script>
 import {mapStores} from 'pinia'
 import { authUser } from '@/stores/AuthUser';
+import axios from 'axios';
+import router from '@/router/index'
 
 export default{
     name : 'LoginContent',
@@ -95,6 +102,11 @@ export default{
             loginDetailsArr : [],
 
         }
+    },
+    async mounted(){
+        
+        // save wallet details
+        // localStorage.setItem('storageDetails', JSON.stringify(res3.data))
     },
     computed : {
         ...mapStores(authUser)
