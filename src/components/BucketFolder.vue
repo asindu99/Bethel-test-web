@@ -47,10 +47,19 @@
                   <h1 class="flex items-start lg:text-2xl md:text-2xl sm:text-xl min-[320px]:text-[20px] font-bold text-center mt-[-30px] text-left">You can Upload Files</h1>
                   <div class="flex lg:flex-col md:flex-col sm:flex-col items-center min-[320px]:flex-col justify-between mt-8 border-4 border-dashed rounded-lg border-blue-100 w-full py-10">
                       <div class="flex flex-col items-center">
-                              <input type="file"  @change="handleFileUpload" id="upload" >
-                                <label for="upload" class="border-[2px] px-2 py-2 rounded-xl bg-sidebarBG text-[white] text-center
-                                font-medium hover:text-sidebarBG hover:bg-[white] transition-all ease-linear hover:border-sidebarBG cursor-pointer w-[200px]">Select file</label>
-                        
+
+                             <div  class="flex">
+                                <input type="file" @change="handleFileUpload" id="upload" hidden class="relative m-0 block w-full min-w-0 flex-auto cursor-pointer rounded border 
+                                        border-none border-sidebarBG bg-clip-padding px-4 py-4 text-[14px] file:bg-sidebarBG
+                                        text-[white] transition duration-300 ease-in-out file:-mx-3 file:-my-[0.32rem] file:cursor-pointer 
+                                        file:overflow-hidden file:rounded-lg file:border-2 file:border-sidebarBG file:border-inherit 
+                                        file:px-8 file:py-1 file:text-sidebarBG file:transition file:duration-150 
+                                        file:ease-in-out file:[border-inline-end-width:1px] file:[margin-inline-end:0.75rem]
+                                        hover:file:bg-none  hover:file:text-white focus:border-primary focus:text-sidebarBG focus:shadow-te-primary 
+                                        dark:text-sidebarBG sidebarBG:file:bg-sidebarBG file:text-white 
+                                        sidebarBG:focus:border-primary ml-20 file:w-[200px] file:px-2 file:py-[0.7em] file:font-['Montserrat']  "/>
+                                
+                              </div>
                             <div class="">
                               <button @click="uploadFile" class="border-[2px] px-2 py-2 rounded-xl bg-sidebarBG w-[200px] text-[white] text-center
                                   font-medium hover:text-sidebarBG hover:bg-[white] transition-all ease-linear hover:border-sidebarBG cursor-pointer mt-4 drop-shadow-xl">Upload File
