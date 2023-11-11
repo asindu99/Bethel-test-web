@@ -47,7 +47,7 @@
                     <h1 class="flex items-start lg:text-2xl md:text-2xl sm:text-xl min-[320px]:text-[20px] font-bold text-center mt-[-30px] text-left">You can Upload Files</h1>
                     <div class="flex lg:flex-col md:flex-col sm:flex-col items-center min-[320px]:flex-col justify-between mt-8 border-4 border-dashed rounded-lg border-blue-100 w-full py-10">
                         <div class="flex flex-col items-center">
-                                <input type="file"  @change="handleFileUpload" id="upload" hidden>
+                                <input type="file"  @change="handleFileUpload" id="upload" >
                                   <label for="upload" class="border-[2px] px-2 py-2 rounded-xl bg-sidebarBG text-[white] text-center
                                   font-medium hover:text-sidebarBG hover:bg-[white] transition-all ease-linear hover:border-sidebarBG cursor-pointer w-[200px]">Select file</label>
                           
@@ -59,10 +59,10 @@
                           
                         </div>
 
-                        <div class="flex mt-8">
+                        <div :class="showClass" class="flex mt-8 ">
                        
                           <div id="loader" class="flex items-center"></div>
-                          <div class="ml-10"> <p class="text-14px">Bethel.png</p> </div>
+                          <div class="ml-10"> <p class="text-14px"></p> </div>
                       
                         </div>
 
@@ -127,6 +127,7 @@
   
         file:null,
         uploadDetails : null,
+        showClass : 'hidden'
 
       };
     },
@@ -145,6 +146,7 @@
         this.file = event.target.files[0];
       },
       async uploadFile() {
+        this.showClass = '';
         const formData = new FormData();
         formData.append('file', this.file);
         formData.append('userid', this.authUserStore.userID);
@@ -160,7 +162,9 @@
             withCredentials : true,
           });
           console.log(response.data);
+          this.showClass = 'hidden';
           alert('File uploaded successfully');
+          
         } catch (error) {
           console.log(error);
           alert('Error uploading file');

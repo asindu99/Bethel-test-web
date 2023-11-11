@@ -80,8 +80,7 @@
                             <th class="text-[13px] border p-3 bg-blue-50">BUCKET NAME</th>
                             <!-- <th class="text-[13px] border p-3 bg-blue-50">ACCESS</th> -->
                             <th class="text-[13px] border p-3 bg-blue-50">NETWORK</th>
-                            <!-- <th class="text-[13px] border p-3 bg-blue-50">DATE CREATED</th>
-                            <th class="text-[13px] border p-3 bg-blue-50">MORE</th> -->
+                            
                             </tr>
                         </thead>
                         <tbody>
