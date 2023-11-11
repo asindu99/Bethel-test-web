@@ -70,9 +70,9 @@
                     </thead>
                     <tbody>
                         <tr v-for="wallet in walletData" :key="wallet.Waddress">
-                        <td class="text-[14px] min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] text-center bg-white border p-3"> {{wallet.address}}</td>
+                        <td class="text-[14px] min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] text-center bg-white border p-3"> {{wallet.publicaddr}}</td>
                         <td class="text-[14px] min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] text-center bg-white border p-3">{{wallet.seeds}}</td>
-                        <td class="text-[14px] min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] text-center bg-white border p-3">{{ wallet.public_key }}</td>
+                        <td class="text-[14px] min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] text-center bg-white border p-3">{{ wallet.addr }}</td>
                         
                         <!-- toogle button table data -->
                         <!-- <td class="text-[12px] text-center bg-white border p-3">

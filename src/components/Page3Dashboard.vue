@@ -81,7 +81,7 @@
                         <div class="flex items-center ">             
                           <h3 class="text-[10px]">Total Objects</h3> 
                           <div class="ml-3 w-[30px] h-[25px] bg-blue-100 rounded-lg text-center justify-center items-center">
-                            <h1 class="text-blue-600">{{ storageDetails[0].filecount }}</h1>
+                            <h1 class="text-blue-600">{{ walletStore.storageD.filecount}}</h1>
                         </div> 
                         </div>
                         
@@ -109,7 +109,7 @@
                         <div class="flex items-center">             
                           <h3 class="text-[10px]">Total Storage</h3> 
                           <div class="ml-3 w-[90px] h-[25px] bg-blue-100 rounded-lg text-center justify-center items-center">
-                            <h1 class="text-blue-600 ">{{ storageDetails[0].totalsize }}</h1>
+                            <h1 class="text-blue-600 ">{{ walletStore.storageD.totalsize }}</h1>
                         </div> 
                         </div>
                         
@@ -436,8 +436,6 @@ export default {
             // log activity array
             logActivityArr : [],
 
-            // storage user details
-            storageDetails : null,
 
             user : [],
 
@@ -449,11 +447,12 @@ export default {
         ...mapStores(useWalletData, authUser),
         
     },
+    created(){
+        
+    },
     mounted(){
-
-        const storageDetails1 = JSON.parse(localStorage.getItem('storageDetails'))
-        this.storageDetails = storageDetails1
-        console.log(this.storageDetails)
+        
+        
 
 
         this.bucketCount1 = this.walletStore.bucketNameArr.length
