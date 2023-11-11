@@ -81,8 +81,8 @@
                         <div class="flex items-center ">             
                           <h3 class="text-[10px]">Total Objects</h3> 
                           <div class="ml-3 w-[30px] h-[25px] bg-blue-100 rounded-lg text-center justify-center items-center">
-                            <h1 class="text-blue-600">{{ storageDetails[0].filecount }}</h1>
-                        </div> 
+    <h1 class="text-blue-600">{{ storageDetails && storageDetails[0] ? storageDetails[0].filecount : 'Loading...' }}</h1>
+</div>
                         </div>
                         
                     </div>
@@ -109,8 +109,8 @@
                         <div class="flex items-center">             
                           <h3 class="text-[10px]">Total Storage</h3> 
                           <div class="ml-3 w-[90px] h-[25px] bg-blue-100 rounded-lg text-center justify-center items-center">
-                            <h1 class="text-blue-600 ">{{ storageDetails[0].totalsize }}</h1>
-                        </div> 
+    <h1 class="text-blue-600">{{ storageDetails && storageDetails[0] ? storageDetails[0].totalsize : 'Loading...' }}</h1>
+</div>
                         </div>
                         
                     </div>
@@ -417,43 +417,41 @@
 </template>
 
 <script>
-import {mapStores} from 'pinia'
-import {useWalletData} from '@/stores/DataStore'
-import {authUser} from '@/stores/AuthUser'
-
+import { mapStores } from 'pinia'
+import { useWalletData } from '@/stores/DataStore'
+import { authUser } from '@/stores/AuthUser'
 import Chart from 'chart.js/auto';
 
-
 export default {
-    name : 'Page3Dashboard',
-    data(){
-        return{
-            paddingClass : '',
-
-            // LOG IN SUCESS MSG
-            elementVisible : false,
-
-            // log activity array
-            logActivityArr : [],
-
-            // storage user details
-            storageDetails : null,
-
-            user : [],
-
-
-            
+    name: 'Page3Dashboard',
+    data() {
+        return {
+            paddingClass: '',
+            elementVisible: false,
+            logActivityArr: [],
+            storageDetails: null,
+            user: [],
         }
     },
-    computed : {
+    computed: {
         ...mapStores(useWalletData, authUser),
-        
     },
-    mounted(){
+    mounted() {
+        try {
+            const storageDetails1 = JSON.parse(localStorage.getItem('storageDetails'));
+            if (storageDetails1) {
+                this.storageDetails = storageDetails1;
+            } else {
+                // Set default values or handle the absence of data
+                this.storageDetails = [{ filecount: 'Loading...', totalsize: 'Loading...' }];
+            }
+        } catch (e) {
+            console.error('Error parsing storageDetails from localStorage', e);
+            // Set default values or handle the error
+            this.storageDetails = [{ filecount: 'Error', totalsize: 'Error' }];
+        }
 
-        const storageDetails1 = JSON.parse(localStorage.getItem('storageDetails'))
-        this.storageDetails = storageDetails1
-        console.log(this.storageDetails)
+        console.log(this.storageDetails);
 
 
         this.bucketCount1 = this.walletStore.bucketNameArr.length

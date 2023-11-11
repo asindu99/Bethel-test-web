@@ -280,7 +280,7 @@ export default{
         localStorage.setItem('walletDetails', JSON.stringify(res.data))
 
         const res2 = await axios.get('https://mw.bethel.network/storage/' + this.authUserStore.userID ,
-                {withCredentials :true})
+                {withCredentials :false})
                 console.log(res2.data)
         // save wallet details
         localStorage.setItem('uploadDetails', JSON.stringify(res2.data))

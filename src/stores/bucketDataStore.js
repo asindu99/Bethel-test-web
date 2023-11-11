@@ -41,7 +41,7 @@ export const useBucketData = defineStore('bucket' , {
          async addBucketData(values){
             this.bucketTableArr.push(values)
 
-            const res = await fetch('http://localhost:3000/bucket', {
+            const res = await fetch('https://mw.bethel.network/bucket', {
                 method: 'POST',
                 body : JSON.stringify(values),
                 headers : {'Content-Type' : 'application/json'}
@@ -53,7 +53,7 @@ export const useBucketData = defineStore('bucket' , {
 
         //bucket get data
         async getData(){
-            const ref = await fetch('http://localhost:3000/bucket')
+            const ref = await fetch('https://mw.bethel.network/bucket')
             const data = await ref.json();
             this.bucketTableArr2 = data;
         },
@@ -72,7 +72,7 @@ export const useBucketData = defineStore('bucket' , {
         async addFolderData(values){
             this.folderTableArr.push(values)
 
-            const res = await fetch('http://localhost:3000/folder', {
+            const res = await fetch('https://mw.bethel.network/folder', {
                 method: 'POST',
                 body : JSON.stringify(values),
                 headers : {'Content-Type' : 'application/json'}
@@ -85,7 +85,7 @@ export const useBucketData = defineStore('bucket' , {
 
         //folder get data
         async getFolderData(){
-            const ref = await fetch('http://localhost:3000/folder')
+            const ref = await fetch('https://mw.bethel.network/folder')
             const data = await ref.json();
             this.folderTableArr2 = data;
         },
