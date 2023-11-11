@@ -92,27 +92,6 @@
                             <!-- <td class="text-[12px] text-center bg-white border p-3">{{bucket.bucketDateCreated}}</td>  -->
                             
 
-                            <!-- more button functions -->
-                            <td class="text-[12px] text-center bg-white border p-3">
-                                <div class="relative w-full">
-                                    <!-- more button auth modal -->
-                                    <!-- <div class="absolute right-[-15px] w-[60px] shadow-md border-[1px] bg-blue-50 rounded-md top-10 animate__animated animate__zoomIn animate__faster">
-                                        <button @click="deleteBucketData(bucket)">
-                                            <div class="p-1">
-                                                <h3>Delete</h3>
-                                            </div>
-                                        </button>
-                                        
-                                        
-                                    </div> -->
-
-                                    <!-- <button @click="deleteBucketData(bucket)">Delete</button> -->
-                                <!-- end of the auth modal -->
-                                </div>
-                                <!-- <button>
-                                    <span class="material-symbols-outlined">more_vert</span>
-                                </button> -->
-                            </td>
                             <!-- more button end --> 
                             </tr>
                         </tbody>
@@ -158,8 +137,6 @@ export default {
         }
     },
     mounted(){
-        this.bucketStore.getData();
-        // this.fetchStorageName();
     },
     computed : {
         ...mapStores(useBucketData)
@@ -182,36 +159,7 @@ export default {
 
         },
 
-        handleSubmit(values){
-            console.log(values)
-        },
-
-        bucketData(values){         
-            this.bucketTableArr.push(values);
-        },
-        addData(values){
-            console.log(values)
-            this.bucketStore.closeAuthModal();
-            this.bucketStore.addBucketData(values)
-        },
-
-        bucketData(values){
-            
-            
-        },
-
-    //     fetchBucketName() {
-      
-    //         fetch(`API_ENDPOINT/storage?userid=${this.userid}`)
-    //             .then((response) => response.json())
-    //             .then((data) => {
-    //             this.storageName = data.storageName;
-    //             })
-    //             .catch((error) => {
-    //             console.error("Error fetching storage name:", error);
-    //             });
-    // },
-
+        
     }
 }
 </script>

@@ -428,6 +428,7 @@ export default{
                 localStorage.removeItem('userData');
                 localStorage.removeItem('walletDetails');
                 localStorage.removeItem('uploadDetails');
+                localStorage.removeItem('storageDetails');
 
             }
         }

@@ -81,7 +81,7 @@
                         <div class="flex items-center ">             
                           <h3 class="text-[10px]">Total Objects</h3> 
                           <div class="ml-3 w-[30px] h-[25px] bg-blue-100 rounded-lg text-center justify-center items-center">
-                            <h1 class="text-blue-600">{{ storageDetails[0].filecount }}</h1>
+                            <h1 class="text-blue-600">{{ storageD.filecount}}</h1>
                         </div> 
                         </div>
                         
@@ -109,7 +109,7 @@
                         <div class="flex items-center">             
                           <h3 class="text-[10px]">Total Storage</h3> 
                           <div class="ml-3 w-[90px] h-[25px] bg-blue-100 rounded-lg text-center justify-center items-center">
-                            <h1 class="text-blue-600 ">{{ storageDetails[0].totalsize }}</h1>
+                            <h1 class="text-blue-600 ">{{ storageD.totalsize  }}</h1>
                         </div> 
                         </div>
                         
@@ -420,6 +420,7 @@
 import {mapStores} from 'pinia'
 import {useWalletData} from '@/stores/DataStore'
 import {authUser} from '@/stores/AuthUser'
+import router from '@/router/index';
 
 import Chart from 'chart.js/auto';
 
@@ -436,10 +437,11 @@ export default {
             // log activity array
             logActivityArr : [],
 
-            // storage user details
-            storageDetails : null,
 
             user : [],
+
+            // storage details
+            storageD : null,
 
 
             
@@ -449,15 +451,17 @@ export default {
         ...mapStores(useWalletData, authUser),
         
     },
+    created(){
+        // get storage 
+        try {
+            const storageDetails = JSON.parse(localStorage.getItem('storageDetails'))
+            this.storageD = storageDetails[0]
+        } catch (error) {
+            
+        }
+        
+    },
     mounted(){
-
-        const storageDetails1 = JSON.parse(localStorage.getItem('storageDetails'))
-        this.storageDetails = storageDetails1
-        console.log(this.storageDetails)
-
-
-        this.bucketCount1 = this.walletStore.bucketNameArr.length
-        this.walletStore.getBucketNames();
         const ctx = document.getElementById('myChart');
         const ctx1 = document.getElementById('myChart2');
         const ctx2 = document.getElementById('myChart3');
