@@ -258,6 +258,7 @@ data(){
 
         firstName : '',
         lastName : '',
+        
 
 
         selected : {},
@@ -268,6 +269,9 @@ data(){
 },
 computed:{
     ...mapStores(authUser)
+},
+mounted(){
+    const userData = JSON.parse(localStorage.getItem('userDetails'))
 },
 methods: {
     async patchAuthUserData(values){

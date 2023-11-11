@@ -262,9 +262,7 @@ export default{
                 console.log(res.status)
                 this.authUserStore.userDetails.push(res.data);
                 this.authUserStore.userID = this.authUserStore.userDetails[0]._id
-                console.log(this.authUserStore.userID);
-
-                    
+       
             }
             else{
                 router.push('/')
@@ -277,13 +275,13 @@ export default{
 
         const res = await axios.get('https://mw.bethel.network/createwallet/' + this.authUserStore.userID ,
                 {withCredentials :true})
-                console.log(res.data)
+                
         // save wallet details
         localStorage.setItem('walletDetails', JSON.stringify(res.data))
 
         const res2 = await axios.get('https://mw.bethel.network/storage/' + this.authUserStore.userID ,
                 {withCredentials :true})
-                console.log(res2.data)
+                
         // save wallet details
         localStorage.setItem('uploadDetails', JSON.stringify(res2.data))
     },

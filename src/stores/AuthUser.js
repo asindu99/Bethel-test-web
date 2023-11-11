@@ -102,9 +102,14 @@ export const authUser = defineStore('authUser', {
 
 
                 //get storage details
-                const res3 = await axios.get('https://mw.bethel.network/storagedetails/' + this.userID,
-                {withCredentials : true})
-                localStorage.setItem('storageDetails', JSON.stringify(res3.data))
+                try {
+                    const res3 = await axios.get('https://mw.bethel.network/storagedetails/' + this.userID,
+                    {withCredentials : true})
+                    localStorage.setItem('storageDetails', JSON.stringify(res3.data))
+                } catch (error) {
+                    
+                }
+                
 
 
                 
