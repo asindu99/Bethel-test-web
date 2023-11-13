@@ -43,7 +43,7 @@
     
 
             <!-- pricing plans  -->
-            <div class="flex basis-2/4 px-6">
+            <div class="flex basis-2/4 px-6 mb-10">
                 <div class="flex lg:flex-row min-[320px]:flex-col md:flex-col-2 gap-6">
 
                     <!-- plan-1  -->
@@ -52,14 +52,14 @@
 
                            <div> <p class="m-10">Features for creators and developers who need more storage.</p></div>
 
-                            <div><p  class="m-10"><span class="font-bold text-2xl">$0</span><span> /mo</span></p></div>
+                            <div><p  class="m-10"><span class="font-bold text-2xl">$</span><span> /mo</span></p></div>
 
                             
                             <div class="font-['Montserrat'] text-center font-bold">Your Current Plan</div>
 
                             <div><p class="mx-10 mt-[60px] font-bold">What's included</p></div>
 
-                            <div class="flex flex-row mx-10 mt-10">
+                            <div class="flex flex-row mx-10 mt-10 text-zinc-500">
                                 <span class="material-symbols-outlined">
                                     done
                                 </span>
@@ -67,7 +67,7 @@
                                 
                             </div>
 
-                            <div class="flex flex-row mx-10">
+                            <div class="flex flex-row mx-10 text-zinc-500">
                                 <span class="material-symbols-outlined">
                                     done
                                 </span>
@@ -75,7 +75,7 @@
                                 
                             </div>
 
-                            <div class="flex flex-row mx-10">
+                            <div class="flex flex-row mx-10 text-zinc-500">
                                 <span class="material-symbols-outlined">
                                     done
                                 </span>
@@ -83,7 +83,7 @@
                                 
                             </div>
 
-                            <div class="flex flex-row mx-10">
+                            <div class="flex flex-row mx-10 text-zinc-500 ">
                                 <span class="material-symbols-outlined">
                                     done
                                 </span>
@@ -91,7 +91,7 @@
                                 
                             </div>
             
-                            <div class="flex flex-row mx-10">
+                            <div class="flex flex-row mx-10 text-zinc-500">
                                 <span class="material-symbols-outlined">
                                     done
                                 </span>
@@ -108,7 +108,7 @@
 
                             <div><p class="m-10">Features for creators and developers who need more storage.</p></div>
 
-                            <div><p  class="m-10"><span class="font-bold text-2xl">$20</span><span> /mo</span></p></div>
+                            <div><p  class="m-10"><span class="font-bold text-2xl">$</span><span> /mo</span></p></div>
 
                             <div class="px-10 ">
                                 <button class="border-2 w-[150px] h-[40px] rounded-lg bg-gradient-to-r from-[#F48320] to-[#f8b878] shadow-lg hover:bg-none hover:border-[#F48320] text-white hover:text-[#000000]">Select Starter</button>
@@ -117,7 +117,7 @@
 
                             <div><p class="mx-10 mt-[50px] font-bold">What's included</p></div>
 
-                            <div class="flex flex-row mx-10 mt-10">
+                            <div class="flex flex-row mx-10 mt-10 text-zinc-500">
                                 <span class="material-symbols-outlined">
                                     done
                                 </span>
@@ -125,7 +125,7 @@
                                 
                             </div>
 
-                            <div class="flex flex-row mx-10">
+                            <div class="flex flex-row mx-10 text-zinc-500">
                                 <span class="material-symbols-outlined">
                                     done
                                 </span>
@@ -133,7 +133,7 @@
                                 
                             </div>
 
-                            <div class="flex flex-row mx-10">
+                            <div class="flex flex-row mx-10 text-zinc-500">
                                 <span class="material-symbols-outlined">
                                     done
                                 </span>
@@ -141,7 +141,7 @@
                                 
                             </div>
 
-                            <div class="flex flex-row mx-10">
+                            <div class="flex flex-row mx-10 text-zinc-500">
                                 <span class="material-symbols-outlined">
                                     done
                                 </span>
@@ -149,7 +149,7 @@
                                 
                             </div>
             
-                            <div class="flex flex-row mx-10">
+                            <div class="flex flex-row mx-10 text-zinc-500">
                                 <span class="material-symbols-outlined">
                                     done
                                 </span>
@@ -167,7 +167,7 @@
 
                             <div><p class="m-10">Features for creators and developers who need more storage.</p></div>
 
-                            <div><p  class="m-10"><span class="font-bold text-2xl">$100</span><span> /mo</span></p></div>
+                            <div><p  class="m-10"><span class="font-bold text-2xl">$</span><span> /mo</span></p></div>
 
                             <div class="px-10 ">
                                 <button class="border-2 w-[150px] h-[40px] rounded-lg bg-gradient-to-r from-[#F48320] to-[#f8b878] shadow-lg hover:bg-none hover:border-[#F48320] text-white hover:text-[#000000]">Select Pro</button>
@@ -176,7 +176,7 @@
 
                             <div><p class="mx-10 mt-[50px] font-bold">What's included</p></div>
 
-                            <div class="flex flex-row mx-10 mt-10">
+                            <div class="flex flex-row mx-10 mt-10 text-zinc-500">
                                 <span class="material-symbols-outlined">
                                     done
                                 </span>
@@ -184,7 +184,7 @@
                                 
                             </div>
 
-                            <div class="flex flex-row mx-10">
+                            <div class="flex flex-row mx-10 text-zinc-500">
                                 <span class="material-symbols-outlined">
                                     done
                                 </span>
@@ -192,7 +192,7 @@
                                 
                             </div>
 
-                            <div class="flex flex-row mx-10">
+                            <div class="flex flex-row mx-10 text-zinc-500">
                                 <span class="material-symbols-outlined">
                                     done
                                 </span>
@@ -200,7 +200,7 @@
                                 
                             </div>
 
-                            <div class="flex flex-row mx-10">
+                            <div class="flex flex-row mx-10 text-zinc-500">
                                 <span class="material-symbols-outlined">
                                     done
                                 </span>
@@ -208,7 +208,7 @@
                                 
                             </div>
             
-                            <div class="flex flex-row mx-10">
+                            <div class="flex flex-row mx-10 text-zinc-500">
                                 <span class="material-symbols-outlined">
                                     done
                                 </span>
@@ -224,7 +224,7 @@
                         
                         <p class="m-10">Features for creators and developers who need more storage.</p>
 
-                        <p  class="m-10"><span class="font-bold text-2xl">$500</span><span> /mo</span></p>
+                        <p  class="m-10"><span class="font-bold text-2xl">$</span><span> /mo</span></p>
 
                         <div class="px-10 ">
                             <button class="border-2 w-[150px] h-[40px] rounded-lg bg-gradient-to-r from-[#F48320] to-[#f8b878] shadow-lg hover:bg-none hover:border-[#F48320] text-white hover:text-[#000000]">Select Buisness</button>
@@ -233,7 +233,7 @@
                         
                         <p class="mx-10 mt-[50px] font-bold">What's included</p>
 
-                        <div class="flex flex-row mx-10 mt-10">
+                        <div class="flex flex-row mx-10 mt-10 text-zinc-500">
                             <span class="material-symbols-outlined">
                                 done
                             </span>
@@ -241,7 +241,7 @@
                             
                         </div>
 
-                        <div class="flex flex-row mx-10">
+                        <div class="flex flex-row mx-10 text-zinc-500">
                             <span class="material-symbols-outlined">
                                 done
                             </span>
@@ -249,7 +249,7 @@
                             
                         </div>
 
-                        <div class="flex flex-row mx-10">
+                        <div class="flex flex-row mx-10 text-zinc-500">
                             <span class="material-symbols-outlined">
                                 done
                             </span>
@@ -257,7 +257,7 @@
                             
                         </div>
 
-                        <div class="flex flex-row mx-10">
+                        <div class="flex flex-row mx-10 text-zinc-500">
                             <span class="material-symbols-outlined">
                                 done
                             </span>
@@ -265,7 +265,7 @@
                             
                         </div>
 
-                        <div class="flex flex-row mx-10">
+                        <div class="flex flex-row mx-10 text-zinc-500">
                             <span class="material-symbols-outlined">
                                 done
                             </span>
@@ -279,16 +279,16 @@
 
             <!-- billing History -->
 
-            <div class="mb-10">
+            <!-- <div class="mb-10"> -->
              <!-- text of table -->
-                <div class="relative mt-10 ml-10">
-                    <div class="w-[2px] h-[20px] bg-[#293793] absolute top-[5px] "></div>
+                <!-- <div class="relative mt-10 ml-10">
+                    <div class="w-[2px] h-[20px] bg-bethelBlue absolute top-[5px] "></div>
                     <h3 class="ml-4 text-[20px]">Billing History</h3> 
-                </div>
+                </div> -->
 
-                <div class="mx-10 mt-4 bg-white rounded-lg px-2 shadow-md">
+                <!-- <div class="mx-10 mt-4 bg-white rounded-lg px-2 shadow-md"> -->
                     <!-- start of the table -->
-                    <table class="table-auto border-separate py-2 w-full rounded-lg">
+                    <!-- <table class="table-auto border-separate py-2 w-full rounded-lg">
                         <thead class="">
                             <tr class="">
                             <th class="text-[14px] border p-3 bg-blue-50">DATE</th>
@@ -306,8 +306,8 @@
                     </table>
 
 
-                </div>
-            </div>
+                </div> -->
+            <!-- </div> -->
 
     </div>
 </template>
