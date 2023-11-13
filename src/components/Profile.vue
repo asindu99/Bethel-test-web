@@ -88,12 +88,14 @@
                                             <div class="flex lg:flex-row md:flex-row sm:flex min-[320px]:flex-col w-full justify-between lg:gap-20 md:gap-10 sm:gap-y-8 min-[320px]:gap-2 px-8 pt-10">
                                                 
                                                 <div class="relative z-0 w-full mb-6 group">
-                                                    <vee-field autocomplete="off" id="firstName" name="firstName" type="text" class="w-full h-10 text-gray-900 placeholder-transparent border-b-2 border-sidebarBG focus:outline-none focus:borer-rose-600 on:focus:bg-white" :placeholder="firstName" />
-							<label for="firstName" class="absolute left-0 -top-6 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5  peer-focus:text-sm">First Name :</label>
+
+                                                    <vee-field autocomplete="off" id="firstName" name="firstName" type="text" class="w-full h-10 pl-2 text-gray-900 border-b-2 border-sidebarBG focus:outline-none focus:borer-rose-600 on:focus:bg-white" :placeholder="firstName" />
+							<label for="firstName" class="absolute left-0 -top-6 text-gray-600 text-sm placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5  peer-focus:text-sm">First Name :</label>
                                                 </div>
 
                                                 <div class="relative z-0 w-full mb-6 group">
-                                                    <vee-field autocomplete="off" id="lastName" name="lastName" type="text" class="w-full h-10 text-gray-900 placeholder-transparent border-b-2 border-sidebarBG focus:outline-none focus:borer-rose-600 on:focus:bg-white" :placeholder="lastName" />
+                                                    <vee-field autocomplete="off" id="lastName" name="lastName" type="text" class="w-full h-10 pl-2 text-gray-900 border-b-2 border-sidebarBG focus:outline-none focus:borer-rose-600 on:focus:bg-white" :placeholder="lastName" />
+
 							<label for="lastName" class="absolute left-0 -top-6 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5  peer-focus:text-sm">Last Name :</label>
                                                 </div>
                                             </div>
@@ -103,7 +105,9 @@
                                             <div class="flex lg:flex-row md:flex-row sm:flex min-[320px]:flex-col w-full justify-between mt-4 min-[320px]:mt-4 lg:mt-4 lg:gap-20 md:gap-10 sm:gap-8 min-[320px]:gap-2 px-8">
                                                 <!-- country -->
                                                 <div class="relative z-0 w-full mb-6 group">
-                                                    <vee-field autocomplete="off" id="" name="country" type="text" class="w-full h-10 text-gray-900 border-b-2 border-sidebarBG focus:outline-none focus:borer-rose-600 on:focus:bg-white" :placeholder=country />
+
+                                                    <vee-field autocomplete="off" id="" name="country" type="text" class="w-full h-10 pl-2 text-gray-900 border-b-2 border-sidebarBG focus:outline-none focus:borer-rose-600 on:focus:bg-white" :placeholder="country" />
+
 							<label for="countrytName" class="absolute left-0 -top-6 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5  peer-focus:text-sm">Country:</label>
                                                       
                                                     <!-- <option v-for="country in countryList" :value="country.Name" class="w-[200px] bg-transparent">{{ country.Name }}</option> -->
@@ -113,7 +117,9 @@
                                                 <!-- select country -->
                                                 <div class="relative z-0 w-full mb-6 group">
                                                  
-                                                    <vee-field autocomplete="off" id="" name="code" type="text" class="w-full h-10 text-gray-900 placeholder-transparent border-b-2 border-sidebarBG focus:outline-none focus:borer-rose-600 on:focus:bg-white" :placeholder="code" />
+
+                                                    <vee-field autocomplete="off" id="" name="code" type="text" class="w-full h-10 pl-2 text-gray-900 border-b-2 border-sidebarBG focus:outline-none focus:borer-rose-600 on:focus:bg-white" :placeholder="code" />
+
 							<label for="code" class="absolute left-0 -top-6 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5  peer-focus:text-sm">Country Code:</label>
                                                     
 
@@ -135,7 +141,8 @@
 
                                                     <vee-field :placeholder="mobileNumber" name="mobile" type="tel" class="block py-1.5 px-0 w-full text-sm text-gray-900 bg-transparent rounded-md border-2 border-[#29379384] appearance-none dark:border-[#29379384] dark:focus:border-[#29379384] focus:outline-none focus:ring-0 focus:border-[#29379384] peer"/> -->
 
-                                                    <vee-field autocomplete="off" id="" name="mobile" type="tel" class="w-full h-10 text-gray-900 placeholder-transparent border-b-2 border-sidebarBG focus:outline-none focus:borer-rose-600 on:focus:bg-white" :placeholder="mobileNumber" />
+                                                    <vee-field autocomplete="off" id="" name="mobile" type="tel" class="w-full h-10 pl-2 text-gray-900 border-b-2 border-sidebarBG focus:outline-none focus:borer-rose-600 on:focus:bg-white" :placeholder="mobileNumber" />
+
 							<label for="mobile" class="absolute left-0 -top-6 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5  peer-focus:text-sm">Mobile Number :</label>
 
                                                 </div>
@@ -184,7 +191,9 @@
                                                     <!-- <label for="" class="text-[14px]">Email :</label>
                                                     <vee-field :placeholder="email" name="email" type="text" class="block py-1.5 px-0 w-full text-sm text-gray-900 bg-transparent rounded-md border-2 border-[#29379384] appearance-none dark:border-[#29379384] dark:focus:border-[#29379384] focus:outline-none focus:ring-0 focus:border-[#29379384] peer"/> -->
                                                     
-                                                    <vee-field autocomplete="off" id="email" name="email" type="email" class="w-full h-10 text-gray-900 placeholder-transparent border-b-2 border-sidebarBG focus:outline-none focus:borer-rose-600 on:focus:bg-white" :placeholder="email" />
+
+                                                    <vee-field autocomplete="off" id="email" name="email" type="email" class="w-full h-10 pl-2 text-gray-900 border-b-2 border-sidebarBG focus:outline-none focus:borer-rose-600 on:focus:bg-white" :placeholder="email" />
+
 							<label for="email" class="absolute left-0 -top-6 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5  peer-focus:text-sm">Email :</label>
                                                 </div>
 
@@ -193,7 +202,7 @@
                                                     <!-- <label for="" class="text-[14px]">Old Password :</label>
                                                     <vee-field name="oldPassword" type="password" class="block py-1.5 px-0 w-full text-sm text-gray-900 bg-transparent rounded-md border-2 border-[#29379384] appearance-none dark:border-[#29379384] dark:focus:border-[#29379384] focus:outline-none focus:ring-0 focus:border-[#29379384] peer"/> -->
                                                     
-                                                    <vee-field autocomplete="off" id="password" name="password" type="password" class="w-full h-10 text-gray-900 placeholder-transparent border-b-2 border-sidebarBG focus:outline-none focus:borer-rose-600 on:focus:bg-white" placeholder="password" />
+                                                    <vee-field autocomplete="off" id="password" name="password" type="password" class="w-full h-10 pl-2 text-gray-900 border-b-2 border-sidebarBG focus:outline-none focus:borer-rose-600 on:focus:bg-white" placeholder="password" />
 							<label for="password" class="absolute left-0 -top-6 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5  peer-focus:text-sm">Password :</label>
                                                     
                                                 </div>
@@ -208,7 +217,7 @@
                                                     <!-- <label for="" class="text-[14px]">New Password :</label>
                                                     <vee-field name="newPassword" type="password" class="block py-1.5 px-0 w-full text-sm text-gray-900 bg-transparent rounded-md border-2 border-[#29379384] appearance-none dark:border-[#29379384] dark:focus:border-[#29379384] focus:outline-none focus:ring-0 focus:border-[#29379384] peer"/> -->
                                                     
-                                                    <vee-field autocomplete="off" id="newPassword" name="newPassword" type="password" class="w-full h-10 text-gray-900 placeholder-transparent border-b-2 border-sidebarBG focus:outline-none focus:borer-rose-600 on:focus:bg-white" placeholder="password" />
+                                                    <vee-field autocomplete="off" id="newPassword" name="newPassword" type="password" class="w-full h-10 pl-2 text-gray-900 border-b-2 border-sidebarBG focus:outline-none focus:borer-rose-600 on:focus:bg-white" placeholder="New Password" />
 							<label for="newPassword" class="absolute left-0 -top-6 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5  peer-focus:text-sm">New Password :</label>
                                                     
                                                 </div>
@@ -218,7 +227,7 @@
                                                     <!-- <label for="" class="text-[14px]">Confirm Password :</label>
                                                     <vee-field name="confirmPassword" type="password" class="block py-1.5 px-0 w-full text-sm text-gray-900 bg-transparent rounded-md border-2 border-[#29379384] appearance-none dark:border-[#29379384] dark:focus:border-[#29379384] focus:outline-none focus:ring-0 focus:border-[#29379384] peer"/> -->
                                                     
-                                                    <vee-field autocomplete="off" id="" name="confirmPassword" type="password" class="w-full h-10 text-gray-900 placeholder-transparent border-b-2 border-sidebarBG focus:outline-none focus:borer-rose-600 on:focus:bg-white" placeholder="password" />
+                                                    <vee-field autocomplete="off" id="" name="confirmPassword" type="password" class="w-full h-10 pl-2 text-gray-900 border-b-2 border-sidebarBG focus:outline-none focus:borer-rose-600 on:focus:bg-white" placeholder="Confirm Password" />
 							<label for="confirmPassword" class="absolute left-0 -top-6 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5  peer-focus:text-sm">Confirm Password :</label>
                                                 </div>
                                             </div>
