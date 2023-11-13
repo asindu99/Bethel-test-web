@@ -51,7 +51,10 @@ lg:p-20 md:py-[10px] md:h-screen sm:p-10 min-[320px]:p-3 ">
                             <ErrorMessage name="password" class="absolute text-[12px] text-red-500 bottom-[15px]"/>
                         </div>
 
-                        <div class="w-full mt-8">
+                        <div class="relative w-full mt-8">
+                            <div>
+                                <img src="" alt="">
+                            </div>
                             <button  type="submit" class="w-full p-2 bg-sidebarBG rounded-lg px-10  text-white border-[1px] hover:bg-white hover:text-sidebarBG hover:border-[1px] hover:border-sidebarBG transition-all ease-in-out">Sign in</button>
                         </div>
                     </VeeForm>

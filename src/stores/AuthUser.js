@@ -24,6 +24,19 @@ export const authUser = defineStore('authUser', {
         userDataArr : [],
 
 
+        // designing error handling msg ------->>
+
+        // sign in loading
+        signInWait : false,
+
+        // login wait 
+        logInWait : false,
+
+        // login fail msg
+        logInFail : false,
+
+
+
     }),
 
     actions : {
@@ -55,13 +68,10 @@ export const authUser = defineStore('authUser', {
         },
 
         async postLoginData(values){
-            try {
-                
-            } catch (error) {
-                
-            }
 
-            const res = await axios.post('https://mw.bethel.network/auth/login' ,
+
+            try {
+                const res = await axios.post('https://mw.bethel.network/auth/login' ,
                 {
                     email: values.email,
                     password: values.password,  
@@ -69,13 +79,9 @@ export const authUser = defineStore('authUser', {
                 {
                     withCredentials: "true",
                     
-                }
-            );
+                });
             
-            if(res.error){
-                console.log(res.error)
-            }
-            else {
+                this.logInWait = true;
                 console.log(res)
                 this.userDetails.push(res.data)
 
@@ -113,11 +119,15 @@ export const authUser = defineStore('authUser', {
 
 
                 
-
+                this.logInWait = false;
                 router.push('/home');
+            } catch (error) {
+                this.logInFail = true;
+            }
+            
             }
         },
 
-    }
+    
 }
 )

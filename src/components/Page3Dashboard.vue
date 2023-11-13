@@ -50,8 +50,8 @@
                         <h1 class="text-white text-[14px]">Buckets</h1>
                         <div class="flex items-center">             
                           <h3 class="text-[10px] text-white">Total Buckets</h3> 
-                          <div class="ml-3 w-[30px] h-[25px] bg-blue-100 rounded-lg text-center justify-center items-center">
-                            <h1 class="text-blue-600">1</h1>
+                          <div class="ml-3 rounded-lg text-center justify-center items-center">
+                            <h1 class="text-white">1</h1>
                             </div> 
                         </div>
                         
@@ -80,8 +80,8 @@
                         <h1 class=" text-[14px]">Objects</h1>
                         <div class="flex items-center ">             
                           <h3 class="text-[10px]">Total Objects</h3> 
-                          <div class="ml-3 w-[30px] h-[25px] bg-blue-100 rounded-lg text-center justify-center items-center">
-                            <h1 class="text-blue-600">{{ storageD.filecount}}</h1>
+                          <div class="ml-3 rounded-lg text-center justify-center items-center">
+                            <h1 class="text-white">{{ storageD.filecount}}</h1>
                         </div> 
                         </div>
                         
@@ -108,8 +108,8 @@
                         <h1 class=" text-[14px]">Storage</h1>
                         <div class="flex items-center">             
                           <h3 class="text-[10px]">Total Storage</h3> 
-                          <div class="ml-3 w-[90px] h-[25px] bg-blue-100 rounded-lg text-center justify-center items-center">
-                            <h1 class="text-blue-600 ">{{ storageD.totalsize  }}</h1>
+                          <div class="ml-3  rounded-lg text-center justify-center items-center">
+                            <h1 class="text-white ">{{ storageD.totalsize  }}</h1>
                         </div> 
                         </div>
                         
@@ -136,8 +136,8 @@
                         <h1 class=" text-[14px]">Bandwidth</h1>
                         <div class="flex items-center">             
                           <h3 class="text-[10px]">Total Bandwidth</h3> 
-                          <div class="ml-3 w-[30px] h-[25px] bg-blue-100 rounded-lg text-center justify-center items-center">
-                            <h1 class="text-blue-600">0</h1>
+                          <div class="ml-3 rounded-lg text-center justify-center items-center">
+                            <h1 class="text-white">0</h1>
                         </div> 
                         </div>
                         

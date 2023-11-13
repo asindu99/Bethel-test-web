@@ -89,13 +89,13 @@
                                                 <div class="z-0 w-full mb-6 group">
                                                     <label for="" class="text-[14px]">First Name :</label>
 
-                                                    <VeeField type="text" name="firstName"  class="block py-1.5 px-0 w-full text-sm text-gray-900 bg-transparent rounded-md border-2 border-[#29379384] appearance-none  dark:border-[#29379384] dark:focus:border-[#29379384] focus:outline-none focus:ring-0 focus:border-[#29379384] peer" placeholder=" " required />
+                                                    <VeeField :placeholder="firstName" type="text" name="firstName"  class="block py-1.5 px-0 w-full text-sm text-gray-900 bg-transparent rounded-md border-2 border-[#29379384] appearance-none  dark:border-[#29379384] dark:focus:border-[#29379384] focus:outline-none focus:ring-0 focus:border-[#29379384] peer" placeholder=" " required />
                                                 </div>
 
                                                 <div class="z-0 w-full mb-6 group">
                                                     <label for="" class="text-[14px]"> Last Name:</label>
 
-                                                    <vee-field type="text" name="lastName"  class="block py-1.5 px-0 w-full text-sm text-gray-900 bg-transparent rounded-md border-2 border-[#29379384] appearance-none  dark:border-[#29379384] dark:focus:border-[#29379384] focus:outline-none focus:ring-0 focus:border-[#29379384] peer" placeholder=" " required />
+                                                    <vee-field :placeholder="firstName" type="text" name="lastName"  class="block py-1.5 px-0 w-full text-sm text-gray-900 bg-transparent rounded-md border-2 border-[#29379384] appearance-none  dark:border-[#29379384] dark:focus:border-[#29379384] focus:outline-none focus:ring-0 focus:border-[#29379384] peer" placeholder=" " required />
                                                 </div>
                                             </div>
                                             <!-- end of the name section -->
@@ -119,10 +119,9 @@
 
 
 
-                                                    <vee-field as="select"  name="code" id=""
+                                                    <vee-field type="text"  name="code" id="" :placeholder="code"
                                                      class="block py-1.5 px-0 w-full text-sm text-gray-900 bg-transparent rounded-md border-2 border-[#29379384] appearance-none dark:border-[#29379384] dark:focus:border-[#29379384] focus:outline-none focus:ring-0 focus:border-[#29379384] peer">
-                                                        <option v-for="country in countryList" :value="country.MobileCode"
-                                                          class="w-[200px] bg-transparent">{{ country.MobileCode }}</option>
+                                                        
 
                                                     </vee-field>
                                                 </div>
@@ -135,7 +134,7 @@
                                                 <div class="flex  flex-col mt-4 ">
                                                     <label for="" class="text-[14px]">Mobile Number :</label>
 
-                                                    <vee-field name="mobile" type="tel" class="block py-1.5 px-0 w-full text-sm text-gray-900 bg-transparent rounded-md border-2 border-[#29379384] appearance-none dark:border-[#29379384] dark:focus:border-[#29379384] focus:outline-none focus:ring-0 focus:border-[#29379384] peer"/>
+                                                    <vee-field :placeholder="mobileNumber" name="mobile" type="tel" class="block py-1.5 px-0 w-full text-sm text-gray-900 bg-transparent rounded-md border-2 border-[#29379384] appearance-none dark:border-[#29379384] dark:focus:border-[#29379384] focus:outline-none focus:ring-0 focus:border-[#29379384] peer"/>
 
 
                                                 </div>
@@ -176,21 +175,13 @@
                                     <!-- start of the form -->
                                     <div class="w-full">
                                         <VeeForm action="" @submit.prevent="patchAuthPassData">
-                                            <!-- old password -->
-                                            <!-- <div class="px-8">
-                                                
-                                                <div class="flex  flex-col mt-4">
-                                                    <label for="" class="text-[14px]">Email :</label>
-                                                    <vee-field name="email" type="text" class="lg:w-full md:w-full text-[#757784] bg-transparent p-1 border-2 border-[#29379384] rounded-md"/>
-                                                </div>
-                                            </div> -->
-
+                                           
                                              <!--email and oldPassword  section -->
                                              <div class="flex lg:flex-row md:flex-row sm:flex min-[320px]:flex-col w-full justify-between mt-4 lg:gap-20 md:gap-12 sm:gap-8 min-[320px]:gap-2 mt-8 px-8">
                                                 <!-- email -->
                                                 <div class="flex flex-col w-full">
                                                     <label for="" class="text-[14px]">Email :</label>
-                                                    <vee-field name="email" type="text" class="block py-1.5 px-0 w-full text-sm text-gray-900 bg-transparent rounded-md border-2 border-[#29379384] appearance-none dark:border-[#29379384] dark:focus:border-[#29379384] focus:outline-none focus:ring-0 focus:border-[#29379384] peer"/>
+                                                    <vee-field :placeholder="email" name="email" type="text" class="block py-1.5 px-0 w-full text-sm text-gray-900 bg-transparent rounded-md border-2 border-[#29379384] appearance-none dark:border-[#29379384] dark:focus:border-[#29379384] focus:outline-none focus:ring-0 focus:border-[#29379384] peer"/>
                                                 </div>
 
                                                 <!-- old password -->
@@ -258,8 +249,10 @@ data(){
 
         firstName : '',
         lastName : '',
+        mobileNumber : '',
+        email : '',
+        code : '',
         
-
 
 
         selected : {},
@@ -273,6 +266,14 @@ computed:{
 },
 mounted(){
     const userData = JSON.parse(localStorage.getItem('userDetails'))
+    const userData2 = JSON.parse(localStorage.getItem('userData'))
+    
+    this.firstName = userData.firstName
+    this.lastName = userData.lastName
+    this.code = userData.code
+    this.mobileNumber = userData.mobile
+    this.email = userData2.email
+    
 },
 methods: {
     async patchAuthUserData(values){
