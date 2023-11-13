@@ -95,6 +95,12 @@
                     <img src="../img/animationGIFs/yes.png" alt="" class="w-[20px] ml-1"> 
                   </div>
 
+                  <!-- upload fail -->
+                  <div v-if="uploadFail" class="absolute right-[2%] flex items-center">
+                    <h3 class="text-red-400 text-[12px] lg:flex md:flex sm:flex min-[320px]:hidden">Failed. </h3>
+                    <img src="../img/animationGIFs/failed.png" alt="" class="w-[20px] ml-1"> 
+                  </div>
+
                   <div class="absolute top-[-30px]">
                     <h3 class=" text-[12px] text-sidebarBG mt-2 left-[0px]">{{ filename }}</h3>
                   </div>
@@ -136,10 +142,10 @@
                   </thead>
                   <tbody>
                       <tr v-for="upload in uploadDetails" :key="upload.cid">
-                        <td class="text-[14px] min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] text-center bg-white border p-3"> {{upload.filename}}</td>
-                        <td class="text-[14px] min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] text-center bg-white border p-3">{{upload.cid}}</td>
-                        <td class="text-[14px] min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] text-center bg-white border p-3"><a :href=upload.downurl target="_blank">Download</a></td>
-                        <td class="text-[14px] min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] text-center bg-white border p-3"><a :href=upload.gcsurl target="_blank">Download</a></td>
+                        <td class="text-[14px] min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] text-center bg-white border p-3 tr-class"> {{upload.filename}}</td>
+                        <td class="text-[14px] min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] text-center bg-white border p-3 tr-class">{{upload.cid}}</td>
+                        <td class="text-[14px] min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] text-center bg-white border p-3 tr-class"><a :href=upload.downurl target="_blank">Download</a></td>
+                        <td class="text-[14px] min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] text-center bg-white border p-3 tr-class"><a :href=upload.gcsurl target="_blank">Download</a></td>
                       
                 
                      
@@ -173,7 +179,8 @@ export default {
       showClass : 'hidden',
 
       uploadWait : false,
-      uploadFinished : false
+      uploadFinished : false,
+      uploadFail : false,
 
     };
   },
@@ -219,8 +226,12 @@ export default {
         },4000)
 
       } catch (error) {
+        this.uploadWait = false;
+        this.uploadFail = true;
         console.log(error);
-        alert('Error uploading file');
+        setTimeout(() => {
+          this.uploadFail = false;
+        }, 4000);
       }
     }
   },
@@ -248,5 +259,12 @@ animation: spin 2s linear infinite;
 @keyframes spin {
 0% { transform: rotate(0deg); }
 100% { transform: rotate(360deg); }
+}
+
+.tr-class{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100px;
 }
 </style>
