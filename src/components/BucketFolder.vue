@@ -31,19 +31,11 @@
                       <!-- end of the bucket main -->
 
                   </div>
-
-                  <!-- right side button -->
-                  <!-- <div class="flex">
-                          <input type="file" id="upload" hidden>
-                          <label for="upload" class="border-[2px] px-2 py-2 rounded-xl bg-sidebarBG w-[150px] text-[white] text-center
-                          font-medium hover:text-sidebarBG hover:bg-[white] transition-all ease-linear hover:border-sidebarBG cursor-pointer">Upload file</label>
-                      
-                  </div> -->
               </div>
               <!-- end of the head section -->
               
             
-              <div class="flex flex-col py-20 px-10 mt-10  bg-white rounded-lg shadow-lg">
+              <div class="hidden flex flex-col py-20 px-10 mt-10  bg-white rounded-lg shadow-lg">
                   <h1 class="flex items-start lg:text-2xl md:text-2xl sm:text-xl min-[320px]:text-[20px] font-bold text-center mt-[-30px] text-left">You can Upload Files</h1>
                   <div class="flex lg:flex-col md:flex-col sm:flex-col items-center min-[320px]:flex-col  items-center justify-center mt-8 border-4 border-dashed rounded-lg border-blue-100 w-full py-10 min-[320px]:p-8">
                       <div class="flex flex-col">
@@ -77,6 +69,25 @@
 
                   
                   </div>
+
+              </div>
+
+              <!-- uplaod section -->
+              <div class="flex flex-col justify-center w-full bg-white rounded-md mt-5">
+                <!-- upload file decorations -->
+                <div class="flex flex-col w-full justify-center">
+                  <h3>Upload your Files here</h3>
+                  <h4>Click to upload</h4>
+                </div>
+
+                <!-- file iupload box -->
+                <div>
+                  <label for="file-uplaod" class="bg-sidebarBG py-2 px-4 rounded-md text-white ">Upload Files</label>
+                  <input type="file" id="file-uplaod" @change="handleFileUpload" hidden class="bg-red w-[300px] h-[200px]">
+
+                  <h3>{{ filename }}</h3>
+
+                </div>
 
               </div>
 
@@ -135,6 +146,7 @@ export default {
     return { 
 
       file:null,
+      filename : '',
       uploadDetails : null,
       showClass : 'hidden'
 
@@ -153,6 +165,7 @@ export default {
   methods: { 
     handleFileUpload(event) {
       this.file = event.target.files[0];
+      this.filename = event.target.files[0].name
     },
     async uploadFile() {
       this.showClass = '';

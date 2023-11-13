@@ -1,5 +1,5 @@
 <template>
-    <div class="flex">
+    <div @click="modalStore.dropMenuOC = false" class="flex">
         <!-- main side bar  -->
         <div class=" bg-sidebarBG text-sidebarText md:fixed bottom-0 md:flex z-[100] relative
         lg:w-[250px] md:w-[190px] sm:hidden gap-2
@@ -202,10 +202,6 @@
 
             <!-- router view must be here -->
             <div @click="asideHide"  class="w-full h-full mx-2 lg:pl-[240px] md:pl-[180px]" :class="modalStore.onBlur, paddingMD">
-
-                
-                
-
                 <router-view class="scale-[1] z-[0]"></router-view> 
             </div>
             <!-- end of the router view here -->
@@ -252,7 +248,7 @@ export default{
         }
     },
     async mounted(){
-        
+
         try {
             const res = await axios.post('https://mw.bethel.network/auth/user',
             {
@@ -320,9 +316,13 @@ export default{
                 localStorage.removeItem('uploadDetails');
                 localStorage.removeItem('storageDetails');
 
-
+                setTimeout(()=> {
+                window.location.reload();
+                })
             }
+
         }
     }
 }
+
 </script>
