@@ -73,19 +73,41 @@
               </div>
 
               <!-- uplaod section -->
-              <div class="flex flex-col justify-center w-full bg-white rounded-md mt-5">
+              <div class="flex lg:flex-row md:flex-col sm:flex-col min-[320px]:flex-col justify-center w-full bg-white rounded-md mt-4 py-4">
                 <!-- upload file decorations -->
-                <div class="flex flex-col w-full justify-center">
-                  <h3>Upload your Files here</h3>
-                  <h4>Click to upload</h4>
+                <div class="flex flex-col w-full justify-center items-center border-r-[1px]">
+                  <h3 class="lg:text-[26px] md:text-[18px] sm:text-[18px] min-[320px]:text-[18px] text-sidebarBG font-medium">Upload your Files here</h3>
+                  <h4 class="lg:text-[16px] md:text-[12px] sm:text-[12px] min-[320px]:text-[10px] text-gray-400">Click to upload</h4>
                 </div>
 
                 <!-- file iupload box -->
-                <div>
-                  <label for="file-uplaod" class="bg-sidebarBG py-2 px-4 rounded-md text-white ">Upload Files</label>
-                  <input type="file" id="file-uplaod" @change="handleFileUpload" hidden class="bg-red w-[300px] h-[200px]">
+                <div class="relative flex w-full justify-center items-center mt-4 gap-4">
 
-                  <h3>{{ filename }}</h3>
+                  <!-- uploading animation -->
+                  <div v-if="uploadWait" class="absolute right-[2%] flex items-center">
+                    <h3 class="text-sidebarBG text-[12px] lg:flex md:flex sm:flex min-[320px]:hidden">Uploading...</h3>
+                    <img src="../img/animationGIFs/Reload.svg" alt="" class="w-[30px]"> 
+                  </div>
+
+                  <!-- upload finished -->
+                  <div v-if="uploadFinished" class="absolute right-[2%] flex items-center">
+                    <h3 class="text-green-400 text-[12px] lg:flex md:flex sm:flex min-[320px]:hidden">Done. </h3>
+                    <img src="../img/animationGIFs/yes.png" alt="" class="w-[20px] ml-1"> 
+                  </div>
+
+                  <div class="absolute top-[-30px]">
+                    <h3 class=" text-[12px] text-sidebarBG mt-2 left-[0px]">{{ filename }}</h3>
+                  </div>
+                  
+                  
+                  <label for="file-uplaod" class="lg:text-[16px] md:text-[12px] sm:text-[12px] min-[320px]:text-[14px] 
+                  lg:w-[150px] md:w-[150px] sm:w-[150px] min-[320px]:w-[100px] text-center bg-sidebarBG py-2 px-4 rounded-md text-white  cursor-pointer">Choose</label>
+
+                  <input type="file" id="file-uplaod" @change="handleFileUpload" hidden class="">
+
+                  <button @click="uploadFile" class="lg:w-[150px] md:w-[150px] sm:w-[150px] min-[320px]:w-[100px]
+                  lg:text-[16px] md:text-[12px] sm:text-[12px] min-[320px]:text-[14px]
+                   text-center bg-sidebarBG py-2 px-4 rounded-md text-white">Upload</button>
 
                 </div>
 
@@ -148,7 +170,10 @@ export default {
       file:null,
       filename : '',
       uploadDetails : null,
-      showClass : 'hidden'
+      showClass : 'hidden',
+
+      uploadWait : false,
+      uploadFinished : false
 
     };
   },
@@ -168,6 +193,7 @@ export default {
       this.filename = event.target.files[0].name
     },
     async uploadFile() {
+      this.uploadWait = true;
       this.showClass = '';
       const formData = new FormData();
       formData.append('file', this.file);
@@ -185,8 +211,13 @@ export default {
         });
         console.log(response.data);
         this.showClass = 'hidden';
-        alert('File uploaded successfully');
-        
+        this.uploadWait = false;
+        this.uploadFinished = true;
+
+        setTimeout(()=>{
+          this.uploadFinished = false;
+        },4000)
+
       } catch (error) {
         console.log(error);
         alert('Error uploading file');
