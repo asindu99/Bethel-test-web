@@ -123,6 +123,7 @@ export const authUser = defineStore('authUser', {
                 router.push('/home');
             } catch (error) {
                 this.logInFail = true;
+                this.logInWait = false;
             }
             
             }

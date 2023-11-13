@@ -81,7 +81,7 @@
                         <div class="flex items-center ">             
                           <h3 class="text-[10px]">Total Objects</h3> 
                           <div class="ml-3 rounded-lg text-center justify-center items-center">
-                            <h1 class="text-white">{{ storageD.filecount}}</h1>
+                            <h1 class="text-white">- {{ storageD.filecount}}</h1>
                         </div> 
                         </div>
                         
@@ -109,7 +109,7 @@
                         <div class="flex items-center">             
                           <h3 class="text-[10px]">Total Storage</h3> 
                           <div class="ml-3  rounded-lg text-center justify-center items-center">
-                            <h1 class="text-white ">{{ storageD.totalsize  }}</h1>
+                            <h1 class="text-white ">- {{ storageD.totalsize  }}</h1>
                         </div> 
                         </div>
                         
@@ -137,7 +137,7 @@
                         <div class="flex items-center">             
                           <h3 class="text-[10px]">Total Bandwidth</h3> 
                           <div class="ml-3 rounded-lg text-center justify-center items-center">
-                            <h1 class="text-white">0</h1>
+                            <h1 class="text-white">- 0</h1>
                         </div> 
                         </div>
                         
@@ -291,7 +291,7 @@
 
                                 <div class="flex flex-col items-center justify-center mt-[2px]">
                                     <h3 class="text-[14px]">Files</h3>
-                                    <h3 class="text-[#8d8d8d] text-[12px] ml-1">0 files</h3>
+                                    <h3 class="text-[#8d8d8d] text-[12px] ml-1">{{storageD.filecount}} files</h3>
                                 </div>
                             </div>
 
@@ -420,7 +420,7 @@
 import {mapStores} from 'pinia'
 import {useWalletData} from '@/stores/DataStore'
 import {authUser} from '@/stores/AuthUser'
-import router from '@/router/index';
+
 
 import Chart from 'chart.js/auto';
 
@@ -458,7 +458,7 @@ export default {
             console.log(storageDetails)
             this.storageD = storageDetails[0]
         } catch (error) {
-            this.storageD = {filecount : '0' , filesize : '0'}
+            
         } 
             
   
@@ -475,7 +475,7 @@ export default {
             labels: ['Used', 'Remaining'],
             datasets: [{
                 label: 'Storage',
-                data: [0,1],
+                data: [this.storageD.totalsize , 10000],
                 backgroundColor: [
             'rgb(86, 105, 204)',
             'rgb(233, 152, 60)',
@@ -501,7 +501,7 @@ export default {
     const myChart2 = new Chart(ctx1, {
         type: 'line',
     data: {
-      labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun','Jul','Aug', 'Sep','Oct','Nov','Dec'],
+      labels: ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'],
       datasets: [{
         label: 'Transactions',
         data: [],
@@ -520,7 +520,7 @@ export default {
       labels: ['files', 'videos', 'images', 'musics',],
       datasets: [{
         label: 'Used (GB)',
-        data: [],
+        data: [this.storageD.totalsize],
         borderWidth: 2,
         backgroundColor: [
             'rgb(86, 105, 204)'

@@ -59,19 +59,19 @@
             <!-- wallet table -->
             <div class=" w-[100%] mx-auto mt-4 bg-white rounded-lg px-2 shadow-sm">
                 <!-- start of the table -->
-                <table class="table-auto border-separate py-2 w-full rounded-lg">
-                    <thead class="">
-                        <tr class="">
+                <table class="table border-separate py-2 w-full rounded-lg">
+                    <thead class="w-full">
+                        <tr class="w-full">
                         <th class="text-[14px] min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] border p-3 bg-blue-50">WALLET ADDRESS</th>
                         <th class="text-[14px] min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] border p-3 bg-blue-50">SEEDS</th>
                         <th class="text-[14px] min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] border p-3 bg-blue-50">PUBLIC KEY</th>
                         </tr>
                     </thead>
-                    <tbody class="">
-                        <tr v-for="wallet in walletData" :key="wallet.Waddress" class="w-full">
-                            <td class="text-[14px] min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] text-center bg-white border p-3 "> {{wallet.publicaddr}}</td>
-                            <td class="text-[14px] min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] text-center bg-white border p-3">{{wallet.seeds}}</td>
-                            <td class="text-[14px] min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] text-center bg-white border p-3">{{ wallet.addr }}</td>
+                    <tbody class="w-full">
+                        <tr v-for="wallet in walletData" :key="wallet.Waddress" class="w-full tr-class">
+                            <td class="text-[14px] min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] text-center bg-white border p-3 tr-class"> {{wallet.publicaddr}}</td>
+                            <td class="text-[14px] min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] text-center bg-white border p-3 tr-class">{{wallet.seeds}}</td>
+                            <td class="text-[14px] min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] text-center bg-white border p-3 tr-class">{{ wallet.addr }}</td>
                         
                         </tr>
 
@@ -361,3 +361,13 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+.tr-class{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100px;
+}
+
+</style>

@@ -11,8 +11,9 @@ lg:p-20 md:py-[10px] md:h-screen sm:p-10 min-[320px]:p-3 ">
 
         <img class="w-[600px] lg:hidden md:hidden sm:hidden min-[320px]:flex sm:w-[300px]" src="../../../img/images/LoginSignup-page-images/BG-img-login2.jpg" alt="">
 
-        <div class="flex flex-1 px-20 lg:py-20 md:py-5 lg:w-[600px] lg:rounded-l-xl md:w-full
-        min-[320px]:py-10 bg-blue-50">
+        <div class="flex flex-1 lg:px-20 md:px-20 sm:px-20 min-[320px]:px-4
+         lg:py-20 md:py-20 lg:w-[600px] lg:rounded-l-xl md:w-full
+        min-[320px]:py-20 bg-blue-50">
             <!-- left side log in content -->
             <div class="flex flex-col w-full items-start justify-center">
 
@@ -52,7 +53,7 @@ lg:p-20 md:py-[10px] md:h-screen sm:p-10 min-[320px]:p-3 ">
                         </div>
 
                         <div class="relative w-full mt-8">
-                            <div v-if="authUserStore.logInWait" class="absolute top-2 right-[5%]">
+                            <div v-if="authUserStore.logInWait" class="absolute top-2 right-[2%]">
                                 <img src="../../../img/animationGIFs/Rolling.svg" alt="" class="w-[25px]">
                             </div>
                             <button  type="submit" class="w-full p-2 bg-sidebarBG rounded-lg px-10  text-white border-[1px] hover:bg-white hover:text-sidebarBG hover:border-[1px] hover:border-sidebarBG transition-all ease-in-out">Sign in</button>
@@ -62,9 +63,20 @@ lg:p-20 md:py-[10px] md:h-screen sm:p-10 min-[320px]:p-3 ">
                 <!-- end of the form sec -->
 
                 <!-- new account creation -->
-                <div class="w-full text-center mt-2">
+                <div class="w-full text-center mt-2 relative">
                     <h3 class="text-[#999898] text-[14px]">New to our platform ? <router-link to="/signup"><span class="text-[#29379386]">Create an account</span></router-link> </h3>
+
+                    <!-- error msg displaying if user name or pasword is invalid -->
+                    <div :class="loginHide" v-if="!!authUserStore.logInFail" class="w-full fle justify-center absolute bottom-[-60px]">
+                        <!-- err msg  -->
+                        <div class="bg-bethelOrange w-full flex justify-center p-3 rounded-md ">
+                            <h3 class="lg:text-[14px] md:text-[14px] sm:text-[14px] min-[320px]:text-[11px] text-white">Invalid Email or Password! Please Try again..</h3>
+                        </div>
+                    </div>
+
                 </div>
+
+                
 
             </div>
             <!-- end of the left side content -->
@@ -103,6 +115,9 @@ export default{
             // logindetails array
             loginDetailsArr : [],
 
+            // hide the error msg on login fail
+            loginHide : ''
+
         }
     },
     async mounted(){
@@ -116,7 +131,12 @@ export default{
     methods : {
         onSubmit(values){
             this.authUserStore.logInWait = true;
+            this.authUserStore.logInFail = false;
             this.authUserStore.postLoginData(values);
+            
+            setTimeout(()=> {
+                this.loginHide = 'hidden';
+            },4000)
         }
     }
     
