@@ -57,7 +57,7 @@
             
 
             <!-- wallet table -->
-            <div class=" w-[100%] mx-auto mt-4 bg-white rounded-lg px-2 shadow-sm ">
+            <div class=" w-[100%] mx-auto mt-4 bg-white rounded-lg px-2 shadow-sm">
                 <!-- start of the table -->
                 <table class="table-auto border-separate py-2 w-full rounded-lg">
                     <thead class="">
@@ -67,9 +67,9 @@
                         <th class="text-[14px] min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] border p-3 bg-blue-50">PUBLIC KEY</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr v-for="wallet in walletData" :key="wallet.Waddress">
-                            <td class="text-[14px] min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] text-center bg-white border p-3"> {{wallet.publicaddr}}</td>
+                    <tbody class="">
+                        <tr v-for="wallet in walletData" :key="wallet.Waddress" class="w-full">
+                            <td class="text-[14px] min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] text-center bg-white border p-3 "> {{wallet.publicaddr}}</td>
                             <td class="text-[14px] min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] text-center bg-white border p-3">{{wallet.seeds}}</td>
                             <td class="text-[14px] min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] text-center bg-white border p-3">{{ wallet.addr }}</td>
                         

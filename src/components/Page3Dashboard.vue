@@ -452,18 +452,19 @@ export default {
         
     },
     created(){
-        // get storage 
+        // get storage
+        try {
             const storageDetails = JSON.parse(localStorage.getItem('storageDetails'))
             console.log(storageDetails)
             this.storageD = storageDetails[0]
-            // if(this.storageD.lenth !== 0){
-            //     console.log("this is when arra is not null")
-            // }else{
-            //     console.log("this is when array is null")
-            // }
-        
+        } catch (error) {
+            this.storageD = {filecount : '0' , filesize : '0'}
+        } 
+            
+  
     },
     mounted(){
+        
         const ctx = document.getElementById('myChart');
         const ctx1 = document.getElementById('myChart2');
         const ctx2 = document.getElementById('myChart3');

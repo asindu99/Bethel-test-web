@@ -52,8 +52,8 @@ lg:p-20 md:py-[10px] md:h-screen sm:p-10 min-[320px]:p-3 ">
                         </div>
 
                         <div class="relative w-full mt-8">
-                            <div class="absolute ">
-                                <img src="../../../img/animationGIFs/Rolling.gif" alt="" class="w-[25px]">
+                            <div v-if="authUserStore.logInWait" class="absolute top-2 right-[5%]">
+                                <img src="../../../img/animationGIFs/Rolling.svg" alt="" class="w-[25px]">
                             </div>
                             <button  type="submit" class="w-full p-2 bg-sidebarBG rounded-lg px-10  text-white border-[1px] hover:bg-white hover:text-sidebarBG hover:border-[1px] hover:border-sidebarBG transition-all ease-in-out">Sign in</button>
                         </div>
@@ -89,8 +89,7 @@ lg:p-20 md:py-[10px] md:h-screen sm:p-10 min-[320px]:p-3 ">
 <script>
 import {mapStores} from 'pinia'
 import { authUser } from '@/stores/AuthUser';
-import axios from 'axios';
-import router from '@/router/index'
+
 
 export default{
     name : 'LoginContent',
@@ -116,6 +115,7 @@ export default{
     },
     methods : {
         onSubmit(values){
+            this.authUserStore.logInWait = true;
             this.authUserStore.postLoginData(values);
         }
     }

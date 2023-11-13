@@ -252,6 +252,7 @@ export default{
         }
     },
     async mounted(){
+        
         try {
             const res = await axios.post('https://mw.bethel.network/auth/user',
             {
