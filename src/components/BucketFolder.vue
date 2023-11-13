@@ -77,7 +77,7 @@
                 <!-- upload file decorations -->
                 <div class="flex flex-col w-full justify-center items-center border-r-[1px]">
                   <h3 class="lg:text-[26px] md:text-[18px] sm:text-[18px] min-[320px]:text-[18px] text-sidebarBG font-medium">Upload your Files here</h3>
-                  <h4 class="lg:text-[16px] md:text-[12px] sm:text-[12px] min-[320px]:text-[10px] text-gray-400">Click to upload</h4>
+                  <h4 class="lg:text-[16px] md:text-[12px] sm:text-[12px] min-[320px]:text-[10px] text-gray-400">Click Choose</h4>
                 </div>
 
                 <!-- file iupload box -->
@@ -184,6 +184,16 @@ export default {
 
     };
   },
+  async updated(){
+    const uploadDetails2 = JSON.parse(localStorage.getItem('uploadDetails'))
+    this.uploadDetails = uploadDetails2
+    console.log(this.uploadDetails)
+
+    const storageDetails = JSON.parse(localStorage.getItem('storageDetails'))
+    console.log(storageDetails)
+    this.storageD = storageDetails[0]
+  },
+
   mounted(){
     const uploadDetails2 = JSON.parse(localStorage.getItem('uploadDetails'))
     this.uploadDetails = uploadDetails2
@@ -216,7 +226,7 @@ export default {
         },{
           withCredentials : true,
         });
-        console.log(response.data);
+    
         this.showClass = 'hidden';
         this.uploadWait = false;
         this.uploadFinished = true;
@@ -225,7 +235,19 @@ export default {
           this.uploadFinished = false;
         },4000)
 
+        const res2 = await axios.get('https://mw.bethel.network/storage/' + this.authUserStore.userID ,
+        {withCredentials :true})
+                
+        // save wallet details
+        localStorage.setItem('uploadDetails', JSON.stringify(res2.data))
+        
+
+        const uploadDetails2 = JSON.parse(localStorage.getItem('uploadDetails'))
+        this.uploadDetails = uploadDetails2
+        console.log(this.uploadDetails)
+
       } catch (error) {
+
         this.uploadWait = false;
         this.uploadFail = true;
         console.log(error);

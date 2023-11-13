@@ -451,6 +451,9 @@ export default {
         ...mapStores(useWalletData, authUser),
         
     },
+    updated(){
+        
+    },
     created(){
         // get storage
         try {
