@@ -452,18 +452,8 @@ export default {
         
     },
     updated(){
-        try {
-            const storageDetails = JSON.parse(localStorage.getItem('storageDetails'))
-            console.log(storageDetails)
-            this.storageD = storageDetails[0]
-        } catch (error) {
-            
-        } 
-
-        const storageDetails = JSON.parse(localStorage.getItem('storageDetails'))
-    console.log(storageDetails)
-    this.storageD = storageDetails[0]
-  },
+        
+    },
     
     created(){
         // get storage
@@ -477,7 +467,20 @@ export default {
             
   
     },
-    mounted(){
+    async mounted(){
+        try {
+            const res3 = await axios.get('https://mw.bethel.network/storagedetails/' + this.userID,
+            {withCredentials : true})
+            localStorage.setItem('storageDetails', JSON.stringify(res3.data))
+        } catch (error) {
+                    
+        }
+
+        const storageDetails = JSON.parse(localStorage.getItem('storageDetails'))
+        console.log(storageDetails)
+        this.storageD = storageDetails[0]
+        
+
         
         const ctx = document.getElementById('myChart');
         const ctx1 = document.getElementById('myChart2');

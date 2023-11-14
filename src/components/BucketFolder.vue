@@ -75,7 +75,9 @@
               <!-- uplaod section -->
               <div class="flex lg:flex-row md:flex-col sm:flex-col min-[320px]:flex-col justify-center w-full bg-white rounded-md mt-4 py-4">
                 <!-- upload file decorations -->
-                <div class="flex flex-col w-full justify-center items-center border-r-[1px]">
+                <div class="bg-red-400 px-4 mx-3 py-3
+                flex flex-col w-full justify-center items-center border-r-[1px]
+                ">
                   <h3 class="lg:text-[26px] md:text-[18px] sm:text-[18px] min-[320px]:text-[18px] text-sidebarBG font-medium">Upload your Files here</h3>
                   <h4 class="lg:text-[16px] md:text-[12px] sm:text-[12px] min-[320px]:text-[10px] text-gray-400">Click Choose</h4>
                 </div>
@@ -136,7 +138,7 @@
                       <tr class="">
                       <th class="text-[14px] min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] border p-3 bg-blue-50">File Name</th>
                       <th class="text-[14px] min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] border p-3 bg-blue-50">CID</th>
-                      <th class="text-[14px] min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] border p-3 bg-blue-50">BECX URL</th>
+                      <th class="text-[14px] min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] border p-3 bg-blue-50">IPFS URL</th>
                       <th class="text-[14px] min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] border p-3 bg-blue-50">GCS URL</th>
                       </tr>
                   </thead>
@@ -184,7 +186,7 @@ export default {
 
     };
   },
-  async updated(){
+  updated(){
     const uploadDetails2 = JSON.parse(localStorage.getItem('uploadDetails'))
     this.uploadDetails = uploadDetails2
     console.log(this.uploadDetails)
