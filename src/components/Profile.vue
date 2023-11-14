@@ -79,9 +79,9 @@
                                                 <!-- country -->
                                                 <div class="relative z-0 w-full mb-6 group">
 
-                                                    <vee-field 
+                                                    <vee-field v-model="selected"
                                                     as="select"  name="country" class="w-full h-10 pl-2 text-gray-900 border-b-2 border-sidebarBG focus:outline-none focus:borer-rose-600 on:focus:bg-white">
-
+                                                    
                                                     <option v-for="country in countryList" 
                                                     :key="country.Code" :value="country.Name"
                                                       class="w-[200px] bg-transparent">{{ country.Name }}</option>
@@ -95,7 +95,7 @@
 
                                                 <vee-field
                                                 as="select" v-model="selected" :value="selected" name="code" class="w-full h-10 pl-2 text-gray-900 border-b-2 border-sidebarBG focus:outline-none focus:borer-rose-600 on:focus:bg-white">
-                                                    <option :value="selected.MobileCode">{{ selected.MobileCode }}</option>
+                                                    <option :value="selected">{{ selected }}</option>
                                                 </vee-field>
                                                 
                                                 <label class="absolute left-0 -top-6 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5  peer-focus:text-sm">Country Code:</label>
