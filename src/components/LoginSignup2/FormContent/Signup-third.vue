@@ -9,7 +9,7 @@
         <VeeForm @submit="onReg" :validation-schema="signupSchema" class="">
             <!-- email div -->
             
-                <div class="flex w-full justify-center gap-y-12 mt-8 lg:flex-col md:flex-col sm:flex-col min-[320px]:flex-col  lg:px-10 md:px-40 sm:px-10 min-[320px]:px-5">
+                <div class="flex w-full justify-center gap-y-12 lg:flex-col md:flex-col sm:flex-col min-[320px]:flex-col  lg:px-10 md:px-40 sm:px-10 pt-14">
                     <!-- email div -->
                     <div class="relative flex flex-col">
                         <vee-field autocomplete="off" id="email" name="email" type="email" class="w-full h-10 text-gray-900 placeholder-transparent border-b-2 border-sidebarBG bg-blue-50 focus:outline-none focus:borer-rose-600 on:focus:bg-white" placeholder="email" />
@@ -31,7 +31,7 @@
                 </div>
 
                 <!-- password and confirm password section -->
-                <div class="flex w-full justify-center gap-y-12 mt-4 lg:flex-col md:flex-col sm:flex-col min-[320px]:flex-col  lg:px-10 md:px-40 sm:px-10 min-[320px] pt-8 :px-5">
+                <div class="flex w-full justify-center gap-y-12 mt-4 lg:flex-col md:flex-col sm:flex-col min-[320px]:flex-col  lg:px-10 md:px-40 sm:px-10  pt-8 ">
                     <!-- password div -->
                     <div class="relative flex flex-col">
                         <!-- <label for="" class="text-[14px]">Password :</label>
@@ -64,7 +64,7 @@
                     </router-link>
                 </div> -->
 
-                <div class="flex flex-col justify-between w-full mt-10 lg:px-10 md:px-40 sm:px-10 min-[320px]:px-5">
+                <div class="flex flex-col justify-between w-full mt-10 lg:px-10 md:px-40 sm:px-10 ">
 
                     <!-- tos name -->
                     <div class="relative flex items-center gap-2 mt-4">
@@ -75,7 +75,7 @@
 
                     <!-- <router-link to="/mobile-verify"> -->
                     <div class="flex justify-between w-full mt-4">
-                        <button type="submit" class="p-2 bg-sidebarBG rounded-lg px-10  text-white border-[1px] hover:bg-white hover:text-sidebarBG hover:border-[1px] hover:border-sidebarBG transition-all ease-in-out">Create Account</button>
+                        <button type="submit" class=" bg-sidebarBG rounded-lg w-full p-2 text-white border-[1px] hover:bg-white hover:text-sidebarBG hover:border-[1px] hover:border-sidebarBG transition-all ease-in-out">Create Account</button>
                     </div>
                     <!-- </router-link> -->
 </div>
