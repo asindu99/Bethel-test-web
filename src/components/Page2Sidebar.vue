@@ -1,5 +1,5 @@
 <template>
-    <div class="flex">
+    <div @click="modalStore.dropMenuOC = false" class="flex">
         <!-- main side bar  -->
         <div class=" bg-sidebarBG text-sidebarText md:fixed bottom-0 md:flex z-[100] relative
         lg:w-[250px] md:w-[190px] sm:hidden gap-2
@@ -133,39 +133,40 @@
                 </router-link>
                 <!-- end of the menu item -->
 
-                    <!-- menu item -->
-                    <router-link to="/">
-                        <button @click="logout">
+                <a href="https://docs.bethel.network/" class="active" target="_blank">
                             <div class="lg:ml-7 md:ml-6 min-[320px]:flex sm:flex lg:flex md:flex w-full lg:px-3 md:px-0  hover:bg-[] my-2 py-2">
-                                <span class=" material-symbols-outlined top-2 right-[20px]  mr-2
-                                ">
-                                    logout
-                                </span>  
-                                <h3 :class="sidebarHideShow">Log Out </h3>       
+                                <span class=" material-symbols-outlined top-2 right-[20px] mr-2
+                            
+                            ">
+                            support
+                            </span>  
+                            <h3 :class="sidebarHideShow">Help </h3>
+                                     
                             </div>
-                        </button>      
-                    </router-link>
+                </a>
                     <!-- end of the menu item -->
             </div>
             <!-- end of the account section -->
 
             <!-- logout -->
             <!-- menu item -->
-            <a href="https://docs.bethel.network/" class="active" target="_blank">
+            
+                <!-- menu item -->
+                <router-link to="/">
+                        <button @click="logout">
                         <div class="lg:ml-7 md:ml-6 min-[320px]:flex sm:flex lg:flex md:flex w-full lg:px-3 md:px-0  my-2 py-2
                         absolute bottom-2">
-                            <span class=" material-symbols-outlined top-2 right-[20px] mr-2
-                            
-                            ">
-                            support
-                            </span>  
-                            <h3 :class="sidebarHideShow">Help </h3>
+                        <span class=" material-symbols-outlined top-2 right-[20px]  mr-2
+                                ">
+                                    logout
+                                </span>  
+                                <h3 :class="sidebarHideShow">Log Out </h3>  
                         
                         </div>
+                    </button>      
+                    </router-link>
 
-                        
-                    </a>
-                    <!-- end of the menu item -->
+            <!-- end of the menu item -->
         </div>
         <!-- end of the sidebar content -->
 
@@ -202,10 +203,6 @@
 
             <!-- router view must be here -->
             <div @click="asideHide"  class="w-full h-full mx-2 lg:pl-[240px] md:pl-[180px]" :class="modalStore.onBlur, paddingMD">
-
-                
-                
-
                 <router-view class="scale-[1] z-[0]"></router-view> 
             </div>
             <!-- end of the router view here -->
@@ -252,6 +249,7 @@ export default{
         }
     },
     async mounted(){
+
         try {
             const res = await axios.post('https://mw.bethel.network/auth/user',
             {
@@ -319,9 +317,13 @@ export default{
                 localStorage.removeItem('uploadDetails');
                 localStorage.removeItem('storageDetails');
 
-
+                setTimeout(()=> {
+                window.location.reload();
+                })
             }
+
         }
     }
 }
-</script>
+
+ </script>

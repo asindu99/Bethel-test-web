@@ -25,9 +25,9 @@
              basis-[42%] gap-2 justify-end">
 
                 <!-- <router-link to="/wallet"> -->
-                    <button @click="oncok" class="mr-2 text-[10px] border-[2px] rounded-xl p-[7px] px-[18px]
+                    <button disabled @click="oncok" class="mr-2 text-[10px] border-[2px] rounded-xl p-[7px] px-[18px]
                      bg-sidebarBG text-white border-sidebarBG
-                     hover:bg-white hover:text-sidebarBG transition-all ease-linear sm:hidden min-[320px]:hidden lg:flex md:flex">Connect Wallet
+                      hover:text-red-200 transition-all ease-linear sm:hidden min-[320px]:hidden lg:flex md:flex">Connect Wallet
                     </button>
                 <!-- </router-link> -->
                 
@@ -46,7 +46,7 @@
                     <!-- end of drop down button  -->
 
                     <!-- drop down content -->
-                    <div  v-if="modalStore.dropMenuOC" class="absolute w-[250px] bg-sidebarBG text-sidebarText right-0 top-[55px] rounded-lg p-1 border-[2px] animate__animated animate__fadeInDown">
+                    <div  v-if="modalStore.dropMenuOC" class="absolute w-[250px] bg-sidebarBG text-sidebarText right-0 top-[55px] rounded-lg p-1 border-[2px]">
 
                         <!-- box 1 -->
                         <RouterLink to="/Mobile-Verification">
@@ -145,7 +145,7 @@
             enter-active-class="animate__animated animate__fadeInLeft"
             leave-active-class="animate__animated animate__fadeOutLeft"
         >
-        <div v-if="modalStore.isOpen" class="
+        <div @click="modalStore.dropMenuOC = false" v-if="modalStore.isOpen" class="
         relative bg-sidebarBG lg:w-[220px] md:w-[150px] sm:w-[250px] sm:fixed z-[0]
         min-[320px]:fixed min-[320px]:top-0 min-[320px]:bottom-0 min-[320px]:z-[10] min-[320px]:w-[200px]
          lg:hidden md:hidden flex-col shadow-md pt-4">

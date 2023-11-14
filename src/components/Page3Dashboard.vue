@@ -50,8 +50,8 @@
                         <h1 class="text-white text-[14px]">Buckets</h1>
                         <div class="flex items-center">             
                           <h3 class="text-[10px] text-white">Total Buckets</h3> 
-                          <div class="ml-3 w-[30px] h-[25px] bg-blue-100 rounded-lg text-center justify-center items-center">
-                            <h1 class="text-blue-600">1</h1>
+                          <div class="ml-3 rounded-lg text-center justify-center items-center">
+                            <h1 class="text-white">- 1</h1>
                             </div> 
                         </div>
                         
@@ -80,8 +80,8 @@
                         <h1 class=" text-[14px]">Objects</h1>
                         <div class="flex items-center ">             
                           <h3 class="text-[10px]">Total Objects</h3> 
-                          <div class="ml-3 w-[30px] h-[25px] bg-blue-100 rounded-lg text-center justify-center items-center">
-                            <h1 class="text-blue-600">{{ storageD.filecount}}</h1>
+                          <div class="ml-3 rounded-lg text-center justify-center items-center">
+                            <h1 class="text-white">- {{ storageD.filecount}}</h1>
                         </div> 
                         </div>
                         
@@ -108,8 +108,8 @@
                         <h1 class=" text-[14px]">Storage</h1>
                         <div class="flex items-center">             
                           <h3 class="text-[10px]">Total Storage</h3> 
-                          <div class="ml-3 w-[90px] h-[25px] bg-blue-100 rounded-lg text-center justify-center items-center">
-                            <h1 class="text-blue-600 ">{{ storageD.totalsize  }}</h1>
+                          <div class="ml-3  rounded-lg text-center justify-center items-center">
+                            <h1 class="text-white ">- {{ storageD.totalsize  }}</h1>
                         </div> 
                         </div>
                         
@@ -136,8 +136,8 @@
                         <h1 class=" text-[14px]">Bandwidth</h1>
                         <div class="flex items-center">             
                           <h3 class="text-[10px]">Total Bandwidth</h3> 
-                          <div class="ml-3 w-[30px] h-[25px] bg-blue-100 rounded-lg text-center justify-center items-center">
-                            <h1 class="text-blue-600">0</h1>
+                          <div class="ml-3 rounded-lg text-center justify-center items-center">
+                            <h1 class="text-white">- 0</h1>
                         </div> 
                         </div>
                         
@@ -291,7 +291,7 @@
 
                                 <div class="flex flex-col items-center justify-center mt-[2px]">
                                     <h3 class="text-[14px]">Files</h3>
-                                    <h3 class="text-[#8d8d8d] text-[12px] ml-1">0 files</h3>
+                                    <h3 class="text-[#8d8d8d] text-[12px] ml-1">{{storageD.filecount}} files</h3>
                                 </div>
                             </div>
 
@@ -420,7 +420,7 @@
 import {mapStores} from 'pinia'
 import {useWalletData} from '@/stores/DataStore'
 import {authUser} from '@/stores/AuthUser'
-import router from '@/router/index';
+
 
 import Chart from 'chart.js/auto';
 
@@ -451,19 +451,34 @@ export default {
         ...mapStores(useWalletData, authUser),
         
     },
+    updated(){
+        
+    },
+    
     created(){
-        // get storage 
+        // get storage
+        try {
             const storageDetails = JSON.parse(localStorage.getItem('storageDetails'))
             console.log(storageDetails)
             this.storageD = storageDetails[0]
-            // if(this.storageD.lenth !== 0){
-            //     console.log("this is when arra is not null")
-            // }else{
-            //     console.log("this is when array is null")
-            // }
-        
+        } catch (error) {
+            
+        } 
+            
+  
     },
-    mounted(){
+    async mounted(){
+        try {
+            const res3 = await axios.get('https://mw.bethel.network/storagedetails/' + this.userID,
+            {withCredentials : true})
+            localStorage.setItem('storageDetails', JSON.stringify(res3.data))
+        } catch (error) {
+            
+        }
+        const storageDetails = JSON.parse(localStorage.getItem('storageDetails'))
+        console.log(storageDetails)
+        this.storageD = storageDetails[0]
+
         const ctx = document.getElementById('myChart');
         const ctx1 = document.getElementById('myChart2');
         const ctx2 = document.getElementById('myChart3');
@@ -474,7 +489,7 @@ export default {
             labels: ['Used', 'Remaining'],
             datasets: [{
                 label: 'Storage',
-                data: [0,1],
+                data: [this.storageD.totalsize , 10000],
                 backgroundColor: [
             'rgb(86, 105, 204)',
             'rgb(233, 152, 60)',
@@ -500,7 +515,7 @@ export default {
     const myChart2 = new Chart(ctx1, {
         type: 'line',
     data: {
-      labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun','Jul','Aug', 'Sep','Oct','Nov','Dec'],
+      labels: ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'],
       datasets: [{
         label: 'Transactions',
         data: [],
@@ -518,8 +533,8 @@ export default {
     data: {
       labels: ['files', 'videos', 'images', 'musics',],
       datasets: [{
-        label: 'Used (GB)',
-        data: [],
+        label: 'Used (KB)',
+        data: [this.storageD.totalsize],
         borderWidth: 2,
         backgroundColor: [
             'rgb(86, 105, 204)'

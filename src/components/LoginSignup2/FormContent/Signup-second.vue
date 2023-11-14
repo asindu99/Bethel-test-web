@@ -22,7 +22,7 @@
         :validation-schema="createAccSchema">
             <div class="lg:flex-row md:flex-row sm:flex min-[320px]:flex-col justify-between w-full mt-10">
                     <!-- first name -->
-                    <div class="flex flex-col relative">
+                    <div class="relative flex flex-col">
                         <label for="" class="text-[14px]">First Name :</label>
                         <VeeField name="FirstName" type="text" class="lg:w-[235px] md:w-[240px] text-[#757784] bg-transparent p-1 border-b-2 border-[#29379384] "/>
                         <ErrorMessage name="FirstName" class="absolute text-[12px] text-red-500 bottom-[-20px]"/>
@@ -73,7 +73,7 @@
                 <div class="flex justify-between w-full mt-4">
 
                     <!-- first name -->
-                    <div class="flex flex-col relative">
+                    <div class="relative flex flex-col">
                         <label for="" class="text-[14px]">Mobile Number :</label>
                         <VeeField name="mobile" type="Number" class="text-[#757784] bg-transparent p-1 border-b-2 border-[#29379384]
                         [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none "/>
@@ -85,7 +85,7 @@
                 <div class="flex flex-col justify-between w-full mt-4">
 
                     <!-- tos name -->
-                    <div class="flex items-center gap-2 mt-4 relative">
+                    <div class="relative flex items-center gap-2 mt-4">
                         <VeeField name="tos" type="checkbox" value="0" class="scale-[1.3]"/>
                         <ErrorMessage name="tos" class="absolute text-[12px] text-red-500 bottom-[-20px]"/>
                         <label for="" class="text-[12px]">I agree to the terms of Bethel Platform cloud terms of service , General terms of service and Privacy Policy </label>

@@ -66,7 +66,7 @@
             <!-- S3 API Endpoint -->
             <div class="relative mt-10 ">
                 <div class="w-[2px] h-[20px] bg-bethelBlue absolute top-[5px] "></div>
-                <h3 class="ml-2 text-[20px] font-medium">S3 API Endpoint</h3> 
+                <h3 class="ml-2 text-[20px] font-medium">GCS API Endpoint</h3> 
             </div>  
             <!-- end of the S3 API Endpoint -->
 
@@ -132,8 +132,8 @@ export default {
     name : 'Page5AccessKey',
     data(){
         return{
-            text : 'https://api.bethel.io/v1/ipfs',
-            text2 :'https://api.bethel.io/v1/ipfsasda'
+            text : 'https://public.bethel.io/v1/ipfs',
+            text2 :'https://storage.bethel.io/v1/ipfsasda'
         }
     },
 

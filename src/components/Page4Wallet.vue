@@ -2,7 +2,7 @@
     <div class="relative lg:px-0 md:px-5 sm:px-4 min-[320px]:px-2">
         <!-- wallet section -->
 
-    <div :class="walletStore.authBlur" class="px-2">
+    <div class="px-2">
         <div  class="lg:w-[100%] md:w-[100%] sm:w-[100%] min-[320px]:w-[full]">
             <!-- head wallet div  -->
             <div class="flex items-center justify-between shadow-sm rounded-lg px-3 py-3 bg-white">
@@ -36,7 +36,7 @@
                 <!-- right side button -->
                 <div class="flex">
                     <div>
-                        <button @click="openAuthModal" class="border-[2px] px-2 py-2 rounded-xl bg-sidebarBG w-[150px] text-[white] 
+                        <button :class="disBtn" @click="addFaucet" class="border-[2px] px-2 py-2 rounded-xl bg-sidebarBG w-[150px] text-[white] 
                         font-medium hover:text-sidebarBG hover:bg-[white] transition-all ease-linear hover:border-sidebarBG">Create Faucet</button>
                     </div>
                     
@@ -57,21 +57,21 @@
             
 
             <!-- wallet table -->
-            <div class=" w-[100%] mx-auto mt-4 bg-white rounded-lg px-2 shadow-sm ">
+            <div class=" w-[100%] mx-auto mt-4 bg-white rounded-lg px-2 shadow-sm">
                 <!-- start of the table -->
-                <table class="table-auto border-separate py-2 w-full rounded-lg">
-                    <thead class="">
-                        <tr class="">
+                <table class="table border-separate py-2 w-full rounded-lg">
+                    <thead class="w-full">
+                        <tr class="w-full">
                         <th class="text-[14px] min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] border p-3 bg-blue-50">WALLET ADDRESS</th>
                         <th class="text-[14px] min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] border p-3 bg-blue-50">SEEDS</th>
                         <th class="text-[14px] min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] border p-3 bg-blue-50">PUBLIC KEY</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr v-for="wallet in walletData" :key="wallet.Waddress">
-                            <td class="text-[14px] min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] text-center bg-white border p-3"> {{wallet.publicaddr}}</td>
-                            <td class="text-[14px] min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] text-center bg-white border p-3">{{wallet.seeds}}</td>
-                            <td class="text-[14px] min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] text-center bg-white border p-3">{{ wallet.addr }}</td>
+                    <tbody class="w-full">
+                        <tr v-for="wallet in walletData" :key="wallet.Waddress" class="w-full tr-class">
+                            <td class="text-[14px] min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] text-center bg-white border p-3 tr-class"> {{wallet.publicaddr}}</td>
+                            <td class="text-[14px] min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] text-center bg-white border p-3 tr-class">{{wallet.seeds}}</td>
+                            <td class="text-[14px] min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] text-center bg-white border p-3 tr-class">{{ wallet.addr }}</td>
                         
                         </tr>
 
@@ -165,7 +165,7 @@
         <Transition 
         enter-active-class="animate__animated animate__zoomIn animate__faster"
         leave-active-class="animate__animated animate__zoomOut">
-        <div v-if="walletStore.openClose" class="
+        <div class="hidden 
         absolute lg:top-[5%] lg:left-[25%] md:top-[5%] md:left-[15%] sm:top-[5%] sm:left-[10%] min-[320px]:top-[5%] min-[320px]:left-[2%]
          lg:w-[500px] md:w-[500px] sm:w-[500px] min-[320px]:w-[350px]
           shadow-mlg bg-white rounded-2xl p-2 border-[2px]">
@@ -316,8 +316,6 @@
 </template>
 
 <script>
-import {mapStores} from 'pinia'
-import {useWalletData} from '@/stores/DataStore';
 import axios from 'axios';
 
 export default {
@@ -327,29 +325,20 @@ export default {
             // moreButton open and close
             isMore : false,
 
-            // show seeds
-            showSeedValue : false,
+            // disable button 
+            disBtn : null,
 
-            // transation details array
-            transactionArr : [],
-
-            // wallet Trasaction details arr
-            walletTransactionDetailArr : [],
-
-            // wallets count
+            // wallet data arr
             walletData : [],
         }
     },
-    async mounted(){
-        const userData = JSON.parse(localStorage.getItem('walletDetails'))
-        this.walletData.push(userData)
-        console.log(this.walletData)
+    // async mounted(){
+    //     const userData = JSON.parse(localStorage.getItem('walletDetails'))
+    //     this.walletData.push(userData)
+    //     console.log(this.walletData)
             
         
-    },
-    computed : {
-        ...mapStores(useWalletData)
-    },
+    // },
 
     methods : {
         openAuthModal(){
@@ -361,31 +350,24 @@ export default {
             this.walletStore.openClose = false;
             this.walletStore.authBlur = '';
         },
-        deleteWalletData(wallet){
-            this.walletStore.walletTableArr = this.walletStore.walletTableArr.filter((item) => {
-                return wallet !== item
-            });
 
-        },
-
-        // handleSubmit(values){
-        //     console.log(values)
-        // },
-
-        // transferData(values){         
-        //     this.walletTransactionDetailArr.push(values);
-        // },
-        // submitData(){
-        //     this.walletStore.openClose = false;
-        //     this.walletStore.addData();
-        // },
-
-        // transferData(values){
-        //     this.walletStore.addTransactionData(values)
+        async addFaucet(){
+            this.disBtn = 'pointer-events-none';
+            // JSON.parse(localStorage.getItem('walletDetails'))
+            const userData = JSON.parse(localStorage.getItem('walletDetails'))
+            this.walletData.push(userData)
             
-            
-        // },
-
+        }
     }
 }
 </script>
+
+<style scoped>
+.tr-class{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100px;
+}
+
+</style>
