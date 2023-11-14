@@ -80,9 +80,11 @@
                                                 <div class="relative z-0 w-full mb-6 group">
 
                                                     <vee-field
-                                                    as="select" v-model="selected" name="country" class="w-full h-10 pl-2 text-gray-900 border-b-2 border-sidebarBG focus:outline-none focus:borer-rose-600 on:focus:bg-white" :placeholder="country">
-                                                    <option v-for="country in countryList" :value="country.Name" class="w-[200px] bg-transparent">{{ country.Name }}</option>
+                                                    as="select" v-model="selected" name="country" class="w-full h-10 pl-2 text-gray-900 border-b-2 border-sidebarBG focus:outline-none focus:borer-rose-600 on:focus:bg-white">
+
+                                                    <option v-for="country in countryList" :value="country.Name"  class="w-[200px] bg-transparent">{{ country.Name }}</option>
                                                     </vee-field>
+
 							<label class="absolute left-0 -top-6 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5  peer-focus:text-sm">Country:</label>
                                                 </div>
 
@@ -118,10 +120,17 @@
                                                 </div>
 
                                                 <!-- button -->
-                                                <div class="flex flex-col mt-8">
+                                                <div class="relative flex flex-col mt-8">
                                                     
-                                                    <button type="submit" class="w-[200px] p-2 bg-sidebarBG rounded-lg px-8 text-white border-[1px] hover:bg-white hover:text-sidebarBG hover:border-[1px] hover:border-sidebarBG transition-all ease-in-out text-[14px]">Save Changes</button>
-                                                    
+                                                    <button type="submit" class=" w-[200px] p-2 bg-sidebarBG rounded-lg px-8 text-white border-[1px] hover:bg-white hover:text-sidebarBG hover:border-[1px] hover:border-sidebarBG transition-all ease-in-out text-[14px]">Save Changes</button>
+
+                                                    <div v-if="isUpdating" class="absolute left-[170px] top-[10px]">
+                                                        <img src="../img/animationGIFs/Rolling.svg" alt="" class="w-[20px]">
+                                                    </div>
+
+                                                    <div v-if="updated" class="text-green-400 absolute bottom-[-25px] left-10">
+                                                        <h3 class="text-[12px]">Update Success!</h3>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </VeeForm>
@@ -235,6 +244,7 @@ import router from '@/router/index'
 import {mapStores} from 'pinia'
 import axios from 'axios';
 import { authUser } from '@/stores/AuthUser'
+
 export default{
 name : 'Profile',
 
@@ -255,6 +265,10 @@ data(){
 
         userData : null,
         userDetail : null,
+
+        // update styles 
+        isUpdating : false,
+        updated : false,
         
 
 
@@ -284,6 +298,7 @@ async mounted(){
 },
 methods: {
     async patchAuthUserData(values){
+        console.log(values);
             const details = {
                 details: {
                     "firstName": values.firstName,
@@ -292,8 +307,9 @@ methods: {
                     "code": values.code,
                     "mobile": values.mobile
                 }
-            }; 
+            };
 
+            this.isUpdating = true;
             const res = await axios.patch('https://mw.bethel.network/users/' + this.authUserStore.userID,
             details,
             {withCredentials :true},
@@ -313,6 +329,13 @@ methods: {
 
             localStorage.setItem('userDetails', JSON.stringify(res2.data.details));
             this.userDetail = JSON.parse(localStorage.getItem('userDetails'));
+
+            this.updated = true
+            this.isUpdating = false
+
+            setTimeout(() => {
+                this.updated = false;
+            }, 2000);
             
         }
 
