@@ -473,15 +473,12 @@ export default {
             {withCredentials : true})
             localStorage.setItem('storageDetails', JSON.stringify(res3.data))
         } catch (error) {
-                    
+            
         }
-
         const storageDetails = JSON.parse(localStorage.getItem('storageDetails'))
         console.log(storageDetails)
         this.storageD = storageDetails[0]
-        
 
-        
         const ctx = document.getElementById('myChart');
         const ctx1 = document.getElementById('myChart2');
         const ctx2 = document.getElementById('myChart3');

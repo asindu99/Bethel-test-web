@@ -133,39 +133,40 @@
                 </router-link>
                 <!-- end of the menu item -->
 
-                    <!-- menu item -->
-                    <router-link to="/">
-                        <button @click="logout">
+                <a href="https://docs.bethel.network/" class="active" target="_blank">
                             <div class="lg:ml-7 md:ml-6 min-[320px]:flex sm:flex lg:flex md:flex w-full lg:px-3 md:px-0  hover:bg-[] my-2 py-2">
-                                <span class=" material-symbols-outlined top-2 right-[20px]  mr-2
-                                ">
-                                    logout
-                                </span>  
-                                <h3 :class="sidebarHideShow">Log Out </h3>       
+                                <span class=" material-symbols-outlined top-2 right-[20px] mr-2
+                            
+                            ">
+                            support
+                            </span>  
+                            <h3 :class="sidebarHideShow">Help </h3>
+                                     
                             </div>
-                        </button>      
-                    </router-link>
+                </a>
                     <!-- end of the menu item -->
             </div>
             <!-- end of the account section -->
 
             <!-- logout -->
             <!-- menu item -->
-            <a href="https://docs.bethel.network/" class="active" target="_blank">
+            
+                <!-- menu item -->
+                <router-link to="/">
+                        <button @click="logout">
                         <div class="lg:ml-7 md:ml-6 min-[320px]:flex sm:flex lg:flex md:flex w-full lg:px-3 md:px-0  my-2 py-2
                         absolute bottom-2">
-                            <span class=" material-symbols-outlined top-2 right-[20px] mr-2
-                            
-                            ">
-                            support
-                            </span>  
-                            <h3 :class="sidebarHideShow">Help </h3>
+                        <span class=" material-symbols-outlined top-2 right-[20px]  mr-2
+                                ">
+                                    logout
+                                </span>  
+                                <h3 :class="sidebarHideShow">Log Out </h3>  
                         
                         </div>
+                    </button>      
+                    </router-link>
 
-                        
-                    </a>
-                    <!-- end of the menu item -->
+            <!-- end of the menu item -->
         </div>
         <!-- end of the sidebar content -->
 

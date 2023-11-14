@@ -222,7 +222,10 @@ export default {
 
         const uploadDetails2 = JSON.parse(localStorage.getItem('uploadDetails'))
         this.uploadDetails = uploadDetails2
-        console.log(this.uploadDetails)
+
+        this.file = null;
+        this.drag = '',
+        this.filename = '';
 
       } catch (error) {
         this.file = null;
