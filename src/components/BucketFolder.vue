@@ -228,6 +228,7 @@ export default {
         this.filename = '';
 
       } catch (error) {
+        console.log(error)
         this.file = null;
         this.drag = '',
         this.filename = '';
