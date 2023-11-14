@@ -46,7 +46,7 @@
                     <!-- end of drop down button  -->
 
                     <!-- drop down content -->
-                    <div  v-if="modalStore.dropMenuOC" class="absolute w-[250px] bg-sidebarBG text-sidebarText right-0 top-[55px] rounded-lg p-1 border-[2px] animate__animated animate__fadeInDown">
+                    <div  v-if="modalStore.dropMenuOC" class="absolute w-[250px] bg-sidebarBG text-sidebarText right-0 top-[55px] rounded-lg p-1 border-[2px]">
 
                         <!-- box 1 -->
                         <RouterLink to="/Mobile-Verification">
