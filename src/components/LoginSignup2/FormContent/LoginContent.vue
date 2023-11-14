@@ -3,16 +3,16 @@
 
 <!-- main container  -->
 <div class="w-full lg:h-screen flex justify-center items-center 
-lg:p-20 md:py-[10px] md:h-screen sm:p-10 min-[320px]:p-3 ">
+lg:py-40 md:py-[10px] md:h-screen sm:p-10 min-[320px]:p-3 lg:px-20 ">
 
     <div class="lg:flex-row md:flex sm:flex-col-reverse min-[320px]:flex-col
-     rounded-xl shadow-lg bg-white w-full">
+     rounded-xl shadow-lg bg-white w-full ">
         <!-- login side left  -->
 
         <img class="w-[600px] lg:hidden md:hidden sm:hidden min-[320px]:flex sm:w-[300px]" src="../../../img/images/LoginSignup-page-images/BG-img-login2.jpg" alt="">
 
         <div class="flex flex-1 lg:px-20 md:px-20 sm:px-20 min-[320px]:px-4
-         lg:py-20 md:py-20 lg:w-[600px] lg:rounded-l-xl md:w-full
+         lg:py-0 md:py-10 lg:w-[600px] lg:rounded-l-xl md:w-full
         min-[320px]:py-20 bg-blue-50">
             <!-- left side log in content -->
             <div class="flex flex-col items-start justify-center w-full">
@@ -21,8 +21,8 @@ lg:p-20 md:py-[10px] md:h-screen sm:p-10 min-[320px]:p-3 ">
                     <img src="../../../img/logos/bethellogo.png" alt="" class="w-[80px]">
                 </div>
                     <!-- TOP CAPTION SEC -->
-                <div class="w-full mt-2 text-center">
-                    <h3 class="text-sidebarBG font-bold text-[25px]">Welcome to the BETHEL!</h3>
+                <div class="w-full mt-2 text-center ">
+                    <h3 class="text-sidebarBG font-bold text-[25px]">Welcome to BETHEL!</h3>
                     <p class="text-[#757784] text-[14px]">Please sign in to the your account and start the adventure!</p>
                     <!-- <h3 class="text-[white] text-[14px] bg-bethelOrange p-2 mt-2 rounded-md">Please use Firefox Browser for Better Experience, support for other browsers will be made soon.</h3> -->
                 </div>
@@ -60,7 +60,7 @@ lg:p-20 md:py-[10px] md:h-screen sm:p-10 min-[320px]:p-3 ">
                 <!-- end of the form sec -->
 
                 <!-- new account creation -->
-                <div class="relative w-full mt-2 text-center">
+                <div class="relative w-full pb-10 mt-2 text-center">
                     <h3 class="text-[#999898] text-[14px]">New to our platform ? <router-link to="/signup"><span class="text-[#29379386]">Create an account</span></router-link> </h3>
 
                     <!-- error msg displaying if user name or pasword is invalid -->

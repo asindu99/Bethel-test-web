@@ -1,15 +1,15 @@
 <template>
     <!-- top account information text section -->
-    <div class="flex flex-col w-full mt-8">
+    <div class="flex flex-col w-full lg:px-10 md:px-40 sm:px-10">
                     <h3 class="text-[20px] text-sidebarBG">Account Information</h3>
                     <h4 class="text-[14px] text-[#757784]">Enter Your email address and password details ! </h4>
-                </div>
+    </div>
 
-                <hr class="w-full mt-2">
-        <VeeForm @submit="onReg" :validation-schema="signupSchema" class="">
+    <hr class="w-full mt-2">
+    <VeeForm @submit="onReg" :validation-schema="signupSchema" class="mt-14">
             <!-- email div -->
             
-                <div class="flex w-full justify-center gap-y-12 lg:flex-col md:flex-col sm:flex-col min-[320px]:flex-col  lg:px-10 md:px-40 sm:px-10 pt-14">
+                <div class="flex w-full justify-center mt-4 lg:flex-col md:flex-col sm:flex-col min-[320px]:flex-col  lg:px-10 md:px-40 sm:px-10 gap-y-10">
                     <!-- email div -->
                     <div class="relative flex flex-col">
                         <vee-field autocomplete="off" id="email" name="email" type="email" class="w-full h-10 text-gray-900 placeholder-transparent border-b-2 border-sidebarBG bg-blue-50 focus:outline-none focus:borer-rose-600 on:focus:bg-white" placeholder="email" />
@@ -31,7 +31,7 @@
                 </div>
 
                 <!-- password and confirm password section -->
-                <div class="flex w-full justify-center gap-y-12 mt-4 lg:flex-col md:flex-col sm:flex-col min-[320px]:flex-col  lg:px-10 md:px-40 sm:px-10  pt-8 ">
+                <div class="flex w-full justify-center mt-4 lg:flex-col md:flex-col sm:flex-col min-[320px]:flex-col  lg:px-10 md:px-40 sm:px-10  gap-y-10 pt-8">
                     <!-- password div -->
                     <div class="relative flex flex-col">
                         <!-- <label for="" class="text-[14px]">Password :</label>
@@ -64,7 +64,7 @@
                     </router-link>
                 </div> -->
 
-                <div class="flex flex-col justify-between w-full mt-10 lg:px-10 md:px-40 sm:px-10 ">
+                <div class="flex flex-col justify-between w-full mt-4 lg:px-10 md:px-40 sm:px-10 gap-y-2">
 
                     <!-- tos name -->
                     <div class="relative flex items-center gap-2 mt-4">
@@ -74,7 +74,7 @@
                     </div>
 
                     <!-- <router-link to="/mobile-verify"> -->
-                    <div class="flex justify-between w-full mt-4">
+                    <div class="flex justify-between w-full mt-8">
                         <button type="submit" class=" bg-sidebarBG rounded-lg w-full p-2 text-white border-[1px] hover:bg-white hover:text-sidebarBG hover:border-[1px] hover:border-sidebarBG transition-all ease-in-out">Create Account</button>
                     </div>
                     <!-- </router-link> -->
@@ -82,7 +82,7 @@
                 
 
                 
-        </VeeForm>
+    </VeeForm>
                 
 </template>
 
@@ -130,17 +130,17 @@ export default{
 
 input[type=text]:focus {
   border: 2px solid #5669cc ;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 input[type=password]:focus {
   border: 2px solid #5669cc ;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 input[type=email]:focus {
   border: 2px solid #5669cc ;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 

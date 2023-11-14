@@ -1,10 +1,10 @@
 <template>
-    <div class="w-full h-full lg:px-10 justify-center items-center flex flex-col ">
+    <div class="flex flex-col items-center justify-center w-full h-full lg:px-10 ">
 
         <!-- bethel logo div -->
-    <div class="flex md:items-center lg:justify-start md:justify-center w-full gap-1">
+    <div class="flex w-full gap-1 md:items-center lg:justify-start md:justify-center">
         <img class="w-[30px]" src="../../../img/logos/bethellogo.png" alt="">
-        <h3 class="text-sidebarBG font-medium ">BETHEL</h3>
+        <h3 class="font-medium text-sidebarBG ">BETHEL</h3>
     </div>
 
         
@@ -14,8 +14,8 @@
             <form action="">
                 <!---------------------- router view goes here------------------- -->
                 <!-- <router-view></router-view> -->
-                <SignupThird v-if="modalStore.toggleSignLog"/>
-                <SignupSecond v-else/>
+                <SignupThird></SignupThird>
+                
 
             </form>
         </div>
