@@ -44,7 +44,7 @@
                 <!------Login----->
                 <div class="mt-5 text-sm text-gray-600">
                     <!-- <RouterLink to=""><h3 class="text-center cursor-pointer hover:underline">Create an account!</h3></RouterLink> -->
-                    <h3 class="text-center">Already have an account?<RouterLink to="/"><a class="cursor-pointer text-sidebarBG"> Login</a></RouterLink></h3>
+                    <h3 class="text-center">Already have an account?<RouterLink to="/changePassword"><a class="cursor-pointer text-sidebarBG"> Login</a></RouterLink></h3>
                     
                 </div>
             </div>

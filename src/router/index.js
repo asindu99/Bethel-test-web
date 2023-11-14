@@ -20,6 +20,8 @@ import LoginContent from '@/components/LoginSignup2/FormContent/LoginContent.vue
 import Profile from '@/components/Profile.vue';
 import NewFolder from '@/components/NewFolder.vue';
 import FogotPasswordContent from '@/components/LoginSignup2/FormContent/FogotPasswordContent.vue'
+import ChangePasswordComponent from '@/components/LoginSignup2/FormContent/ChangePasswordComponent.vue'
+
 
 const routes = [
     // main section routings
@@ -113,6 +115,10 @@ const routes = [
     {
       path:'/forgot',
       component:FogotPasswordContent,
+    },
+    {
+      path:'/changePassword',
+      component:ChangePasswordComponent,
     }
 
   ]
