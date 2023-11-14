@@ -1,6 +1,6 @@
 <template>
     <!-- top account information text section -->
-    <div class="flex flex-col w-full mt-2">
+    <div class="flex flex-col w-full">
                     <h3 class="text-[20px] text-sidebarBG">Account Information</h3>
                     <h4 class="text-[14px] text-[#757784]">Enter Your email address and password details ! </h4>
                 </div>
@@ -62,51 +62,12 @@
                 
 
                 <div class="lg:flex-row md:flex-row sm:flex min-[320px]:flex-col justify-between w-full mt-10">
-                    <!-- first name -->
-                    <div class="flex flex-col relative">
-                        <label for="" class="text-[14px]">First Name :</label>
-                        <VeeField name="FirstName" type="text" class="lg:w-[235px] md:w-[240px] text-[#757784] bg-transparent p-1 border-b-2 border-[#29379384] "/>
-                        <ErrorMessage name="FirstName" class="absolute text-[12px] text-red-500 bottom-[-20px]"/>
-
-                    </div>
-
-                    <!-- last name -->
-                    <div class="flex flex-col min-[320px]:mt-4 lg:mt-0 md:mt-0 sm:mt-0 relative">
-                        <label for="" class="text-[14px]">Last Name :</label>
-                        <VeeField name="LastName" type="text" class="lg:w-[235px] text-[#757784] bg-transparent p-1 border-b-2 border-[#29379384] outline-1"/>
-                        <ErrorMessage name="LastName" class="absolute text-[12px] text-red-500 bottom-[-20px]"/>
-
-                    </div>
+                    
                 </div>
 
 
                 <div class="justify-between w-full mt-8 lg:flex-row md:flex-row sm:flex min-[320px]:flex-col">
 
-                    <!-- Select country name -->
-                    <div  class="flex flex-col">
-                        <label for="" class="text-[14px]">Select Country :</label>
-                        <!-- <input type="text" class=" bg-transparent p-1 border-b-2 border-[#29379384] outline-none"> -->
-
-                        <vee-field as="select" name="country" v-model="selected" class="text-[#757784] bg-transparent p-1 border-b-2 border-[#29379384]  lg:w-[235px] md:w-[230px] min-[320px]:w-full w-[340px]">
-                            <option v-for="country in countryList" :value="country.Name" class="w-[200px] bg-transparent">
-                                {{ country.Name }}
-                            </option>
-                        </vee-field>
-
-                        
-                    </div>
-
-                    <!-- last name -->
-                    <div  class="flex flex-col min-[302px]:mt-4 lg:mt-0 md:mt-0 sm:mt-0">
-                        <label for="" class="text-[14px]">Country Code :</label>
-
-                        <VeeField as="select"  name="code" class="text-[#757784] bg-transparent p-1 border-b-2 border-[#29379384]  lg:w-[235px] md:w-[230px] min-[320px]:w-full w-[340px]">
-                            <option v-for="code in countryList" :value="code.MobileCode" class="w-[200px] bg-transparent">
-                                {{ code.MobileCode }}
-                            </option>
-                        </VeeField>
-                        <!-- <input type="text" class="text-[#757784] bg-transparent p-1 border-b-2 border-[#29379384] outline-none"> -->
-                    </div>
 
                 </div>
 
