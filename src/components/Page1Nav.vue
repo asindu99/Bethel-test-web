@@ -25,9 +25,9 @@
              basis-[42%] gap-2 justify-end">
 
                 <!-- <router-link to="/wallet"> -->
-                    <button @click="oncok" class="mr-2 text-[10px] border-[2px] rounded-xl p-[7px] px-[18px]
+                    <button disabled @click="oncok" class="mr-2 text-[10px] border-[2px] rounded-xl p-[7px] px-[18px]
                      bg-sidebarBG text-white border-sidebarBG
-                     hover:bg-white hover:text-sidebarBG transition-all ease-linear sm:hidden min-[320px]:hidden lg:flex md:flex">Connect Wallet
+                      hover:text-red-200 transition-all ease-linear sm:hidden min-[320px]:hidden lg:flex md:flex">Connect Wallet
                     </button>
                 <!-- </router-link> -->
                 
