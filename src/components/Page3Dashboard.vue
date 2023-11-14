@@ -533,7 +533,7 @@ export default {
     data: {
       labels: ['files', 'videos', 'images', 'musics',],
       datasets: [{
-        label: 'Used (GB)',
+        label: 'Used (KB)',
         data: [this.storageD.totalsize],
         borderWidth: 2,
         backgroundColor: [
