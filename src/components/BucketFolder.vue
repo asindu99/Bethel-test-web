@@ -101,7 +101,7 @@
                     <img src="../img/animationGIFs/failed.png" alt="" class="w-[20px] ml-1"> 
                   </div>
 
-                  <div class="absolute top-[-30px]">
+                  <div class="absolute bottom-[-45px]">
                     <h3 class=" text-[12px] text-sidebarBG mt-2 left-[0px]">{{ filename }}</h3>
                   </div>
                   

@@ -51,7 +51,7 @@
                         <div class="flex items-center">             
                           <h3 class="text-[10px] text-white">Total Buckets</h3> 
                           <div class="ml-3 rounded-lg text-center justify-center items-center">
-                            <h1 class="text-white">1</h1>
+                            <h1 class="text-white">- 1</h1>
                             </div> 
                         </div>
                         
@@ -452,8 +452,19 @@ export default {
         
     },
     updated(){
-        
-    },
+        try {
+            const storageDetails = JSON.parse(localStorage.getItem('storageDetails'))
+            console.log(storageDetails)
+            this.storageD = storageDetails[0]
+        } catch (error) {
+            
+        } 
+
+        const storageDetails = JSON.parse(localStorage.getItem('storageDetails'))
+    console.log(storageDetails)
+    this.storageD = storageDetails[0]
+  },
+    
     created(){
         // get storage
         try {

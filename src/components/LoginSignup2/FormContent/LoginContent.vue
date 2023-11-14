@@ -133,7 +133,7 @@ export default{
             
             setTimeout(()=> {
                 this.loginHide = 'hidden';
-            },4000)
+            },8000)
         }
     }
     
