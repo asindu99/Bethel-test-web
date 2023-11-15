@@ -118,11 +118,6 @@
                                             <div class="px-8">
                                                 <!-- mobile number -->
                                                 <div class="relative flex flex-col mt-4 ">
-                                                    <!-- <label for="" class="text-[14px]">Mobile Number :</label>
-
-                                                    <vee-field :placeholder="mobileNumber" name="mobile" type="tel" class="block py-1.5 px-0 w-full text-sm text-gray-900 bg-transparent rounded-md border-2 border-[#29379384] appearance-none dark:border-[#29379384] dark:focus:border-[#29379384] focus:outline-none focus:ring-0 focus:border-[#29379384] peer"/> -->
-
-                                                    <!-- <vee-field autocomplete="off" id="" name="mobile" type="tel" class="w-full h-10 pl-2 text-gray-900 border-b-2 border-sidebarBG focus:outline-none focus:borer-rose-600 on:focus:bg-white" :placeholder="mobileNumber" /> -->
                                                     
                                                     <vee-field ref="anyName3o" autocomplete="off" id="" name="mobile" type="tel" class="h-10 pl-2 text-gray-900 border-b-2 lg:w-[544px] border-sidebarBG focus:outline-none focus:borer-rose-600 on:focus:bg-white" :placeholder="mobileNumber" />
 
@@ -171,16 +166,24 @@
                                 <!-- <div class="px-8 py-4 mt-2 bg-blue-50"> -->
                                     <hr class="w-full mt-2">
 
+
+
+
+
+
                                     <!-- start of the form -->
                                     <div class="w-full">
-                                        <vee-form @submit="patchAuthPassData">
+                                        <vee-form  @submit.prevent="patchAuthPassData" :validation-schema="changePassSchema">
                                             
                                                 <!--email and oldPassword  section -->
                                                 <div class="flex lg:flex-row md:flex-row sm:flex min-[320px]:flex-col w-full justify-between lg:gap-20 md:gap-12 sm:gap-8 min-[320px]:gap-2 mt-8 px-8">
                                                 <!-- email -->
                                                 <div class="relative flex flex-col w-full">
 
-                                                    <vee-field name="email" type="email" class="w-full h-10 pl-2 text-gray-900 border-b-2 border-sidebarBG focus:outline-none focus:borer-rose-600 on:focus:bg-white" :placeholder="email" />
+                                                    <vee-field v-model="emails" name="email" type="email" class="relative w-full h-10 pl-2 text-gray-900 border-b-2 border-sidebarBG focus:outline-none focus:borer-rose-600 on:focus:bg-white" :placeholder="email" />
+                                                    <ErrorMessage name="email" class="text-red-400 absolute bottom-[-15px] text-[12px]" />
+
+
 
                                                     <label for="email" class="absolute left-0 -top-6 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5  peer-focus:text-sm">Email :</label>
                                                 </div>
@@ -189,7 +192,9 @@
                                                 <div class="flex flex-col min-[320px]:mt-4 lg:mt-0 md:mt-0 w-full relative">
                                                     
 
-                                                    <vee-field autocomplete="off" id="password" name="oldPassword" type="password" class="w-full h-10 pl-2 text-gray-900 border-b-2 border-sidebarBG focus:outline-none focus:borer-rose-600 on:focus:bg-white" placeholder="password" />
+                                                    <vee-field v-model="passowords"  id="password" name="oldPassword" type="password" class="realtive w-full h-10 pl-2 text-gray-900 border-b-2 border-sidebarBG focus:outline-none focus:borer-rose-600 on:focus:bg-white" placeholder="password" />
+                                                    <ErrorMessage name="oldPassword" class="text-red-400 absolute bottom-[-15px] text-[12px]" />
+
                                                     <label for="password" class="absolute left-0 -top-6 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5  peer-focus:text-sm">Password :</label>
 
                                                     
@@ -203,7 +208,9 @@
                                                 <!-- new password -->
                                                 <div class="relative flex flex-col w-full">
                                                     
-                                                    <vee-field  name="newPassword" type="password" class="w-full h-10 pl-2 text-gray-900 border-b-2 border-sidebarBG focus:outline-none focus:borer-rose-600 on:focus:bg-white" placeholder="New Password" />
+                                                    <vee-field v-model="newPasswords" name="newPassword" type="password" class="relative w-full h-10 pl-2 text-gray-900 border-b-2 border-sidebarBG focus:outline-none focus:borer-rose-600 on:focus:bg-white" placeholder="New Password" />
+                                                    <ErrorMessage name="newPassword" class="text-red-400 absolute bottom-[-15px] text-[12px]" />
+
 
                                                     <label for="newPassword" class="absolute left-0 -top-6 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5  peer-focus:text-sm">New Password :</label>
 
@@ -214,8 +221,10 @@
                                                 <div class="flex flex-col min-[320px]:mt-4 lg:mt-0 md:mt-0 w-full relative">
                                                     
 
-                                                    <vee-field  id="" name="confirmPassword" type="password" class="w-full h-10 pl-2 text-gray-900 border-b-2 border-sidebarBG focus:outline-none focus:borer-rose-600 on:focus:bg-white" placeholder="Confirm Password" />
-                                                    <label for="confirmPassword" class="absolute left-0 -top-6 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5  peer-focus:text-sm">Confirm Password :</label>
+                                                    <vee-field  id="" name="confirm_password" type="password" class="relative w-full h-10 pl-2 text-gray-900 border-b-2 border-sidebarBG focus:outline-none focus:borer-rose-600 on:focus:bg-white" placeholder="Confirm Password" />
+                                                    <ErrorMessage name="confirm_password" class="text-red-400 absolute bottom-[-15px] text-[12px]" />
+
+                                                    <label class="absolute left-0 -top-6 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5  peer-focus:text-sm">Confirm Password :</label>
 
                                                 </div>
                                             </div>
@@ -223,7 +232,7 @@
 
                                             
                                             <!-- button -->
-                                            <div class="relative flex flex-col px-8 mt-8">
+                                            <!-- <div class="relative flex flex-col px-8 mt-8"> -->
                                                 
                                                 <button type="submit" class="w-[200px] p-2 bg-sidebarBG rounded-lg px-8 text-white border-[1px] hover:bg-white hover:text-sidebarBG hover:border-[1px] hover:border-sidebarBG transition-all ease-in-out text-[14px]">Change Password</button>
 
@@ -236,7 +245,7 @@
                                                 </div>
                                                 
                                             
-                                            </div>
+                                            <!-- </div> -->
 
                                         </vee-form>
                                     </div>
@@ -279,6 +288,21 @@ export default{
                 tos: "tos",
                 country: 'required'
             },
+
+            changePassSchema : {
+                email: "required|min:3|max:100|email",
+                oldPassword: "required|min:2|max:100",
+                newPassword : "required|min:9|max:100",
+                confirm_password: "passwords_mismatch:@newPassword",
+
+            },
+
+            emails : '',
+            passwords : '',
+            newPasswords : '',
+
+            selecteds : {},
+
             selected: {},
             firstName: '',
             lastName: '',
@@ -364,8 +388,9 @@ export default{
             
         }
     },
-    patchAuthPassData(values) {
-        console.log(values)
+    patchAuthPassData(values1) {
+        console.log(values1)
+        console.log(this.emails)
         this.isPassing = true;
 
         // const passDetails = {
