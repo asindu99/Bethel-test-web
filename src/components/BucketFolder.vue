@@ -2,8 +2,8 @@
   <div class="relative lg:px-2 md:px-5 sm:px-4 min-[320px]:px-2 mb-10">
   
       <!-- bucket section -->
-      <div :class="authBlur">
-          <div :class="authBlur" class="lg:w-[100%] md:w-[100%] sm:w-[100%] min-[320px]:w-[full]">
+      <div>
+          <div class="lg:w-[100%] md:w-[100%] sm:w-[100%] min-[320px]:w-[full]">
               <!-- head storage div  -->
               <div class="flex items-center justify-between shadow-sm rounded-lg px-3 py-3 bg-white">
                   <!-- left side text -->
@@ -158,19 +158,16 @@ export default {
     };
   },
   updated(){
-    const uploadDetails2 = JSON.parse(localStorage.getItem('uploadDetails'))
-    this.uploadDetails = uploadDetails2
-    console.log(this.uploadDetails)
+    // const uploadDetails2 = JSON.parse(localStorage.getItem('uploadDetails'))
+    // this.uploadDetails = uploadDetails2
 
-    const storageDetails = JSON.parse(localStorage.getItem('storageDetails'))
-    console.log(storageDetails)
-    this.storageD = storageDetails[0]
+    // const storageDetails = JSON.parse(localStorage.getItem('storageDetails'))
+    // this.storageD = storageDetails[0]
   },
 
   mounted(){
     const uploadDetails2 = JSON.parse(localStorage.getItem('uploadDetails'))
     this.uploadDetails = uploadDetails2
-    console.log(this.uploadDetails)
     
 
   },
@@ -229,12 +226,13 @@ export default {
 
       } catch (error) {
         console.log(error)
+        
         this.file = null;
         this.drag = '',
         this.filename = '';
         this.uploadWait = false;
         this.uploadFail = true;
-        console.log(error);
+
         setTimeout(() => {
           this.uploadFail = false;
         }, 4000);

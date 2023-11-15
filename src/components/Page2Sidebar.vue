@@ -257,7 +257,6 @@ export default{
             });
 
             if(res.status === 200){
-                console.log(res.status)
                 this.authUserStore.userDetails.push(res.data);
                 this.authUserStore.userID = this.authUserStore.userDetails[0]._id
        
@@ -310,7 +309,6 @@ export default{
                 console.log(res.error)
             }
             else{
-                console.log("successfully logged out!")
                 localStorage.removeItem('userDetails');
                 localStorage.removeItem('userData');
                 localStorage.removeItem('walletDetails');
