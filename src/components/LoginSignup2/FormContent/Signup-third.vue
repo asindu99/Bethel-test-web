@@ -27,19 +27,34 @@
                         <vee-field autocomplete="off" id="username" name="username" type="text" class="w-full h-10 text-gray-900 placeholder-transparent border-b-2 border-sidebarBG bg-blue-50 focus:outline-none focus:borer-rose-600 on:focus:bg-white" placeholder="username" />
 							<label for="username" class="absolute left-0 -top-6 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5  peer-focus:text-sm">User Name :</label>
                     </div>
+                    
 
                 </div>
 
                 <!-- password and confirm password section -->
                 <div class="flex w-full justify-center mt-4 lg:flex-col md:flex-col sm:flex-col min-[320px]:flex-col  lg:px-10 md:px-40 sm:px-10  gap-y-10 pt-8">
                     <!-- password div -->
-                    <div class="relative flex flex-col">
+                    <div class="relative flex flex-col ">
                         <!-- <label for="" class="text-[14px]">Password :</label>
                         <VeeField  name="password" type="password" class=" bg-transparent p-1 border-2 border-[#29379384] outline-none rounded-md lg:w-[235px] md:w-[238px] min-[320px]:w-full w-[340px]"/> -->
 
-                        <vee-field autocomplete="off" id="password" name="password" type="password" class="w-full h-10 text-gray-900 placeholder-transparent border-b-2 border-sidebarBG bg-blue-50 focus:outline-none focus:borer-rose-600 on:focus:bg-white" placeholder="password" />
+                        <div class="flex lg:flex-row md:flex-row sm:flex-row min-[320px]:flex-col gap-x-8 gap-y-12">
+                            
+                            <div class="relative flex flex-col">
+                                <vee-field autocomplete="off" id="firstname" name="firstname" type="text" class="w-full h-10 text-gray-900 placeholder-transparent border-b-2 border-sidebarBG bg-blue-50 focus:outline-none focus:borer-rose-600 on:focus:bg-white" placeholder="firstname" />
+                                
+							<label for="firstname" class="absolute left-0 -top-6 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5  peer-focus:text-sm">First Name :</label>
+                            </div>
+                            
+                            <div class="relative flex flex-col">
+                                <vee-field autocomplete="off" id="lastname" name="lastname" type="text" class="w-full h-10 text-gray-900 placeholder-transparent border-b-2 border-sidebarBG bg-blue-50 focus:outline-none focus:borer-rose-600 on:focus:bg-white" placeholder="lastname" />
+							<label for="lastname" class="absolute left-0 -top-6 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5  peer-focus:text-sm">Last Name :</label>
+                            </div>
+                            
+                        </div>
+                        <!-- <vee-field autocomplete="off" id="password" name="password" type="password" class="w-full h-10 text-gray-900 placeholder-transparent border-b-2 border-sidebarBG bg-blue-50 focus:outline-none focus:borer-rose-600 on:focus:bg-white" placeholder="password" />
 							<label for="password" class="absolute left-0 -top-6 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5  peer-focus:text-sm">Password :</label>
-                        <ErrorMessage name="password" class="absolute text-[12px] text-red-500 bottom-[-20px]"/>
+                        <ErrorMessage name="password" class="absolute text-[12px] text-red-500 bottom-[-20px]"/> -->
                     </div>
 
                     <!-- confirm password div -->
@@ -47,9 +62,22 @@
                         <!-- <label for="" class="text-[14px]">Confirm Password :</label>
                         <VeeField  name="confirm_password" type="password" class=" bg-transparent p-1 border-2 border-[#29379384] outline-none rounded-md lg:w-[235px] md:w-[238px] min-[320px]:w-full w-[340px]"/> -->
                         
-                        <vee-field autocomplete="off" id="confirm_password" name="confirm_password" type="password" class="w-full h-10 text-gray-900 placeholder-transparent border-b-2 border-sidebarBG bg-blue-50 focus:outline-none focus:borer-rose-600 on:focus:bg-white" placeholder="confirm_password" />
-							<label for="confirm_password" class="absolute left-0 -top-6 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5  peer-focus:text-sm">Confirm Password :</label>
-                        <ErrorMessage name="confirm_password" class="absolute text-[12px] text-red-500 bottom-[-20px]"/>
+                         <!-- <vee-field autocomplete="off" id="username" name="username" type="text" class="w-full h-10 text-gray-900 placeholder-transparent border-b-2 border-sidebarBG bg-blue-50 focus:outline-none focus:borer-rose-600 on:focus:bg-white" placeholder="username" />
+							<label for="username" class="absolute left-0 -top-6 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5  peer-focus:text-sm">User Name :</label> -->
+                            
+                            <div class="flex lg:flex-row md:flex-row sm:flex-row min-[320px]:flex-col gap-x-8 gap-y-12">
+                            
+                                <div class="relative flex flex-col">
+                                <vee-field autocomplete="off" id="password" name="password" type="text" class="w-full h-10 text-gray-900 placeholder-transparent border-b-2 border-sidebarBG bg-blue-50 focus:outline-none focus:borer-rose-600 on:focus:bg-white" placeholder="password" />
+							<label for="password" class="absolute left-0 -top-6 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5  peer-focus:text-sm">Password :</label>
+                                </div>
+                            
+                                <div class="relative flex flex-col">
+                                    <vee-field autocomplete="off" id="confirm_password" name="confirm_password" type="text" class="w-full h-10 text-gray-900 placeholder-transparent border-b-2 border-sidebarBG bg-blue-50 focus:outline-none focus:borer-rose-600 on:focus:bg-white" placeholder="confirm_password" />
+							<label for="confirm_password" class="absolute left-0 -top-6 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5  peer-focus:text-sm">Confirm Password:</label>
+                                </div>
+                                
+                        </div>
                     </div>
 
                 </div>
@@ -81,10 +109,9 @@
                         <h2 class="text-xs text-center text-gray-600">Already have an account?<RouterLink to="/"><a class="text-center cursor-pointer tet-xs text-sidebarBG"> Login</a></RouterLink></h2>
                     </div>
                     </div>
-                    
-                    
                     <!-- </router-link> -->
-</div>
+                    
+                </div>
                 
 
                 
