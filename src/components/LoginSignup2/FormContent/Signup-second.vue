@@ -47,7 +47,7 @@
                         <!-- <input type="text" class=" bg-transparent p-1 border-b-2 border-[#29379384] outline-none"> -->
 
                         <vee-field as="select" name="country" v-model="selected" class="text-[#757784] bg-transparent p-1 border-b-2 border-[#29379384]  lg:w-[235px] md:w-[230px] min-[320px]:w-full w-[340px]">
-                            <option v-for="country in countryList" :value="country.Name" class="w-[200px] bg-transparent">
+                            <option v-for="country in countryList" :value="country" class="w-[200px] bg-transparent">
                                 {{ country.Name }}
                             </option>
                         </vee-field>
