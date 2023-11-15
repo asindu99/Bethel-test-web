@@ -176,16 +176,16 @@
                                         <VeeForm action="" :validation-schema="loginSchema" @submit.prevent="patchAuthPassData">
                                             
                                                 <!--email and oldPassword  section -->
-                                                <div class="flex lg:flex-row md:flex-row sm:flex min-[320px]:flex-col w-full justify-between mt-4 lg:gap-20 md:gap-12 sm:gap-8 min-[320px]:gap-2 mt-8 px-8">
+                                                <div class="flex lg:flex-row md:flex-row sm:flex min-[320px]:flex-col w-full justify-between lg:gap-20 md:gap-12 sm:gap-8 min-[320px]:gap-2 mt-8 px-8">
                                                 <!-- email -->
                                                 <div class="relative flex flex-col w-full">
                                                     <!-- <label for="" class="text-[14px]">Email :</label>
                                                     <vee-field :placeholder="email" name="email" type="text" class="block py-1.5 px-0 w-full text-sm text-gray-900 bg-transparent rounded-md border-2 border-[#29379384] appearance-none dark:border-[#29379384] dark:focus:border-[#29379384] focus:outline-none focus:ring-0 focus:border-[#29379384] peer"/> -->
                                                     
 
-                                                    <vee-field autocomplete="off" id="email" name="email" type="email" class="w-full h-10 pl-2 text-gray-900 border-b-2 border-sidebarBG focus:outline-none focus:borer-rose-600 on:focus:bg-white" :placeholder="email" />
+                                                    <vee-field  name="email" type="email" class="w-full h-10 pl-2 text-gray-900 border-b-2 border-sidebarBG focus:outline-none focus:borer-rose-600 on:focus:bg-white" :placeholder="email" />
 
-                            <label for="email" class="absolute left-0 -top-6 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5  peer-focus:text-sm">Email :</label>
+                                                        <label  class="absolute left-0 text-sm text-gray-600 transition-all -top-6 ">Email :</label>
                                                 </div>
 
                                                 <!-- old password -->
@@ -193,8 +193,8 @@
                                                     <!-- <label for="" class="text-[14px]">Old Password :</label>
                                                     <vee-field name="oldPassword" type="password" class="block py-1.5 px-0 w-full text-sm text-gray-900 bg-transparent rounded-md border-2 border-[#29379384] appearance-none dark:border-[#29379384] dark:focus:border-[#29379384] focus:outline-none focus:ring-0 focus:border-[#29379384] peer"/> -->
                                                     
-                                                    <vee-field autocomplete="off" id="password" name="password" type="password" class="w-full h-10 pl-2 text-gray-900 border-b-2 border-sidebarBG focus:outline-none focus:borer-rose-600 on:focus:bg-white" placeholder="password" />
-                            <label for="password" class="absolute left-0 -top-6 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5  peer-focus:text-sm">Password :</label>
+                                                    <vee-field  name="password" type="password" class="w-full h-10 pl-2 text-gray-900 border-b-2 border-sidebarBG focus:outline-none focus:borer-rose-600 on:focus:bg-white" placeholder="password" />
+                                                    <label class="absolute left-0 text-sm text-gray-600 transition-all -top-6 ">Password :</label>
                                                     
                                                 </div>
                                             </div>
@@ -202,24 +202,24 @@
 
 
                                             <!-- new and confirm password section -->
-                                            <div class="flex lg:flex-row md:flex-row sm:flex min-[320px]:flex-col w-full justify-between mt-4 lg:gap-20 md:gap-12 sm:gap-8 min-[320px]:gap-2 mt-8 px-8">
-                                                <!-- first name -->
+                                            <div class="flex lg:flex-row md:flex-row sm:flex min-[320px]:flex-col w-full justify-between lg:gap-20 md:gap-12 sm:gap-8 min-[320px]:gap-2 mt-8 px-8">
+                                                <!-- new password -->
                                                 <div class="relative flex flex-col w-full">
                                                     <!-- <label for="" class="text-[14px]">New Password :</label>
                                                     <vee-field name="newPassword" type="password" class="block py-1.5 px-0 w-full text-sm text-gray-900 bg-transparent rounded-md border-2 border-[#29379384] appearance-none dark:border-[#29379384] dark:focus:border-[#29379384] focus:outline-none focus:ring-0 focus:border-[#29379384] peer"/> -->
                                                     
-                                                    <vee-field autocomplete="off" id="newPassword" name="newPassword" type="password" class="w-full h-10 pl-2 text-gray-900 border-b-2 border-sidebarBG focus:outline-none focus:borer-rose-600 on:focus:bg-white" placeholder="New Password" />
-                            <label for="newPassword" class="absolute left-0 -top-6 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5  peer-focus:text-sm">New Password :</label>
+                                                    <vee-field  name="newPassword" type="password" class="w-full h-10 pl-2 text-gray-900 border-b-2 border-sidebarBG focus:outline-none focus:borer-rose-600 on:focus:bg-white" placeholder="New Password" />
+                                                    <label  class="absolute left-0 text-sm text-gray-600 transition-all -top-6 ">New Password :</label>
                                                     
                                                 </div>
 
-                                                <!-- last name -->
+                                                <!-- confirm password -->
                                                 <div class="flex flex-col min-[320px]:mt-4 lg:mt-0 md:mt-0 w-full relative">
                                                     <!-- <label for="" class="text-[14px]">Confirm Password :</label>
                                                     <vee-field name="confirmPassword" type="password" class="block py-1.5 px-0 w-full text-sm text-gray-900 bg-transparent rounded-md border-2 border-[#29379384] appearance-none dark:border-[#29379384] dark:focus:border-[#29379384] focus:outline-none focus:ring-0 focus:border-[#29379384] peer"/> -->
                                                     
-                                                    <vee-field autocomplete="off" id="" name="confirmPassword" type="password" class="w-full h-10 pl-2 text-gray-900 border-b-2 border-sidebarBG focus:outline-none focus:borer-rose-600 on:focus:bg-white" placeholder="Confirm Password" />
-                            <label for="confirmPassword" class="absolute left-0 -top-6 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5  peer-focus:text-sm">Confirm Password :</label>
+                                                    <vee-field  name="confirmPassword" type="password" class="w-full h-10 pl-2 text-gray-900 border-b-2 border-sidebarBG focus:outline-none focus:borer-rose-600 on:focus:bg-white" placeholder="Confirm Password" />
+                                                    <label  class="absolute left-0 text-sm text-gray-600 transition-all -top-6 ">Confirm Password :</label>
                                                 </div>
                                             </div>
                                             <!-- end of the new and confirm password section -->
