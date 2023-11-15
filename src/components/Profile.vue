@@ -117,12 +117,15 @@
                                             <!-- mobile and button -->
                                             <div class="px-8">
                                                 <!-- mobile number -->
-                                                <div class="relative flex flex-col mt-4 pr-[623px]">
+                                                <div class="relative flex flex-col mt-4 ">
                                                     <!-- <label for="" class="text-[14px]">Mobile Number :</label>
 
                                                     <vee-field :placeholder="mobileNumber" name="mobile" type="tel" class="block py-1.5 px-0 w-full text-sm text-gray-900 bg-transparent rounded-md border-2 border-[#29379384] appearance-none dark:border-[#29379384] dark:focus:border-[#29379384] focus:outline-none focus:ring-0 focus:border-[#29379384] peer"/> -->
 
-                                                    <vee-field ref="anyName3" autocomplete="off" id="" name="mobile" type="tel" class="w-full h-10 pl-2 text-gray-900 border-b-2 border-sidebarBG focus:outline-none focus:borer-rose-600 on:focus:bg-white" :placeholder="mobileNumber" />
+                                                    <!-- <vee-field autocomplete="off" id="" name="mobile" type="tel" class="w-full h-10 pl-2 text-gray-900 border-b-2 border-sidebarBG focus:outline-none focus:borer-rose-600 on:focus:bg-white" :placeholder="mobileNumber" /> -->
+                                                    
+                                                    <vee-field autocomplete="off" id="" name="mobile" type="tel" class="h-10 pl-2 text-gray-900 border-b-2 lg:w-[544px] border-sidebarBG focus:outline-none focus:borer-rose-600 on:focus:bg-white" :placeholder="mobileNumber" />
+
 
 							<label for="mobile" class="absolute left-0 -top-6 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5  peer-focus:text-sm">Mobile Number :</label>
 
