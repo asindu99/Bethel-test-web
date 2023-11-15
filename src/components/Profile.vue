@@ -69,10 +69,10 @@
                                                 </div>
 
                                                 <div class="relative z-0 w-full mb-6 group">
-                                                    <vee-field ref="anyName2" autocomplete="off"  name="lastName" type="text" class="w-full h-10 pl-2 text-gray-900 border-b-2 border-sidebarBG focus:outline-none focus:borer-rose-600 on:focus:bg-white" :placeholder="lastName" />
+                                                    <vee-field ref="anyName2"  name="lastName" type="text" class="w-full h-10 pl-2 text-gray-900 border-b-2 border-sidebarBG focus:outline-none focus:borer-rose-600 on:focus:bg-white" :placeholder="lastName" />
                                                     <!-- <ErrorMessage name="lastName" /> -->
 
-							<label for="lastName" class="absolute left-0 -top-6 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5  peer-focus:text-sm">Last Name :</label>
+							                        <label for="lastName" class="absolute left-0 -top-6 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5  peer-focus:text-sm">Last Name :</label>
                                                 </div>
                                             </div>
                                             <!-- end of the name section -->
@@ -90,17 +90,17 @@
                                                       class="w-[200px] bg-transparent">{{ country.Name }}</option>
                                                     </select>
 
-							<label class="absolute left-0 -top-6 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5  peer-focus:text-sm">Country:</label>
+							                        <label class="absolute left-0 -top-6 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5  peer-focus:text-sm">Country:</label>
                                                 </div>
 
-                            <!-- country -->
-                             <div class="relative z-0 w-full mb-6 group">
+                                                <!-- country -->
+                                                <div class="relative z-0 w-full mb-6 group">
   
-							<label for="code" class="absolute left-0 -top-6 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5  peer-focus:text-sm">Country Code:</label>
+							                        <label for="code" class="absolute left-0 -top-6 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5  peer-focus:text-sm">Country Code:</label>
                                                     
 
 
-                                                <select
+                                                    <select
                                                  name="code" class="w-full h-10 pl-2 text-gray-900 border-b-2 border-sidebarBG focus:outline-none focus:borer-rose-600 on:focus:bg-white">
                                                     <option >{{ selected.MobileCode }}</option>
                                                 </select>
@@ -124,7 +124,7 @@
 
                                                     <!-- <vee-field autocomplete="off" id="" name="mobile" type="tel" class="w-full h-10 pl-2 text-gray-900 border-b-2 border-sidebarBG focus:outline-none focus:borer-rose-600 on:focus:bg-white" :placeholder="mobileNumber" /> -->
                                                     
-                                                    <vee-field autocomplete="off" id="" name="mobile" type="tel" class="h-10 pl-2 text-gray-900 border-b-2 lg:w-[544px] border-sidebarBG focus:outline-none focus:borer-rose-600 on:focus:bg-white" :placeholder="mobileNumber" />
+                                                    <vee-field ref="anyName3o" autocomplete="off" id="" name="mobile" type="tel" class="h-10 pl-2 text-gray-900 border-b-2 lg:w-[544px] border-sidebarBG focus:outline-none focus:borer-rose-600 on:focus:bg-white" :placeholder="mobileNumber" />
 
 
 							<label for="mobile" class="absolute left-0 -top-6 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5  peer-focus:text-sm">Mobile Number :</label>
@@ -173,28 +173,22 @@
 
                                     <!-- start of the form -->
                                     <div class="w-full">
-                                        <VeeForm action="" @submit="patchAuthPassData">
+                                        <vee-form @submit="patchAuthPassData">
                                             
                                                 <!--email and oldPassword  section -->
                                                 <div class="flex lg:flex-row md:flex-row sm:flex min-[320px]:flex-col w-full justify-between mt-4 lg:gap-20 md:gap-12 sm:gap-8 min-[320px]:gap-2 mt-8 px-8">
                                                 <!-- email -->
                                                 <div class="relative flex flex-col w-full">
-                                                    <!-- <label for="" class="text-[14px]">Email :</label>
-                                                    <vee-field :placeholder="email" name="email" type="text" class="block py-1.5 px-0 w-full text-sm text-gray-900 bg-transparent rounded-md border-2 border-[#29379384] appearance-none dark:border-[#29379384] dark:focus:border-[#29379384] focus:outline-none focus:ring-0 focus:border-[#29379384] peer"/> -->
-                                                    
+                                                    <vee-field name="email" type="email" class="w-full h-10 pl-2 text-gray-900 border-b-2 border-sidebarBG focus:outline-none focus:borer-rose-600 on:focus:bg-white" :placeholder="email" />
 
-                                                    <vee-field autocomplete="off" id="email" name="email" type="email" class="w-full h-10 pl-2 text-gray-900 border-b-2 border-sidebarBG focus:outline-none focus:borer-rose-600 on:focus:bg-white" :placeholder="email" />
-
-                            <label for="email" class="absolute left-0 -top-6 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5  peer-focus:text-sm">Email :</label>
+                                                    <label for="email" class="absolute left-0 -top-6 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5  peer-focus:text-sm">Email :</label>
                                                 </div>
 
                                                 <!-- old password -->
                                                 <div class="flex flex-col min-[320px]:mt-4 lg:mt-0 md:mt-0 w-full relative">
-                                                    <!-- <label for="" class="text-[14px]">Old Password :</label>
-                                                    <vee-field name="oldPassword" type="password" class="block py-1.5 px-0 w-full text-sm text-gray-900 bg-transparent rounded-md border-2 border-[#29379384] appearance-none dark:border-[#29379384] dark:focus:border-[#29379384] focus:outline-none focus:ring-0 focus:border-[#29379384] peer"/> -->
                                                     
-                                                    <vee-field autocomplete="off" id="password" name="password" type="password" class="w-full h-10 pl-2 text-gray-900 border-b-2 border-sidebarBG focus:outline-none focus:borer-rose-600 on:focus:bg-white" placeholder="password" />
-                            <label for="password" class="absolute left-0 -top-6 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5  peer-focus:text-sm">Password :</label>
+                                                    <vee-field autocomplete="off" id="password" name="oldPassword" type="password" class="w-full h-10 pl-2 text-gray-900 border-b-2 border-sidebarBG focus:outline-none focus:borer-rose-600 on:focus:bg-white" placeholder="password" />
+                                                    <label for="password" class="absolute left-0 -top-6 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5  peer-focus:text-sm">Password :</label>
                                                     
                                                 </div>
                                             </div>
@@ -205,44 +199,39 @@
                                             <div class="flex lg:flex-row md:flex-row sm:flex min-[320px]:flex-col w-full justify-between mt-4 lg:gap-20 md:gap-12 sm:gap-8 min-[320px]:gap-2 mt-8 px-8">
                                                 <!-- first name -->
                                                 <div class="relative flex flex-col w-full">
-                                                    <!-- <label for="" class="text-[14px]">New Password :</label>
-                                                    <vee-field name="newPassword" type="password" class="block py-1.5 px-0 w-full text-sm text-gray-900 bg-transparent rounded-md border-2 border-[#29379384] appearance-none dark:border-[#29379384] dark:focus:border-[#29379384] focus:outline-none focus:ring-0 focus:border-[#29379384] peer"/> -->
                                                     
-                                                    <vee-field autocomplete="off" id="newPassword" name="newPassword" type="password" class="w-full h-10 pl-2 text-gray-900 border-b-2 border-sidebarBG focus:outline-none focus:borer-rose-600 on:focus:bg-white" placeholder="New Password" />
-                            <label for="newPassword" class="absolute left-0 -top-6 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5  peer-focus:text-sm">New Password :</label>
+                                                    <vee-field  name="newPassword" type="password" class="w-full h-10 pl-2 text-gray-900 border-b-2 border-sidebarBG focus:outline-none focus:borer-rose-600 on:focus:bg-white" placeholder="New Password" />
+                                                    <label for="newPassword" class="absolute left-0 -top-6 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5  peer-focus:text-sm">New Password :</label>
                                                     
                                                 </div>
 
                                                 <!-- last name -->
                                                 <div class="flex flex-col min-[320px]:mt-4 lg:mt-0 md:mt-0 w-full relative">
-                                                    <!-- <label for="" class="text-[14px]">Confirm Password :</label>
-                                                    <vee-field name="confirmPassword" type="password" class="block py-1.5 px-0 w-full text-sm text-gray-900 bg-transparent rounded-md border-2 border-[#29379384] appearance-none dark:border-[#29379384] dark:focus:border-[#29379384] focus:outline-none focus:ring-0 focus:border-[#29379384] peer"/> -->
                                                     
-                                                    <vee-field autocomplete="off" id="" name="confirmPassword" type="password" class="w-full h-10 pl-2 text-gray-900 border-b-2 border-sidebarBG focus:outline-none focus:borer-rose-600 on:focus:bg-white" placeholder="Confirm Password" />
-                            <label for="confirmPassword" class="absolute left-0 -top-6 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5  peer-focus:text-sm">Confirm Password :</label>
+                                                    <vee-field  id="" name="confirmPassword" type="password" class="w-full h-10 pl-2 text-gray-900 border-b-2 border-sidebarBG focus:outline-none focus:borer-rose-600 on:focus:bg-white" placeholder="Confirm Password" />
+                                                    <label for="confirmPassword" class="absolute left-0 -top-6 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5  peer-focus:text-sm">Confirm Password :</label>
                                                 </div>
                                             </div>
                                             <!-- end of the new and confirm password section -->
 
-                                            <!--button -->
-                                            <div>
-                                                <!-- button -->
-                                                <div class="relative flex flex-col px-8 mt-8">
-                                                    
-                                                    <button type="submit" class="w-[200px] p-2 bg-sidebarBG rounded-lg px-8 text-white border-[1px] hover:bg-white hover:text-sidebarBG hover:border-[1px] hover:border-sidebarBG transition-all ease-in-out text-[14px]">Change Password</button>
+                                            
+                                            <!-- button -->
+                                            <div class="relative flex flex-col px-8 mt-8">
+                                                
+                                                <button type="submit" class="w-[200px] p-2 bg-sidebarBG rounded-lg px-8 text-white border-[1px] hover:bg-white hover:text-sidebarBG hover:border-[1px] hover:border-sidebarBG transition-all ease-in-out text-[14px]">Change Password</button>
 
-                                                    <div v-if="isPassing" class="absolute left-[205px] top-[10px]">
-                                                        <img src="../img/animationGIFs/Rolling.svg" alt="" class="w-[20px]">
-                                                    </div>
-
-                                                    <div v-if="passed" class="text-green-400 absolute bottom-[-25px] left-12">
-                                                        <h3 class="text-[12px]">Update Password Success!</h3>
-                                                    </div>
-                                                    
+                                                <div v-if="isPassing" class="absolute left-[205px] top-[10px]">
+                                                    <img src="../img/animationGIFs/Rolling.svg" alt="" class="w-[20px]">
                                                 </div>
+
+                                                <div v-if="passed" class="text-green-400 absolute bottom-[-25px] left-12">
+                                                    <h3 class="text-[12px]">Update Password Success!</h3>
+                                                </div>
+                                                
+                                            
                                             </div>
 
-                                        </VeeForm>
+                                        </vee-form>
                                     </div>
                                     <!-- end of the form  -->
 
@@ -317,7 +306,7 @@ export default{
     },
     methods: {
         async patchAuthUserData(values) {
-            console.log(values.firstName);
+            this.isUpdating = true;
             const details = {
                 details: {
                     "firstName": values.firstName,
@@ -327,7 +316,7 @@ export default{
                     "mobile": values.mobile
                 }
             };
-            this.isUpdating = true;
+            
 
             const res = await axios.patch('https://mw.bethel.network/users/' + this.authUserStore.userID, details, { withCredentials: true });
             console.log(res);
@@ -339,9 +328,9 @@ export default{
             }
 
             // reset values on input fiels
-            this.$refs.anyName.reset();
-            this.$refs.anyName2.reset();
-            this.$refs.anyName3.reset();
+            // this.$ref.anyName.reset();
+            // this.$ref.anyName2.reset();
+            // this.$ref.anyName3.reset();
 
             // display the updated user details -------->>
             const res2 = await axios.get('https://mw.bethel.network/users/' + this.authUserStore.userID, { withCredentials: true });
@@ -368,31 +357,35 @@ export default{
             
         }
     },
-    async patchAuthPassData(values) {
+    patchAuthPassData(values) {
+        console.log(values)
         this.isPassing = true;
 
-        const passDetails = {
-            email: values.email,
-            oldpassword: values.oldpassword,
-            newPassword: values.newPassword
-        };
+        // const passDetails = {
+        //     email: values.email,
+        //     oldpassword: values.oldpassword,
+        //     newPassword: values.newPassword
+        // };
 
-        const res = await axios.get('https://mw.bethel.network/auth/updatepassword/' + this.authUserStore.userID, passDetails, 
-        {withCredentials : true});
+        // const res = await axios.get('https://mw.bethel.network/auth/updatepassword/' + this.authUserStore.userID, passDetails, 
+        // {withCredentials : true});
 
-        this.isPassing = false;
+        // this.isPassing = false;
 
-        if (res.error) {
-            console.log(res.error);
-        }
-        else {
-            console.log("password changes succesfully");
-            this.passed = ture;
+        // if (res.error) {
+        //     console.log(res.error);
+        // }
+        // else {
+        //     console.log("password changes succesfully");
+        //     this.passed = ture;
 
-            setTimeout(() => {
-                this.passed = false;
-            }, 3000);
-        }
+        //     setTimeout(() => {
+        //         this.passed = false;
+        //     }, 3000);
+        // }
+    },
+    test(){
+        console.log('thia')
     },
 
 
