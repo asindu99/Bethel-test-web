@@ -9,7 +9,7 @@
     <VeeForm @submit="onReg" :validation-schema="signupSchema" class="mt-14">
             <!-- email div -->
             
-                <div class="flex w-full justify-center mt-4 lg:flex-col md:flex-col sm:flex-col min-[320px]:flex-col  lg:px-10 md:px-40 sm:px-10 gap-y-10">
+                <div class="flex w-full justify-center mt-4 lg:flex-col md:flex-col sm:flex-col min-[320px]:flex-col  lg:px-10 md:px-40 sm:px-10 gap-y-12">
                     <!-- email div -->
                     <div class="relative flex flex-col">
                         <vee-field autocomplete="off" id="email" name="email" type="email" class="w-full h-10 text-gray-900 placeholder-transparent border-b-2 border-sidebarBG bg-blue-50 focus:outline-none focus:borer-rose-600 on:focus:bg-white" placeholder="email" />
@@ -32,7 +32,7 @@
                 </div>
 
                 <!-- password and confirm password section -->
-                <div class="flex w-full justify-center mt-4 lg:flex-col md:flex-col sm:flex-col min-[320px]:flex-col  lg:px-10 md:px-40 sm:px-10  gap-y-10 pt-8">
+                <div class="flex w-full justify-center mt-4 lg:flex-col md:flex-col sm:flex-col min-[320px]:flex-col  lg:px-10 md:px-40 sm:px-10  gap-y-12 pt-8">
                     <!-- password div -->
                     <div class="relative flex flex-col ">
                         <!-- <label for="" class="text-[14px]">Password :</label>
