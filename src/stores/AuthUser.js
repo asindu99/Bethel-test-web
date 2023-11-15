@@ -47,8 +47,10 @@ export const authUser = defineStore('authUser', {
                 email: values.email,
                 username: values.username,
                 password: values.password,
-                firstName: values.FirstName,
-            }, {
+                firstName : values.firstName,
+                lastName : values.lastName,
+            }, 
+            {
                 withCredentials: true
             });
 
