@@ -33,7 +33,7 @@
                 
                 
                 <h3 class="lg:text-[16px] md:text-[14px] sm:text-[14px] min-[320px]:text-[10px]
-                 lg:flex md:flex sm:flex min-[320px]:flex font-medium">{{ firstName }} {{ lastName }} </h3>
+                 lg:flex md:flex sm:flex min-[320px]:flex font-medium"> {{ walletStore.userDetail.firstName }} {{  walletStore.userDetail.lastName}}</h3>
 
                 <!-- drop down -->
                 <div class="relative">
@@ -358,6 +358,7 @@ import {mapStores} from "pinia";
 import useModalStore from "@/stores/modal";
 import axios from "axios";
 import { authUser } from "@/stores/AuthUser";
+import { useWalletData } from "@/stores/DataStore";
 import router from '@/router/index'
 
 
@@ -367,7 +368,7 @@ export default{
     name : 'Page1Dashboard',
 
     computed:{
-        ...mapStores(useModalStore, authUser),
+        ...mapStores(useModalStore, authUser ,useWalletData),
     },
     
 
@@ -386,8 +387,14 @@ export default{
 
             const userData2 = JSON.parse(localStorage.getItem('userData'))
 
-            this.firstName = userData.firstName
-            this.lastName = userData.lastName
+            
+            this.walletStore.userDetail= userData
+
+            console.log("this is" , this.walletStore.userDetail)
+            // this.walletStore.userDetail.lastName = userData.lastName
+        
+
+            console.log(this.firstName)
 
             this.userEmail = userData2.email
             this.userName = userData2.username 
