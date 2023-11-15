@@ -56,7 +56,7 @@
 
                                     <!-- start of the form -->
                                     <div class="w-full">
-                                        <VeeForm :validation-schema="signupSchema" @submit="patchAuthUserData">
+                                        <VeeForm  @submit="patchAuthUserData" :validation-schema="signupSchema">
                                             <!-- name section -->
                                             <div class="flex lg:flex-row md:flex-row sm:flex min-[320px]:flex-col w-full justify-between lg:gap-20 md:gap-10 sm:gap-y-8 min-[320px]:gap-2 px-8 pt-10">
                                                 
@@ -265,8 +265,8 @@ export default{
                 email: "required|min:3|max:100|email",
                 password: "required|min:9|max:100",
                 confirm_password: "passwords_mismatch:@password",
-                FirstName: "required|min:3|max:100",
-                LastName: "required|min:3|max:100",
+                firstName: "required|min:3|max:100",
+                lastName: "required|min:3|max:100",
                 mobile: "required|min:4|max:100",
                 tos: "tos",
                 country: 'required'
@@ -293,19 +293,19 @@ export default{
         this.userDetail = JSON.parse(localStorage.getItem('userDetails'));
         const userData2 = JSON.parse(localStorage.getItem('userData'));
         this.userData = userData2;
-        this.firstName = this.userDetail.FirstName;
-        this.lastName = this.userDetail.LastName;
+        this.firstName = this.userDetail.firstName;
+        this.lastName = this.userDetail.lastName;
         this.code = this.userDetail.code;
         this.mobileNumber = this.userDetail.mobile;
         this.email = this.userData.email;
     },
     methods: {
         async patchAuthUserData(values) {
-            console.log(values.FirstName);
+            console.log(values.firstName);
             const details = {
                 details: {
-                    "firstName": values.FirstName,
-                    "lastName": values.LastName,
+                    "firstName": values.firstName,
+                    "lastName": values.lastName,
                     "country": this.selected.Name,
                     "code": this.selected.MobileCode,
                     "mobile": values.mobile
@@ -330,6 +330,7 @@ export default{
             setTimeout(() => {
                 this.updated = false;
             }, 2000);
+            values.reset();
         }
     },
     async patchAuthPassData(values) {
