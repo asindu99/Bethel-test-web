@@ -33,7 +33,7 @@
                 
                 
                 <h3 class="lg:text-[16px] md:text-[14px] sm:text-[14px] min-[320px]:text-[10px]
-                 lg:flex md:flex sm:flex min-[320px]:flex font-medium"> {{ walletStore.userDetail.firstName }} {{  walletStore.userDetail.lastName}}</h3>
+                 lg:flex md:flex sm:flex min-[320px]:flex font-medium">{{ this.walletStore.userDetail.firstName }} {{ this.walletStore.userDetail.lastName }} </h3>
 
                 <!-- drop down -->
                 <div class="relative">
@@ -380,6 +380,10 @@ export default{
             userName : ''
 
         }
+    },
+    created(){
+        const userData = JSON.parse(localStorage.getItem('userDetails'))
+        this.walletStore.userDetail= userData
     },
     mounted(){
         try {

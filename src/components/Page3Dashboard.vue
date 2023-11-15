@@ -420,7 +420,7 @@
 import {mapStores} from 'pinia'
 import {useWalletData} from '@/stores/DataStore'
 import {authUser} from '@/stores/AuthUser'
-
+import axios from 'axios';
 
 import Chart from 'chart.js/auto';
 
@@ -456,6 +456,7 @@ export default {
     },
     
     created(){
+        
         // get storage
         try {
             const storageDetails = JSON.parse(localStorage.getItem('storageDetails'))
@@ -468,13 +469,11 @@ export default {
   
     },
     async mounted(){
-        try {
-            const res3 = await axios.get('https://mw.bethel.network/storagedetails/' + this.userID,
-            {withCredentials : true})
-            localStorage.setItem('storageDetails', JSON.stringify(res3.data))
-        } catch (error) {
-            
-        }
+        
+        const res3 = await axios.get('https://mw.bethel.network/storagedetails/' + this.authUserStore.userID,
+        {withCredentials : true})
+        localStorage.setItem('storageDetails', JSON.stringify(res3.data))
+        
         const storageDetails = JSON.parse(localStorage.getItem('storageDetails'))
         console.log(storageDetails)
         this.storageD = storageDetails[0]
