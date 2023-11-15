@@ -51,7 +51,7 @@
                         <div class="flex items-center">             
                           <h3 class="text-[10px] text-white">Total Buckets</h3> 
                           <div class="ml-3 rounded-lg text-center justify-center items-center">
-                            <h1 class="text-white">1</h1>
+                            <h1 class="text-white">- 1</h1>
                             </div> 
                         </div>
                         
@@ -451,6 +451,10 @@ export default {
         ...mapStores(useWalletData, authUser),
         
     },
+    updated(){
+        
+    },
+    
     created(){
         // get storage
         try {
@@ -463,8 +467,18 @@ export default {
             
   
     },
-    mounted(){
-        
+    async mounted(){
+        try {
+            const res3 = await axios.get('https://mw.bethel.network/storagedetails/' + this.userID,
+            {withCredentials : true})
+            localStorage.setItem('storageDetails', JSON.stringify(res3.data))
+        } catch (error) {
+            
+        }
+        const storageDetails = JSON.parse(localStorage.getItem('storageDetails'))
+        console.log(storageDetails)
+        this.storageD = storageDetails[0]
+
         const ctx = document.getElementById('myChart');
         const ctx1 = document.getElementById('myChart2');
         const ctx2 = document.getElementById('myChart3');
@@ -519,7 +533,7 @@ export default {
     data: {
       labels: ['files', 'videos', 'images', 'musics',],
       datasets: [{
-        label: 'Used (GB)',
+        label: 'Used (KB)',
         data: [this.storageD.totalsize],
         borderWidth: 2,
         backgroundColor: [

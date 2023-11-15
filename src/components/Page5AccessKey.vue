@@ -132,8 +132,8 @@ export default {
     name : 'Page5AccessKey',
     data(){
         return{
-            text : 'https://api.bethel.io/v1/ipfs',
-            text2 :'https://api.bethel.io/v1/ipfsasda'
+            text : 'https://public.bethel.io/v1/ipfs',
+            text2 :'https://storage.bethel.io/v1/ipfsasda'
         }
     },
 
