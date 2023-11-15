@@ -394,12 +394,6 @@ export default{
             
             this.walletStore.userDetail= userData
 
-            console.log("this is" , this.walletStore.userDetail)
-            // this.walletStore.userDetail.lastName = userData.lastName
-        
-
-            console.log(this.firstName)
-
             this.userEmail = userData2.email
             this.userName = userData2.username 
         } catch (error) {

@@ -173,7 +173,7 @@
 
                                     <!-- start of the form -->
                                     <div class="w-full">
-                                        <VeeForm action="" :validation-schema="loginSchema" @submit.prevent="patchAuthPassData">
+                                        <VeeForm action="" @submit="patchAuthPassData">
                                             
                                                 <!--email and oldPassword  section -->
                                                 <div class="flex lg:flex-row md:flex-row sm:flex min-[320px]:flex-col w-full justify-between mt-4 lg:gap-20 md:gap-12 sm:gap-8 min-[320px]:gap-2 mt-8 px-8">
@@ -369,8 +369,6 @@ export default{
         }
     },
     async patchAuthPassData(values) {
-        console.log(values);
-
         this.isPassing = true;
 
         const passDetails = {

@@ -110,14 +110,14 @@
                     
 
                     <!-- input fields -->
-                    <VeeForm action="" @submit="transferData" class="w-full">
+                    <VeeForm action="" class="w-full">
                     <div class="flex lg:flex-row md:flex-row sm:flex min-[320px]:flex-col
                      items-center justify-center gap-4 w-full">
                         <VeeField name="walletAddress" type="text" placeholder="Enter the wallet Address" class="text-[14px] w-full  p-2 border-2 rounded-lg border-blue-200"/>
 
                         <VeeField name="walletAmount" type="text" placeholder="Enter the Amount" class="text-[14px] w-full p-2 border-2 rounded-lg border-blue-200"/>
                         
-                        <button @click="addTransferData" type="submit" class="border-[2px] px-10 py-2 rounded-xl bg-sidebarBG text-[white] text-[14px]
+                        <button  type="submit" class="border-[2px] px-10 py-2 rounded-xl bg-sidebarBG text-[white] text-[14px]
                         font-medium hover:text-sidebarBG hover:bg-[white] transition-all ease-linear hover:border-sidebarBG">
                             Transfer
                         </button>
@@ -353,7 +353,6 @@ export default {
 
         async addFaucet(){
             this.disBtn = 'pointer-events-none';
-            // JSON.parse(localStorage.getItem('walletDetails'))
             const userData = JSON.parse(localStorage.getItem('walletDetails'))
             this.walletData.push(userData)
             

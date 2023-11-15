@@ -44,8 +44,6 @@ export const authUser = defineStore('authUser', {
         async postAuthUserData(values){
             this.authUserDetailsArr.push(values)
 
-            console.log(values.email)
-
             const res = await axios.post('https://mw.bethel.network/auth/register', {
                 email: values.email,
                 username: values.username,
@@ -82,18 +80,16 @@ export const authUser = defineStore('authUser', {
                 });
             
                 this.logInWait = true;
-                console.log(res)
+                
                 this.userDetails.push(res.data)
 
                 // gettinf user id
                 this.userID = this.userDetails[0]._id
-                console.log(this.userID)
+                
 
                 // getting user data
                 const userData = this.userDetails[0].details
                 this.authUserDetails.push(userData);
-
-                console.log(this.authUserDetails[0])
 
                 const userData2 = res.data.details
                 this.userDataArr.push(userData2);
