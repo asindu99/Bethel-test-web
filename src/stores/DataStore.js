@@ -25,6 +25,10 @@ export const useWalletData = defineStore('wallet' , {
         // bucket
         buck : 0,
 
+        // display user details on
+        userDetail : null,
+        userData : null,
+
         
 
 

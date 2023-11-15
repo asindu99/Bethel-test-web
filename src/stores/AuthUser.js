@@ -117,10 +117,9 @@ export const authUser = defineStore('authUser', {
                 }
                 
 
-
-                
                 this.logInWait = false;
                 router.push('/home');
+                
             } catch (error) {
                 this.logInFail = true;
                 this.logInWait = false;
