@@ -74,9 +74,15 @@
                     </div>
 
                     <!-- <router-link to="/mobile-verify"> -->
-                    <div class="flex justify-between w-full mt-8">
+                    <div class="relative flex flex-col justify-between w-full mt-8">
                         <button type="submit" class=" bg-sidebarBG rounded-lg w-full p-2 text-white border-[1px] hover:bg-white hover:text-sidebarBG hover:border-[1px] hover:border-sidebarBG transition-all ease-in-out">Create Account</button>
+                        
+                    <div class="absolute lg:right-[28%] -bottom-4 min-[320px]:right-[14%] md:right-[28%] sm:right-[28%] ">
+                        <h2 class="text-xs text-center text-gray-600">Already have an account?<RouterLink to="/"><a class="text-center cursor-pointer tet-xs text-sidebarBG"> Login</a></RouterLink></h2>
                     </div>
+                    </div>
+                    
+                    
                     <!-- </router-link> -->
 </div>
                 

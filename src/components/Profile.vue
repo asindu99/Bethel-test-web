@@ -92,6 +92,15 @@
 
                                                 <!-- country -->
                                                 <div class="relative z-0 w-full mb-6 group">
+                                                 
+
+                                                    <vee-field autocomplete="off" id="" name="code" type="text" class="w-full h-10 pl-2 text-gray-900 border-b-2 border-sidebarBG focus:outline-none focus:borer-rose-600 on:focus:bg-white" :placeholder="code" >
+                                                        
+                                                    </vee-field>
+
+							<label for="code" class="absolute left-0 -top-6 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5  peer-focus:text-sm">Country Code:</label>
+                                                    
+
 
                                                 <vee-field
                                                 as="select" v-model="selected" :value="selected" name="code" class="w-full h-10 pl-2 text-gray-900 border-b-2 border-sidebarBG focus:outline-none focus:borer-rose-600 on:focus:bg-white">
