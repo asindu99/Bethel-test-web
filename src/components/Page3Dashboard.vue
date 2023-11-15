@@ -460,7 +460,6 @@ export default {
         // get storage
         try {
             const storageDetails = JSON.parse(localStorage.getItem('storageDetails'))
-            console.log(storageDetails)
             this.storageD = storageDetails[0]
         } catch (error) {
             
@@ -475,7 +474,6 @@ export default {
         localStorage.setItem('storageDetails', JSON.stringify(res3.data))
         
         const storageDetails = JSON.parse(localStorage.getItem('storageDetails'))
-        console.log(storageDetails)
         this.storageD = storageDetails[0]
 
         const ctx = document.getElementById('myChart');
