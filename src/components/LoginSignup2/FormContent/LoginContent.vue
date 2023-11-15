@@ -73,7 +73,10 @@ lg:py-40 md:py-[10px] md:h-screen sm:p-10 min-[320px]:p-3 lg:px-20 ">
 
                 </div>
 
+                <div class="flex w-full justify-center">
                 <button @click="routerP" class=""><h3 class="text-sidebarBG text-[12px] mt-4 text-right">forgot password?</h3></button>
+
+                </div>
 
                 
 
