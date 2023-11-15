@@ -56,21 +56,21 @@
 
                                     <!-- start of the form -->
                                     <div class="w-full">
-                                        <VeeForm  @submit="patchAuthUserData" :validation-schema="signupSchema">
+                                        <VeeForm  @submit="patchAuthUserData">
                                             <!-- name section -->
                                             <div class="flex lg:flex-row md:flex-row sm:flex min-[320px]:flex-col w-full justify-between lg:gap-20 md:gap-10 sm:gap-y-8 min-[320px]:gap-2 px-8 pt-10">
                                                 
                                                 <div class="relative z-0 w-full mb-6 group">
 
-                                                    <vee-field autocomplete="off" name="firstName" type="text" class="w-full h-10 pl-2 text-gray-900 border-b-2 border-sidebarBG focus:outline-none focus:borer-rose-600 on:focus:bg-white" :placeholder="firstName" />
-                                                    <ErrorMessage name="firstName" />
+                                                    <vee-field ref="anyName" autocomplete="off" name="firstName" type="text" class="w-full h-10 pl-2 text-gray-900 border-b-2 border-sidebarBG focus:outline-none focus:borer-rose-600 on:focus:bg-white" :placeholder="firstName" />
+                                                    <!-- <ErrorMessage name="firstName" /> -->
                                                     
 							                        <label for="firstName" class="absolute left-0 -top-6 text-gray-600 text-sm placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5  peer-focus:text-sm">First Name :</label>
                                                 </div>
 
                                                 <div class="relative z-0 w-full mb-6 group">
-                                                    <vee-field autocomplete="off"  name="lastName" type="text" class="w-full h-10 pl-2 text-gray-900 border-b-2 border-sidebarBG focus:outline-none focus:borer-rose-600 on:focus:bg-white" :placeholder="lastName" />
-                                                    <ErrorMessage name="lastName" />
+                                                    <vee-field ref="anyName2" autocomplete="off"  name="lastName" type="text" class="w-full h-10 pl-2 text-gray-900 border-b-2 border-sidebarBG focus:outline-none focus:borer-rose-600 on:focus:bg-white" :placeholder="lastName" />
+                                                    <!-- <ErrorMessage name="lastName" /> -->
 
 							<label for="lastName" class="absolute left-0 -top-6 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5  peer-focus:text-sm">Last Name :</label>
                                                 </div>
@@ -122,7 +122,7 @@
 
                                                     <vee-field :placeholder="mobileNumber" name="mobile" type="tel" class="block py-1.5 px-0 w-full text-sm text-gray-900 bg-transparent rounded-md border-2 border-[#29379384] appearance-none dark:border-[#29379384] dark:focus:border-[#29379384] focus:outline-none focus:ring-0 focus:border-[#29379384] peer"/> -->
 
-                                                    <vee-field autocomplete="off" id="" name="mobile" type="tel" class="w-full h-10 pl-2 text-gray-900 border-b-2 border-sidebarBG focus:outline-none focus:borer-rose-600 on:focus:bg-white" :placeholder="mobileNumber" />
+                                                    <vee-field ref="anyName3" autocomplete="off" id="" name="mobile" type="tel" class="w-full h-10 pl-2 text-gray-900 border-b-2 border-sidebarBG focus:outline-none focus:borer-rose-600 on:focus:bg-white" :placeholder="mobileNumber" />
 
 							<label for="mobile" class="absolute left-0 -top-6 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5  peer-focus:text-sm">Mobile Number :</label>
 
@@ -330,7 +330,11 @@ export default{
             setTimeout(() => {
                 this.updated = false;
             }, 2000);
-            values.reset();
+
+            // reset values on input fiels
+            this.$refs.anyName.reset();
+            this.$refs.anyName2.reset();
+            this.$refs.anyName3.reset();
         }
     },
     async patchAuthPassData(values) {
