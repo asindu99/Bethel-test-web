@@ -3,13 +3,13 @@
 
 <!-- main container  -->
 <div class="w-full lg:h-screen flex justify-center items-center 
-lg:py-40 md:py-[10px] md:h-screen sm:p-10 min-[320px]:p-3 lg:px-20 ">
+lg:py-40 md:py-[10px] md:h-screen sm:p-10 min-[320px]:p-3 lg:px-20">
 
     <div class="lg:flex-row md:flex sm:flex-col-reverse min-[320px]:flex-col
      rounded-xl shadow-lg bg-white w-full ">
         <!-- login side left  -->
 
-        <img class="w-[600px] lg:hidden md:hidden sm:hidden min-[320px]:flex sm:w-[300px]" src="../../../img/images/LoginSignup-page-images/BG-img-login2.jpg" alt="">
+        <!-- <img class="w-[600px] lg:hidden md:hidden sm:hidden min-[320px]:flex sm:w-[300px]" src="../../../img/images/LoginSignup-page-images/BG-img-login2.jpg" alt=""> -->
 
         <div class="flex flex-1 lg:px-20 md:px-20 sm:px-20 min-[320px]:px-4
          lg:py-0 md:py-10 lg:w-[600px] lg:rounded-l-xl md:w-full
@@ -73,7 +73,7 @@ lg:py-40 md:py-[10px] md:h-screen sm:p-10 min-[320px]:p-3 lg:px-20 ">
 
                 </div>
 
-                <div class="flex w-full justify-center">
+                <div class="flex justify-center w-full">
                 <button @click="routerP" class=""><h3 class="text-sidebarBG text-[12px] mt-4 text-right">forgot password?</h3></button>
 
                 </div>

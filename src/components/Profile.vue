@@ -56,9 +56,11 @@
 
                                     <!-- start of the form -->
                                     <div class="w-full">
+
                                         <VeeForm  @submit="patchAuthUserData" :validation-schema="signupSchema">
+
                                             <!-- name section -->
-                                            <div class="flex lg:flex-row md:flex-row sm:flex min-[320px]:flex-col w-full justify-between lg:gap-20 md:gap-10 sm:gap-y-8 min-[320px]:gap-2 px-8 pt-10">
+                                            <div class="flex lg:flex-row md:flex-row sm:flex min-[320px]:flex-col w-full justify-between lg:gap-x-20 md:gap-x-10 sm:gap-x-8 min-[320px]:gap-x-2 px-8 pt-10 gap-y-10">
                                                 
                                                 <div class="z-0 w-full mb-6 group">
 
@@ -82,13 +84,14 @@
                                             <!-- end of the name section -->
 
                                             <!-- country section -->
-                                            <div class="flex lg:flex-row md:flex-row sm:flex min-[320px]:flex-col w-full justify-between mt-4 min-[320px]:mt-4 lg:mt-4 lg:gap-20 md:gap-10 sm:gap-8 min-[320px]:gap-2 px-8">
+                                            <div class="flex lg:flex-row md:flex-row sm:flex min-[320px]:flex-col w-full justify-between mt-4 min-[320px]:mt-4 lg:mt-4 lg:gap-x-20 md:gap-x-10 sm:gap-x-8 min-[320px]:gap-x-2 px-8 gap-y-10 pt-6">
                                                 <!-- country -->
                                                 <div class="relative z-0 w-full mb-6 group">
 
                                                     <select v-model="selected"
+
                                                       name="country" class="w-full h-10 pl-2 text-gray-900 border-b-2 border-sidebarBG focus:outline-none focus:borer-rose-600 on:focus:bg-white bg-transparent">
-                                                    
+                                                   
                                                     <option  v-for="country in countryList" 
                                                     :key="country.Code" :value="country" :selected="firstName"
                                                       class="w-[200px] bg-transparent">{{ country.Name }}</option>
@@ -107,7 +110,9 @@
 
 
                                                     <select
+
                                                  name="code" class="w-full h-10 pl-2 text-gray-900 border-b-2 border-sidebarBG focus:outline-none focus:borer-rose-600 on:focus:bg-white bg-transparent">
+
                                                     <option >{{ selected.MobileCode }}</option>
                                                 </select>
                                                 
@@ -121,7 +126,7 @@
                                             <!-- end of the select country -->
 
                                             <!-- mobile and button -->
-                                            <div class="px-8">
+                                            <div class="px-8 pt-6">
                                                 <!-- mobile number -->
                                                 <div class="relative flex flex-col mt-4 ">
                                                     
@@ -179,10 +184,12 @@
 
                                     <!-- start of the form -->
                                     <div class="w-full">
-                                        <vee-form  @submit.prevent="patchAuthPassData" :validation-schema="changePassSchema">
+
+                                        <vee-form  @submit.prevent="patchAuthPassData" :validation-schema="changePassSchema" class="pt-8>
+
                                             
                                                 <!--email and oldPassword  section -->
-                                                <div class="flex lg:flex-row md:flex-row sm:flex min-[320px]:flex-col w-full justify-between lg:gap-20 md:gap-12 sm:gap-8 min-[320px]:gap-2 mt-8 px-8">
+                                                <div class="flex lg:flex-row md:flex-row sm:flex min-[320px]:flex-col w-full justify-between lg:gap-x-20 md:gap-x-12 sm:gap-x-8 min-[320px]:gap-x-2 mt-8 px-8 gap-y-12 ">
                                                 <!-- email -->
                                                 <div class="relative flex flex-col w-full">
 
@@ -205,12 +212,12 @@
 
                                                     
                                                 </div>
-                                            </div>
-                                            <!-- end of the email and old password section -->
+                                                </div>
+                                                <!-- end of the email and old password section -->
 
 
                                             <!-- new and confirm password section -->
-                                            <div class="flex lg:flex-row md:flex-row sm:flex min-[320px]:flex-col w-full justify-between lg:gap-20 md:gap-12 sm:gap-8 min-[320px]:gap-2 mt-8 px-8">
+                                            <div class="flex lg:flex-row md:flex-row sm:flex min-[320px]:flex-col w-full justify-between lg:gap-x-20 md:gap-x-12 sm:gap-x-8 min-[320px]:gap-x-2 mt-8 px-8 gap-y-12 pt-8">
                                                 <!-- new password -->
                                                 <div class="relative flex flex-col w-full">
                                                     
@@ -238,7 +245,9 @@
 
                                             
                                             <!-- button -->
-                                            <!-- <div class="relative flex flex-col px-8 mt-8"> -->
+
+                                            <div class="relative flex flex-col px-8 mt-10 mb-8">
+
                                                 
                                                 <button type="submit" class="w-[200px] p-2 bg-sidebarBG rounded-lg px-8 text-white border-[1px] hover:bg-white hover:text-sidebarBG hover:border-[1px] hover:border-sidebarBG transition-all ease-in-out text-[14px]">Change Password</button>
 
