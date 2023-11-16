@@ -9,7 +9,7 @@ lg:py-40 md:py-[10px] md:h-screen sm:p-10 min-[320px]:p-3 lg:px-20">
      rounded-xl shadow-lg bg-white w-full ">
         <!-- login side left  -->
 
-        <img class="w-[600px] lg:hidden md:hidden sm:hidden min-[320px]:flex sm:w-[300px]" src="../../../img/images/LoginSignup-page-images/BG-img-login2.jpg" alt="">
+        <!-- <img class="w-[600px] lg:hidden md:hidden sm:hidden min-[320px]:flex sm:w-[300px]" src="../../../img/images/LoginSignup-page-images/BG-img-login2.jpg" alt=""> -->
 
         <div class="flex flex-1 lg:px-20 md:px-20 sm:px-20 min-[320px]:px-4
          lg:py-0 md:py-10 lg:w-[600px] lg:rounded-l-xl md:w-full

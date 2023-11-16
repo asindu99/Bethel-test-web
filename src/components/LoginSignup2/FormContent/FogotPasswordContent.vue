@@ -5,7 +5,7 @@
     <div class="lg:flex-row md:flex sm:flex-col-reverse min-[320px]:flex-col rounded-xl shadow-lg bg-white w-full ">
         <!-- login side left  -->
 
-        <img class="w-[600px] lg:hidden md:hidden sm:hidden min-[320px]:flex sm:w-[300px]" src="../../../img/images/LoginSignup-page-images/BG-img-login2.jpg" alt="">
+        <!-- <img class="w-[600px] lg:hidden md:hidden sm:hidden min-[320px]:flex sm:w-[300px]" src="../../../img/images/LoginSignup-page-images/BG-img-login2.jpg" alt=""> -->
 
         <div class="flex flex-1 lg:px-20 md:px-20 sm:px-20 min-[320px]:px-4 lg:py-0 md:py-10 lg:w-[600px] lg:rounded-l-xl md:w-full min-[320px]:py-20 bg-blue-50 flex-col justify-center">
             
@@ -15,7 +15,7 @@
             </div>
             
             <!----------Heading-->
-            <div class="flex flex-col items-center px-20">
+            <div class="flex flex-col items-center lg:px-20 md:px-20 sm:px-10 min-[320px]:px-5">
                 <h3 class="text-[35px] text-sidebarBG font-medium text-center">
                     Foget your Password?
                 </h3>
