@@ -201,6 +201,9 @@ export default {
         },{
           withCredentials : true,
         });
+        if(response.error){
+          console.log(response.erorr)
+        }
     
         this.showClass = 'hidden';
         this.uploadWait = false;
