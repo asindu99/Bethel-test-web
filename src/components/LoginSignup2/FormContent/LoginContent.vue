@@ -3,7 +3,7 @@
 
 <!-- main container  -->
 <div class="w-full lg:h-screen flex justify-center items-center 
-lg:py-40 md:py-[10px] md:h-screen sm:p-10 min-[320px]:p-3 lg:px-20 ">
+lg:py-40 md:py-[10px] md:h-screen sm:p-10 min-[320px]:p-3 lg:px-20">
 
     <div class="lg:flex-row md:flex sm:flex-col-reverse min-[320px]:flex-col
      rounded-xl shadow-lg bg-white w-full ">
@@ -73,7 +73,7 @@ lg:py-40 md:py-[10px] md:h-screen sm:p-10 min-[320px]:p-3 lg:px-20 ">
 
                 </div>
 
-                <div class="flex w-full justify-center">
+                <div class="flex justify-center w-full">
                 <button @click="routerP" class=""><h3 class="text-sidebarBG text-[12px] mt-4 text-right">forgot password?</h3></button>
 
                 </div>

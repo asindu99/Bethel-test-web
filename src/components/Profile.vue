@@ -194,8 +194,8 @@
 
                                                     
                                                 </div>
-                                            </div>
-                                            <!-- end of the email and old password section -->
+                                                </div>
+                                                <!-- end of the email and old password section -->
 
 
                                             <!-- new and confirm password section -->
