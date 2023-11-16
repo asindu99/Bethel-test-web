@@ -185,7 +185,7 @@
                                     <!-- start of the form -->
                                     <div class="w-full">
 
-                                        <vee-form  @submit.prevent="patchAuthPassData" :validation-schema="changePassSchema" class="pt-8>
+                                        <vee-form  @submit.prevent="patchAuthPassData" :validation-schema="changePassSchema" class="pt-8" >
 
                                             
                                                 <!--email and oldPassword  section -->
@@ -260,7 +260,7 @@
                                                 </div>
                                                 
                                             
-                                            <!-- </div> -->
+                                            </div>
 
                                         </vee-form>
                                     </div>
