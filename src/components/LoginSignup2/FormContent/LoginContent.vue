@@ -141,7 +141,7 @@ export default{
             },8000)
         },
         routerP(){
-            router.push('/forgot')
+            router.push('/')
         }
     }
     
