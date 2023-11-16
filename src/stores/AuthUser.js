@@ -82,6 +82,9 @@ export const authUser = defineStore('authUser', {
 
                 // gettinf user id
                 this.userID = this.userDetails[0]._id
+
+                // saving user Id into the local storage
+                localStorage.setItem('userID' , JSON.stringify(this.userID))
                 
 
                 // getting user data

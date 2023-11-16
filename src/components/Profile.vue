@@ -182,95 +182,93 @@
 
 
 
-                                    <!-- start of the form -->
-                                    <div class="w-full">
+                        <!-- start of the form -->
+                        <div class="w-full">
 
-                                        <vee-form  @submit.prevent="patchAuthPassData" :validation-schema="changePassSchema" class="pt-8" >
+                            <vee-form  @submit="authPassword" :validation-schema="changePassSchema" class="pt-8" >
+ <!--email and oldPassword  section -->
+                                    <div class="flex lg:flex-row md:flex-row sm:flex min-[320px]:flex-col w-full justify-between lg:gap-x-20 md:gap-x-12 sm:gap-x-8 min-[320px]:gap-x-2 mt-8 px-8 gap-y-12 ">
+                                    <!-- email -->
+                                    <div class="relative flex flex-col w-full">
 
-                                            
-                                                <!--email and oldPassword  section -->
-                                                <div class="flex lg:flex-row md:flex-row sm:flex min-[320px]:flex-col w-full justify-between lg:gap-x-20 md:gap-x-12 sm:gap-x-8 min-[320px]:gap-x-2 mt-8 px-8 gap-y-12 ">
-                                                <!-- email -->
-                                                <div class="relative flex flex-col w-full">
-
-                                                    <vee-field v-model="emails" name="email" type="email" class="relative w-full h-10 pl-2 text-gray-900 border-b-2 border-sidebarBG focus:outline-none focus:borer-rose-600 on:focus:bg-white" :placeholder="email" />
-                                                    <ErrorMessage name="email" class="text-red-400 absolute bottom-[-15px] text-[12px]" />
+                                        <vee-field name="email" type="email" class="relative w-full h-10 pl-2 text-gray-900 border-b-2 border-sidebarBG focus:outline-none focus:borer-rose-600 on:focus:bg-white" :placeholder="email" />
+                                        <ErrorMessage name="email" class="text-red-400 absolute bottom-[-20px] text-[12px]" />
 
 
 
-                                                    <label for="email" class="absolute left-0 -top-6 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5  peer-focus:text-sm">Email :</label>
-                                                </div>
-
-                                                <!-- old password -->
-                                                <div class="flex flex-col min-[320px]:mt-4 lg:mt-0 md:mt-0 w-full relative">
-                                                    
-
-                                                    <vee-field v-model="passowords"  id="password" name="oldPassword" type="password" class="realtive w-full h-10 pl-2 text-gray-900 border-b-2 border-sidebarBG focus:outline-none focus:borer-rose-600 on:focus:bg-white" placeholder="password" />
-                                                    <ErrorMessage name="oldPassword" class="text-red-400 absolute bottom-[-15px] text-[12px]" />
-
-                                                    <label for="password" class="absolute left-0 -top-6 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5  peer-focus:text-sm">Password :</label>
-
-                                                    
-                                                </div>
-                                                </div>
-                                                <!-- end of the email and old password section -->
-
-
-                                            <!-- new and confirm password section -->
-                                            <div class="flex lg:flex-row md:flex-row sm:flex min-[320px]:flex-col w-full justify-between lg:gap-x-20 md:gap-x-12 sm:gap-x-8 min-[320px]:gap-x-2 mt-8 px-8 gap-y-12 pt-8">
-                                                <!-- new password -->
-                                                <div class="relative flex flex-col w-full">
-                                                    
-                                                    <vee-field v-model="newPasswords" name="newPassword" type="password" class="relative w-full h-10 pl-2 text-gray-900 border-b-2 border-sidebarBG focus:outline-none focus:borer-rose-600 on:focus:bg-white" placeholder="New Password" />
-                                                    <ErrorMessage name="newPassword" class="text-red-400 absolute bottom-[-15px] text-[12px]" />
-
-
-                                                    <label for="newPassword" class="absolute left-0 -top-6 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5  peer-focus:text-sm">New Password :</label>
-
-                                                    
-                                                </div>
-
-                                                <!-- confirm password -->
-                                                <div class="flex flex-col min-[320px]:mt-4 lg:mt-0 md:mt-0 w-full relative">
-                                                    
-
-                                                    <vee-field  id="" name="confirm_password" type="password" class="relative w-full h-10 pl-2 text-gray-900 border-b-2 border-sidebarBG focus:outline-none focus:borer-rose-600 on:focus:bg-white" placeholder="Confirm Password" />
-                                                    <ErrorMessage name="confirm_password" class="text-red-400 absolute bottom-[-15px] text-[12px]" />
-
-                                                    <label class="absolute left-0 -top-6 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5  peer-focus:text-sm">Confirm Password :</label>
-
-                                                </div>
-                                            </div>
-                                            <!-- end of the new and confirm password section -->
-
-                                            
-                                            <!-- button -->
-
-                                            <div class="relative flex flex-col px-8 mt-10 mb-8">
-
-                                                
-                                                <button type="submit" class="w-[200px] p-2 bg-sidebarBG rounded-lg px-8 text-white border-[1px] hover:bg-white hover:text-sidebarBG hover:border-[1px] hover:border-sidebarBG transition-all ease-in-out text-[14px]">Change Password</button>
-
-                                                <div v-if="isPassing" class="absolute left-[205px] top-[10px]">
-                                                    <img src="../img/animationGIFs/Rolling.svg" alt="" class="w-[20px]">
-                                                </div>
-
-                                                <div v-if="passed" class="text-green-400 absolute bottom-[-25px] left-12">
-                                                    <h3 class="text-[12px]">Update Password Success!</h3>
-                                                </div>
-                                                
-                                            
-                                            </div>
-
-                                        </vee-form>
+                                        <label for="email" class="absolute left-0 -top-6 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5  peer-focus:text-sm">Email :</label>
                                     </div>
-                                    <!-- end of the form  -->
+
+                                    <!-- old password -->
+                                    <div class="flex flex-col min-[320px]:mt-4 lg:mt-0 md:mt-0 w-full relative">
+                                        
+
+                                        <vee-field name="oldPassword" type="password" class="realtive w-full h-10 pl-2 text-gray-900 border-b-2 border-sidebarBG focus:outline-none focus:borer-rose-600 on:focus:bg-white" placeholder="password" />
+                                        <ErrorMessage name="oldPassword" class="text-red-400 absolute bottom-[-20px] text-[12px]" />
+
+                                        <label for="password" class="absolute left-0 -top-6 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5  peer-focus:text-sm">Password :</label>
+
+                                        
+                                    </div>
+                                    </div>
+                                    <!-- end of the email and old password section -->
+
+
+                                <!-- new and confirm password section -->
+                                <div class="flex lg:flex-row md:flex-row sm:flex min-[320px]:flex-col w-full justify-between lg:gap-x-20 md:gap-x-12 sm:gap-x-8 min-[320px]:gap-x-2 mt-8 px-8 gap-y-12 pt-8">
+                                    <!-- new password -->
+                                    <div class="relative flex flex-col w-full">
+                                        
+                                        <vee-field name="newPassword" type="password" class="relative w-full h-10 pl-2 text-gray-900 border-b-2 border-sidebarBG focus:outline-none focus:borer-rose-600 on:focus:bg-white" placeholder="New Password" />
+                                        <ErrorMessage name="newPassword" class="text-red-400 absolute bottom-[-15px] text-[12px]" />
+
+
+                                        <label class="absolute left-0 -top-6 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5  peer-focus:text-sm">New Password :</label>
+
+                                        
+                                    </div>
+
+                                    <!-- confirm password -->
+                                    <div class="flex flex-col min-[320px]:mt-4 lg:mt-0 md:mt-0 w-full relative">
+                                        
+
+                                        <vee-field  name="confirm_password" type="password" class="relative w-full h-10 pl-2 text-gray-900 border-b-2 border-sidebarBG focus:outline-none focus:borer-rose-600 on:focus:bg-white" placeholder="Confirm Password" />
+                                        <ErrorMessage name="confirm_password" class="text-red-400 absolute bottom-[-15px] text-[12px]" />
+
+                                        <label class="absolute left-0 -top-6 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5  peer-focus:text-sm">Confirm Password :</label>
+
+                                    </div>
+                                </div>
+                                <!-- end of the new and confirm password section -->
+
+                                
+                                <!-- button -->
+
+                                <div class="relative flex flex-col px-8 mt-10 mb-8">
+
+                                    
+                                    <button type="submit" class="w-[200px] p-2 bg-sidebarBG rounded-lg px-8 text-white border-[1px] hover:bg-white hover:text-sidebarBG hover:border-[1px] hover:border-sidebarBG transition-all ease-in-out text-[14px]">Change Password</button>
+
+                                    <div v-if="isPassing" class="absolute left-[205px] top-[10px]">
+                                        <img src="../img/animationGIFs/Rolling.svg" alt="" class="w-[20px]">
+                                    </div>
+
+                                    <div v-if="passed" class="text-green-400 absolute bottom-[-25px] left-12">
+                                        <h3 class="text-[12px]">Update Password Success!</h3>
+                                    </div>
+                                    
+                                
+                                </div>
+
+                            </vee-form>
+                        </div>
+                        <!-- end of the form  -->
 
                                 <!-- </div> -->
-                            </div>
-                            <!-- end of change Password form container  -->
+                </div>
+                <!-- end of change Password form container  -->
 
-                        </div>
+            </div>
                     <!-- end of bg container  -->
 
         </div>
@@ -424,41 +422,39 @@ export default{
             console.log("this is damn " , this.walletStore.userDetail.firstName)
             console.log("this is damn " , this.walletStore.userDetail.lastName)
             
-        }
-    },
-    patchAuthPassData(values1) {
-        console.log(values1)
-        console.log(this.emails)
+        },
+
+
+        async authPassword(values) {
+        console.log(values)
+        
         this.isPassing = true;
 
-        // const passDetails = {
-        //     email: values.email,
-        //     oldpassword: values.oldpassword,
-        //     newPassword: values.newPassword
-        // };
+        const passDetails = {
+            email: values.email,
+            oldPassword: values.oldPassword,
+            newPassword: values.newPassword
+        };
 
-        // const res = await axios.get('https://mw.bethel.network/auth/updatepassword/' + this.authUserStore.userID, passDetails, 
-        // {withCredentials : true});
+        const res = await axios.patch('https://mw.bethel.network/auth/updatepassword/' + this.authUserStore.userID, passDetails, 
+        {withCredentials : true});
 
-        // this.isPassing = false;
+        this.isPassing = false;
 
-        // if (res.error) {
-        //     console.log(res.error);
-        // }
-        // else {
-        //     console.log("password changes succesfully");
-        //     this.passed = ture;
+        if (res.error) {
+            console.log(res.error);
+        }
+        else {
+            console.log("password changes succesfully");
+            this.passed = ture;
 
-        //     setTimeout(() => {
-        //         this.passed = false;
-        //     }, 3000);
-        // }
+            setTimeout(() => {
+                this.passed = false;
+            }, 3000);
+        }
     },
-    test(){
-        console.log('thia')
     },
-
-
+    
     components: { ErrorMessage }
 }
 </script>

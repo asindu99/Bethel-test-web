@@ -443,6 +443,8 @@ export default {
             // storage details
             storageD : null,
 
+            dashboardID : null,
+
 
             
         }
@@ -451,25 +453,16 @@ export default {
         ...mapStores(useWalletData, authUser),
         
     },
-    updated(){
-        
-    },
-    
-    created(){
-        
+    created(){     
         // get storage
-        try {
-            const storageDetails = JSON.parse(localStorage.getItem('storageDetails'))
-            this.storageD = storageDetails[0]
-        } catch (error) {
-            
-        } 
-            
-  
+        const storageDetails = JSON.parse(localStorage.getItem('storageDetails'))
+        this.storageD = storageDetails[0]
+
     },
     async mounted(){
         
-        // const res3 = await axios.get('https://mw.bethel.network/storagedetails/' + this.authUserStore.userID,
+
+        // const res3 = await axios.get('https://mw.bethel.network/storagedetails/' + this.dashboardID,
         // {withCredentials : true})
         // localStorage.setItem('storageDetails', JSON.stringify(res3.data))
         

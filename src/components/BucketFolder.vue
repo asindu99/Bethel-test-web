@@ -161,14 +161,20 @@ export default {
     const uploadDetails2 = JSON.parse(localStorage.getItem('uploadDetails'))
     this.uploadDetails = uploadDetails2
 
-    const storageDetails = JSON.parse(localStorage.getItem('storageDetails'))
-    this.storageD = storageDetails[0]
+    // const storageDetails = JSON.parse(localStorage.getItem('storageDetails'))
+    // const storageD = storageDetails[0]
+
+    // console.log("woow " ,storageD._id)
   },
 
   mounted(){
     const uploadDetails2 = JSON.parse(localStorage.getItem('uploadDetails'))
     this.uploadDetails = uploadDetails2
-    
+
+    const storageDetails = JSON.parse(localStorage.getItem('storageDetails'))
+    const storageD = storageDetails[0]
+
+    console.log("woow " ,storageD._id)
 
   },
   computed : {
