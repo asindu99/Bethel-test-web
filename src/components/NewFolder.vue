@@ -26,7 +26,7 @@
 
                         <!-- Main Bucket -->
                         <div>
-                            <h2 class="font-bold text-[30px]">--Folder--</h2>
+                            <h2 class="font-bold text-[30px]">Folder</h2>
                         </div>
                         <!-- end of the bucket main -->
                     </div>
@@ -38,7 +38,7 @@
                     <!-- topic of upload file  -->
                     <div class="">
                         <div class="relative mt-6">
-                            <div class="w-[2px] h-[20px] bg-[#293793] absolute top-[5px] "></div>
+                            <div class="w-[2px] h-[20px] bg-bethelBlue absolute top-[5px] "></div>
                             <h3 class="ml-2 text-[20px]">Upload File</h3> 
 
 
@@ -46,8 +46,7 @@
                     </div>
 
                     <!-- file upload content -->
-                    <div class="flex mt-4 justify-evenly w-full flex-wrap gap-2
-                    ">
+                    <div class="flex mt-4 justify-evenly w-full flex-wrap gap-2">
                         <!-- file uplaod flex -->
                         <div class="bg-white flex flex-col gap-2 pl-3 pt-4 pb-2 border-2 
                         lg:w-[595px] md:w-[595px] sm:w-[595px] min-[320px]:w-[340px]
@@ -58,7 +57,27 @@
                             <div class="w-full px-10 py-20 rounded text-center cursor-pointer border border-dashed border-gray-400 text-gray-400 transition duration-500 hover:text-[#000000] hover:bg-[linear-gradient(to_right,rgba(240,245,254,1),rgba(240,245,254,1))] hover:border-green-400 hover:border-solid">
                                 <h5>Drop your files here</h5>
                             </div>
-                            <input type="file" multiple/>
+                            <div class="flex flex-row justify-between">
+                                <!-- <input type="file" multiple class="font-['Montserrat']"/> -->
+                                <div class=" lg:mt-8 md:mt-8 sm:mt-8 min-[320px]:mt-8">
+                                    <input
+                                    class="relative m-0 block w-full min-w-0 flex-auto cursor-pointer rounded border 
+                                    border-none border-sidebarBG bg-clip-padding px-3 py-3 text-[14px] font-['Montserrat'] 
+                                    text-[white] transition duration-300 ease-in-out file:-mx-3 file:-my-[0.32rem] file:cursor-pointer 
+                                    file:overflow-hidden file:rounded-lg file:border-2 file:border-sidebarBG file:border-inherit 
+                                    file:bg-blue-50 file:px-4 file:py-2 file:text-sidebarBG file:transition file:duration-150 
+                                    file:ease-in-out file:[border-inline-end-width:1px] file:[margin-inline-end:0.75rem]
+                                     hover:file:bg-sidebarBG  hover:file:text-[white]  focus:border-primary focus:text-sidebarBG focus:shadow-te-primary 
+                                     dark:text-sidebarBG sidebarBG:file:bg-sidebarBG sidebarBG:file:text-sidebarBG 
+                                     sidebarBG:focus:border-primary"
+                                    type="file"/>
+                                </div>
+
+                                <div class=" lg:mt-10 md:mt-8 sm:mt-8 min-[320px]:mt-9">
+                                    <button class="bg-sidebarBG px-6 py-2 text-[white] rounded-xl text-[14px] hover:text-sidebarBG hover:bg-[white] border-2 hover:border-sidebarBG ml-14">Upload</button>
+
+                                </div>
+                            </div>
                             <hr class="my-6" />
                             <!-- Progess Bars -->
                             <div class="mb-4">
@@ -112,7 +131,7 @@
                     <!-- recent activites  -->
                     <div class="relative my-10">
                         <!-- table of content -->
-                        <div class="w-[2px] h-[20px] bg-[#293793] absolute top-[5px] "></div>
+                        <div class="w-[2px] h-[20px] bg-bethelBlue absolute top-[5px] "></div>
                         <h3 class="ml-2 text-[20px]">Recent Activities</h3> 
                     </div>
                     
@@ -131,7 +150,7 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                <td class="min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] min-[320px]:text-[8px] text-center bg-white border p-3"> ABC</td>
+                                <td class="min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] min-[320px]:text-[8px] text-center bg-white border p-3"> file-1</td>
                                 <td class="min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] min-[320px]:text-[8px] text-center bg-white border p-3">QmchJZ4J2yAS45t</td>
                                 <td class="min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] min-[320px]:text-[8px] text-center bg-white border p-3">Pinned</td>
                                 <td class="min-[320px]:text-[8px] lg:text-[14px] md:text-[12px] min-[320px]:text-[8px] text-center bg-white border p-3">2023-10-16 02:10:13-0400</td>
@@ -181,8 +200,7 @@ export default {
                 bucketDateCreated : '2023-10-13 06:46:10 -0400',
             },
 
-            // bucket count
-            bucketCount : 0,
+            
         }
     },
 
@@ -220,7 +238,7 @@ export default {
                 const yValues = [0, 100];
                 const barColors = [
                 "#f2003c",
-                "#293793",
+                "#5669cc",
         ];
             
 

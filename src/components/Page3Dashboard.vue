@@ -1,20 +1,21 @@
 <template>
-    <div :class="paddingClass" class="lg:w-full md:w-full md:mx-auto min-[320px]:w-[100%] min-[320px]:px-[10px]">
-
+    <div :class="paddingClass" class="relative lg:w-full md:w-full md:mx-auto min-[320px]:w-[100%] min-[320px]:px-[10px]">
         <!-- head wallet div  -->
-        <div class="flex items-center justify-between shadow-sm rounded-lg px-3 py-3 bg-white">
+        <div class=" hidden">
                 <!-- left side text -->
                  <div>
                     <!-- storage with arrow -->
-                    <div class="flex items-center">
-                        <div>
-                            <img src="../img/logos/bethellogo.png" alt="" class="w-[40px]">
+                    <div class="flex items-center fixed lg:top-[-40px] lg:left-[10px]
+                    md:top-[25px] md:left-[200px]
+                    sm:top-[-75px] sm:left-[180px]
+                    z-[100]">
+                        <div class="lg:flex md:hidden sm:hidden min-[320px]:hidden">
+                            <img src="../img/logos/bethellogo.png" alt="" class="w-[30px]">
                         </div>
 
                         <!-- right arrow -->
-                        <div class="ml-2 flex flex-col">
-                            <h3 class="font-bold text-[17px]">Welcome to the Bethel</h3>
-                            <h3 class="text-[#293793] font-bold text-[16px] ">Future CX</h3>
+                        <div class="ml-2 flex flex-col lg:flex md:flex sm:hidden min-[320px]:hidden">
+                            <h3 class="font-bethelBlue font-medium lg:text-[18px] md:text-[15px] sm:text-[18px] min-[320px]:text-[12px] "><span class="text-sidebarBG ">Weclome to BEHTEL,</span> Craig </h3>
                         </div>
                         
                     </div>
@@ -25,30 +26,32 @@
         
 
         <!-- 1st caption section -->
-        <div class="relative mt-4">
-            <div class="w-[2px] h-[20px] bg-[#293793] absolute top-[5px] "></div>
-            <h3 class="ml-2 text-[20px]">OverView</h3> 
+        <div class=" mt-2">
+            <div class="w-[2px] h-[20px] bg-bethelBlue absolute top-[5px] "></div>
+            <h3 class="ml-2 text-[18px]">OverView</h3> 
         </div>
 
         <!-- overview content flex -->
         <div class="flex lg:flex-row md:flex-col sm:flex-col min-[320px]:flex-col items-center mt-4 w-full flex-warp gap-2 justify-center">
 
             <!-- buckets  -->
-            <div class="bg-white flex flex-col gap-2 p-4 border-2 w-full h-[80px] items-start justify-center rounded-xl shadow-md 
+            <div class="bg-sidebarBG flex flex-col gap-2 p-2 border-2 w-full h-[65px] items-start justify-center rounded-xl 
             ">
                 <!-- content inside -->
                 <div class="flex items-center gap-3">
                     <!-- image side -->
-                    <div>
-                        <img src="../img/icons/icon-bucket.png" alt="" class="w-[35px] mx-3">
+                    <div class="text-iconColor w-[35px] flex items-center justify-center">
+                        <span class="material-symbols-outlined scale-[1.5]">
+                        cleaning_bucket
+                        </span>
                     </div>
                     <!-- content side -->
                     <div class="flex flex-col">
-                        <h1>Buckets</h1>
+                        <h1 class="text-white text-[14px]">Buckets</h1>
                         <div class="flex items-center">             
-                          <h3 class="text-[13px]">Total Buckets</h3> 
-                          <div class="ml-3 w-[30px] h-[25px] bg-blue-100 rounded-lg text-center justify-center items-center">
-                            <h1 class="text-blue-600">2</h1>
+                          <h3 class="text-[10px] text-white">Total Buckets</h3> 
+                          <div class="ml-3 rounded-lg text-center justify-center items-center">
+                            <h1 class="text-white">- 1</h1>
                             </div> 
                         </div>
                         
@@ -59,21 +62,26 @@
             <!-- end of the bucket section -->
 
             <!-- object flex -->
-            <div class="bg-white flex flex-col gap-2 p-4 border-2 w-full h-[80px] items-start justify-center rounded-xl shadow-md 
+            <div class="bg-sidebarBG flex flex-col gap-2 p-2 border-2 w-full h-[65px] items-start justify-center rounded-xl  
             ">
                 <!-- content inside -->
                 <div class="flex items-center gap-3">
-                    <!-- image side -->
-                    <div>
-                        <img src="../img/icons/icon-file.png" alt="" class="w-[35px] mx-3">
+
+                    <!-- icon -->
+                    <div class="text-iconColor w-[35px] flex items-center justify-center">
+                        <span class="material-symbols-outlined scale-[1.5]">
+                        description
+                        </span>
                     </div>
+                    <!-- end of icons -->
+
                     <!-- content side -->
-                    <div class="flex flex-col">
-                        <h1>Objects</h1>
-                        <div class="flex items-center">             
-                          <h3 class="text-[13px]">Total Objects</h3> 
-                          <div class="ml-3 w-[30px] h-[25px] bg-blue-100 rounded-lg text-center justify-center items-center">
-                            <h1 class="text-blue-600">2</h1>
+                    <div class="flex flex-col text-white">
+                        <h1 class=" text-[14px]">Objects</h1>
+                        <div class="flex items-center ">             
+                          <h3 class="text-[10px]">Total Objects</h3> 
+                          <div class="ml-3 rounded-lg text-center justify-center items-center">
+                            <h1 class="text-white">- {{ storageD.filecount}}</h1>
                         </div> 
                         </div>
                         
@@ -83,21 +91,25 @@
             </div>
 
             <!-- Total strorage Section -->
-            <div class="bg-white flex flex-col gap-2 p-4 border-2 w-full h-[80px] items-start justify-center rounded-xl shadow-md 
+            <div class="bg-sidebarBG flex flex-col gap-2 p-2 border-2 w-full h-[65px] items-start justify-center rounded-xl  
             ">
                 <!-- content inside -->
                 <div class="flex items-center gap-3">
-                    <!-- image side -->
-                    <div>
-                        <img src="../img/icons/icon-storage.png" alt="" class="w-[35px] mx-3">
+                    <!-- icon -->
+                    <div class="text-iconColor w-[35px] flex items-center justify-center">
+                        <span class="material-symbols-outlined scale-[1.5]">
+                        hard_drive
+                        </span>
                     </div>
+                    <!-- end of icons -->
+
                     <!-- content side -->
-                    <div class="flex flex-col">
-                        <h1>Storage</h1>
+                    <div class="flex flex-col text-white">
+                        <h1 class=" text-[14px]">Storage</h1>
                         <div class="flex items-center">             
-                          <h3 class="text-[13px]">Total Storage</h3> 
-                          <div class="ml-3 w-[30px] h-[25px] bg-blue-100 rounded-lg text-center justify-center items-center">
-                            <h1 class="text-blue-600 ">2</h1>
+                          <h3 class="text-[10px]">Total Storage</h3> 
+                          <div class="ml-3  rounded-lg text-center justify-center items-center">
+                            <h1 class="text-white ">- {{ storageD.totalsize  }}</h1>
                         </div> 
                         </div>
                         
@@ -107,21 +119,25 @@
             </div>
 
             <!-- Bandwidth flex -->
-            <div class="bg-white flex flex-col gap-2 p-4 border-2 w-full h-[80px] items-start justify-center rounded-xl shadow-md 
+            <div class="bg-sidebarBG flex flex-col gap-2 p-2 border-2 w-full h-[65px] items-start justify-center rounded-xl  
             ">
                 <!-- content inside -->
-                <div class="flex items-center gap-3">
-                    <!-- image side -->
-                    <div>
-                        <img src="../img/icons/icon-bandwidth.png" alt="" class="w-[35px] mx-3">
+                <div class="flex items-center gap-3 text-white">
+                    <!-- icon -->
+                    <div class="text-iconColor w-[35px] flex items-center justify-center">
+                        <span class="material-symbols-outlined scale-[1.5]">
+                        wifi
+                        </span>
                     </div>
+                    <!-- end of icons -->
+
                     <!-- content side -->
                     <div class="flex flex-col">
-                        <h1>Bandwidth</h1>
+                        <h1 class=" text-[14px]">Bandwidth</h1>
                         <div class="flex items-center">             
-                          <h3 class="text-[13px]">Total Bandwidth</h3> 
-                          <div class="ml-3 w-[30px] h-[25px] bg-blue-100 rounded-lg text-center justify-center items-center">
-                            <h1 class="text-blue-600">2</h1>
+                          <h3 class="text-[10px]">Total Bandwidth</h3> 
+                          <div class="ml-3 rounded-lg text-center justify-center items-center">
+                            <h1 class="text-white">- 0</h1>
                         </div> 
                         </div>
                         
@@ -139,110 +155,37 @@
 
         <!-- 2nd caption section -->
         <div class="relative mt-4">
-            <div class="w-[2px] h-[20px] bg-[#293793] absolute top-[5px] "></div>
-            <h3 class="ml-2 text-[20px]">Data Usage</h3> 
+            <div class="w-[2px] h-[20px] bg-bethelBlue absolute top-[5px] "></div>
+            <h3 class="ml-2 text-[18px]">Data Usage</h3> 
         </div>
 
 
 
         
         <!-- data usage content flex -->
-        <div class="flex lg:flex-row md:flex-col sm:flex-col min-[320px]:flex-col mt-4 justify-center items-center w-full gap-2 
+        <div class="h-full flex lg:flex-row md:flex-col sm:flex-col min-[320px]:flex-col mt-1 justify-center items-center w-full gap-2 
         ">
-            <!-- data usage flex 1-->
+            <!-- chart flex 2 -->
             <div class="bg-white flex flex-col gap-2 pl-3 pt-4 pb-2 border-2 
-            lg:w-full md:w-[595px] sm:w-[595px] min-[320px]:w-[340px]
+            lg:w-full md:w-full sm:w-full min-[320px]:w-full
              justify-start items-start rounded-xl shadow-md">
                 <!-- icon and text-->
                 <div class="flex items-center">
                     <!-- image side -->
-                    <div class="mr-2">
-                        <img src="../img/icons/icon-storage.png" alt="" class="w-[35px] mx-3">
+                    <!-- icon -->
+                    <div class="text-iconColor2 w-[45px] flex items-center justify-center mr-1">
+                        <span class="material-symbols-outlined scale-[1.5]">
+                            <span class="material-symbols-outlined">
+                            paid
+                            </span>
+                        </span>
                     </div>
-                        <!-- content side -->
-                        <div class="flex flex-col">
-                            <h1>Storage Data Usage</h1>
-                            <div class="flex items-center">             
-                            <h3 class="text-[13px]">Chart View</h3> 
-                            
-                        </div>
-                            
-                    </div>
-                </div>
-                
-
-                <!-- storage chart -->
-                <div class=" flex items-center justify-evenly mt-2
-                lg:w-full md:w-full sm:w-[550px] min-[320px]:w-[320px] 
-                lg:h-[250px] md:h-[300px] sm:h-[300px] min-[320px]:h-[200px] ">
-
-                    <!-- storage status extend -->
-                    <div class="lg:flex md:flex sm:flex min-[320px]:hidden flex-col gap-4">
-                        
-                        <!-- total file -->
-                        <div class="flex flex-col items-center">
-                            <div>
-                                <img src="../img/icons/icon-play.png" alt="" class="w-[40px]">
-                            </div>
-
-                            <div class="flex items-center mt-[2px]">
-                                <h3 class="text-[16px]">Total Files :</h3>
-                                <h3 class="text-[#8d8d8d] text-[14px] ml-1">13 files</h3>
-                            </div>
-                        </div>
-
-                        <!-- total file -->
-                        <div class="flex flex-col items-center">
-                            <div>
-                                <img src="../img/icons/icon-play.png" alt="" class="w-[40px]">
-                            </div>
-
-                            <div class="flex items-center mt-[2px]">
-                                <h3 class="text-[16px]">Total Files :</h3>
-                                <h3 class="text-[#8d8d8d] text-[14px] ml-1">13 files</h3>
-                            </div>
-                        </div>
-
-                        <!-- total file -->
-                        <div class="flex flex-col items-center">
-                            <div>
-                                <img src="../img/icons/icon-play.png" alt="" class="w-[40px]">
-                            </div>
-
-                            <div class="flex items-center mt-[2px]">
-                                <h3 class="text-[16px]">Total Files :</h3>
-                                <h3 class="text-[#8d8d8d] text-[14px] ml-1">13 files</h3>
-                            </div>
-                        </div>
-
-  
-
-                    </div>
-                    <!-- end of the storage status extend -->
-
-                    <!-- chart view -->
-                    <canvas id="myChart" class="lg:w-full md:w-full sm:w-[650px] min-[320px]:w-[200px] ml-3"></canvas>
-
-                </div>
-
-            </div>
-            <!-- end of the data usage flex -->
-
-            <!-- data usage flex 2 -->
-            <div class="bg-white flex flex-col gap-2 pl-3 pt-4 pb-2 border-2 
-            lg:w-full md:w-[595px] sm:w-[595px] min-[320px]:w-[340px]
-             justify-start items-start rounded-xl shadow-md">
-                <!-- icon and text-->
-                <div class="flex items-center">
-                    <!-- image side -->
-                <div class="mr-2">
-                    <img src="../img/icons/icon-transaction.png" alt="" class="w-[35px] mx-3">
-                    </div>
+                    <!-- end of icons -->
                     <!-- content side -->
                     <div class="flex flex-col">
-                        <h1>Trasactions </h1>
+                        <h1 class="text-[14px]">Trasactions </h1>
                         <div class="flex items-center">             
-                          <h3 class="text-[13px]">Chart View</h3> 
+                          <h3 class="text-[12px]">Chart View</h3> 
                           
                         </div>
                         
@@ -252,22 +195,174 @@
 
                 <!-- storage chart -->
                 <div class="mt-2 flex items-center justify-center
-                lg:w-full md:w-full sm:w-[550px] min-[320px]:w-[320px] 
-                lg:h-[250px] md:h-[300px] sm:h-[300px] min-[320px]:h-[200px] ">
+                lg:w-full md:w-full sm:w-full min-[320px]:w-full 
+                lg:h-[220px] md:h-[300px] sm:h-[300px] min-[320px]:h-[200px] ">
                     <canvas id="myChart2" class="
-                    lg:w-full md:w-full sm:w-[650px] min-[320px]:w-[200px] ml-3"></canvas>
+                    lg:w-[280px] md:w-full sm:w-full min-[320px]:w-full"></canvas>
+                </div>
+
+            </div>
+            <!-- end of the data usage flex 2-->
+
+            <!-- chart flex 3-->
+            <div class="bg-white  flex flex-col gap-2 pl-3 pt-4 pb-2 border-2 
+            lg:w-full md:w-full sm:w-full min-[320px]:w-full
+             justify-start items-start rounded-xl shadow-md ">
+                <!-- icon and text-->
+                <div class="flex items-center">
+                    <!-- image side -->
+                    <!-- icon -->
+                    <div class="text-iconColor2 w-[55px] flex items-center justify-center">
+                        <span class="material-symbols-outlined scale-[1.5]">
+                        hard_drive
+                        </span>
+                    </div>
+                    <!-- end of icons -->
+                        <!-- content side -->
+                        <div class="flex flex-col">
+                            <h1 class="text-[14px]">Data Use</h1>
+                            <div class="flex items-center">             
+                            <h3 class="text-[12px]">Chart View</h3> 
+                            
+                        </div>
+                            
+                    </div>
+                </div>
+                
+
+                <!-- storage chart -->
+                <div class=" flex items-center justify-center mt-2 gap-2
+                lg:w-full md:w-full sm:w-[550px] min-[320px]:w-full 
+                lg:h-[220px] md:h-[300px] sm:h-[300px] min-[320px]:h-[200px] ">
+
+                    <!-- chart view -->
+                    <canvas id="myChart3" class="lg:w-full md:w-full sm:w-full min-[320px]:[400px]"></canvas>
+                    
+
+                </div>
+
+            </div>
+            <!-- end of the data usage flex 3 -->
+
+             <!-- chart flex 1-->
+             <div class="bg-white  flex flex-col gap-2 pl-3 pt-4 pb-2 border-2 
+            lg:w-full md:w-full sm:w-full min-[320px]:w-full
+             justify-start items-start rounded-xl shadow-md ">
+                <!-- icon and text-->
+                <div class="flex items-center">
+                    <!-- image side -->
+                    <!-- icon -->
+                    <div class="text-iconColor2 w-[55px] flex items-center justify-center">
+                        <span class="material-symbols-outlined scale-[1.5]">
+                        hard_drive
+                        </span>
+                    </div>
+                    <!-- end of icons -->
+                        <!-- content side -->
+                        <div class="flex flex-col">
+                            <h1 class="text-[14px]">Storage Data Usage</h1>
+                            <div class="flex items-center">             
+                            <h3 class="text-[12px]">Chart View</h3> 
+                            
+                        </div>
+                            
+                    </div>
+                </div>
+                
+
+                <!-- storage chart -->
+                <div class=" flex items-center justify-center mt-2 gap-2
+                lg:w-full md:w-full sm:w-[550px] min-[320px]:w-full 
+                lg:h-[220px] md:h-[300px] sm:h-[300px] min-[320px]:h-[200px] ">
+
+                    <!-- chart view -->
+                    <canvas id="myChart" class="lg:w-full md:w-full sm:w-full min-[320px]:[400px]"></canvas>
+
+                    <div class="flex flex-col gap-2">
+                        <!-- total file -->
+                            <div class="flex items-center justify-start w-full" >
+                                <!-- icon -->
+                                <div class="text-iconColor2 w-[35px] flex items-center justify-center mr-1">
+                                    <span class="material-symbols-outlined scale-[1]">
+                                    folder
+                                    </span>
+                                </div>
+                                <!-- end of icons -->
+
+                                <div class="flex flex-col items-center justify-center mt-[2px]">
+                                    <h3 class="text-[14px]">Files</h3>
+                                    <h3 class="text-[#8d8d8d] text-[12px] ml-1">{{storageD.filecount}} files</h3>
+                                </div>
+                            </div>
+
+                            <!-- total file -->
+                            <div class="flex items-center justify-start w-full">
+                                <!-- icon -->
+                                <div class="text-iconColor2 w-[35px] flex items-center justify-center mr-1">
+                                    <span class="material-symbols-outlined scale-[1]">
+                                    image
+                                    </span>
+                                </div>
+                                <!-- end of icons -->
+
+                                <div class="flex flex-col items-center justify-center mt-[2px]">
+                                    <h3 class="text-[14px]">Images</h3>
+                                    <h3 class="text-[#8d8d8d] text-[12px] ml-1">0 files</h3>
+                                </div>
+                            </div>
+
+                            <!-- total file -->
+                            <div class="flex items-center justify-start w-full">
+                                <!-- icon -->
+                                <div class="text-iconColor2 w-[35px] flex items-center justify-center mr-1">
+                                    <span class="material-symbols-outlined scale-[1]">
+                                    image
+                                    </span>
+                                </div>
+                                <!-- end of icons -->
+
+                                <div class="flex flex-col items-center justify-center mt-[2px]">
+                                    <h3 class="text-[14px]">Musics</h3>
+                                    <h3 class="text-[#8d8d8d] text-[12px] ml-1">0 files</h3>
+                                </div>
+                            </div>
+                            
+                            
+                            <!-- total file -->
+                            <div class="flex items-center justify-start w-full">
+                                <!-- icon -->
+                                <div class="text-iconColor2 w-[35px] flex items-center justify-center mr-1">
+                                    <span class="material-symbols-outlined scale-[1]">
+                                    movie
+                                    </span>
+                                </div>
+                                <!-- end of icons -->
+
+                                <div class="flex flex-col items-center justify-center mt-[2px]">
+                                    <h3 class="text-[14px]">Videos</h3>
+                                    <h3 class="text-[#8d8d8d] text-[12px] ml-1">0 files</h3>
+                                </div>
+                            </div>
+
+                    </div>
+                    
+
                 </div>
 
             </div>
             <!-- end of the data usage flex -->
+
+            
+            
         </div>
-        <!-- end of the data usage flex -->
+        <!-- end of the storage side extends -->
+      
         
 
         <!-- 3rd caption section -->
         <div class="relative mt-6">
-            <div class="w-[2px] h-[20px] bg-[#293793] absolute top-[5px] "></div>
-            <h3 class="ml-2 text-[20px]">Recent Log Activies</h3> 
+            <div class="w-[2px] h-[20px] bg-bethelBlue absolute top-[5px] "></div>
+            <h3 class="ml-2 text-[18px]">Recent Log Activies</h3> 
         </div>
 
         <!-- log activies table -->
@@ -276,91 +371,189 @@
             <table class="table-auto border-separate py-2 w-full rounded-lg">
                 <thead class="">
                     <tr class="">
-                    <th class="lg:text-[14px] md:text-[14px] sm:text-[14px] min-[320px]:text-[10px] border p-3 bg-blue-50">User's Name</th>
-                    <th class="lg:text-[14px] md:text-[14px] sm:text-[14px] min-[320px]:text-[10px] border p-3 bg-blue-50">Ip Address</th>
-                    <th class="lg:text-[14px] md:text-[14px] sm:text-[14px] min-[320px]:text-[10px] border p-3 bg-blue-50">Log Status</th>
-                    <th class="lg:text-[14px] md:text-[14px] sm:text-[14px] min-[320px]:text-[10px] border p-3 bg-blue-50">Date and time</th>
+                    <th class="lg:text-[12px] md:text-[12px] sm:text-[12px] min-[320px]:text-[10px] border p-3 bg-blue-50">User's Name</th>
+                    <th class="lg:text-[12px] md:text-[12px] sm:text-[12px] min-[320px]:text-[10px] border p-3 bg-blue-50">Ip Address</th>
+                    <th class="lg:text-[12px] md:text-[12px] sm:text-[12px] min-[320px]:text-[10px] border p-3 bg-blue-50">Log Status</th>
+                    <th class="lg:text-[12px] md:text-[12px] sm:text-[12px] min-[320px]:text-[10px] border p-3 bg-blue-50">Date and time</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                    <td class="lg:text-[14px] md:text-[14px] sm:text-[14px] min-[320px]:text-[10px] text-center bg-white border p-3">User Name </td>
-                    <td class="lg:text-[14px] md:text-[14px] sm:text-[14px] min-[320px]:text-[10px] text-center bg-white border p-3">Ipv4 / Ipv6</td>
-                    <td class="lg:text-[14px] md:text-[14px] sm:text-[14px] min-[320px]:text-[10px] text-center bg-white border p-3">Loged In</td>
-                    <td class="lg:text-[14px] md:text-[14px] sm:text-[14px] min-[320px]:text-[10px] text-center bg-white border p-3">2023-10-14 14:00</td>
+                    <tr v-for="logs in logActivityArr" :key="logs.user" class="lg:text-[12px] md:text-[12px] sm:text-[12px] min-[320px]:text-[10px] border p-3 bg-blue-50">
+                        <td class="lg:text-[14px] md:text-[14px] sm:text-[14px] min-[320px]:text-[10px] text-center bg-white border p-3">{{ logs.user }}</td>
+                        <td class="lg:text-[14px] md:text-[14px] sm:text-[14px] min-[320px]:text-[10px] text-center bg-white border p-3">{{ logs.ip }}</td>
+                        <td class="lg:text-[14px] md:text-[14px] sm:text-[14px] min-[320px]:text-[10px] text-center bg-white border p-3">{{ logs.logStats }}</td>
+                        <td class="lg:text-[14px] md:text-[14px] sm:text-[14px] min-[320px]:text-[10px] text-center bg-white border p-3">{{ logs.DT }}</td>
                     </tr>
                 </tbody>
             </table>
 
 
         </div>
+
+    <!-- sign in sucess msg -->
+    <div v-show="elementVisible" class="absolute z-[10] top-0 right-2 animate__animated animate__animated animate__fadeIn">
+        <div class="relative flex p-2  rounded-xl  items-center gap-2 bg-green-500 
+    lg:w-[320px] md:w-[320px] sm:w-[320px] min-[320px]:w-[200px]
+    ">
+
+        <!-- msg div -->
+        <div class="flex flex-col text-white lg:text-[14px] md:text-[14px] sm:text-[14px] min-[320px]:text-[11px]">
+            <h3>Success!</h3>
+            <h4>You successfully loged-in</h4>
+        </div>
+
+        <!-- bethel logo -->
+        <div class="absolute top-2 right-2 flex gap-1">
+            <img src="../img/logos/bethellogo.png" alt="" class="w-[15px]">
+            <h3 class="text-[10px] font-bold text-bethelBlue">BETHEL</h3>
+        </div>
+    </div>
+    
+</div>
+<!-- end of the sign in  sucess msg -->
+                
        
     </div>
 </template>
 
 <script>
+import {mapStores} from 'pinia'
+import {useWalletData} from '@/stores/DataStore'
+import {authUser} from '@/stores/AuthUser'
+
+
 import Chart from 'chart.js/auto';
+
 
 export default {
     name : 'Page3Dashboard',
     data(){
         return{
-            paddingClass : ''
+            paddingClass : '',
+
+            // LOG IN SUCESS MSG
+            elementVisible : false,
+
+            // log activity array
+            logActivityArr : [],
+
+
+            user : [],
+
+            // storage details
+            storageD : null,
+
+
+            
         }
     },
-    mounted(){
+    computed : {
+        ...mapStores(useWalletData, authUser),
+        
+    },
+    updated(){
+        
+    },
+    
+    created(){
+        // get storage
+        try {
+            const storageDetails = JSON.parse(localStorage.getItem('storageDetails'))
+            console.log(storageDetails)
+            this.storageD = storageDetails[0]
+        } catch (error) {
+            
+        } 
+            
+  
+    },
+    async mounted(){
+        try {
+            const res3 = await axios.get('https://mw.bethel.network/storagedetails/' + this.userID,
+            {withCredentials : true})
+            localStorage.setItem('storageDetails', JSON.stringify(res3.data))
+        } catch (error) {
+            
+        }
+        const storageDetails = JSON.parse(localStorage.getItem('storageDetails'))
+        console.log(storageDetails)
+        this.storageD = storageDetails[0]
+
         const ctx = document.getElementById('myChart');
         const ctx1 = document.getElementById('myChart2');
+        const ctx2 = document.getElementById('myChart3');
 
         const myChart = new Chart(ctx, {
         type: 'doughnut',
-    data: {
-      labels: ['Total', 'Used', 'Remaining'],
-      datasets: [{
-        label: 'Storage',
-        data: [300, 50, 100],
-        backgroundColor: [
-      'rgb(0, 71, 171)',
-      'rgb(54, 162, 235)',
-      'rgb(0, 150, 255)'
-    ],
-    hoverOffset: 10,
-    position : 'bottom',
-      }]
-    },
-    // options: {
-    //   scales: {
-    //     y: {
-    //       beginAtZero: true
-    //     }
-    //   }
-    // }
+            data: {
+            labels: ['Used', 'Remaining'],
+            datasets: [{
+                label: 'Storage',
+                data: [this.storageD.totalsize , 10000],
+                backgroundColor: [
+            'rgb(86, 105, 204)',
+            'rgb(233, 152, 60)',
+            ],
+            hoverOffset: 10,
+            position : 'right',
+            }]
+            },
+    options: {
+        responsive: true,
+        plugins: {
+        legend: {
+            position: 'bottom',
+        },
+        title: {
+            display: true,
+            text: 'Storage'
+        }
+        }
+    }
     });
 
     const myChart2 = new Chart(ctx1, {
         type: 'line',
     data: {
-      labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun','Jul','Aug', 'Sep','Oct','Nov','Dec'],
+      labels: ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'],
       datasets: [{
-        label: '# of Votes',
-        data: [12, 19, 3, 5, 2, 3,4,4,6,7,8,20],
-        borderWidth: 2
-      }]
+        label: 'Transactions',
+        data: [],
+        borderWidth: 2,
+        backgroundColor: [
+            'rgb(86, 105, 204)'
+        ],
+      }],
+      
     },
-    // options: {
-    //   scales: {
-    //     y: {
-    //       beginAtZero: true
-    //     }
-    //   }
-    // }
+    });
+
+    const myChart3 = new Chart(ctx2, {
+        type: 'bar',
+    data: {
+      labels: ['files', 'videos', 'images', 'musics',],
+      datasets: [{
+        label: 'Used (KB)',
+        data: [this.storageD.totalsize],
+        borderWidth: 2,
+        backgroundColor: [
+            'rgb(86, 105, 204)'
+        ],
+      }],
+     
+    },
     });
 
     myChart;
     myChart2;
+    myChart3;
     },
     
     
     
 }
 </script>
+
+<style scoped>
+
+</style>
