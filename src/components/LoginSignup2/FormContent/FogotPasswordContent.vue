@@ -29,7 +29,7 @@
                 
                 <!-------Email-field-------->
                 <div class="relative mt-16">
-                    <vee-field autocomplete="off" id="email" name="email" type="email" class="w-full h-10 text-gray-900 placeholder-transparent border-b-2 border-sidebarBG bg-blue-50 focus:outline-none focus:borer-rose-600 on:focus:bg-white" placeholder="email" />
+                    <vee-field autocomplete="off" id="email" name="email" type="email" class="w-full h-10 pl-2 text-gray-900 placeholder-transparent border-b-2 border-sidebarBG bg-blue-50 focus:outline-none focus:borer-rose-600 on:focus:bg-white" placeholder="email" />
 					<label for="email" class="absolute left-0 -top-6 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5  peer-focus:text-sm">Email :</label>
                     <ErrorMessage name="email" class="absolute text-[12px] text-red-500 bottom-[-20px]"/>
                 </div>

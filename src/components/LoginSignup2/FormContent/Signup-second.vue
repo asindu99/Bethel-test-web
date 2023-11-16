@@ -24,7 +24,7 @@
                     <!-- first name -->
                     <div class="relative flex flex-col">
                         <label for="" class="text-[14px]">First Name :</label>
-                        <VeeField name="FirstName" type="text" class="lg:w-[235px] md:w-[240px] text-[#757784] bg-transparent p-1 border-b-2 border-[#29379384] "/>
+                        <VeeField name="FirstName" type="text" class="lg:w-[235px] md:w-[240px] text-[#757784] bg-transparent p-1 border-b-2 border-[#29379384] pl-2"/>
                         <ErrorMessage name="FirstName" class="absolute text-[12px] text-red-500 bottom-[-20px]"/>
 
                     </div>
@@ -32,7 +32,7 @@
                     <!-- last name -->
                     <div class="flex flex-col min-[320px]:mt-4 lg:mt-0 md:mt-0 sm:mt-0 relative">
                         <label for="" class="text-[14px]">Last Name :</label>
-                        <VeeField name="LastName" type="text" class="lg:w-[235px] text-[#757784] bg-transparent p-1 border-b-2 border-[#29379384] outline-1"/>
+                        <VeeField name="LastName" type="text" class="lg:w-[235px] text-[#757784] bg-transparent p-1 border-b-2 border-[#29379384] outline-1 pl-2"/>
                         <ErrorMessage name="LastName" class="absolute text-[12px] text-red-500 bottom-[-20px]"/>
 
                     </div>
@@ -76,7 +76,7 @@
                     <div class="relative flex flex-col">
                         <label for="" class="text-[14px]">Mobile Number :</label>
                         <VeeField name="mobile" type="Number" class="text-[#757784] bg-transparent p-1 border-b-2 border-[#29379384]
-                        [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none "/>
+                        [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none pl-2"/>
                         <ErrorMessage name="mobile" class="absolute text-[12px] text-red-500 bottom-[-20px]"/>
                     </div>
 

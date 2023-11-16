@@ -12,7 +12,7 @@
                 <div class="flex w-full justify-center mt-4 lg:flex-col md:flex-col sm:flex-col min-[320px]:flex-col  lg:px-10 md:px-40 sm:px-10 gap-y-12">
                     <!-- email div -->
                     <div class="relative flex flex-col">
-                        <vee-field autocomplete="off" id="email" name="email" type="email" class="w-full h-10 text-gray-900 placeholder-transparent border-b-2 border-sidebarBG bg-blue-50 focus:outline-none focus:borer-rose-600 on:focus:bg-white" placeholder="email" />
+                        <vee-field autocomplete="off" id="email" name="email" type="email" class="w-full h-10 pl-2 text-gray-900 placeholder-transparent border-b-2 border-sidebarBG bg-blue-50 focus:outline-none focus:borer-rose-600 on:focus:bg-white" placeholder="email" />
 							<label for="email" class="absolute left-0 -top-6 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5  peer-focus:text-sm">Email :</label>
 
                         <ErrorMessage name="email" class="absolute text-[12px] text-red-500 bottom-[-20px]"/>
@@ -24,9 +24,11 @@
                         <!-- <label for="" class="text-[14px]">User Name :</label>
                         <VeeField  name="username" type="text" class=" bg-transparent p-1 border-2 border-[#29379384] outline-none rounded-md lg:w-[235px] md:w-[238px] min-[320px]:w-full w-[340px]"/> -->
                         
+
                         <vee-field name="username" type="text" class="w-full h-10 text-gray-900 placeholder-transparent border-b-2 border-sidebarBG bg-blue-50 focus:outline-none focus:borer-rose-600 on:focus:bg-white" placeholder="username" />
 							<label  class="absolute left-0 -top-6 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5  peer-focus:text-sm">User Name :</label>
                         <ErrorMessage name="username" class="absolute text-[12px] text-red-500 bottom-[-20px]"/>
+
 
                     </div>
                     
@@ -43,14 +45,14 @@
                         <div class="flex lg:flex-row md:flex-row sm:flex-row min-[320px]:flex-col gap-x-8 gap-y-12">
                             
                             <div class="relative flex flex-col">
-                                <vee-field  name="firstName" type="text" class="w-full h-10 text-gray-900 placeholder-transparent border-b-2 border-sidebarBG bg-blue-50 focus:outline-none focus:borer-rose-600 on:focus:bg-white" placeholder="firstname" />
+                                <vee-field  name="firstName" type="text" class="w-full h-10 pl-2 text-gray-900 placeholder-transparent border-b-2 border-sidebarBG bg-blue-50 focus:outline-none focus:borer-rose-600 on:focus:bg-white" placeholder="firstname" />
                                 <ErrorMessage name="firstName" class="absolute text-[12px] text-red-500 bottom-[-20px]"/>
                                 
 							<label class="absolute left-0 -top-6 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5  peer-focus:text-sm">First Name :</label>
                             </div>
                             
                             <div class="relative flex flex-col">
-                                <vee-field  name="lastName" type="text" class="w-full h-10 text-gray-900 placeholder-transparent border-b-2 border-sidebarBG bg-blue-50 focus:outline-none focus:borer-rose-600 on:focus:bg-white" placeholder="lastname" />
+                                <vee-field  name="lastName" type="text" class="w-full h-10 pl-2 text-gray-900 placeholder-transparent border-b-2 border-sidebarBG bg-blue-50 focus:outline-none focus:borer-rose-600 on:focus:bg-white" placeholder="lastname" />
                                 <ErrorMessage name="lastName" class="absolute text-[12px] text-red-500 bottom-[-20px]"/>
 
 							<label for="lastname" class="absolute left-0 -top-6 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5  peer-focus:text-sm">Last Name :</label>
@@ -66,14 +68,14 @@
                             <div class="flex lg:flex-row md:flex-row sm:flex-row min-[320px]:flex-col gap-x-8 gap-y-12">
                             
                                 <div class="relative flex flex-col">
-                                <vee-field  name="password" type="password" class="w-full h-10 text-gray-900 placeholder-transparent border-b-2 border-sidebarBG bg-blue-50 focus:outline-none focus:borer-rose-600 on:focus:bg-white" placeholder="password" />
+                                <vee-field  name="password" type="password" class="w-full h-10 pl-2 text-gray-900 placeholder-transparent border-b-2 border-sidebarBG bg-blue-50 focus:outline-none focus:borer-rose-600 on:focus:bg-white" placeholder="password" />
                                 <ErrorMessage name="password" class="absolute text-[12px] text-red-500 bottom-[-20px]"/>
                                 
 							<label for="password" class="absolute left-0 -top-6 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5  peer-focus:text-sm">Password :</label>
                                 </div>
                             
                                 <div class="relative flex flex-col">
-                                    <vee-field autocomplete="off" id="confirm_password" name="confirm_password" type="password" class="w-full h-10 text-gray-900 placeholder-transparent border-b-2 border-sidebarBG bg-blue-50 focus:outline-none focus:borer-rose-600 on:focus:bg-white" placeholder="confirm_password" />
+                                    <vee-field autocomplete="off" id="confirm_password" name="confirm_password" type="password" class="w-full h-10 pl-2 text-gray-900 placeholder-transparent border-b-2 border-sidebarBG bg-blue-50 focus:outline-none focus:borer-rose-600 on:focus:bg-white" placeholder="confirm_password" />
                                     <ErrorMessage name="confirm_password" class="absolute text-[12px] text-red-500 bottom-[-20px]"/>
                                     
                                     <label for="confirm_password" class="absolute left-0 -top-6 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5  peer-focus:text-sm">Confirm Password:</label>
