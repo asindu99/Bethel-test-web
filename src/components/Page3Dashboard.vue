@@ -423,6 +423,7 @@ import {authUser} from '@/stores/AuthUser'
 import axios from 'axios';
 
 import Chart from 'chart.js/auto';
+import { numeric } from '@vee-validate/rules';
 
 
 export default {
@@ -461,10 +462,13 @@ export default {
     },
     async mounted(){
         
+        let userID = localStorage.getItem('userID');
+        userID = userID.replace(/^"|"$/g, '');
+        console.log(userID)
 
-        // const res3 = await axios.get('https://mw.bethel.network/storagedetails/' + this.dashboardID,
-        // {withCredentials : true})
-        // localStorage.setItem('storageDetails', JSON.stringify(res3.data))
+        const res3 = await axios.get('https://mw.bethel.network/storagedetails/' + userID,
+        {withCredentials : true})
+        localStorage.setItem('storageDetails', JSON.stringify(res3.data))
         
         const storageDetails = JSON.parse(localStorage.getItem('storageDetails'))
         this.storageD = storageDetails[0]

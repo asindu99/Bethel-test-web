@@ -155,17 +155,15 @@ export default {
       // drag and drop styles
       drag : '',
 
+      userID : null
+
     };
   },
-  updated(){
-    const uploadDetails2 = JSON.parse(localStorage.getItem('uploadDetails'))
-    this.uploadDetails = uploadDetails2
+  // updated(){
+  //   const uploadDetails2 = JSON.parse(localStorage.getItem('uploadDetails'))
+  //   this.uploadDetails = uploadDetails2
 
-    // const storageDetails = JSON.parse(localStorage.getItem('storageDetails'))
-    // const storageD = storageDetails[0]
-
-    // console.log("woow " ,storageD._id)
-  },
+  // },
 
   mounted(){
     const uploadDetails2 = JSON.parse(localStorage.getItem('uploadDetails'))
@@ -174,7 +172,11 @@ export default {
     const storageDetails = JSON.parse(localStorage.getItem('storageDetails'))
     const storageD = storageDetails[0]
 
-    console.log("woow " ,storageD._id)
+    let userID = localStorage.getItem('userID')
+    userID = userID.replace(/^"|"$/g, '');
+    this.userID = userID
+
+    console.log(this.userID)
 
   },
   computed : {
@@ -204,7 +206,9 @@ export default {
             'Content-Type': 'multipart/form-data'
           },
           
-        },);
+          
+        },{withCredentials : true});
+
         console.log(response.data)
         this.showClass = 'hidden';
         this.uploadWait = false;
@@ -214,7 +218,7 @@ export default {
           this.uploadFinished = false;
         },4000)
 
-        const res2 = await axios.get('https://mw.bethel.network/storage/' + this.authUserStore.userID ,
+        const res2 = await axios.get('https://mw.bethel.network/storage/' + this.userID ,
         {withCredentials :true})
                 
         // save wallet details

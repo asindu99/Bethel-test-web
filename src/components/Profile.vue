@@ -324,6 +324,7 @@ export default{
             code: '',
             userData: null,
             userDetail: null,
+            userID : null,
             // update styles 
             isUpdating: false,
             updated: false,
@@ -339,6 +340,10 @@ export default{
         ...mapStores(authUser, useWalletData)
     },
     async mounted() {
+        let userID = localStorage.getItem('userID');
+        userID = userID.replace(/^"|"$/g, '');
+        this.userID = userID
+
         this.userDetail = JSON.parse(localStorage.getItem('userDetails'));
         const userData2 = JSON.parse(localStorage.getItem('userData'));
         this.userData = userData2;
@@ -385,7 +390,7 @@ export default{
             console.log(details)
             
 
-            const res = await axios.patch('https://mw.bethel.network/users/' + this.authUserStore.userID, details, { withCredentials: true });
+            const res = await axios.patch('https://mw.bethel.network/users/' + this.userID, details, { withCredentials: true });
             console.log(res);
             if (res.error) {
                 console.log(res.error);
@@ -400,7 +405,7 @@ export default{
             // this.$ref.anyName3.reset();
 
             // display the updated user details -------->>
-            const res2 = await axios.get('https://mw.bethel.network/users/' + this.authUserStore.userID, { withCredentials: true });
+            const res2 = await axios.get('https://mw.bethel.network/users/' + this.userID, { withCredentials: true });
             localStorage.setItem('userDetails', JSON.stringify(res2.data.details));
             this.userDetail = JSON.parse(localStorage.getItem('userDetails'));
 
@@ -436,7 +441,7 @@ export default{
             newPassword: values.newPassword
         };
 
-        const res = await axios.patch('https://mw.bethel.network/auth/updatepassword/' + this.authUserStore.userID, passDetails, 
+        const res = await axios.patch('https://mw.bethel.network/auth/updatepassword/' + this.userID, passDetails, 
         {withCredentials : true});
 
         this.isPassing = false;
@@ -446,7 +451,7 @@ export default{
         }
         else {
             console.log("password changes succesfully");
-            this.passed = ture;
+            this.passed = true;
 
             setTimeout(() => {
                 this.passed = false;
