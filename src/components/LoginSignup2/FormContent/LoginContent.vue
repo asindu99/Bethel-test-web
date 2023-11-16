@@ -64,10 +64,19 @@ lg:py-40 md:py-[10px] md:h-screen sm:p-10 min-[320px]:p-3 lg:px-20">
                     <h3 class="text-[#999898] text-[14px]">New to our platform ? <router-link to="/signup"><span class="text-[#29379386]">Create an account</span></router-link> </h3>
 
                     <!-- error msg displaying if user name or pasword is invalid -->
-                    <div :class="loginHide" v-if="!!authUserStore.logInFail" class="w-full fle justify-center absolute bottom-[-60px]">
+                    <div :class="loginHide" v-if="authUserStore.logInFail" class="w-full fle justify-center absolute bottom-[-40px]">
                         <!-- err msg  -->
                         <div class="flex justify-center w-full p-3 rounded-md bg-bethelOrange ">
                             <h3 class="lg:text-[14px] md:text-[14px] sm:text-[14px] min-[320px]:text-[11px] text-white">Invalid Email or Password! Please Try again..</h3>
+                        </div>
+                    </div>
+
+
+                    <!-- success msg if user name loged in success -->
+                    <div v-if="authUserStore.registerSuccess" class="w-full fle justify-center absolute bottom-[-40px] animate__animated animate__fadeIn">
+                        <!-- err msg  -->
+                        <div class="flex justify-center w-full p-3 rounded-md bg-green-400 ">
+                            <h3 class="lg:text-[14px] md:text-[14px] sm:text-[14px] min-[320px]:text-[11px] text-white">Your Account is Successfully created</h3>
                         </div>
                     </div>
 

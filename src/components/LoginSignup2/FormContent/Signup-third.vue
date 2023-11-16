@@ -24,8 +24,10 @@
                         <!-- <label for="" class="text-[14px]">User Name :</label>
                         <VeeField  name="username" type="text" class=" bg-transparent p-1 border-2 border-[#29379384] outline-none rounded-md lg:w-[235px] md:w-[238px] min-[320px]:w-full w-[340px]"/> -->
                         
-                        <vee-field autocomplete="off" id="username" name="username" type="text" class="w-full h-10 text-gray-900 placeholder-transparent border-b-2 border-sidebarBG bg-blue-50 focus:outline-none focus:borer-rose-600 on:focus:bg-white" placeholder="username" />
-							<label for="username" class="absolute left-0 -top-6 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5  peer-focus:text-sm">User Name :</label>
+                        <vee-field name="username" type="text" class="w-full h-10 text-gray-900 placeholder-transparent border-b-2 border-sidebarBG bg-blue-50 focus:outline-none focus:borer-rose-600 on:focus:bg-white" placeholder="username" />
+							<label  class="absolute left-0 -top-6 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5  peer-focus:text-sm">User Name :</label>
+                        <ErrorMessage name="username" class="absolute text-[12px] text-red-500 bottom-[-20px]"/>
+
                     </div>
                     
 
@@ -94,6 +96,10 @@
                     <!-- <router-link to="/mobile-verify"> -->
                     <div class="relative flex flex-col justify-between w-full mt-8">
                         <button type="submit" class=" bg-sidebarBG rounded-lg w-full p-2 text-white border-[1px] hover:bg-white hover:text-sidebarBG hover:border-[1px] hover:border-sidebarBG transition-all ease-in-out">Create Account</button>
+                        <!-- register styles -->
+                        <div v-if="authUserStore.isRegistering" class="absolute right-[10px] top-[10px]">
+                            <img src="../../../img/animationGIFs/Rolling.svg" alt="" class="w-[20px]">
+                        </div>
                         
                     <div class="absolute lg:right-[28%] -bottom-4 min-[320px]:right-[14%] md:right-[28%] sm:right-[28%] ">
                         <h2 class="text-xs text-center text-gray-600">Already have an account?<RouterLink to="/"><a class="text-center cursor-pointer tet-xs text-sidebarBG"> Login</a></RouterLink></h2>
@@ -121,12 +127,15 @@ export default{
             signupSchema : {
                 firstName : 'required',
                 lastName : 'required',
+                username : 'required',
                 email: "required|min:3|max:100|email",
                 password: "required|min:9|max:100",
                 confirm_password: "passwords_mismatch:@password",
                 tos: "tos",
             },
             selected : {},
+
+            
     
         
         }

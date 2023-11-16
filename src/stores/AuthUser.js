@@ -35,6 +35,10 @@ export const authUser = defineStore('authUser', {
         // login fail msg
         logInFail : false,
 
+        //register update styles 
+        isRegistering : false,
+        registerSuccess : false,
+
 
 
     }),
@@ -42,7 +46,7 @@ export const authUser = defineStore('authUser', {
     actions : {
         // post signup form data into json --> componet --> signup-third
         async postAuthUserData(values){
-
+            this.isRegistering = true;
             const res = await axios.post('https://mw.bethel.network/auth/register', {
                 email: values.email,
                 username: values.username,
@@ -58,9 +62,17 @@ export const authUser = defineStore('authUser', {
                 console.log(res.error)
             }
             else{
+                this.isRegistering = false;
+                this.registerSuccess = true;
+
+                setTimeout(() => {
+                    this.registerSuccess = false;
+                }, 5000);
                 router.push('/')
             }
         },
+
+
 
         async postLoginData(values){
 
@@ -112,7 +124,7 @@ export const authUser = defineStore('authUser', {
                     
                 }
                 
-
+                
                 this.logInWait = false;
                 router.push('/home');
                 
