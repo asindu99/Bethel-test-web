@@ -469,9 +469,9 @@ export default {
     },
     async mounted(){
         
-        const res3 = await axios.get('https://mw.bethel.network/storagedetails/' + this.authUserStore.userID,
-        {withCredentials : true})
-        localStorage.setItem('storageDetails', JSON.stringify(res3.data))
+        // const res3 = await axios.get('https://mw.bethel.network/storagedetails/' + this.authUserStore.userID,
+        // {withCredentials : true})
+        // localStorage.setItem('storageDetails', JSON.stringify(res3.data))
         
         const storageDetails = JSON.parse(localStorage.getItem('storageDetails'))
         this.storageD = storageDetails[0]

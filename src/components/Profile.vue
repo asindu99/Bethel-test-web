@@ -56,13 +56,15 @@
 
                                     <!-- start of the form -->
                                     <div class="w-full">
-                                        <VeeForm  @submit="patchAuthUserData">
+                                        <VeeForm  @submit="patchAuthUserData" :validation-schema="signupSchema">
                                             <!-- name section -->
                                             <div class="flex lg:flex-row md:flex-row sm:flex min-[320px]:flex-col w-full justify-between lg:gap-20 md:gap-10 sm:gap-y-8 min-[320px]:gap-2 px-8 pt-10">
                                                 
-                                                <div class="relative z-0 w-full mb-6 group">
+                                                <div class="z-0 w-full mb-6 group">
 
-                                                    <vee-field ref="anyName" autocomplete="off" name="firstName" type="text" class="w-full h-10 pl-2 text-gray-900 border-b-2 border-sidebarBG focus:outline-none focus:borer-rose-600 on:focus:bg-white" :placeholder="firstName" />
+                                                    <vee-field ref="anyName" autocomplete="off" name="firstName" type="text" class="relative w-full h-10 pl-2 text-gray-900 border-b-2 border-sidebarBG focus:outline-none focus:borer-rose-600 on:focus:bg-white" :placeholder="firstName" />
+                                                    <ErrorMessage name="firstName" class="text-red-400 bottom-[-12px] text-[12px]" />
+
                                                     <!-- <ErrorMessage name="firstName" /> -->
                                                     
 							                        <label for="firstName" class="absolute left-0 -top-6 text-gray-600 text-sm placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5  peer-focus:text-sm">First Name :</label>
@@ -70,6 +72,8 @@
 
                                                 <div class="relative z-0 w-full mb-6 group">
                                                     <vee-field ref="anyName2"  name="lastName" type="text" class="w-full h-10 pl-2 text-gray-900 border-b-2 border-sidebarBG focus:outline-none focus:borer-rose-600 on:focus:bg-white" :placeholder="lastName" />
+                                                    <!-- <ErrorMessage name="lastName" class="text-red-400 bottom-[-12px] text-[12px]" /> -->
+
                                                     <!-- <ErrorMessage name="lastName" /> -->
 
 							                        <label for="lastName" class="absolute left-0 -top-6 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5  peer-focus:text-sm">Last Name :</label>
@@ -83,12 +87,14 @@
                                                 <div class="relative z-0 w-full mb-6 group">
 
                                                     <select v-model="selected"
-                                                      name="country" class="w-full h-10 pl-2 text-gray-900 border-b-2 border-sidebarBG focus:outline-none focus:borer-rose-600 on:focus:bg-white">
+                                                      name="country" class="w-full h-10 pl-2 text-gray-900 border-b-2 border-sidebarBG focus:outline-none focus:borer-rose-600 on:focus:bg-white bg-transparent">
                                                     
                                                     <option  v-for="country in countryList" 
-                                                    :key="country.Code" :value="country"
+                                                    :key="country.Code" :value="country" :selected="firstName"
                                                       class="w-[200px] bg-transparent">{{ country.Name }}</option>
                                                     </select>
+                                                    
+
 
 							                        <label class="absolute left-0 -top-6 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5  peer-focus:text-sm">Country:</label>
                                                 </div>
@@ -101,7 +107,7 @@
 
 
                                                     <select
-                                                 name="code" class="w-full h-10 pl-2 text-gray-900 border-b-2 border-sidebarBG focus:outline-none focus:borer-rose-600 on:focus:bg-white">
+                                                 name="code" class="w-full h-10 pl-2 text-gray-900 border-b-2 border-sidebarBG focus:outline-none focus:borer-rose-600 on:focus:bg-white bg-transparent">
                                                     <option >{{ selected.MobileCode }}</option>
                                                 </select>
                                                 
@@ -122,7 +128,7 @@
                                                     <vee-field ref="anyName3o" autocomplete="off" id="" name="mobile" type="tel" class="h-10 pl-2 text-gray-900 border-b-2 lg:w-[544px] border-sidebarBG focus:outline-none focus:borer-rose-600 on:focus:bg-white" :placeholder="mobileNumber" />
 
 
-							<label for="mobile" class="absolute left-0 -top-6 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5  peer-focus:text-sm">Mobile Number :</label>
+							<label class="absolute left-0 -top-6 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5  peer-focus:text-sm">Mobile Number :</label>
 
                                                 </div>
 
@@ -279,14 +285,8 @@ export default{
     data() {
         return {
             signupSchema: {
-                email: "required|min:3|max:100|email",
-                password: "required|min:9|max:100",
-                confirm_password: "passwords_mismatch:@password",
+
                 firstName: "required|min:3|max:100",
-                lastName: "required|min:3|max:100",
-                mobile: "required|min:4|max:100",
-                tos: "tos",
-                country: 'required'
             },
 
             changePassSchema : {
@@ -307,6 +307,12 @@ export default{
             firstName: '',
             lastName: '',
             mobileNumber: '',
+            country : '',
+            countryCode : '',
+
+
+
+
             email: '',
             code: '',
             userData: null,
@@ -332,21 +338,44 @@ export default{
         this.firstName = this.userDetail.firstName;
         this.lastName = this.userDetail.lastName;
         this.code = this.userDetail.code;
+        this.country = this.userDetail.country
         this.mobileNumber = this.userDetail.mobile;
         this.email = this.userData.email;
     },
     methods: {
         async patchAuthUserData(values) {
             this.isUpdating = true;
+           if(!this.selected.Name){
+            console.log("true")
+           }else{
+            this.country = this.selected.Name;
+            this.code = this.selected.MobileCode;
+           }
+
+           if(values.firstName){
+            this.firstName = values.firstName
+           }
+
+           if(values.lastName){
+            this.lastName = values.lastName
+           }
+
+           if(values.mobile){
+            this.mobileNumber = values.mobile
+           }
+
             const details = {
                 details: {
-                    "firstName": values.firstName,
-                    "lastName": values.lastName,
-                    "country": this.selected.Name,
-                    "code": this.selected.MobileCode,
-                    "mobile": values.mobile
+                    "firstName": this.firstName,
+                    "lastName": this.lastName,
+                    "country": this.country,
+                    "code": this.code,
+                    "mobile": this.mobileNumber
                 }
             };
+
+            console.log(values)
+            console.log(details)
             
 
             const res = await axios.patch('https://mw.bethel.network/users/' + this.authUserStore.userID, details, { withCredentials: true });
