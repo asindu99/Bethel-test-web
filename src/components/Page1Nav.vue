@@ -89,19 +89,6 @@
                         <!-- end box 3 -->
 
                         <!-- box 3 -->
-                        <a href="#" @click="modalStore.dropMenuOC = false"> <div class="w-full  px-2 rounded-lg transition-all ease-linear">
-                            <div class="min-[320px]:flex sm:flex lg:flex md:flex w-full px-3  py-2">
-                                <span class=" material-symbols-outlined top-2 right-[20px] text-[#c4c9ea] mr-2 scale-[.9]
-                                ">
-                                    switch_account
-                                </span>  
-                                <h3 class="text-[15px] text-[#c4c9ea]">Accounts </h3>
-                            
-                            </div>
-                        </div></a> 
-                        <!-- end box 3 -->
-
-                        <!-- box 3 -->
                         <RouterLink to="/">
                             <button @click="logout" class="w-full">
                                 <div class="w-full px-2 rounded-lg transition-all ease-linear">
@@ -150,12 +137,11 @@
         min-[320px]:fixed min-[320px]:top-0 min-[320px]:bottom-0 min-[320px]:z-[10] min-[320px]:w-[200px]
          lg:hidden md:hidden flex-col shadow-md pt-4">
             <!-- top menu section -->
-            <div class="flex py-2 flex-col px-[10px] bg-sidebarBG hidden"> 
+            <div class="flex py-2 flex-col px-[10px] bg-sidebarBG"> 
                 <!-- menu text -->
-                <div class="">
+                <div class="mt-4">
                     <div class="relative lg:flex md:flex min-[320px]:flex sm:flex placeholder:">
-                        <div class="absolute h-[15px] w-[3px] bg-bethelOrange top-1"></div>
-                        <h3 class="text-sidebarText ml-2">Menu</h3>
+                        <h3 class="text-white ml-2 font-bold">BEHTEL TESTNET</h3>
                     </div>
 
                 </div>
@@ -175,7 +161,7 @@
 
 
             <!-- middle section  -->
-            <div class="flex flex-col text-sidebarText">
+            <div class="flex flex-col text-sidebarText mt-14">
                 <!-- menu item -->
                 
                     <RouterLink to="/home" class="">
@@ -309,7 +295,7 @@
 
                 <!-- menu item -->
                 <a href="https://docs.bethel.network/" class="active" target="_blank">
-                    <div class=" min-[320px]:flex sm:flex lg:flex md:flex w-full px-3  my-2 py-2  transition-all ease-linear">
+                    <div class="absolute bottom-16 min-[320px]:flex sm:flex lg:flex md:flex w-full px-3  my-2 py-2  transition-all ease-linear">
                         <span class=" material-symbols-outlined top-2 right-[20px] mr-2
                         ">
                             support

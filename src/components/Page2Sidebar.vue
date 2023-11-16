@@ -10,14 +10,14 @@
         <div class="flex items-center justify-center w-full py-6">
                 <h1 class="font-bold ml-1 lg:text-[18px] md:text-[14px]
                  md:mt-3 lg:mt-1
-                  text-white" :class="sidebarHideShow">BETHEL ENGINE V4</h1>
+                  text-white" :class="sidebarHideShow">BETHEL TESTNET</h1>
         </div>
 
 
         <!-- sidebar content -->
         <div class="flex flex-col justify-evenly h-full ">
             <!-- top of sidebar content -->
-            <div class="">
+            <div class="mt-[30px]">
                     <!-- middle section  -->
                 <div class="flex flex-col gap-2">
                     <!-- menu item -->
@@ -82,59 +82,56 @@
                         
                     </RouterLink >
                     <!-- end of the menu item -->
+                    <!-- menu item -->
+
+                    <router-link to="/profile">
+                        <div class="lg:ml-7 md:ml-6 min-[320px]:flex sm:flex lg:flex md:flex w-full lg:px-3 md:px-0  my-2 py-2 ">
+                            <span class=" material-symbols-outlined top-2 right-[20px] mr-2
+                            ">
+                                person_pin
+                            </span>  
+                            <h3 :class="sidebarHideShow">Profile </h3>
+                        
+                        </div>
+
+                        <!-- small size -->
+                        
+                    </router-link>
+                    <!-- end of the menu item -->
+
+                    <!-- menu item -->
+                    <router-link to="/billing">
+                        <div class="lg:ml-7 md:ml-6  min-[320px]:flex sm:flex lg:flex md:flex w-full lg:px-3 md:px-0  my-2 py-2 ">
+                            <span class=" material-symbols-outlined top-2 right-[20px]
+                            ">
+                                attach_money
+                            </span>  
+                            <h3 :class="sidebarHideShow">Billing </h3>
+                        
+                        </div>
+
+                        
+                    </router-link>
+                    <!-- end of the menu item -->
                 </div>
                 <!-- end of the middle section -->
             </div>
 
             <!-- bottom section -->
             <div class="flex flex-col gap-2">
-                <!-- menu text -->
-                <div class="flex py-2 flex-col px-[10px] bg-bethelBlue hidden"> 
-                    <!-- menu text -->
-                    <div class="">
-                        <div class="relative lg:flex md:flex min-[320px]:flex sm:flex placeholder:">
-                            <div class="absolute h-[15px] w-[3px] bg-bethelOrange  top-1"></div>
-                            <h3 class="text-[#c4c9ea] ml-2">Account</h3>
-                        </div>
-                    </div>
-                <!-- end of menu text -->
-                </div>
 
-                <!-- end of menu text -->
+                
 
-                <!-- menu item -->
-                <router-link to="/profile">
-                    <div class="lg:ml-7 md:ml-6 min-[320px]:flex sm:flex lg:flex md:flex w-full lg:px-3 md:px-0  my-2 py-2 ">
-                        <span class=" material-symbols-outlined top-2 right-[20px] mr-2
-                        ">
-                            person_pin
-                        </span>  
-                        <h3 :class="sidebarHideShow">Profile </h3>
-                    
-                    </div>
+                
+                    <!-- end of the menu item -->
+            </div>
+            <!-- end of the account section -->
 
-                    <!-- small size -->
-                    
-                </router-link>
-                <!-- end of the menu item -->
-
-                <!-- menu item -->
-                <router-link to="/billing">
-                    <div class="lg:ml-7 md:ml-6  min-[320px]:flex sm:flex lg:flex md:flex w-full lg:px-3 md:px-0  my-2 py-2 ">
-                        <span class=" material-symbols-outlined top-2 right-[20px]
-                        ">
-                            attach_money
-                        </span>  
-                        <h3 :class="sidebarHideShow">Billing </h3>
-                    
-                    </div>
-
-                    
-                </router-link>
-                <!-- end of the menu item -->
-
-                <a href="https://docs.bethel.network/" class="active" target="_blank">
-                            <div class="lg:ml-7 md:ml-6 min-[320px]:flex sm:flex lg:flex md:flex w-full lg:px-3 md:px-0  hover:bg-[] my-2 py-2">
+            <!-- logout -->
+            <!-- menu item -->
+            <a href="https://docs.bethel.network/" class="active" target="_blank">
+                            <div class="absolute bottom-16
+                             lg:ml-7 md:ml-6 min-[320px]:flex sm:flex lg:flex md:flex w-full lg:px-3 md:px-0  hover:bg-[] my-2 py-2">
                                 <span class=" material-symbols-outlined top-2 right-[20px] mr-2
                             
                             ">
@@ -144,12 +141,6 @@
                                      
                             </div>
                 </a>
-                    <!-- end of the menu item -->
-            </div>
-            <!-- end of the account section -->
-
-            <!-- logout -->
-            <!-- menu item -->
             
                 <!-- menu item -->
                 <router-link to="/">
