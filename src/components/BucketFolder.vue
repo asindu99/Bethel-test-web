@@ -158,11 +158,11 @@ export default {
     };
   },
   updated(){
-    // const uploadDetails2 = JSON.parse(localStorage.getItem('uploadDetails'))
-    // this.uploadDetails = uploadDetails2
+    const uploadDetails2 = JSON.parse(localStorage.getItem('uploadDetails'))
+    this.uploadDetails = uploadDetails2
 
-    // const storageDetails = JSON.parse(localStorage.getItem('storageDetails'))
-    // this.storageD = storageDetails[0]
+    const storageDetails = JSON.parse(localStorage.getItem('storageDetails'))
+    this.storageD = storageDetails[0]
   },
 
   mounted(){
@@ -198,10 +198,8 @@ export default {
             'Content-Type': 'multipart/form-data'
           },
           
-        },{
-          withCredentials : true,
-        });
-    
+        },);
+        console.log(response.data)
         this.showClass = 'hidden';
         this.uploadWait = false;
         this.uploadFinished = true;
@@ -226,7 +224,7 @@ export default {
 
       } catch (error) {
         console.log(error)
-        
+
         this.file = null;
         this.drag = '',
         this.filename = '';
