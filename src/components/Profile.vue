@@ -358,7 +358,7 @@ export default{
         async patchAuthUserData(values) {
             this.isUpdating = true;
            if(!this.selected.Name){
-            console.log("true")
+            
            }else{
             this.country = this.selected.Name;
             this.code = this.selected.MobileCode;
@@ -385,9 +385,6 @@ export default{
                     "mobile": this.mobileNumber
                 }
             };
-
-            console.log(values)
-            console.log(details)
             
 
             const res = await axios.patch('https://mw.bethel.network/users/' + this.userID, details, { withCredentials: true });
@@ -396,7 +393,7 @@ export default{
                 console.log(res.error);
             }
             else {
-                console.log("user data changes succesfully");
+                
             }
 
             // reset values on input fiels
@@ -424,8 +421,6 @@ export default{
             setTimeout(() => {
                 this.updated = false;
             }, 2000);
-            console.log("this is damn " , this.walletStore.userDetail.firstName)
-            console.log("this is damn " , this.walletStore.userDetail.lastName)
             
         },
 
