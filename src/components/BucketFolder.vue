@@ -159,11 +159,11 @@ export default {
 
     };
   },
-  // updated(){
-  //   const uploadDetails2 = JSON.parse(localStorage.getItem('uploadDetails'))
-  //   this.uploadDetails = uploadDetails2
+  updated(){
+     const uploadDetails2 = JSON.parse(localStorage.getItem('uploadDetails'))
+     this.uploadDetails = uploadDetails2
 
-  // },
+   },
 
   mounted(){
     const uploadDetails2 = JSON.parse(localStorage.getItem('uploadDetails'))

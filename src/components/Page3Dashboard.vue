@@ -28,7 +28,7 @@
         <!-- 1st caption section -->
         <div class=" mt-2">
             <div class="w-[2px] h-[20px] bg-bethelBlue absolute top-[5px] "></div>
-            <h3 class="ml-2 text-[18px]">OverView</h3> 
+            <h3 class="ml-2 text-[18px]">Overview</h3> 
         </div>
 
         <!-- overview content flex -->
@@ -269,14 +269,20 @@
                     </div>
                 </div>
                 
+                <!-- loading div -->
+                <div v-if="isLoading" class="h-[230px] flex w-full justify-center">
+                    <img src="../img/animationGIFs/Reload.svg" alt="" class="w-[50px]"> 
+                </div>
+                <!-- end of the loading div -->
+
 
                 <!-- storage chart -->
-                <div class=" flex items-center justify-center mt-2 gap-2
+                <div v-show="!isLoading" class=" flex items-center justify-center mt-2 gap-2
                 lg:w-full md:w-full sm:w-[550px] min-[320px]:w-full 
                 lg:h-[220px] md:h-[300px] sm:h-[300px] min-[320px]:h-[200px] ">
 
                     <!-- chart view -->
-                    <canvas id="myChart" class="lg:w-full md:w-full sm:w-full min-[320px]:[400px]"></canvas>
+                    <canvas  id="myChart" class="lg:w-full md:w-full sm:w-full min-[320px]:[400px]"></canvas>
 
                     <div class="flex flex-col gap-2">
                         <!-- total file -->
@@ -446,6 +452,10 @@ export default {
 
             dashboardID : null,
 
+            // loading pie chatrt
+            isLoading : true,
+
+
 
             
         }
@@ -461,6 +471,10 @@ export default {
 
     },
     async mounted(){
+
+        setTimeout(() => {
+            this.isLoading = false;
+        }, 1000);
         
         let userID = localStorage.getItem('userID');
         userID = userID.replace(/^"|"$/g, '');
