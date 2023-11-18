@@ -74,6 +74,10 @@
                   <div class="absolute bottom-[-45px]">
                     <h3 class=" text-[12px] text-sidebarBG mt-2 left-[0px]">{{ filename }}</h3>
                   </div>
+
+                  <div v-if="uploadFileNone" class="absolute bottom-[-45px]">
+                    <h3 class=" text-[12px] text-red-400 mt-2 left-[0px]">Empty Upload</h3>
+                  </div>
                   
                   
                   <label for="file-uplaod" class="lg:text-[16px] md:text-[12px] sm:text-[12px] min-[320px]:text-[14px] 
@@ -151,6 +155,7 @@ export default {
       uploadWait : false,
       uploadFinished : false,
       uploadFail : false,
+      uploadFileNone : false,
 
       // drag and drop styles
       drag : '',
@@ -193,58 +198,70 @@ export default {
       this.filename = event.dataTransfer.files[0].name
     },
     async uploadFile() {
-      this.uploadWait = true;
-      this.showClass = '';
+      
       const formData = new FormData();
       formData.append('file', this.file);
       formData.append('userid', this.authUserStore.userID);
       formData.append('bucket', 'Public_storage_0');
 
-      try {
-        const response = await axios.post('https://api.bethel.network/upload', formData, {
-          headers: {
-            'Content-Type': 'multipart/form-data'
-          },
+      // check the upload file is none or file includes
+      if(this.file != null){
+
+        this.uploadWait = true;
+        this.showClass = '';
+        try {
+          const response = await axios.post('https://api.bethel.network/upload', formData, {
+            headers: {
+              'Content-Type': 'multipart/form-data'
+            },
+            
+            
+          },{withCredentials : true});
+
+          console.log(response.data)
+          this.showClass = 'hidden';
+          this.uploadWait = false;
+          this.uploadFinished = true;
+
+          setTimeout(()=>{
+            this.uploadFinished = false;
+          },4000)
+
+          const res2 = await axios.get('https://mw.bethel.network/storage/' + this.userID ,
+          {withCredentials :true})
+                  
+          // save wallet details
+          localStorage.setItem('uploadDetails', JSON.stringify(res2.data))
           
-          
-        },{withCredentials : true});
 
-        console.log(response.data)
-        this.showClass = 'hidden';
-        this.uploadWait = false;
-        this.uploadFinished = true;
+          const uploadDetails2 = JSON.parse(localStorage.getItem('uploadDetails'))
+          this.uploadDetails = uploadDetails2
 
-        setTimeout(()=>{
-          this.uploadFinished = false;
-        },4000)
+          this.file = null;
+          this.drag = '',
+          this.filename = '';
 
-        const res2 = await axios.get('https://mw.bethel.network/storage/' + this.userID ,
-        {withCredentials :true})
-                
-        // save wallet details
-        localStorage.setItem('uploadDetails', JSON.stringify(res2.data))
-        
+        } catch (error) {
+          console.log(error)
 
-        const uploadDetails2 = JSON.parse(localStorage.getItem('uploadDetails'))
-        this.uploadDetails = uploadDetails2
+          this.file = null;
+          this.drag = '',
+          this.filename = '';
+          this.uploadWait = false;
+          this.uploadFail = true;
 
-        this.file = null;
-        this.drag = '',
-        this.filename = '';
-
-      } catch (error) {
-        console.log(error)
-
-        this.file = null;
-        this.drag = '',
-        this.filename = '';
-        this.uploadWait = false;
-        this.uploadFail = true;
-
+          setTimeout(() => {
+            this.uploadFail = false;
+          }, 4000);
+        }
+      }else {
+        // if file was null then
+        this.uploadFileNone = true;
         setTimeout(() => {
-          this.uploadFail = false;
-        }, 4000);
+          this.uploadFileNone = false;
+        }, 1000);
       }
+      
     },
 
     dragOver(){
