@@ -25,7 +25,7 @@
                         <VeeField  name="username" type="text" class=" bg-transparent p-1 border-2 border-[#29379384] outline-none rounded-md lg:w-[235px] md:w-[238px] min-[320px]:w-full w-[340px]"/> -->
                         
 
-                        <vee-field name="username" type="text" class="w-full h-10 text-gray-900 placeholder-transparent border-b-2 border-sidebarBG bg-blue-50 focus:outline-none focus:borer-rose-600 on:focus:bg-white" placeholder="username" />
+                        <vee-field name="username" type="text" class="w-full h-10 text-gray-900 placeholder-transparent border-b-2 border-sidebarBG bg-blue-50 focus:outline-none focus:borer-rose-600 on:focus:bg-white pl-2" placeholder="username" />
 							<label  class="absolute left-0 -top-6 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5  peer-focus:text-sm">User Name :</label>
                         <ErrorMessage name="username" class="absolute text-[12px] text-red-500 bottom-[-20px]"/>
 
