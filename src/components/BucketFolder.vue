@@ -37,13 +37,13 @@
           
 
               <!-- uplaod section -->
-              <div class="gap-4 flex lg:flex-row md:flex-col sm:flex-col min-[320px]:flex-col justify-center w-full bg-white rounded-md mt-4 py-4">
+              <div class="px-2 gap-4 flex lg:flex-row md:flex-col sm:flex-col min-[320px]:flex-col justify-center w-full bg-white rounded-md mt-4 py-4">
 
                 <!-- upload file decorations -->
                 <div :class="drag" @dragover.prevent="dragOver" @drop.prevent="handleFileDrop" @dragleave="dragLeave"
                 class="
-                bg- px-4 mx-3 py-3 border-2 border-dashed 
-                flex flex-col w-full justify-center items-center border-r-[1px]
+                  py-3 border-2 border-dashed
+                flex flex-col w-full justify-center items-center
                 ">
                   <h3 class="lg:text-[26px] md:text-[18px] sm:text-[18px] min-[320px]:text-[18px] text-sidebarBG font-medium">Upload your Files here</h3>
                   <h4 class="lg:text-[16px] md:text-[12px] sm:text-[12px] min-[320px]:text-[10px] text-gray-400">Drag and Drop</h4>
@@ -165,8 +165,8 @@ export default {
     };
   },
   updated(){
-     const uploadDetails2 = JSON.parse(localStorage.getItem('uploadDetails'))
-     this.uploadDetails = uploadDetails2
+    //  const uploadDetails2 = JSON.parse(localStorage.getItem('uploadDetails'))
+    //  this.uploadDetails = uploadDetails2
 
    },
 
