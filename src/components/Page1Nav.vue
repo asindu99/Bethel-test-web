@@ -24,12 +24,12 @@
             lg:w-[300px] md:w-[300px] sm:w-[300px] min-[320px]:w-[500px]
              basis-[42%] gap-2 justify-end">
 
-                <!-- <router-link to="/wallet"> -->
-                    <button disabled @click="oncok" class="mr-2 text-[10px] border-[2px] rounded-xl p-[7px] px-[18px]
+                <router-link to="/bucketFolder">
+                    <button class="mr-2 text-[12px] border-[2px] rounded-xl p-[7px] px-[18px]
                      bg-sidebarBG text-white border-sidebarBG
-                       transition-all ease-linear sm:hidden min-[320px]:hidden lg:flex md:flex">Connect Wallet
+                       transition-all ease-linear sm:hidden min-[320px]:hidden lg:flex md:flex">Upload
                     </button>
-                <!-- </router-link> -->
+                </router-link>
                 
                 
                 <h3 class="lg:text-[16px] md:text-[14px] sm:text-[14px] min-[320px]:text-[10px]
