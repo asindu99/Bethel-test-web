@@ -217,8 +217,6 @@ export default {
             
             
           },{withCredentials : true});
-
-          console.log(response.data)
           this.showClass = 'hidden';
           this.uploadWait = false;
           this.uploadFinished = true;
