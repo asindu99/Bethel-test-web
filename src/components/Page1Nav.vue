@@ -27,7 +27,7 @@
                 <router-link to="/bucketFolder">
                     <button class="mr-2 text-[12px] border-[2px] rounded-xl p-[7px] px-[18px]
                      bg-sidebarBG text-white border-sidebarBG
-                       transition-all ease-linear sm:hidden min-[320px]:hidden lg:flex md:flex">Upload
+                       transition-all ease-linear sm:hidden min-[320px]:hidden lg:flex md:flex">Store your Data
                     </button>
                 </router-link>
                 
