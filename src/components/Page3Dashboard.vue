@@ -51,7 +51,7 @@
                         <div class="flex items-center">             
                           <h3 class="text-[10px] text-white">Total Buckets</h3> 
                           <div class="ml-3 rounded-lg text-center justify-center items-center">
-                            <h1 class="text-white">- 1</h1>
+                            <h1 class="text-white"> 1</h1>
                             </div> 
                         </div>
                         
@@ -81,7 +81,7 @@
                         <div class="flex items-center ">             
                           <h3 class="text-[10px]">Total Objects</h3> 
                           <div class="ml-3 rounded-lg text-center justify-center items-center">
-                            <h1 class="text-white">- {{ storageD.filecount}}</h1>
+                            <h1 class="text-white"> {{ storageD.filecount}}</h1>
                         </div> 
                         </div>
                         
@@ -109,7 +109,7 @@
                         <div class="flex items-center">             
                           <h3 class="text-[10px]">Total Storage</h3> 
                           <div class="ml-3  rounded-lg text-center justify-center items-center">
-                            <h1 class="text-white ">- {{ storageD.totalsize  }}</h1>
+                            <h1 class="text-white "> {{ storageD.totalsize  }}</h1>
                         </div> 
                         </div>
                         
@@ -137,7 +137,7 @@
                         <div class="flex items-center">             
                           <h3 class="text-[10px]">Total Bandwidth</h3> 
                           <div class="ml-3 rounded-lg text-center justify-center items-center">
-                            <h1 class="text-white">- 0</h1>
+                            <h1 class="text-white"> 0</h1>
                         </div> 
                         </div>
                         

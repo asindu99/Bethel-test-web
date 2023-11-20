@@ -62,7 +62,7 @@
                                             <!-- name section -->
                                             <div class="flex lg:flex-row md:flex-row sm:flex min-[320px]:flex-col w-full justify-between lg:gap-x-20 md:gap-x-10 sm:gap-x-8 min-[320px]:gap-x-2 px-8 pt-10 gap-y-10">
                                                 
-                                                <div class="z-0 w-full mb-6 group">
+                                                <div class="z-0 w-full mb-6 group relative">
 
                                                     <vee-field ref="anyName" autocomplete="off" name="firstName" type="text" class="relative w-full h-10 pl-2 text-gray-900 border-b-2 border-sidebarBG focus:outline-none focus:borer-rose-600 on:focus:bg-white" :placeholder="firstName" />
                                                     <ErrorMessage name="firstName" class="text-red-400 bottom-[-12px] text-[12px]" />
