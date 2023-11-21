@@ -210,7 +210,7 @@ export default {
         this.uploadWait = true;
         this.showClass = '';
         try {
-          const response = await axios.post('https://api.bethel.network/upload', formData, {
+          const response = await axios.post('https://api.bethelnet.io/upload', formData, {
             headers: {
               'Content-Type': 'multipart/form-data'
             },
